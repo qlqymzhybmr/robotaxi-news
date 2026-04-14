@@ -66,6 +66,71 @@
         "source_name": "TechCrunch",
         "source_url": "https://techcrunch.com/2026/04/13/uber-nuro-san-francisco-testing-premium-robotaxi-service/",
         "date": "2026-04-13"
+      },
+      {
+        "id": "2026-04-14-006",
+        "company": "曹操出行",
+        "company_slug": "caocao",
+        "title": "CEO 宣布公司目标是在2026年实现年度盈利",
+        "sub_group": "国内出行平台",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p>曹操出行 CEO 于 <b>4月13日</b> 在公司战略发布会上表示，公司的目标是在 <b>2026 年</b>实现年度盈利。这是曹操出行自 <b>2015 年</b>成立以来首次明确盈利时间表。</p><p>CEO 透露，公司正在大力推动<b>无人驾驶与 AI 技术</b>的研发和应用。完全定制的 <b>Robotaxi 车型</b>计划在 <b>2026 年</b>正式亮相，并于 <b>2027 年</b>开始量产。该车型将搭载曹操出行自研的自动驾驶系统，定位于城市共享出行场景。</p><p>曹操出行目前在全国 <b>60+ 城市</b>运营，注册用户超过 <b>8000 万</b>。公司计划通过引入 Robotaxi 降低运营成本，同时提升服务体验。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://finance.sina.com.cn/stock/estate/integration/2026-04-13/doc-inhuipik4868825.shtml",
+        "date": "2026-04-13"
+      },
+      {
+        "id": "2026-04-14-007",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "title": "达成 Mona M03 累计交付 25 万辆里程碑，全新 Mona SUV 即将推出",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p>Mona M03 在 3 月交付 9,335 辆，占小鹏总交付量 27,415 辆的 34.05%。小鹏已达成 <b>25 万辆</b> Mona M03 交付里程碑，全新 Mona SUV 即将推出。</p>",
+        "source_name": "CnEVPost",
+        "source_url": "https://cnevpost.com/2026/04/13/xpeng-reaches-250000-mona-m03-deliveries-all-new-mona-suv-looms/",
+        "date": "2026-04-13"
+      },
+      {
+        "id": "2026-04-14-008",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "title": "宣布 GX 技术发布会定档 4月15日，展示旗舰 SUV 前瞻科技",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p>小鹏汽车宣布 GX 技术发布会定于 <b>4 月 15 日</b>举行，将展示集小鹏前瞻科技之大成的旗舰 SUV。GX 联手华为打造新一代 <b>AI 数字投影大灯</b>。</p>",
+        "source_name": "腾讯新闻",
+        "source_url": "https://news.qq.com/rain/a/20260413A05LY700",
+        "date": "2026-04-13"
+      },
+      {
+        "id": "2026-04-14-009",
+        "company": "元戎启行",
+        "company_slug": "deeproute",
+        "title": "CEO 周光表示 L3 很可能被跳过，物理 AI 的下半场是机器人",
+        "sub_group": "国内智驾方案商",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p>元戎启行 CEO <b>周光</b>在采访中表示，<b>L3</b> 自动驾驶级别很可能被跳过，物理 AI 的下半场将是<b>机器人</b>。公司组合辅助驾驶方案合作车型累计交付超 <b>13 万台</b>。</p>",
+        "source_name": "新浪财经",
+        "source_url": "http://finance.sina.com.cn/stock/t/2026-04-13/doc-inhukefa4743478.shtml",
+        "date": "2026-04-13"
+      },
+      {
+        "id": "2026-04-14-010",
+        "company": "中国",
+        "company_slug": "china",
+        "title": "中国车企加速 L3 自动驾驶推广，监管发布安全标准草案",
+        "sub_group": "监管与政策",
+        "group": "其他",
+        "rating": 2,
+        "summary_html": "<p>中国汽车行业正在加速测试 <b>L3</b> 级自动驾驶功能的车辆。监管机构发布了<b>安全标准草案</b>，将于 <b>2027 年 7 月</b>生效，为高级自动驾驶功能提供监管框架。</p>",
+        "source_name": "SCMP",
+        "source_url": "https://www.scmp.com/plus/business/china-evs/article/3349837/chinese-carmakers-gear-l3-self-driving-roll-out",
+        "date": "2026-04-13"
       }
     ]
   },
