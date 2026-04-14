@@ -1,81 +1,10 @@
 [
   {
-    "date": "2026-04-13",
-    "items": [
-      {
-        "company": "Wayve",
-        "title": "与日产Uber合作东京Robotaxi,Series D融资1.5亿美元",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 3,
-        "summary_html": "<p>Wayve与日产和Uber合作开发针对东京市场的自动驾驶出租车。Series D融资达1.5亿美元,投资方包括梅赛德斯-奔驰、Stellantis、日产等。</p>",
-        "source_name": "Wayve Official",
-        "source_url": "https://wayve.ai/press/series-d/",
-        "date": "2026-04-13"
-      },
-      {
-        "company": "Nuro",
-        "title": "在东京启动零样本学习自动驾驶测试项目",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>Nuro在东京推进零样本学习自动驾驶技术研发,通过视觉语言模型实现快速环境适应。</p>",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/04/13/nuro-tokyo-autonomous-driving/",
-        "date": "2026-04-13"
-      },
-      {
-        "company": "Zoox",
-        "title": "计划2026年在旧金山和拉斯维加斯启动收费乘坐服务",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 3,
-        "summary_html": "<p>Amazon旗下Zoox宣布将在2026年开始在旧金山和拉斯维加斯向乘客收费,标志着商业化的关键转折点。</p>",
-        "source_name": "Reuters",
-        "source_url": "https://www.reuters.com/technology/",
-        "date": "2026-04-13"
-      },
-      {
-        "company": "轻舟智航",
-        "title": "新增21款车型搭载城市NOA,覆盖8-40万元价格段",
-        "sub_group": "国内智驾方案商",
-        "group": "国内",
-        "rating": 3,
-        "summary_html": "<p>轻舟智航宣布新增21款车型搭载城市NOA智驾方案,覆盖8万到40万元全价格带,预计2026年底达50款车型。</p>",
-        "source_name": "QCraft Official",
-        "source_url": "https://qcraft.ai/",
-        "date": "2026-04-13"
-      },
-      {
-        "company": "Momenta",
-        "title": "发布第二代自动驾驶芯片,600TOPS算力2026年量产",
-        "sub_group": "国内智驾方案商",
-        "group": "国内",
-        "rating": 3,
-        "summary_html": "<p>Momenta推出第二代自动驾驶专用芯片,单颗600TOPS计算能力,计划2026年启动量产,用于多家OEM车型。</p>",
-        "source_name": "Sina Tech",
-        "source_url": "https://tech.sina.com.cn/",
-        "date": "2026-04-13"
-      },
-      {
-        "company": "Uber",
-        "title": "多地Robotaxi合作扩展,目标年底覆盖10个市场",
-        "sub_group": "国外出行平台",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>Uber加快全球Robotaxi布局,与多家自动驾驶技术公司达成合作,计划在2026年底前覆盖全球10个主要市场。</p>",
-        "source_name": "Reuters",
-        "source_url": "https://www.reuters.com/",
-        "date": "2026-04-13"
-      }
-    ]
-  },
-  {
     "date": "2026-04-14",
     "items": [
       {
         "company": "Waymo",
-        "title": "单周订单突破50万次 - 运营数据里程碑",
+        "title": "单周订单突破50万次,运营数据里程碑",
         "sub_group": "国外 L4",
         "group": "国外",
         "rating": 3,
@@ -96,15 +25,15 @@
         "date": "2026-04-14"
       },
       {
-        "company": "Uber + Nuro",
+        "company": "Uber + Nuro + Lucid",
         "title": "Lucid Gravity Robotaxi在旧金山启动员工测试,计划20000台部署",
         "sub_group": "国外出行平台",
         "group": "国外",
         "rating": 3,
-        "summary_html": "<p>Uber、Nuro、Lucid宣布首批Lucid Gravity机器人出租车在旧金山启动员工测试,Uber计划在6年内部署20000台。</p>",
+        "summary_html": "<p>Uber、Nuro、Lucid宣布首批Lucid Gravity机器人出租车在旧金山启动员工测试,Uber计划在6年内部署20000台。员工可通过Uber App请求Lucid Gravity robotaxi,车辆配备安全员为后备。</p>",
         "source_name": "TechCrunch",
         "source_url": "https://techcrunch.com/2026/04/13/uber-nuro-san-francisco-testing-premium-robotaxi-service/",
-        "date": "2026-04-14"
+        "date": "2026-04-13"
       },
       {
         "company": "Nuro",
@@ -113,129 +42,19 @@
         "group": "国外",
         "rating": 3,
         "summary_html": "<p>Nuro与Lucid和Uber联合开发全球Robotaxi解决方案,已在旧金山启动员工测试。</p>",
-        "source_name": "Nuro Official",
-        "source_url": "https://nuro.ai/",
-        "date": "2026-04-14"
-      },
-      {
-        "company": "Waymo",
-        "title": "与Waze合作共享坑洼道路数据,试点五城市",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>Waymo与导航应用Waze展开合作,利用激光雷达检测道路坑洼,通过Waze for Cities平台为城市提供精确的道路状况数据。</p>",
-        "source_name": "Waymo Blog",
-        "source_url": "https://waymo.com/blog/",
-        "date": "2026-04-14"
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/04/13/uber-nuro-san-francisco-testing-premium-robotaxi-service/",
+        "date": "2026-04-13"
       },
       {
         "company": "小马智行",
-        "title": "发布PONYWorld 2.0世界模型,AI自我进化时代开启",
-        "sub_group": "国内 L4",
-        "group": "国内",
-        "rating": 3,
-        "summary_html": "<p>小马智行发布PONYWorld 2.0,实现'自诊断+定向进化'闭环能力,让AI主动驱动研发过程。这是自动驾驶领域世界模型技术的重要突破。</p>",
-        "source_name": "Sina Finance",
-        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-10/doc-inhtznzw0191198.shtml",
-        "date": "2026-04-14"
-      },
-      {
-        "company": "小马智行",
-        "title": "机队1400+台,深圳单车日均净收入394元创历史新高",
-        "sub_group": "国内 L4",
-        "group": "国内",
-        "rating": 3,
-        "summary_html": "<p>小马第七代机队从270台扩至1400+台。深圳市场表现突出,单车日均净收入394元创新高,预期2026年底突破3000台,标志着Robotaxi商业化进入规模盈利阶段。</p>",
-        "source_name": "Sina Finance",
-        "source_url": "https://caifuhao.eastmoney.com/news/20260402145905795923680",
-        "date": "2026-04-14"
-      },
-      {
-        "company": "华为鸿蒙智行",
-        "title": "进入L3级时代,2026年推出11-18款新车",
-        "sub_group": "国内华为系",
-        "group": "国内",
-        "rating": 3,
-        "summary_html": "<p>鸿蒙智行2026年将补齐覆盖15-100万元全价格带的产品矩阵,进入L3级时代,全年推出11-18款新车,平均每20天一款的节奏。</p>",
-        "source_name": "Sina Finance",
-        "source_url": "https://cj.sina.com.cn/articles/view/7880068201/1d5b04c6901901tvqk",
-        "date": "2026-04-14"
-      },
-      {
-        "company": "轻舟智航",
-        "title": "辅助驾驶突破百万,推出单征程6M城市NOA+VLA+世界模型",
-        "sub_group": "国内智驾方案商",
-        "group": "国内",
-        "rating": 3,
-        "summary_html": "<p>轻舟智航宣布辅助驾驶突破百万搭载,推出首个单征程6M城市NOA和VLA+世界模型方案。预计2026年新增搭载50余款车型。</p>",
-        "source_name": "QCraft DAY 2026",
-        "source_url": "https://i.gasgoo.com/news/70444223.html",
-        "date": "2026-04-14"
-      },
-      {
-        "company": "Wayve",
-        "title": "与日产Uber合作东京Robotaxi,Series D融资1.5亿美元",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>Wayve与日产和Uber合作开发针对东京市场的自动驾驶出租车。Series D融资达1.5亿美元,投资方包括梅赛德斯-奔驰、Stellantis、日产等。</p>",
-        "source_name": "Wayve Official",
-        "source_url": "https://wayve.ai/press/series-d/",
-        "date": "2026-04-14"
-      },
-      {
-        "company": "文远知行",
-        "title": "新加坡榜鹅区公开运营启动,与Grab合作",
+        "title": "在克罗地亚萨格勒布启动Robotaxi商业运营",
         "sub_group": "国内 L4",
         "group": "国内",
         "rating": 2,
-        "summary_html": "<p>文远知行与Grab在新加坡榜鹅启动Robotaxi公开运营。初期阶段每台自动驾驶车辆配备1名安全员,乘客可免费体验。</p>",
-        "source_name": "Sina News",
-        "source_url": "https://k.sina.com.cn/article_5953466437_162dab0450670abnoy.html",
-        "date": "2026-04-14"
-      },
-      {
-        "company": "地平线",
-        "title": "4月22日发布'星空'舱驾融合智能体芯片",
-        "sub_group": "国内智驾方案商",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p>地平线创始人余凯宣布,4月22日发布中国首款舱驾融合智能体芯片'星空',在单一芯片上同时运行自动驾驶和智能座舱系统,可为每台车节省约4000元成本。</p>",
-        "source_name": "Sina Tech",
-        "source_url": "https://finance.sina.com.cn/tech/digi/2026-04-11/doc-inhucfkz9520676.shtml",
-        "date": "2026-04-14"
-      },
-      {
-        "company": "萝卜快跑",
-        "title": "迪拜推出全无人驾驶商业化服务",
-        "sub_group": "国内 L4",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p>百度萝卜快跑于2026年Q1在阿联酋迪拜启动全无人驾驶出行服务商业化运营,标志着中国Robotaxi企业的国际拓展。</p>",
-        "source_name": "Ruicai Finance",
-        "source_url": "https://m.rccaijing.com/news-7427207625131619694.html",
-        "date": "2026-04-14"
-      },
-      {
-        "company": "小鹏",
-        "title": "第二代VLA+图灵自研芯片,已获大众定点",
-        "sub_group": "国内新势力OEM",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p>小鹏推出第二代VLA和自研图灵AI芯片,单颗3000TOPS算力。该方案用于自家Robotaxi(搭载4颗芯片),已获大众定点。</p>",
-        "source_name": "Tencent News",
-        "source_url": "https://news.qq.com/rain/a/20260212A007J600",
-        "date": "2026-04-14"
-      },
-      {
-        "company": "长安汽车",
-        "title": "2026年天枢智驾全场景L3,2028年进阶L4",
-        "sub_group": "国内新势力OEM",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p>长安汽车董事长朱华荣宣布:2026年天枢智驾将实现全场景L3级自动驾驶,2028年进阶L4。8月在10万元级搭载激光雷达。</p>",
-        "source_name": "Sina Finance",
-        "source_url": "https://finance.sina.com.cn/stock/relnews/cn/2026-04-07/doc-inhtrytk2379223.shtml",
+        "summary_html": "<p>小马智行与Uber、Verne合作在克罗地亚首都萨格勒布启动商业无人驾驶出租车运营服务,标志着中国自动驾驶企业的国际拓展。</p>",
+        "source_name": "Gasgoo",
+        "source_url": "https://autonews.gasgoo.com/",
         "date": "2026-04-14"
       }
     ]
