@@ -2,7 +2,7 @@
 
 > **目标读者:Claude 本身**。由 weekly-report 的步骤 11 自动串接,不需要用户手动触发。
 >
-> 任务:把 `data/reports/YYYY-Wxx.json`(weekly-report 步骤 8.5 生成的副产物)写入 `web/data/weekly.json`,供 GitHub Pages 网页展示。
+> 任务:把 `data/reports/YYYY-Wxx.json`(weekly-report 步骤 8.5 生成的副产物)写入 `docs/data/weekly.json`,供 GitHub Pages 网页展示。
 
 ---
 
@@ -20,7 +20,7 @@
 
 如果文件不存在,报错:"weekly-report 步骤 8.5 未执行或未生成 JSON 副产物,请先运行 weekly-report。"
 
-### 步骤 3:读取现有 web/data/weekly.json
+### 步骤 3:读取现有 docs/data/weekly.json
 
 如果文件存在,读取为数组。如果是 `[]` 或不存在,视为空数组 `[]`。
 
@@ -29,14 +29,14 @@
 - 如果数组里已经有 `week_id == 本周 week_id` 的 entry,**替换**它
 - 否则,**插入到数组开头**(保持周次倒序,最新周在前)
 
-### 步骤 5:写回 web/data/weekly.json
+### 步骤 5:写回 docs/data/weekly.json
 
 格式化为易读的 JSON(2空格缩进)。
 
 ### 步骤 6:输出提示
 
 ```
-本周周报(YYYY-Wxx)已写入 web/data/weekly.json。
+本周周报(YYYY-Wxx)已写入 docs/data/weekly.json。
 
 请运行以下命令发布到 GitHub Pages:
   git add -A && git commit -m "weekly YYYY-Wxx" && git push

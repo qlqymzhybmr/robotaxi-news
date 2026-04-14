@@ -253,12 +253,12 @@
 
 步骤 10 完成后,**不等用户说话**,直接按 `workflows/weekly-publish.md` 的流程执行。
 
-把步骤 8.5 生成的 `data/reports/YYYY-Wxx.json` 写入 `web/data/weekly.json`。
+把步骤 8.5 生成的 `data/reports/YYYY-Wxx.json` 写入 `docs/data/weekly.json`。
 
 完成后在步骤 10 的结束消息里追加:
 
 ```
-线 A 网页发布:本周周报(YYYY-Wxx)已写入 web/data/weekly.json。
+线 A 网页发布:本周周报(YYYY-Wxx)已写入 docs/data/weekly.json。
 发布请运行:git add -A && git commit -m "weekly YYYY-Wxx" && git push
 ```
 

@@ -236,7 +236,7 @@ Phase 1 + Phase 2 + Phase 3 全部完成后,统一告诉用户:
 ```
 今日 daily 抓取完成:
 - 共 X 条新闻(⭐⭐⭐ x 条 / ⭐⭐ x 条 / ⭐ x 条),写入 data/daily/YYYY-MM-DD.md
-- 线 A 自动精选:X 条(⭐⭐+)已写入 web/data/daily.json
+- 线 A 自动精选:X 条(⭐⭐+)已写入 docs/data/daily.json
 
 请用 VS Code 打开 data/daily/YYYY-MM-DD.md,把认为重要的条目 [ ] 改成 [x]。(线 B 周报流程)
 发布网页请运行:git add -A && git commit -m "daily YYYY-MM-DD" && git push

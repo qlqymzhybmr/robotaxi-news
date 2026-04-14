@@ -2,7 +2,7 @@
 
 > **目标读者:Claude 本身**。由 daily-fetch 的 Phase 2 完成后自动串接,不需要用户手动触发。
 >
-> 任务:把今日 daily 文件里 rating ≥ 2(⭐⭐ 或 ⭐⭐⭐)的条目写入 `web/data/daily.json`,供 GitHub Pages 网页展示。
+> 任务:把今日 daily 文件里 rating ≥ 2(⭐⭐ 或 ⭐⭐⭐)的条目写入 `docs/data/daily.json`,供 GitHub Pages 网页展示。
 
 ---
 
@@ -131,7 +131,7 @@
 
 **id**:格式 `YYYY-MM-DD-NNN`,NNN 是当天该条目的序号,从 001 开始,按文件中出现顺序编号。
 
-### 步骤 4:读取现有 web/data/daily.json
+### 步骤 4:读取现有 docs/data/daily.json
 
 如果文件存在,读取为数组。如果文件是 `[]` 或不存在,视为空数组 `[]`。
 
@@ -148,14 +148,14 @@
 - 如果数组里已经有 `date == 今天` 的 entry,**替换**它(重跑场景)
 - 否则,**插入到数组开头**(保持日期倒序)
 
-### 步骤 6:写回 web/data/daily.json
+### 步骤 6:写回 docs/data/daily.json
 
 把更新后的数组写回文件,格式化为易读的 JSON(2空格缩进)。
 
 ### 步骤 7:输出提示
 
 ```
-今日精选 X 条(⭐⭐⭐ x 条 / ⭐⭐ x 条)已写入 web/data/daily.json。
+今日精选 X 条(⭐⭐⭐ x 条 / ⭐⭐ x 条)已写入 docs/data/daily.json。
 
 请运行以下命令发布到 GitHub Pages:
   git add -A && git commit -m "daily YYYY-MM-DD" && git push
@@ -166,5 +166,5 @@
 ## 注意事项
 
 - **线 A 只看 rating**,不管用户有没有勾 `[x]`。线 B(周报)才看勾选。
-- 如果今日 daily 没有任何 ⭐⭐+ 条目,输出提示"今日无 ⭐⭐+ 精选,web/data/daily.json 未更改。"
+- 如果今日 daily 没有任何 ⭐⭐+ 条目,输出提示"今日无 ⭐⭐+ 精选,docs/data/daily.json 未更改。"
 - summary_html 保留原文细节,不要压缩或改写

@@ -97,7 +97,7 @@ robotaxi-news/
 ├── data/
 │   ├── daily/                   # 每日抓取产物,文件名 YYYY-MM-DD.md
 │   └── reports/                 # 周报 HTML(YYYY-Wxx.html)+ JSON 副产物(YYYY-Wxx.json)
-└── web/                         # GitHub Pages 网站根目录
+└── docs/                        # GitHub Pages 网站根目录(固定用 /docs,GitHub 原生支持)
     ├── index.html               # 单文件网页(Tailwind CDN + 原生 JS)
     └── data/
         ├── daily.json           # 每日精选数据(Claude 自动写入)
@@ -197,9 +197,9 @@ https://qlqymzhybmr.github.io/robotaxi-news/
 ### 工作方式(线 A 全自动)
 
 1. 实习生说"跑今日新闻",Claude 跑完 daily-fetch 后,自动串接 daily-publish
-2. daily-publish 从今日 daily 文件里提取所有 ⭐⭐+ 条目,写入 `web/data/daily.json`
+2. daily-publish 从今日 daily 文件里提取所有 ⭐⭐+ 条目,写入 `docs/data/daily.json`
 3. 实习生运行 `git add -A && git commit -m "daily YYYY-MM-DD" && git push`,约 1-2 分钟后网页更新
-4. 每周一周报生成后,weekly-report 自动串接 weekly-publish,写入 `web/data/weekly.json`,同样 push 后自动更新
+4. 每周一周报生成后,weekly-report 自动串接 weekly-publish,写入 `docs/data/weekly.json`,同样 push 后自动更新
 
 ### 网页功能
 

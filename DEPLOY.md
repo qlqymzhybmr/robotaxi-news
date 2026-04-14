@@ -1,6 +1,6 @@
 # GitHub Pages 部署指南
 
-> 将 `web/` 目录部署到 GitHub Pages,访问地址:https://qlqymzhybmr.github.io/robotaxi-news/
+> 将 `docs/` 目录部署到 GitHub Pages,访问地址:https://qlqymzhybmr.github.io/robotaxi-news/
 
 ---
 
@@ -43,7 +43,7 @@ git push -u origin main
 2. 点顶部 tab "Settings"
 3. 左侧菜单找 "Pages"(在 "Code and automation" 分组下)
 4. "Build and deployment" → Source 选 **"Deploy from a branch"**
-5. Branch 选 **`main`**,文件夹选 **`/web`**
+5. Branch 选 **`main`**,文件夹选 **`/docs`**
 6. 点 "Save"
 
 ### 第 5 步:等待部署完成
@@ -77,15 +77,15 @@ push 完成后约 1-2 分钟,网页自动更新。
 **原因**:GitHub Pages 还没部署完,或路径设置错误。
 
 **排查步骤**:
-1. 检查 Settings → Pages 是否已保存,Branch 是否是 `main`,文件夹是否是 `/web`
-2. 检查 `web/index.html` 是否已经 push 到 main 分支
+1. 检查 Settings → Pages 是否已保存,Branch 是否是 `main`,文件夹是否是 `/docs`
+2. 检查 `docs/index.html` 是否已经 push 到 main 分支
 3. 等 5 分钟后刷新
 
 ### 问题:页面加载了但显示"暂无每日精选数据"
 
 **原因**:数据文件是空的(`[]`),或者还没有运行过 daily-fetch。
 
-**解决**:运行一次 daily-fetch,Claude 会自动更新 `web/data/daily.json`,然后 push 即可。
+**解决**:运行一次 daily-fetch,Claude 会自动更新 `docs/data/daily.json`,然后 push 即可。
 
 ### 问题:CORS 错误(浏览器控制台报 Access-Control-Allow-Origin)
 
@@ -124,13 +124,13 @@ git config --global credential.helper store
 
 ```
 robotaxi-news/
-└── web/                    ← GitHub Pages 从这里部署
+└── docs/                   ← GitHub Pages 从这里部署(GitHub 原生支持 /docs 文件夹)
     ├── index.html          ← 网页主文件
     └── data/
         ├── daily.json      ← 每日精选数据(Claude 自动写入)
         └── weekly.json     ← 周报数据(Claude 自动写入)
 ```
 
-GitHub Pages 会把 `web/` 目录作为网站根目录,所以:
-- `web/index.html` → `https://qlqymzhybmr.github.io/robotaxi-news/`
-- `web/data/daily.json` → `https://qlqymzhybmr.github.io/robotaxi-news/data/daily.json`
+GitHub Pages 会把 `docs/` 目录作为网站根目录,所以:
+- `docs/index.html` → `https://qlqymzhybmr.github.io/robotaxi-news/`
+- `docs/data/daily.json` → `https://qlqymzhybmr.github.io/robotaxi-news/data/daily.json`
