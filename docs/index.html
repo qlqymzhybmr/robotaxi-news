@@ -389,8 +389,8 @@ function renderWeekly() {
   const sectionsHtml = (week.sections || []).map(section => {
     const entriesHtml = (section.entries || []).map(entry => {
       const subItemsHtml = (entry.sub_items || []).map(si => `
-        <div class="ml-5 mt-2 text-sm text-gray-700 leading-relaxed">
-          <span class="text-gray-500 font-medium mr-1">${escHtml(si.label)}.</span>
+        <div class="ml-5 mt-2 text-sm text-gray-700 leading-relaxed flex">
+          <span class="mr-2 text-gray-400">•</span>
           <span>${si.content_html || ''}</span>
         </div>`).join('');
 
