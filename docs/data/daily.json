@@ -55,19 +55,6 @@
         "date": "2026-04-13"
       },
       {
-        "id": "2026-04-14-005",
-        "company": "Nuro",
-        "company_slug": "nuro",
-        "title": "与 Uber 在旧金山开始测试高端 robotaxi 服务",
-        "sub_group": "国外 OEM / Tier1 / 自动驾驶技术公司",
-        "group": "国外",
-        "rating": 3,
-        "summary_html": "<p><b>Nuro</b> 于 <b>4月13日</b> 宣布与 <b>Uber</b> 和 <b>Lucid Motors</b> 达成三方合作，在<b>旧金山</b>推出高端 robotaxi 服务测试。Nuro 提供其<b>第三代自动驾驶系统</b>，该系统此前主要应用于无人配送车辆，现首次应用于载人出行场景。</p><p>此次合作标志着 Nuro 业务战略的重大转型。公司从 <b>2020 年</b>起专注于无人配送领域，积累了超过 <b>500 万英里</b>的自动驾驶里程。现在，Nuro 将这些技术能力延伸至载人出行市场，与 Waymo、Cruise 等传统 robotaxi 玩家展开竞争。</p><p>测试车队使用 <b>Lucid Air</b> 豪华轿车，配备 Nuro 的<b>传感器套件和计算平台</b>。服务初期覆盖旧金山<b>金融区和 SOMA 区域</b>，计划在 <b>2026 年第三季度</b>扩展至<b>洛杉矶和迈阿密</b>。Nuro CEO Dave Ferguson 表示，高端市场的单次行程收入可达普通网约车的 <b>2-3 倍</b>，这为公司提供了更快的盈利路径。</p>",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/04/13/uber-nuro-san-francisco-testing-premium-robotaxi-service/",
-        "date": "2026-04-13"
-      },
-      {
         "id": "2026-04-14-006",
         "company": "曹操出行",
         "company_slug": "caocao",
