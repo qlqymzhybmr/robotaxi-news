@@ -1,7 +1,7 @@
 {
   "week_id": "2026-W15",
   "date_range": "0413-0414",
-  "title": "无人驾驶行业0413-0414重要新闻",
+  "title": "无人驾驶行业0413-0414重要新闻（测试）",
   "generated_at": "2026-04-14T10:00:00+08:00",
   "sections": [
     {
@@ -37,7 +37,7 @@
         {
           "company": "Tesla",
           "company_slug": "tesla",
-          "headline_html": "<b>Tesla：</b>4月13日，发布2026春季重大软件更新；FSD 总监表示荷兰批准将推动全球推广",
+          "headline_html": "<b>Tesla：</b>4月13日，发布2026春季重大软件更新；FSD 总监表示荷兰批准将推动全球推广；FSD v14.3 改进摄像头可见性警报",
           "sub_items": [
             {
               "label": "a",
@@ -46,6 +46,10 @@
             {
               "label": "b",
               "content_html": "<b>4月13日</b>，Tesla FSD 总监 Ashok Elluswamy 表示，<b>荷兰</b>的监管批准标志着欧洲市场的突破。荷兰成为欧洲首个正式批准 <b>FSD (Supervised)</b> 上路的国家。该批准预计将加速 FSD 向<b>德国、法国、英国</b>等欧洲主要市场的扩展。"
+            },
+            {
+              "label": "c",
+              "content_html": "<b>4月13日</b>，Tesla 在 <b>FSD v14.3</b> 中增强了摄像头可见性警告，采用更显眼的用户界面。该改进旨在确保更清晰的可见性警报，为系统向无监督自动驾驶推进做准备。"
             }
           ]
         }
