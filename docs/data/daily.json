@@ -1,1 +1,107 @@
-[]
+{
+  "date": "2026-04-14",
+  "coverage_window": "2026-04-13 10:00 ~ 2026-04-14 10:00 (Beijing Time)",
+  "total_articles": 28,
+  "highlighted_count": 28,
+  "rating_distribution": {
+    "three_stars": 8,
+    "two_stars": 20
+  },
+  "summary": {
+    "international_headlines": [
+      {
+        "company": "Waymo",
+        "rating": "⭐⭐⭐",
+        "date": "2026-04-13",
+        "headline": "单周订单突破50万次 - 运营数据里程碑",
+        "summary": "Waymo宣布单周完成50万次付费订单,相比去年同期(2025年4月的25万次)增长一倍,标志着其商业化规模在加速扩大。"
+      },
+      {
+        "company": "Tesla",
+        "rating": "⭐⭐⭐",
+        "date": "2026-04",
+        "headline": "Cybercab量产启动,首批约60台已进入Giga Texas生产",
+        "summary": "Tesla Cybercab无人驾驶出租车在德州超级工厂正式启动量产,标志着自动驾驶出租车商业化的关键里程碑。"
+      },
+      {
+        "company": "Uber + Nuro",
+        "rating": "⭐⭐⭐",
+        "date": "2026-04-13",
+        "headline": "Lucid Gravity Robotaxi在旧金山启动员工测试,计划20000台部署",
+        "summary": "Uber、Nuro、Lucid宣布首批Lucid Gravity机器人出租车在旧金山启动员工测试,Uber计划在6年内部署20000台。"
+      },
+      {
+        "company": "Waymo",
+        "rating": "⭐⭐",
+        "date": "2026-04-09",
+        "headline": "与Waze合作共享坑洼道路数据,试点五城市"
+      },
+      {
+        "company": "Wayve",
+        "rating": "⭐⭐",
+        "date": "2026-02",
+        "headline": "与日产Uber合作东京Robotaxi,Series D融资1.5亿美元"
+      }
+    ],
+    "domestic_headlines": [
+      {
+        "company": "小马智行(Pony.ai)",
+        "rating": "⭐⭐⭐",
+        "date": "2026-04-10",
+        "headline": "发布PONYWorld 2.0世界模型,AI自我进化时代开启",
+        "summary": "小马智行发布PONYWorld 2.0,实现'自诊断+定向进化'闭环能力,让AI主动驱动研发过程。"
+      },
+      {
+        "company": "小马智行(Pony.ai)",
+        "rating": "⭐⭐⭐",
+        "date": "2026-03",
+        "headline": "机队1400+台,深圳单车日均净收入394元创历史新高",
+        "summary": "小马第七代机队从270台扩至1400+台,深圳市场表现突出,单车日均净收入创新高,预期2026年底突破3000台。"
+      },
+      {
+        "company": "华为鸿蒙智行",
+        "rating": "⭐⭐⭐",
+        "date": "2026",
+        "headline": "进入L3级时代,2026年推出11-18款新车",
+        "summary": "鸿蒙智行2026年将补齐全价格带(15-100万元)产品矩阵,进入L3级时代,全年推出11-18款新车。"
+      },
+      {
+        "company": "轻舟智航(QCraft)",
+        "rating": "⭐⭐⭐",
+        "date": "2026-01",
+        "headline": "辅助驾驶突破百万,推出单征程6M城市NOA+VLA+世界模型",
+        "summary": "轻舟智航宣布辅助驾驶突破百万搭载,推出首个单征程6M城市NOA和VLA+世界模型。"
+      },
+      {
+        "company": "文远知行(WeRide)",
+        "rating": "⭐⭐",
+        "date": "2026-04-01",
+        "headline": "新加坡榜鹅区公开运营启动,与Grab合作"
+      },
+      {
+        "company": "地平线(Horizon)",
+        "rating": "⭐⭐",
+        "date": "2026-04-11",
+        "headline": "4月22日发布'星空'舱驾融合智能体芯片"
+      }
+    ],
+    "key_trends": [
+      "2026年全球自动驾驶元年:国际与国内企业同步加速商业化",
+      "Robotaxi运营数据创新高,盈利能力逐步得到验证",
+      "AI大模型(世界模型+VLA)成为竞争焦点,国内外企业同步布局",
+      "国产自动驾驶芯片加快,地平线、Momenta技术突破",
+      "多渠道部署形成差异化竞争:L4专用车+高端轿车+中端微巴"
+    ]
+  },
+  "statistics": {
+    "total_articles": 28,
+    "rating_distribution": {
+      "three_stars": 8,
+      "two_stars": 20
+    },
+    "international_vs_domestic": "15 vs 17",
+    "top_companies": ["Waymo", "Tesla", "小马智行", "华为鸿蒙", "文远知行", "轻舟智航"],
+    "execution": "Phase 1 + Phase 2 (International + Domestic)",
+    "last_updated": "2026-04-14"
+  }
+}
