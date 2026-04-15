@@ -1,5 +1,62 @@
 [
   {
+    "date": "2026-04-15",
+    "items": [
+      {
+        "id": "2026-04-15-001",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "title": "在伦敦公路正式开始自动驾驶测试，剑指2026年首个国际商业化市场",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 3,
+        "summary_html": "<p>Waymo 于 <b>4月14日</b> 宣布在<b>伦敦</b>公共道路上正式启动自动驾驶测试，车队规模约 <b>100 辆 Jaguar I-Pace</b>，覆盖面积约 <b>100 平方英里</b>。测试阶段车内仍配备安全员，但 Waymo 联席 CEO <b>Dmitri Dolgov</b> 表示，公司的核心驾驶 AI 已在伦敦路况下展现出良好的泛化能力，适应了<b>靠左行驶、环形交叉路口、双层巴士</b>等本地特有场景。</p><p>Waymo 正在伦敦本地招聘并建立服务中心，目标是在获得英国政府批准后于 <b>2026 年内</b>正式推出商业化 robotaxi 服务。这将是 Waymo <b>首个国际商业化市场</b>，具有重要的战略意义。Waymo 官方博客同步披露，公司已累计完成 <b>1.7 亿英里</b>全自动驾驶里程，与人类司机相比，严重/致命伤亡事故减少 <b>92%</b>，安全气囊触发事故减少 <b>83%</b>。</p><p>伦敦市场的主要竞争对手包括本土公司 <b>Wayve</b> 以及 <b>Uber</b>。分析人士认为，Waymo 进入伦敦标志着其从美国本土向全球扩张的关键一步，若成功将为其进入欧洲大陆和亚太市场奠定基础。</p>",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/04/14/london-gets-closer-to-its-first-robotaxi-service-as-waymo-begins-testing/",
+        "date": "2026-04-14"
+      },
+      {
+        "id": "2026-04-15-002",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "Cybercab 在 Giga Texas 量产爬坡，50+ 辆已在厂区集结，奥斯汀商业化服务年内启动",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>据无人机航拍画面和 Teslarati 报道，<b>4月14日</b>已有超过 <b>50 辆 Cybercab</b> 在 <b>Giga Texas</b> 厂区碰撞测试区附近集结，标志着量产爬坡正式进入加速阶段。首辆 Cybercab 于 <b>2月17日</b>下线，<b>4月</b>开始量产爬坡，Elon Musk 此前坦言初期产量\"极慢\"，但正在快速提升。</p><p>目前量产版 Cybercab 仍保留临时方向盘和踏板，以满足监管要求；待无人驾驶许可获批后将移除。Tesla 长期目标是年产 <b>200 万辆</b> Cybercab，并计划在 <b>2026 年底</b>前在<b>奥斯汀</b>启动商业化 robotaxi 服务，届时将接替现有基于 Model Y 的试点项目。</p><p>Cybercab 的量产进展是 Tesla 整个 robotaxi 战略的核心节点。分析师认为，若奥斯汀服务能在年内落地，将对 Waymo 等竞争对手形成直接压力，并验证 Tesla 无方向盘全自动驾驶的商业可行性。</p>",
+        "source_name": "Teslarati",
+        "source_url": "https://www.teslarati.com/tesla-preps-cybercab-takeover-robotaxi-platform-after-pilot-program/",
+        "date": "2026-04-14"
+      },
+      {
+        "id": "2026-04-15-003",
+        "company": "Uber",
+        "company_slug": "uber",
+        "title": "追加 2 亿美元投资 Lucid，将车辆采购承诺扩大至 3.5 万辆，深化 robotaxi 布局",
+        "sub_group": "国外出行平台",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>Uber 于 <b>4月14日</b>宣布向 <b>Lucid Motors</b> 追加 <b>2 亿美元</b>投资，使其对 Lucid 的总投资达到 <b>5 亿美元</b>，并将车辆采购承诺从此前的 <b>1 万辆</b>扩大至最少 <b>3.5 万辆</b>。这批车辆将专门为 Uber 未来的全球 robotaxi 服务定制，基于 Lucid 中型平台打造，目标售价约 <b>5 万美元</b>。</p><p>Uber 与合作伙伴 <b>Nuro</b> 已在旧金山湾区使用改装版 <b>Lucid Gravity SUV</b> 进行豪华 robotaxi 内部测试，计划于 <b>2026 年晚些时候</b>在旧金山正式推出商业服务。此次扩大承诺表明 Uber 正在将 Lucid 作为其 robotaxi 车队的核心硬件供应商，与 Waymo、Zoox 等自研平台形成差异化竞争。</p>",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/04/14/lucid-motors-names-new-ceo-lands-more-money-from-uber-and-saudis/",
+        "date": "2026-04-14"
+      },
+      {
+        "id": "2026-04-15-004",
+        "company": "Lucid",
+        "company_slug": "lucid",
+        "title": "任命新 CEO Silvio Napoli，获 7.5 亿美元融资，robotaxi 战略全面提速",
+        "sub_group": "国外 OEM / Tier1",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>Lucid Motors 于 <b>4月14日</b>宣布任命 <b>Silvio Napoli</b>（前迅达集团 CEO）为新任 CEO，同时完成 <b>7.5 亿美元</b>融资：沙特主权基金 <b>PIF</b> 通过 Ayar Third Investment 注资 <b>5.5 亿美元</b>，<b>Uber</b> 追加 <b>2 亿美元</b>。Napoli 是汽车行业外部人士，将以\"执行董事\"头衔过渡，待美国工作许可到位后正式就任。</p><p>此次融资与 Uber 扩大采购承诺（3.5 万辆）直接挂钩，Lucid 正将自身定位为 Uber robotaxi 车队的专属硬件平台。公司此前已于 <b>2月</b>裁员 12%，并削减亚利桑那工厂承包商，本次融资为其提供了向 robotaxi 市场转型的资金保障。</p>",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/04/14/lucid-motors-names-new-ceo-lands-more-money-from-uber-and-saudis/",
+        "date": "2026-04-14"
+      }
+    ]
+  },
+  {
     "date": "2026-04-14",
     "items": [
       {
