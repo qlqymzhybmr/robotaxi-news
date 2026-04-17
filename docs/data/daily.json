@@ -1,5 +1,93 @@
 [
   {
+    "date": "2026-04-17",
+    "items": [
+      {
+        "id": "2026-04-17-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "荷兰开启免费 FSD 试用，正式开启 FSD 欧洲扩张多米诺效应",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>Tesla 于 <b>4月17日</b>在<b>荷兰</b>开始向本地 HW4 车主推送免费 FSD（Supervised）试用资格——多名荷兰车主确认在触摸屏收到试用邀请。本次推送的是专为欧洲监管定制的 <b>FSD v14.2.2.5</b>（软件版本 2026.3.6），与北美版 v14.3 存在差异，新增了<b>专为复杂欧洲路口和交规</b>设计的 UI 元素。激活流程须完成 Tesla 要求的强制安全教程及答题测验，通过后方可点亮\"Start Self-Driving\"按钮。荷兰与北美不同，保留了<b>一次性买断</b>选项（不强制订阅）。</p><p>此次荷兰试用在<b>荷兰 RDW 监管机构批准后约一周内</b>快速推出，战略意义在于：业内普遍认为 RDW 的批准会产生\"多米诺效应\"，其他欧洲国家通常以 RDW 的车型认证决定为参考。这将是 FSD 进入欧洲大陆的关键第一步，为后续法国、德国等主要市场扩展铺路。Tesla 同期推送了 <b>2026.14.1</b> 小版本更新，包含 Self-Driving App 改进和沉浸式音效升级等。</p>",
+        "source_name": "Not a Tesla App",
+        "source_url": "https://www.notateslaapp.com/news/3990/tesla-launches-free-fsd-trials-in-the-netherlands",
+        "date": "2026-04-17"
+      }
+    ]
+  },
+  {
+    "date": "2026-04-16",
+    "items": [
+      {
+        "id": "2026-04-16-001",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "title": "Miami + Orlando 向全体公众开放 robotaxi，含高速公路段，成第5、6商业化城市",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 3,
+        "summary_html": "<p>Waymo 于 <b>4月15日</b>宣布在<b>迈阿密</b>和<b>奥兰多</b>正式向全体公众开放 robotaxi 服务——无需候补名单，任何人下载 Waymo App 即可即时打车。两地此前已接待来自初始候补名单的超 <b>15 万名</b>乘客完成多月测试，本次是真正意义上的无限制商业化开放。</p><p>亮点之一是<b>迈阿密引入高速公路驾驶</b>功能：Waymo 车辆可接入 <b>I-95</b>、Dolphin Expressway（836）和 Palmetto Expressway（826），实现跨区域快速路线，覆盖面积扩展至约 <b>60 平方英里</b>。奥兰多服务区覆盖 Parramore、Florida Center 及 Southwest Orlando，含旅游核心区。迈阿密与奥兰多成为 Waymo <b>第5、6个全面商业化的美国城市</b>，此前已在凤凰城、旧金山、洛杉矶、奥斯汀商业化落地。</p><p>Waymo 披露，其驾驶系统在严重或致命伤亡事故方面比人类驾驶员少 <b>92%</b>。分析师认为，佛罗里达两城市的全面开放，是 Waymo 从西海岸向阳光带（Sun Belt）大规模扩张的战略节点，对 Tesla Cybercab 奥斯汀计划形成先发竞争压力。</p>",
+        "source_name": "Waymo Blog",
+        "source_url": "https://waymo.com/blog/2026/04/floridas-new-way-to-ride/",
+        "date": "2026-04-15"
+      },
+      {
+        "id": "2026-04-16-002",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "Spring Update 2026.14 推送，新增 Self-Driving App、Grok 语音提醒、Safety Score 3.0 绑定 FSD 保险折扣",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>Tesla 于 <b>4月15日</b>开始推送 <b>Spring Update（版本 2026.14）</b>，面向 <b>HW4</b> 车辆。核心更新包括：全新 <b>Self-Driving App</b>——通过 App Launcher 访问，提供 FSD 订阅入口、功能激活指引及持续统计数据展示；<b>\"Hey Grok\"语音助手</b>新增位置提醒功能；Dashcam 升级为 <b>24 小时记录</b>，下载视频包含速度、转向角及自驾状态等遥测数据。</p><p><b>Safety Score 3.0</b> 同步推出，评分精度提升至小数点后一位；最重要的是，<b>使用 FSD Supervised 的每英里里程自动获得 100 分满分</b>，与手动驾驶完全解耦。这一机制将 FSD 使用行为直接与 Tesla 保险保费挂钩，长期使用 FSD 的用户有望大幅降低保险成本，以保险折扣补贴 FSD 订阅费用，形成正向激励闭环。</p>",
+        "source_name": "Not a Tesla App",
+        "source_url": "https://www.notateslaapp.com/software-updates/version/2026.14/release-notes",
+        "date": "2026-04-15"
+      },
+      {
+        "id": "2026-04-16-003",
+        "company": "Uber",
+        "company_slug": "uber",
+        "title": "承诺 100 亿美元转型 robotaxi 战略，自建车队 + 入股制造商，目标 2026 年覆盖 15 城",
+        "sub_group": "国外出行平台",
+        "group": "国外",
+        "rating": 3,
+        "summary_html": "<p>Uber CEO <b>Dara Khosrowshahi</b> 在 <b>4月15日</b>宣布，Uber 已向自动驾驶汽车领域承诺投入超过 <b>100 亿美元</b>：其中约 <b>75 亿美元</b>用于直接购买 robotaxi 车辆（涵盖 Lucid、Rivian 等制造商），约 <b>25 亿美元</b>用于持股相关 AV 制造商。这标志着 Uber 从\"轻资产平台\"向\"车队拥有者\"的历史性战略转型，彻底颠覆其创立以来\"不持有车辆\"的商业模式。</p><p>Khosrowshahi 表示，公司预计在 <b>2026 年底</b>前在 <b>15 个城市</b>运营 robotaxi 服务，并制定了\"到 <b>2029 年全球载客量第一</b>\"的目标。分析师认为，此次 100 亿美元承诺回应了 Waymo 强劲的扩张势头（11 城、每周 50 万次自动驾驶行程），也是对 Tesla 自建 robotaxi 网络计划的防御性布局。</p>",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/business/uber-commits-10-billion-robotaxis-strategy-shift-ft-says-2026-04-15/",
+        "date": "2026-04-15"
+      },
+      {
+        "id": "2026-04-16-004",
+        "company": "Wayve",
+        "company_slug": "wayve",
+        "title": "AMD、Arm、Qualcomm 追加 6000 万美元投资，Series D 总额扩展至 12 亿美元",
+        "sub_group": "国外 OEM / Tier1",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>英国自动驾驶软件公司 <b>Wayve</b> 于 <b>4月15日</b>宣布，三大芯片巨头 <b>AMD、Arm 及高通旗下 Qualcomm Ventures</b> 联合追加 <b>6000 万美元</b>投资，使其 Series D 轮总融资规模达到 <b>12 亿美元</b>。此前 <b>2月</b>，Wayve 完成了包含 <b>Nvidia、微软、梅赛德斯-奔驰、日产、Stellantis 及 Uber</b> 的初始 12 亿美元融资；<b>Uber</b> 还额外承诺了与伦敦 robotaxi 部署里程碑挂钩的 <b>3 亿美元</b>条件性资金。</p><p>Wayve 开发的端到端神经网络驾驶软件不依赖特定传感器组合或高精地图，具备跨车型泛化能力，目前已与日产、梅赛德斯、Stellantis 签约，计划于 <b>2027 年起</b>在量产车型上集成。此轮芯片厂商加持意味着 Wayve 的技术将与 AMD/Qualcomm/Arm 的车载计算平台深度整合，进一步推进其\"软件供 OEM\"的商业模式。</p>",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/04/15/chipmakers-amd-arm-and-qualcomm-are-all-investing-in-this-buzzy-self-driving-tech-startup/",
+        "date": "2026-04-15"
+      },
+      {
+        "id": "2026-04-16-005",
+        "company": "曹操出行",
+        "company_slug": "caocao",
+        "title": "披露 Q4 首次季度盈利，全年亏损同比收窄 51%，Robotaxi 杭州扩至 100 辆",
+        "sub_group": "国内出行平台",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p>曹操出行于 <b>4月16日</b>发布财报，<b>2025 年 Q4 首次实现调整后净利转正</b>，全年净亏损从 <b>12.46 亿元</b>收窄至 <b>6.14 亿元</b>，降幅 <b>50.8%</b>；毛利率从 <b>8.1%</b> 提升至 <b>9.4%</b>，实现全年正 EBITDA。经营数据同步亮眼：GTV 从 <b>170 亿元</b>增至 <b>234 亿元</b>，总收入 <b>202 亿元</b>（同比增长 <b>38%</b>），月活用户从 2870 万扩至 <b>4130 万</b>，覆盖城市达 <b>195 个</b>（年内新增 <b>59 个</b>）。</p><p>Robotaxi 方面，曹操出行杭州滨江区车队于 <b>2月</b>扩至 <b>100 辆</b>，正式进入 2.0 阶段；<b>4月1日</b>获批成为<b>杭州首家无人化道路测试资质企业</b>，目前已部署 <b>90 辆第二代 Robotaxi</b>。盈利归因于规模化运营降本（定制车曹操 60 每公里 TCO 约 <b>0.47 元</b>，较行业低 <b>40%</b>）和 AI 算法调度优化。公司长期目标是 <b>2030 年累计投放 10 万辆</b>全定制 Robotaxi。</p>",
+        "source_name": "腾讯新闻",
+        "source_url": "https://news.qq.com/rain/a/20260416A085EK00",
+        "date": "2026-04-16"
+      }
+    ]
+  },
+  {
     "date": "2026-04-15",
     "items": [
       {
