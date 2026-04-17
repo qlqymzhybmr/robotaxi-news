@@ -1,5 +1,98 @@
 [
   {
+    "week_id": "2026-W16",
+    "date_range": "0415-0417",
+    "title": "无人驾驶行业0415-0417重要新闻（测试）",
+    "generated_at": "2026-04-17T10:00:00+08:00",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>4月14日，伦敦公路正式测试，剑指首个国际商业化市场；4月15日，Miami + Orlando 向全体公众开放 robotaxi，含高速公路段，成第5、6商业化城市",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>4月14日</b>，Waymo 宣布在<b>伦敦</b>公共道路正式启动自动驾驶测试，车队规模约 <b>100 辆 Jaguar I-Pace</b>，覆盖面积约 <b>100 平方英里</b>。Waymo 目标是 <b>2026 年内</b>在伦敦推出商业化 robotaxi，这将是其<b>首个国际商业化市场</b>。公司已累计完成 <b>1.7 亿英里</b>全自动驾驶里程，严重/致命事故较人类驾驶员少 <b>92%</b>。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>4月15日</b>，Waymo 宣布在<b>迈阿密</b>和<b>奥兰多</b>正式向全体公众开放 robotaxi——无需候补名单，任何人下载 App 即可即时打车。迈阿密引入<b>高速公路驾驶</b>，可接入 I-95 等，覆盖约 <b>60 平方英里</b>。两城市成为 Waymo <b>第5、6个全面商业化美国城市</b>，是其向阳光带大规模扩张的战略节点，对 Tesla Cybercab 奥斯汀计划形成先发竞争压力。"
+              }
+            ]
+          },
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>4月14日，Cybercab 量产爬坡 + FSD V14.3.1 发布；4月15日，Spring Update 2026.14 推送（Safety Score 3.0 绑定保险折扣）；4月17日，荷兰开启免费 FSD 试用，欧洲扩张多米诺效应启动",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>4月14日</b>，超过 <b>50 辆 Cybercab</b> 已在 <b>Giga Texas</b> 厂区集结，量产爬坡进入加速阶段。目前车辆仍保留临时方向盘踏板以满足监管要求，Tesla 计划 <b>2026 年底</b>在<b>奥斯汀</b>启动商业化 robotaxi 服务，长期目标年产 <b>200 万辆</b>。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>4月14日</b>，Tesla 推送 <b>FSD V14.3.1</b>，神经网络<b>反应速度提升 20%</b>，对罕见场景视觉编码能力增强；车辆控制菜单中 <b>\"Autopilot\" 正式更名为 \"Self-Driving\"</b>，品牌定位进一步向全自动驾驶靠拢。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>4月15日</b>，Tesla 推送 <b>Spring Update（版本 2026.14）</b>，面向 HW4 车辆。核心更新：全新 <b>Self-Driving App</b>（提供 FSD 订阅入口及统计展示）、\"Hey Grok\" 新增位置提醒、Dashcam 升级为 24 小时记录。<b>Safety Score 3.0</b> 同步推出，使用 FSD Supervised 的里程自动获得满分，与 Tesla 保险保费挂钩，形成"FSD 使用→保险折扣"正向激励闭环。"
+              },
+              {
+                "label": "d",
+                "content_html": "<b>4月17日</b>，Tesla 在<b>荷兰</b>向 HW4 车主推送免费 FSD（Supervised）试用，推送专为欧洲定制的 <b>FSD v14.2.2.5</b>（版本 2026.3.6）。荷兰 RDW 批准后约一周即落地，业界认为将产生<b>多米诺效应</b>，加速法国、德国等主要市场扩展。荷兰保留<b>一次性买断</b>选项。"
+              }
+            ]
+          },
+          {
+            "company": "Uber",
+            "company_slug": "uber",
+            "headline_html": "<b>Uber：</b>4月14日，追加 2 亿美元投资 Lucid，采购承诺扩大至 3.5 万辆；4月15日，承诺 100 亿美元转型 robotaxi 战略，自建车队 + 入股制造商，目标 2026 年覆盖 15 城",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>4月14日</b>，Uber 向 <b>Lucid Motors</b> 追加 <b>2 亿美元</b>投资（总投资达 5 亿美元），并将车辆采购承诺从 1 万辆扩大至最少 <b>3.5 万辆</b>，这批车辆将专门为全球 robotaxi 服务定制，目标售价约 <b>5 万美元</b>。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>4月15日</b>，Uber CEO Khosrowshahi 宣布向自动驾驶领域承诺超 <b>100 亿美元</b>：约 <b>75 亿美元</b>购买 robotaxi 车辆，约 <b>25 亿美元</b>持股 AV 制造商。这是 Uber 从"轻资产平台"向<b>车队拥有者</b>的历史性战略转型。目标 <b>2026 年底</b>覆盖 <b>15 个城市</b>，2029 年全球载客量第一。"
+              }
+            ]
+          },
+          {
+            "company": "Wayve",
+            "company_slug": "wayve",
+            "headline_html": "<b>Wayve：</b>4月15日，AMD、Arm、Qualcomm 追加 6000 万美元，Series D 总额扩展至 12 亿美元",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>4月15日</b>，<b>AMD、Arm 及 Qualcomm Ventures</b> 联合追加 <b>6000 万美元</b>，Wayve Series D 融资总规模达 <b>12 亿美元</b>（初始投资方含 Nvidia、微软、奔驰、Uber）。Wayve 的端到端驾驶软件不依赖高精地图，已与日产、奔驰、Stellantis 签约，计划 <b>2027 年起</b>量产集成。此轮芯片厂商加持推动其与 AMD/Qualcomm/Arm 车载计算平台深度整合。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "曹操出行",
+            "company_slug": "caocao",
+            "headline_html": "<b>曹操出行：</b>4月16日，披露 Q4 首次季度盈利，全年亏损同比收窄 51%，Robotaxi 杭州扩至 100 辆",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>4月16日</b>财报显示，<b>2025 年 Q4 首次调整后净利转正</b>，全年净亏损从 12.46 亿元收窄至 <b>6.14 亿元</b>（降幅 50.8%）；GTV 增至 <b>234 亿元</b>，总收入 <b>202 亿元</b>（同比 +38%），月活用户扩至 <b>4130 万</b>，覆盖 <b>195 城</b>。Robotaxi 方面，杭州车队扩至 <b>100 辆</b>，<b>4月1日</b>获批成为<b>杭州首家无人化道路测试资质企业</b>，已部署 <b>90 辆第二代 Robotaxi</b>，长期目标 2030 年累计投放 10 万辆。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W15",
     "date_range": "0413-0414",
     "title": "无人驾驶行业0413-0414重要新闻（测试）",
