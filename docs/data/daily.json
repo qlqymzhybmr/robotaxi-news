@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-04-18",
+    "items": [
+      {
+        "id": "2026-04-18-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "Giga Texas 外场出现约 14 辆无方向盘量产版 Cybercab，产线进入极速模式",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>无人机摄影师 <b>Joe Tegtmeyer</b> 于 <b>4月17日</b>在 <b>Giga Texas</b> 外场拍到约 <b>14 辆</b>已下线的量产版 Cybercab，车辆均无方向盘、无踏板、无后视镜，与早期装有临时方向盘的研发测试车明显不同。这是首批完整量产构型的 Cybercab 在厂区外场被公开记录，证实 Tesla 正在按此前宣布的 <b>2026 年 4 月</b>量产节点推进。按美国联邦机动车安全标准（FMVSS），每年无方向盘车辆合规产量上限为 <b>2,500 辆</b>，Tesla 须通过豁免申请方可大规模扩产；Cybercab 设计零售价低于 <b>30,000 美元</b>，车主可将车辆加入 Robotaxi 网络创收。</p>",
+        "source_name": "Teslarati",
+        "source_url": "https://www.teslarati.com/tesla-just-tipped-its-hand-major-cybercab-feature-production-hits-plaid-mode/",
+        "date": "2026-04-17"
+      },
+      {
+        "id": "2026-04-18-002",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "title": "CTO 楼天城专访：PonyWorld 2.0「让 AI 审视 AI」，世界模型精度是下一步竞争核心",
+        "sub_group": "国内 L4",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p><b>4月17日</b>，小马智行 CTO <b>楼天城</b>在新浪财经专访中详解 <b>PonyWorld 2.0</b> 世界模型的核心突破：系统首次具备自我诊断+定向进化闭环能力，由 AI 自主发现性能缺口、指导数据采集方向，打破了依赖人工工程师判断的传统范式。楼天城表示，缩小仿真与真实世界之间的差距（即提升世界模型精度）是接下来行业竞争的核心命题，天花板的高低取决于 AI 能否有效自我审视。小马智行已在<b>广州、深圳</b>实现单车盈利，2026 年目标通过轻资产扩张快速扩充车队规模至 <b>10,000 辆</b>（2030 年目标）。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-17/doc-inhuupte2303866.shtml",
+        "date": "2026-04-17"
+      },
+      {
+        "id": "2026-04-18-003",
+        "company": "极氪",
+        "company_slug": "zeekr",
+        "title": "极氪 8X 正式量产上市，首搭新一代 G-ASD 智驾系统含 5 颗激光雷达",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p><b>4月17日</b>，吉利旗下高端品牌极氪旗舰 SUV <b>极氪 8X</b> 正式发布，限时起售价 <b>329,800 元</b>（约 48,370 美元），提供<b>五座</b>和<b>六座</b>两种配置。顶配耀影版搭载<b>三电机超兆瓦电驱系统</b>，峰值功率 <b>1,030 kW</b>，零百加速 <b>2.96 秒</b>。智驾方面，极氪 8X 是首款搭载新一代 <b>G-ASD（Geely Afari Smart Driving）</b>系统的量产车型：顶配配备<b>双 NVIDIA Drive Thor-U 芯片</b>及 <b>43 个传感器（含 5 颗激光雷达）</b>，标配版使用单颗 Thor-U 芯片 + 长距激光雷达。</p>",
+        "source_name": "CnEVPost",
+        "source_url": "https://cnevpost.com/2026/04/17/zeekr-launches-8x-suv/",
+        "date": "2026-04-17"
+      }
+    ]
+  },
+  {
     "date": "2026-04-17",
     "items": [
       {
