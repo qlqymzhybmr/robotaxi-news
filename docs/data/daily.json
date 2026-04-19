@@ -1,5 +1,101 @@
 [
   {
+    "date": "2026-04-19",
+    "items": [
+      {
+        "id": "2026-04-19-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "达拉斯和休斯顿开启无人驾驶Robotaxi服务",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 3,
+        "summary_html": "<p>Tesla继续其激进的自动驾驶网约车市场扩张，在德克萨斯州的两大城市<b>达拉斯</b>和<b>休斯顿</b>正式推出<b>无人驾驶Robotaxi服务</b>。这标志着Tesla在美国本土的Robotaxi服务进一步扩大覆盖范围。</p><p>此次开城是Tesla在<b>2026年</b>持续推进Robotaxi商业化的重要一步，继此前在其他城市的试点后，德克萨斯州成为新的战略重点区域。达拉斯和休斯顿作为美国第四和第五大都会区，人口密集且交通需求旺盛，为Tesla提供了理想的商业化测试场景。</p><p>Tesla通过<b>Spring Update 2026.14</b>软件更新，已开始向现有车主推送Robotaxi相关功能，包括<b>后排屏幕地图显示</b>、<b>全新可视化界面</b>、<b>Self-Driving App</b>等，为未来车主参与Robotaxi网络做准备。</p>",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/04/18/tesla-brings-its-robotaxi-service-to-dallas-and-houston/",
+        "date": "2026-04-18"
+      },
+      {
+        "id": "2026-04-19-002",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "荷兰启动FSD免费试用，欧洲推广加速",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>Tesla在<b>荷兰</b>推出<b>FSD (Full Self-Driving) 免费试用</b>活动，这是FSD在欧洲正式推出仅<b>一周后</b>的快速跟进动作。此举旨在让更多欧洲车主体验Tesla最先进的自动驾驶软件，加速FSD在欧洲市场的渗透。</p><p>荷兰作为Tesla在欧洲的重要市场之一，此次免费试用活动预计将显著提升FSD的用户基数。Tesla正在积极推动FSD在欧洲各国的监管批准和商业化落地，荷兰的试用活动是其欧洲战略的重要组成部分。</p>",
+        "source_name": "Not a Tesla App",
+        "source_url": "https://www.notateslaapp.com/",
+        "date": "2026-04-17"
+      },
+      {
+        "id": "2026-04-19-003",
+        "company": "Uber",
+        "company_slug": "uber",
+        "title": "推出上门取件退货服务，扩展物流业务",
+        "sub_group": "国外出行平台",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>Uber宣布推出<b>上门取件退货服务</b>，用户可通过Uber应用预约快递员上门取件，将商品退货寄回商家。这是Uber继网约车和外卖配送后，进一步拓展<b>物流服务</b>的新尝试。</p><p>此举标志着Uber正在从单一的出行平台向<b>综合物流平台</b>转型。上门取件服务利用了Uber现有的司机网络和配送基础设施，为用户提供更便捷的退货体验，同时为司机创造更多收入来源。</p>",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/",
+        "date": "2026-04-17"
+      },
+      {
+        "id": "2026-04-19-004",
+        "company": "Hesai",
+        "company_slug": "hesai",
+        "title": "发布全球首款全彩色LiDAR芯片Picasso",
+        "sub_group": "国外 OEM / Tier1",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>中国激光雷达厂商<b>Hesai (禾赛科技)</b>发布了名为<b>Picasso</b>的全新芯片，这是<b>全球首款全彩色LiDAR芯片</b>。该芯片在底层硬件层面实现了<b>颜色感知</b>和<b>距离测量</b>的融合，支持最多<b>4320个激光通道</b>。</p><p>传统LiDAR只能提供距离和反射强度信息，而Picasso芯片通过创新技术实现了颜色识别，这将显著提升自动驾驶系统对环境的理解能力，特别是在识别交通标志、车道线和障碍物类型方面。</p><p>此次技术突破巩固了Hesai在全球LiDAR市场的领先地位，也为中国自动驾驶产业链的技术创新树立了新标杆。</p>",
+        "source_name": "CnEVPost",
+        "source_url": "https://cnevpost.com/",
+        "date": "2026-04-18"
+      },
+      {
+        "id": "2026-04-19-005",
+        "company": "蔚来",
+        "company_slug": "nio",
+        "title": "Onvo L90更新版曝光外观亮点，4月21日发布",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p>蔚来旗下子品牌<b>Onvo</b>公布了<b>2026款L90</b>的外观更新亮点。新车将采用<b>瞭望塔式激光雷达布局</b>和<b>双色车身配色</b>选项，预计于<b>4月21日</b>正式发布。</p><p>L90是Onvo品牌的首款车型，定位中型SUV，主打性价比市场。此次更新重点在于智能驾驶硬件升级和外观设计优化，以提升产品竞争力。</p>",
+        "source_name": "CnEVPost",
+        "source_url": "https://cnevpost.com/",
+        "date": "2026-04-18"
+      },
+      {
+        "id": "2026-04-19-006",
+        "company": "理想汽车",
+        "company_slug": "liauto",
+        "title": "\"理想系\"批量孵化独角兽，车企争做幕后投资人",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p><b>36氪</b>报道称，<b>理想汽车</b>正在通过其投资部门批量孵化独角兽企业，涉及智能驾驶、芯片、软件等多个领域。理想汽车创始人<b>李想</b>正在将公司打造成不仅是车企，更是产业链投资者的角色。</p><p>报道指出，理想汽车的投资策略是围绕智能电动车产业链进行布局，通过投资和孵化相关企业，构建自己的生态系统。这种模式在中国新势力车企中越来越普遍。</p>",
+        "source_name": "36氪",
+        "source_url": "https://36kr.com/information/travel/",
+        "date": "2026-04-18"
+      },
+      {
+        "id": "2026-04-19-007",
+        "company": "小米汽车",
+        "company_slug": "xiaomi",
+        "title": "重磅任命胡峥楠为CTO、宋钢为参谋长",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p>小米汽车宣布重要人事任命：<b>胡峥楠</b>出任<b>CTO (首席技术官)</b>，<b>宋钢</b>出任<b>参谋长</b>。这是小米汽车在技术和战略层面的重要人才布局。</p><p>胡峥楠此前在自动驾驶和智能座舱领域有丰富经验，其加入将进一步强化小米汽车的技术实力。小米创始人<b>雷军</b>表示，\"人才是小米的必争之地\"。</p>",
+        "source_name": "36氪",
+        "source_url": "https://36kr.com/information/travel/",
+        "date": "2026-04-17"
+      }
+    ]
+  },
+  {
     "date": "2026-04-18",
     "items": [
       {
