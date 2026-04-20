@@ -47,7 +47,13 @@
       "WebFetch(domain:www.smartcitiesdive.com)",
       "WebFetch(domain:news.qq.com)",
       "Bash(python -c \"import json; json.load\\(open\\('./docs/data/weekly.json'\\)\\)\")",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Bash(git pull *)",
+      "Bash(git stash *)",
+      "WebFetch(domain:www.investing.com)",
+      "WebFetch(domain:investor.uber.com)",
+      "WebFetch(domain:www.marketscreener.com)",
+      "WebFetch(domain:www.wboc.com)"
     ]
   }
 }
