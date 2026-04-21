@@ -53,7 +53,13 @@
       "WebFetch(domain:www.investing.com)",
       "WebFetch(domain:investor.uber.com)",
       "WebFetch(domain:www.marketscreener.com)",
-      "WebFetch(domain:www.wboc.com)"
+      "WebFetch(domain:www.wboc.com)",
+      "WebFetch(domain:www.axios.com)",
+      "WebFetch(domain:uk.finance.yahoo.com)",
+      "WebFetch(domain:eu.36kr.com)",
+      "WebFetch(domain:newmarketpitch.com)",
+      "WebFetch(domain:www.ai-market-watch.com)",
+      "WebFetch(domain:www.36kr.com)"
     ]
   }
 }
