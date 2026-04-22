@@ -1,5 +1,36 @@
 [
   {
+    "date": "2026-04-22",
+    "items": [
+      {
+        "id": "2026-04-22-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "开始在 9 个新国家招聘 FSD Vehicle Operators，为欧洲后续落地和运营扩张做准备",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p><b>4月21日</b>，Not a Tesla App 披露 Tesla 已在多个市场启动 <b>FSD Vehicle Operators</b> 岗位招聘，覆盖 <b>9 个新增国家</b>。该岗位通常用于数据采集、道路验证和系统表现评估，被视为 FSD 进入新区域前的关键运营前置动作。结合近期荷兰 RDW 批准后欧洲落地节奏，这一招聘动作显示 Tesla 正将 FSD Supervised 的测试与运营能力向更多国家复制。</p><p>从商业化进程看，招聘信号虽然不等同于正式开放服务，但属于明确的扩张准备步骤：先建立本地测试/运营队伍，再推动监管沟通与分阶段用户试点。对比单纯功能更新，这类组织与运营层面的动作更直接影响 FSD 国际化落地速度。</p>",
+        "source_name": "Not a Tesla App",
+        "source_url": "https://www.notateslaapp.com/news/4013/tesla-begins-hiring-fsd-vehicle-operators-in-nine-new-countries",
+        "date": "2026-04-21"
+      },
+      {
+        "id": "2026-04-22-002",
+        "company": "DeepWay",
+        "company_slug": "deepway",
+        "title": "Pre-IPO 融资扩至超 3.1 亿美元，持续加码自动驾驶货运商业化",
+        "sub_group": "国内智驾方案商",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p><b>4月21日</b>，CnEVPost 跟进报道 DeepWay 本轮 Pre-IPO 融资规模已扩大至 <b>超过 3.1 亿美元</b>。该融资由海外长线资金支持，延续了此前披露的国际资金参与特征，说明资本端仍在押注中国自动驾驶货运赛道的中长期落地。</p><p>DeepWay 聚焦 <b>L4 干线物流自动驾驶重卡</b>，此次融资扩容意味着公司在量产交付、车队扩张与上市筹备上的资金保障进一步增强。虽然其赛道偏货运而非乘用 robotaxi，但在自动驾驶产业景气和商业化信号层面，仍属于值得关注的中高重要度事件。</p>",
+        "source_name": "CnEVPost",
+        "source_url": "https://cnevpost.com/2026/04/21/deepway-expands-pre-ipo-round-past-310-million/",
+        "date": "2026-04-21"
+      }
+    ]
+  },
+  {
     "date": "2026-04-21",
     "items": [
       {
