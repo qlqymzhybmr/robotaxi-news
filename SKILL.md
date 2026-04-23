@@ -222,3 +222,70 @@ https://qlqymzhybmr.github.io/robotaxi-news/
 - [ ] 接入专业新闻 API(NewsAPI / GDELT 等,需要预算)
 
 如果有新的需求或发现 bug,直接编辑这个 SKILL.md 文件记录下来。
+
+---
+
+## 重要教训与避坑指南
+
+### ⚠️ 关键错误：覆盖 daily.json 导致历史数据丢失（2026-04-23）
+
+**问题描述**：
+在执行 Phase 3（daily-publish）时，Claude 直接用 `Write` 工具覆盖了整个 `docs/data/daily.json` 文件，导致所有历史数据（10天的新闻记录）全部丢失。同时还遗漏了 JSON 数组的闭合方括号 `]`，导致 JSON 格式错误，网页无法正常显示。
+
+**根本原因**：
+1. **未遵循 daily-publish.md 的规则**：应该先读取现有 JSON，然后插入或替换今日数据，而不是直接覆盖整个文件
+2. **Write 工具使用不当**：对于需要追加/更新的 JSON 文件，应该先 Read → 修改 → Write，而不是直接 Write
+
+**正确做法**（参考 `workflows/daily-publish.md` 步骤 4-5）：
+```javascript
+// 1. 读取现有 daily.json
+const existingData = require('./docs/data/daily.json');
+
+// 2. 构建今日 entry
+const newEntry = { date: "YYYY-MM-DD", items: [...] };
+
+// 3. 插入或替换
+// - 如果数组里已有 date == 今天的 entry，替换它
+// - 否则，插入到数组开头（保持日期倒序）
+const existingIndex = existingData.findIndex(e => e.date === newEntry.date);
+if (existingIndex >= 0) {
+  existingData[existingIndex] = newEntry; // 替换
+} else {
+  existingData.unshift(newEntry); // 插入到开头
+}
+
+// 4. 写回文件
+fs.writeFileSync('docs/data/daily.json', JSON.stringify(existingData, null, 2));
+```
+
+**防范措施**：
+- ✅ **Phase 3 开始前**：必须先 `Read` 现有的 `docs/data/daily.json`
+- ✅ **写入前验证**：用 `node -e "require('./docs/data/daily.json')"` 验证 JSON 格式
+- ✅ **提交前检查**：确认 git diff 显示的是"新增今日数据"而不是"删除所有历史数据"
+- ✅ **备份意识**：重要的数据文件操作前，可以先用 `git show HEAD:path/to/file` 备份
+
+**恢复方法**（如果再次发生）：
+```bash
+# 1. 从上次提交恢复历史数据
+git show HEAD~1:docs/data/daily.json > docs/data/daily_backup.json
+
+# 2. 用 Node.js 合并新旧数据
+node -e "
+const old = require('./docs/data/daily_backup.json');
+const newEntry = { /* 今日数据 */ };
+const merged = [newEntry, ...old];
+require('fs').writeFileSync('docs/data/daily.json', JSON.stringify(merged, null, 2));
+"
+
+# 3. 验证并提交
+node -e "require('./docs/data/daily.json'); console.log('✅ JSON 格式正确')"
+git add docs/data/daily.json && git commit -m "fix: 恢复历史数据" && git push
+```
+
+**影响范围**：
+- 网页无法显示任何新闻（JSON 解析失败）
+- 历史数据全部丢失（需要从 git 历史恢复）
+- 需要额外的修复提交和推送
+
+**总结**：
+对于 `docs/data/daily.json` 和 `docs/data/weekly.json` 这类**累积型数据文件**，永远不要直接 `Write` 覆盖，必须先 `Read` → 修改 → `Write`。这是 daily-publish 和 weekly-publish 流程的核心规则。
