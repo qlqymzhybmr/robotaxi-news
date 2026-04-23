@@ -1,424 +1,71 @@
 [
   {
-    "date": "2026-04-22",
+    "date": "2026-04-23",
     "items": [
       {
-        "id": "2026-04-22-001",
+        "id": "2026-04-23-001",
         "company": "Tesla",
         "company_slug": "tesla",
-        "title": "开始在 9 个新国家招聘 FSD Vehicle Operators，为欧洲后续落地和运营扩张做准备",
+        "title": "Cybercab 生产正式开始，不受 NHTSA 2500 辆年产限制",
         "sub_group": "国外 L4",
         "group": "国外",
-        "rating": 2,
-        "summary_html": "<p><b>4月21日</b>，Not a Tesla App 披露 Tesla 已在多个市场启动 <b>FSD Vehicle Operators</b> 岗位招聘，覆盖 <b>9 个新增国家</b>。该岗位通常用于数据采集、道路验证和系统表现评估，被视为 FSD 进入新区域前的关键运营前置动作。结合近期荷兰 RDW 批准后欧洲落地节奏，这一招聘动作显示 Tesla 正将 FSD Supervised 的测试与运营能力向更多国家复制。</p><p>从商业化进程看，招聘信号虽然不等同于正式开放服务，但属于明确的扩张准备步骤：先建立本地测试/运营队伍，再推动监管沟通与分阶段用户试点。对比单纯功能更新，这类组织与运营层面的动作更直接影响 FSD 国际化落地速度。</p>",
-        "source_name": "Not a Tesla App",
-        "source_url": "https://www.notateslaapp.com/news/4013/tesla-begins-hiring-fsd-vehicle-operators-in-nine-new-countries",
-        "date": "2026-04-21"
+        "rating": 3,
+        "summary_html": "<p><b>4月23日</b>，Electrek 报道 CEO Elon Musk 在 Q1 2026 财报电话会议上确认，<b>Cybercab 生产已在 Giga Texas 正式开始</b>。首辆无方向盘 Cybercab 于 2 月下线，但连续生产从 4 月才开始。Tesla 同时生产有方向盘和无方向盘两个版本。</p><p>VP Lars Moravy 确认 Cybercab <b>不受 NHTSA 的 2500 辆年产限制</b>，Tesla 通过让 Cybercab 符合所有现有联邦机动车安全标准（FMVSS）来规避此限制，无需特殊豁免。这与 Toyota Camry 和 Ford F-150 的自我认证流程相同。Musk 称无监督 Full Self-Driving 将在\"今年 Q4\"推送给客户，初期生产会很慢，但年底会呈指数级增长。</p>",
+        "source_name": "Electrek",
+        "source_url": "https://electrek.co/2026/04/23/tesla-cybercab-production-starts-no-nhtsa-2500-vehicle-cap/",
+        "date": "2026-04-23"
       },
       {
-        "id": "2026-04-22-002",
-        "company": "DeepWay",
-        "company_slug": "deepway",
-        "title": "Pre-IPO 融资扩至超 3.1 亿美元，持续加码自动驾驶货运商业化",
-        "sub_group": "国内智驾方案商",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p><b>4月21日</b>，CnEVPost 跟进报道 DeepWay 本轮 Pre-IPO 融资规模已扩大至 <b>超过 3.1 亿美元</b>。该融资由海外长线资金支持，延续了此前披露的国际资金参与特征，说明资本端仍在押注中国自动驾驶货运赛道的中长期落地。</p><p>DeepWay 聚焦 <b>L4 干线物流自动驾驶重卡</b>，此次融资扩容意味着公司在量产交付、车队扩张与上市筹备上的资金保障进一步增强。虽然其赛道偏货运而非乘用 robotaxi，但在自动驾驶产业景气和商业化信号层面，仍属于值得关注的中高重要度事件。</p>",
-        "source_name": "CnEVPost",
-        "source_url": "https://cnevpost.com/2026/04/21/deepway-expands-pre-ipo-round-past-310-million/",
-        "date": "2026-04-21"
-      }
-    ]
-  },
-  {
-    "date": "2026-04-21",
-    "items": [
-      {
-        "id": "2026-04-21-001",
+        "id": "2026-04-23-002",
         "company": "Waymo",
         "company_slug": "waymo",
-        "title": "宣布今年内进入新奥尔良，将成为第 11 个商业化运营城市",
+        "title": "出现技术故障，引发对自动驾驶监管的呼吁",
         "sub_group": "国外 L4",
         "group": "国外",
         "rating": 2,
-        "summary_html": "<p><b>4月20日</b>，Waymo 宣布将于 <b>2026 年内</b>在美国南部城市<b>新奥尔良</b>启动 robotaxi 服务，这将是其<b>在美国的第 11 个商业化运营市场</b>。此次扩张是 Waymo 2026 年大规模扩城计划的一部分——近期已相继进入达拉斯、休斯顿、圣安东尼奥、迈阿密、奥兰多等城市。</p><p>截至 2026 年 3 月，Waymo 在美国 <b>10 个都市区</b>运营，部署约 <b>3,000 辆</b> robotaxi，每周完成约 <b>50 万次</b>付费行程，累计自动驾驶里程超过 <b>2 亿英里</b>。公司此前披露，预计在 <b>2026 年底</b>前将每周行程量提升至超过 <b>100 万次</b>。新奥尔良的具体服务区范围和合作伙伴暂未披露。</p>",
-        "source_name": "Axios",
-        "source_url": "https://www.axios.com/local/new-orleans/2026/04/20/waymo-to-launch-in-new-orleans-this-year",
-        "date": "2026-04-20"
+        "summary_html": "<p><b>4月23日</b>，AZ Family 报道 Waymo 车辆出现技术故障，引发亚利桑那州对加强自动驾驶车辆监管的呼吁。具体故障细节和影响范围尚未完全披露，但该事件再次引发公众和监管部门对 robotaxi 安全性的关注。</p>",
+        "source_name": "AZ Family",
+        "source_url": "https://www.azfamily.com/2026/04/23/waymo-glitch-sparks-push-stronger-autonomous-vehicle-regulations/",
+        "date": "2026-04-23"
       },
       {
-        "id": "2026-04-21-002",
-        "company": "DeepWay",
-        "company_slug": "deepway",
-        "title": "完成超 3.1 亿美元 Pre-IPO 融资，创 2026 年自动驾驶单轮融资纪录",
-        "sub_group": "国内智驾方案商",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p><b>4月21日</b>，自动驾驶重卡公司 <b>DeepWay（深向科技）</b>宣布完成超过 <b>3.1 亿美元（约合 22.5 亿元人民币）</b>的 Pre-IPO 融资，据 36氪报道为 <b>2026 年国内自动驾驶领域最大单轮融资纪录</b>。本轮投资方均为海外主权/养老基金：来自<b>阿联酋的 Stone Capital</b>、<b>澳大利亚的 NGS Super</b> 和<b>新加坡的 ABC Impact</b>，体现境外长线资本对中国 L4 自动驾驶商业化路径的认可。</p><p>DeepWay 成立于 <b>2020 年</b>，由<b>百度</b>战略投资并深度合作，专注于 <b>L4 级别干线物流自动驾驶重卡</b>。公司已向<b>顺丰速运、蒙牛、宜家</b>等大客户累计交付超过 <b>1.2 万辆</b>自动驾驶重卡。此次 Pre-IPO 融资意味着公司正式启动上市筹备，目标上市地点暂未披露。</p>",
-        "source_name": "36氪",
-        "source_url": "https://www.36kr.com/p/3775852060836614",
-        "date": "2026-04-21"
-      }
-    ]
-  },
-  {
-    "date": "2026-04-20",
-    "items": [
-      {
-        "id": "2026-04-20-001",
-        "company": "小马智行",
-        "company_slug": "xiaoma",
-        "title": "迪拜无人驾驶 Robotaxi 正式上路，2026 年内启动收费商业服务",
-        "sub_group": "国内 L4",
-        "group": "国内",
-        "rating": 3,
-        "summary_html": "<p><b>4月20日</b>，小马智行 (Pony.ai) 宣布已在<b>迪拜</b>公共道路上正式启动<b>全无人驾驶 Robotaxi 测试运营</b>，并计划于 <b>2026 年内</b>推出面向公众的<b>收费商业服务</b>，届时车队规模将达<b>数百辆</b>。这是小马智行继中国、新加坡、扎格雷布之后，在中东地区的首次无人驾驶落地。</p><p>此次部署基于小马智行与<b>迪拜道路交通局 (RTA)</b> 于 2025 年 5 月签署的合作协议，并于 2025 年 9 月获得 RTA 测试许可证，经过数月有人监督的道路验证后，正式进入无人驾驶阶段。商业模式采用<b>联合运营</b>模式：小马智行提供自动驾驶技术，本地合作伙伴负责运营和车辆资金，双方共享运营收入。</p><p>小马智行使用的是<b>第七代 Robotaxi</b>，硬件 BOM 成本较上一代降低约 <b>70%</b>，已在广州、深圳实现单车 UE 盈亏平衡。此次迪拜落地是其「双引擎战略」（国内扩张 + 海外商业化）的重要里程碑，也是中国 L4 公司在中东地区无人驾驶商业化的重要突破。</p>",
-        "source_name": "CnEVPost",
-        "source_url": "https://cnevpost.com/2026/04/20/pony-ai-deploys-driverless-robotaxis-trials-dubai/",
-        "date": "2026-04-20"
-      }
-    ]
-  },
-  {
-    "date": "2026-04-19",
-    "items": [
-      {
-        "id": "2026-04-19-001",
-        "company": "Tesla",
-        "company_slug": "tesla",
-        "title": "达拉斯和休斯顿开启无人 Robotaxi 服务，目标 6 月前扩至 7 城",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 3,
-        "summary_html": "<p><b>4月18日</b>，Tesla 宣布将无人驾驶 Robotaxi 服务拓展至德克萨斯州<b>达拉斯</b>和<b>休斯顿</b>，这是继奥斯汀之后的首次跨城市扩张。按照 Tesla 的计划，Robotaxi 将在 <b>2026 年 6 月底前</b>进入共 7 座城市，包括<b>凤凰城、迈阿密、奥兰多、坦帕</b>和<b>拉斯维加斯</b>。</p><p>目前 Tesla 在三座城市运营约 <b>573 辆</b> Robotaxi，均为改装版 <b>Model Y</b>，搭载 FSD 软件。达拉斯服务区覆盖 Urban Core + Park Cities 区域，约 <b>30-35 平方英里</b>；休斯顿服务区位于西北部 Jersey Village/Willowbrook 一带，约 <b>12-25 平方英里</b>。与奥斯汀的 46 辆相比，两个新城市各约 1 辆车率先启动——目前仍属极小规模试运营。</p><p>奥斯汀自 2025 年中启动服务，2026 年 1 月进入无人驾驶阶段；在此期间累计发生 <b>14 次碰撞事故</b>。Tesla 未披露新城市的安全驾驶员安排情况。</p>",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/04/18/tesla-brings-its-robotaxi-service-to-dallas-and-houston/",
-        "date": "2026-04-18"
-      },
-      {
-        "id": "2026-04-19-002",
-        "company": "Hesai",
-        "company_slug": "hesai",
-        "title": "发布全球首款全彩色 LiDAR 芯片 Picasso，支持最高 4320 激光通道",
-        "sub_group": "国外 OEM / Tier1",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p><b>4月18日</b>，中国激光雷达龙头<b>禾赛科技 (Hesai)</b> 发布全新芯片 <b>Picasso</b>，实现了在底层硬件层面同时感知颜色与距离的融合，是全球首款<b>全彩色 LiDAR 芯片</b>。传统 LiDAR 只能提供位置和形状信息，相当于「高精黑白相机」；Picasso 芯片让传感器可直接生成带有原生颜色信息的 3D 点云，无需后期融合相机图像。</p><p>关键技术参数：<b>最高 4320 激光通道</b>、<b>4K 超高清感知</b>、光子探测效率超 <b>40%</b>（达到国际顶尖水平）。基于 Picasso 的次世代 <b>ETX 系列 LiDAR</b> 预计于 <b>2026 年下半年量产交付</b>，商业化车型将在 <b>2027 年</b>搭载。</p><p>禾赛 2025 年全年首次盈利（净利润 <b>6390 万美元</b>），LiDAR 出货量同比增长 <b>222.9%</b>，达 162 万台，市场份额超 <b>40%</b>，供货对象包括理想、小米、BYD 等。此次技术突破对自动驾驶感知精度（交通灯颜色识别、施工标志辨别）有实质提升。</p>",
-        "source_name": "CnEVPost",
-        "source_url": "https://cnevpost.com/2026/04/18/hesai-releases-world-first-full-color-lidar-chip/",
-        "date": "2026-04-18"
-      }
-    ]
-  },
-  {
-    "date": "2026-04-18",
-    "items": [
-      {
-        "id": "2026-04-18-001",
-        "company": "Tesla",
-        "company_slug": "tesla",
-        "title": "Giga Texas 外场出现约 14 辆无方向盘量产版 Cybercab，产线进入极速模式",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>无人机摄影师 <b>Joe Tegtmeyer</b> 于 <b>4月17日</b>在 <b>Giga Texas</b> 外场拍到约 <b>14 辆</b>已下线的量产版 Cybercab，车辆均无方向盘、无踏板、无后视镜，与早期装有临时方向盘的研发测试车明显不同。这是首批完整量产构型的 Cybercab 在厂区外场被公开记录，证实 Tesla 正在按此前宣布的 <b>2026 年 4 月</b>量产节点推进。按美国联邦机动车安全标准（FMVSS），每年无方向盘车辆合规产量上限为 <b>2,500 辆</b>，Tesla 须通过豁免申请方可大规模扩产；Cybercab 设计零售价低于 <b>30,000 美元</b>，车主可将车辆加入 Robotaxi 网络创收。</p>",
-        "source_name": "Teslarati",
-        "source_url": "https://www.teslarati.com/tesla-just-tipped-its-hand-major-cybercab-feature-production-hits-plaid-mode/",
-        "date": "2026-04-17"
-      },
-      {
-        "id": "2026-04-18-002",
-        "company": "小马智行",
-        "company_slug": "xiaoma",
-        "title": "CTO 楼天城专访：PonyWorld 2.0「让 AI 审视 AI」，世界模型精度是下一步竞争核心",
+        "id": "2026-04-23-003",
+        "company": "萝卜快跑",
+        "company_slug": "luobo",
+        "title": "将 RT6 自动驾驶测试车运入韩国，与 HYOLIM 集团合作",
         "sub_group": "国内 L4",
         "group": "国内",
         "rating": 2,
-        "summary_html": "<p><b>4月17日</b>，小马智行 CTO <b>楼天城</b>在新浪财经专访中详解 <b>PonyWorld 2.0</b> 世界模型的核心突破：系统首次具备自我诊断+定向进化闭环能力，由 AI 自主发现性能缺口、指导数据采集方向，打破了依赖人工工程师判断的传统范式。楼天城表示，缩小仿真与真实世界之间的差距（即提升世界模型精度）是接下来行业竞争的核心命题，天花板的高低取决于 AI 能否有效自我审视。小马智行已在<b>广州、深圳</b>实现单车盈利，2026 年目标通过轻资产扩张快速扩充车队规模至 <b>10,000 辆</b>（2030 年目标）。</p>",
-        "source_name": "新浪财经",
-        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-17/doc-inhuupte2303866.shtml",
-        "date": "2026-04-17"
+        "summary_html": "<p><b>4月23日</b>，亚洲日报报道百度已将自动驾驶测试车辆运入<b>韩国汽车安全研究院下属的 K-City 自动驾驶测试园区</b>进行前期准备。引入的车型为<b>第六代自动驾驶出租车 RT6</b>，由江铃汽车生产，专为 L4 级自动驾驶打造。</p><p>百度与位于大邱的 <b>HYOLIM 集团</b>合作，该集团旗下子公司包括 HYOLIM 精工、BIOT（已更名为 HIM）和 HYOLIM XE，这些子公司预计将承担具体执行工作。国土交通部表示该车型\"尚未具备自主认证资格，也尚未提交临时上路许可申请\"。中国自动驾驶巨头接连进入韩国市场，一方面将刺激本土企业加快技术研发，另一方面也加剧了对本土市场份额被蚕食的忧虑。</p>",
+        "source_name": "亚洲日报",
+        "source_url": "https://www.ajudaily.com/view/20260423070640416",
+        "date": "2026-04-23"
       },
       {
-        "id": "2026-04-18-003",
-        "company": "极氪",
-        "company_slug": "zeekr",
-        "title": "极氪 8X 正式量产上市，首搭新一代 G-ASD 智驾系统含 5 颗激光雷达",
-        "sub_group": "国内新势力 / 传统 OEM",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p><b>4月17日</b>，吉利旗下高端品牌极氪旗舰 SUV <b>极氪 8X</b> 正式发布，限时起售价 <b>329,800 元</b>（约 48,370 美元），提供<b>五座</b>和<b>六座</b>两种配置。顶配耀影版搭载<b>三电机超兆瓦电驱系统</b>，峰值功率 <b>1,030 kW</b>，零百加速 <b>2.96 秒</b>。智驾方面，极氪 8X 是首款搭载新一代 <b>G-ASD（Geely Afari Smart Driving）</b>系统的量产车型：顶配配备<b>双 NVIDIA Drive Thor-U 芯片</b>及 <b>43 个传感器（含 5 颗激光雷达）</b>，标配版使用单颗 Thor-U 芯片 + 长距激光雷达。</p>",
-        "source_name": "CnEVPost",
-        "source_url": "https://cnevpost.com/2026/04/17/zeekr-launches-8x-suv/",
-        "date": "2026-04-17"
-      }
-    ]
-  },
-  {
-    "date": "2026-04-17",
-    "items": [
-      {
-        "id": "2026-04-17-001",
-        "company": "Tesla",
-        "company_slug": "tesla",
-        "title": "荷兰开启免费 FSD 试用，正式开启 FSD 欧洲扩张多米诺效应",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>Tesla 于 <b>4月17日</b>在<b>荷兰</b>开始向本地 HW4 车主推送免费 FSD（Supervised）试用资格——多名荷兰车主确认在触摸屏收到试用邀请。本次推送的是专为欧洲监管定制的 <b>FSD v14.2.2.5</b>（软件版本 2026.3.6），与北美版 v14.3 存在差异，新增了<b>专为复杂欧洲路口和交规</b>设计的 UI 元素。激活流程须完成 Tesla 要求的强制安全教程及答题测验，通过后方可点亮\"Start Self-Driving\"按钮。荷兰与北美不同，保留了<b>一次性买断</b>选项（不强制订阅）。</p><p>此次荷兰试用在<b>荷兰 RDW 监管机构批准后约一周内</b>快速推出，战略意义在于：业内普遍认为 RDW 的批准会产生\"多米诺效应\"，其他欧洲国家通常以 RDW 的车型认证决定为参考。这将是 FSD 进入欧洲大陆的关键第一步，为后续法国、德国等主要市场扩展铺路。Tesla 同期推送了 <b>2026.14.1</b> 小版本更新，包含 Self-Driving App 改进和沉浸式音效升级等。</p>",
-        "source_name": "Not a Tesla App",
-        "source_url": "https://www.notateslaapp.com/news/3990/tesla-launches-free-fsd-trials-in-the-netherlands",
-        "date": "2026-04-17"
-      }
-    ]
-  },
-  {
-    "date": "2026-04-16",
-    "items": [
-      {
-        "id": "2026-04-16-001",
-        "company": "Waymo",
-        "company_slug": "waymo",
-        "title": "Miami + Orlando 向全体公众开放 robotaxi，含高速公路段，成第5、6商业化城市",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 3,
-        "summary_html": "<p>Waymo 于 <b>4月15日</b>宣布在<b>迈阿密</b>和<b>奥兰多</b>正式向全体公众开放 robotaxi 服务——无需候补名单，任何人下载 Waymo App 即可即时打车。两地此前已接待来自初始候补名单的超 <b>15 万名</b>乘客完成多月测试，本次是真正意义上的无限制商业化开放。</p><p>亮点之一是<b>迈阿密引入高速公路驾驶</b>功能：Waymo 车辆可接入 <b>I-95</b>、Dolphin Expressway（836）和 Palmetto Expressway（826），实现跨区域快速路线，覆盖面积扩展至约 <b>60 平方英里</b>。奥兰多服务区覆盖 Parramore、Florida Center 及 Southwest Orlando，含旅游核心区。迈阿密与奥兰多成为 Waymo <b>第5、6个全面商业化的美国城市</b>，此前已在凤凰城、旧金山、洛杉矶、奥斯汀商业化落地。</p><p>Waymo 披露，其驾驶系统在严重或致命伤亡事故方面比人类驾驶员少 <b>92%</b>。分析师认为，佛罗里达两城市的全面开放，是 Waymo 从西海岸向阳光带（Sun Belt）大规模扩张的战略节点，对 Tesla Cybercab 奥斯汀计划形成先发竞争压力。</p>",
-        "source_name": "Waymo Blog",
-        "source_url": "https://waymo.com/blog/2026/04/floridas-new-way-to-ride/",
-        "date": "2026-04-15"
-      },
-      {
-        "id": "2026-04-16-002",
-        "company": "Tesla",
-        "company_slug": "tesla",
-        "title": "Spring Update 2026.14 推送，新增 Self-Driving App、Grok 语音提醒、Safety Score 3.0 绑定 FSD 保险折扣",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>Tesla 于 <b>4月15日</b>开始推送 <b>Spring Update（版本 2026.14）</b>，面向 <b>HW4</b> 车辆。核心更新包括：全新 <b>Self-Driving App</b>——通过 App Launcher 访问，提供 FSD 订阅入口、功能激活指引及持续统计数据展示；<b>\"Hey Grok\"语音助手</b>新增位置提醒功能；Dashcam 升级为 <b>24 小时记录</b>，下载视频包含速度、转向角及自驾状态等遥测数据。</p><p><b>Safety Score 3.0</b> 同步推出，评分精度提升至小数点后一位；最重要的是，<b>使用 FSD Supervised 的每英里里程自动获得 100 分满分</b>，与手动驾驶完全解耦。这一机制将 FSD 使用行为直接与 Tesla 保险保费挂钩，长期使用 FSD 的用户有望大幅降低保险成本，以保险折扣补贴 FSD 订阅费用，形成正向激励闭环。</p>",
-        "source_name": "Not a Tesla App",
-        "source_url": "https://www.notateslaapp.com/software-updates/version/2026.14/release-notes",
-        "date": "2026-04-15"
-      },
-      {
-        "id": "2026-04-16-003",
-        "company": "Uber",
-        "company_slug": "uber",
-        "title": "承诺 100 亿美元转型 robotaxi 战略，自建车队 + 入股制造商，目标 2026 年覆盖 15 城",
-        "sub_group": "国外出行平台",
-        "group": "国外",
-        "rating": 3,
-        "summary_html": "<p>Uber CEO <b>Dara Khosrowshahi</b> 在 <b>4月15日</b>宣布，Uber 已向自动驾驶汽车领域承诺投入超过 <b>100 亿美元</b>：其中约 <b>75 亿美元</b>用于直接购买 robotaxi 车辆（涵盖 Lucid、Rivian 等制造商），约 <b>25 亿美元</b>用于持股相关 AV 制造商。这标志着 Uber 从\"轻资产平台\"向\"车队拥有者\"的历史性战略转型，彻底颠覆其创立以来\"不持有车辆\"的商业模式。</p><p>Khosrowshahi 表示，公司预计在 <b>2026 年底</b>前在 <b>15 个城市</b>运营 robotaxi 服务，并制定了\"到 <b>2029 年全球载客量第一</b>\"的目标。分析师认为，此次 100 亿美元承诺回应了 Waymo 强劲的扩张势头（11 城、每周 50 万次自动驾驶行程），也是对 Tesla 自建 robotaxi 网络计划的防御性布局。</p>",
-        "source_name": "Reuters",
-        "source_url": "https://www.reuters.com/business/uber-commits-10-billion-robotaxis-strategy-shift-ft-says-2026-04-15/",
-        "date": "2026-04-15"
-      },
-      {
-        "id": "2026-04-16-004",
-        "company": "Wayve",
-        "company_slug": "wayve",
-        "title": "AMD、Arm、Qualcomm 追加 6000 万美元投资，Series D 总额扩展至 12 亿美元",
-        "sub_group": "国外 OEM / Tier1",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>英国自动驾驶软件公司 <b>Wayve</b> 于 <b>4月15日</b>宣布，三大芯片巨头 <b>AMD、Arm 及高通旗下 Qualcomm Ventures</b> 联合追加 <b>6000 万美元</b>投资，使其 Series D 轮总融资规模达到 <b>12 亿美元</b>。此前 <b>2月</b>，Wayve 完成了包含 <b>Nvidia、微软、梅赛德斯-奔驰、日产、Stellantis 及 Uber</b> 的初始 12 亿美元融资；<b>Uber</b> 还额外承诺了与伦敦 robotaxi 部署里程碑挂钩的 <b>3 亿美元</b>条件性资金。</p><p>Wayve 开发的端到端神经网络驾驶软件不依赖特定传感器组合或高精地图，具备跨车型泛化能力，目前已与日产、梅赛德斯、Stellantis 签约，计划于 <b>2027 年起</b>在量产车型上集成。此轮芯片厂商加持意味着 Wayve 的技术将与 AMD/Qualcomm/Arm 的车载计算平台深度整合，进一步推进其\"软件供 OEM\"的商业模式。</p>",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/04/15/chipmakers-amd-arm-and-qualcomm-are-all-investing-in-this-buzzy-self-driving-tech-startup/",
-        "date": "2026-04-15"
-      },
-      {
-        "id": "2026-04-16-005",
-        "company": "曹操出行",
-        "company_slug": "caocao",
-        "title": "披露 Q4 首次季度盈利，全年亏损同比收窄 51%，Robotaxi 杭州扩至 100 辆",
-        "sub_group": "国内出行平台",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p>曹操出行于 <b>4月16日</b>发布财报，<b>2025 年 Q4 首次实现调整后净利转正</b>，全年净亏损从 <b>12.46 亿元</b>收窄至 <b>6.14 亿元</b>，降幅 <b>50.8%</b>；毛利率从 <b>8.1%</b> 提升至 <b>9.4%</b>，实现全年正 EBITDA。经营数据同步亮眼：GTV 从 <b>170 亿元</b>增至 <b>234 亿元</b>，总收入 <b>202 亿元</b>（同比增长 <b>38%</b>），月活用户从 2870 万扩至 <b>4130 万</b>，覆盖城市达 <b>195 个</b>（年内新增 <b>59 个</b>）。</p><p>Robotaxi 方面，曹操出行杭州滨江区车队于 <b>2月</b>扩至 <b>100 辆</b>，正式进入 2.0 阶段；<b>4月1日</b>获批成为<b>杭州首家无人化道路测试资质企业</b>，目前已部署 <b>90 辆第二代 Robotaxi</b>。盈利归因于规模化运营降本（定制车曹操 60 每公里 TCO 约 <b>0.47 元</b>，较行业低 <b>40%</b>）和 AI 算法调度优化。公司长期目标是 <b>2030 年累计投放 10 万辆</b>全定制 Robotaxi。</p>",
-        "source_name": "腾讯新闻",
-        "source_url": "https://news.qq.com/rain/a/20260416A085EK00",
-        "date": "2026-04-16"
-      }
-    ]
-  },
-  {
-    "date": "2026-04-15",
-    "items": [
-      {
-        "id": "2026-04-15-001",
-        "company": "Waymo",
-        "company_slug": "waymo",
-        "title": "在伦敦公路正式开始自动驾驶测试，剑指2026年首个国际商业化市场",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 3,
-        "summary_html": "<p>Waymo 于 <b>4月14日</b> 宣布在<b>伦敦</b>公共道路上正式启动自动驾驶测试，车队规模约 <b>100 辆 Jaguar I-Pace</b>，覆盖面积约 <b>100 平方英里</b>。测试阶段车内仍配备安全员，但 Waymo 联席 CEO <b>Dmitri Dolgov</b> 表示，公司的核心驾驶 AI 已在伦敦路况下展现出良好的泛化能力，适应了<b>靠左行驶、环形交叉路口、双层巴士</b>等本地特有场景。</p><p>Waymo 正在伦敦本地招聘并建立服务中心，目标是在获得英国政府批准后于 <b>2026 年内</b>正式推出商业化 robotaxi 服务。这将是 Waymo <b>首个国际商业化市场</b>，具有重要的战略意义。Waymo 官方博客同步披露，公司已累计完成 <b>1.7 亿英里</b>全自动驾驶里程，与人类司机相比，严重/致命伤亡事故减少 <b>92%</b>，安全气囊触发事故减少 <b>83%</b>。</p><p>伦敦市场的主要竞争对手包括本土公司 <b>Wayve</b> 以及 <b>Uber</b>。分析人士认为，Waymo 进入伦敦标志着其从美国本土向全球扩张的关键一步，若成功将为其进入欧洲大陆和亚太市场奠定基础。</p>",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/04/14/london-gets-closer-to-its-first-robotaxi-service-as-waymo-begins-testing/",
-        "date": "2026-04-14"
-      },
-      {
-        "id": "2026-04-15-002",
-        "company": "Tesla",
-        "company_slug": "tesla",
-        "title": "Cybercab 在 Giga Texas 量产爬坡，50+ 辆已在厂区集结，奥斯汀商业化服务年内启动",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>据无人机航拍画面和 Teslarati 报道，<b>4月14日</b>已有超过 <b>50 辆 Cybercab</b> 在 <b>Giga Texas</b> 厂区碰撞测试区附近集结，标志着量产爬坡正式进入加速阶段。首辆 Cybercab 于 <b>2月17日</b>下线，<b>4月</b>开始量产爬坡，Elon Musk 此前坦言初期产量\"极慢\"，但正在快速提升。</p><p>目前量产版 Cybercab 仍保留临时方向盘和踏板，以满足监管要求；待无人驾驶许可获批后将移除。Tesla 长期目标是年产 <b>200 万辆</b> Cybercab，并计划在 <b>2026 年底</b>前在<b>奥斯汀</b>启动商业化 robotaxi 服务，届时将接替现有基于 Model Y 的试点项目。</p><p>Cybercab 的量产进展是 Tesla 整个 robotaxi 战略的核心节点。分析师认为，若奥斯汀服务能在年内落地，将对 Waymo 等竞争对手形成直接压力，并验证 Tesla 无方向盘全自动驾驶的商业可行性。</p>",
-        "source_name": "Teslarati",
-        "source_url": "https://www.teslarati.com/tesla-preps-cybercab-takeover-robotaxi-platform-after-pilot-program/",
-        "date": "2026-04-14"
-      },
-      {
-        "id": "2026-04-15-003",
-        "company": "Uber",
-        "company_slug": "uber",
-        "title": "追加 2 亿美元投资 Lucid，将车辆采购承诺扩大至 3.5 万辆，深化 robotaxi 布局",
-        "sub_group": "国外出行平台",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>Uber 于 <b>4月14日</b>宣布向 <b>Lucid Motors</b> 追加 <b>2 亿美元</b>投资，使其对 Lucid 的总投资达到 <b>5 亿美元</b>，并将车辆采购承诺从此前的 <b>1 万辆</b>扩大至最少 <b>3.5 万辆</b>。这批车辆将专门为 Uber 未来的全球 robotaxi 服务定制，基于 Lucid 中型平台打造，目标售价约 <b>5 万美元</b>。</p><p>Uber 与合作伙伴 <b>Nuro</b> 已在旧金山湾区使用改装版 <b>Lucid Gravity SUV</b> 进行豪华 robotaxi 内部测试，计划于 <b>2026 年晚些时候</b>在旧金山正式推出商业服务。此次扩大承诺表明 Uber 正在将 Lucid 作为其 robotaxi 车队的核心硬件供应商，与 Waymo、Zoox 等自研平台形成差异化竞争。</p>",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/04/14/lucid-motors-names-new-ceo-lands-more-money-from-uber-and-saudis/",
-        "date": "2026-04-14"
-      },
-      {
-        "id": "2026-04-15-004",
-        "company": "Lucid",
-        "company_slug": "lucid",
-        "title": "任命新 CEO Silvio Napoli，获 7.5 亿美元融资，robotaxi 战略全面提速",
-        "sub_group": "国外 OEM / Tier1",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>Lucid Motors 于 <b>4月14日</b>宣布任命 <b>Silvio Napoli</b>（前迅达集团 CEO）为新任 CEO，同时完成 <b>7.5 亿美元</b>融资：沙特主权基金 <b>PIF</b> 通过 Ayar Third Investment 注资 <b>5.5 亿美元</b>，<b>Uber</b> 追加 <b>2 亿美元</b>。Napoli 是汽车行业外部人士，将以\"执行董事\"头衔过渡，待美国工作许可到位后正式就任。</p><p>此次融资与 Uber 扩大采购承诺（3.5 万辆）直接挂钩，Lucid 正将自身定位为 Uber robotaxi 车队的专属硬件平台。公司此前已于 <b>2月</b>裁员 12%，并削减亚利桑那工厂承包商，本次融资为其提供了向 robotaxi 市场转型的资金保障。</p>",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/04/14/lucid-motors-names-new-ceo-lands-more-money-from-uber-and-saudis/",
-        "date": "2026-04-14"
-      }
-    ]
-  },
-  {
-    "date": "2026-04-14",
-    "items": [
-      {
-        "id": "2026-04-14-001",
-        "company": "Tesla",
-        "company_slug": "tesla",
-        "title": "发布2026春季重大软件更新，包含全新自动驾驶应用和\"Hey, Grok\"语音助手",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>Tesla 于 <b>4月13日</b> 宣布其 <b>2026 年春季软件更新</b>，这是该公司年度最重要的 OTA 更新之一。此次更新引入了全新设计的<b>自动驾驶应用程序</b>，用户界面经过重新设计，提供更直观的 <b>FSD 功能控制</b>和<b>实时状态显示</b>。</p><p>更新还集成了 <b>xAI 的 Grok 语音助手</b>，用户可通过 <b>\"Hey, Grok\"</b> 语音指令激活，实现车内自然语言交互，包括<b>导航设置、车辆控制、信息查询</b>等功能。这是 Tesla 首次在车载系统中深度集成<b>大语言模型驱动的语音助手</b>，标志着其在车载智能交互领域的重要进展。</p><p>据 Not a Tesla App 报道，该更新将<b>分阶段推送</b>给全球用户，预计在<b>未来两周内</b>覆盖大部分车辆。此次更新还包含多项用户界面优化和性能改进，进一步提升了 Tesla 车辆的智能化体验。业内分析认为，Grok 的集成将使 Tesla 在与传统车企和新势力的智能座舱竞争中获得<b>差异化优势</b>。</p>",
-        "source_name": "Not a Tesla App",
-        "source_url": "https://www.notateslaapp.com/news/3966/tesla-announces-spring-2026-software-update-heres-whats-coming",
-        "date": "2026-04-13"
-      },
-      {
-        "id": "2026-04-14-002",
-        "company": "Tesla",
-        "company_slug": "tesla",
-        "title": "FSD (Supervised) 在欧洲推出全新统计屏幕，提供详细使用数据",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>随着 Tesla 在<b>欧洲</b>推出 <b>Full Self-Driving (Supervised)</b>，早期公测用户发现了新的<b>统计屏幕功能</b>。该功能为用户提供详细的 FSD 使用数据，包括<b>自动驾驶里程、接管次数、系统性能指标</b>等，增强了系统透明度。</p><p>这一功能的推出正值 Tesla FSD 在欧洲市场加速扩张之际。新的统计屏幕帮助用户更好地理解系统能力和局限性，为监管合规和用户教育提供了重要支持。</p>",
-        "source_name": "Not a Tesla App",
-        "source_url": "https://www.notateslaapp.com/news/3965/tesla-fsd-supervised-in-europe-debuts-new-stats-screen",
-        "date": "2026-04-13"
-      },
-      {
-        "id": "2026-04-14-003",
-        "company": "Tesla",
-        "company_slug": "tesla",
-        "title": "FSD 总监表示荷兰批准将推动全球推广",
-        "sub_group": "国外 L4",
-        "group": "国外",
-        "rating": 2,
-        "summary_html": "<p>Tesla <b>FSD 总监 Ashok Elluswamy</b> 于 <b>4月13日</b> 表示，<b>荷兰</b>的监管批准标志着 Tesla 在欧洲市场的重大突破。荷兰成为欧洲首个正式批准 <b>FSD (Supervised)</b> 上路的国家，为其他欧盟成员国树立了先例。</p><p>Elluswamy 指出，荷兰的批准流程为 Tesla 提供了宝贵的监管经验，这些经验将被复制到其他市场。该批准预计将加速 FSD 向<b>德国、法国、英国</b>等欧洲主要市场的扩展，并为<b>亚太地区</b>的推广奠定基础。</p><p>业内人士认为，荷兰批准的示范效应可能促使更多国家加快自动驾驶监管框架的制定，从而推动全球 L2+ 系统的商业化进程。</p>",
-        "source_name": "Not a Tesla App",
-        "source_url": "https://www.notateslaapp.com/news/3964/ashok-elluswamy-dutch-tesla-fsd-approval-will-enable-global-rollout",
-        "date": "2026-04-13"
-      },
-      {
-        "id": "2026-04-14-004",
-        "company": "Uber",
-        "company_slug": "uber",
-        "title": "与 Nuro 在旧金山开始测试高端 robotaxi 服务",
-        "sub_group": "国外出行平台",
-        "group": "国外",
-        "rating": 3,
-        "summary_html": "<p>Uber 于 <b>4月13日</b> 宣布与 <b>Nuro</b> 和 <b>Lucid Motors</b> 合作，在<b>旧金山</b>推出高端 robotaxi 服务测试。该服务使用 <b>Lucid</b> 豪华电动车辆，配备 Nuro 的<b>第三代自动驾驶系统</b>，定位于高端商务出行市场。</p><p>据 TechCrunch 报道，测试车队初期规模为 <b>10 辆</b>，服务范围覆盖旧金山<b>金融区和 SOMA 区域</b>。用户可通过 Uber 应用预约，车辆提供<b>真皮座椅、车载 Wi-Fi、隐私隔断</b>等高端配置。这是 Uber 首次尝试将自动驾驶技术应用于高端出行细分市场。</p><p>Nuro 此前主要专注于无人配送领域，此次合作标志着其业务向载人出行的战略转型。Lucid 则通过此次合作拓展其车辆在共享出行领域的应用场景。三方计划在 <b>2026 年第三季度</b>将服务扩展至<b>洛杉矶和迈阿密</b>。业内分析认为，高端 robotaxi 市场的利润率可能是普通网约车的 <b>2-3 倍</b>，这为自动驾驶商业化提供了新的路径。</p>",
-        "source_name": "TechCrunch",
-        "source_url": "https://techcrunch.com/2026/04/13/uber-nuro-san-francisco-testing-premium-robotaxi-service/",
-        "date": "2026-04-13"
-      },
-      {
-        "id": "2026-04-14-006",
-        "company": "曹操出行",
-        "company_slug": "caocao",
-        "title": "CEO 宣布公司目标是在2026年实现年度盈利",
-        "sub_group": "国内出行平台",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p>曹操出行 CEO 于 <b>4月13日</b> 在公司战略发布会上表示，公司的目标是在 <b>2026 年</b>实现年度盈利。这是曹操出行自 <b>2015 年</b>成立以来首次明确盈利时间表。</p><p>CEO 透露，公司正在大力推动<b>无人驾驶与 AI 技术</b>的研发和应用。完全定制的 <b>Robotaxi 车型</b>计划在 <b>2026 年</b>正式亮相，并于 <b>2027 年</b>开始量产。该车型将搭载曹操出行自研的自动驾驶系统，定位于城市共享出行场景。</p><p>曹操出行目前在全国 <b>60+ 城市</b>运营，注册用户超过 <b>8000 万</b>。公司计划通过引入 Robotaxi 降低运营成本，同时提升服务体验。</p>",
-        "source_name": "新浪财经",
-        "source_url": "https://finance.sina.com.cn/stock/estate/integration/2026-04-13/doc-inhuipik4868825.shtml",
-        "date": "2026-04-13"
-      },
-      {
-        "id": "2026-04-14-007",
-        "company": "小鹏",
-        "company_slug": "xpeng",
-        "title": "达成 Mona M03 累计交付 25 万辆里程碑，全新 Mona SUV 即将推出",
-        "sub_group": "国内新势力 / 传统 OEM",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p>Mona M03 在 3 月交付 9,335 辆，占小鹏总交付量 27,415 辆的 34.05%。小鹏已达成 <b>25 万辆</b> Mona M03 交付里程碑，全新 Mona SUV 即将推出。</p>",
-        "source_name": "CnEVPost",
-        "source_url": "https://cnevpost.com/2026/04/13/xpeng-reaches-250000-mona-m03-deliveries-all-new-mona-suv-looms/",
-        "date": "2026-04-13"
-      },
-      {
-        "id": "2026-04-14-008",
-        "company": "小鹏",
-        "company_slug": "xpeng",
-        "title": "宣布 GX 技术发布会定档 4月15日，展示旗舰 SUV 前瞻科技",
-        "sub_group": "国内新势力 / 传统 OEM",
-        "group": "国内",
-        "rating": 2,
-        "summary_html": "<p>小鹏汽车宣布 GX 技术发布会定于 <b>4 月 15 日</b>举行，将展示集小鹏前瞻科技之大成的旗舰 SUV。GX 联手华为打造新一代 <b>AI 数字投影大灯</b>。</p>",
-        "source_name": "腾讯新闻",
-        "source_url": "https://news.qq.com/rain/a/20260413A05LY700",
-        "date": "2026-04-13"
-      },
-      {
-        "id": "2026-04-14-009",
-        "company": "元戎启行",
-        "company_slug": "deeproute",
-        "title": "CEO 周光表示 L3 很可能被跳过，物理 AI 的下半场是机器人",
+        "id": "2026-04-23-004",
+        "company": "地平线",
+        "company_slug": "horizon",
+        "title": "在慕尼黑发布 Starry 6P 芯片，降低单车成本最高 2000 元",
         "sub_group": "国内智驾方案商",
         "group": "国内",
         "rating": 2,
-        "summary_html": "<p>元戎启行 CEO <b>周光</b>在采访中表示，<b>L3</b> 自动驾驶级别很可能被跳过，物理 AI 的下半场将是<b>机器人</b>。公司组合辅助驾驶方案合作车型累计交付超 <b>13 万台</b>。</p>",
-        "source_name": "新浪财经",
-        "source_url": "http://finance.sina.com.cn/stock/t/2026-04-13/doc-inhukefa4743478.shtml",
-        "date": "2026-04-13"
+        "summary_html": "<p><b>4月22日</b>，地平线在<b>慕尼黑</b>发布 <b>Starry 6P 芯片</b>，这是<b>中国首款座舱驾驶融合芯片</b>。该芯片采用 <b>5nm 工艺</b>，计算能力达 <b>650 TOPS</b>，带宽 <b>273GB/s</b>，可同时驱动 6 到 12 个显示屏。</p><p>通过将座舱和驾驶功能集成到单一芯片中，相比传统方案可<b>节省 1,000 到 4,000 元/辆</b>，标题提及最高可降低 2,000 元。该芯片可满足车载娱乐和多媒体系统的渲染需求，支持入门级城市 NOA 功能。</p>",
+        "source_name": "Gasgoo",
+        "source_url": "https://autonews.gasgoo.com/articles/icv/horizon-robotics-launches-starry-6p-reducing-per-vehicle-costs-by-up-to-2000-yuan-2047239066829971457",
+        "date": "2026-04-22"
       },
       {
-        "id": "2026-04-14-010",
-        "company": "中国",
-        "company_slug": "china",
-        "title": "中国车企加速 L3 自动驾驶推广，监管发布安全标准草案",
-        "sub_group": "监管与政策",
-        "group": "其他",
+        "id": "2026-04-23-005",
+        "company": "鸿蒙智行",
+        "company_slug": "hongmeng",
+        "title": "2026 春季新品发布会举行，尚界 Z7 系列订单突破 8 万台",
+        "sub_group": "国内华为系 / 互联网大厂",
+        "group": "国内",
         "rating": 2,
-        "summary_html": "<p>中国汽车行业正在加速测试 <b>L3</b> 级自动驾驶功能的车辆。监管机构发布了<b>安全标准草案</b>，将于 <b>2027 年 7 月</b>生效，为高级自动驾驶功能提供监管框架。</p>",
-        "source_name": "SCMP",
-        "source_url": "https://www.scmp.com/plus/business/china-evs/article/3349837/chinese-carmakers-gear-l3-self-driving-roll-out",
-        "date": "2026-04-13"
+        "summary_html": "<p><b>4月22日</b>，鸿蒙智行 2026 春季新品发布会于 19:00 正式举行。风尚轿跑<b>尚界 Z7</b> 及猎装车型<b>尚界 Z7T</b> 正式上市，预售价分别为 <b>22.98 万元/23.98 万元</b>起。全系标配华为乾崑智驾系统。发布会上披露尚界 Z7 系列订单已突破 <b>8 万台</b>，肖战空降代言，五款新车齐发成为核心亮点。</p>",
+        "source_name": "新浪新闻",
+        "source_url": "https://www.sina.cn/news/detail/5290594604943090.html",
+        "date": "2026-04-22"
       }
     ]
   }
-]
