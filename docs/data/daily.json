@@ -1,5 +1,67 @@
 [
   {
+    "date": "2026-04-25",
+    "items": [
+      {
+        "id": "2026-04-25-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "Robotaxi 推进节奏被市场解读为先稳后快，短期扩张速度低于预期",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p><b>4月24日</b>，The Star 转引 Reuters 报道称，多家华尔街分析师在一季度电话会后下调了对 Tesla Robotaxi 早期扩张速度的预期。管理层释放的核心信号是优先保证安全与监管可持续性，而非立即追求大范围快速铺开。</p><p>该信号并不改变 Tesla 对 Cybercab 与 FSD 商业化的长期方向，但会影响 2026 年内的城市拓展节奏与投资者对短期规模化进度的判断。与 Waymo 已建立的多城运营网络相比，Tesla 仍处于审慎爬坡阶段。</p>",
+        "source_name": "The Star/Reuters",
+        "source_url": "https://www.thestar.com.my/tech/tech-news/2026/04/24/musk-sounds-cautious-tone-on-robotaxis-amid-slower-than-expected-rollout",
+        "date": "2026-04-24"
+      },
+      {
+        "id": "2026-04-25-002",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "title": "北京车展继续释放 Robotaxi 降本与全场景自动驾驶推进信号",
+        "sub_group": "国内 L4",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p><b>4月24日</b>，北京车展公开信息显示，小马智行再次强调 Robotaxi 降本路径，并展示面向物流场景的 L4 无人轻卡方案，延续乘用与物流双线推进思路。</p><p>对国内市场而言，这类降本与多场景路线有助于提升自动驾驶技术复用率，并为后续车队扩张创造更可持续的单位成本基础。</p>",
+        "source_name": "IT之家",
+        "source_url": "https://www.ithome.com/0/943/147.htm",
+        "date": "2026-04-24"
+      }
+    ]
+  },
+  {
+    "date": "2026-04-24",
+    "items": [
+      {
+        "id": "2026-04-24-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "Cybercab 已启动生产，管理层强调将谨慎推进 Robotaxi 扩张",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p><b>4月24日</b>，Tech Xplore 转引报道显示，Tesla CEO Elon Musk 在财报沟通中确认 <b>Cybercab 已启动生产</b>，并称将与 Tesla Semi 一同在年内推进规模化产能爬坡。</p><p>报道同时提到，Tesla 对 Robotaxi 落地采取更审慎节奏，强调先小范围验证再扩城，以降低在监管与道路复杂场景下的运营风险。</p>",
+        "source_name": "Tech Xplore",
+        "source_url": "https://techxplore.com/news/2026-04-tesla-robotaxi-production-cybercab-ramp.html",
+        "date": "2026-04-24"
+      },
+      {
+        "id": "2026-04-24-002",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "title": "北京车展披露新一代 Robotaxi 成本目标下探至 23 万元以内",
+        "sub_group": "国内 L4",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p><b>4月24日</b>，IT之家援引北京车展信息称，小马智行披露 <b>2027 版 Robotaxi 整车成本目标降至 23 万元以内</b>，并发布全车规、全冗余 L4 级无人轻卡方案，覆盖出行与物流双场景。</p><p>从商业化角度看，成本端持续下探是 Robotaxi 扩规模的关键前提。若该成本目标后续在量产交付中兑现，将有助于小马智行在车队扩张和单位经济模型上形成更强竞争力。</p>",
+        "source_name": "IT之家",
+        "source_url": "https://www.ithome.com/0/943/147.htm",
+        "date": "2026-04-24"
+      }
+    ]
+  },
+  {
     "date": "2026-04-23",
     "items": [
       {
