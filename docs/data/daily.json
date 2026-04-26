@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-04-26",
+    "items": [
+      {
+        "id": "2026-04-26-001",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "title": "L4 自动驾驶不局限于 Robotaxi，同步布局 Robovan 物流，明年将拓展 Robotruck",
+        "sub_group": "国内智驾方案商",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p><b>4月26日</b>，Momenta CEO 曹旭东在北京车展期间透露，公司的 L4 自动驾驶战略不仅限于 Robotaxi 领域，<b>同步布局 Robovan 物流，明年将拓展 Robotruck</b>，形成多场景覆盖的战略。</p><p>公司采用统一大模型方案，<b>一个大模型覆盖全场景自动驾驶，已在 Robotaxi、Robovan、乘用车验证成功</b>。这种平台化模式能够显著降低研发成本，各场景数据相互反哺优化模型效果，形成强平台优势。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://finance.sina.com.cn/tech/2026-04-26/doc-inhvupen1831976.shtml",
+        "date": "2026-04-26"
+      },
+      {
+        "id": "2026-04-26-002",
+        "company": "千里科技",
+        "company_slug": "qianli",
+        "title": "重庆千里科技目标 2030 年覆盖全球 30 万辆 Robotaxi",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "group": "国内",
+        "rating": 2,
+        "summary_html": "<p><b>4月26日</b>，重庆千里科技股份有限公司（前身为重庆力帆科技）举行"行千里、AI相伴"主题发布会，宣布<b>目标 2030 年全球范围内超过 30 万辆 Robotaxi 搭载其解决方案</b>。</p><p>公司计划于 <b>2027 年正式面向市场推出 Robotaxi 综合解决方案</b>，为全栈式服务包，包含车辆平台、L4 级自动驾驶软硬件系统、云端数据平台及远程安全监控。公司表示，2027 年方案推出时，底层算法已通过数百万辆乘用车真实道路数据完成充分验证，具备规模化量产能力。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://finance.sina.com.cn/jjxw/2026-04-26/doc-inhvuxuq8775730.shtml",
+        "date": "2026-04-26"
+      },
+      {
+        "id": "2026-04-26-003",
+        "company": "吉利",
+        "company_slug": "geely",
+        "title": "发布中国首款原生开发 Robotaxi 原型车 Eva Cab，2027 年推出曹操出行定制版",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "group": "国内",
+        "rating": 3,
+        "summary_html": "<p><b>4月26日</b>，吉利汽车集团在 2026 北京车展发布<b>中国首款原生开发 Robotaxi 原型车 Eva Cab</b>。该车搭载量子级 AI 电子电气架构 EEA 4.0，采用量子加密技术实现车云全链路安全防护。</p><p>技术配置方面，集成<b>英伟达 SuperChip、Thor U 及高通骁龙 8797 芯片，总算力超过 3000 TOPS</b>；配备<b>全球首个 2160 线数字化激光雷达</b>，最远探测距离达 600 米，每秒成像 2592 万点；搭载千里浩瀚 G-ASD L4 自动驾驶方案，可实现无人接驳。</p><p>设计上采用对开电滑门和对向式座舱布局，体现从"驾驶位中心"向"乘员空间中心"的转变。<b>2027 年将推出 Eva Cab 的曹操出行定制版</b>。目前已在杭州、苏州等城市试运营超过一年。</p>",
+        "source_name": "凤凰网",
+        "source_url": "https://h5.ifeng.com/c/vivo/v0025pFZCczCA0OEFSni0fC3KnF7cFqeeiSKYeQyqbwFOFk__",
+        "date": "2026-04-26"
+      }
+    ]
+  },
+  {
     "date": "2026-04-25",
     "items": [
       {
