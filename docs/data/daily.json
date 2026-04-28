@@ -1,5 +1,36 @@
 [
   {
+    "date": "2026-04-28",
+    "items": [
+      {
+        "id": "2026-04-28-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "FSD 获瑞典批准在欧洲公开测试,继荷兰后第二个欧洲国家",
+        "sub_group": "国外 L4",
+        "group": "国外",
+        "rating": 2,
+        "summary_html": "<p>瑞典交通管理局批准 Tesla FSD(Supervised)在瑞典公开道路进行测试,这是继荷兰之后第二个批准 FSD 测试的欧洲国家。Tesla 正在逐步推进 FSD 在欧洲市场的扩张,瑞典的批准预计将加速其他北欧国家的监管进程。</p><p>此前 4 月中旬,荷兰成为首个批准 FSD 的欧洲国家,Tesla 随后向荷兰 HW4 车主推送了专为欧洲监管定制的 FSD v14.2.2.5 版本。瑞典的批准表明欧洲监管机构对 Tesla 自动驾驶技术的接受度正在提升。</p>",
+        "source_name": "Not a Tesla App",
+        "source_url": "https://www.notateslaapp.com/",
+        "date": "2026-04-27"
+      },
+      {
+        "id": "2026-04-28-002",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "title": "宣布2027版Robotaxi整车成本降至23万元以内,较上一代大幅下降",
+        "sub_group": "国内 L4",
+        "group": "国内",
+        "rating": 3,
+        "summary_html": "<p>小马智行宣布其<b>2027版Robotaxi整车总成本将降至23万元以内</b>,相比此前版本实现大幅成本下探。公司CEO彭军表示,海外市场将布局<b>千辆级别</b>的车队规模。</p><p>成本下降主要来自三个方面:一是传感器和计算平台的规模化采购降低硬件成本;二是车辆设计优化减少冗余配置;三是供应链整合提升效率。23万元的成本水平使得Robotaxi的单车经济模型更加接近盈亏平衡点。</p><p>小马智行目前已在多个城市实现商业化运营,第七代Robotaxi在广州、深圳等城市已实现单车UE盈亏平衡。此次成本下探将进一步提升公司在全球市场的竞争力,特别是在海外市场的扩张计划中。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://finance.sina.com.cn/stock/t/2026-04-27/doc-inhvxatq7927305.shtml",
+        "date": "2026-04-27"
+      }
+    ]
+  },
+  {
     "date": "2026-04-27",
     "items": [
       {
