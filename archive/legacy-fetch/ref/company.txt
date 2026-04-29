@@ -1,0 +1,15 @@
+Waymo, Cruise, Zoox
+Uber, Lyft, Grab
+Tesla, Rivian, Lucid
+BMW, Benz, Audi, Volkswagen, Woven Planet (Toyota), Motional (Hyundai), 42dot (Hyundai), GM, Stellantis
+Bosch, Continental, ZF, TRW, Denso, Valeo, Magna, Mobileye, Aptiv, Nvidia
+Tensor, Aurora Innovation, May Mobility, SWM, Sonnet.ai, Nuro, Wayve, Waabi
+
+小马智行, 文远知行, 萝卜快跑
+曹操出行, 哈啰出行, 高德地图, 如祺出行, 享道出行
+蔚来, 理想, 小鹏, 小米, 零跑, 威马, 赛力斯
+极氪 (吉利), 岚图 (东风), 极狐 (北汽), 智己 (上汽), 埃安 (广汽), 比亚迪, 长安, 一汽, 长城, 奇瑞
+Momenta, 地平线, 轻舟智航, 元戎启行, 提雅智行, 纵目科技, 追势科技, 智驾科技 MAXIEYE, 佑驾创新 MINIEYE, 驭势科技
+毫末智行 (长城), 大卓智能 (奇瑞), 福瑞泰克 Freetech (吉利), 千里科技/ 迈驰智行 (吉利), 零束科技 (上汽), 赛可智能 (上汽), 友道智途 (上汽), 卓驭科技 (一汽/ 大疆)
+鸿蒙智行 (华为), 引望智能 (华为), 商汤绝影 (商汤), 鉴智机器人 (四维图新)
+百度, 字节, 阿里, 腾讯, 美团

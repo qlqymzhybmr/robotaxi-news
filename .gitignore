@@ -1,0 +1,9 @@
+# Local secrets
+claude_api_config.md
+
+# Temporary runtime artifacts
+data/tmp/
+
+# Python cache
+__pycache__/
+*.pyc

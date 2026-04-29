@@ -177,7 +177,10 @@ function buildDateFilter() {
 
 function buildCompanyFilter() {
   const companies = new Set();
-  dailyData.forEach(day => day.items && day.items.forEach(item => companies.add(item.company)));
+  dailyData.forEach(day => day.items && day.items.forEach(item => {
+    const normalized = normalizeCompanyName(item.company);
+    if (normalized) companies.add(normalized);
+  }));
   const sorted = [...companies].sort((a, b) => a.localeCompare(b, 'zh'));
 
   const dropdown = document.getElementById('company-dropdown');
@@ -294,7 +297,9 @@ function renderDaily(dateFilter, groupFilter) {
     let items = [...(day.items || [])];
 
     if (groupFilter) items = items.filter(i => i.group === groupFilter);
-    if (selectedCompanies.size > 0) items = items.filter(i => selectedCompanies.has(i.company));
+    if (selectedCompanies.size > 0) {
+      items = items.filter(i => selectedCompanies.has(normalizeCompanyName(i.company)));
+    }
 
     if (items.length === 0) return '';
 
@@ -357,9 +362,12 @@ function renderCard(item) {
 }
 
 function filterByCompany(company) {
-  selectedCompanies = new Set([company]);
+  const normalized = normalizeCompanyName(company);
+  selectedCompanies = normalized ? new Set([normalized]) : new Set();
   const cbs = document.querySelectorAll('.company-cb');
-  cbs.forEach(cb => { cb.checked = cb.value === company; });
+  cbs.forEach(cb => { cb.checked = cb.value === normalized; });
+  const allCb = document.getElementById('co-all');
+  if (allCb) allCb.checked = false;
   updateCompanyBtnLabel();
   applyFilters();
 }
@@ -441,11 +449,14 @@ function restoreDailyHash() {
   if (params.get('date')) document.getElementById('filter-date').value = params.get('date');
   if (params.get('group')) document.getElementById('filter-group').value = params.get('group');
   if (params.get('companies')) {
-    const cos = params.get('companies').split(',');
+    const cos = params.get('companies').split(',').map(normalizeCompanyName).filter(Boolean);
     selectedCompanies = new Set(cos);
     document.querySelectorAll('.company-cb').forEach(cb => {
       cb.checked = selectedCompanies.has(cb.value);
     });
+    const allCb = document.getElementById('co-all');
+    const total = document.querySelectorAll('.company-cb').length;
+    if (allCb) allCb.checked = selectedCompanies.size > 0 && selectedCompanies.size === total;
     updateCompanyBtnLabel();
   }
   applyFilters();
@@ -461,6 +472,14 @@ function restoreWeeklyHash() {
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
+function normalizeCompanyName(name) {
+  if (!name) return '';
+  return name
+    .replace(/[（(][^）)]*[）)]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function formatDate(dateStr) {
   if (!dateStr) return '';
   const [y, m, d] = dateStr.split('-');
