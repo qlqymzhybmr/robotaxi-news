@@ -1,5 +1,101 @@
 [
   {
+    "date": "2026-05-02",
+    "items": [
+      {
+        "id": "2026-05-02-001",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "title": "2026-05-01,Ojai新车型在凤凰城启动全自动无人驾驶运营；加州新法允许警察开罚单",
+        "rating": 3,
+        "event_date": "2026-05-01",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "summary_html": "<p><b>5月1日</b>，Waymo宣布在<b>凤凰城（Phoenix）</b>启动基于<b>Ojai</b>新一代平台的全自动无人驾驶商业运营，Ojai是Waymo第六代自动驾驶车辆（基于极氪RT平台）的内部代号，标志着继Jaguar I-PACE后新一代Robotaxi车型正式进入商业化阶段。Ojai外形更接近量产MPV，设计上进一步优化了乘客舱体验与冗余系统集成，凤凰城作为Waymo最成熟的运营市场成为首发城市。</p><p><b>5月1日</b>，加利福尼亚州新法规同步生效：加州警察可对在公共道路违规的Robotaxi车辆出具<b>交通罚单</b>，执法对象包括Waymo、Tesla Cybercab等无人驾驶车辆。新规明确了罚单送达方式（发给车辆注册公司）、罚款责任归属及违规记录方式，是美国首个系统解决Robotaxi交通执法空白的地方性立法。</p>",
+        "source_name": "The Business Journals",
+        "source_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1KU1JmOHZXNG9zZVRPcUJGenZaWmplQjR4dm1kNWZ5QVhHdU90ZjNFVWRoYUVJUWpnRUJEZ2JrM01ibFBERU5kOWk1MXphMGF2WncyQjdSUjE1a09HZGJ0YnJweDRkNjk4SWlkejRkaXp1cGlyNGZqRjJFOEY"
+      },
+      {
+        "id": "2026-05-02-002",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "2026-05-01,加州新法正式约束Cybercab/Robotaxi，与Waymo同受执法覆盖",
+        "rating": 2,
+        "event_date": "2026-05-01",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "summary_html": "<p><b>5月1日</b>，加州同一批交通执法新规同步适用于<b>Tesla Cybercab</b>及其无人驾驶Robotaxi车辆，要求所有上路运营的无人驾驶车辆必须在可识别的注册主体下纳入执法体系。对Tesla而言，目前在奥斯汀/休斯顿运营的<b>25辆</b>无监管Cybercab车队将首当其冲，Tesla需在合规记录和执法响应机制上做出调整。加州是全美Robotaxi监管最成熟也最严格的市场，此次立法被认为将成为其他州效仿的模板。</p>",
+        "source_name": "Teslarati",
+        "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAxbkIycHlkNnRTTXd1TzJvNGhrR2lMTzdJLTJtcEl0bkVteHF3dXlLYWIybW1pSEFkVU9TU0VzMVZJZV9yTUREcTFuQ2tkWjJVV1FpNDVLWmZoQUhlR1pqX2FBdmNxS1JxV3lsVHVyaHZuZXk2enFxRXV0bm9Gd2M"
+      },
+      {
+        "id": "2026-05-02-003",
+        "company": "Uber",
+        "company_slug": "uber",
+        "title": "2026-05-01,Hertz子公司Oro Mobility正式以旧金山为首发城市推进Robotaxi运营",
+        "rating": 2,
+        "event_date": "2026-05-01",
+        "group": "国外",
+        "sub_group": "国外出行平台",
+        "summary_html": "<p><b>5月1日</b>，多方报道确认Hertz旗下新成立的<b>Oro Mobility</b>子公司将以<b>旧金山</b>作为Uber Robotaxi车队运营的首发城市，负责Lucid/Nuro底座车辆的清洁、充电与维护。这是继4月30日Uber-Hertz合作公告后落地的运营细节，明确了旧金山作为首发市场的战略优先级。</p>",
+        "source_name": "Travel And Tour World",
+        "source_url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZGV1QjVkZldsRFQ2RmhVdUp2TXJRdGlfaExUT09pR1doX1hYZnF4WDlGWTJwUHZxUFNHZ0J1MDN0LXZkYmtoNV9mSGdCd2VOWGVYaUszdnJWa3JCb3Ftd0VuWkxDMV9ITE5XWVpvTW5ENTRUWjZWNnhxaFk3S09yYXRRWjZxM25uYVhIRGJ0Q1hhbDhTMFZneHZsMDFXME5fanlUejhLaFVIcnluRktqZXkyOHZDODZaYjdOTWdjN1JaTUJZVjNvOHBVS2JTVUMwZlJtWHlDeTBtZ29BY0pMYkFPVWxBdEVxRmJOLWZyc3ZEMHY1SHRFTFFn"
+      },
+      {
+        "id": "2026-05-02-004",
+        "company": "华为 (Huawei)",
+        "company_slug": "hongmeng",
+        "title": "2026-05-02,首款华为乾崑+鸿蒙座舱五菱SUV定档5月8日上市，剑指理想L6",
+        "rating": 2,
+        "event_date": "2026-05-02",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "summary_html": "<p><b>5月2日</b>，消息确认<b>华为×五菱</b>联合打造的首款SUV将于<b>5月8日</b>正式上市，标配<b>乾崑智驾</b>与<b>鸿蒙座舱</b>，定位直接对标<b>理想L6</b>（24.98万起）。这是华为智驾体系首次进入五菱品牌，也是鸿蒙智行将合作伙伴从赛力斯/奇瑞/北汽等向更大众化OEM拓展的关键一步。华为渠道触达能力加上五菱的大众品牌认知，对理想同价位车型形成直接竞争压力。</p>",
+        "source_name": "汽车之家",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA0R1FIeW51dUwwdDRNcU03eVpqNW5jZEF0dU1OYktVd1VUM0NlamwtOENvdWNIQ3VUekEtajBjaUhSdkhTQUI2SWxhMXRuV01BeFJWY3FCVnVnWUk"
+      },
+      {
+        "id": "2026-05-02-005",
+        "company": "比亚迪 (BYD)",
+        "company_slug": "byd",
+        "title": "2026-05-01,智驾选装包相继涨价逾万元，智能驾驶成购车独立成本项",
+        "rating": 2,
+        "event_date": "2026-05-01",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "summary_html": "<p><b>5月1日</b>，<b>比亚迪</b>和<b>长安</b>相继上调旗下部分车型的智驾选装包价格，单次涨幅在<b>8,000~12,000元</b>区间，理由是激光雷达、算力芯片及软件研发成本持续上涨。这是国内智驾供应链成本上行压力的集中体现——此前\"智驾免费送\"的补贴逻辑已走到尽头，智能驾驶正从营销赠品变为消费者需单独付费的功能项。业界预计这一趋势将在2026年下半年向更多车企扩散。</p>",
+        "source_name": "搜狐网",
+        "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQSjNwcW16eFVRdmpiNVIxbEliZ3BId1lfc25rUEVWbzFzSWF3ampjb01HeTBZSGdZeHFvOEtzMUN6TkMzcVNYbmcxdWh3Q0FGNnl6SkZmUW8zSjZzWWYzbU0ybUd5YWVyU3JndV9xR2ZfWXVJN0FRS2ZzdVlvcW0tVU52NmlXcFQzUnRlTQ"
+      },
+      {
+        "id": "2026-05-02-006",
+        "company": "文远知行 (WeRide)",
+        "company_slug": "wenyuan",
+        "title": "2026-05-01,WRD 3.0智驾方案适配多芯片平台，获近30个车型定点",
+        "rating": 2,
+        "event_date": "2026-05-01",
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "summary_html": "<p><b>5月1日</b>，文远知行披露其最新ADAS智驾方案<b>WRD 3.0</b>打通了包括<b>芯擎科技</b>（国产旗舰SoC）在内的多芯片平台，实现算力平台无关的统一驾驶软件层。截至目前，WRD系列方案已获<b>近30个车型定点</b>，涵盖埃安N60等多款已上市车型。文远知行此举意在拓展B端供应商业务，与L4 Robotaxi主线并行推进，与Momenta、地平线的高阶ADAS市场形成正面竞争。</p>",
+        "source_name": "汽车之家",
+        "source_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1od1k4aWE1ekl4b2toR2ZJRFhRRkY3bzZEOWR5akM5Z0duZVR1M2hlZ1V2N29zS0duSDNHeVAydFk5UzNGUWZNWW02OU5QdGRKRlZWSFUwLVBfUUs3RllfRlBrNm1lbFJuMGdZ"
+      },
+      {
+        "id": "2026-05-02-007",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "title": "2026-05-01,深化与奥迪L3量产合作，北京车展展台正式对外公示技术伙伴身份",
+        "rating": 2,
+        "event_date": "2026-05-01",
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "summary_html": "<p><b>5月1日</b>，更多细节披露显示Momenta与<b>奥迪</b>的L3自动驾驶量产合作已进入技术落地阶段：在北京车展奥迪展台，Momenta被正式列为<b>奥迪E7X</b>的核心L3智驾技术合作伙伴，并公开讲解技术路线和量产节奏。这是继4月30日E7X全球首秀后的细节补充，明确了Momenta在奥迪中国L3方案中承担感知、规控核心软件模块的分工定位。</p>",
+        "source_name": "汽车之家",
+        "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9ITWdRYzRlUU5oWmU3VFRCNm1jVUY0M0JXcWtjZVZELW1DSmNKZFpkcHBtaTU5VjhhT0t5RlpYUjFfX0ZxN0QzVkNvNDJlOXJyUDhvNlpxSWhUbEZlcUE"
+      }
+    ]
+  },
+  {
     "date": "2026-05-01",
     "items": [
       {
