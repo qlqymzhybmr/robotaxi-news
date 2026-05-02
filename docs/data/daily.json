@@ -1,5 +1,153 @@
 [
   {
+    "date": "2026-05-01",
+    "items": [
+      {
+        "id": "2026-05-01-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "2026-04-30,无人Robotaxi车队扩至25辆；为国际市场准备FSD V14 Lite版本",
+        "rating": 2,
+        "event_date": "2026-04-30",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "summary_html": "<p><b>4月30日</b>，多方消息来源确认Tesla无人监管Robotaxi车队（Cybercab）在<b>奥斯汀/休斯顿</b>区域已扩张至<b>25辆</b>，持续进行商业化运营爬坡。与此同时，Tesla正为海外市场准备<b>FSD V14 Lite</b>版本，以应对<b>HW3</b>硬件用户的维权压力——欧洲HW3车主指控Tesla未能兑诺将完整FSD升级推送至该代硬件，维权声浪持续扩大。V14 Lite版本将在FSD V14功能集基础上做降级适配，以覆盖HW3设备。 - <b>原始发布日期</b>：2026-04-30</p>",
+        "source_name": "eletric-vehicles.com",
+        "source_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOM3htaEs3bzNMN2hHaEozZnI0YTdGekpRTmFYdjQ4V2NLanpyX0dQUWpzTFRJdWFpWFRNTGJyUnJEMG1TOHE3RGFOQnlWcDZvaDdfQ3NvbUxUYlE5Q2JXNGNKQmNDRVFwN1R2VlI5OTBmTlNyYkhiNUt6U19JS3BZQm5XcXltaFIwMlp6cEpvWkpLY2NF"
+      },
+      {
+        "id": "2026-05-01-002",
+        "company": "Uber",
+        "company_slug": "uber",
+        "title": "2026-04-30,联合Hertz成立Oro Mobility管理Lucid Robotaxi车队；Robotaxi总承诺超100亿美元",
+        "rating": 3,
+        "event_date": "2026-04-30",
+        "group": "国外",
+        "sub_group": "国外出行平台",
+        "summary_html": "<p><b>4月30日</b>，Uber与Hertz正式宣布战略合作：Hertz将成立新子公司<b>Oro Mobility</b>，负责Uber Robotaxi车队的清洁、充电与维修服务。该车队以<b>Lucid Motors</b>电动车为底座，搭载<b>Nuro</b>自动驾驶技术，计划覆盖<b>美国多个主要城市</b>。Hertz股价当日大涨<b>13%</b>，Uber股价同步上升。Uber方面表示，截至目前其在Robotaxi领域的投资承诺已超过<b>100亿美元</b>，涵盖与Waymo、Cruise、Aurora、Lucid/Nuro等多方的合作协议。本次合作正式将传统租车巨头引入Robotaxi运营链条，标志着车队运营模式从科技公司自营向专业车队管理外包演进。 - <b>原始发布日期</b>：2026-04-30</p>",
+        "source_name": "TechCrunch",
+        "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOX2xla1h3MTV0eC04VWRvUTd5OGlxMnlhTE1DVVduYW5CSENEaHhyTnhaTmdKV0o1SkFRdEF2SGNrdjFnZDRQSWhHbHRsd3R6RGp3d1JaME9BM01NU2FfVW5lMGVJTklHQkpuWUt5NldRd2oyZEJ4c3JmNERsUnNoNkhDN3EwWWZuVk5EV252VDhBYzQwcmdhMmtsXzFXd3FXQTlF"
+      },
+      {
+        "id": "2026-05-01-003",
+        "company": "Aurora Innovation",
+        "company_slug": "aurora",
+        "title": "2026-04-30,签下Hirschbach 500辆自动驾驶卡车商业合同，股价大涨",
+        "rating": 3,
+        "event_date": "2026-04-30",
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1 / 自动驾驶技术公司",
+        "summary_html": "<p><b>4月30日</b>，Aurora Innovation宣布与美国大型卡车运营商<b>Hirschbach</b>签署商业合同，将为其提供<b>500辆</b>自动驾驶卡车服务。这是Aurora完成2026年4月7日商业化上线后拿下的重大批量订单，也是自动驾驶卡车行业迄今规模最大的单一商业协议之一。Aurora股价当日强劲上涨，市场将其解读为L4自动驾驶卡车正式进入大规模商业化阶段的关键信号。Hirschbach是总部位于美国中西部的大型货运公司，此次合作将在德克萨斯州等干线货运走廊优先展开。 - <b>原始发布日期</b>：2026-04-30</p>",
+        "source_name": "UK Investor Magazine",
+        "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPZW9YRVh4MUt5UWN4R1d5UlNyNkgyNGxVY01ic1VobnJyS0hrdjNSVTRia29EYkxGT2VRWGJkbDEzdUJMUTlld2k1NjNXbURtaEs4di1pN2JXUDBqOUJQUi1WOFg3dnpqakdwX1FpRkNaUjRjVFFBd3JvN2FwSVY5VC1EMjgzNlp5S1dLaU1lQktaakE3LUZqNGVSZDBZYW5rdmpuOTczS2drSmEyNFE"
+      },
+      {
+        "id": "2026-05-01-004",
+        "company": "MOIA (Volkswagen)",
+        "company_slug": "moia",
+        "title": "2026-05-01,VW ID. Buzz Robotaxi驶入洛杉矶街头",
+        "rating": 2,
+        "event_date": "2026-05-01",
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1 / 自动驾驶技术公司",
+        "summary_html": "<p><b>5月1日</b>，大众旗下出行品牌<b>MOIA</b>将旗舰车型<b>ID. Buzz</b>带入<b>洛杉矶</b>，启动Robotaxi路测与服务筹备工作。ID. Buzz是大众专门为Robotaxi场景设计的纯电MPV平台，此前已在汉堡商业化运营。进入洛杉矶标志着MOIA北美扩张战略的正式落地，也是欧系OEM在北美Robotaxi市场为数不多的直接行动。 - <b>原始发布日期</b>：2026-05-01</p>",
+        "source_name": "InsideEVs",
+        "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVnBCOFFaRFlDdFFJakpKYTA5Q0ZhUExWa25faUxINEdVYnZJaldGcVdDQXRoR3ozWmMyLW44U1RNZHVHUzBUQjZ3U3ZUOU9fNmpXYlpwQnFzejV2cFBFeHFNMUdLblM1NjlEbUhGUzZDUzRNaUdia21DcGwzY3ZjMHlwLXltV2VqZVE"
+      },
+      {
+        "id": "2026-05-01-005",
+        "company": "Nuro",
+        "company_slug": "nuro",
+        "title": "2026-04-30,在东京街头测试自动驾驶技术，拓展日本市场",
+        "rating": 2,
+        "event_date": "2026-04-30",
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1 / 自动驾驶技术公司",
+        "summary_html": "<p><b>4月30日</b>，Nuro宣布其自动驾驶车辆已在<b>东京</b>街道开展测试，成为美国L4公司进入日本市场的最新案例。Nuro此前以小型配送机器人为主业，本次东京测试拓展了其技术应用场景，也与其在Uber Hertz合作中扮演技术供应商角色形成呼应。日本市场对自动驾驶的监管相对严格，Nuro此次测试得到了东京当局许可。 - <b>原始发布日期</b>：2026-04-30</p>",
+        "source_name": "MSN",
+        "source_url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxNQjJmUDB5NTZOTzl2MV9Tdlo4MkpPSDFTUWcxbFFhU2VJOWZ4aGNpYzFBQW5GbEhmOGEwZjRYRktTN2FZVnA2NkFwQngzSGFiSUlRZXNhUWdsSUQ2LXUtcndvb2o3Z0JVUDFvQXBDOXBvTFpOSDU4ZzBIRjJhb0llaGt0NjFMdnBHVlItVUpSZ3dSeURlcWI0RF9zNlBjQUF4ME1kc085VHdINERNQjhjNG1aYnVyV2Y1NkYtdlg3c1F2Z2IxdldSRDlZSmpQOVJGb2ZWR3pPMlZvX19zZllWY1R6R1VOREg2SFA2VTVJMVZaUldxcGFzSzNDRjM0emNOd3NEX05IQVh0Rlpldm51Sk5nTVQ5MXdxQTJQQ2U4elRVUXd1V2cxTEgzR0FtWjRpX2hlaGlDWl9CUHA0TzdTbERZaXNHUHVnS2hJTUZuX3YwS1o4SlliVUVPZE55czlxbVowbHV3"
+      },
+      {
+        "id": "2026-05-01-006",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "title": "2026-04-30,广深Robotaxi车队先后实现单车UE盈利",
+        "rating": 3,
+        "event_date": "2026-04-30",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "summary_html": "<p><b>4月30日</b>，小马智行公开披露：其在<b>广州</b>和<b>深圳</b>运营的Robotaxi车队已先后实现<b>单车单位经济效益（UE）盈利</b>，即单辆车的运营收入已能覆盖该车全部直接运营成本（不含研发及折旧摊销）。这是小马智行首次就广深两城的盈利状态做出明确公开表态，也是国内L4 Robotaxi公司进入商业化可持续阶段的重要信号。小马智行CEO彭军同日在北京车展媒体访谈中强调，自动驾驶的核心竞争力在于\"系统能力的整体竞争\"而非单点技术突破。 - <b>原始发布日期</b>：2026-04-30</p>",
+        "source_name": "车家号",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1DZG5DcXd0WTZfTlI2OTUxTFVHQ2xQTUw5QWpydjZvUEVHamd3N2wwUUdSTXh4ajVucWZvSWYzQ2hDMEI0QXN0Ty1CRUEzNDRNb0dNTjBWTmp5bVk"
+      },
+      {
+        "id": "2026-05-01-007",
+        "company": "文远知行",
+        "company_slug": "wenyuan",
+        "title": "2026-05-01,迪拜首批纯无人Robotaxi正式上路；携手联想宣布20万辆扩张目标",
+        "rating": 3,
+        "event_date": "2026-05-01",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "summary_html": "<p>- <b>原始发布日期</b>：2026-05-01 - 权威源（a）: [Tiger Brokers 2026-05-01](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qcnhzUnhMbDRMRGxUc1lvMmlXeWtvNHRjUFFYZGFEbmJpTlE1UEF2cjY1bXlCX3dtdVhNbVIzUHpQS01DYnozSDlYb3UzSmc) - 权威源（b）: [Electric Cars Report 2026-05-01](https://news.google.com/rss/articles/CBMiogFBVV95cUxQMzl0YlY4Nk84bERwMlBXNkNlbWVOWVFiUVpYS293dDdpWmtZQmNoX0t6RjdDdjFPRGhja25HdEt2dEkwbVhMRVJrRFB0Z01lSTdaV0dnYWg1eWhMMFBJZXNsRldFNlQzZTJKc0dkbnB5UGxKVkhoTmFUUU1KSzl6dUdsYXBROHBSaEFHNkU3OU91blk1RzRodUU3dlp3QmNBM0E)</p>",
+        "source_name": "",
+        "source_url": ""
+      },
+      {
+        "id": "2026-05-01-008",
+        "company": "曹操出行",
+        "company_slug": "caocao",
+        "title": "2026-05-01,深度解析\"原生Robotaxi\"路径：从改装方案转向底层重构",
+        "rating": 2,
+        "event_date": "2026-05-01",
+        "group": "国内",
+        "sub_group": "国内出行平台",
+        "summary_html": "<p><b>5月1日</b>，曹操出行发布长文阐述其Robotaxi战略转型逻辑：从早期基于传统网约车底盘\"改装加装自动驾驶组件\"的方案，转向针对Robotaxi场景从底层重新设计车辆架构的\"原生物种\"路径。文章披露曹操将与整车厂协同开发Robotaxi专属平台，涵盖冗余制动、无人化舱室设计及低成本传感器配置，目标将<b>单车成本</b>控制在有竞争力的区间。这是2026年来国内出行平台中对Robotaxi底层策略阐述最系统的一篇，折射出曹操有别于百度/小马重技术自研路线的差异化打法。 - <b>原始发布日期</b>：2026-05-01</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxOb3c5QUNSSWZ5UkdLVF81a2lxRnAwR0tyemdyYWczcEVoUGh0S0lMVUlMMXBtY0lIOWFvVl9tMUlzUVpsci1VdEJJVmZvZDZEZUhBUWoyWVZaV05oVDlkeS0zc1lmSlc1dGptUE1GekVXd2pTZWtmMk5ob2RXZHRab2RZU2FEOTNmQi1NZUVBcFpHOVpfUFp3NEd5NXVza043dWp2bHhpbkJPeEc5VWFMN2p3VGg1d2tOZnpFdVdDMlNiUVVoT3BOVDhPNEkzUWZKOGFnM3VWdlBaXzNSWm1SdW1iVHZ0dm9PaG9XdVJ6dmpQbnE1LXBNNFNGQl8zc1pOb2FDc29ydThsMF8wd0RBV3dvQ2ZNOFlMZ1h0LWpwSnl5c2tEQjdtRjV5TTN5TjJHTE42WkJaOGMwLVVyTE5aSGFDTXg1QQ"
+      },
+      {
+        "id": "2026-05-01-009",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "title": "2026-04-30,GX量产Robotaxi北京车展亮相；发布第二代VLA自动驾驶报告",
+        "rating": 2,
+        "event_date": "2026-04-30",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "summary_html": "<p><b>4月30日</b>，小鹏在<b>北京车展</b>发布<b>GX</b>车型，定位为中国首款基于全栈自研技术的<b>量产Robotaxi</b>，同步发布<b>第二代VLA（Vision-Language-Action）</b>自动驾驶技术报告，重点突出其在城市复杂场景中的端到端泛化能力。同日数据显示，小鹏旗舰版本Ultra订单环比提升<b>118%</b>，显示高阶智驾对购车决策的拉动效应明显。小鹏GX的量产计划和发布价格尚未披露，但此次亮相标志着小鹏正式宣布进入L4 Robotaxi整车市场。 - <b>原始发布日期</b>：2026-04-30</p>",
+        "source_name": "车家号",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4xN0R0aTNZNmUyLTN2V2pKbExWUWVGMXV0ZU5yMmVBM2hUX2h2VUJRbXlBd3VmTmdJa0VOZjEzOG9aWVhBYl9xQVJsYl8yNWtHaktfNEZwUXBFLUk"
+      },
+      {
+        "id": "2026-05-01-010",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "title": "2026-04-30,冲刺千亿IPO；同日宣布Hyundai IONIQ、MG、奥迪E7X三大车厂合作",
+        "rating": 2,
+        "event_date": "2026-04-30",
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "summary_html": "<p><b>4月30日</b>，多篇报道披露<b>Momenta</b>正冲刺<b>千亿元人民币</b>估值IPO，目前处于上市前的关键融资阶段，中间状态报告显示其在智驾供应商竞争中继续保持头部地位。同日，北京车展上公开了Momenta与三大主机厂的合作：<b>现代IONIQ</b>品牌宣布引入Momenta智驾方案，覆盖中国市场旗舰车型；<b>MG（上汽）</b>牵手Momenta，推动中国智驾技术走向欧洲市场；<b>奥迪E7X</b>发布全球首秀，搭载Momenta <b>L3级自动驾驶</b>方案。三大合作同日曝光显示Momenta在全球化布局上进入加速期。 - <b>原始发布日期</b>：2026-04-30</p>",
+        "source_name": "车家号（IPO）2026-04-30",
+        "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBGc0FXRUEwdVhOWjVOeVN6VzRJOFd0cHJkTnpkeHI1RVo5dGdIaFp4Z1hQbGtjNHVpbkgzYmRrRC1tTGZiY3VwNDNndFd5MVlvZTJLbnh2MEd6MmpxZ2c"
+      },
+      {
+        "id": "2026-05-01-011",
+        "company": "L3准入",
+        "company_slug": "policy",
+        "title": "2026-04-30,中国首批L3智驾准入名单公布，赛力斯、长安入选",
+        "rating": 2,
+        "event_date": "2026-04-30",
+        "group": "国内",
+        "sub_group": "政策 / 行业动向",
+        "summary_html": "<p><b>4月30日</b>，中国首批<b>L3级自动驾驶准入名单</b>正式公布，<b>赛力斯（问界）</b>和<b>长安汽车</b>入选，获准在特定条件下向消费者交付具备L3功能的量产车型。这是中国监管部门将L3从测试许可推进至量产准入的关键一步，也是国内OEM在L3商业化进程中首次获得政府正式背书。距离消费者实际体验L3还需满足特定场景（如高速公路）和责任归属条款落地等前提条件。 - <b>原始发布日期</b>：2026-04-30</p>",
+        "source_name": "车家号",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9xN2RBdTB0VzB1a3FNa0djQndYRktQOVlWeFZGNS1zQzdObHk4QnhzQ1dXOWRicFZ4VUJJUEpiM3k2Wk4yQzNUc1pVSkNhS1hyTjdINjJBLWpOblE"
+      }
+    ]
+  },
+  {
     "date": "2026-04-30",
     "items": [
       {
