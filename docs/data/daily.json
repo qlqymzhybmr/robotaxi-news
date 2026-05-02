@@ -185,9 +185,9 @@
         "event_date": "2026-05-01",
         "group": "国内",
         "sub_group": "国内 L4",
-        "summary_html": "<p>- <b>原始发布日期</b>：2026-05-01 - 权威源（a）: [Tiger Brokers 2026-05-01](https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qcnhzUnhMbDRMRGxUc1lvMmlXeWtvNHRjUFFYZGFEbmJpTlE1UEF2cjY1bXlCX3dtdVhNbVIzUHpQS01DYnozSDlYb3UzSmc) - 权威源（b）: [Electric Cars Report 2026-05-01](https://news.google.com/rss/articles/CBMiogFBVV95cUxQMzl0YlY4Nk84bERwMlBXNkNlbWVOWVFiUVpYS293dDdpWmtZQmNoX0t6RjdDdjFPRGhja25HdEt2dEkwbVhMRVJrRFB0Z01lSTdaV0dnYWg1eWhMMFBJZXNsRldFNlQzZTJKc0dkbnB5UGxKVkhoTmFUUU1KSzl6dUdsYXBROHBSaEFHNkU3OU91blk1RzRodUU3dlp3QmNBM0E)</p>",
-        "source_name": "",
-        "source_url": ""
+        "summary_html": "<p><b>5月1日</b>，文远知行在<b>迪拜</b>启动全球首批完全无人驾驶（无安全员）商业Robotaxi服务，与<b>Uber</b>合作通过Uber App提供叫车服务，进一步深化此前阿布扎比的无人化运营布局，将中东版图从阿联酋内陆扩至迪拜核心商业区。这是继萝卜快跑武汉后，中国L4企业在中东的最大规模无人化落地。</p><p><b>5月1日</b>，文远知行与<b>联想集团</b>宣布战略合作，双方目标是在全球部署<b>20万辆</b>Robotaxi，联想将提供边缘计算、算力基础设施及企业服务能力，文远知行负责L4系统与运营，这是国内L4企业迄今公开的最大规模商业化目标之一。</p>",
+        "source_name": "Tiger Brokers",
+        "source_url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qcnhzUnhMbDRMRGxUc1lvMmlXeWtvNHRjUFFYZGFEbmJpTlE1UEF2cjY1bXlCX3dtdVhNbVIzUHpQS01DYnozSDlYb3UzSmc"
       },
       {
         "id": "2026-05-01-008",
