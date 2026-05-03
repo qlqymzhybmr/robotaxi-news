@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
@@ -14,114 +14,74 @@
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 min-h-screen">
-
-<!-- Top Navigation -->
 <header class="bg-white border-b border-gray-200 sticky top-0 z-20">
   <div class="max-w-4xl mx-auto px-4">
     <div class="flex items-center justify-between py-3">
       <h1 class="text-lg font-bold text-gray-900 tracking-tight">Robotaxi News</h1>
       <nav class="flex gap-1">
-        <button id="tab-daily"
-          class="tab-btn px-4 py-1.5 rounded-full text-sm font-medium transition-colors"
-          onclick="switchTab('daily')">
-          每日精选
-        </button>
-        <button id="tab-weekly"
-          class="tab-btn px-4 py-1.5 rounded-full text-sm font-medium transition-colors"
-          onclick="switchTab('weekly')">
-          周报
-        </button>
+        <button id="tab-daily" class="px-4 py-1.5 rounded-full text-sm font-medium transition-colors" onclick="switchTab('daily')">每日精选</button>
+        <button id="tab-weekly" class="px-4 py-1.5 rounded-full text-sm font-medium transition-colors" onclick="switchTab('weekly')">周报</button>
       </nav>
     </div>
 
-    <!-- Filters: daily tab only -->
-    <div id="daily-filters" class="pb-3 flex flex-wrap gap-2 items-center">
-      <select id="filter-date"
-        class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
-        onchange="applyFilters()">
+    <div id="daily-filters" class="pb-2 flex flex-wrap gap-2 items-center">
+      <select id="filter-date" class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" onchange="applyFilters()">
         <option value="">全部日期</option>
       </select>
-
       <div class="relative" id="company-dropdown-wrapper">
-        <button id="company-dropdown-btn"
-          class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center gap-1"
-          onclick="toggleCompanyDropdown()">
+        <button id="company-dropdown-btn" class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center gap-1" onclick="toggleCompanyDropdown()">
           <span id="company-btn-label">全部公司</span>
-          <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-          </svg>
+          <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
-        <div id="company-dropdown"
-          class="hidden absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-30 min-w-40 max-h-56 overflow-y-auto p-1">
-        </div>
+        <div id="company-dropdown" class="hidden absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-30 min-w-40 max-h-56 overflow-y-auto p-1"></div>
       </div>
-
-      <select id="filter-group"
-        class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
-        onchange="applyFilters()">
+      <select id="filter-group" class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" onchange="applyFilters()">
         <option value="">全部地区</option>
         <option value="国内">国内</option>
-        <option value="国外">国外</option>
+        <option value="海外">海外</option>
       </select>
-
-      <button id="clear-filters-btn"
-        class="hidden text-sm text-blue-500 hover:text-blue-700 px-1"
-        onclick="clearFilters()">
-        清除筛选
-      </button>
+      <button id="clear-filters-btn" class="hidden text-sm text-blue-500 hover:text-blue-700 px-1" onclick="clearFilters()">清除筛选</button>
     </div>
+    <div id="daily-active-filters" class="hidden pb-3 flex flex-wrap gap-2"></div>
 
-    <!-- Week selector: weekly tab only -->
     <div id="weekly-filters" class="hidden pb-3">
-      <select id="filter-week"
-        class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
-        onchange="renderWeekly()">
-        <option value="">选择周次</option>
-      </select>
+      <div class="flex flex-wrap items-center gap-2">
+        <select id="filter-week" class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" onchange="renderWeekly()">
+          <option value="">选择周次</option>
+        </select>
+        <div class="inline-flex rounded-lg border border-gray-200 bg-white p-0.5">
+          <button id="view-classic" class="px-3 py-1 text-xs rounded-md transition-colors" onclick="setWeeklyView('classic')">经典样式</button>
+          <button id="view-report" class="px-3 py-1 text-xs rounded-md transition-colors" onclick="setWeeklyView('report')">报告样式</button>
+        </div>
+      </div>
+      <div id="weekly-active-filters" class="hidden mt-2 flex flex-wrap gap-2"></div>
     </div>
   </div>
 </header>
 
-<!-- Main Content -->
 <main class="max-w-4xl mx-auto px-4 py-6">
-  <!-- Daily tab -->
   <div id="daily-content"></div>
-  <!-- Weekly tab -->
   <div id="weekly-content" class="hidden"></div>
 </main>
 
 <script>
-// ─── State ───────────────────────────────────────────────────────────────────
 let dailyData = [];
 let weeklyData = [];
 let selectedCompanies = new Set();
 let currentTab = 'daily';
+let weeklyView = 'classic';
 
-// ─── Init ─────────────────────────────────────────────────────────────────────
 async function init() {
-  const hash = location.hash;
-  if (hash.startsWith('#weekly')) {
-    currentTab = 'weekly';
-  }
-
-  const [d, w] = await Promise.all([
-    fetchJSON('data/daily.json'),
-    fetchJSON('data/weekly.json'),
-  ]);
+  if (location.hash.startsWith('#weekly')) currentTab = 'weekly';
+  const [d, w] = await Promise.all([fetchJSON('data/daily.json'), fetchJSON('data/weekly.json')]);
   dailyData = d;
   weeklyData = w;
-
   buildDateFilter();
   buildCompanyFilter();
   buildWeekFilter();
   applyTabUI();
-
-  // restore URL state
-  if (currentTab === 'daily') {
-    restoreDailyHash();
-  } else {
-    restoreWeeklyHash();
-  }
+  if (currentTab === 'daily') restoreDailyHash();
+  else restoreWeeklyHash();
 }
 
 async function fetchJSON(path) {
@@ -134,40 +94,29 @@ async function fetchJSON(path) {
   }
 }
 
-// ─── Tab switching ────────────────────────────────────────────────────────────
 function switchTab(tab) {
   currentTab = tab;
   applyTabUI();
-  if (tab === 'daily') {
-    applyFilters();
-  } else {
-    renderWeekly();
-  }
+  if (tab === 'daily') applyFilters();
+  else renderWeekly();
 }
 
 function applyTabUI() {
   const isDaily = currentTab === 'daily';
   document.getElementById('daily-filters').classList.toggle('hidden', !isDaily);
-  document.getElementById('weekly-filters').classList.toggle('hidden', isDaily);
   document.getElementById('daily-content').classList.toggle('hidden', !isDaily);
+  document.getElementById('weekly-filters').classList.toggle('hidden', isDaily);
   document.getElementById('weekly-content').classList.toggle('hidden', isDaily);
-
-  document.getElementById('tab-daily').className =
-    'tab-btn px-4 py-1.5 rounded-full text-sm font-medium transition-colors ' +
-    (isDaily ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
-  document.getElementById('tab-weekly').className =
-    'tab-btn px-4 py-1.5 rounded-full text-sm font-medium transition-colors ' +
-    (!isDaily ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
-
-  if (isDaily) applyFilters();
-  else renderWeekly();
+  document.getElementById('daily-active-filters').classList.toggle('hidden', !isDaily || document.getElementById('daily-active-filters').childElementCount === 0);
+  document.getElementById('tab-daily').className = 'px-4 py-1.5 rounded-full text-sm font-medium transition-colors ' + (isDaily ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
+  document.getElementById('tab-weekly').className = 'px-4 py-1.5 rounded-full text-sm font-medium transition-colors ' + (!isDaily ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
+  if (!isDaily) updateWeeklyViewUI();
 }
 
-// ─── Daily: build filters ─────────────────────────────────────────────────────
 function buildDateFilter() {
   const sel = document.getElementById('filter-date');
-  const dates = dailyData.map(d => d.date).sort((a, b) => b.localeCompare(a));
-  dates.forEach(date => {
+  const dates = dailyData.map((d) => d.date).sort((a, b) => b.localeCompare(a));
+  dates.forEach((date) => {
     const opt = document.createElement('option');
     opt.value = date;
     opt.textContent = formatDate(date);
@@ -177,29 +126,24 @@ function buildDateFilter() {
 
 function buildCompanyFilter() {
   const companies = new Set();
-  dailyData.forEach(day => day.items && day.items.forEach(item => {
-    const normalized = normalizeCompanyName(item.company);
-    if (normalized) companies.add(normalized);
+  dailyData.forEach((day) => (day.items || []).forEach((item) => {
+    const c = normalizeCompanyName(item.company);
+    if (c) companies.add(c);
   }));
-  const sorted = [...companies].sort((a, b) => a.localeCompare(b, 'zh'));
-
   const dropdown = document.getElementById('company-dropdown');
   dropdown.innerHTML = '';
-
-  // "全部" option
   const allItem = document.createElement('label');
   allItem.className = 'flex items-center gap-2 px-2 py-1.5 rounded hover:bg-gray-50 cursor-pointer text-sm';
-  allItem.innerHTML = `<input type="checkbox" id="co-all" class="rounded" onchange="toggleAllCompanies(this)"> 全部公司`;
+  allItem.innerHTML = '<input type="checkbox" id="co-all" class="rounded" onchange="toggleAllCompanies(this)"> All companies';
   dropdown.appendChild(allItem);
-
-  sorted.forEach(company => {
+  [...companies].sort((a, b) => a.localeCompare(b, 'zh')).forEach((company) => {
     const label = document.createElement('label');
     label.className = 'flex items-center gap-2 px-2 py-1.5 rounded hover:bg-gray-50 cursor-pointer text-sm';
     const cb = document.createElement('input');
     cb.type = 'checkbox';
     cb.value = company;
     cb.className = 'company-cb rounded';
-    cb.onchange = () => { onCompanyChange(); };
+    cb.onchange = onCompanyChange;
     label.appendChild(cb);
     label.appendChild(document.createTextNode(company));
     dropdown.appendChild(label);
@@ -208,8 +152,8 @@ function buildCompanyFilter() {
 
 function buildWeekFilter() {
   const sel = document.getElementById('filter-week');
-  const weeks = weeklyData.map(w => ({ id: w.week_id, label: w.title || w.week_id }));
-  weeks.forEach(w => {
+  const weeks = weeklyData.map((w) => ({ id: w.week_id, label: w.title || w.week_id }));
+  weeks.forEach((w) => {
     const opt = document.createElement('option');
     opt.value = w.id;
     opt.textContent = w.label;
@@ -218,34 +162,28 @@ function buildWeekFilter() {
   if (weeks.length > 0) sel.value = weeks[0].id;
 }
 
-// ─── Company dropdown logic ────────────────────────────────────────────────────
 function toggleCompanyDropdown() {
-  const dd = document.getElementById('company-dropdown');
-  dd.classList.toggle('hidden');
+  document.getElementById('company-dropdown').classList.toggle('hidden');
 }
 
 document.addEventListener('click', (e) => {
   const wrapper = document.getElementById('company-dropdown-wrapper');
-  if (wrapper && !wrapper.contains(e.target)) {
-    document.getElementById('company-dropdown').classList.add('hidden');
-  }
+  if (wrapper && !wrapper.contains(e.target)) document.getElementById('company-dropdown').classList.add('hidden');
 });
 
 function toggleAllCompanies(allCb) {
   const cbs = document.querySelectorAll('.company-cb');
-  cbs.forEach(cb => { cb.checked = allCb.checked; });
-  selectedCompanies = allCb.checked ? new Set([...cbs].map(cb => cb.value)) : new Set();
+  cbs.forEach((cb) => { cb.checked = allCb.checked; });
+  selectedCompanies = allCb.checked ? new Set([...cbs].map((cb) => cb.value)) : new Set();
   updateCompanyBtnLabel();
   applyFilters();
 }
 
 function onCompanyChange() {
-  selectedCompanies = new Set(
-    [...document.querySelectorAll('.company-cb:checked')].map(cb => cb.value)
-  );
+  selectedCompanies = new Set([...document.querySelectorAll('.company-cb:checked')].map((cb) => cb.value));
   const allCb = document.getElementById('co-all');
   const total = document.querySelectorAll('.company-cb').length;
-  allCb.checked = selectedCompanies.size === total;
+  if (allCb) allCb.checked = selectedCompanies.size > 0 && selectedCompanies.size === total;
   updateCompanyBtnLabel();
   applyFilters();
 }
@@ -253,19 +191,18 @@ function onCompanyChange() {
 function updateCompanyBtnLabel() {
   const label = document.getElementById('company-btn-label');
   if (selectedCompanies.size === 0) {
-    label.textContent = '全部公司';
+    label.textContent = 'All companies';
   } else {
-    label.textContent = `${selectedCompanies.size} 家公司`;
+    label.textContent = String(selectedCompanies.size) + ' selected';
   }
 }
 
-// ─── Daily: apply filters & render ───────────────────────────────────────────
 function applyFilters() {
   const dateVal = document.getElementById('filter-date').value;
   const groupVal = document.getElementById('filter-group').value;
   const hasFilters = dateVal || groupVal || selectedCompanies.size > 0;
-
   document.getElementById('clear-filters-btn').classList.toggle('hidden', !hasFilters);
+  updateDailyFilterChips(dateVal, groupVal);
   updateHash();
   renderDaily(dateVal, groupVal);
 }
@@ -274,186 +211,193 @@ function clearFilters() {
   document.getElementById('filter-date').value = '';
   document.getElementById('filter-group').value = '';
   selectedCompanies = new Set();
-  document.querySelectorAll('.company-cb').forEach(cb => cb.checked = false);
+  document.querySelectorAll('.company-cb').forEach((cb) => { cb.checked = false; });
   const allCb = document.getElementById('co-all');
   if (allCb) allCb.checked = false;
   updateCompanyBtnLabel();
+  applyFilters();
+}
+
+function updateDailyFilterChips(dateVal, groupVal) {
+  const wrap = document.getElementById('daily-active-filters');
+  const chips = [];
+  if (dateVal) chips.push({ key: 'date', label: formatDate(dateVal) });
+  if (groupVal) chips.push({ key: 'group', label: groupVal });
+  [...selectedCompanies].forEach((company) => chips.push({ key: `company:${company}`, label: company }));
+  wrap.classList.toggle('hidden', chips.length === 0);
+  wrap.innerHTML = chips.map((chip) => `<button class="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors" onclick="removeDailyChip('${escAttr(chip.key)}')">${escHtml(chip.label)} x</button>`).join('');
+}
+
+function removeDailyChip(key) {
+  if (key === 'date') document.getElementById('filter-date').value = '';
+  if (key === 'group') document.getElementById('filter-group').value = '';
+  if (key.startsWith('company:')) {
+    selectedCompanies.delete(key.slice('company:'.length));
+    document.querySelectorAll('.company-cb').forEach((cb) => { cb.checked = selectedCompanies.has(cb.value); });
+    const allCb = document.getElementById('co-all');
+    const total = document.querySelectorAll('.company-cb').length;
+    if (allCb) allCb.checked = selectedCompanies.size > 0 && selectedCompanies.size === total;
+    updateCompanyBtnLabel();
+  }
   applyFilters();
 }
 
 function renderDaily(dateFilter, groupFilter) {
   const container = document.getElementById('daily-content');
-
   if (!dailyData || dailyData.length === 0) {
-    container.innerHTML = emptyState('暂无每日精选数据');
+    container.innerHTML = emptyState('No daily data');
     return;
   }
-
   let days = [...dailyData].sort((a, b) => b.date.localeCompare(a.date));
-  if (dateFilter) days = days.filter(d => d.date === dateFilter);
-
+  if (dateFilter) days = days.filter((d) => d.date === dateFilter);
   let totalShown = 0;
-  const html = days.map(day => {
+  const sectionsHtml = days.map((day) => {
     let items = [...(day.items || [])];
-
-    if (groupFilter) items = items.filter(i => i.group === groupFilter);
-    if (selectedCompanies.size > 0) {
-      items = items.filter(i => selectedCompanies.has(normalizeCompanyName(i.company)));
-    }
-
+    if (groupFilter) items = items.filter((i) => i.group === groupFilter);
+    if (selectedCompanies.size > 0) items = items.filter((i) => selectedCompanies.has(normalizeCompanyName(i.company)));
     if (items.length === 0) return '';
-
-    // sort: rating desc, then group (国内 before 国外)
     items.sort((a, b) => {
-      if (b.rating !== a.rating) return b.rating - a.rating;
+      if ((b.rating || 0) !== (a.rating || 0)) return (b.rating || 0) - (a.rating || 0);
       const ga = a.group === '国内' ? 0 : 1;
       const gb = b.group === '国内' ? 0 : 1;
       return ga - gb;
     });
-
     totalShown += items.length;
-
-    return `
-      <section class="mb-8">
-        <h2 class="text-base font-semibold text-gray-500 mb-3 flex items-center gap-2">
-          <span>${formatDate(day.date)}</span>
-          <span class="text-xs font-normal text-gray-400">${items.length} 条</span>
-        </h2>
-        <div class="space-y-3">
-          ${items.map(item => renderCard(item)).join('')}
-        </div>
-      </section>`;
+    return `<section class="mb-8"><h2 class="text-base font-semibold text-gray-700 mb-3 flex items-center gap-2"><span>${formatDate(day.date)}</span><span class="text-xs font-normal text-gray-400">${items.length} items</span></h2><div class="space-y-3">${items.map((item) => renderCard(item)).join('')}</div></section>`;
   }).join('');
-
   if (totalShown === 0) {
-    container.innerHTML = emptyState('没有匹配的新闻,试试调整 filter');
-  } else {
-    container.innerHTML = html;
+    container.innerHTML = emptyState('No results');
+    return;
   }
+  container.innerHTML = `<section class="mb-6 bg-white border border-gray-100 rounded-xl p-4"><div class="flex items-center justify-between gap-3"><div class="text-sm text-gray-500">Results</div><div class="text-sm text-gray-700">Total <span class="font-semibold text-gray-900">${totalShown}</span></div></div></section>${sectionsHtml}`;
 }
 
 function renderCard(item) {
-  const stars = '⭐'.repeat(item.rating);
-  const ratingClass = item.rating >= 3
-    ? 'bg-orange-100 text-orange-700'
-    : 'bg-yellow-50 text-yellow-700';
-
-  return `
-    <article class="card bg-white rounded-xl border border-gray-100 p-4">
-      <h3 class="text-base font-semibold text-gray-900 mb-2" style="font-size:17px;">${escHtml(item.company)}：${escHtml(item.title)}</h3>
-      <div class="flex flex-wrap gap-1.5 mb-3">
-        <span class="px-2 py-0.5 rounded-full text-xs bg-blue-50 text-blue-700 font-medium">${escHtml(item.sub_group)}</span>
-        <button
-          class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600 font-medium hover:bg-gray-200 transition-colors"
-          onclick="filterByCompany('${escAttr(item.company)}')"
-          title="筛选此公司">${escHtml(item.company)}</button>
-        <span class="px-2 py-0.5 rounded-full text-xs font-medium ${ratingClass}">${stars}</span>
-      </div>
-      <div class="summary-html text-sm text-gray-700 leading-relaxed mb-3" style="font-size:15px;">
-        ${item.summary_html || ''}
-      </div>
-      <div class="flex items-center justify-between border-t border-gray-50 pt-2.5">
-        <a href="${escAttr(item.source_url || '#')}" target="_blank" rel="noopener noreferrer"
-          class="text-xs text-gray-400 hover:text-blue-500 transition-colors">
-          📎 ${escHtml(item.source_name || '')} · ${formatDateShort(item.date)} ↗
-        </a>
-      </div>
-    </article>`;
+  const stars = '*'.repeat(Math.max(0, Number(item.rating || 0)));
+  const ratingClass = (item.rating || 0) >= 3 ? 'bg-orange-100 text-orange-700' : 'bg-yellow-50 text-yellow-700';
+  return `<article class="card bg-white rounded-xl border border-gray-100 p-4"><div class="flex flex-wrap gap-1.5 mb-3"><span class="px-2 py-0.5 rounded-full text-xs bg-blue-50 text-blue-700 font-medium">${escHtml(item.sub_group || '')}</span><button class="px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-600 font-medium hover:bg-gray-200 transition-colors" onclick="filterByCompany('${escAttr(item.company || '')}')" title="filter company">${escHtml(item.company || '')}</button><span class="px-2 py-0.5 rounded-full text-xs font-medium ${ratingClass}">${stars}</span></div><h3 class="text-gray-900 mb-2 leading-snug font-semibold" style="font-size:18px;">${escHtml(item.company || '')}: ${escHtml(item.title || '')}</h3><div class="summary-html text-sm text-gray-700 leading-relaxed mb-3" style="font-size:15px;">${item.summary_html || ''}</div><div class="flex items-center justify-between border-t border-gray-50 pt-2.5"><a href="${escAttr(item.source_url || '#')}" target="_blank" rel="noopener noreferrer" class="text-xs text-gray-400 hover:text-blue-500 transition-colors">${escHtml(item.source_name || '')} · ${formatDateShort(item.date)} -></a></div></article>`;
 }
 
 function filterByCompany(company) {
   const normalized = normalizeCompanyName(company);
   selectedCompanies = normalized ? new Set([normalized]) : new Set();
-  const cbs = document.querySelectorAll('.company-cb');
-  cbs.forEach(cb => { cb.checked = cb.value === normalized; });
+  document.querySelectorAll('.company-cb').forEach((cb) => { cb.checked = cb.value === normalized; });
   const allCb = document.getElementById('co-all');
   if (allCb) allCb.checked = false;
   updateCompanyBtnLabel();
   applyFilters();
 }
 
-// ─── Weekly: render ───────────────────────────────────────────────────────────
-function renderWeekly() {
-  const container = document.getElementById('weekly-content');
-  updateHash();
-
-  if (!weeklyData || weeklyData.length === 0) {
-    container.innerHTML = emptyState('暂无周报');
-    return;
-  }
-
-  const weekId = document.getElementById('filter-week').value;
-  const week = weeklyData.find(w => w.week_id === weekId) || weeklyData[0];
-
-  if (!week) {
-    container.innerHTML = emptyState('暂无周报');
-    return;
-  }
-
-  const generatedAt = week.generated_at
-    ? `<p class="text-sm text-gray-400 mb-6">生成时间:${week.generated_at.replace('T', ' ').replace('+08:00', ' (北京时间)')}</p>`
-    : '';
-
-  const sectionsHtml = (week.sections || []).map(section => {
-    const entriesHtml = (section.entries || []).map(entry => {
-      const subItemsHtml = (entry.sub_items || []).map(si => `
-        <div class="ml-5 mt-2 text-sm text-gray-700 leading-relaxed flex">
-          <span class="mr-2 text-gray-400">•</span>
-          <span>${si.content_html || ''}</span>
-        </div>`).join('');
-
-      return `
-        <div class="mb-5">
-          <div class="text-sm font-semibold text-gray-800 leading-relaxed">${entry.headline_html || ''}</div>
-          ${subItemsHtml}
-        </div>`;
-    }).join('');
-
-    return `
-      <div class="mb-8">
-        <h2 class="text-base font-bold text-gray-800 mb-4 pb-2 border-b border-gray-100">${escHtml(section.name)}</h2>
-        ${entriesHtml}
-      </div>`;
-  }).join('');
-
-  container.innerHTML = `
-    <div class="bg-white rounded-xl border border-gray-100 p-6">
-      <h1 class="text-xl font-bold text-gray-900 mb-2">${escHtml(week.title || week.week_id)}</h1>
-      ${generatedAt}
-      ${sectionsHtml}
-    </div>`;
+function setWeeklyView(view) {
+  weeklyView = view === 'report' ? 'report' : 'classic';
+  updateWeeklyViewUI();
+  renderWeekly();
 }
 
-// ─── URL hash state ───────────────────────────────────────────────────────────
+function updateWeeklyViewUI() {
+  const classicBtn = document.getElementById('view-classic');
+  const reportBtn = document.getElementById('view-report');
+  classicBtn.className = 'px-3 py-1 text-xs rounded-md transition-colors ' + (weeklyView === 'classic' ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
+  reportBtn.className = 'px-3 py-1 text-xs rounded-md transition-colors ' + (weeklyView === 'report' ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
+}
+
+function updateWeeklyFilterChips() {
+  const wrap = document.getElementById('weekly-active-filters');
+  const weekSel = document.getElementById('filter-week');
+  const week = weeklyData.find((w) => w.week_id === weekSel.value) || weeklyData[0];
+  const chips = [];
+  if (week) chips.push({ key: 'week', label: `Week: ${week.title || week.week_id}` });
+  chips.push({ key: 'view', label: weeklyView === 'report' ? 'View: Report' : 'View: Classic' });
+  wrap.classList.toggle('hidden', chips.length === 0);
+  wrap.innerHTML = chips.map((chip) => `<button class="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors" onclick="removeWeeklyChip('${chip.key}')">${escHtml(chip.label)} x</button>`).join('');
+}
+
+function removeWeeklyChip(key) {
+  if (key === 'view') {
+    weeklyView = 'classic';
+    updateWeeklyViewUI();
+    renderWeekly();
+    return;
+  }
+  if (key === 'week') {
+    if (weeklyData.length > 0) document.getElementById('filter-week').value = weeklyData[0].week_id;
+    renderWeekly();
+  }
+}
+
+function renderWeekly() {
+  if (weeklyView === 'report') return renderWeeklyReportView();
+  return renderWeeklyClassicView();
+}
+
+function renderWeeklyClassicView() {
+  const container = document.getElementById('weekly-content');
+  updateHash();
+  updateWeeklyFilterChips();
+  const week = weeklyData.find((w) => w.week_id === document.getElementById('filter-week').value) || weeklyData[0];
+  if (!week) return (container.innerHTML = emptyState('No weekly report'));
+  const generatedAt = week.generated_at ? `<p class="text-sm text-gray-400 mb-6">Generated: ${escHtml(week.generated_at.replace('T', ' ').replace('+08:00', ' +08:00'))}</p>` : '';
+  const sectionsHtml = (week.sections || []).map((section) => {
+    const entriesHtml = (section.entries || []).map((entry) => {
+      const subItemsHtml = (entry.sub_items || []).map((si) => `<div class="ml-5 mt-2 text-sm text-gray-700 leading-relaxed flex"><span class="mr-2 text-gray-400">•</span><span>${si.content_html || ''}</span></div>`).join('');
+      return `<div class="mb-5"><div class="text-sm font-semibold text-gray-800 leading-relaxed">${entry.headline_html || ''}</div>${subItemsHtml}</div>`;
+    }).join('');
+    return `<div class="mb-8"><h2 class="text-base font-bold text-gray-800 mb-4 pb-2 border-b border-gray-100">${escHtml(section.name)}</h2>${entriesHtml}</div>`;
+  }).join('');
+  container.innerHTML = `<div class="bg-white rounded-xl border border-gray-100 p-6"><h1 class="text-xl font-bold text-gray-900 mb-2">${escHtml(week.title || week.week_id)}</h1>${generatedAt}${sectionsHtml}</div>`;
+}
+
+function renderWeeklyReportView() {
+  const container = document.getElementById('weekly-content');
+  updateHash();
+  updateWeeklyFilterChips();
+  const week = weeklyData.find((w) => w.week_id === document.getElementById('filter-week').value) || weeklyData[0];
+  if (!week) return (container.innerHTML = emptyState('No weekly report'));
+  const sections = week.sections || [];
+  const totalEntries = sections.reduce((acc, s) => acc + ((s.entries || []).length), 0);
+  const tocHtml = sections.map((section, idx) => `<a href="#sec-${idx}" class="block rounded-lg border border-gray-200 px-3 py-2 hover:bg-gray-50 transition-colors"><div class="text-sm font-semibold text-gray-800">${idx + 1}. ${escHtml(section.name)}</div><div class="text-xs text-gray-500 mt-0.5">${(section.entries || []).length} items</div></a>`).join('');
+  const sectionsHtml = sections.map((section, idx) => {
+    const entriesHtml = (section.entries || []).map((entry) => {
+      const subItemsHtml = (entry.sub_items || []).map((si) => `<div class="ml-4 mt-2 text-sm text-gray-700 leading-relaxed flex"><span class="mr-2 text-gray-400">•</span><span>${si.content_html || ''}</span></div>`).join('');
+      return `<article class="rounded-lg border border-gray-200 p-4 bg-white"><h3 class="text-sm font-semibold text-gray-800 leading-relaxed">${entry.headline_html || ''}</h3>${subItemsHtml}</article>`;
+    }).join('');
+    return `<section id="sec-${idx}" class="mb-7"><div class="flex items-center justify-between mb-3"><h2 class="text-base font-bold text-gray-900">${idx + 1}. ${escHtml(section.name)}</h2><span class="text-xs text-gray-500">${(section.entries || []).length} items</span></div><div class="space-y-3">${entriesHtml || emptyState('No content')}</div></section>`;
+  }).join('');
+  const generatedAt = week.generated_at ? ` · Generated: ${escHtml(week.generated_at.replace('T', ' ').replace('+08:00', ' +08:00'))}` : '';
+  container.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-[220px_minmax(0,1fr)] gap-4"><aside class="md:sticky md:top-28 h-fit bg-white rounded-xl border border-gray-100 p-4"><h2 class="text-sm font-bold text-gray-900 mb-3">Contents</h2><div class="space-y-2">${tocHtml || emptyState('No sections')}</div></aside><div class="bg-white rounded-xl border border-gray-100 p-6"><h1 class="text-xl font-bold text-gray-900">${escHtml(week.title || week.week_id)}</h1><p class="text-sm text-gray-500 mt-1 mb-5">Total ${totalEntries}${generatedAt}</p>${sectionsHtml}</div></div>`;
+}
+
 function updateHash() {
   if (currentTab === 'daily') {
+    const params = new URLSearchParams();
     const date = document.getElementById('filter-date').value;
     const group = document.getElementById('filter-group').value;
     const cos = [...selectedCompanies].join(',');
-    const params = new URLSearchParams();
     if (date) params.set('date', date);
-    if (cos) params.set('companies', cos);
     if (group) params.set('group', group);
-    const qs = params.toString();
-    location.hash = '#daily' + (qs ? '?' + qs : '');
+    if (cos) params.set('companies', cos);
+    location.hash = '#daily' + (params.toString() ? `?${params.toString()}` : '');
   } else {
+    const params = new URLSearchParams();
     const week = document.getElementById('filter-week').value;
-    location.hash = '#weekly' + (week ? '?week=' + week : '');
+    if (week) params.set('week', week);
+    params.set('view', weeklyView);
+    location.hash = '#weekly' + (params.toString() ? `?${params.toString()}` : '');
   }
 }
 
 function restoreDailyHash() {
   const hash = location.hash.replace('#daily', '');
-  if (!hash.startsWith('?')) { applyFilters(); return; }
+  if (!hash.startsWith('?')) return applyFilters();
   const params = new URLSearchParams(hash.slice(1));
-  if (params.get('date')) document.getElementById('filter-date').value = params.get('date');
-  if (params.get('group')) document.getElementById('filter-group').value = params.get('group');
-  if (params.get('companies')) {
-    const cos = params.get('companies').split(',').map(normalizeCompanyName).filter(Boolean);
-    selectedCompanies = new Set(cos);
-    document.querySelectorAll('.company-cb').forEach(cb => {
-      cb.checked = selectedCompanies.has(cb.value);
-    });
+  const date = params.get('date');
+  const group = params.get('group');
+  const companies = params.get('companies');
+  if (date) document.getElementById('filter-date').value = date;
+  if (group) document.getElementById('filter-group').value = group;
+  if (companies) {
+    selectedCompanies = new Set(companies.split(',').map(normalizeCompanyName).filter(Boolean));
+    document.querySelectorAll('.company-cb').forEach((cb) => { cb.checked = selectedCompanies.has(cb.value); });
     const allCb = document.getElementById('co-all');
     const total = document.querySelectorAll('.company-cb').length;
     if (allCb) allCb.checked = selectedCompanies.size > 0 && selectedCompanies.size === total;
@@ -466,30 +410,30 @@ function restoreWeeklyHash() {
   const hash = location.hash.replace('#weekly', '');
   if (hash.startsWith('?')) {
     const params = new URLSearchParams(hash.slice(1));
-    if (params.get('week')) document.getElementById('filter-week').value = params.get('week');
+    const week = params.get('week');
+    const view = params.get('view');
+    if (week) document.getElementById('filter-week').value = week;
+    if (view) weeklyView = view === 'report' ? 'report' : 'classic';
   }
+  updateWeeklyViewUI();
   renderWeekly();
 }
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
 function normalizeCompanyName(name) {
   if (!name) return '';
-  return name
-    .replace(/[（(][^）)]*[）)]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
+  return name.replace(/[(][^)]*[)]/g, '').replace(/\s+/g, ' ').trim();
 }
 
 function formatDate(dateStr) {
   if (!dateStr) return '';
   const [y, m, d] = dateStr.split('-');
-  return `${y}年${parseInt(m)}月${parseInt(d)}日`;
+  return `${y}-${m}-${d}`;
 }
 
 function formatDateShort(dateStr) {
   if (!dateStr) return '';
   const [, m, d] = dateStr.split('-');
-  return `${parseInt(m)}月${parseInt(d)}日`;
+  return `${m}-${d}`;
 }
 
 function emptyState(msg) {
@@ -498,11 +442,7 @@ function emptyState(msg) {
 
 function escHtml(str) {
   if (!str) return '';
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 function escAttr(str) {
@@ -510,7 +450,6 @@ function escAttr(str) {
   return str.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-// ─── Boot ─────────────────────────────────────────────────────────────────────
 init();
 </script>
 </body>
