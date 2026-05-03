@@ -3,6 +3,7 @@ claude_api_config.md
 
 # Temporary runtime artifacts
 data/tmp/
+.claude/worktrees/
 
 # Python cache
 __pycache__/
