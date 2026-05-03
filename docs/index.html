@@ -422,7 +422,13 @@ function restoreWeeklyHash() {
 function scrollToWeeklySection(id) {
   const el = document.getElementById(id);
   if (!el) return;
-  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const header = document.querySelector('header');
+  const headerHeight = header ? header.getBoundingClientRect().height : 0;
+  const targetY = window.pageYOffset + el.getBoundingClientRect().top - headerHeight - 12;
+  window.scrollTo({
+    top: Math.max(0, targetY),
+    behavior: 'smooth',
+  });
 }
 
 function normalizeCompanyName(name) {
