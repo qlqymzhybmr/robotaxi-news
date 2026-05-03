@@ -355,13 +355,13 @@ function renderWeeklyReportView() {
   if (!week) return (container.innerHTML = emptyState('No weekly report'));
   const sections = week.sections || [];
   const totalEntries = sections.reduce((acc, s) => acc + ((s.entries || []).length), 0);
-  const tocHtml = sections.map((section, idx) => `<a href="#sec-${idx}" class="block rounded-lg border border-gray-200 px-3 py-2 hover:bg-gray-50 transition-colors"><div class="text-sm font-semibold text-gray-800">${idx + 1}. ${escHtml(section.name)}</div><div class="text-xs text-gray-500 mt-0.5">${(section.entries || []).length} items</div></a>`).join('');
+  const tocHtml = sections.map((section, idx) => `<a href="#" onclick="scrollToWeeklySection('sec-${idx}'); return false;" class="block rounded-lg border border-gray-200 px-3 py-2 hover:bg-gray-50 transition-colors"><div class="text-sm font-semibold text-gray-800">${idx + 1}. ${escHtml(section.name)}</div><div class="text-xs text-gray-500 mt-0.5">${(section.entries || []).length} items</div></a>`).join('');
   const sectionsHtml = sections.map((section, idx) => {
     const entriesHtml = (section.entries || []).map((entry) => {
       const subItemsHtml = (entry.sub_items || []).map((si) => `<div class="ml-4 mt-2 text-sm text-gray-700 leading-relaxed flex"><span class="mr-2 text-gray-400">•</span><span>${si.content_html || ''}</span></div>`).join('');
       return `<article class="rounded-lg border border-gray-200 p-4 bg-white"><h3 class="text-sm font-semibold text-gray-800 leading-relaxed">${entry.headline_html || ''}</h3>${subItemsHtml}</article>`;
     }).join('');
-    return `<section id="sec-${idx}" class="mb-7"><div class="flex items-center justify-between mb-3"><h2 class="text-base font-bold text-gray-900">${idx + 1}. ${escHtml(section.name)}</h2><span class="text-xs text-gray-500">${(section.entries || []).length} items</span></div><div class="space-y-3">${entriesHtml || emptyState('No content')}</div></section>`;
+    return `<section id="sec-${idx}" class="mb-7 scroll-mt-28"><div class="flex items-center justify-between mb-3"><h2 class="text-base font-bold text-gray-900">${idx + 1}. ${escHtml(section.name)}</h2><span class="text-xs text-gray-500">${(section.entries || []).length} items</span></div><div class="space-y-3">${entriesHtml || emptyState('No content')}</div></section>`;
   }).join('');
   const generatedAt = week.generated_at ? ` · Generated: ${escHtml(week.generated_at.replace('T', ' ').replace('+08:00', ' +08:00'))}` : '';
   container.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-[220px_minmax(0,1fr)] gap-4"><aside class="md:sticky md:top-28 h-fit bg-white rounded-xl border border-gray-100 p-4"><h2 class="text-sm font-bold text-gray-900 mb-3">Contents</h2><div class="space-y-2">${tocHtml || emptyState('No sections')}</div></aside><div class="bg-white rounded-xl border border-gray-100 p-6"><h1 class="text-xl font-bold text-gray-900">${escHtml(week.title || week.week_id)}</h1><p class="text-sm text-gray-500 mt-1 mb-5">Total ${totalEntries}${generatedAt}</p>${sectionsHtml}</div></div>`;
@@ -417,6 +417,12 @@ function restoreWeeklyHash() {
   }
   updateWeeklyViewUI();
   renderWeekly();
+}
+
+function scrollToWeeklySection(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function normalizeCompanyName(name) {
