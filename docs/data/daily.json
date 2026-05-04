@@ -1,5 +1,101 @@
 [
   {
+    "date": "2026-05-04",
+    "items": [
+      {
+        "id": "2026-05-04-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "FSD 累计里程突破 100 亿英里，Musk 阈值达成，但量产无监督驾驶仍推迟至 Q4 2026",
+        "rating": 3,
+        "event_date": "2026-05-03",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "summary_html": "<p><b>5月3日</b>，Tesla 最新安全报告显示，FSD（监督模式）累计行驶里程已达 <b>100.1 亿英里</b>（约 161.3 亿公里），其中城市道路里程 <b>37.6 亿英里</b>。这一数字标志着 Musk 今年 1 月设下的里程碑达成——他曾公开表示，需要约 <b>100 亿英里</b>的真实驾驶数据才能实现安全的无监督自动驾驶。</p><p>然而里程碑的达成并未改变商业化时间表。就在 <b>4 月 22 日</b> Q1 2026 财报电话会上，Musk 刚刚将消费者版无监督 FSD 推迟至 <b>2026 年 Q4 最早</b>，理由是仍存在残余技术挑战和地理覆盖局限。值得警惕的是，\"100 亿英里阈值\"本身也是 Musk 的移动目标——此前他曾说 <b>60 亿英里</b>就够了，外界已开始担心下一次目标移动何时到来。</p><p>Electrek 和 The Electric Viking 均指出，里程数量并不直接等同于场景多样性，也无法替代 NHTSA 的监管审批流程。Tesla 要规模化商业化无监督 FSD，仍需通过美国及各州监管机构的严格审查。</p>",
+        "source_name": "Electrek",
+        "source_url": "https://electrek.co/2026/05/03/tesla-fsd-10-billion-miles-no-magical-milestone-autonomy/"
+      },
+      {
+        "id": "2026-05-04-002",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "欧洲 HW3 车主集体索赔上线，Tesla 承认旧硬件无法实现无监督自动驾驶，5,700+ 人跨 37 国加入维权",
+        "rating": 3,
+        "event_date": "2026-05-04",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "summary_html": "<p>荷兰一名 Tesla 车主在 <b>hw3claim.nl</b> 上线欧盟集体索赔平台，针对 Tesla 无法在 Hardware 3（HW3）上兑现 Full Self-Driving 承诺发起维权。截至 <b>5 月 4 日</b>，已有来自 <b>37 个国家超过 5,700 名</b>参与者加入，每人索赔约 <b>€6,800</b>，该车主当年花 €6,400 购买了 FSD 功能。</p><p>Tesla 早在 2025 年 1 月 Q4 2024 财报电话会上已通过 Musk 正式承认：\"真相是，我们需要替换所有购买了 FSD 的 HW3 车辆的计算机。\" 技术层面，HW3 搭载约 <b>144 TOPS</b> 算力，而 AI4 达 <b>500+ TOPS</b>，差距 3-5 倍，无法运行无监督 FSD 所需的大型神经网络。Tesla 的应对方案是提供 \"<b>V14 Lite</b>\"——一个削减版 FSD，承诺 <b>2026 年 6 月底</b>上线，但与购买时承诺的完整体验存在根本差异。</p><p>此次集体索赔涉及 37 国、规模达 3,900 万欧元级别，且 Tesla 已在官方层面明确承认硬件局限性，法律风险不容忽视。Tesla 此前曾称将新建工厂为 HW3 车辆换装硬件，但时间表和成本至今不明，对 FSD 车主群体信任的侵蚀正在加速。</p>",
+        "source_name": "Not a Tesla App",
+        "source_url": "https://www.notateslaapp.com/news/4082/tesla-faces-class-action-claim-in-europe-from-hw3-fsd-owners"
+      },
+      {
+        "id": "2026-05-04-003",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "title": "Cybercab 亮相迈阿密 F1 赛场造势；达拉斯无人驾驶车队扩至 5 辆，德克萨斯成 Robotaxi 竞技场",
+        "rating": 2,
+        "event_date": "2026-05-04",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "summary_html": "<p>Tesla 借助迈阿密 F1 大奖赛（<b>4 月 29 日至 5 月 3 日</b>）在迈阿密海滩 Lummus Park 举办 \"Autonomy Pop-Up\" 活动，以 Cybertruck 拖运玻璃展柜 Cybercab 穿越人群，标语 \"Future is Autonomous\"，同步展示 Optimus 机器人。Tesla 此前已将<b>迈阿密列为 Robotaxi 商业化目标城市</b>，此次活动被视为正式服务前的市场预热。Cybercab 量产已于 <b>4 月 24 日</b>在 Giga Texas 正式启动。</p><p>与此同时，德克萨斯州无人驾驶竞赛格局日趋激烈。截至 5 月 3 日，Tesla 无监督 Robotaxi 车队在奥斯汀、达拉斯、休斯顿共部署 <b>32 辆</b>，其中达拉斯 <b>5 辆</b>（全程无安全员）。Waymo 同样在达拉斯和休斯顿运营，德克萨斯已成为全美无人驾驶服务竞争最激烈的市场。Tesla 车队规模与 Waymo（全美每周超 50 万次）差距仍悬殊，但随着 Cybercab 量产提速，后续规模有望加快。</p>",
+        "source_name": "News.az",
+        "source_url": "https://news.az/news/tesla-showcases-cybercab-robotaxi-at-miami-f1-event"
+      },
+      {
+        "id": "2026-05-04-004",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "title": "北京车展官宣 BMW iX3 首发搭载 Momenta 全场景智驾；CEO 称 R7 世界模型比肩 FSD，与华为构成城市 NOA 双强格局",
+        "rating": 3,
+        "event_date": "2026-05-03",
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "summary_html": "<p>宝马与 <b>Momenta</b> 在 2026 北京车展（<b>4 月 24 日至 5 月 3 日</b>）期间正式官宣：双方联合研发的新一代智能驾驶辅助解决方案将<b>首发搭载于国产新世代 BMW iX3 长轴距版</b>，计划 2026 年在华上市，预计 2026 年夏季开启交付。系统基于 Momenta 的<b>端到端飞轮大模型</b>（统一\"感知-规划-控制\"架构），是 Momenta 战略从中国自主品牌走向豪华 OEM 主流量产的关键里程碑。</p><p>同日，Momenta CEO <b>曹旭东</b>表示：<b>Momenta R7 的强化学习世界模型与 FSD 相比毫不逊色</b>，并预测华为与 Momenta 将构成城市 NOA 赛道的\"<b>双强格局</b>\"（依据：2025 年城市 NOA 装车超 300 万辆，两家合计市占率领先）。这是继 Momenta 获得上汽、吉利、丰田等多家 OEM 定点后，首次以宝马豪华品牌旗舰车型作为发布主角，对 Momenta 在国内方案商竞争格局中的品牌价值有显著提升作用。</p>",
+        "source_name": "车家号",
+        "source_url": "https://chejiahao.autohome.com.cn/info/23990776"
+      },
+      {
+        "id": "2026-05-04-005",
+        "company": "蔚来",
+        "company_slug": "nio",
+        "title": "李斌明确表态：蔚来没有进入 Robotaxi 领域的计划",
+        "rating": 2,
+        "event_date": "2026-05-03",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "summary_html": "<p><b>蔚来 CEO 李斌</b>在公开场合明确表示，蔚来没有进入 Robotaxi 领域的计划，将继续专注于面向私人用户的智能电动车路线。这是在国内 Robotaxi 赛道因萝卜快跑武汉事件引发牌照暂停、行业整体陷入监管压力时期的重要表态。</p><p>蔚来此前已建立起高阶辅助驾驶（Aquila/Adam 架构）能力，但从未披露 L4 Robotaxi 商业化路线图。李斌此次表态意味着蔚来将把智驾投入集中在提升用户端产品体验，而非分兵布局 L4 运营。这与同期理想、小鹏、华为均在 L2/L3 侧加速的策略基本一致，也与滴滴自动驾驶（赋能在线出行平台）路线形成鲜明对比。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://finance.sina.com.cn"
+      },
+      {
+        "id": "2026-05-04-006",
+        "company": "比亚迪",
+        "company_slug": "byd",
+        "title": "\"天神之眼\"全面升级开通全国城市 NOA，同步发布天神之眼 C 新系统，智驾竞争深入 7 万元市场",
+        "rating": 2,
+        "event_date": "2026-05-03",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "summary_html": "<p>比亚迪在北京车展期间宣布 \"<b>天神之眼</b>\"（DiPilot）智驾系统完成全面升级，正式开通<b>全国城市 NOA</b>（城区导航辅助驾驶）功能，覆盖大量主要城市道路场景。同步发布的 \"<b>天神之眼 C</b>\"（高阶版本）进一步强化了感知与决策能力，但新版本硬件暂时仅兼容搭载天神之眼 C 传感器套件的新车型，现有车主升级难度较大。</p><p>本次发布的最大战略意义在于：比亚迪明确将城市 NOA 从高端车型向 <b>7 万元级市场</b>下沉，意味着智驾能力正成为大众消费车型的标配维度，进一步压缩传统主机厂和智驾方案商的定价空间。比亚迪全球最大的交付量规模（2025 年超 400 万辆）将使这一战略产生巨大市场影响力。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://cj.sina.cn"
+      },
+      {
+        "id": "2026-05-04-007",
+        "company": "地平线",
+        "company_slug": "horizon",
+        "title": "征程 6M 芯片正式进入长城汽车，锚定\"智驾平权\"新阶段",
+        "rating": 2,
+        "event_date": "2026-05-03",
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "summary_html": "<p>地平线<b>征程 6M</b> 芯片正式落地长城汽车旗下车型，长城成为继奇瑞、理想等多家 OEM 之后导入征程 6 系列的又一重要客户。此举被定位为\"<b>智驾平权</b>\"（智能驾驶能力大众化）的新阶段——征程 6M 在中算力段提供高性价比的 NOA 方案，使 15 万元以下级别车型也能搭载城市 NOA 能力。</p><p>地平线征程 6 系列（包含 6M/6E/6P）已成为国内方案商芯片的主流选项之一，客户涵盖长城、吉利、理想、奇瑞等。这是地平线 2025 年港股 IPO 后持续扩大车企客户覆盖的最新进展，与 Momenta（软件方案商）构成硬件+软件的市场互补格局。</p>",
+        "source_name": "车家号",
+        "source_url": "https://chejiahao.m.autohome.com.cn"
+      }
+    ]
+  },
+  {
     "date": "2026-05-03",
     "items": [
       {
