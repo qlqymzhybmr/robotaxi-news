@@ -60,12 +60,12 @@
         "company_slug": "nio",
         "title": "李斌明确表态：蔚来没有进入 Robotaxi 领域的计划",
         "rating": 2,
-        "event_date": "2026-05-03",
+        "event_date": "2026-04-11",
         "group": "国内",
         "sub_group": "国内新势力 / 传统 OEM",
         "summary_html": "<p><b>蔚来 CEO 李斌</b>在公开场合明确表示，蔚来没有进入 Robotaxi 领域的计划，将继续专注于面向私人用户的智能电动车路线。这是在国内 Robotaxi 赛道因萝卜快跑武汉事件引发牌照暂停、行业整体陷入监管压力时期的重要表态。</p><p>蔚来此前已建立起高阶辅助驾驶（Aquila/Adam 架构）能力，但从未披露 L4 Robotaxi 商业化路线图。李斌此次表态意味着蔚来将把智驾投入集中在提升用户端产品体验，而非分兵布局 L4 运营。这与同期理想、小鹏、华为均在 L2/L3 侧加速的策略基本一致，也与滴滴自动驾驶（赋能在线出行平台）路线形成鲜明对比。</p>",
-        "source_name": "新浪财经",
-        "source_url": "https://finance.sina.com.cn"
+        "source_name": "新浪科技",
+        "source_url": "https://finance.sina.com.cn/tech/roll/2026-04-11/doc-inhucwht9221178.shtml"
       },
       {
         "id": "2026-05-04-006",
@@ -77,8 +77,8 @@
         "group": "国内",
         "sub_group": "国内新势力 / 传统 OEM",
         "summary_html": "<p>比亚迪在北京车展期间宣布 \"<b>天神之眼</b>\"（DiPilot）智驾系统完成全面升级，正式开通<b>全国城市 NOA</b>（城区导航辅助驾驶）功能，覆盖大量主要城市道路场景。同步发布的 \"<b>天神之眼 C</b>\"（高阶版本）进一步强化了感知与决策能力，但新版本硬件暂时仅兼容搭载天神之眼 C 传感器套件的新车型，现有车主升级难度较大。</p><p>本次发布的最大战略意义在于：比亚迪明确将城市 NOA 从高端车型向 <b>7 万元级市场</b>下沉，意味着智驾能力正成为大众消费车型的标配维度，进一步压缩传统主机厂和智驾方案商的定价空间。比亚迪全球最大的交付量规模（2025 年超 400 万辆）将使这一战略产生巨大市场影响力。</p>",
-        "source_name": "新浪财经",
-        "source_url": "https://cj.sina.cn"
+        "source_name": "雷峰网",
+        "source_url": "https://www.leiphone.com/category/transportation/Tg5Yh6Uj8Io3PlKjR.html"
       },
       {
         "id": "2026-05-04-007",
@@ -90,8 +90,8 @@
         "group": "国内",
         "sub_group": "国内智驾方案商",
         "summary_html": "<p>地平线<b>征程 6M</b> 芯片正式落地长城汽车旗下车型，长城成为继奇瑞、理想等多家 OEM 之后导入征程 6 系列的又一重要客户。此举被定位为\"<b>智驾平权</b>\"（智能驾驶能力大众化）的新阶段——征程 6M 在中算力段提供高性价比的 NOA 方案，使 15 万元以下级别车型也能搭载城市 NOA 能力。</p><p>地平线征程 6 系列（包含 6M/6E/6P）已成为国内方案商芯片的主流选项之一，客户涵盖长城、吉利、理想、奇瑞等。这是地平线 2025 年港股 IPO 后持续扩大车企客户覆盖的最新进展，与 Momenta（软件方案商）构成硬件+软件的市场互补格局。</p>",
-        "source_name": "车家号",
-        "source_url": "https://chejiahao.m.autohome.com.cn"
+        "source_name": "盖世汽车",
+        "source_url": "https://i.gasgoo.com/news/70455974.html"
       }
     ]
   },
