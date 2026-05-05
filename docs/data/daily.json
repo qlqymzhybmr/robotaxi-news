@@ -1,5 +1,88 @@
 [
   {
+    "date": "2026-05-05",
+    "items": [
+      {
+        "id": "2026-05-05-001",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月4日，第六代 Ojai 车型在凤凰城正式开启全自动运营，标志 Waymo 完成跨代切换的关键节点。",
+        "summary_html": "<p>Waymo 宣布其第六代自动驾驶系统（Ojai 车型）本周已在<b>凤凰城</b>开始为员工提供完全自动驾驶（无安全员）的乘车服务，按计划将在 2026 年晚些时候正式向公众开放。Ojai 基于中国吉利极氪 ZEEKR M-Vision 平台打造，车身比 Jaguar I-PACE 更方正、入口更低、车顶更高，但占地面积相近。</p><p>本次切换的产业意义在于 Waymo 位于<b>Phoenix Metro 的自动驾驶车辆工厂</b>正式从样车级别迈向规模化制造，目标年产能可达<b>数万辆</b>。Waymo 当前覆盖城市包括 Austin、SF Bay、凤凰城、亚特兰大、洛杉矶和迈阿密，2026 年还将进一步扩张。Ojai 命名借自加州小镇，其作为 Waymo 第一款\"原生\"为 L4 设计的车型，将逐步替代现有 Jaguar I-PACE 与 Pacifica 车队。</p>",
+        "source_name": "ABC15 Arizona",
+        "source_url": "https://www.abc15.com/news/business/waymo-begins-fully-autonomous-operations-with-ojai-vehicles-in-phoenix",
+        "original_date": "2026-05-04"
+      },
+      {
+        "id": "2026-05-05-002",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 3,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月5日，欧盟机动车技术委员会（TCMV）召开会议，荷兰 RDW 正式向 27 个成员国汇报 FSD（监督版）Article 39 准入审批，欧洲全境推广进入决策窗口。",
+        "summary_html": "<p>欧盟 <b>TCMV（Technical Committee on Motor Vehicles）</b> 5 月 5 日<b>13:30</b> 起召开会议，议程中专门为 Tesla <b>FSD Supervised</b> 留出一小时时段，由荷兰交通主管机构 <b>RDW</b> 进行 <b>Article 39</b> 准入框架下的正式技术汇报。荷兰方此前于 <b>2026 年 4 月 10 日</b> 依据 <b>UN Regulation 171</b>（DCAS / 驾驶员控制辅助系统标准）授予 Tesla FSD 临时型式认证，目前已开始向荷兰车主推送。</p><p>本次 5 月会议被业界视为 FSD 在欧盟全境扩展的关键节点：议程延长意味着允许成员国当场提问，而非推迟至 <b>6 月 30 日</b>下一次 TCMV 会议；但本次未列入投票议程，表明只是信息通报，正式投票最早需待 6 月。Tesla 公开口径仍维持\"<b>2026 年夏季实现欧盟全境覆盖</b>\"目标，从 Article 39 路径走完到全欧推送预计需 <b>2-4 个月</b>。</p><p>Article 39 的技术核心争议在于 FSD 是否仍受到 UN R157（车道保持系统）70km/h 速度上限约束——荷兰 RDW 给出的\"DCAS 框架\"判定方案绕开了这一限制，但德、法等大国能否接受是关键变量。Reuters 与 Carscoops 此前均指出，Dutch 方在测试中给 FSD 的安全分数高于其他主流 ADAS 系统，但欧盟委员会层面对其依赖摄像头视觉方案的安全性存在分歧。</p>",
+        "source_name": "Reuters",
+        "source_url": "https://www.reuters.com/business/autos-transportation/teslas-road-full-self-driving-approval-europe-2026-05-04/",
+        "original_date": "2026-05-05"
+      },
+      {
+        "id": "2026-05-05-003",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月4日，奥斯汀 Robotaxi 服务首次延伸至夜间无监督运营，ODD 显著扩展；与达拉斯、休斯顿对齐。",
+        "summary_html": "<p>Tesla 在奥斯汀的无监督 Robotaxi 服务<b>首次启动夜间运营</b>，进入低光照场景。这一调整将 Robotaxi 的<b>运行设计域（ODD）</b>从白天扩展到夜间，与 <b>Dallas、Houston</b> 已在运营的时段对齐，是 Tesla 自 2025 年 6 月奥斯汀首发以来对 ODD 边界最实质的扩张之一。</p><p>从商业逻辑看，夜间时段是网约车需求高峰之一（晚间出行/餐后归家），扩展运营时段直接提升单车日均订单数与车队利用率，使每英里成本进一步下探。Tesla 当前在德州（奥斯汀+达拉斯+休斯顿）共部署 <b>32 辆</b>无监督 Robotaxi，相较 Waymo 全美每周 50 万次订单仍有显著差距，但夜间运营的解禁意味着安全验证已通过 Tesla 内部更高强度测试。后续观察重点在事故率与脱离率（intervention rate）指标。</p>",
+        "source_name": "Teslarati",
+        "source_url": "https://www.teslarati.com/tesla-robotaxi-service-austin-achieves-monumental-new-accomplishment/",
+        "original_date": "2026-05-04"
+      },
+      {
+        "id": "2026-05-05-004",
+        "company": "Aurora Innovation",
+        "company_slug": "aurora",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Aurora × Volvo：5月5日，Dallas–Oklahoma City 自动驾驶卡车货运路线正式开通，200 英里新增干线，奥克拉荷马成为 Aurora Driver 第二个州。",
+        "summary_html": "<p>Aurora Innovation 与 <b>Volvo Autonomous Solutions（V.A.S.）</b> 联合宣布，搭载 <b>Aurora Driver</b> 的 <b>Volvo VNL Autonomous</b> 卡车正式开始向 Oklahoma City 客户设施运送商业货物，新增<b>200 英里</b>的 Dallas-Oklahoma City 高速干线。当前阶段为<b>监督式自动驾驶（每周 5 天运营）</b>，正在进行无人化（driverless）最后验证。</p><p>这是 Aurora 商业化扩张的关键里程碑，意味着 Aurora Driver 走出<b>德州独州</b>运营，进入<b>第二个州（俄克拉荷马）</b>。截至当前 Aurora 已在 Fort Worth–El Paso 等多条 I-20、I-45 干线上无人化运营累计超 <b>10 万英里</b>。Aurora 同期也宣布与某大型车队签下 <b>500 辆</b>自动驾驶卡车的扩容订单（4 月 30 日 BusinessWire 公告），自动驾驶货运的\"实际订单 + 实际跑量\"双增长信号开始确立。</p>",
+        "source_name": "Aurora IR",
+        "source_url": "https://ir.aurora.tech/news-events/press-releases/detail/137/volvo-and-aurora-launch-autonomous-truck-route-to-oklahoma-city",
+        "original_date": "2026-05-05"
+      },
+      {
+        "id": "2026-05-05-005",
+        "company": "文远知行",
+        "company_slug": "wenyuan",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "5月5日，CEO 韩旭接受 SCMP 专访，称 L5 自动驾驶将在 10 年内迎来\"ChatGPT 时刻\"。",
+        "summary_html": "<p>文远知行 CEO <b>韩旭（Tony Han Xu）</b> 在 <i>South China Morning Post</i> 专访中明确表态：\"<b>L5 自动驾驶将在 10 年内</b>实现，届时其驾驶能力将与人类最佳驾驶员持平，并成为整个行业的'<b>ChatGPT 时刻</b>'\"。他将 L5 类比为 ChatGPT 对 AI 行业的颠覆——一个临界点之后，全行业格局将彻底重塑。</p><p>韩旭同时强调，自动驾驶<b>无法保证 100% 安全</b>，但 10 年内可达到<b>比人类驾驶员安全 10 倍</b>的水平（与他 2025 年 10 月在 Fortune 专访的表述一致）。这是文远继 2024 年纳斯达克上市、2025 年 Q4 国际化提速后再次主动发出\"长期主义\"声音，目的是在 Tesla FSD 欧洲合规通过、萝卜快跑分拆传闻、Waymo Ojai 量产等密集事件中重塑投资者对其技术路线（远程接管 + L4 大规模车队 + L5 长期愿景）的信心。</p><p>韩旭还重申<b>远程控制（remote control）</b>是过渡时期的关键解法，符合文远知行已在阿布扎比、新加坡、香港等多市场探索的部署模型。这与 Cruise / Pony.ai 的渐进路径形成共识——业内对完全无监督 L5 的\"激进路径\"已基本祛魅。</p>",
+        "source_name": "South China Morning Post",
+        "source_url": "https://www.scmp.com/news/china-future-tech/evs/article/3352467/chasing-l5-weride-ceo-sees-chatgpt-moment-driverless-cars-within-10-years",
+        "original_date": "2026-05-05"
+      },
+      {
+        "id": "2026-05-05-006",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "5月5日，CEO 彭军接受 CNA 专访，称大规模商业化\"关键拼图已就位\"，2026 全年目标 3,000+ 车队、20+ 城市。",
+        "summary_html": "<p>小马智行 CEO <b>彭军（James Peng）</b> 在 Channel News Asia 专访中表态：大规模 Robotaxi 商业化所需的<b>关键拼图（key pieces）</b>——技术、产能、合作伙伴、运营单位经济、监管框架——<b>均已就位</b>。该言论是公司在临近 Q1 2026 财报披露窗口前对市场的预期管理。</p><p>彭军重申了已在 3 月 26 日 Q4 2025 财报上披露的目标：通过与 <b>Toyota</b> 的战略合作锁定 <b>1,000 辆 Gen-7 Robotaxi</b> 量产，<b>2026 年底前</b>车队规模拓展至 <b>3,000+辆</b>，覆盖<b>全球 20+ 城市</b>；并通过<b>双引擎策略</b>（自营 + JV 模式）加速国内外市场扩张。Q4 2025 数据也被再次引用：Robotaxi 收入 YoY +160%、计费收入 YoY +500%+，<b>广州+深圳</b>已实现单车级 UE 打平（Gen-7 上线 4 个月内），深圳单日单车净收入达 <b>¥394</b>。</p><p>彭军本次重点谈了<b>成本曲线</b>：2026 年量产的 Gen-7 自动驾驶套件 BOM 成本相较 2025 年基线还会再下降 <b>20%</b>，这是支撑车队 3 倍扩张又不烧更多钱的关键底气。Pony 与 Stellantis 的欧洲 JV、与 Uber+Verne 的克罗地亚商业服务发车，则构成了\"海外双引擎\"的实例。</p>",
+        "source_name": "CNA",
+        "source_url": "https://www.channelnewsasia.com/business/ponyai-ceo-says-key-pieces-place-large-scale-robotaxi-rollout",
+        "original_date": "2026-05-05"
+      }
+    ]
+  },
+  {
     "date": "2026-05-04",
     "items": [
       {
