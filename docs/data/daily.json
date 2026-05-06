@@ -1,5 +1,88 @@
 [
   {
+    "date": "2026-05-06",
+    "items": [
+      {
+        "id": "2026-05-06-001",
+        "company": "Nuro",
+        "company_slug": "nuro",
+        "rating": 3,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月5日，获加州 DMV 无人驾驶测试许可，搭载 Nuro 自驾技术的 Lucid Gravity 可无安全员上路，Uber 商业 Robotaxi 商业化提速。",
+        "summary_html": "<p><b>加州 DMV</b> 修改 Nuro 的无人驾驶许可证，将 <b>Lucid Gravity SUV</b> 纳入允许测试车型，Nuro 预计<b>今年内</b>启动全无人驾驶测试。这是 Nuro-Lucid-Uber 三方 Robotaxi 联盟迈向商业运营的关键里程碑。</p><p>Lucid 已交付 <b>75 辆</b>工程样车给 Nuro 与 Uber，目前在美国多座城市以有安全员监督模式测试，Uber 员工已可通过 App 体验。<b>Lucid</b> 表示 <b>2026 年底</b>商业 Robotaxi 运营可望启动，但 Nuro 还须取得加州 CPUC 无人驾驶网约车许可及 DMV 部署许可。</p><p><b>Hertz 子公司 Oro Mobility</b>（4 月 30 日宣布合作）将负责 Lucid 无人车队的充电、保养、维修、清洁和停车场管理，服务预计在旧金山湾区落地，Hertz 股价当日涨幅超 <b>13%</b>。</p>",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/05/05/nuro-receives-driverless-testing-permit-ahead-of-uber-robotaxi-service-launch/",
+        "original_date": "2026-05-05"
+      },
+      {
+        "id": "2026-05-06-002",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月5日，加州 DMV 正式通过 AV 新规，7 月 1 日起警方可向 Waymo 等 Robotaxi 公司开罚单，违章须在 2 分钟内腾出应急区域。",
+        "summary_html": "<p><b>加州 DMV</b> 于 4 月 29 日通过新规，<b>2026 年 7 月 1 日</b>起生效，赋予执法部门对无人驾驶车辆制造商直接开<b>不合规通知</b>的权力，填补了无驾驶员场景下无法追责的法律空白。</p><p>新规要求 AV 运营商须在收到一线响应人员指令的 <b>30 秒内</b>回应，并在 <b>2 分钟内</b>将车辆撤离应急区域；当局还可下达地理围栏指令强制清空指定区域。<b>背景</b>：去年圣布鲁诺一辆 Waymo 违章掉头被拦截，由于无驾驶员无法开罚单，直接推动本次立法。</p>",
+        "source_name": "TechSpot",
+        "source_url": "https://www.techspot.com/news/112300-california-gave-police-way-ticket-waymo-other-robotaxis.html",
+        "original_date": "2026-05-05"
+      },
+      {
+        "id": "2026-05-06-003",
+        "company": "Rivian",
+        "company_slug": "rivian",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1",
+        "title": "5月5日，Reuters 独家：CEO 考虑在美国自产激光雷达、可能与中国厂商合资；自研芯片 RAP-1 今年到货，已投入数亿美元。",
+        "summary_html": "<p>Reuters 独家专访 Rivian CEO <b>RJ Scaringe</b>：当前激光雷达“所有真正有价格竞争力的选择都来自中国”，Rivian 需要百美元级 LiDAR。为规避直接采购风险，正考虑在美国境内生产——可能与中国 LiDAR 公司建立<b>合资企业</b>，目前已进入<b>积极洽谈</b>阶段，也可能联合多家车企共同投资。</p><p>同步披露：Rivian 投入<b>数亿美元</b>研发首款自研自动驾驶芯片（内部代号 <b>RAP-1</b>），<b>今年</b>首颗芯片将到货，为全栈自动驾驶能力奠基。</p>",
+        "source_name": "Reuters",
+        "source_url": "https://finance.yahoo.com/sectors/technology/articles/exclusive-rivian-mulls-making-own-001144199.html",
+        "original_date": "2026-05-05"
+      },
+      {
+        "id": "2026-05-06-004",
+        "company": "Uber",
+        "company_slug": "uber",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外出行平台",
+        "title": "5月5日，Q1 2026 财报前瞻：预期营收 133 亿美元（同比+15%），Hertz Oro Mobility 接手 Lucid Robotaxi 车队运营，欧洲扩张资金到位。",
+        "summary_html": "<p>Uber <b>5 月 6 日</b>将发布 Q1 2026 财报，一致预估营收 <b>132.7 亿美元</b>（同比 +15%），EPS <b>0.71 美元</b>，调整后 EBITDA 指引 <b>23.7–24.7 亿美元</b>；毛预订额区间 <b>520–535 亿美元</b>（同比 +17–21%）。</p><p>Robotaxi 侧：<b>4 月 30 日</b>，Hertz 旗下 <b>Oro Mobility</b> 与 Uber 合作，负责 Nuro+Lucid 无人车队的充电、维修和停车场运营，计划在<b>旧金山湾区</b>落地。Uber 在 Robotaxi 相关合作上累计投入逾 <b>100 亿美元</b>，当前已在旧金山（Waymo）、奥斯汀、亚特兰大运营 Robotaxi 服务。</p>",
+        "source_name": "Alphastreet",
+        "source_url": "https://news.alphastreet.com/uber-uber-q1-2026-earnings-preview-profitability-test-meets-robotaxi-momentum-ahead-of-may-6-report/",
+        "original_date": "2026-05-05"
+      },
+      {
+        "id": "2026-05-06-005",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月5日，欧盟监管机构就 FSD 超速问题表达关切，瑞典等四国反对；比利时启动快速评审，或成欧盟第二个批准国。",
+        "summary_html": "<p>5 月 5 日布鲁塞尔 <b>TCMV</b> 会议上，<b>瑞典、芬兰、丹麦、挪威</b>监管官员联合表达对 Tesla FSD 超速行为的担忧；一位瑞典交通署调查员邮件称得知 FSD 允许超速令其“非常惊讶”。FSD 欧盟全境获批须代表 <b>55% 成员国、65% 人口</b>的委员投票支持。</p><p>同日，<b>比利时佛兰德斯</b>交通部长 Annick De Ridder 要求行政部门<b>本周内</b>完成荷兰 RDW 批准材料快速同行评审，力争成为继荷兰（<b>4 月 10 日</b>首批）之后欧盟第二个批准 FSD Supervised 的国家。</p>",
+        "source_name": "Electrek",
+        "source_url": "https://electrek.co/2026/05/05/tesla-fsd-eu-regulators-skepticism-speeding-approval/",
+        "original_date": "2026-05-05"
+      },
+      {
+        "id": "2026-05-06-006",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "title": "宝马携手 Momenta 联合开发全场景端到端智驾，2026 年量产首发于国产新世代 BMW iX3 长轴距版。",
+        "summary_html": "<p><b>宝马</b>与 Momenta 宣布，合作研发的全场景智能驾驶辅助系统将于 <b>2026 年</b>在<b>华晨宝马沈阳工厂</b>量产的<b>新世代 iX3 长轴距版</b>首发。技术路线：Momenta 飞轮端到端大模型（感知-规划-控制一体化）+ LiDAR + 多模态感知，专为中国路况设计。</p><p>这是继<b>大众（小鹏）</b>之后，第二家国际 OEM 深度绑定中国本土智驾方案商并在国内量产的案例，标志跨国车企向国内供应商外包高阶智驾的趋势加速。新世代 iX3 长轴距版已于 <b>2026 北京车展</b>（4 月）全球首发，下半年上市。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://finance.sina.com.cn/tech/digi/2025-11-17/doc-infxspkh6666479.shtml",
+        "original_date": "2026-05-05"
+      }
+    ]
+  },
+  {
     "date": "2026-05-05",
     "items": [
       {
