@@ -1,5 +1,217 @@
 [
   {
+    "week_id": "2026-W19",
+    "date_range": "0428-0506",
+    "title": "无人驾驶行业0428-0506重要新闻",
+    "generated_at": "2026-05-06T23:00:00+08:00",
+    "sections": [
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "萝卜快跑",
+            "company_slug": "luobo",
+            "headline_html": "<b>萝卜快跑：</b>武汉集体停运引发全国牌照暂停；李彦宏回应分拆传闻",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>4月29日</b>，多家媒体报道：武汉约 <b>200 辆</b> Apollo Go Robotaxi 在主干道和高架同时停车并引发碰撞，后续调查显示系百度工程师下发"就地停车并采集数据"指令所致，SOS 按钮失效、客服断线、乘客被困长达 <b>2 小时</b>。监管部门随即<b>暂停全国新增 Robotaxi 牌照</b>，禁止各运营商新增车辆、新增测试或向新城市扩张；百度武汉运营暂停待查，预计 <b>5 月底前</b>做出管控措施最终决定。小马智行、文远知行等其他运营商的新增扩张计划受到明显阻力。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>4月28日</b>，李彦宏就"分拆萝卜快跑"市场传闻作出回应，资本化路径再受关注；百度港股当日由高开转跌，跌幅一度接近 <b>4%</b>。"
+              }
+            ]
+          },
+          {
+            "company": "小马智行",
+            "company_slug": "xiaoma",
+            "headline_html": "<b>小马智行：</b>整车成本目标降至 23 万元以内；广深 Robotaxi 实现单车 UE 盈利",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>4月27日</b>，披露 <b>2027 版 Robotaxi 整车成本目标降至 23 万元以内</b>，同期发布全车规、全冗余 L4 级无人轻卡方案，覆盖出行与物流双场景；海外市场目标布局 <b>千辆级</b>车队规模。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>4月30日</b>，公开披露广州和深圳运营车队已先后实现<b>单车单位经济（UE）盈利</b>，即单车运营收入已能覆盖全部直接运营成本，是公司首次就广深两城盈利状态做出明确表态。"
+              }
+            ]
+          },
+          {
+            "company": "文远知行",
+            "company_slug": "weride",
+            "headline_html": "<b>文远知行：</b>迪拜启动全球首批纯无人商业 Robotaxi；联手联想目标全球 20 万辆",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>5月1日</b>，在<b>迪拜</b>启动全球首批完全无人驾驶（无安全员）商业 Robotaxi 服务，与 Uber 合作通过 Uber App 提供叫车，将运营版图从阿布扎比扩至迪拜核心商业区。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>5月1日</b>，与<b>联想集团</b>宣布战略合作，目标在全球部署 <b>20 万辆</b> Robotaxi；联想提供边缘计算与算力基础设施，文远知行负责 L4 系统与运营，是国内 L4 企业迄今公开的最大规模商业化目标。"
+              }
+            ]
+          },
+          {
+            "company": "曹操出行",
+            "company_slug": "caocao",
+            "headline_html": "<b>曹操出行：</b>发布"原生 Robotaxi"方案并明年量产；预判 2030 年行业仅剩 3-4 家",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>4月29日</b>，发布"<b>原生 Robotaxi</b>"路径：计划与整车厂协同开发 Robotaxi 专属平台（含冗余制动、无人化舱室设计及低成本传感器），<b>明年</b>推动深度定制车型量产，目标将单车成本控制在有竞争力区间，策略区别于百度/小马重技术自研路线。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>4月28日</b>，CEO 龚昕判断：到 <b>2030 年</b>中国 Robotaxi 赛道可能仅剩 <b>3-4 家</b>主要公司，行业将加速出清与集中化。"
+              }
+            ]
+          },
+          {
+            "company": "小鹏",
+            "company_slug": "xpeng",
+            "headline_html": "<b>小鹏：</b>何小鹏重申 2026 年 8 月前中国智驾超越 Tesla FSD",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "4月28日，CEO <b>何小鹏</b>公开重申：将以中国路况与用户场景为核心，在 <b>2026 年 8 月前</b>把量产智驾体验做到对特斯拉在华 FSD 的可比并争取超越。"
+              }
+            ]
+          },
+          {
+            "company": "中国 L3 准入",
+            "company_slug": "china-l3",
+            "headline_html": "<b>中国 L3 准入：</b>首批名单公布，赛力斯与长安入选",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "4月30日，中国首批 <b>L3 级自动驾驶准入名单</b>正式公布，<b>赛力斯（问界）</b>和<b>长安汽车</b>入选，获准在特定条件下向消费者交付具备 L3 功能的量产车型；当前运营条件含速度上限（最高 50–80 km/h）和单车道约束，试点城市包括重庆和北京。"
+              }
+            ]
+          },
+          {
+            "company": "蔚来",
+            "company_slug": "nio",
+            "headline_html": "<b>蔚来：</b>李斌明确表态不进入 Robotaxi 领域",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "5月3日，CEO <b>李斌</b>在萝卜快跑武汉事件引发牌照暂停背景下明确表态：蔚来没有进入 Robotaxi 领域的计划，将继续专注面向私人用户的智能电动车路线，智驾投入集中在提升用户端产品体验。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>FSD 欧洲推进遭北欧质疑；美国 Robotaxi 扩至 32 辆并开通夜间运营；100 亿英里里程碑达成；HW3 集体索赔 37 国 5,700 人参与",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>4月27日</b>，FSD（Supervised）获<b>瑞典</b>交通管理局批准，成为继荷兰（4月10日首批）之后欧盟第二个正式批准 FSD 测试的欧洲国家。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>4月30日起</b>，无监督 Robotaxi（Cybercab）在奥斯汀/休斯顿区域从 <b>25 辆</b>逐步扩至达拉斯、奥斯汀、休斯顿三地合计 <b>32 辆</b>；奥斯汀服务首次启动<b>夜间无监督运营</b>，运行设计域（ODD）显著扩展，夜间运营覆盖晚间出行需求峰值时段。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>5月3日</b>，FSD（监督模式）累计里程突破 <b>100.1 亿英里</b>（城市道路 37.6 亿英里），达成 Musk 今年 1 月所设阈值；但无监督消费者版 FSD 商业化时间表仍维持 <b>2026 年 Q4 最早</b>，Musk 承认仍存在技术挑战和地理覆盖局限。"
+              },
+              {
+                "label": "d",
+                "content_html": "<b>5月4日</b>，荷兰 hw3claim.nl 上线欧盟集体索赔平台，已有 <b>37 国超过 5,700 名</b> HW3 车主参与，每人索赔约 <b>€6,800</b>；Tesla 已在官方层面承认 HW3 无法运行无监督 FSD，应对方案为"<b>V14 Lite</b>"（预计 2026 年 6 月底上线）。"
+              },
+              {
+                "label": "e",
+                "content_html": "<b>5月5日</b>，欧盟 <b>TCMV</b> 会议专门为 FSD Supervised 设置议程，荷兰 RDW 进行 Article 39 框架下的技术汇报；<b>瑞典、芬兰、丹麦、挪威</b>监管官员联合表达对 FSD 超速合规性的担忧；比利时佛兰德斯要求"<b>本周内</b>"完成快速同行评审；正式投票最早需待 <b>6 月</b> TCMV 会议。"
+              }
+            ]
+          },
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>Ojai 第六代车型在凤凰城启动全自动商业化；加州新规 7 月起允许警察开罚单",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>5月1日</b>，在<b>凤凰城</b>（Phoenix）启动基于 <b>Ojai</b> 第六代平台的全自动无人驾驶商业运营，Ojai 基于极氪 RT 平台开发，Phoenix Metro 工厂目标年产能达<b>数万辆</b>，将逐步替代现有 Jaguar I-PACE 与 Pacifica 车队；当前全美每周完成超 <b>50 万次</b>付费行程。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>5月1日</b>，加州 DMV 新规 <b>2026 年 7 月 1 日</b>起生效：赋予执法部门对 AV 制造商直接开"不合规通知"的权力；AV 运营商须在 <b>30 秒内</b>回应一线响应人员指令，并在 <b>2 分钟内</b>将车辆撤离应急区域；背景是圣布鲁诺一辆 Waymo 违章掉头被拦截、因无驾驶员无法开罚单直接推动立法；同规适用 Tesla Cybercab 等无人驾驶车辆。"
+              }
+            ]
+          },
+          {
+            "company": "Uber",
+            "company_slug": "uber",
+            "headline_html": "<b>Uber + Hertz：</b>成立 Oro Mobility 管理 Lucid/Nuro 车队；AV Labs 拟将百万司机车辆变为传感器网格",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>4月30日</b>，与 Hertz 正式宣布战略合作：Hertz 成立新子公司 <b>Oro Mobility</b>，负责 Lucid/Nuro 无人车队的清洁、充电与维修服务，首发城市<b>旧金山</b>；Hertz 股价当日涨 <b>13%</b>；Uber 在 Robotaxi 领域的投资承诺累计逾 <b>100 亿美元</b>。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>5月2日</b>，CTO Praveen Neppalli Naga 披露 <b>AV Labs</b> 战略：计划为全球数百万网约车司机车辆加装<b>传感器套件</b>，打造最大规模真实世界驾驶数据采集网络，供 <b>25 家</b> AV 合作伙伴训练自动驾驶模型；合作方可在"Shadow Mode"下对真实行程进行模型仿真推演。"
+              }
+            ]
+          },
+          {
+            "company": "Nuro",
+            "company_slug": "nuro",
+            "headline_html": "<b>Nuro：</b>获加州 DMV 无人驾驶测试许可，Lucid Gravity 可无安全员路测，Uber Robotaxi 商业化提速",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "5月5日，加州 DMV 正式修改 Nuro 无人驾驶 AV 许可证，将 <b>Lucid Gravity SUV</b> 纳入允许无安全员测试车型；Lucid 已交付 <b>75 辆</b>工程样车给 Nuro 与 Uber，预计 <b>2026 年底</b>启动商业 Robotaxi 运营，但还须取得 CPUC 网约车许可及 DMV 部署许可；<b>Hertz 子公司 Oro Mobility</b> 将负责该车队的日常运营管理。"
+              }
+            ]
+          },
+          {
+            "company": "Motional",
+            "company_slug": "motional",
+            "headline_html": "<b>Motional：</b>Robotaxi 服务重返拉斯维加斯，接入 Uber 平台向公众开放",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "4月28日，Motional（现代旗下自动驾驶合资公司）Robotaxi 服务重新接入 Uber App，在<b>拉斯维加斯</b>向公众提供无人驾驶出行服务，距 2024 年初因战略重组暂停运营约两年后复出，是其商业化落地的关键里程碑。"
+              }
+            ]
+          },
+          {
+            "company": "MOIA",
+            "company_slug": "moia",
+            "headline_html": "<b>MOIA：</b>自动驾驶班车服务扩展至美国奥兰多，实现欧洲到北美的战略布局跨越",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "4月28日，大众旗下自动驾驶出行子公司 <b>MOIA</b> 宣布将自动驾驶班车服务扩展至美国佛罗里达州<b>奥兰多</b>，此前主要在德国汉堡运营，是 MOIA 首次在北美落地商业化服务。"
+              }
+            ]
+          },
+          {
+            "company": "NVIDIA",
+            "company_slug": "nvidia",
+            "headline_html": "<b>NVIDIA：</b>元戎启行采用集成 NVLink 的 DRIVE Hyperion 开发新一代 Robotaxi",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "4月28日，<b>元戎启行</b>宣布采用集成 NVLink 技术的 <b>NVIDIA DRIVE Hyperion</b> 打造新一代 Robotaxi 平台，将算力平台、传感器配置与软件栈耦合为更完整的方案，体现 NVIDIA 整车级自动驾驶参考平台在 L4 场景的进一步渗透。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W18",
     "date_range": "0421-0427",
     "title": "无人驾驶行业0421-0427重要新闻",
