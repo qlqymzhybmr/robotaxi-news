@@ -55,7 +55,7 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 **第二层:Claude 去重 + 结构化理解**
 - 候选新闻先由 Claude 做 URL 归一化去重 + 语义去重,避免同一事件重复写入
 - 去重后保留"主来源 + 辅助来源"链路,降低遗漏风险
-- 再由 Claude 生成结构化总结(公司、事件、影响),输出到 daily 文件和网页 JSON
+- 再由 Claude 生成结构化总结(公司、事件、影响),直接写入 daily 文件(无中间 JSON 产物)
 
 **第三层:网页投递（自动）**
 - daily-publish / weekly-publish 按既有流程写入 `docs/data/*.json` 并驱动网页展示
@@ -95,9 +95,9 @@ robotaxi-news/
 │   ├── daily-publish.md         # 每日精选自动发布到网页
 │   └── weekly-publish.md        # 周报自动发布到网页
 ├── scripts/
-│   ├── python_rss_fetch.py      # 主流程 Python 召回脚本(读取 competitors.md 产出结构化 JSON)
-│   └── claude_structured_summary.py # Claude 去重与结构化总结脚本
+│   └── python_rss_fetch.py      # 主流程 Python 召回脚本(读取 competitors.md 产出结构化 JSON)
 ├── archive/
+│   ├── claude_structured_summary.py # 已归档:旧的 API 调用总结脚本(已由 Claude 直接总结替代)
 │   └── legacy-fetch/            # 已下线的旧抓取方案归档
 │       ├── sources.md           # 旧 Tier URL 白名单(仅应急兜底)
 │       └── ref/                 # 旧 Python/Gemini 抓取参考实现
@@ -207,6 +207,27 @@ https://qlqymzhybmr.github.io/robotaxi-news/
 2. daily-publish 从今日 daily 文件里提取所有 ⭐⭐+ 条目,写入 `docs/data/daily.json`
 3. 实习生运行 `git add -A && git commit -m "daily YYYY-MM-DD" && git push`,约 1-2 分钟后网页更新
 4. 每周一周报生成后,weekly-report 自动串接 weekly-publish,把 `[x]` 汇总结果写入 `docs/data/weekly.json`,同样 push 后自动更新
+
+### ⚠️ Claude Code 工作目录与本地主目录不同步问题
+
+**原因**：Claude Code 每次任务都在 `.claude/worktrees/<分支名>/` 下创建独立 worktree，所有文件编辑和 git push 均在 worktree 内完成。主目录 `D:\Desktop\robotaxi-news` 不会自动感知这些变更（Cursor 直接在主目录工作，所以没有这个问题）。
+
+**规则：每次 git push 完成后，Claude 必须紧接着执行以下命令同步本地主目录：**
+
+```bash
+git -C "D:\Desktop\robotaxi-news" pull origin main
+```
+
+如果出现本地冲突（`Your local changes would be overwritten`），说明本地有过时的修改，先丢弃再拉取：
+
+```bash
+git -C "D:\Desktop\robotaxi-news" restore docs/data/daily.json   # 或冲突的具体文件
+git -C "D:\Desktop\robotaxi-news" pull origin main
+```
+
+**checklist（每次 push 后必做）**：
+- [ ] `git push origin <worktree-branch>:main` ✅ 推送成功
+- [ ] `git -C "D:\Desktop\robotaxi-news" pull origin main` ✅ 本地主目录已同步
 
 ### 网页功能
 
