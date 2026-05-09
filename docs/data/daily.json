@@ -56,32 +56,6 @@
       },
       {
         "id": "2026-05-09-005",
-        "company": "GM",
-        "company_slug": "gm",
-        "rating": 2,
-        "group": "国外",
-        "sub_group": "国外 OEM / Tier1 / 自动驾驶技术公司",
-        "title": "5月08日，自动驾驶软件代码已近乎全部由 AI 生成，研发模式转型。",
-        "summary_html": "<p>GM Authority 报道，<b>通用汽车（GM）</b>披露其自动驾驶部门的软件代码绝大部分已由 <b>AI 自动生成</b>，标志着 AI 编程在自动驾驶核心研发中的深度渗透。</p><p><b>意义</b>：这一转变有望大幅压缩 AV 软件的开发成本与迭代周期，也是 GM 在 Cruise 解散后重建自动驾驶研发能力的重要信号，反映出整个行业向 AI 驱动研发模式的快速转型。</p>",
-        "source_name": "GM Authority",
-        "source_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNU0tMS05kYlRVTUltc1pIZ0UtcEQzeUcxWm5fWExTb2hnTzRUTGlES3V2ZW9sa01uQThYajBsM25HY3U0UlFBVmhVMlh6ZkdWNW5acUV1dFBJRE4tclBOT0d5XzFDb0lvUVlUb2t4Y1BWNWlqMXFGRVlwdzJqMjlSVFpMSHJRbXk0bElTVEtfczl3bWJwUXpSVjdfeWVFYUNjNmRhWUxSTFROUG_SAasBQVVfeXFMTVNLTEtOZGJUVU1JbXNaSGdFLXBEM3lHMVpuX1hMU29oZ080VExpREt1dmVvbGtNbkE4WGowbDNuR2N1NFJRQVZoVTJYemZHVjVuWnFFdXRQSUROLXJQTk9HeV8xQ29Jb1FZVG9reGNQVjVpajFxRkVZcHcyajI5UlRaTEhyUW15NGxJU1RLX3M5d21icFF6UlY3X3llRWFDYzZkYVlMUkxUTlBv?oc=5",
-        "original_date": "2026-05-08"
-      },
-      {
-        "id": "2026-05-09-006",
-        "company": "Uber",
-        "company_slug": "uber",
-        "rating": 2,
-        "group": "国外",
-        "sub_group": "国外出行平台",
-        "title": "5月08日，CEO 称 Robotaxi 是“万亿美元”机遇，Waymo 当前未实质影响 Uber 业务。",
-        "summary_html": "<p>Yahoo Finance 报道，<b>Uber CEO Dara Khosrowshahi</b> 表示，Robotaxi 市场将是一个<b>“万亿美元”</b>级别的巨大机遇，同时强调 <b>Waymo</b> 的持续扩张目前并未对 Uber 的核心业务造成实质性冲击。</p><p><b>分析</b>：Uber CEO 的表态反映出 Uber 将自动驾驶视为共生而非纯竞争关系，与多合作方同步推进的战略相符。Waymo 对 Uber 的压力在市场层面尚处于“可控”范围，但长期影响仍需持续观察。</p>",
-        "source_name": "Yahoo Finance",
-        "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcWpYd3MxSXQtN3FHSE1zTE1GcVgtb3E5aWp4QV9QSlEzYnBSaHBTaUtiSUVoREhFYTRwaTNES254Zk1tV1NVMHljOU0tVWhRZzlkN2NMbGVJUlk5elk4TXVQaWZGMFp0Qm5Rb1o0OVdfY05abXJPeHQ3UHdJNEdEUVBnRGJ4cjVSdDQzVmhKbC1fZ0FEYjBod3Y1UnJCQkRFLUE?oc=5",
-        "original_date": "2026-05-08"
-      },
-      {
-        "id": "2026-05-09-007",
         "company": "Uber",
         "company_slug": "uber",
         "rating": 2,
@@ -94,7 +68,7 @@
         "original_date": "2026-05-08"
       },
       {
-        "id": "2026-05-09-008",
+        "id": "2026-05-09-006",
         "company": "萝卜快跑 (百度)",
         "company_slug": "apollo-go",
         "rating": 3,
@@ -107,7 +81,7 @@
         "original_date": "2026-05-08"
       },
       {
-        "id": "2026-05-09-009",
+        "id": "2026-05-09-007",
         "company": "小马智行 (Pony.ai)",
         "company_slug": "xiaoma",
         "rating": 3,
@@ -120,7 +94,7 @@
         "original_date": "2026-05-08"
       },
       {
-        "id": "2026-05-09-010",
+        "id": "2026-05-09-008",
         "company": "文远知行 (WeRide)",
         "company_slug": "wenyuan",
         "rating": 2,
@@ -133,7 +107,7 @@
         "original_date": "2026-05-08"
       },
       {
-        "id": "2026-05-09-011",
+        "id": "2026-05-09-009",
         "company": "文远知行 (WeRide)",
         "company_slug": "wenyuan",
         "rating": 2,
@@ -146,7 +120,7 @@
         "original_date": "2026-05-08"
       },
       {
-        "id": "2026-05-09-012",
+        "id": "2026-05-09-010",
         "company": "Momenta",
         "company_slug": "momenta",
         "rating": 2,
@@ -159,7 +133,7 @@
         "original_date": "2026-05-08"
       },
       {
-        "id": "2026-05-09-013",
+        "id": "2026-05-09-011",
         "company": "小鹏 (XPeng)",
         "company_slug": "xpeng",
         "rating": 2,
@@ -172,7 +146,7 @@
         "original_date": "2026-05-08"
       },
       {
-        "id": "2026-05-09-014",
+        "id": "2026-05-09-012",
         "company": "文远知行 (WeRide)",
         "company_slug": "wenyuan",
         "rating": 2,
