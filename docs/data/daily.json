@@ -1,5 +1,114 @@
 [
   {
+    "date": "2026-05-10",
+    "items": [
+      {
+        "id": "2026-05-10-001",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "rating": 3,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月9日，联合 Zoox 等头部 AV 公司致函参议员 Ted Cruz，要求美国制定全国统一联邦自动驾驶法规。",
+        "summary_html": "<p>MSN 报道，<b>Waymo</b>、<b>Zoox</b> 及多家自动驾驶领军企业于 <b>5月9日</b>联名致函参议员 <b>Ted Cruz</b>（参议院商务委员会主席），要求美国尽快出台<b>全国统一的联邦自动驾驶法规框架</b>，取代目前各州自行立法的碎片化局面。此次联名信是 AV 行业向华盛顿发出的最大规模政策倡议之一。</p><p><b>背景</b>：美国目前的 AV 监管权归各州，导致 Waymo、Cruise 等公司每进入一个新州都需单独申请许可。统一联邦框架一旦落地，将显著降低商业化门槛，对 Robotaxi 规模化扩张具有战略意义。</p>",
+        "source_name": "MSN",
+        "source_url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxPTXlSR25WVkZGNXZMZGNkZk4zdEJlRGRPMkVuUlZLU2Z1ajFjWFMydVBGQUZHeEdGcldqbzl1Vms1c05YSDRhUDZqNDVyazF6RklKamtnNjdDYTR5Y0FnNGhxVFNsTzNIc3IxS1lTcjcxT1ZmYzUtN0h6WkZwZ3NpYl8yV1RKalE0Sjd5bjhMMUhJR0VRR085c1NSR0NSRHNaSkNib1J0RXBLWW5nUzlERkM3NDI2SmszZDR4Y1JNSHdJZ2VyNmlfVl9QVDdfZ1p4LUMwblA2YnVjLTZZOXQ1bE5SMUFOczFVeWYwd2V4QW5Gb3UtZTE5dElNZktESEE0dzNIUkFCd1NjdWVVRVplaGxfS1pRTENseWRSZjhmU2RmaGRSUTJRZzh2R2F5azdiekpRNVR5UkRjSFZZak1iYVlBRVFCSGF0WEhEdGxXb3dvTlNfQUEzUGJMbkI1TklxUjdEcUw4S3dmZDlOeXo2ZXVEUHJiemJYckdtQkl1RGs3Tk4xemJvTnFoMTB3bmFwcnhHQmdhZjJ1dw?oc=5",
+        "original_date": "2026-05-09"
+      },
+      {
+        "id": "2026-05-10-002",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "rating": 3,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月9日，圣安东尼奥因强风暴临时暂停服务后恢复运营，成为首家公开披露极端天气应对机制的 Robotaxi 公司。",
+        "summary_html": "<p>kens5.com 报道，<b>Waymo</b> 的<b>圣安东尼奥</b>自动驾驶服务在遇到强风暴后短暂停运，随后于 <b>5月9日</b>正式恢复服务。Waymo 表示，停运决策依据了实时气象数据与安全评估系统，在风速和降水超过安全阈值时自动触发。</p><p><b>意义</b>：此次事件是 Waymo 在德克萨斯州首次公开的“极端天气→暂停→恢复”完整运营流程，验证了其对恶劣气候的自动响应能力。圣安东尼奥是 Waymo 在德州的重要扩张节点。</p>",
+        "source_name": "kens5.com",
+        "source_url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxNcm9TTDlITlM5NTBIU0RRc3JaWFhpajJfTngzVGxTSEhTblRVQ0dDanhVTXEzakVaQTlhVWlXZkdHbFllRUpVQVNVdWFIeW8wRlMwbTVta3ZidG9wOEZXZHBzMzJhU3FpMmdZeHFxUmt5M0RPYWFqc21acEpURUtKWUYxUFpXVVE1RXJDbU5YQUJyMlREdjczazNvR1dubVlHUnhobi1GR1ZXN3hNeDF5OTFnRHpYRXdEaTZUNnB2eDJkNDdTSU5fSGIxLXZUX2s3MmxNN3lWYmZ3dkNjU1FIYkpLNDB4NWszNkZZand5WlZsZFc4QmdtMjBPZkxWRkRJbFFkcjM3bXd5UDc0N2piOWdBUHRpVWZTbVN0NlpEQktiTGt1eWRYNnppSzB3UzNSYzVRWUFNbmw4WkdiRGRYNFR3ZjMxWDQ?oc=5",
+        "original_date": "2026-05-09"
+      },
+      {
+        "id": "2026-05-10-003",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月9日，获多项行业荣誉，Robotaxi 网络规模与安全透明度报告同步扩展。",
+        "summary_html": "<p>TipRanks 报道，<b>Waymo</b> 近日在多个行业评选中获得重要荣誉，同期其 Robotaxi 运营网络持续扩展，并发布更新版<b>安全透明度报告</b>，新增更多运营城市与事件处理数据的公开披露。</p><p><b>意义</b>：安全透明度报告是监管机构和保险公司评估 Robotaxi 合规性的重要参考，Waymo 的持续披露策略有助于建立行业安全基准。</p>",
+        "source_name": "TipRanks",
+        "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSUNBcHJ5eVZycklUbVRpeGNfRWpSVzhoUmRrSjB2MVBrTjNsTFFFd1FISHlSZTZfT3BwUUJNRllqc3FZMXM1cVFEOHNkYS1MX3NFc1NmTnRvTEdKdFpzUHlXcE1yNUhlUHREajk1dWhlamVWVWJRXzk5emU0VzJVd1RvNTZzVmtlME5vUmF2c1FwRGJpdTR0eTMzS0FTbzI4YUthQ0pnMVF3c1o0cmYzZXFvZXA5SXpyZFo4eG1Talg4SDQ?oc=5",
+        "original_date": "2026-05-09"
+      },
+      {
+        "id": "2026-05-10-004",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月9日，确认 FSD 将于 2026 年内全面向北美所有用户推送。",
+        "summary_html": "<p>Not a Tesla App 报道，<b>Tesla</b> 宣布 <b>FSD（监督版）</b>将在 <b>2026 年内</b>向北美全体用户开放推送，不再限于特定早期用户群。这意味着数百万 Tesla 车主将在今年内获得 FSD 使用权限。</p><p><b>背景</b>：当前 FSD 仍处于“监督版”阶段，大规模普及将为 Tesla 提供大量训练数据，加速向真正自动驾驶演进。与此同时，Tesla 正在多国推进监管审批，北美全量推送与海外合规进展形成协同。</p>",
+        "source_name": "Not a Tesla App",
+        "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOaGR3aEZLWVN5UUhkZDI0alRmbnozR3A3YTdfekdNY2lWNWhBN0dJZEJxWnRwVnRWNjNvbEpSSE13TGlYZ2pOczFmTUZIX3g4X1lyZDZodTRKbERjQ0NsdHJSVFlsWXY5ZHRuc0lrcUJsV04zVHRlc1N4Zm80YmEwY1FnY0xTY3Boc1V1TmNNbkc2QlVWOFJyR0lXVzAwN0ZHUHhhbFB3?oc=5",
+        "original_date": "2026-05-09"
+      },
+      {
+        "id": "2026-05-10-005",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月10日，与爱尔兰政府就 FSD 自动驾驶监管审批展开正式谈判。",
+        "summary_html": "<p>RTE.ie 报道，<b>Tesla</b> 正与<b>爱尔兰政府</b>就 <b>FSD 自动驾驶技术</b>的监管审批进行正式谈判，争取在爱尔兰合法部署 FSD，为欧盟其他市场的监管推进积累路径经验。</p><p><b>背景</b>：爱尔兰作为欧盟成员国，其监管决定将对欧盟整体 FSD 审批具有参考意义。此前 Tesla FSD 已获比利时法兰德斯初筛通过（05-09 日报），爱尔兰谈判是欧洲多国同步推进战略的组成部分。</p>",
+        "source_name": "RTE.ie",
+        "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBFTi13ZkFSWnNFZ3lTc3BwX04tcE9zTEVMS2w1dm4wMmhxMHhJT3dRdDd1cHZJaFhtTXhEbjVvSEtxMFlYQjFFOTJlenVWQW5CVGw1MkVySW1waThXNTVwU1dEY2N4eXZveVIxTFM3anBGRlpnSzJKMg?oc=5",
+        "original_date": "2026-05-10"
+      },
+      {
+        "id": "2026-05-10-006",
+        "company": "Wayve",
+        "company_slug": "wayve",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月9日，发布 LA-Pose 自监督感知技术突破，大幅提升无地图场景下的 3D 位姿估计精度。",
+        "summary_html": "<p>TipRanks 报道，<b>Wayve</b> 发布最新研究成果 <b>LA-Pose</b>，这是一种基于<b>自监督学习</b>的感知方法，在无高精度地图的情况下实现高精度 <b>3D 位姿估计</b>，对自动驾驶在陌生城市的泛化能力具有重要价值。</p><p><b>背景</b>：Wayve 是目前少数坚持“端到端 + 无地图”路线的 AV 公司之一。NVIDIA 已向 Wayve 进行战略投资，技术突破有助于巩固其技术可信度。</p>",
+        "source_name": "TipRanks",
+        "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNSTlqX0hQdWFWZlUyTGpoNXpaNkRoNXljOGt0bmE1UU9Fb2pydEJ5Yl9VcFFmM2xwZWJkTFdBRl9DWExfVkxtdTZjbWxiTjkzQlAzUDd5aUNsNEo1WFV2dmpPeE5ub2RfNm9sWkFjUDA0VXFSc0pHcXlJOEF6QUdCa29GT09JdVhzZHAtREw1dkJRR1k4QjZLWHRUbmdLam9iWnZ4TmV2UWJoRTkwY3RmcGNGQ2hlbUxKdE02aThsVE1wUlhQWDctQ1F2d0tpYi0zbEUzUg?oc=5",
+        "original_date": "2026-05-09"
+      },
+      {
+        "id": "2026-05-10-007",
+        "company": "MOIA (Volkswagen)",
+        "company_slug": "moia",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外出行平台",
+        "title": "5月9日，大众 ID.Buzz Robotaxi 正式进驻洛杉矶街道，北美扩张迈出关键一步。",
+        "summary_html": "<p>InsideEVs 报道，<b>大众（Volkswagen）</b>旁下出行服务品牌 <b>MOIA</b> 的 <b>ID.Buzz Robotaxi</b> 正式驶上<b>洛杉矶街道</b>，开始商业化运营测试。ID.Buzz 是大众专为 Robotaxi 场景设计的纯电动廂式车，其洛杉矶部署标志着欧洲 OEM 品牌主导的 Robotaxi 服务首次进入加州市场。</p><p><b>背景</b>：MOIA 此前主要在汉堡运营，洛杉矶是其北美市场的重要落地节点。与 Waymo、Nuro 走技术授权路线不同，MOIA 是 OEM 亲自下场做出行服务。</p>",
+        "source_name": "InsideEVs",
+        "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVnBCOFFaRFlDdFFJakpKYTA5Q0ZhUExWa25faUxINEdVYnZJaldGcVdDQXRoR3ozWmMyLW44U1RNZHVHUzBUQjZ3U3ZUOU9fNmpXYlpwQnFzejV2cFBFeHFNMUdLblM1NjlEbUhGUzZDUzRNaUdia21DcGwzY3ZjMHlwLXltV2VqZVE?oc=5",
+        "original_date": "2026-05-09"
+      },
+      {
+        "id": "2026-05-10-008",
+        "company": "曹操出行",
+        "company_slug": "caocao",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内出行平台",
+        "title": "5月10日，正式宣布进军 Robotaxi 赛道，推出国内首款原生定制 Robotaxi 车型。",
+        "summary_html": "<p>搜狐网报道，<b>曹操出行</b>正式宣布进入 <b>Robotaxi 商业化赛道</b>，并披露其已研发完成“<b>国内首款原生定制 Robotaxi 车型</b>”——即专为无人驾驶出行场景设计、而非由量产消费车改装的前装定制车型。这是国内出行平台中首家公开宣布以原生定制车型角逐 Robotaxi 市场的企业。</p><p><b>背景</b>：当前国内 Robotaxi 主流方案仍以后装改装为主，前装原生定制意味着更低的单车成本和更稳定的传感器集成。曹操出行背靠吉利系，具备整车研发与供应链资源。</p>",
+        "source_name": "搜狐网",
+        "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPem5hbmNva3dUTDVWbUYwN3NjQUcwRUJVZ28teTN4M3NjcVJaajJ1Q0tSTjNTLUVVbTlFT01zaWpmRmxDZ1ljeDdRU1pvcUxod0t4M1BiaUoyZ3I0Q2hUTGpISU5ZV053aDJKQ3JpMDhHQkFCdElGYTV5M2JFTjFnSzNSRDZXN01qdmp4bERyR2tXTWdjRHowcUc4LVM?oc=5",
+        "original_date": "2026-05-10"
+      }
+    ]
+  },
+  {
     "date": "2026-05-09",
     "items": [
       {
