@@ -1,5 +1,62 @@
 [
   {
+    "date": "2026-05-11",
+    "items": [
+      {
+        "id": "2026-05-11-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月10日，FSD 完成横贯美国 2833 英里零干预创纪录行程，多家媒体同步报道。",
+        "summary_html": "<p><b>Tesla FSD</b> 于 <b>5月10日</b>完成一次从美国东海岸至西海岸共计 <b>2833 英里</b>的横贯大陆行程，全程<b>零安全员干预</b>，刷新 FSD 单次横贯美国的里程与零干预记录。eletric-vehicles.com、Crypto Briefing 等多家媒体同步报道。</p><p><b>背景</b>：此前 Tesla FSD 累计行驶里程于 5月8日突破 100 亿英里（05-08 日报已录），本次单次横贯美国创纪录事件从能力维度补充了 FSD 在长途、多路况连续行驶中的表现。尽管系车主自发挑战而非 Tesla 官方宣布，多源媒体覆盖表明已超出爱好者圈层，成为 FSD 能力验证的公开信号。</p>",
+        "source_name": "eletric-vehicles.com",
+        "source_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPTlp4N3M3ZGdIdk9IcnNsalBJNjdrTTIxM1JZczFhS0RpNm5TLTVLVERuRU1QNUlKaWFmeUV3cFp4M2NQVk5CTUVrRkZwUFRNNjdESEt3TnZkMkt6MDVGRUZzODRTY3pZdGZlSTN4Zzg4RXpiNEd4X3RuVFdnaFlFZUlwY3pocF9hUWx3UVluVnk4T01lNEY3NVVUMXFDYkk0cjlFUEdVUzFPSEpkYU5ITjFadXlnSHp4a1E?oc=5",
+        "original_date": "2026-05-10"
+      },
+      {
+        "id": "2026-05-11-002",
+        "company": "文远知行",
+        "company_slug": "weride",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "5月10日，携手 Grab 在新加坡正式开启公开运营 Robotaxi 服务。",
+        "summary_html": "<p><b>文远知行（WeRide）</b>与东南亚出行平台巨头 <b>Grab</b> 合作，于 <b>5月10日</b>在<b>新加坡</b>正式启动<b>公开运营 Robotaxi</b> 服务，面向普通乘客开放预约乘坐。</p><p><b>背景</b>：此前（05-07 日报）已录入两家公司的新加坡 Robotaxi 首秀，本次为公开运营阶段的正式落地。新加坡监管宽松，是中国 L4 公司出海测试商业模式的理想市场。WeRide 近日还披露 Uber 持有其 1120 万 ADS（05-09 日报），Grab 与 Uber 的双平台布局显示文远知行国际商业化生态正在成形。</p>",
+        "source_name": "车家号",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE41MHY3Y29BZnUwUkN6OVRuUEE5T0Y3MTB2eHZZeVcwQUx2N1lmUVFxWmZCUFFpY0J5Q0dnYWNBNzk3OFdITG92a2NYRmd4YThGRk50QVhmZnA5U2s?oc=5",
+        "original_date": "2026-05-10"
+      },
+      {
+        "id": "2026-05-11-003",
+        "company": "小马智行",
+        "company_slug": "pony-ai",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "5月11日，Q1 2026 净亏损同比扩大 31.5%，Robotaxi 盈利路径承压。",
+        "summary_html": "<p><b>小马智行（Pony.ai）</b>发布 <b>Q1 2026 财报</b>，净亏损相较去年同期<b>扩大 31.5%</b>，显示 Robotaxi 商业化规模扩张与成本控制之间的矛盾仍未解决。</p><p><b>背景</b>：小马智行五一假期单量同比增 6 倍（05-09 日报）、年初披露广深城市单车 UE 盈利（05-01 日报）等积极运营数据已录入，但整体净亏损持续扩大，说明规模效应尚未传导至整体财务健康。净亏损扩大 31.5% 将影响投资人对其上市后盈利节点的预期，并可能影响融资节奏与战略激进程度。</p>",
+        "source_name": "凤凰网科技",
+        "source_url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1CemMyM2YxQ2dlTUVzdkRnNkQyZ015LXYyTUlpLUxTVG9TR3ZyMEp5eW9zN1Z5WDRpcTB4QUoxN0JEZ3M2c2lHc2tITk0?oc=5",
+        "original_date": "2026-05-11"
+      },
+      {
+        "id": "2026-05-11-004",
+        "company": "萝卜快跑",
+        "company_slug": "luobo-kuaipao",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "5月10日，李彦宏亲自回应萝卜快跑分拆传言，厘清百度 Robotaxi 战略归属。",
+        "summary_html": "<p>市场出现关于<b>百度</b>将<b>分拆萝卜快跑（Apollo Go）</b>独立上市或出售的传言，<b>百度 CEO 李彦宏</b>于 <b>5月10日</b>正式回应，就萝卜快跑与百度的战略关系作出说明。</p><p><b>背景</b>：萝卜快跑 5月9日遭武汉监管部门暂停发放新增 Robotaxi 牌照（05-09 日报），此后分拆传言发酵。李彦宏亲自回应说明议题已上升至公司最高管理层，无论是否认分拆还是探讨战略重组，均直接影响外界对百度 Robotaxi 战略定力的判断。</p>",
+        "source_name": "车家号",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBheTJZNnFzTE1fUXdtM0h0VUxsM1VibjFZZGVOcjFYUmpQUjVnV1dmbjI4Y2JXYXhlajlLeWdKTXJLZmlRbFJNUS1nb01TMHJiaDFhVlFjYUpRLXM?oc=5",
+        "original_date": "2026-05-10"
+      }
+    ]
+  },
+  {
     "date": "2026-05-10",
     "items": [
       {
