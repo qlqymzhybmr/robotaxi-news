@@ -1,0 +1,187 @@
+{
+  "week_id": "2026-W20",
+  "date_range": "0506-0511",
+  "title": "无人驾驶行业0506-0511重要新闻",
+  "generated_at": "2026-05-11T14:00:00+08:00",
+  "sections": [
+    {
+      "name": "国内",
+      "entries": [
+        {
+          "company": "萝卜快跑",
+          "company_slug": "luobo",
+          "headline_html": "<b>萝卜快跑：</b>李彦宏明确现阶段不分拆；大规模故障后监管层暂停新发运营牌照",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>5月7日</b>，百度 CEO <b>李彦宏</b>在公开场合表示现阶段不将<b>萝卜快跑</b>从百度拆分，称自动驾驶技术需依托百度 AI 基础设施（地图、云计算、大模型），<b>武汉</b>单城运营已初具盈利可能，全国扩张计划按时推进。"
+            },
+            {
+              "label": "b",
+              "content_html": "<b>5月8日</b>，萝卜快跑发生大规模系统故障后，OR 新媒体等媒体报道监管层已暂停向自动驾驶企业新发运营牌照，禁止运营商新增车辆或进入新城市，小马智行、文远知行等多家公司的新增扩张受到影响。"
+            }
+          ]
+        },
+        {
+          "company": "文远知行",
+          "company_slug": "wenyuan",
+          "headline_html": "<b>文远知行：</b>新加坡 Robotaxi 公开运营落地；联想＋吉利双线合作布局；CEO 阐明 L3/L4 路线；Uber 持有 1120 万 ADS",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>5月6日</b>，与 <b>Grab</b> 在<b>新加坡</b>正式开启公开商业 Robotaxi 服务，普通消费者可通过 Grab App 呼叫无人驾驶出租车，东南亚首个面向公众的商业化 Robotaxi 服务。"
+            },
+            {
+              "label": "b",
+              "content_html": "<b>5月6日</b>与<b>联想集团</b>宣布合作，联想为 WeRide 未来 <b>20 万辆</b> Robotaxi 提供算力基础设施；<b>5月8日</b>再与<b>吉利远程</b>深化合作，双方共同推进 Robotaxi 前装量产方案。"
+            },
+            {
+              "label": "c",
+              "content_html": "<b>5月8日</b>，CEO <b>韩旭</b>接受专访表示，L3 落地需由已具备 L4 纯无人商业运营能力的科技公司与车企共同实现，L3 与 L4 并非竞争关系。"
+            },
+            {
+              "label": "d",
+              "content_html": "<b>5月8日</b>，SEC 文件显示截至 2026 年 3 月 31 日，<b>Uber</b> 共持有文远知行 <b>1120 万份</b> ADS（美国存托股份）。"
+            }
+          ]
+        },
+        {
+          "company": "小马智行",
+          "company_slug": "xiaoma",
+          "headline_html": "<b>小马智行：</b>五一假期 Robotaxi 付费订单激增超六倍，承运演唱会观众约 3000 人",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "5月8日，官方公告，五一劳动节假期期间 Robotaxi 付费订单量同比激增超<b>六倍</b>，演唱会场景承运约 <b>3000 名</b>观众。"
+            }
+          ]
+        },
+        {
+          "company": "小鹏",
+          "company_slug": "xpeng",
+          "headline_html": "<b>小鹏：</b>第二代 VLA 智驾里程占比首破 50%；智驾误识别追尾事故曝光",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>5月7-8日</b>，宣布第二代 <b>VLA</b>（视觉-语言-动作大模型）在 OTA 推送首月内智驾里程占比突破 <b>50%</b>，CTO <b>刘先明</b>称超过一半行驶里程由 AI 完成，行业首次。"
+            },
+            {
+              "label": "b",
+              "content_html": "<b>5月7日</b>，视频曝光一起疑似小鹏智驾误识别引发的追尾事故，小鹏官方暂未回应，引发对纯视觉方案感知可靠性的讨论。"
+            }
+          ]
+        },
+        {
+          "company": "引望智能",
+          "company_slug": "yinwang",
+          "headline_html": "<b>引望智能：</b>北京车展发布 ADS 5，华为乾崑 2026 年研发投入超 180 亿元",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "5月7日，华为旗下<b>引望智能</b>在<b>北京车展</b>发布新一代智驾方案 <b>ADS 5</b>，CEO <b>靳玉志</b>明确表示「ADS 5 为自动驾驶而来」，华为<b>乾崑</b>智能汽车 2026 年研发投入预计超 <b>180 亿元</b>。"
+            }
+          ]
+        },
+        {
+          "company": "曹操出行",
+          "company_slug": "caocao",
+          "headline_html": "<b>曹操出行：</b>进军 Robotaxi 赛道，推出国内首款原生定制车型",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "5月10日，正式宣布进入 Robotaxi 赛道，披露已研发完成专为无人驾驶出行场景设计的原生定制 Robotaxi 车型，区别于当前主流后装改装方案，背靠<b>吉利</b>系整车研发与供应链资源，量产时间表暂未公布。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "国外",
+      "entries": [
+        {
+          "company": "Waymo",
+          "company_slug": "waymo",
+          "headline_html": "<b>Waymo：</b>单周行程突破 50 万次；联名致函 Ted Cruz 推动统一联邦法规；边界场景三连曝光；160 亿融资带动 PE 入场",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>5月8日</b>，宣布每周 Robotaxi 行程量突破 <b>50 万次</b>，较一年前同期翻番，日均约 <b>7 万次</b>行程。"
+            },
+            {
+              "label": "b",
+              "content_html": "<b>5月9日</b>，联合 <b>Zoox</b> 等多家自动驾驶企业联名致函参议员 <b>Ted Cruz</b>（参议院商务委员会主席），要求出台全国统一联邦自动驾驶法规框架，取代各州碎片化立法。"
+            },
+            {
+              "label": "c",
+              "content_html": "<b>5月6日</b>，一辆 Robotaxi 在积水路段停驶数分钟视频迅速传播（距<b>伦敦</b>首秀仅数月）；<b>5月7日</b>另一辆车在<b>圣何塞国际机场</b>将乘客行李带走；<b>5月9日</b><b>圣安东尼奥</b>因强风暴停运后恢复，首次公开披露极端天气完整应对流程。"
+            },
+            {
+              "label": "d",
+              "content_html": "<b>5月6日</b>，S&P Global 报告指出 Waymo <b>160 亿美元</b>融资带动 PE 基金入场 AV 赛道，预计未来 <b>12-18 个月</b>内将有数十亿美元级 PE/VC 新资金流入并引发并购整合。"
+            }
+          ]
+        },
+        {
+          "company": "Tesla",
+          "company_slug": "tesla",
+          "headline_html": "<b>Tesla：</b>FSD 欧洲多国审批推进；FSD 累计突破 100 亿英里并确认北美全量推送；Cybercab 跨州运输在路",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>5月6日</b>欧洲车主累计行驶 <b>1000 万公里</b>；<b>5月8日</b>比利时<b>法兰德斯</b>大区通过 FSD 初步筛查；<b>5月10日</b>与<b>爱尔兰</b>政府就 FSD 监管审批展开正式谈判，荷兰 RDW 批准后欧洲多国同步推进。"
+            },
+            {
+              "label": "b",
+              "content_html": "<b>5月7日</b>，FSD 累计行驶里程突破 <b>100 亿英里</b>（约 160 亿公里）；<b>5月9日</b>确认 FSD（监督版）将于 <b>2026 年内</b>向北美全体用户推送，不再限于特定早期用户群。"
+            },
+            {
+              "label": "c",
+              "content_html": "<b>5月7日</b>，一批全新 <b>Cybercab</b> 由 <b>Tesla Semi</b> 卡车跨州运输，外观完整、包装完好，结合 Tesla 公告的 <b>2026 年</b> <b>Austin</b> 首批商业运营计划，量产节奏可见。"
+            }
+          ]
+        },
+        {
+          "company": "Uber",
+          "company_slug": "uber",
+          "headline_html": "<b>Uber：</b>Rivian 订购 10,000 辆＋Motional 多城并进；Avride 遭 NHTSA 调查；监管策略转型",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>5月6日</b>与 <b>Rivian</b> 签订 <b>10,000 辆</b>电动 Robotaxi 订购协议，计划 <b>2027 年</b>前启动部署；<b>5月7日</b>联手 <b>Motional</b>（现代-Aptiv 合资）在美国多个主要城市正式推出无人驾驶出行服务。"
+            },
+            {
+              "label": "b",
+              "content_html": "<b>5月8日</b>，合作方 <b>Avride</b> 因在<b>德克萨斯州</b>至少 <b>16 起</b>碰撞事故遭 <b>NHTSA</b> 正式立案调查，是 Avride 首次受到联邦监管机构安全审查。"
+            },
+            {
+              "label": "c",
+              "content_html": "<b>5月7日</b>探索邀请网约车司机开启摄像头采集行车数据卖给 AV 公司；<b>5月8日</b> Axios 独家报道 Uber 从被动应对监管转向主动游说推进有利于 Robotaxi 的联邦立法。"
+            }
+          ]
+        },
+        {
+          "company": "Wayve",
+          "company_slug": "wayve",
+          "headline_html": "<b>Wayve：</b>NVIDIA 追投 36 亿美元；日产宣布 Robotaxi 合作；比尔·盖茨亲测背书",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "5月6日，<b>NVIDIA</b> 宣布新一轮战略投资 <b>36 亿美元</b>；<b>日产</b>正式宣布与 Wayve 展开 Robotaxi 联合研发，计划先在<b>英国</b>试点；<b>比尔·盖茨</b>亲身体验 Wayve 车辆后发文称「这是我见过最令人印象深刻的技术之一」，三项进展同日发布。"
+            }
+          ]
+        },
+        {
+          "company": "Nuro",
+          "company_slug": "nuro",
+          "headline_html": "<b>Nuro：</b>获加州无人驾驶载客运营许可，Nuro＋Lucid＋Uber 三方 Robotaxi 商业化开启",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "5月8日，Nuro 取得<b>加州 DMV</b> 颁发的无人驾驶载客运营许可证，将以 <b>Lucid Gravity</b> 为运营车型、通过 <b>Uber</b> 平台提供商业 Robotaxi 服务，继 Waymo 之后第二家获得该许可的企业。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
