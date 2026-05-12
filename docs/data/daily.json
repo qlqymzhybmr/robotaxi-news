@@ -66,6 +66,32 @@
         "source_name": "新浪网",
         "source_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1yZUpVb2dfVzA1eHQweXFNT0xkMEVVNlFFdm1KMkRWS2RXNjcyLUN3ZWFncXRfWTBoc3A2ZUtlS0g1NFM0SG5nbzhVdTBXRFlLSlMtUnQyWjJIdzlxRms4X2o4NA?oc=5",
         "original_date": "2026-05-12"
+      },
+      {
+        "id": "2026-05-12-006",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 1,
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1",
+        "title": "5月11日，FSD 欧洲又一新国酝酿审批，欧洲多国推进并行",
+        "summary_html": "<p>Teslarati 报道，<b>Tesla FSD</b> 在欧洲"又一新国家"进入监管审批考量，具体国名未指明。此前已知荷兰 RDW 完成批准（05-08 日报）、比利时法兰德斯大区进入联邦评估、爱尔兰展开正式谈判（05-10 日报），本次为上述国家之外的新增进展。</p>",
+        "source_name": "Teslarati",
+        "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOSnVKaG1yTVViazQ3NkFBajJOV3QtM1Fza0VJRmt4dll5NG5WUmctSnFsVl9TT3d1ODBHLVdIV0l5MEs3d0U2b2N0Q005UGVWbW1Ed0pWYldRTnZneC1WcXUwcm1yaW5DUFVjZFJMalhRSWo1T01QUmpJd3RWLUlPa0xERzhHQmkxcGo5aTg4cUZFZWszbS1faUZ0c1ltN0NWQ1Vj?oc=5",
+        "original_date": "2026-05-11"
+      },
+      {
+        "id": "2026-05-12-007",
+        "company": "萝卜快跑",
+        "company_slug": "luobo",
+        "rating": 1,
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "5月11日，武汉车辆集体故障停驶\"直接变成路障\"，媒体深度跟进",
+        "summary_html": "<p>车家号报道，武汉多辆<b>萝卜快跑</b>无人驾驶出租车发生系统故障停驶于道路中央，媒体以"直接变成路障"形容现场情况，引发舆论对故障影响正常交通通行的关注。</p><p><b>背景</b>：本次为 5月8日萝卜快跑大规模系统故障的后续视觉化报道，核心事件（系统故障 + 监管暂停新发牌照）已于 05-08、05-09 日报录入，本次属跟进媒体角度，提供现场路障化的具体场景描述，不作为独立事件处理。</p>",
+        "source_name": "车家号",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA1NEhaQ0FNcTlfb0lPS2E3SWRRVk15dVBmelVnNDBrcjlrQlFSc0FVODMyeVRtc1VtaVp3cDRRb1drRk1pT21JN2F5RUJtbFV6UUlGbTZweGhWSFE?oc=5",
+        "original_date": "2026-05-11"
       }
     ]
   },

@@ -2,7 +2,9 @@
 
 > **目标读者:Claude 本身**。由 daily-fetch 的 Phase 2 完成后自动串接,不需要用户手动触发。
 >
-> 任务:把今日 daily 文件里 rating ≥ 2(⭐⭐ 或 ⭐⭐⭐)的条目写入 `docs/data/daily.json`,供 GitHub Pages 网页展示。
+> 任务:把今日 daily 文件里**所有条目（全量推送，不限 rating）**写入 `docs/data/daily.json`,供 GitHub Pages 网页展示与后续选稿使用。
+>
+> **⚠️ 从 2026-05-12 起执行全量推送，⭐ 一星条目也写入 JSON，不再过滤。**
 
 ---
 
@@ -80,7 +82,7 @@
 
 读取 `data/daily/YYYY-MM-DD.md`(今天日期)。如果文件不存在,报错停止。
 
-### 步骤 2:扫描并提取 rating ≥ 2 的条目
+### 步骤 2:扫描并提取所有新闻条目（全量）
 
 逐行扫描 daily 文件。识别格式:
 ```
@@ -93,28 +95,28 @@
 **评级识别**:
 - `⭐⭐⭐` → rating = 3
 - `⭐⭐` → rating = 2
-- `⭐` → rating = 1(跳过,不进入 JSON)
+- `⭐` → rating = 1
 
-只提取 rating ≥ 2 的条目(⭐⭐ 和 ⭐⭐⭐)。
+**提取所有条目，不按 rating 过滤**。rating 仅作为元数据保留在 JSON 中，供网页排序和展示使用。
 
-**⚠️ 严格规则：Daily Publish 只看 rating，完全忽略勾选状态**
+**⚠️ 严格规则：Daily Publish 完全忽略 rating 和勾选状态**
 
-- **必须**：提取所有 rating ≥ 2 的条目，无论是 `[x]` 还是 `[ ]`
-- **禁止**：因为某条新闻未被勾选 `[ ]` 就跳过它（只要 rating ≥ 2）
-- **禁止**：因为某条新闻被勾选 `[x]` 就强制包含它（如果 rating = 1）
-- **原则**：Daily 的筛选标准是 rating；Weekly 的筛选标准是 `[x]` 勾选
-- **违反此规则将导致网页展示不完整或包含低质量内容**
+- **必须**：提取 daily 文件里的所有条目，无论 `[x]` / `[ ]`、⭐ / ⭐⭐ / ⭐⭐⭐
+- **禁止**：因为 rating = 1 跳过某条目
+- **禁止**：因为 `[ ]` 未勾选跳过某条目
+- **原则**：Daily Publish 全量写入；选稿（哪些进周报）由用户在选稿 UI 或 `docs/data/selections.json` 中决定
+- **违反此规则将导致低 rating 条目无法在选稿 UI 中显示**
 
 ### 步骤 2.5:发布前的硬过滤(防止旧闻污染网页)
 
-在转换 markdown 为 JSON 之前,对每条 rating ≥ 2 的新闻执行:
+在转换 markdown 为 JSON 之前,对每条新闻执行:
 
 1. 读取条目里的"**原始发布日期**"字段(格式 YYYY-MM-DD)
 2. 计算这个日期距离今天(当前运行日期)相隔多少天
 3. **如果超过 2 天,丢弃这条,不写入 JSON**(给 ±1 天的容错,允许昨天、今天、明天的新闻)
 4. 如果没有"**原始发布日期**"字段,**也丢弃**
 
-最后输出报告:"X 条因日期不在窗口内被过滤,Y 条通过日期检查并写入 JSON"
+最后输出报告:"X 条因日期不在窗口内被过滤,Y 条通过日期检查全量写入 JSON（含所有 rating）"
 
 ### 步骤 3:从 markdown 结构提取元数据
 
@@ -185,7 +187,7 @@
 ### 步骤 7:输出提示
 
 ```
-今日精选 X 条(⭐⭐⭐ x 条 / ⭐⭐ x 条)已写入 docs/data/daily.json。
+今日全量 X 条（⭐⭐⭐ x 条 / ⭐⭐ x 条 / ⭐ x 条）已写入 docs/data/daily.json。
 
 请运行以下命令发布到 GitHub Pages:
   git add -A && git commit -m "daily YYYY-MM-DD" && git push
@@ -195,6 +197,6 @@
 
 ## 注意事项
 
-- Daily 只看 rating，不管用户有没有勾 `[x]`；Weekly 才看勾选。
-- 如果今日 daily 没有任何 ⭐⭐+ 条目,输出提示"今日无 ⭐⭐+ 精选,docs/data/daily.json 未更改。"
+- Daily Publish 全量写入，不管 rating 也不管用户有没有勾 `[x]`；选稿（哪些进周报）由用户在 `docs/data/selections.json` 中决定。
+- 如果今日 daily 没有任何条目（文件为空）,输出提示"今日无条目,docs/data/daily.json 未更改。"
 - summary_html 保留原文细节,不要压缩或改写

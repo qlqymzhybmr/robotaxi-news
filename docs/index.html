@@ -21,6 +21,7 @@
       <nav class="flex gap-1">
         <button id="tab-daily" class="px-4 py-1.5 rounded-full text-sm font-medium transition-colors" onclick="switchTab('daily')">每日精选</button>
         <button id="tab-weekly" class="px-4 py-1.5 rounded-full text-sm font-medium transition-colors" onclick="switchTab('weekly')">周报</button>
+        <button id="tab-selections" class="px-4 py-1.5 rounded-full text-sm font-medium transition-colors" onclick="switchTab('selections')">选稿</button>
       </nav>
     </div>
 
@@ -56,32 +57,54 @@
       </div>
       <div id="weekly-active-filters" class="hidden mt-2 flex flex-wrap gap-2"></div>
     </div>
+
+    <div id="selections-filters" class="hidden pb-3">
+      <div class="flex flex-wrap items-center gap-2">
+        <label class="text-sm text-gray-600">日期范围</label>
+        <input type="date" id="sel-date-from" class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" onchange="renderSelections()">
+        <span class="text-sm text-gray-400">—</span>
+        <input type="date" id="sel-date-to" class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" onchange="renderSelections()">
+        <button onclick="renderSelections()" class="px-3 py-1.5 text-sm bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">刷新</button>
+      </div>
+    </div>
   </div>
 </header>
 
 <main class="max-w-4xl mx-auto px-4 py-6">
   <div id="daily-content"></div>
   <div id="weekly-content" class="hidden"></div>
+  <div id="selections-content" class="hidden"></div>
 </main>
 
 <script>
 let dailyData = [];
 let weeklyData = [];
+let selectionsData = {};
+let pendingSelections = {};
 let selectedCompanies = new Set();
 let currentTab = 'daily';
 let weeklyView = 'classic';
 
+const GH_OWNER = 'qlqymzhybmr';
+const GH_REPO = 'robotaxi-news';
+const SELECTIONS_PATH = 'docs/data/selections.json';
+
 async function init() {
   if (location.hash.startsWith('#weekly')) currentTab = 'weekly';
-  const [d, w] = await Promise.all([fetchJSON('data/daily.json'), fetchJSON('data/weekly.json')]);
-  dailyData = d;
-  weeklyData = w;
+  else if (location.hash.startsWith('#selections')) currentTab = 'selections';
+  const [d, w, s] = await Promise.all([fetchJSON('data/daily.json'), fetchJSON('data/weekly.json'), fetchJSON('data/selections.json')]);
+  dailyData = Array.isArray(d) ? d : [];
+  weeklyData = Array.isArray(w) ? w : [];
+  selectionsData = (s && typeof s === 'object' && !Array.isArray(s)) ? s : {};
+  pendingSelections = JSON.parse(JSON.stringify(selectionsData));
   buildDateFilter();
   buildCompanyFilter();
   buildWeekFilter();
+  initSelectionsDates();
   applyTabUI();
   if (currentTab === 'daily') restoreDailyHash();
-  else restoreWeeklyHash();
+  else if (currentTab === 'weekly') restoreWeeklyHash();
+  else renderSelections();
 }
 
 async function fetchJSON(path) {
@@ -98,19 +121,25 @@ function switchTab(tab) {
   currentTab = tab;
   applyTabUI();
   if (tab === 'daily') applyFilters();
-  else renderWeekly();
+  else if (tab === 'weekly') renderWeekly();
+  else renderSelections();
 }
 
 function applyTabUI() {
   const isDaily = currentTab === 'daily';
+  const isWeekly = currentTab === 'weekly';
+  const isSelections = currentTab === 'selections';
   document.getElementById('daily-filters').classList.toggle('hidden', !isDaily);
   document.getElementById('daily-content').classList.toggle('hidden', !isDaily);
-  document.getElementById('weekly-filters').classList.toggle('hidden', isDaily);
-  document.getElementById('weekly-content').classList.toggle('hidden', isDaily);
   document.getElementById('daily-active-filters').classList.toggle('hidden', !isDaily || document.getElementById('daily-active-filters').childElementCount === 0);
+  document.getElementById('weekly-filters').classList.toggle('hidden', !isWeekly);
+  document.getElementById('weekly-content').classList.toggle('hidden', !isWeekly);
+  document.getElementById('selections-filters').classList.toggle('hidden', !isSelections);
+  document.getElementById('selections-content').classList.toggle('hidden', !isSelections);
   document.getElementById('tab-daily').className = 'px-4 py-1.5 rounded-full text-sm font-medium transition-colors ' + (isDaily ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
-  document.getElementById('tab-weekly').className = 'px-4 py-1.5 rounded-full text-sm font-medium transition-colors ' + (!isDaily ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
-  if (!isDaily) updateWeeklyViewUI();
+  document.getElementById('tab-weekly').className = 'px-4 py-1.5 rounded-full text-sm font-medium transition-colors ' + (isWeekly ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
+  document.getElementById('tab-selections').className = 'px-4 py-1.5 rounded-full text-sm font-medium transition-colors ' + (isSelections ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
+  if (isWeekly) updateWeeklyViewUI();
 }
 
 function buildDateFilter() {
@@ -464,6 +493,184 @@ function escAttr(str) {
   if (!str) return '';
   return str.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
+
+// ─── Selections tab ──────────────────────────────────────────────────────────
+
+function initSelectionsDates() {
+  const today = new Date();
+  const pad = (n) => String(n).padStart(2, '0');
+  const fmt = (d) => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  const sevenAgo = new Date(today); sevenAgo.setDate(today.getDate() - 6);
+  const toEl = document.getElementById('sel-date-to');
+  const fromEl = document.getElementById('sel-date-from');
+  if (toEl && !toEl.value) toEl.value = fmt(today);
+  if (fromEl && !fromEl.value) fromEl.value = fmt(sevenAgo);
+}
+
+function getSelDateRange() {
+  const from = document.getElementById('sel-date-from').value;
+  const to = document.getElementById('sel-date-to').value;
+  return { from, to };
+}
+
+function getDailyItemsInRange(from, to) {
+  const result = [];
+  dailyData.forEach((day) => {
+    if (day.date >= from && day.date <= to) {
+      (day.items || []).forEach((item) => result.push(item));
+    }
+  });
+  return result;
+}
+
+function isItemSelected(itemId) {
+  const date = itemId.slice(0, 10);
+  return (pendingSelections[date] || []).includes(itemId);
+}
+
+function toggleItemSelection(itemId, checked) {
+  const date = itemId.slice(0, 10);
+  if (!pendingSelections[date]) pendingSelections[date] = [];
+  if (checked) {
+    if (!pendingSelections[date].includes(itemId)) pendingSelections[date].push(itemId);
+  } else {
+    pendingSelections[date] = pendingSelections[date].filter((id) => id !== itemId);
+    if (pendingSelections[date].length === 0) delete pendingSelections[date];
+  }
+  updateSelSaveBtn();
+}
+
+function updateSelSaveBtn() {
+  const orig = JSON.stringify(selectionsData);
+  const pend = JSON.stringify(pendingSelections);
+  const btn = document.getElementById('sel-save-btn');
+  if (btn) btn.classList.toggle('opacity-50', orig === pend);
+}
+
+function renderSelections() {
+  const container = document.getElementById('selections-content');
+  const { from, to } = getSelDateRange();
+  if (!from || !to) { container.innerHTML = emptyState('请选择日期范围'); return; }
+
+  const items = getDailyItemsInRange(from, to);
+  if (items.length === 0) { container.innerHTML = emptyState('该日期范围内暂无每日精选数据'); return; }
+
+  // Group by date
+  const byDate = {};
+  items.forEach((item) => {
+    const d = item.date || item.id.slice(0, 10);
+    if (!byDate[d]) byDate[d] = [];
+    byDate[d].push(item);
+  });
+
+  const totalSel = items.filter((i) => isItemSelected(i.id)).length;
+
+  const sectionsHtml = Object.keys(byDate).sort((a,b) => b.localeCompare(a)).map((date) => {
+    const dayItems = byDate[date].slice().sort((a, b) => (b.rating||0) - (a.rating||0));
+    const rows = dayItems.map((item) => {
+      const checked = isItemSelected(item.id) ? 'checked' : '';
+      const stars = '★'.repeat(Math.max(0, Number(item.rating||0))) + '☆'.repeat(Math.max(0, 3-Number(item.rating||0)));
+      const ratingColor = (item.rating||0) >= 3 ? 'text-orange-500' : (item.rating||0) >= 2 ? 'text-yellow-500' : 'text-gray-400';
+      return `<label class="flex items-start gap-3 p-3 rounded-lg border border-gray-100 bg-white hover:bg-blue-50 cursor-pointer transition-colors group">
+        <input type="checkbox" class="mt-1 w-4 h-4 rounded accent-blue-500 shrink-0" ${checked} onchange="toggleItemSelection('${escAttr(item.id)}', this.checked)">
+        <div class="flex-1 min-w-0">
+          <div class="flex flex-wrap gap-1.5 mb-1">
+            <span class="text-xs px-1.5 py-0.5 rounded bg-blue-50 text-blue-700">${escHtml(item.sub_group||'')}</span>
+            <span class="text-xs px-1.5 py-0.5 rounded bg-gray-100 text-gray-600">${escHtml(item.company||'')}</span>
+            <span class="text-xs ${ratingColor} font-medium">${stars}</span>
+          </div>
+          <p class="text-sm text-gray-800 leading-snug">${escHtml(item.title||'')}</p>
+        </div>
+      </label>`;
+    }).join('');
+    const daySel = dayItems.filter((i) => isItemSelected(i.id)).length;
+    return `<section class="mb-6">
+      <h3 class="text-sm font-semibold text-gray-600 mb-2 flex items-center gap-2">
+        <span>${formatDate(date)}</span>
+        <span class="text-xs font-normal text-gray-400">${daySel}/${dayItems.length} 已选</span>
+      </h3>
+      <div class="space-y-2">${rows}</div>
+    </section>`;
+  }).join('');
+
+  const pat = localStorage.getItem('gh_pat') || '';
+  const patMasked = pat ? pat.slice(0,4) + '****' + pat.slice(-4) : '';
+
+  container.innerHTML = `
+    <div class="bg-white rounded-xl border border-gray-100 p-4 mb-4 flex flex-wrap items-center justify-between gap-3">
+      <div class="text-sm text-gray-600">已选 <span class="font-semibold text-gray-900">${totalSel}</span> / ${items.length} 条</div>
+      <div class="flex items-center gap-2">
+        <button id="sel-save-btn" class="px-4 py-1.5 text-sm bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors font-medium" onclick="saveSelections()">保存选稿到 GitHub</button>
+      </div>
+    </div>
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-4 text-sm text-amber-800">
+      <b>GitHub PAT 设置</b>（一次性，存于 localStorage）：
+      <div class="flex gap-2 mt-2">
+        <input type="password" id="gh-pat-input" placeholder="ghp_xxxx..." value="${escAttr(pat)}" class="flex-1 border border-amber-300 rounded px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+        <button onclick="savePAT()" class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors">保存 PAT</button>
+        ${patMasked ? `<span class="self-center text-xs text-amber-700">当前：${escHtml(patMasked)}</span>` : ''}
+      </div>
+      <p class="mt-1.5 text-xs text-amber-700">PAT 需要 <code>contents:write</code> 权限（仅本 repo）。<a href="https://github.com/settings/tokens/new" target="_blank" class="underline">创建 PAT</a></p>
+    </div>
+    <div id="sel-status" class="hidden mb-3"></div>
+    ${sectionsHtml}
+  `;
+  updateSelSaveBtn();
+}
+
+function savePAT() {
+  const val = (document.getElementById('gh-pat-input').value || '').trim();
+  if (!val) { alert('PAT 不能为空'); return; }
+  localStorage.setItem('gh_pat', val);
+  renderSelections();
+}
+
+async function saveSelections() {
+  const token = localStorage.getItem('gh_pat') || '';
+  if (!token) { showSelStatus('error', '请先填写并保存 GitHub PAT'); return; }
+
+  showSelStatus('info', '正在保存到 GitHub…');
+  const btn = document.getElementById('sel-save-btn');
+  if (btn) { btn.disabled = true; btn.textContent = '保存中…'; }
+
+  try {
+    const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${SELECTIONS_PATH}`;
+    const headers = { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' };
+
+    // Get current file SHA
+    let sha = '';
+    const getRes = await fetch(apiBase, { headers });
+    if (getRes.ok) { const fd = await getRes.json(); sha = fd.sha || ''; }
+    else if (getRes.status !== 404) throw new Error(`GitHub API ${getRes.status}: ${await getRes.text()}`);
+
+    const content = JSON.stringify(pendingSelections, null, 2) + '\n';
+    const encoded = btoa(unescape(encodeURIComponent(content)));
+    const body = { message: 'update selections', content: encoded };
+    if (sha) body.sha = sha;
+
+    const putRes = await fetch(apiBase, { method: 'PUT', headers, body: JSON.stringify(body) });
+    if (!putRes.ok) throw new Error(`GitHub API PUT ${putRes.status}: ${await putRes.text()}`);
+
+    selectionsData = JSON.parse(JSON.stringify(pendingSelections));
+    showSelStatus('success', '✓ 选稿已保存到 GitHub（运行 git pull 后可在本地使用）');
+  } catch (err) {
+    showSelStatus('error', '保存失败：' + err.message);
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = '保存选稿到 GitHub'; }
+    updateSelSaveBtn();
+  }
+}
+
+function showSelStatus(type, msg) {
+  const el = document.getElementById('sel-status');
+  if (!el) return;
+  el.classList.remove('hidden');
+  const colors = { success: 'bg-green-50 border-green-200 text-green-800', error: 'bg-red-50 border-red-200 text-red-800', info: 'bg-blue-50 border-blue-200 text-blue-800' };
+  el.className = `mb-3 p-3 rounded-lg border text-sm ${colors[type] || colors.info}`;
+  el.textContent = msg;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
 
 init();
 </script>
