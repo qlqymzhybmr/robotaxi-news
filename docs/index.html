@@ -596,26 +596,42 @@ function renderSelections() {
   const pat = localStorage.getItem('gh_pat') || '';
   const patMasked = pat ? pat.slice(0,4) + '****' + pat.slice(-4) : '';
 
+  const patBlock = pat
+    ? `<div class="flex items-center justify-between px-3 py-2 mb-4 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-500">
+        <span>🔑 GitHub PAT 已设置 <span class="font-mono text-xs text-gray-400">${escHtml(patMasked)}</span></span>
+        <button onclick="togglePATExpand()" class="text-xs text-blue-500 hover:text-blue-700 underline">修改</button>
+       </div>
+       <div id="pat-expand" class="hidden bg-amber-50 border border-amber-200 rounded-xl p-3 mb-4 text-sm text-amber-800">
+         <div class="flex gap-2">
+           <input type="password" id="gh-pat-input" placeholder="ghp_xxxx..." value="${escAttr(pat)}" class="flex-1 border border-amber-300 rounded px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+           <button onclick="savePAT()" class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors">保存</button>
+         </div>
+         <p class="mt-1.5 text-xs text-amber-700">PAT 需要 <code>contents:write</code> 权限（仅本 repo）。<a href="https://github.com/settings/tokens/new" target="_blank" class="underline">创建 PAT</a></p>
+       </div>`
+    : `<div class="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-4 text-sm text-amber-800">
+        <b>GitHub PAT 设置</b>（一次性，存于 localStorage）：
+        <div class="flex gap-2 mt-2">
+          <input type="password" id="gh-pat-input" placeholder="ghp_xxxx..." class="flex-1 border border-amber-300 rounded px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+          <button onclick="savePAT()" class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors">保存 PAT</button>
+        </div>
+        <p class="mt-1.5 text-xs text-amber-700">PAT 需要 <code>contents:write</code> 权限（仅本 repo）。<a href="https://github.com/settings/tokens/new" target="_blank" class="underline">创建 PAT</a></p>
+       </div>`;
+
   container.innerHTML = `
     <div class="bg-white rounded-xl border border-gray-100 p-4 mb-4 flex flex-wrap items-center justify-between gap-3">
       <div class="text-sm text-gray-600">已选 <span class="font-semibold text-gray-900">${totalSel}</span> / ${items.length} 条</div>
-      <div class="flex items-center gap-2">
-        <button id="sel-save-btn" class="px-4 py-1.5 text-sm bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors font-medium" onclick="saveSelections()">保存选稿到 GitHub</button>
-      </div>
+      <button id="sel-save-btn" class="px-4 py-1.5 text-sm bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors font-medium" onclick="saveSelections()">保存选稿到 GitHub</button>
     </div>
-    <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-4 text-sm text-amber-800">
-      <b>GitHub PAT 设置</b>（一次性，存于 localStorage）：
-      <div class="flex gap-2 mt-2">
-        <input type="password" id="gh-pat-input" placeholder="ghp_xxxx..." value="${escAttr(pat)}" class="flex-1 border border-amber-300 rounded px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
-        <button onclick="savePAT()" class="px-3 py-1 text-sm bg-amber-500 text-white rounded hover:bg-amber-600 transition-colors">保存 PAT</button>
-        ${patMasked ? `<span class="self-center text-xs text-amber-700">当前：${escHtml(patMasked)}</span>` : ''}
-      </div>
-      <p class="mt-1.5 text-xs text-amber-700">PAT 需要 <code>contents:write</code> 权限（仅本 repo）。<a href="https://github.com/settings/tokens/new" target="_blank" class="underline">创建 PAT</a></p>
-    </div>
+    ${patBlock}
     <div id="sel-status" class="hidden mb-3"></div>
     ${sectionsHtml}
   `;
   updateSelSaveBtn();
+}
+
+function togglePATExpand() {
+  const el = document.getElementById('pat-expand');
+  if (el) el.classList.toggle('hidden');
 }
 
 function savePAT() {
