@@ -169,20 +169,41 @@
 
 ### 步骤 6:写回 docs/data/daily.json
 
-把更新后的数组写回文件,格式化为易读的 JSON(2空格缩进)。
+**强制使用 Python 写入**，禁止用 Edit 工具直接拼 JSON 字符串：
 
-**⚠️ 重要:JSON 字符串转义规则**
+```python
+import json
 
-在写入 JSON 时,必须正确转义字符串中的特殊字符,特别是引号:
-- 中文引号 `"` 和 `"` 必须转义为 `\"`
-- 英文双引号 `"` 必须转义为 `\"`
-- 示例:
-  - ❌ 错误: `"title": "包含"Hey, Grok"语音助手"`
-  - ✅ 正确: `"title": "包含\"Hey, Grok\"语音助手"`
-  - ❌ 错误: `"summary_html": "<p>星际贯穿式"大"蓝灯</p>"`
-  - ✅ 正确: `"summary_html": "<p>星际贯穿式\"大\"蓝灯</p>"`
+# 构建好 Python 对象后，用 json.dumps 序列化——它会自动处理所有转义
+entry = {
+    "date": "YYYY-MM-DD",
+    "items": [...]   # Python dict，字符串里的引号直接写，不需要手动加反斜杠
+}
 
-如果不转义,会导致 JSON 解析失败,网页无法正常显示数据。
+# 读取现有文件
+with open("docs/data/daily.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
+
+# 插入/替换
+data = [e for e in data if e["date"] != entry["date"]]
+data.insert(0, entry)
+
+# 写回——json.dumps 负责所有转义，永远不会出语法错误
+with open("docs/data/daily.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+```
+
+**为什么必须用 Python**：Edit 工具写的是字面字符，`"又一新国家"` 里的引号会原样写进去变成非法 JSON。`json.dumps` 会自动把 `"` 转义为 `\"`，不需要人工干预。
+
+### 步骤 6.5:写入后强制验证
+
+每次写完立刻验证，发现错误立即停止，不要继续 commit：
+
+```bash
+python -c "import json; json.load(open('docs/data/daily.json', encoding='utf-8')); print('JSON OK')"
+```
+
+如果输出 `JSON OK` 才进入步骤 7。如果抛出 `JSONDecodeError`，报错停止，修复后重跑步骤 6。
 
 ### 步骤 7:输出提示
 
@@ -200,3 +221,4 @@
 - Daily Publish 全量写入，不管 rating 也不管用户有没有勾 `[x]`；选稿（哪些进周报）由用户在 `docs/data/selections.json` 中决定。
 - 如果今日 daily 没有任何条目（文件为空）,输出提示"今日无条目,docs/data/daily.json 未更改。"
 - summary_html 保留原文细节,不要压缩或改写
+- **⚠️ 禁止用 Edit 工具手动拼 JSON 字符串**：必须用 Python `json.dump()` 写入，写完必须跑步骤 6.5 的验证命令，验证通过才能 commit
