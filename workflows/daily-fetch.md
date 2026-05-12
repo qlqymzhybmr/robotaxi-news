@@ -252,6 +252,16 @@ RSS 的 `pubDate` 不可靠——Google News 会把旧文章重新推到 feed �
 - 连续 3 个 URL fetch 失败:提示用户网络可能有问题,询问是否继续
 - 同一个公司连续 3 天抓取失败:在日志中明确提示 "必要时启用 archive/legacy-fetch/sources.md 做应急补漏"
 
+### Twitter Auth Token 失效检测
+读取 JSON 后，检查 `errors` 列表中是否含有 `TWITTER_AUTH_EXPIRED` 字样：
+- **有**：在 daily 文件末尾 ⚠️ 区域用醒目格式提示：
+  ```
+  ⚠️ **[紧急] Twitter Auth Token 已失效！**
+  请立即到 Railway → rsshub 服务 → Variables → 更新 `TWITTER_AUTH_TOKEN` 的值。
+  步骤：DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value。
+  ```
+- **无**：正常继续，无需提示
+
 ### 搜索结果不足
 - 如果某家公司搜索返回 0 结果,不要重试,直接标记为"无相关新闻"
 - 如果搜索返回结果但日期都不在窗口内,同样标记"无相关新闻"

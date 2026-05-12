@@ -30,18 +30,26 @@ class DirectFeed:
     url: str
 
 
+DIRECT_FEED_SECTIONS = {"## 直接订阅 RSS", "## X（Twitter）RSS 订阅（via 自部署 RSSHub）"}
+
+
 def parse_direct_feeds(path: Path) -> List[DirectFeed]:
-    """Parse the '## 直接订阅 RSS' section from competitors.md."""
+    """Parse all direct-feed sections from competitors.md.
+    Recognized sections: '## 直接订阅 RSS' and '## X（Twitter）RSS 订阅（via 自部署 RSSHub）'
+    """
     text = path.read_text(encoding="utf-8")
     feeds: List[DirectFeed] = []
     in_section = False
     for raw in text.splitlines():
         line = raw.strip()
-        if line.startswith("## 直接订阅 RSS"):
+        # Enter a recognized section
+        if any(line.startswith(s) for s in DIRECT_FEED_SECTIONS):
             in_section = True
             continue
-        if in_section and line.startswith("## "):
-            break
+        # Leave section on any other ## heading (but keep scanning for more sections)
+        if line.startswith("## "):
+            in_section = False
+            continue
         if in_section and line.startswith("-") and "|" in line:
             parts = [p.strip() for p in line.lstrip("-").split("|")]
             if len(parts) < 4:
@@ -54,6 +62,42 @@ def parse_direct_feeds(path: Path) -> List[DirectFeed]:
                 url=url.strip(),
             ))
     return feeds
+
+
+def is_twitter_rsshub_feed(url: str) -> bool:
+    """Detect if this is a RSSHub Twitter/X feed URL."""
+    return "/twitter/user/" in url
+
+
+def check_twitter_auth(url: str) -> str | None:
+    """
+    Check if a RSSHub Twitter feed returns an auth error.
+    Returns an error string if auth is expired/invalid, None if OK.
+    """
+    try:
+        parsed = feedparser.parse(url)
+    except Exception:
+        return None  # network error, not auth error
+
+    # RSSHub returns a bozo feed or specific error title when auth fails
+    feed_title = getattr(parsed.feed, "title", "") or ""
+    # Check for RSSHub error indicators in feed title or description
+    error_indicators = [
+        "not configured",
+        "twitter api",
+        "authentication",
+        "unauthorized",
+        "error",
+    ]
+    if any(ind in feed_title.lower() for ind in error_indicators):
+        return f"TWITTER_AUTH_EXPIRED: {url} → feed title: {feed_title!r}"
+
+    # feedparser sets bozo=True when feed is malformed (e.g. RSSHub error HTML/JSON)
+    if getattr(parsed, "bozo", False) and not getattr(parsed, "entries", []):
+        bozo_exc = str(getattr(parsed, "bozo_exception", ""))
+        return f"TWITTER_AUTH_EXPIRED: {url} → parse failed ({bozo_exc})"
+
+    return None
 
 
 def fetch_direct_feed(
@@ -69,6 +113,16 @@ def fetch_direct_feed(
     except Exception as e:
         errors.append(f"{feed.company} [direct] parse_error: {e}")
         return items, errors
+
+    # Twitter/X RSSHub auth expiry detection
+    if is_twitter_rsshub_feed(feed.url):
+        auth_err = check_twitter_auth(feed.url)
+        if auth_err:
+            errors.append(
+                f"⚠️ [TWITTER_AUTH_EXPIRED] {feed.company}: RSSHub 返回异常，"
+                f"请到 Railway Variables 更新 TWITTER_AUTH_TOKEN。详情: {auth_err}"
+            )
+            return items, errors
 
     for entry in getattr(parsed, "entries", []):
         if not getattr(entry, "published_parsed", None):

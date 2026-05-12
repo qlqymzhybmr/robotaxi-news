@@ -199,6 +199,37 @@
 
 ---
 
+## X（Twitter）RSS 订阅（via 自部署 RSSHub）
+
+> RSSHub 实例：https://rsshub-production-8ec4.up.railway.app
+> 认证变量：`TWITTER_AUTH_TOKEN`（Railway Variables 已配置）
+> Cookie 约每 1-2 个月失效，失效后到 Railway Variables 更新 `TWITTER_AUTH_TOKEN` 值即可。
+> 格式：`公司名 | 地区 | 是否重点 | RSS URL`
+
+- Waymo | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/waymo
+- Tesla | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/Tesla
+- Zoox | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/zoox
+- Wayve | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/wayve_ai
+- Uber | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/uber
+- Lyft | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/lyft
+- Grab | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/grabsg
+- Aurora Innovation | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/aurora_inno
+- Nuro | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/nuro
+- Mobileye | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/Mobileye
+- NVIDIA | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/nvidia
+- Rivian | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/Rivian
+- Motional | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/MotionalDrive
+- May Mobility | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/May_Mobility
+- Waabi | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/waabi_ai
+- Aptiv | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/Aptiv
+- 小马智行 (Pony.ai) | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/ponyai_tech
+- 文远知行 (WeRide) | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/WeRide_ai
+- 萝卜快跑 (Apollo Go / 百度) | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/BaiduApollo
+- 蔚来 (NIO) | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/NIOGlobal
+- 小鹏 (XPeng) | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/XPENG_Global
+
+---
+
 ## X（Twitter）官方账号
 
 > RSSHub 公共实例（rsshub.app）已封锁 Twitter 路由（2025 年起），需自部署 RSSHub 并配置 Twitter Cookie 才能使用。
