@@ -24,6 +24,13 @@
 - 召回统一走 Python 抓取器(公司 + 关键词 + 时间窗),不再以 `archive/legacy-fetch/sources.md` 的 tier URL fetch 作为主流程。
 - `archive/legacy-fetch/sources.md` 仅作历史归档与兜底参考,默认不执行批量 fetch。
 
+**数据来源（三类）**:
+| 来源类型 | 说明 | 配置位置 |
+|------|------|------|
+| Google News RSS | 按公司名 + 关键词搜索，覆盖媒体报道 | `competitors.md` 国外/国内公司列表 |
+| 直接订阅 RSS | 公司官方博客/新闻室 + X(Twitter) via RSSHub | `competitors.md` → `## 直接订阅 RSS` / `## X（Twitter）RSS 订阅` |
+| Reddit 社区热帖 | r/SelfDrivingCars、r/Waymo、r/teslamotors；免认证，按 AV 关键词过滤 | `competitors.md` → `## 社区 / 媒体 RSS（Reddit 热帖）` |
+
 ---
 
 ## 时间窗口(严格执行)
@@ -148,6 +155,30 @@ RSS 的 `pubDate` 不可靠——Google News 会把旧文章重新推到 feed �
   - 如果**原始发布日期**不在 24 小时窗口内,这条不应该出现在 daily 文件里。这是自检规则。
 - 源链接用 markdown 链接格式
 
+### Reddit 社区热帖（步骤 1.2 补充）
+
+JSON 中 `company` 以 `Reddit/` 开头的条目属于 Reddit 来源，写入方式有所不同：
+
+- **不按公司分组**，而是统一写入国外 section 末尾的独立区块 `## 社区热帖 (Reddit)`
+- **来源格式**：`- 权威源: [r/subreddit · Reddit](Reddit帖子链接)`（Reddit 帖链接本身即可，无需找原文）
+- **质量判断**（二次过滤，脚本已过滤一次）：
+  - 保留：事故/安全事件、立法/监管动态、产品/扩张新闻、有实质内容的社区讨论
+  - 跳过：纯调侃帖、个人出行体验、无实质信息的段子
+- **摘要格式**：1-2 段，总计 3-5 句，比公司新闻条目短（Reddit 帖通常信息密度较低）
+- **原始发布日期**：取 RSS `published_at`，Reddit 帖的发布时间通常可靠
+
+```markdown
+## 社区热帖 (Reddit)
+
+- [ ] ⭐ **Reddit/Waymo：X月X日，纳什维尔警察可对 Waymo 开交通罚单——新法正式生效**
+
+  内华达州立法先例后，田纳西州**纳什维尔**通过新法，**警察可对 Waymo 无人车直接开具交通违章罚单**，无需找人类司机。
+  这是美国第二个明确赋予执法机构对 Robotaxi 独立执法权的城市级立法，对 Waymo 后续扩张城市具有参考意义。
+
+  - **原始发布日期**：2026-05-12
+  - 权威源：[r/Waymo · Reddit](https://www.reddit.com/r/waymo/comments/...)
+```
+
 ---
 
 ## Phase 2:国内组
@@ -203,6 +234,10 @@ RSS 的 `pubDate` 不可靠——Google News 会把旧文章重新推到 feed �
 ...
 
 ## 国外 OEM / Tier1 / 自动驾驶技术公司
+...
+
+## 社区热帖 (Reddit)
+(来自 r/SelfDrivingCars、r/Waymo、r/teslamotors，过滤后仅保留有新闻价值的帖子)
 ...
 
 ---

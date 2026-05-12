@@ -176,6 +176,62 @@
         "source_name": "@Waymo (X)",
         "date": "2026-05-12",
         "published_date": "2026-05-11"
+      },
+      {
+        "id": "2026-05-12-014",
+        "company": "Reddit/Waymo",
+        "company_slug": "reddit-waymo",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "5月11日，纳什维尔立法——警察可对 Waymo 无人车直接开具交通罚单",
+        "summary_html": "<p><b>田纳西州纳什维尔</b>通过新法，授权警察对 Waymo Robotaxi 直接开具交通违章罚单，无需找人类司机。这是继此前类似立法之后，又一座明确赋予执法机构对 Robotaxi 独立执法权的城市，标志着 Robotaxi 监管框架正在逐步清晰落地。</p><p>对 Waymo 后续扩张而言，执法框架明确是进入新城市的前提条件之一，纳什维尔此举将为更多城市提供立法参考。</p>",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1takcdc/police_in_nashville_can_now_issue_waymo_traffic/",
+        "source_name": "r/Waymo · Reddit",
+        "date": "2026-05-12",
+        "published_date": "2026-05-11"
+      },
+      {
+        "id": "2026-05-12-015",
+        "company": "Reddit/Waymo",
+        "company_slug": "reddit-waymo",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "5月11日，洛杉矶 Koreatown Waymo 翻车事故视频曝光",
+        "summary_html": "<p>Reddit 用户发布 <b>Koreatown（洛杉矶韩国城）</b> Waymo Robotaxi 翻车事故现场视频，展示事故现场状况。此前该事故已有初步报道，视频提供更多细节。安全事件在社区高度关注，是 Waymo 商业扩张过程中的重要舆论节点。</p>",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1ta7z4o/video_shows_aftermath_of_rollover_crash_involving/",
+        "source_name": "r/Waymo · Reddit",
+        "date": "2026-05-12",
+        "published_date": "2026-05-11"
+      },
+      {
+        "id": "2026-05-12-016",
+        "company": "Reddit/Waymo",
+        "company_slug": "reddit-waymo",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "5月11日，伦敦无人车试点遭请愿叫停；Waymo 凌晨 4 点惊扰居民引争议",
+        "summary_html": "<p>英国媒体报道：伦敦某街道居民发起请愿，要求<b>停止无人驾驶出租车试点</b>，原因是 Waymo 车辆反复在死胡同掉头、凌晨 4 点噪音扰民。这是伦敦试点启动以来首次出现较大规模的社区抵制。</p><p>揭示 Robotaxi 进入新城市时<b>本地化路线规划与居民接受度</b>是关键挑战。</p>",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1t9zbs5/london_driverless_taxi_trial_should_be_stopped_as/",
+        "source_name": "r/Waymo · Reddit",
+        "date": "2026-05-12",
+        "published_date": "2026-05-11"
+      },
+      {
+        "id": "2026-05-12-017",
+        "company": "Reddit/SelfDrivingCars",
+        "company_slug": "reddit-selfdriving",
+        "rating": 1,
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "5月11日，旧金山流浪者与 Zoox 对峙——城市部署社会接受度争议",
+        "summary_html": "<p>Reddit 用户发帖讲述旧金山街头流浪者与 Zoox Robotaxi 对峙的场景，引发社区热议。这类<b>人车冲突</b>事件在 SF 反复出现，是无人车城市部署中社会接受度问题的缩影。</p>",
+        "source_url": "https://www.reddit.com/r/SelfDrivingCars/comments/1taemz9/sf_homeless_problem_meet_zoox_in_a_scary_way/",
+        "source_name": "r/SelfDrivingCars · Reddit",
+        "date": "2026-05-12",
+        "published_date": "2026-05-11"
       }
     ]
   },

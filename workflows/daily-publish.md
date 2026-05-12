@@ -71,6 +71,9 @@
 | 鸿蒙智行 | hongmeng |
 | 引望智能 | yinwang |
 | 商汤绝影 | sensetime |
+| Reddit/SelfDrivingCars | reddit-selfdriving |
+| Reddit/Waymo | reddit-waymo |
+| Reddit/teslamotors | reddit-tesla |
 
 > 如果公司名不在表中,用公司名拼音小写并去掉空格作为 slug,如 "XX科技" → "xxkeji"。
 
@@ -126,6 +129,7 @@
 - `## 国外 L4` → group="国外", sub_group="国外 L4"
 - `## 国外出行平台` → group="国外", sub_group="国外出行平台"
 - `## 国外 OEM / Tier1 / 自动驾驶技术公司` → group="国外", sub_group="国外 OEM / Tier1"
+- `## 社区热帖 (Reddit)` → group="国外", sub_group="社区热帖"
 - `## 国内 L4` → group="国内", sub_group="国内 L4"
 - `## 国内出行平台` → group="国内", sub_group="国内出行平台"
 - `## 国内新势力 / 传统 OEM` → group="国内", sub_group="国内新势力 / 传统 OEM"

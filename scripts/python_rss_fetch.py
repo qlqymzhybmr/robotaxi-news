@@ -30,13 +30,37 @@ class DirectFeed:
     url: str
 
 
-DIRECT_FEED_SECTIONS = {"## 直接订阅 RSS", "## X（Twitter）RSS 订阅（via 自部署 RSSHub）"}
+DIRECT_FEED_SECTIONS = {
+    "## 直接订阅 RSS",
+    "## X（Twitter）RSS 订阅（via 自部署 RSSHub）",
+    "## 社区 / 媒体 RSS（Reddit 热帖）",
+}
+
+# Reddit AV relevance: title must contain at least one of these keywords
+REDDIT_AV_KEYWORDS = [
+    "autonomous", "self-driving", "self driving", "robotaxi", "driverless",
+    "waymo", "zoox", "cruise", "aurora", "wayve", "nuro", "mobileye", "motional",
+    "tesla fsd", "full self-driving", "cybercab", "autopilot",
+    "recall", "crash", "accident", "collision", "incident", "investigation",
+    "regulation", "citation", "permit", "approval", "lawsuit", "fine",
+    "trial", "expand", "launch", "deploy", "partnership", "milestone",
+    "lidar", "adas", "level 4", "level4", "l4",
+    "自动驾驶", "无人驾驶",
+]
+
+
+def is_reddit_feed(url: str) -> bool:
+    return "reddit.com" in url
+
+
+def is_reddit_relevant(title: str) -> bool:
+    """Reddit posts: title must contain at least one AV keyword (stricter than is_relevant)."""
+    t = title.lower()
+    return any(k in t for k in REDDIT_AV_KEYWORDS)
 
 
 def parse_direct_feeds(path: Path) -> List[DirectFeed]:
-    """Parse all direct-feed sections from competitors.md.
-    Recognized sections: '## 直接订阅 RSS' and '## X（Twitter）RSS 订阅（via 自部署 RSSHub）'
-    """
+    """Parse all direct-feed sections from competitors.md."""
     text = path.read_text(encoding="utf-8")
     feeds: List[DirectFeed] = []
     in_section = False
@@ -80,7 +104,8 @@ def check_twitter_auth(url: str) -> str | None:
         return None  # network error, not auth error
 
     # RSSHub returns a bozo feed or specific error title when auth fails
-    feed_title = getattr(parsed.feed, "title", "") or ""
+    feed_obj = parsed.get("feed") if hasattr(parsed, "get") else getattr(parsed, "feed", {})
+    feed_title = (feed_obj.get("title", "") if hasattr(feed_obj, "get") else getattr(feed_obj, "title", "")) or ""
     # Check for RSSHub error indicators in feed title or description
     error_indicators = [
         "not configured",
@@ -124,6 +149,11 @@ def fetch_direct_feed(
             )
             return items, errors
 
+    is_reddit = is_reddit_feed(feed.url)
+    # Safe accessor for feed metadata (handles both FeedParserDict and legacy _Feed objects)
+    _feed_meta = parsed.get("feed", {}) if hasattr(parsed, "get") else getattr(parsed, "feed", {}) or {}
+    _feed_title = _feed_meta.get("title", feed.company) if hasattr(_feed_meta, "get") else getattr(_feed_meta, "title", feed.company)
+
     for entry in getattr(parsed, "entries", []):
         if not getattr(entry, "published_parsed", None):
             continue
@@ -133,6 +163,12 @@ def fetch_direct_feed(
         if not (window_start <= published <= window_end):
             continue
 
+        title = getattr(entry, "title", "")
+
+        # Reddit: title must contain AV keyword, skip pure social/discussion posts
+        if is_reddit and not is_reddit_relevant(title):
+            continue
+
         link = normalize_url(getattr(entry, "link", ""))
         items.append({
             "company": feed.company,
@@ -140,9 +176,9 @@ def fetch_direct_feed(
             "region": feed.region,
             "is_focus": feed.is_focus,
             "lang": "en",
-            "title": getattr(entry, "title", ""),
+            "title": title,
             "published_at": published.isoformat(),
-            "source": parsed.feed.get("title", feed.company),
+            "source": _feed_title,
             "source_home": feed.url,
             "url": link,
             "summary": getattr(entry, "summary", ""),
