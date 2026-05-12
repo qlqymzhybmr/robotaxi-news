@@ -1,5 +1,75 @@
 [
   {
+    "date": "2026-05-12",
+    "items": [
+      {
+        "id": "2026-05-12-001",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月11日，伦敦两起事故集中曝光——Shoreditch 路段凌晨反复被困、女乘客疑车辆被远程操控",
+        "summary_html": "<p>《London Evening Standard》报道，Waymo 一辆无人驾驶出租车在伦敦 <b>Shoreditch</b> 一条死胡同反复行驶折返，凌晨 <b>4 时</b>噪音扰醒周边居民；同日另一起事件：一名女乘客录视频称车辆突然行为异常，疑被远程操控，并表示考虑联系律师；NDTV 以《It’s My First Day》为题跟进报道，引发广泛讨论。</p><p><b>背景</b>：Waymo 于 2026 年初在伦敦启动软测试，此前已有多起边界场景事故曝光（05-08 积水路段停驶、05-07 机场行李事件）。本次两起伦敦事件集中爆出，进一步加大 Waymo 进入欧洲市场的舆论压力，也引发外界对 L4 系统在陌生城市复杂路网中适应性的关注。</p>",
+        "source_name": "London Evening Standard",
+        "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZ2lpSnRSdFZzMFlTdmdpVmd5Tl9KWU15dG9jS25DSlRXU1RRb013dW0tcXR5NnMyUENaSjRsYkgyZ2xYMW1ZeDZsUUV3aU9NTkFzQXpHV0JLSmNOY1VaQmJWMDJEVURMMjVsTUtOLUluQV9kb2UwcmdhOXlFX3Q0U3JNbVJSV0FBVklScU5aeHAwTUl3bXcxZWc2V1VQeW9FR1lGaTdja1FKQQ?oc=5",
+        "original_date": "2026-05-11"
+      },
+      {
+        "id": "2026-05-12-002",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月11日，一周内宣布在美国 4 座城市同步扩张——迈阿密、奥斯汀、拉斯维加斯、旧金山",
+        "summary_html": "<p>Technology Magazine 报道，亚马逊旗下 <b>Zoox</b> 宣布将 Robotaxi 服务扩展至美国新城市<b>迈阿密</b>和<b>奥斯汀</b>；EV Magazine 同日报道 Zoox 同步宣布进驻<b>拉斯维加斯</b>和<b>旧金山</b>，合计一周内公布 <b>4 座新城市</b>扩张计划。同期《USA Today》发布 Zoox 体验评测，称其驾乘体验与 Waymo、Tesla 各有差异。</p><p><b>背景</b>：Zoox 采用专门研发的无方向盘双向定制车型，与 Waymo 改装方案思路不同。此前扩张节奏相对低调；本次同时宣布多城并进，是 Zoox 首次大规模城市扩张动作，或与亚马逊加速商业化推进的战略压力相关。</p>",
+        "source_name": "Technology Magazine",
+        "source_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5kVUVZV00xV1pRa3VnbUpJNWxNUlpOSndROVl0MUdKVjM5N0txNGNUSnNJSHE4TmNlWERZV1VVOFNRWWo3eTV5Q1ZRMVZMNF9yRUJLS0ZiTWtoTnNqUXZ1VEhrcXdiQTU0eThnNWZmYkc5NlZCcHBFTnByS3dsdw?oc=5",
+        "original_date": "2026-05-11"
+      },
+      {
+        "id": "2026-05-12-003",
+        "company": "驭势科技",
+        "company_slug": "yushikeji",
+        "rating": 3,
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "5月12日，港股 IPO 正式启动招股，定位全场景 L4 自动驾驶第一股，5月20日挂牌港交所",
+        "summary_html": "<p>财联社、新浪财经等多家媒体报道，<b>驭势科技</b>（港股代码 01511）于 <b>5月12日</b>正式启动港股全球发售，招股期 <b>5月12日至5月15日</b>，拟募资约 <b>8.7 亿港元</b>，计划 <b>5月20日</b>在港交所主板挂牌上市。基石投资者包括<b>雄安自动驾驶</b>（国家级项目背景）等多方机构。驭势科技定位为全场景 L4 级自动驾驶第一股，业务覆盖机场、仓储物流、港口及城市道路等多场景。</p><p><b>背景与意义</b>：驭势科技与文远知行、小马智行等公司路线不同，更强调全场景覆盖而非单一 Robotaxi 运营，其港股上市为中国 L4 自动驾驶公司在港资本市场融资开创先例。雄安自动驾驶作为基石投资者，体现国家对 L4 自动驾驶产业化的政策背书信号。上市后估值与融资能力将直接影响国内 L4 赛道整体资本生态，同时也为同赛道公司提供参照估值锚点。</p>",
+        "source_name": "财联社",
+        "source_url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE84RV9xV3dvRlF4ZDNBLUFNdUR3TWc5NzJiUDRsVHJuMWFrbEs5MFlWVkNJaTRuSkRxSXlvREVGdldRVW14MWcybQ?oc=5",
+        "original_date": "2026-05-12"
+      },
+      {
+        "id": "2026-05-12-004",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "5月12日，Robotaxi 正式接入腾讯出行服务",
+        "summary_html": "<p>车家号报道，<b>小马智行（Pony.ai）</b> Robotaxi 正式接入<b>腾讯出行</b>服务平台，用户可通过腾讯出行 App 呼叫小马智行无人驾驶出租车。</p><p><b>背景</b>：小马智行此前已接入高德等平台，腾讯出行的接入进一步拓展流量入口生态。腾讯本身持有多家出行平台股份，此次合作有助于小马智行触达更大规模潜在用户。叠加五一假期订单激增六倍（05-09 日报），小马智行的商业化流量扩张路径持续加速。</p>",
+        "source_name": "车家号",
+        "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9HRTR0V044U3Nza3J0Wjhqbk9EOS1VZDVMOEs0SXd1UzZSNDZRdEczUWRTencyUUg0SnlSVWtZT1VGSGdpVU5wWElvbVotbFhwLW1tT0MyclpOU2p6T3c?oc=5",
+        "original_date": "2026-05-12"
+      },
+      {
+        "id": "2026-05-12-005",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "5月12日，GX 旗舰 SUV 官方定位国内首款前装量产 L4 级 Robotaxi 原型车，预售 39.98 万",
+        "summary_html": "<p>新浪网报道，<b>小鹏 GX</b> 全尺寸旗舰 SUV 预售价 <b>39.98 万元</b>，何小鹏邀周鸿祎、姚劲波、王小川等十余位互联网人士品鉴，官方宣传定位为国内首款前装量产 L4 级 Robotaxi 原型车，称车辆硬件层面已具备未来升级为 Robotaxi 运营的基础。</p><p><b>背景与分析</b>：小鹏将消费级高端 SUV 与 L4 Robotaxi 挂钩，是国内整车厂将 Robotaxi 商业化战略融入量产车型定位的新尝试。原型车说明当前并非正式 Robotaxi 运营车型，但前装量产意味着硬件预置、具备后续软件升级路径。与曹操出行 5月10日发布原生定制 Robotaxi 车型（05-10 日报）形成对比，两者路线逻辑不同：小鹏 GX 走消费车到 Robotaxi 双用途策略，曹操走原生定制路线。</p>",
+        "source_name": "新浪网",
+        "source_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1yZUpVb2dfVzA1eHQweXFNT0xkMEVVNlFFdm1KMkRWS2RXNjcyLUN3ZWFncXRfWTBoc3A2ZUtlS0g1NFM0SG5nbzhVdTBXRFlLSlMtUnQyWjJIdzlxRms4X2o4NA?oc=5",
+        "original_date": "2026-05-12"
+      }
+    ]
+  },
+  {
     "date": "2026-05-11",
     "items": [
       {
