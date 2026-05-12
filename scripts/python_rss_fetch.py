@@ -22,6 +22,82 @@ class Company:
     region: str  # overseas | china
 
 
+@dataclass
+class DirectFeed:
+    company: str
+    region: str
+    is_focus: bool
+    url: str
+
+
+def parse_direct_feeds(path: Path) -> List[DirectFeed]:
+    """Parse the '## 直接订阅 RSS' section from competitors.md."""
+    text = path.read_text(encoding="utf-8")
+    feeds: List[DirectFeed] = []
+    in_section = False
+    for raw in text.splitlines():
+        line = raw.strip()
+        if line.startswith("## 直接订阅 RSS"):
+            in_section = True
+            continue
+        if in_section and line.startswith("## "):
+            break
+        if in_section and line.startswith("-") and "|" in line:
+            parts = [p.strip() for p in line.lstrip("-").split("|")]
+            if len(parts) < 4:
+                continue
+            company, region, focus_raw, url = parts[0], parts[1], parts[2], parts[3]
+            feeds.append(DirectFeed(
+                company=company.strip(),
+                region=region.strip(),
+                is_focus="⭐" in focus_raw,
+                url=url.strip(),
+            ))
+    return feeds
+
+
+def fetch_direct_feed(
+    feed: DirectFeed,
+    window_start: datetime,
+    window_end: datetime,
+) -> Tuple[List[dict], List[str]]:
+    """Fetch a direct RSS feed (company blog/newsroom) and filter by time window."""
+    errors: List[str] = []
+    items: List[dict] = []
+    try:
+        parsed = feedparser.parse(feed.url)
+    except Exception as e:
+        errors.append(f"{feed.company} [direct] parse_error: {e}")
+        return items, errors
+
+    for entry in getattr(parsed, "entries", []):
+        if not getattr(entry, "published_parsed", None):
+            continue
+        published = datetime.fromtimestamp(
+            time.mktime(entry.published_parsed), tz=timezone.utc
+        ).astimezone(CN_TZ)
+        if not (window_start <= published <= window_end):
+            continue
+
+        link = normalize_url(getattr(entry, "link", ""))
+        items.append({
+            "company": feed.company,
+            "company_key": clean_company_name(feed.company),
+            "region": feed.region,
+            "is_focus": feed.is_focus,
+            "lang": "en",
+            "title": getattr(entry, "title", ""),
+            "published_at": published.isoformat(),
+            "source": parsed.feed.get("title", feed.company),
+            "source_home": feed.url,
+            "url": link,
+            "summary": getattr(entry, "summary", ""),
+            "query": f"direct:{feed.url}",
+        })
+
+    return items, errors
+
+
 def parse_competitors_md(path: Path) -> Tuple[List[Company], Dict[str, List[str]]]:
     text = path.read_text(encoding="utf-8")
     lines = text.splitlines()
@@ -289,15 +365,24 @@ def main() -> None:
         window_end = datetime.now(CN_TZ)
     window_start = window_end - timedelta(hours=24)
 
-    companies, keywords = parse_competitors_md(Path(args.competitors))
+    competitors_path = Path(args.competitors)
+    companies, keywords = parse_competitors_md(competitors_path)
+    direct_feeds = parse_direct_feeds(competitors_path)
+
     if args.group != "all":
         companies = [c for c in companies if c.region == args.group]
+        direct_feeds = [f for f in direct_feeds if f.region == args.group]
 
     all_items: List[dict] = []
     all_errors: List[str] = []
 
     for company in companies:
         items, errors = fetch_company_news(company, keywords, window_start, window_end)
+        all_items.extend(items)
+        all_errors.extend(errors)
+
+    for feed in direct_feeds:
+        items, errors = fetch_direct_feed(feed, window_start, window_end)
         all_items.extend(items)
         all_errors.extend(errors)
 

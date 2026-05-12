@@ -187,8 +187,52 @@
 - earnings
 - software update
 
+---
+
+## 直接订阅 RSS（官方博客 / 新闻室）
+
+> 已验证可用。由 `python_rss_fetch.py` 直接抓取，不经过 Google News，适合公司官方公告类内容。
+> 格式：`公司名 | 地区 | 是否重点 | RSS URL`
+
+- NVIDIA | overseas | ⭐ | https://nvidianews.nvidia.com/cats/driving.xml
+- Aurora Innovation | overseas | | https://aurora.tech/rss.xml
+
+---
+
+## X（Twitter）官方账号
+
+> RSSHub 公共实例（rsshub.app）已封锁 Twitter 路由（2025 年起），需自部署 RSSHub 并配置 Twitter Cookie 才能使用。
+> 账号已验证，待自部署接入后直接启用。
+> 自部署参考：https://docs.rsshub.app/deploy/  免费平台：Vercel / Railway / Render
+
+| 公司 | X 账号 | 地区 | 重点 |
+|------|--------|------|------|
+| Waymo | @waymo | overseas | ⭐ |
+| Tesla | @Tesla | overseas | ⭐ |
+| Zoox | @zoox | overseas | ⭐ |
+| Wayve | @wayve_ai | overseas | ⭐ |
+| Uber | @uber | overseas | ⭐ |
+| Lyft | @lyft | overseas | ⭐ |
+| Grab | @grabsg | overseas | ⭐ |
+| Aurora Innovation | @aurora_inno | overseas | |
+| Nuro | @nuro | overseas | |
+| Mobileye | @Mobileye | overseas | |
+| NVIDIA | @nvidia | overseas | ⭐ |
+| Rivian | @Rivian | overseas | |
+| Motional | @MotionalDrive | overseas | |
+| May Mobility | @May_Mobility | overseas | |
+| Waabi | @waabi_ai | overseas | |
+| Aptiv | @Aptiv | overseas | |
+| Pony.ai（小马智行） | @ponyai_tech | china | ⭐ |
+| WeRide（文远知行） | @WeRide_ai | china | ⭐ |
+| Baidu / Apollo | @BaiduApollo | china | ⭐ |
+| NIO（蔚来） | @NIOGlobal | china | ⭐ |
+| XPeng（小鹏） | @XPENG_Global | china | ⭐ |
+
+---
+
 ## 元数据
 - 总计：约 89 家公司
 - ⭐ 重点公司：23 家（每语种最多抓取 10 条）
 - 普通公司：约 66 家（每语种最多抓取 5 条）
-- 最后更新：2026-04-29
+- 最后更新：2026-05-12
