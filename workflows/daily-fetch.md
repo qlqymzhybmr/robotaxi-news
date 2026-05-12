@@ -65,18 +65,35 @@
   - summary
   - lang
 
-### 步骤 1.2:按公司聚合 + 评级
+### 步骤 1.2:Claude 直接读 JSON、去重总结并写入国外 section
 
 - 读取 `data/tmp/raw_news_overseas.json`
-- 执行 Claude 去重与结构化总结:
-  - `! python scripts/claude_structured_summary.py --input data/tmp/raw_news_overseas.json --output-md data/tmp/summary_overseas.md --output-json data/tmp/summary_overseas.json --date YYYY-MM-DD`
-  - 本地联调可加 `--mock`（不调用 API）
-- 去重与理解规则:
+- Claude 直接对 JSON 做去重 + 结构化总结,**无需调用外部 API**:
   - URL 归一化去重 + 标题/摘要语义去重
   - 同一事件保留主来源 + 辅助来源
-  - 生成公司维度结构化结果,用于写入 daily section
+  - 按公司维度整理后,按下方格式**直接写入** `data/daily/YYYY-MM-DD.md` 的国外 section
+- 无中间产物文件
 
-### 步骤 1.5:写入 daily 文件的国外 section
+**⚠️ 必做：写入前对每条新闻核查真实发布日期**
+
+RSS 的 `pubDate` 不可靠——Google News 会把旧文章重新推到 feed 顶部，`pubDate` 刷新为今天，但文章本身可能是几个月前的。核查步骤：
+
+1. **优先从 URL 中提取日期**：许多文章 URL 包含发布日期，常见格式：
+   - `/2026/03/15/`、`/20260315/`、`-2026-03-15-`、`_20260315_`
+   - `?date=20260315`、`/2026-03/`
+   - 示例：`chejiahao.autohome.com.cn/info/24991288` → 无日期，需看摘要
+   - 示例：`techcrunch.com/2026/03/15/waymo-...` → 真实日期 2026-03-15
+
+2. **其次从文章摘要/标题中找日期**：RSS 摘要里通常会提到原文发布时间
+
+3. **判断规则**：
+   - 若 URL 或摘要中的日期比 `pubDate` **早超过 3 天** → 以该日期为真实发布日期
+   - 若真实发布日期**不在 24 小时窗口内** → **丢弃这条，不写入 daily**
+   - 若无法从 URL 和摘要判断日期，且 `pubDate` 在窗口内 → 保留，但写入时注明"日期待核实"
+
+4. **写入 `原始发布日期` 字段时必须是核查后的真实日期**，不能直接复制 RSS `pubDate`
+
+### 格式规范:国外 section（供步骤 1.2 参考）
 
 按以下 markdown 格式写入 `data/daily/YYYY-MM-DD.md` 的 `## 国外 L4` 等 section:
 
@@ -147,12 +164,25 @@
   - 普通公司:默认中文抓取,每语种最多 5 条(必要时补英文)
 - 仅保留时间窗口内新闻并输出标准化 JSON
 
-### 步骤 2.2 + 2.3:聚合、评级、写入
+### 步骤 2.2:Claude 直接读 JSON、去重总结并写入国内 section
+
 - 读取 `data/tmp/raw_news_china.json`
-- 执行 Claude 去重与结构化总结:
-  - `! python scripts/claude_structured_summary.py --input data/tmp/raw_news_china.json --output-md data/tmp/summary_china.md --output-json data/tmp/summary_china.json --date YYYY-MM-DD`
-  - 本地联调可加 `--mock`（不调用 API）
-- 同 Phase 1 步骤 1.2-1.5,写入 daily 文件的 `## 国内 L4`、`## 国内主机厂`、`## 国内智驾方案商` 等 section。
+- Claude 直接对 JSON 做去重 + 结构化总结,**无需调用外部 API**:
+  - URL 归一化去重 + 标题/摘要语义去重
+  - 同一事件保留主来源 + 辅助来源
+  - 按公司维度整理后,与 Phase 1 相同的格式**直接追加写入** `data/daily/YYYY-MM-DD.md` 的国内 section
+- 无中间产物文件
+
+**⚠️ 同 Phase 1：写入前对每条新闻核查真实发布日期（规则同步骤 1.2）**
+
+国内媒体 URL 常见日期格式补充：
+- `autohome.com.cn/info/XXXXXXXX`（无日期，需从摘要判断）
+- `mp.weixin.qq.com/s/...`（无日期，从标题或摘要找）
+- `36kr.com/p/XXXXXXXXXX`（无日期）
+- `cls.cn/detail/XXXXXXX`（无日期，从内容找）
+- `sina.com.cn/.../YYYY-MM-DD/...`（有日期）
+
+对于**无法从 URL 提取日期**的国内媒体链接（微信公众号、汽车之家车家号等），必须从摘要文本中找到文章提到的日期，与 `pubDate` 对比。若摘要中提到的事件发生时间比今天早超过 7 天，大概率是旧文重推，**丢弃**。
 
 ---
 
