@@ -1,5 +1,153 @@
 [
   {
+    "date": "2026-05-16",
+    "items": [
+      {
+        "id": "2026-05-16-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 3,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月15日，NHTSA 公开 17 起 Robotaxi 事故非脱敏报告——其中 2 起为电话操控员接管后主动撞车，安全员在场均未受伤。",
+        "summary_html": "<p>NHTSA 首次公开 Tesla Robotaxi 自 2025 年 7 月运营以来全部 <b>17 起</b>事故的非脱敏叙述文本，WIRED、TechCrunch、Electrek 同日跟进。其中两起涉及<b>电话操控员（teleoperator）远程接管后主动操作失当</b>：<b>2025 年 7 月事故</b>中，操控员将车驶上路牙撞上金属围栏，是 17 起中<b>唯一造成人员轻伤</b>的一起；<b>2026 年 1 月事故</b>中，操控员以约 <b>9MPH</b> 撞上施工临时护栏，前左翼子板蹭伤。两起事故均在奥斯汀，均有安全员在场，无乘客伤亡。</p><p>其余 15 起多数是 Tesla Robotaxi <b>被其他车辆追尾</b>，与 Waymo 等其他 AV 公司 NHTSA 报告结构相似。电话操控员两起失误事故的曝光，直接对 Tesla \"监督+远程\"双重人工介入机制的可靠性构成质疑。</p>",
+        "source_name": "TechCrunch",
+        "source_url": "https://techcrunch.com/2026/05/15/tesla-reveals-two-robotaxi-crashes-involving-teleoperators/",
+        "original_date": "2026-05-15"
+      },
+      {
+        "id": "2026-05-16-002",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月15日，FSD v14.3 新增「分心自动靠边停车」功能，驾驶员分心时 ADS 主动减速靠边，强化安全冗余。",
+        "summary_html": "<p>Tesla FSD v14.3 新增：当系统检测到驾驶员<b>持续分心</b>超过阈值时，ADS 会<b>自动减速并靠边停车</b>，同时给出提示。Not a Tesla App 配视频演示了触发流程。该设计直接回应外界对\"监督版 FSD\"注意力管理的批评，与 NHTSA 对驾驶员注意力监控（DMS）的监管预期方向一致。</p>",
+        "source_name": "Not a Tesla App",
+        "source_url": "https://www.notateslaapp.com/news/4115/tesla-fsd-v14-3-now-pulls-over-when-you-re-distracted-video",
+        "original_date": "2026-05-15"
+      },
+      {
+        "id": "2026-05-16-003",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "rating": 3,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月15日，亚特兰大 Buckhead 小区遭数十辆空车「包围」循环数小时；3,791 辆全国召回后续影响持续发酵。",
+        "summary_html": "<p>亚特兰大 Buckhead 住宅区 Battleview Drive 等小道，5 月 15 日出现<b>多达 50 辆空载 Waymo 在 1 小时内驶入同一街道、在死巷反复转圈</b>数小时的奇观，居民向 NBC News、Jalopnik 等媒体投诉，最终 8 辆同时被困。Waymo 官方称已修复路由行为。</p><p>深层背景：<b>5 月 12 日</b>因圣安东尼奥洪水事故触发全国 <b>3,791 辆 Robotaxi 软件召回</b>（一辆无乘客车驶入积水被冲入 Salado Creek），涉及第五代和第六代 ADS，覆盖六城，OTA 修复已推送。Atlanta 循环事件被认为是召回期间路由逻辑异常的次生表现。</p>",
+        "source_name": "NBC News",
+        "source_url": "https://www.nbcnews.com/nightly-news/video/driverless-waymo-taxis-over-run-atlanta-neighborhood-263414853736",
+        "original_date": "2026-05-15"
+      },
+      {
+        "id": "2026-05-16-004",
+        "company": "Aurora Innovation",
+        "company_slug": "aurora",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Aurora × Volvo × DSV：5月15日，Dallas–Oklahoma City 无人货运路线加入物流巨头 DSV，商业验证进入真实客户场景。",
+        "summary_html": "<p>继 5 月 5 日开通 Dallas–Oklahoma City 自主货运路线后，Aurora Innovation × Volvo Autonomous Solutions 迎来新进展：全球第三大货运/物流集团 <b>DSV</b> 正式加入作为货主客户，商业验证从内部测试转向<b>真实第三方订单</b>。当前路线仍处监督式阶段，DSV 的加入为无人化认证提供了新的里程碑目标。</p>",
+        "source_name": "TechStock2",
+        "source_url": "https://techstock.io/aurora-innovation-aur-volvo-dsv-driverless-freight-texas/",
+        "original_date": "2026-05-15"
+      },
+      {
+        "id": "2026-05-16-005",
+        "company": "Motional",
+        "company_slug": "motional",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Motional：5月15日，Robotaxi 正式上线 Uber 平台向公众开放，拉斯维加斯商业化运营进入新阶段。",
+        "summary_html": "<p>Motional 官方 Twitter 5 月 15 日宣布：Robotaxi 已正式通过 <b>Uber</b> 平台向用户提供出行服务。这是继 Waymo×Uber、Tesla×Uber 之后第三家将 Robotaxi 接入 Uber 的 AV 公司。Motional 现代汽车与 Aptiv 背景，此前已在 Lyft 平台运营，双平台并行拓宽商业化供给侧。</p>",
+        "source_name": "Twitter @Motional",
+        "source_url": "https://twitter.com/Motional",
+        "original_date": "2026-05-15"
+      },
+      {
+        "id": "2026-05-16-006",
+        "company": "Uber",
+        "company_slug": "uber",
+        "rating": 3,
+        "group": "国外",
+        "sub_group": "国外出行平台",
+        "title": "5月15日，Uber 累计 $10B+ 押注自动驾驶并公开转向对立 Waymo——Rivian 5万辆、Lucid+Nuro、Wayve、Avride 多路并进。",
+        "summary_html": "<p>Uber 高管近期多次公开炮轰 Waymo，同时累计对自动驾驶承诺超 <b>$100 亿</b>：<b>Rivian</b>（最高 $12.5 亿，最多 <b>5 万辆</b> R2 Robotaxi，2028 年首批 1 万辆在旧金山/迈阿密）；<b>Lucid+Nuro</b>（旧金山 Bay Area，<b>2026 年底</b>上线——直入 Waymo 大本营）；<b>Wayve（伦敦）、Avride（达拉斯）、Baidu Apollo Go（迪拜）</b>海外布局；以及 <b>$1 亿</b>专项快充桩网络。</p><p>战略逻辑：Uber 不愿让 Waymo 独供垄断，转而自建多供应商生态，通过资本控制 Robotaxi 车队资产，从\"撮合平台\"转型\"资产方\"。$10B+ 的规模使 Uber 的战略转向成为今年出行行业最大变量之一。</p>",
+        "source_name": "Electrek",
+        "source_url": "https://electrek.co/2026/05/15/uber-turns-on-waymo-10-billion-robotaxi-alternatives/",
+        "original_date": "2026-05-15"
+      },
+      {
+        "id": "2026-05-16-007",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "rating": 3,
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "5月15日，何小鹏宣布 GX 今年在广州启动 Robotaxi 运营，2027 年推经济专属版；称 L5 将于 2030 年实现。",
+        "summary_html": "<p>何小鹏在 GX 发布会上宣布：(1) 小鹏 <b>GX</b> 已取得广州智能网联汽车道路测试牌照，公开路测累计超 <b>50 万公里</b>，<b>2026 年内</b>与<b>曹操出行</b>合作在广州启动 Robotaxi 商业运营；(2) <b>2027 年</b>推出<b>经济 Robotaxi 专属版</b>，去除驾驶舱冗余配置，降低运营 BOM 成本；(3) 小鹏 GX 搭载自研<b>图灵 AI 芯片</b>（4 颗、<b>3000 TOPS</b>），支持 XNGP 5.0 可升级至 L4。</p><p>何小鹏同步判断 <b>L5 自动驾驶将在 2030 年实现</b>，与余凯、韩旭预判吻合。曹操出行计划首批 10 城部署约 5,000 辆 GX Robotaxi 版——是当前国内 L4 商业化时间表中最具约束力的一份声明。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://finance.sina.com.cn/tech/roll/2026-05-15/",
+        "original_date": "2026-05-15"
+      },
+      {
+        "id": "2026-05-16-008",
+        "company": "鸿蒙智行",
+        "company_slug": "hongmeng",
+        "rating": 3,
+        "group": "国内",
+        "sub_group": "国内华为系 / 互联网大厂",
+        "title": "5月15日，智界 V9 正式上市（38.98-51.98万），全系标配 ADS 5.0 + 896线激光雷达，2小时订单破 7000 台。",
+        "summary_html": "<p>鸿蒙智行首款旗舰 MPV <b>智界 V9</b> 于 5 月 15 日正式上市，售价 <b>38.98-51.98 万元</b>，6 月初交付。余承东宣布上市 <b>2 小时</b>订单破 <b>7000 台</b>（预售 23 天已破 40,000 台）。</p><p>技术看点：行业<b>首款 MPV</b> 搭载 <b>896 线激光雷达</b>，全系标配 <b>38 个传感器</b>，<b>首批首发升级华为乾崑智驾 ADS 5.0</b>（6 月末~7 月初 OTA）。ADS 5.0 配备 <b>60 EFLOPS</b> 云端算力，支持 WEWA 2.0 架构，含 <b>6 重冗余安全系统</b>。余承东同步宣布鸿蒙智行门店达 <b>1,951 家</b>、城市覆盖率 <b>90%</b>。ADS 5.0 首发 40 万+豪华 MPV，是华为系智驾溢价向旗舰细分延伸的关键信号。</p>",
+        "source_name": "IT之家",
+        "source_url": "https://www.ithome.com/0/950/974.htm",
+        "original_date": "2026-05-15"
+      },
+      {
+        "id": "2026-05-16-009",
+        "company": "比亚迪",
+        "company_slug": "byd",
+        "rating": 3,
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "5月15日，行业消息称比亚迪将采购华为智驾方案；同日智驾搭载量突破 299 万辆。",
+        "summary_html": "<p>车家号援引行业消息：<b>比亚迪</b>正评估并推进采购<b>华为乾崑智驾</b>方案，将纳入旗下更多车型。此前已在豹 5/豹 8 上引入华为 ADS 合作；此次若属实意味着 BYD 主流价格段将规模化引入华为方案，对自研智驾团队地位和\"全栈自研\"战略构成显著挑战。</p><p>同日，凤凰网汽车披露比亚迪<b>智驾搭载量突破 299 万辆</b>，全球规模最大。两则信息合并：BYD 的规模优势正推动其在自研与外采之间做更务实配置——\"天神之眼\"打大众市场、华为乾崑打高端段，双轨布局或是未来方向。</p>",
+        "source_name": "凤凰网汽车",
+        "source_url": "https://auto.ifeng.com/",
+        "original_date": "2026-05-15"
+      },
+      {
+        "id": "2026-05-16-010",
+        "company": "地平线",
+        "company_slug": "horizon",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "title": "5月15日，余凯给出最新时间表——2028 脱手开、2030 闭眼开、2035 睡觉开；称「这场仗远远没有结束」。",
+        "summary_html": "<p>地平线创始人兼 CEO <b>余凯</b>在最新访谈中给出三阶段时间表：<b>2028 年</b>\"脱手开\"（L3 普及）；<b>2030 年</b>\"闭眼开\"（L4 落地）；<b>2035 年</b>\"睡觉开\"（L5 可用）——工程师周五上车，周六早上在青岛海边醒来。与何小鹏\"2030 年 L5\"、韩旭\"10 年内 L5 ChatGPT 时刻\"的预判基本吻合，共同构成中国自动驾驶阵营主流预期。余凯同时强调\"这场仗远远没有结束，甚至只是刚刚开始\"。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://finance.sina.com.cn/",
+        "original_date": "2026-05-15"
+      },
+      {
+        "id": "2026-05-16-011",
+        "company": "卓驭科技",
+        "company_slug": "zhuoyu",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "title": "5月15日，CTO 沈劭劼：「自动驾驶处于乐观期，100% 端到端是历史性一跃，技术能力还没被榨干。」",
+        "summary_html": "<p>卓驭科技 CTO <b>沈劭劼</b>在访谈中表态：行业处于\"乐观期\"，<b>100% 端到端架构</b>是\"历史性一跃\"，现有硬件平台的技术能力\"远远没有被榨干\"，软件/算法端仍有大量提升空间。卓驭科技为一汽集团与大疆合资，100% 端到端路线已成国内高阶智驾方案商主流共识（Momenta、小鹏 VLA 2.0 等同路），此次 CTO 罕见公开发声是公司的主动技术定调。</p>",
+        "source_name": "新浪财经视频",
+        "source_url": "https://video.sina.com.cn/",
+        "original_date": "2026-05-15"
+      }
+    ]
+  },
+  {
     "date": "2026-05-15",
     "items": [
       {
