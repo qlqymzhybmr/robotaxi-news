@@ -24,12 +24,25 @@
 - 召回统一走 Python 抓取器(公司 + 关键词 + 时间窗),不再以 `archive/legacy-fetch/sources.md` 的 tier URL fetch 作为主流程。
 - `archive/legacy-fetch/sources.md` 仅作历史归档与兜底参考,默认不执行批量 fetch。
 
-**数据来源（三类）**:
+**数据来源（四类）**:
 | 来源类型 | 说明 | 配置位置 |
 |------|------|------|
-| Google News RSS | 按公司名 + 关键词搜索，覆盖媒体报道 | `competitors.md` 国外/国内公司列表 |
+| Track B：Google News RSS | 按公司名 + 关键词搜索，覆盖全量媒体报道，但受 Google 权重压制，地方小报容易被淹没 | `competitors.md` 国外/国内公司列表 |
+| Track A：本地媒体 site: 查询 | 对每家公司在其运营城市的指定本地媒体发起 `site:xxx.com` 专项查询，绕过 Google 权重，补漏地方 TV 台 / 地方报 | `data/local_media.json` |
 | 直接订阅 RSS | 公司官方博客/新闻室 + X(Twitter) via RSSHub | `competitors.md` → `## 直接订阅 RSS` / `## X（Twitter）RSS 订阅` |
 | Reddit 社区热帖 | r/SelfDrivingCars、r/Waymo、r/teslamotors；免认证，按 AV 关键词过滤 | `competitors.md` → `## 社区 / 媒体 RSS（Reddit 热帖）` |
+
+**Track A 工作原理**:
+- 脚本读取 `data/local_media.json`，对每个 `(公司, 站点)` 组合构建 `"CompanyName" site:outlet.com` 查询
+- 相关性判断比 Track B 更宽松：只要公司名出现在标题中即视为相关（不强制要求 AV 技术关键词），因为本地 TV 台标题常用"Waymo vehicle"这类非技术表述
+- Track A 和 Track B 结果合并后走统一 URL 去重，同一篇文章只保留一条
+- **Track A 仅覆盖国外组**（local_media.json 当前全部是英文媒体）
+
+**`data/local_media.json` 维护规范**:
+- 新城市宣布运营 → 立即在对应公司下追加该城市的主报 + 主要 TV 台（至少 2 条）
+- site 字段填纯域名，不含 `https://`，例如 `ksat.com`
+- 每季度核查一次：各公司是否有新城市；旧条目是否仍有效
+- 当前覆盖：Waymo（68 个站点）、Tesla（18）、Aurora（13）、Zoox（7）、Motional（9）、May Mobility（6）
 
 ---
 
@@ -59,7 +72,8 @@
 
 - 执行命令:
   - `! python scripts/python_rss_fetch.py --group overseas --date YYYY-MM-DD --output data/tmp/raw_news_overseas.json`
-- 脚本会读取 `competitors.md` 的国外公司清单与 `## 搜索关键词`
+- 脚本**同时运行 Track B（全局搜索）和 Track A（本地媒体 site: 查询）**，输出合并去重后的同一份 JSON
+- 脚本会读取 `competitors.md` 的国外公司清单与 `## 搜索关键词`（Track B），以及 `data/local_media.json`（Track A）
 - 抓取规则(基于 Google News RSS):
   - 重点公司(⭐):中英双语各抓,每语种最多 10 条
   - 普通公司:默认英文抓取,每语种最多 5 条(必要时补中文)

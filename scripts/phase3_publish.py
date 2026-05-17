@@ -6,10 +6,10 @@ import json
 import re
 from datetime import date
 
-DAILY_MD = 'data/daily/2026-05-16.md'
+DAILY_MD = 'data/daily/2026-05-17.md'
 DAILY_JSON = 'docs/data/daily.json'
-TODAY = '2026-05-16'
-TODAY_DATE = date(2026, 5, 16)
+TODAY = '2026-05-17'
+TODAY_DATE = date(2026, 5, 17)
 MAX_DAYS_DIFF = 2
 
 SLUG_MAP = {
@@ -211,4 +211,4 @@ data.insert(0, {'date': TODAY, 'items': items})
 with open(DAILY_JSON, 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print(f'\n✅ docs/data/daily.json 已更新，今日 {len(items)} 条全量写入。')
+print(f'\nOK: docs/data/daily.json updated, {len(items)} items written.')

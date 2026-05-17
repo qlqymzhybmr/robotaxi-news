@@ -429,15 +429,123 @@ def fetch_company_news(
 
 
 def dedupe_news(items: List[dict]) -> List[dict]:
-    seen = set()
+    seen_keys = set()
+    seen_urls: set = set()
     out = []
     for item in sorted(items, key=lambda x: x.get("published_at", ""), reverse=True):
         key = (item.get("company_key"), item.get("title", "").strip().lower(), item.get("url", ""))
-        if key in seen:
+        url = item.get("url", "")
+        if key in seen_keys:
             continue
-        seen.add(key)
+        # Also dedup by raw URL so Track-A and Track-B duplicates collapse
+        if url and url in seen_urls:
+            continue
+        seen_keys.add(key)
+        if url:
+            seen_urls.add(url)
         out.append(item)
     return out
+
+
+# ── Track A: local-media site-specific queries ─────────────────────────────────
+
+def load_local_media(path: Path) -> dict:
+    """Load company→sites mapping from data/local_media.json."""
+    if not path.exists():
+        return {}
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    # Strip the _comment key if present
+    return {k: v for k, v in raw.items() if not k.startswith("_")}
+
+
+def is_relevant_local_media(company_name: str, title: str) -> bool:
+    """Lighter relevance check for local-media articles.
+
+    For a targeted site: query the company name in the title is sufficient signal;
+    we don't require an AV keyword because local TV headlines often use plain
+    language ("Waymo car floods road") that lacks technical jargon.
+    """
+    base = clean_company_name(company_name)
+    paren = extract_parenthetical(company_name)
+    aliases = [base]
+    if paren:
+        aliases.extend([a.strip() for a in re.split(r"[/,]", paren) if a.strip()])
+    title_lower = title.lower()
+    for alias in aliases:
+        if re.search(r"[A-Za-z]", alias):
+            if alias.lower() in title_lower:
+                return True
+        else:
+            if alias in title:
+                return True
+    return False
+
+
+def fetch_local_media_news(
+    company_name: str,
+    sites: List[dict],
+    window_start: datetime,
+    window_end: datetime,
+) -> tuple[List[dict], List[str]]:
+    """Track A: query each local outlet via Google News site: operator.
+
+    Query format: "<CompanyName>" site:outlet.com
+    No AV keywords added—the site: scope already narrows to a trusted source,
+    and is_relevant_local_media() does a title-level check on the result.
+    """
+    errors: List[str] = []
+    items: List[dict] = []
+    company_key = clean_company_name(company_name)
+    # Use English query name (handles cases like 小马智行 (Pony.ai) → Pony.ai)
+    query_name = pick_query_name(company_name, "en")
+
+    for site_info in sites:
+        site = site_info["site"]
+        site_name = site_info.get("name", site)
+        city = site_info.get("city", "")
+
+        query = f'"{query_name}" site:{site}'
+        url = rss_url(query, "en")
+
+        try:
+            feed = feedparser.parse(url)
+        except Exception as exc:
+            errors.append(f"{company_name} [local:{site}] parse_error: {exc}")
+            continue
+
+        for entry in getattr(feed, "entries", []):
+            if not getattr(entry, "published_parsed", None):
+                continue
+            published = datetime.fromtimestamp(
+                time.mktime(entry.published_parsed), tz=timezone.utc
+            ).astimezone(CN_TZ)
+            if not (window_start <= published <= window_end):
+                continue
+
+            title = getattr(entry, "title", "")
+            if not is_relevant_local_media(company_name, title):
+                continue
+
+            link = normalize_url(getattr(entry, "link", ""))
+            items.append({
+                "company": company_name,
+                "company_key": company_key,
+                "region": "overseas",
+                "is_focus": True,
+                "lang": "en",
+                "title": title,
+                "published_at": published.isoformat(),
+                "source": site_name,
+                "source_home": f"https://{site}",
+                "url": link,
+                "summary": getattr(entry, "summary", ""),
+                "query": f"local_media:{site}",
+                "city": city,
+            })
+
+        time.sleep(0.05)
+
+    return items, errors
 
 
 def main() -> None:
@@ -447,6 +555,8 @@ def main() -> None:
     parser.add_argument("--date", default=datetime.now(CN_TZ).strftime("%Y-%m-%d"))
     parser.add_argument("--window-start-hour", type=int, default=10)
     parser.add_argument("--output", default="data/tmp/raw_news.json")
+    parser.add_argument("--local-media", default="data/local_media.json",
+                        help="Path to local_media.json config (Track A)")
     args = parser.parse_args()
 
     run_date = datetime.strptime(args.date, "%Y-%m-%d").replace(tzinfo=CN_TZ)
@@ -466,6 +576,7 @@ def main() -> None:
     all_items: List[dict] = []
     all_errors: List[str] = []
 
+    # ── Track B: Google News general RSS (existing logic) ──────────────────────
     for company in companies:
         items, errors = fetch_company_news(company, keywords, window_start, window_end)
         all_items.extend(items)
@@ -476,6 +587,18 @@ def main() -> None:
         all_items.extend(items)
         all_errors.extend(errors)
 
+    # ── Track A: local-media site-specific queries (overseas only) ─────────────
+    local_media_items_total = 0
+    if args.group in ("all", "overseas"):
+        local_media = load_local_media(Path(args.local_media))
+        for company_name, sites in local_media.items():
+            items, errors = fetch_local_media_news(
+                company_name, sites, window_start, window_end
+            )
+            all_items.extend(items)
+            all_errors.extend(errors)
+            local_media_items_total += len(items)
+
     deduped = dedupe_news(all_items)
 
     result = {
@@ -485,6 +608,7 @@ def main() -> None:
             "window_end": window_end.isoformat(),
             "group": args.group,
             "companies_total": len(companies),
+            "local_media_raw_total": local_media_items_total,
             "raw_items_total": len(all_items),
             "deduped_items_total": len(deduped),
             "errors_total": len(all_errors),
@@ -499,7 +623,9 @@ def main() -> None:
     output_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print(
-        f"done group={args.group} companies={len(companies)} raw={len(all_items)} "
+        f"done group={args.group} companies={len(companies)} "
+        f"track_b_raw={len(all_items) - local_media_items_total} "
+        f"track_a_raw={local_media_items_total} "
         f"deduped={len(deduped)} errors={len(all_errors)} output={output_path}"
     )
 

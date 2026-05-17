@@ -1,5 +1,127 @@
 [
   {
+    "date": "2026-05-17",
+    "items": [
+      {
+        "id": "2026-05-17-001",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月16日，新专利揭示 FSD V14「仿人类驾驶」完整架构；FSD v14.3 即将正式推送。",
+        "summary_html": "<p>Not a Tesla App 深度解析 Tesla 近期获批的专利文件，首次公开 <b>FSD V14</b> 及轻量版 <b>V14-Lite</b> 实现\"仿人类驾驶\"的底层逻辑：模型通过端到端学习将感知、决策、执行整合进单一神经网络，复现跟车距离判断、并线时机感知、行人意图预测等行为模式，彻底摒弃规则+规划器的分段架构。V14-Lite 是面向 HW3 老款车辆的轻量化分支，与 V14 共享同一套架构基础，解决算力受限机型的升级路径问题。同日，另一篇报道指出 <b>FSD v14.3</b>（含春季功能包）将于近期正式推送，延续 V14 系列快速迭代节奏——昨日（5月15日）已有 v14.3\"分心自动靠边停车\"功能被曝光，此版本为更大范围的功能集成包。</p>",
+        "source_name": "Not a Tesla App",
+        "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPUDhPOEhNZG9XeTJQcnlOTnNaN214S3gyakxhcDREY1hma3RsaTVYLVBoclJab0FmVC04TXJ4N3BfYW5iZ2l4dW8xdUJTX3JFMEF5b0FMUFVTa2prQmo3Vi1IWlhHQW56dHJlNm42VVlFTkhDOEZIN1NPWXQ5YWliY05vdl9ZLTMtNTJmLWZRZHNQNzBaT2Z5Y1hmU1ZMNW56OFRKUzI1X0JPa3RNZHRFT2JHSXA2R1U1V2RDWDREc0ZyTkFwN0UzUQ?oc=5",
+        "original_date": "2026-05-16"
+      },
+      {
+        "id": "2026-05-17-002",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月16日，官方回应亚特兰大绕圈事件；CBS News 同日播出第二波居民投诉，OTA 修复后部分区域仍异常。",
+        "summary_html": "<p>在 5 月 15 日\"多达 50 辆 Waymo 困于 Buckhead 死胡同\"事件持续曝光后，Waymo 通过 <b>11Alive（NBC 亚特兰大）</b> 发表正式声明，称已识别并修复导致该行为的路由逻辑错误，正积极与社区沟通。然而同日，<b>CBS News</b> 又播出另一批亚特兰大居民录像，显示 Waymo 空车仍在住宅区多条道路反复堵塞，受访居民称\"孩子无法正常上学，步行都受阻\"。两则报道合并显示：5 月 12 日全国 <b>3,791 辆</b>召回触发的路由逻辑漏洞，在 OTA 推送后仍有部分区域未完全修复，亚特兰大多个社区持续受影响，舆情压力持续扩大。</p>",
+        "source_name": "11Alive",
+        "source_url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQQ2pJdUo0YXdkaEswQ0JNMzBTRGVJOFhUeFRuNC1VbDVlVzc5S3dobHJsaHZxY3pydzRzM0NnOU4xR3JESTdncXdpSGN5aUo4VDNIQXI0eW5nUVhid1FvWk1xNVpsRkZEYm5QREdnYTlFbXUyaUh5d2JoeFptdVpEM2JrU0F5a0RNSW5wS0JETGFibHRHRFpxclFOVi1LUm1nUnVjNzJXOWFmZW5JUFhmbzUwaEVBNEdJX0g5cXZ2NmxmcmJHdllydzFpdnlrLTZZZm1rWG5NSDl1LU1LNDd4eGNOMnhXdE1sQmM5WnFNem5mWnlx?oc=5",
+        "original_date": "2026-05-16"
+      },
+      {
+        "id": "2026-05-17-003",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "rating": 1,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月16日，Phoenix 暑期青少年就业通勤补贴项目曝光，本地台 ABC15 专题报道。【Track A 新增】",
+        "summary_html": "<p>ABC15 Arizona（Phoenix 本地电视台）专题报道 Waymo 在 Phoenix 推出面向青少年的<b>暑期通勤补贴项目</b>，帮助服务区内打暑期工的年轻人按时上班。该条目由本期新上线的 <b>Track A 本地媒体定向抓取</b>系统首次捕获——此类小体量地方台内容因 Google 权重算法无法在传统宽泛搜索中浮现，Track A 通过 `\"Waymo\" site:abc15.com` 直接查询实现覆盖。该项目是 Waymo 深化 Phoenix 本地公关、提升社区接受度的典型案例。</p>",
+        "source_name": "ABC15 Arizona",
+        "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTGl5clNuUmtGV0xlVGd1Njl6QjBQZ21YOUxmU1NJQ0h2UDZHUTM3RXFMdXlzTUtwamc0RTBBY0ZYX0dqSGJYMUZDaXlEZjVKUGFuUDVQZDdLR1RaVEp6RjdaTExxem1hXzhJYVo4di1zcTRpWUVQNGhxaXZpODF1azFLWHVEZG5ZU25Ud2ltX3VvQkRJYWNjS0toaHpZQktKdWZ4ZEFQUE5DQi0tVk9oaDFpbXlOS3FvWk80UWo1aw?oc=5",
+        "original_date": "2026-05-16"
+      },
+      {
+        "id": "2026-05-17-004",
+        "company": "Uber",
+        "company_slug": "uber",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外出行平台",
+        "title": "5月16日，Lucid 高管完成 Uber-Nuro 联合方案首次实车体验，2026 年底湾区上线推进中。",
+        "summary_html": "<p>继 Electrek 5 月 15 日披露 Uber 累计 $10B+ 自动驾驶投资蓝图后，Benzinga 5 月 16 日进一步报道：Lucid Motors 高管已<b>亲自乘坐</b> Uber × Nuro 联合方案实体原型车，完成首次实车体验。这一细节说明 Lucid（提供豪华电动底盘）+ Nuro（提供 AV 系统）的硬件集成已进入实车可乘阶段，而非停留于纸面合作。按此前公布计划，该方案将于 <b>2026 年底</b>前在旧金山湾区上线，直接进入 Waymo 本营。Uber 多供应商 Robotaxi 战略正从布局转向执行，Lucid × Nuro 是继 Rivian 合作之后在 Bay Area 的关键落子。</p>",
+        "source_name": "Benzinga",
+        "source_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPbUtmbjJVTG9SdW5pRmFLR2ZNcVp3TlJDdG00MmpaQXpqb0lHZmNfOVByN3BIeF9CSUNBcUNhS2FBTndBV29FeEpRT2FkbjJJTHFUd19wZlFwaDNWV2hJNHpqNzJLX3o1SzBtV3lwOHRHbXhMYjFKN2FyTTdUSGl5WXdpSHdWb3RmRW81Q014LU5XNDVVN2ZLRl9IbnYzdEl5OHppUTl6MnpxSTJPU19KdWJMQlZhWEwyTFpfS0ZMRVF3c2JWMV9oOEp0RkpfMVplQUtOVnlsS1NGWEhEMWZ2bzhOeExTTTdt?oc=5",
+        "original_date": "2026-05-16"
+      },
+      {
+        "id": "2026-05-17-005",
+        "company": "小米",
+        "company_slug": "xiaomi",
+        "rating": 3,
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "5月17日，正式发布自动驾驶 VLA 大模型，宣称\"率先实现行业 VLA\"；另有消息称已获 L3 级道路测试牌照。",
+        "summary_html": "<p>小米汽车在 5 月 17 日凌晨正式发布<b>自动驾驶 VLA（Vision-Language-Action）大模型</b>，汽车之家多条视频报道，官方宣称是\"行业首家实现 VLA\"的量产车企。VLA 是将视觉感知（Vision）、语言指令（Language）与驾驶动作执行（Action）统一建模的多模态架构，相比传统感知-规划-执行分段架构，可用语义层面的驾驶意图直接指导底层控制，是当前自动驾驶大模型化路线的最前沿方向。小鹏此前已宣布 VLA 2.0，小米此次宣称\"率先实现\"实为对小鹏主张的直接挑战。该 VLA 与小米 5 月 14 日开源的 <b>OneVL</b> 框架一脉相承——OneVL（One Vision-Language）是多模态感知基础模型，VLA 在其上加入行动控制输出，形成完整的端到端驾驶链路。同日，IT之家援引消息称小米汽车已获得<b>L3 级自动驾驶道路测试牌照</b>，进一步铺垫运营资质储备，具体发牌城市和时间未披露。</p>",
+        "source_name": "汽车之家",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBBNVBuQlYwV25DdG0tY0dydkZQdXg0S01UdXVUOVlpd1pnLTVtTGJQaEdXOXdFVm5wOHU4Q0ZmSURNM0swa21kU3ZkZ2VlNTZ3bzU1N1h5dHJCRmc?oc=5",
+        "original_date": "2026-05-16"
+      },
+      {
+        "id": "2026-05-17-006",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "5月16日，VLA 2.0 真实场景测试宣称超越 Tesla FSD；何小鹏论坛表态 Robotaxi 有网络效应，是汽车行业商业模式突破口。",
+        "summary_html": "<p>- <b>a. VLA 2.0 vs Tesla FSD 对比测试：</b> MSN 转载英文媒体报道，小鹏正式公布 <b>VLA 2.0</b> 与 Tesla FSD 在真实路况下的对比测试，声称在感知、理解、执行多维度均表现更优。汽车之家同日深度分析指出，VLA 2.0 在复杂非结构化道路（施工区、会车窄道、无标线路段）的表现是与 FSD 拉开差距的关键场景。VLA 2.0 是小鹏 XNGP 5.0 的架构底座，目前搭载于 GX 等新车型，也是 2026 年广州 Robotaxi 运营的核心技术支撑。 - <b>b. 何小鹏·轩辕奖论坛：Robotaxi 网络效应：</b> 何小鹏在行业论坛上表态：\"汽车的商业模式不够好，但 Robotaxi 有网络效应\"——运营规模越大，边际成本递减、数据飞轮加速，是传统汽车制造逻辑所不具备的价值增长模型。与其 5 月 15 日宣布 Robotaxi 2026 年广州落地的时间表形成呼应。</p>",
+        "source_name": "MSN",
+        "source_url": "https://news.google.com/rss/articles/CBMihwNBVV95cUxPNXFHRENQZW1jRWVwNktiaTREN1NXZkRLekVLTFJTNnViOFVKNzYwcWNLWXhzT2IyNUprQ3NYUl9VZXl0bV9yZ3NTbXlMOUlnRjZmLTI3OVJPaElLZW1aT0pseFRJeWxiWVY4aWNhV0FkZjlnb0d2M2xKcHJvVUhPaDA2M2d2SE5VQWZGNEd4VVByM2lNNmxoSHlNUE5UXzQyajhHVU1zOHFpWl9zaXd6Um04SFdCd0ZGNmVYVXVSUWNFRWM0Nk9Kb0R5dWV5ZlBIQTNBUHN5TThSMDQ5NG9tNzJLZUxHcm10OVFweDd4dnNvbFFIU0dvWUd1ZlJ5Qy00SS1VaTMzMkZRcjdBQmZZcFY4NXBVOWJDcWVuTS1ObmZPdWxoNmdNbmFaQTBrZ1dtQUNadE0xbncxdHFKMGlGcmdBUUZrTXVkZ21McUduZnM2RFd2bS1VQzBidi1jZmxmVG1CdnFlZTc0cjhWSUpzYWhaUmsyRW5wN2RyZDlENmpIVmdwLWdr?oc=5",
+        "original_date": "2026-05-16"
+      },
+      {
+        "id": "2026-05-17-007",
+        "company": "理想",
+        "company_slug": "liauto",
+        "rating": 1,
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "5月17日，全新一代 L9（45.98 万元起）正式开启全国交付；李想论坛表态\"智驾只是上半场\"。",
+        "summary_html": "<p>全新一代<b>理想 L9</b>（标准版 45.98 万、Livis 旗舰版 50.98 万）5 月 17 日正式开始全国交付。李想在同期行业论坛上重申：\"自动驾驶只是上半场，理想 L9 Livis 直接开打下半场\"——Livis 版搭载马赫100芯片（<b>2560 TOPS</b> + <b>4 颗激光雷达</b>），是理想迄今最强智驾硬件旗舰。主要发布信息（定价、技术规格、首批交付计划）已在 <b>5月16日 daily ⭐⭐⭐</b> 收录，今日为正式交付落地节点。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUzBLbVJJaGF6aV9ybnZJR3ZOZm45V2lrNlF2dWhleE4tb1l3YnhXZ09XMGxHUnBoMEJRRFdFS3hfeXphYlA4X1FTLXFkZlBfSDQ5M1Q0SzVFZDFmMmNzVFFuMURZdVRQaEM0QVZCTGtoamVqT0lRbnJaN09EUTNQRER1cjdacDlxNlV4OXpZUF93c29mMDd1YXZjeEg3alFSV01TMk9VdkpJWkxMR21MRVFB?oc=5",
+        "original_date": "2026-05-17"
+      },
+      {
+        "id": "2026-05-17-008",
+        "company": "比亚迪",
+        "company_slug": "byd",
+        "rating": 2,
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "5月16日，2026 款海鸥上市（6.99-9.79 万），高阶智驾下探至 A00 级市场，智驾平权加速落地。",
+        "summary_html": "<p>比亚迪 <b>2026 款海鸥</b>正式上市，价格 <b>6.99-9.79 万元</b>，官方定义为\"增配不加价\"——新款标配更高等级智能驾驶辅助功能。A00 级（10 万以内）此前被认为是高阶智驾的成本边界，比亚迪用规模化量产能力将其突破，意义类似 2023 年比亚迪把热泵空调带进 10 万以内市场的历史节点。这是 5 月 15 日\"天神之眼 C\"低成本方案向量产落地的配套动作——天神之眼 C 提供系统架构，2026 款海鸥是首批搭载落地车型。比亚迪的智驾平权路线从此正式延伸至全价格段最低端。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVWlla1J6NXhLdVJxdjhZckctTGpUaXpic19jdE96RkQzbHZuRjRIVXFtM2NySk94WEIzWTdubGZ0Ym9aclNMa09QVnExM3Z2WWkzdVJqdU5ObkdoemxneHQ4TFZPeGM2QVBqbmlfbkM5WmU4QlNRQVV3MGdUZHZvUzNhaHI?oc=5",
+        "original_date": "2026-05-16"
+      },
+      {
+        "id": "2026-05-17-009",
+        "company": "蔚来",
+        "company_slug": "nio",
+        "rating": 1,
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "5月17日，乐道 L80 正式开启全国交付，整车购买价 24.28 万元起。",
+        "summary_html": "<p>蔚来旗下副品牌<b>乐道</b>的第二款车型 <b>L80</b> 于 5 月 17 日正式开启全国交付，起售价 <b>24.28 万元</b>，定位中大型 SUV（竞争问界 M7、理想 L7 价格带）。乐道 L80 搭载蔚来智驾方案，是乐道品牌在 L60 后的第二款量产交付车型，有助于蔚来拓宽多品牌价格层次覆盖。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://news.google.com/rss/articles/CBMiiARBVV95cUxNQ2hXaFBCdENHZ2pHV0w2MUVXYWw1TnFCUEllTEJDS29uNGhRSGxNa1hqV0g4UjN3bjh0VjhWNlV0OEpZQ0lxTGYtdmVyeTdrMy1rcFFidjJDSEJqZTZfbGxaLWVRUjVxT0Q1ck13T0ktYUlXYjFhVTBnb045bEs2d3pKcEJaaE5PdXZkTlZ0Nnl4R3FuM1p5NW9iWURGUE9IRkZzTEI2eEFhcUVBcjJZTjB4NkJ1cGoxcGNkRG9FTE1iQXNBTFNNRWpZb3pxb1ZNVEN1SmRLUGNhbTJUZTlNQTB3SktXaTlZX0FxaDlmQTlDQUsxaWQ1UEM4Y3ZsbFF5a191S3kzcnNkbkItR2Y4SnR0ZVdTcjBSTVNUcnhSenFQTW54VzkzNy1UQUVGdjNTM2JNaFhtWEdqSVNYWVNJMkszZlhHeEVLN1lScmdqWUFsdjBXOXlxcXJNSE5lYmdZZTVnazJZcmpvcnZqUkJqZmZtT0lkdlNIVFFxTnVBSlFsVnU3aEtCdUhSU0pPOW5hMXNwTW1QdnlpVWNWX0J3UFJYZU0xbWQxR2JGZVdwTC1ValFDWDMtbUxja1RRREZiZEhmbEhNQ1k0QWhYWXNaQ0NBY2JvRjFLZXREMEQ1LVJjUFVsckNvV3NudWx0eE1feXNBckxUTTJVbEN0bFVrYl84NkxtR1Zp?oc=5",
+        "original_date": "2026-05-17"
+      }
+    ]
+  },
+  {
     "date": "2026-05-16",
     "items": [
       {
