@@ -1,4 +1,10 @@
-{
+﻿"""Generate 2026-W20 weekly JSON artifact and publish to docs/data/weekly.json."""
+import json, sys
+from datetime import datetime
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+data = {
   "week_id": "2026-W20",
   "date_range": "0512-0518",
   "title": "无人驾驶行业0512-0518重要新闻",
@@ -18,7 +24,7 @@
             },
             {
               "label": "b",
-              "content_html": "<b>5月17日</b>，正式发布第二代<b>VLA 2.0</b>（Vision-Language-Action）大模型，由副总裁<b>刘先明</b>主导，官方宣称将实现\"中国最好用的自动驾驶\"；VLA 2.0将视觉理解、语言推理与驾驶决策整合为端到端大模型，复杂城市路况（施工区、无结构化路段）处理能力大幅提升，<b>ArenaEV</b>在北京路况实测验证；5月14日小鹏邀请Tesla粉丝飞行<b>1万公里</b>赴华同路段对比测试，官宣接管次数更少于Tesla FSD；何小鹏在<b>轩辕奖</b>论坛表态：\"Robotaxi有网络效应，运营规模越大边际成本递减，是传统汽车制造不具备的价值增长模型。\""
+              "content_html": "<b>5月17日</b>，正式发布第二代<b>VLA 2.0</b>（Vision-Language-Action）大模型，由副总裁<b>刘先明</b>主导，官方宣称将实现"中国最好用的自动驾驶"；VLA 2.0将视觉理解、语言推理与驾驶决策整合为端到端大模型，复杂城市路况（施工区、无结构化路段）处理能力大幅提升，<b>ArenaEV</b>在北京路况实测验证；5月14日小鹏邀请Tesla粉丝飞行<b>1万公里</b>赴华同路段对比测试，官宣接管次数更少于Tesla FSD；何小鹏在<b>轩辕奖</b>论坛表态："Robotaxi有网络效应，运营规模越大边际成本递减，是传统汽车制造不具备的价值增长模型。""
             }
           ]
         },
@@ -64,7 +70,7 @@
             },
             {
               "label": "c",
-              "content_html": "<b>5月14日</b>，<b>FOX 4</b>记者拍摄到两辆Waymo在<b>达拉斯</b>同一路口连续左转闯越红灯；Waymo回应称从传感器角度信号灯\"severely dimmed（严重变暗）\"导致系统未能正确识别，正在处理该感知边缘案例；事发在3,791辆积水召回完成后不到两天。"
+              "content_html": "<b>5月14日</b>，<b>FOX 4</b>记者拍摄到两辆Waymo在<b>达拉斯</b>同一路口连续左转闯越红灯；Waymo回应称从传感器角度信号灯"severely dimmed（严重变暗）"导致系统未能正确识别，正在处理该感知边缘案例；事发在3,791辆积水召回完成后不到两天。"
             },
             {
               "label": "d",
@@ -83,11 +89,11 @@
         {
           "company": "Tesla",
           "company_slug": "tesla",
-          "headline_html": "<b>Tesla：</b>德州Robotaxi公测\"无车可用\"，比利时FSD获批，NHTSA公开17起事故报告，FSD v14.3.3推送",
+          "headline_html": "<b>Tesla：</b>德州Robotaxi公测"无车可用"，比利时FSD获批，NHTSA公开17起事故报告，FSD v14.3.3推送",
           "sub_items": [
             {
               "label": "a",
-              "content_html": "<b>5月12日</b>，路透社记者在<b>达拉斯</b>实测Robotaxi，原计20分钟行程因频繁遭遇\"无可用车辆\"，最终等待超<b>2小时</b>；服务覆盖范围受限、车辆密度不足，与Waymo服务体验差距明显；同日，拉斯维加斯目击<b>Cybercab</b>实拍照片流传。"
+              "content_html": "<b>5月12日</b>，路透社记者在<b>达拉斯</b>实测Robotaxi，原计20分钟行程因频繁遭遇"无可用车辆"，最终等待超<b>2小时</b>；服务覆盖范围受限、车辆密度不足，与Waymo服务体验差距明显；同日，拉斯维加斯目击<b>Cybercab</b>实拍照片流传。"
             },
             {
               "label": "b",
@@ -99,7 +105,7 @@
             },
             {
               "label": "d",
-              "content_html": "<b>5月15日至17日</b>，FSD v14.3新增\"分心自动靠边停车\"功能（驾驶员持续分心时ADS主动减速靠边）；5月17日推送v14.3.3（软件版本<b>2026.14.6.6</b>）：<b>Actually Smart Summon</b>最高速从<b>6mph</b>提升至<b>8mph</b>（+33%），Summon/FSD/Robotaxi统一为同一AI模型，新增无干预里程计数器，重写AI编译器使反应时间提速<b>20%</b>。"
+              "content_html": "<b>5月15日至17日</b>，FSD v14.3新增"分心自动靠边停车"功能（驾驶员持续分心时ADS主动减速靠边）；5月17日推送v14.3.3（软件版本<b>2026.14.6.6</b>）：<b>Actually Smart Summon</b>最高速从<b>6mph</b>提升至<b>8mph</b>（+33%），Summon/FSD/Robotaxi统一为同一AI模型，新增无干预里程计数器，重写AI编译器使反应时间提速<b>20%</b>。"
             }
           ]
         },
@@ -171,7 +177,7 @@
             },
             {
               "label": "c",
-              "content_html": "<b>5月14日</b>，<b>华盛顿D.C.</b>议会提出AV许可费方案，被法律分析机构形容为\"全美代价最高的路径之一\"，可能对Waymo等进入首都形成实质性经济壁垒，与田纳西、新泽西的友好立法政策形成鲜明对比。"
+              "content_html": "<b>5月14日</b>，<b>华盛顿D.C.</b>议会提出AV许可费方案，被法律分析机构形容为"全美代价最高的路径之一"，可能对Waymo等进入首都形成实质性经济壁垒，与田纳西、新泽西的友好立法政策形成鲜明对比。"
             }
           ]
         }
@@ -179,3 +185,18 @@
     }
   ]
 }
+
+# write to data/reports/
+with open('data/reports/2026-W20.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print('Written data/reports/2026-W20.json')
+
+# weekly-publish: write to docs/data/weekly.json
+with open('docs/data/weekly.json', 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print('Written docs/data/weekly.json')
+
+# validate
+with open('docs/data/weekly.json', encoding='utf-8') as f:
+    json.load(f)
+print('JSON OK')
