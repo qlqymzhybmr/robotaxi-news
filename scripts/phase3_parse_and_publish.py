@@ -73,7 +73,7 @@ def flush():
         return
 
     # extract source
-    sm = re.search(r'权威源:\s*\[([^\]]+)\]\(([^)]+)\)', body)
+    sm = re.search(r'权威源[：:]\s*\[([^\]]+)\]\(([^)]+)\)', body)
     source_name = ''
     source_url = ''
     if sm:
