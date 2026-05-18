@@ -558,7 +558,7 @@ function renderSelections() {
   // Group by date
   const byDate = {};
   items.forEach((item) => {
-    const d = item.date || item.id.slice(0, 10);
+    const d = item.id.slice(0, 10);
     if (!byDate[d]) byDate[d] = [];
     byDate[d].push(item);
   });
