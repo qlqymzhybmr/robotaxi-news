@@ -1,0 +1,134 @@
+# -*- coding: utf-8 -*-
+import json, os
+
+os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+data = json.load(open("docs/data/daily.json", encoding="utf-8"))
+day = next(d for d in data if d["date"] == "2026-05-12")
+
+existing_ids = {i["id"] for i in day["items"]}
+
+new_items = [
+    {
+        "id": "2026-05-12-008",
+        "company": "Aurora Innovation",
+        "company_slug": "aurora-innovation",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外自动驾驶技术公司",
+        "title": "5月11日，自动驾驶货运网络扩至 12 条路线，覆盖美国阳光带全程商业运营",
+        "summary_html": (
+            "<p>Aurora 官方 X 发文宣布，其自动驾驶卡车商业网络已扩展至 <b>12 条独立路线</b>，"
+            "全部位于<b>阳光带（Sun Belt）</b>地区。最新新增 <b>达拉斯↔拉雷多（Dallas↔Laredo）</b>"
+            "线路，全程由 Aurora Driver 无安全员自动驾驶完成。</p>"
+            "<p>Aurora 于 2024 年下半年启动商业化无人驾驶卡车服务。12 条路线标志着从单一走廊向"
+            "多走廊网络化运营转型，商业运营（有收费合同，非试点）证明其技术与商业模式双重成熟度。</p>"
+        ),
+        "source_url": "https://x.com/aurora_inno/status/2053859000676991006",
+        "source_name": "@aurora_inno (X)",
+        "date": "2026-05-12",
+        "published_date": "2026-05-11",
+    },
+    {
+        "id": "2026-05-12-009",
+        "company": "Wayve",
+        "company_slug": "wayve",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外自动驾驶技术公司",
+        "title": "5月11日，AI Driver 已在全球 500+ 城市驾驶，几乎无需本地训练数据",
+        "summary_html": (
+            "<p>Wayve 官方 X 发文，其 <b>AI Driver</b> 已在全球超过 <b>500 座城市</b>完成驾驶，"
+            "且每次进入新城市时几乎不需要额外的本地化训练数据。</p>"
+            "<p>Wayve 的核心差异化是"端到端 AI Driver 泛化能力"——无需大量城市级数据标注即可"
+            "快速进入新市场。500 城是迄今最高公开里程碑，与 Waymo 深耕少数城市的精细化路线形成鲜明对比。</p>"
+        ),
+        "source_url": "https://x.com/wayve_ai/status/2053852630321889605",
+        "source_name": "@wayve_ai (X)",
+        "date": "2026-05-12",
+        "published_date": "2026-05-11",
+    },
+    {
+        "id": "2026-05-12-010",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "rating": 2,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月11日，拉斯维加斯新增 Aria 度假村为接送目的地；Williams F1 车手赛后乘 Zoox 出行",
+        "summary_html": (
+            "<p>Zoox 官方 X 宣布，<b>Aria Las Vegas</b>（米高梅旗下豪华度假村）正式成为 Zoox Robotaxi "
+            "接送目的地，乘客可通过 app 直接预约。</p>"
+            "<p>同日，<b>Atlassian Williams F1 车队</b>在迈阿密大奖赛庆祝帖中点名 Zoox，车手比赛后乘坐 "
+            "Zoox Robotaxi 出行，作为真实商业部署案例曝光。Zoox 持续深耕拉斯维加斯，将顶级酒店度假村"
+            "纳入服务网络，定位高端商务/旅游客群。</p>"
+        ),
+        "source_url": "https://x.com/zoox/status/2053965199493992684",
+        "source_name": "@zoox (X)",
+        "date": "2026-05-12",
+        "published_date": "2026-05-11",
+    },
+    {
+        "id": "2026-05-12-011",
+        "company": "NVIDIA",
+        "company_slug": "nvidia",
+        "rating": 1,
+        "group": "国外",
+        "sub_group": "国外 Tier1 / 零部件供应商",
+        "title": "5月11日，黄仁勋将在台北音乐中心举办 GTC 台北演讲，发布 AI 新突破",
+        "summary_html": (
+            "<p>NVIDIA 官方 X 宣布，CEO <b>Jensen Huang（黄仁勋）</b>将登台<b>台北音乐中心</b>"
+            "出席 GTC 台北，预计发布 AI 领域最新突破，涵盖新一代 GPU/推理平台及 AI 应用生态。</p>"
+        ),
+        "source_url": "https://x.com/nvidia/status/2053940394917003332",
+        "source_name": "@nvidia (X)",
+        "date": "2026-05-12",
+        "published_date": "2026-05-11",
+    },
+    {
+        "id": "2026-05-12-012",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "rating": 1,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月11日，Summon 功能宣传——呼叫 Tesla 自动驶来",
+        "summary_html": (
+            "<p>Tesla 官方 X 发布 <b>Summon</b> 功能宣传推文，展示车辆在无人驾驶状态下"
+            "自动驶向车主的能力。FSD 相关功能展示，无新进展公告。</p>"
+        ),
+        "source_url": "https://x.com/Tesla/status/2053858969207427454",
+        "source_name": "@Tesla (X)",
+        "date": "2026-05-12",
+        "published_date": "2026-05-11",
+    },
+    {
+        "id": "2026-05-12-013",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "rating": 1,
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "5月11日，乘客视角风景照推文——日常运营内容",
+        "summary_html": (
+            "<p>Waymo 官方 X 发布乘客乘坐 Waymo 途中拍摄的风景照，日常运营内容展示，无重大进展。</p>"
+        ),
+        "source_url": "https://x.com/Waymo/status/2053911312325849325",
+        "source_name": "@Waymo (X)",
+        "date": "2026-05-12",
+        "published_date": "2026-05-11",
+    },
+]
+
+added = 0
+for item in new_items:
+    if item["id"] not in existing_ids:
+        day["items"].append(item)
+        added += 1
+
+with open("docs/data/daily.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+# Validate
+json.load(open("docs/data/daily.json", encoding="utf-8"))
+print(f"OK: added {added} items, 2026-05-12 now has {len(day['items'])} items")
