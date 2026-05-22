@@ -60,7 +60,13 @@
       "Bash(npm *)",
       "Read(D:\\Desktop\\robotaxi-news/**)",
       "Edit(D:\\Desktop\\robotaxi-news/**)",
-      "Write(D:\\Desktop\\robotaxi-news/**)"
+      "Write(D:\\Desktop\\robotaxi-news/**)",
+      "Bash(dir /b)",
+      "Bash(where python *)",
+      "Bash(\"C:\\\\Users\\\\longqian\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\python.exe\" -m pip install feedparser -q)",
+      "Bash(\"C:\\\\Users\\\\longqian\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\python.exe\" scripts/python_rss_fetch.py --group overseas --date 2026-05-22 --output data/tmp/raw_news_overseas.json)",
+      "Bash(\"C:\\\\Users\\\\longqian\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\python.exe\" scripts/python_rss_fetch.py --group china --date 2026-05-22 --output data/tmp/raw_news_china.json)",
+      "PowerShell(& \"C:\\\\Users\\\\longqian\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\python.exe\" \"D:\\\\Desktop\\\\robotaxi-news\\\\scripts\\\\_publish_today.py\")"
     ]
   }
 }
