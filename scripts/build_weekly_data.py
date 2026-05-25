@@ -14,9 +14,9 @@ for day in daily:
     for item in (day.get('items') or []):
         idx[item['id']] = item
 
-# collect selected IDs for W20: 2026-05-12 ~ 2026-05-18
-week_start = '2026-05-12'
-week_end   = '2026-05-18'
+# collect selected IDs for W21: 2026-05-19 ~ 2026-05-25
+week_start = '2026-05-19'
+week_end   = '2026-05-25'
 
 selected = []
 for date in sorted(sel.keys()):
@@ -42,10 +42,10 @@ for date in sorted(sel.keys()):
             else:
                 selected.append({'id': sid, 'ERROR': 'not found in daily.json'})
 
-with open('data/tmp/weekly_w20_data.json', 'w', encoding='utf-8') as f:
+with open('data/tmp/weekly_w21_data.json', 'w', encoding='utf-8') as f:
     json.dump(selected, f, ensure_ascii=False, indent=2)
 
-print(f'Wrote {len(selected)} items to data/tmp/weekly_w20_data.json')
+print(f'Wrote {len(selected)} items to data/tmp/weekly_w21_data.json')
 for item in selected:
     g = item.get('group','')
     c = item.get('company','')
