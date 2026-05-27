@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# Publish 2026-05-26 to docs/data/daily.json
+# Publish 2026-05-27 to docs/data/daily.json
 import json, re
 
-TODAY = "2026-05-26"
+TODAY = "2026-05-27"
 JSON_PATH = "docs/data/daily.json"
-ITEMS_PATH = "data/tmp/items_2026-05-26.json"
+ITEMS_PATH = "data/tmp/items_2026-05-27.json"
 
 with open(ITEMS_PATH, encoding="utf-8") as f:
     items = json.load(f)
