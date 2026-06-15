@@ -1,5 +1,144 @@
 [
   {
+    "week_id": "2026-W25",
+    "date_range": "0609-0615",
+    "title": "无人驾驶行业0609-0615重要新闻",
+    "generated_at": "2026-06-15T12:00:00+08:00",
+    "sections": [
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "百度/萝卜快跑",
+            "company_slug": "apollogo",
+            "headline_html": "<b>百度/萝卜快跑：</b>首获西欧 L4 商业许可；AmiGo 联手 PostBus 正式在瑞士启动；上路测试同步展开",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月13日</b>，百度旗下 AmiGo 获批在<b>瑞士</b>运营 L4 级自动驾驶服务，成为首家在<b>西欧</b>获得正式 L4 商业运营许可的中国自动驾驶公司，并宣布与瑞士最大公交集团 <b>PostBus</b> 达成合作。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月14日</b>，萝卜快跑与 PostBus 正式启动 AmiGo 无人驾驶服务，计划 <b>2027年</b> 实现商业常态化运营；AmiGo 车辆同日在瑞士公共道路正式开始测试，进入欧洲市场的实际落地阶段。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>Premier 月费 $29.99 订阅制上线；底特律、新奥尔良两城接连现身；本周遭遇软件召回、CNN 闯红灯曝光与停车位争议",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月9日</b>，Reddit 用户在<b>底特律</b>街头拍到 Waymo 最新 <b>Ojai</b> 车型进行路测，确认底特律开城计划进入实质准备阶段；同日 Waymo 亦在<b>马萨诸塞州</b>积极采集数据，东海岸扩张版图持续延伸。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月11日</b>，Waymo 宣布已在<b>新奥尔良</b>开始路面测试并公布初步开城时间表。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>6月12日</b>，Waymo 推出 <b>Premier</b> 订阅制服务，月费 <b>$29.99</b>，订阅会员可享受更快叫车响应和优先接送，首次将订阅商业模式引入 Robotaxi 服务。"
+              },
+              {
+                "label": "d",
+                "content_html": "<b>6月13日</b>，Waymo 宣布对旗下 Robotaxi 车辆进行软件召回，原因是系统在<b>积水路段</b>或<b>高压洗车</b>环境下会异常停止运营，受影响城市包括<b>旧金山</b>、<b>凤凰城</b>等主要运营地。"
+              },
+              {
+                "label": "e",
+                "content_html": "<b>6月15日</b>，<b>CNN</b> 调查发现 Waymo Robotaxi 曾多次闯越红灯，引发对 L4 系统在复杂城市路口安全性的系统性质疑；这是本周 Waymo 遭遇的第二次来自主流媒体的重大安全报道。"
+              },
+              {
+                "label": "f",
+                "content_html": "<b>6月15日</b>，<b>旧金山</b>住宅区居民投诉 Waymo Robotaxi 长期占据公寓停车位、阻碍居民进出，引发对无人驾驶车辆专属停靠区规范的政策讨论。"
+              }
+            ]
+          },
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>官方文件首次明确 SAE L4 定义；FSD 欧洲覆盖五国；V14.3.4 推送；Bloomberg 与 LA Times 集体批评 Robotaxi 体验",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月10日至11日</b>，<b>丹麦</b>成为 Tesla FSD 获批的欧洲<b>第四国</b>（同步推送 v14.2.2.6），<b>比利时</b>在两天后成为<b>第五国</b>；加上此前的荷兰、立陶宛、爱沙尼亚，Tesla 在约两个月内完成欧洲五国覆盖。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月11日</b>，<b>Bloomberg</b> 以《Tesla Robotaxi 表现欠佳：长时间等待和频繁故障》为题，<b>LA Times</b> 同日跟进深度报道，均基于<b>奥斯汀</b>用户实测，记录等待超 <b>30 分钟</b>、行驶中停于路中间、绕道过长等问题；<b>6月12日</b>，Electrek 调查指出 Tesla 官方宣传视频中存在驾驶员以违规方式使用 FSD 的场景，可能在相关事故诉讼中被援引。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>6月14日</b>，Tesla 在官方文件中首次将 Robotaxi 明确定义为 <b>SAE L4</b> 级别自动驾驶系统，与此前长期回避直接定级的惯例形成重大转变。"
+              },
+              {
+                "label": "d",
+                "content_html": "<b>6月14日</b>，Tesla 推送 <b>FSD V14.3.4</b>（版本号 <b>2026.14.6.10</b>），<b>Cybertruck</b> 首次获得 <b>Actually Smart Summon</b> 功能；首批用户评测显示路口通行和高速变道有明显改善，但非常规路口和临时施工区域场景仍存退步。"
+              },
+              {
+                "label": "e",
+                "content_html": "<b>6月15日</b>，Tesla 披露 Robotaxi 在遭遇消防车、警察等第一响应者及事故场景时的处理机制，涵盖摄像头身份验证和地理围栏临时接管功能。"
+              }
+            ]
+          },
+          {
+            "company": "Uber / Wayve",
+            "company_slug": "uber-wayve",
+            "headline_html": "<b>Uber：</b>与 Wayve 开放伦敦候车名单；联手文远知行布局马德里，欧洲双城 Robotaxi 攻势成型",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月9日</b>，Uber 宣布开放<b>伦敦</b>用户候车名单，用户可通过 Uber App 报名体验 <b>Wayve</b> 自动驾驶出租车服务，预计数月内正式上线；同期 <b>Waymo</b> 也被披露正积极准备伦敦运营，伦敦 Robotaxi 大战正式打响。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月10日</b>，Uber 宣布联合<b>文远知行</b>在<b>马德里</b>推出 Robotaxi 服务，与伦敦 Uber+Wayve 形成欧洲双城布局。"
+              }
+            ]
+          },
+          {
+            "company": "Lyft / 百度 Apollo",
+            "company_slug": "lyft",
+            "headline_html": "<b>Lyft / 百度 Apollo：</b>首次进军英国，伦敦 AV 三方竞争格局成形",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月11日</b>，<b>Lyft</b> 宣布将与<b>百度 Apollo</b> 合作在<b>伦敦</b>「数周内」启动 Robotaxi 测试，为 Lyft 首次正式进军英国市场；至此伦敦形成 Uber+Wayve、Waymo 备战、Lyft+百度 Apollo 三方竞争格局。"
+              }
+            ]
+          },
+          {
+            "company": "小马智行",
+            "company_slug": "pony-ai",
+            "headline_html": "<b>小马智行：</b>联手 Stellantis + Bolt 在卢森堡正式落地，中国 AV 欧洲版图再扩",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月9日宣布、6月12日正式落地</b>，<b>Pony.ai</b>、<b>Stellantis</b> 与欧洲网约车平台 <b>Bolt</b> 三方在<b>卢森堡</b>联合启动自动驾驶出行试点，是 Pony.ai 在欧洲落地的首个 Robotaxi 项目，也是本月第三家中国 L4 公司在欧洲落子。"
+              }
+            ]
+          },
+          {
+            "company": "文远知行",
+            "company_slug": "weride",
+            "headline_html": "<b>文远知行：</b>新加坡携手 Grab 正式公开运营，东南亚首个 L4 商业化落地",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月10日</b>，文远知行与 <b>Grab</b> 宣布在<b>新加坡</b>启动面向公众的 Robotaxi 服务，成为首家在<b>东南亚</b>实现 L4 商业化运营的中国自动驾驶公司；近期文远知行在马德里、比利时鲁汶、新加坡接连落子，全球版图快速成形。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W23",
     "date_range": "0602-0608",
     "title": "无人驾驶行业0602-0608重要新闻",
