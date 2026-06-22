@@ -1,5 +1,140 @@
 [
   {
+    "week_id": "2026-W26",
+    "date_range": "0616-0622",
+    "title": "无人驾驶行业0616-0622重要新闻",
+    "generated_at": "2026-06-22T22:00:00+08:00",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>FSD 安全数据危机四连击 + 首起 Autopilot 致死 NHTSA 调查，欧洲市场全面受阻",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月16日</b>，Reuters 独家曝光 Tesla 向欧洲监管机构提交了<b>误导性 FSD 安全统计数据</b>，刻意夸大系统优良记录；同日另一报道揭示，仅需一个 <b>30 美元假人头</b>即可完全绕过 FSD 眼球追踪监控，让「有监督自动驾驶」的安全前提形同虚设。<b>6月17日</b>，美国参议员致函马斯克，列举「<b>紧迫安全隐患</b>」要求解释，使数据可信度危机升级为立法层面施压。<b>6月19日</b>，Reuters 再报<b>瑞典监管机构</b>可能反对 Tesla FSD 进入欧洲，理由是现有版本存在超速行驶问题——三地监管、一周内接连表态，欧洲市场的大门正在关闭。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月21日</b>，德克萨斯州一名 <b>76 岁老太太</b>因特斯拉疑似 Autopilot 激活冲进民宅死亡，<b>NHTSA 正式启动调查</b>。这是 Tesla 在美国本土迄今关注度最高的 AV 相关死亡事故调查，叠加 6 月 16 日以来的数据造假指控，一周内形成双重重压。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>6月22日</b>，分析显示 Tesla Cybercab 在德克萨斯州运营规模仅约 <b>69 辆</b>，但车辆定价约 <b>3.5 万美元</b>，显著低于竞争对手——分析人士认为，低价策略配合现有 Model Y 大规模硬件铺量，是 Tesla 的核心商业逻辑。同日，一辆 Tesla Semi 被发现搭载<b>自动驾驶感知验证设备</b>行驶，预示 FSD 向商用重型卡车延伸的研发节奏正在加快。"
+              }
+            ]
+          },
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>56 亿融资创全球纪录 + 加州扩张 50%，纽约立法叫停成最强监管警示",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月20日</b>，Waymo 宣布<b>加州服务面积扩大 50%</b>，覆盖更广的洛杉矶和湾区区域，直接向特斯拉在本州的扩张节奏发出竞争信号。<b>6月21日</b>，Waymo 完成<b>56 亿美元</b>新一轮融资，创全球自动驾驶公司单笔融资金额纪录，彰显资本市场对 Waymo L4 商业化前景的持续高确定性押注。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月21日</b>，纽约州立法机构通过法案，<b>明确叫停自动驾驶出租车在全州的商业扩张</b>，Waymo 公开表达强烈失望。这是继芝加哥劳工立法、洛杉矶城市抵制之后，美国本土最强硬的州级 AV 扩张限制，揭示出 Robotaxi 向东海岸大都市渗透的政治阻力远比西海岸更大。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>6月17日</b>，Waymo 推出新款 <b>Ojai Robotaxi</b>，以更低硬件成本向部分乘客开放；<b>6月16日</b>，与商业车队管理平台 <b>Element Fleet Management</b> 达成合作，圣地亚哥率先落地——两步均指向 Waymo 在扩张阶段对车队运营成本的主动管控，为下一步百城规模做准备。"
+              }
+            ]
+          },
+          {
+            "company": "Mobileye",
+            "company_slug": "mobileye",
+            "headline_html": "<b>Mobileye：</b>2027 美国自营 Robotaxi + 大型车企合同，芯片供应商正式宣告入场直接竞争",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月17日</b>，Mobileye CEO 正式宣布将于 <b>2027 年在美国独立运营 Robotaxi 服务</b>，不再只扮演技术供应商角色，与 Waymo、Tesla 形成直接竞争。Mobileye 的底气来自十余年传感器融合积累、全球头部 OEM 客户关系，以及自研 EyeQ SoC 在量产车型中的规模化验证。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月19日</b>，Mobileye 与<b>美国主要车企</b>签署重要自动驾驶合同，细节未完全披露，但消息触发 <b>MBLY 股价大涨</b>；该合同被解读为 2027 Robotaxi 路线图的商业化背书，意味着 Mobileye 的运营布局将有传统 OEM 车辆供给支撑。"
+              }
+            ]
+          },
+          {
+            "company": "Uber / Avride",
+            "company_slug": "uber",
+            "headline_html": "<b>Uber + Nvidia：</b>休斯顿 2027 落地 + Nvidia 20 亿押注 Avride，Robotaxi 平台生态加速聚合",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月18日</b>，Uber 宣布将于 <b>2027 年把高端 Robotaxi 服务扩展至休斯顿</b>，继迈阿密、奥斯汀、洛杉矶之后，休斯顿成为 Uber 规划中第四座大城市，进一步印证其「技术不可知论」平台分发战略——Uber 不押注单一 AV 技术，而是作为乘客流量入口与多家 AV 公司合作。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月22日</b>，Nvidia 宣布向 <b>Nebius Group 投资 20 亿美元</b>，通过旗下 <b>Avride</b>（前 Yandex 自动驾驶部门）与 Uber 建立 Robotaxi 战略合作。此次投资标志 Nvidia 在 Robotaxi 赛道的布局从算力基础设施层向<b>运营生态层</b>延伸，Nvidia-Avride-Uber 三角联盟正式成型。"
+              }
+            ]
+          },
+          {
+            "company": "欧洲/其他",
+            "company_slug": "others",
+            "headline_html": "<b>欧洲战场升温：</b>大众 ID. Buzz 登陆洛杉矶 + Go Inc 日本 IPO 暴涨，非传统玩家加速卡位",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月21日</b>，<b>大众 ID. Buzz Robotaxi</b> 正式现身洛杉矶街头，欧洲汽车制造商在美国 Robotaxi 市场正式亮相。ID. Buzz 标志性的面包车外形具有天然品牌辨识度，大众希望以差异化外观在被 Waymo Jaguar 和 Tesla Cybercab 主导的市场中建立独特认知。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月18日</b>，与 Waymo 达成合作的日本出行平台 <b>Go Inc 在东京证交所上市首日暴涨 21%</b>，市场将其定价为 Waymo 进入日本市场的直接载体。日本是全球最成熟的出租车市场之一，Go Inc 的 IPO 将加速 Waymo-GoInc 合作在东京的落地排期。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>6月16日</b>，<b>Rivian CEO</b> 宣布今年内将发布对标 Tesla FSD 的自动驾驶系统，是传统 EV 新势力进入 L3+ 赛道的重要信号。<b>6月19日</b>，<b>Lyft</b> 宣布招募人类驾驶员为 AV 车辆提供辅助服务，高管称此举是「提升技能的机会」——实质上是 Lyft 在 Robotaxi 浪潮中的人才软着陆方案，也预示未来网约车驾驶员向 AV 服务员角色转型的职业路径。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "曹操出行",
+            "company_slug": "caocao",
+            "headline_html": "<b>曹操出行：</b>双十万计划 + RoboX 战略 + 香港落地，国内运营商最大规模扩张承诺正式落账",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月18日</b>，曹操出行发布「<b>双十万计划</b>」：承诺 <b>2030 年前</b>投放 <b>10 万辆 Robotaxi + 10 万辆 RoboVan</b>，是国内 Robotaxi 运营商迄今规模最大、时间节点最明确的产能扩张承诺。结合小鹏 GX 等 OEM 量产节奏，供给侧约束有望逐步消化。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月18日</b>，曹操出行同步发布 <b>RoboX 战略</b>，并宣布启动<b>香港 Robotaxi 业务</b>——香港是首个纳入其扩张版图的港澳市场，亦是中国大陆 Robotaxi 运营商离岸商业化最近的落地点，具有重要的监管示范意义。"
+              }
+            ]
+          },
+          {
+            "company": "中国出海",
+            "company_slug": "weride",
+            "headline_html": "<b>中国自动驾驶双线欧洲：</b>文远知行苏黎世商业落地 + 萝卜快跑瑞士路测，瑞士成中国出海新据点",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>6月17日</b>，文远知行获<b>瑞士监管机构</b>正式背书，与 Uber 联合在<b>苏黎世</b>启动 Robotaxi 商业服务。这是文远知行两周内第二个欧洲落地城市（另一城为马德里），中国自动驾驶公司欧洲商业化的速度正在明显提速。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>6月18日</b>，<b>百度萝卜快跑</b>宣布开启瑞士公共道路测试，并计划在当地打造规模最大的 Robotaxi 车队；与文远知行形成在瑞士市场的「中国双雄」格局，欧洲自动驾驶市场正成为中国玩家的新角力场。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W25",
     "date_range": "0609-0615",
     "title": "无人驾驶行业0609-0615重要新闻",
