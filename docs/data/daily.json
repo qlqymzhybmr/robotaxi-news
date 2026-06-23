@@ -1,5 +1,122 @@
 [
   {
+    "date": "2026-06-23",
+    "items": [
+      {
+        "id": "2026-06-23-001",
+        "date": "2026-06-23",
+        "published_at": "2026-06-23",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Zoox Robotaxi 开始达拉斯路测，亚马逊自动驾驶版图扩张至第三城",
+        "summary_html": "亚马逊旗下 Zoox 宣布将在<b>数日内</b>正式开始达拉斯 Robotaxi 路测，此前已自 3 月起在该城市持续进行地图采集工作。达拉斯是 Zoox 继旧金山、拉斯维加斯之后布局的第三座城市，也是其首个<b>内陆大城市</b>落地。Zoox 车辆采用双向行驶无方向盘设计，与 Waymo 和 Tesla Cybercab 形成差异化产品路线。",
+        "source_name": "WFAA",
+        "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMWpTM0x2T0pyb1lmRGhQUVBTamJMSThtaFc1c1VrUVFYb2VJeVVWenJ5M1RSNDNRa2w0eGhlVklGXy0yeVh3c0JWUjBCN3F3Vnk4NldDSzBBOWg0SmpzTWtZT1dpbWFHOUUzZVRubFg1MXZTLTQyM2dqa3VTZjk4MW5kSmkwMUQ1cnNvalFmaWZTZGplT0U0VzV5SVVsbmV0VDhUWmlZQUk5S3VEUGNSSGdQRVY2cmx5ekpHWmxvZw?oc=5"
+      },
+      {
+        "id": "2026-06-23-002",
+        "date": "2026-06-23",
+        "published_at": "2026-06-23",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 3,
+        "title": "Momenta 通过港交所聆讯，下周正式启动 IPO，GM 背书智驾独角兽迎来资本大考",
+        "summary_html": "Bloomberg 独家报道：<b>GM 背书的智驾供应商 Momenta</b> 已通过港交所上市聆讯，知情人士透露将于<b>下周正式启动</b>赴港 IPO 进程。Momenta 是国内头部智驾算法供应商，主要客户覆盖上汽智己、吉利、丰田等主流 OEM，2025 年前五大客户收入占比约 62.6%。Momenta 与智己汽车已达成<b>双向持股</b>，进一步深绑 OEM 生态。其上市将成为继激光雷达供应商之后，智驾软件层首家港股上市公司。",
+        "source_name": "Bloomberg.com",
+        "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNOHFYX0N2SVk1cW5WaG5qWlVONUdrSHVjY2NIam44STVZTjR4Y1BCVV9kRUpQWS1rY1lFZWlwd1N4VXRJUVFSMTE4LU1CSVNJRzdDU0VSc0NlTmZxaXFtaUNnQzF5MGpxMmxRWWQ4MElnWXJmb1B2R1pibWlJUU10WUVLcFVXeUY0R1dHVG1Cb1NZWjdKNTltR0hFNng0T2hTYXB3ZEZBTEN2NGs1ZzRfSk51VQ?oc=5"
+      },
+      {
+        "id": "2026-06-23-003",
+        "date": "2026-06-23",
+        "published_at": "2026-06-23",
+        "company": "华为",
+        "company_slug": "huawei",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 3,
+        "title": "华为 ADS Max 高阶包 7 月 1 日涨价至 3.6 万元，首创城区 NCA + 高速 NCA + 泊车三场景事故兜底",
+        "summary_html": "华为乾崑智驾宣布 <b>ADS Max 高阶包</b>将于 <b>7 月 1 日起</b>调价至 <b>3.6 万元</b>（现价 3.2 万），同步新增<b>事故兜底保障</b>——覆盖城区 NCA、高速 NCA 及泊车三类场景。这是比亚迪率先推出智驾兜底后，国内第二家在产品层面承诺智驾事故赔付责任的主要玩家。智驾兜底将「谁开启智驾谁承担责任」的模糊地带推向更清晰的商业化责任体系，有望触发行业跟进浪潮。",
+        "source_name": "电子工程专辑",
+        "source_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5Oekk2T2gzbGZHMFFwai1NZUVQSE5UdTZPaUJFcDc4QUtWQW80SmFWTlRFcklfZWpra2N2YlNoSnZDLVlSdEFpLXd2QmdsTnRMLVZPNE5CUHllN3VL?oc=5"
+      },
+      {
+        "id": "2026-06-23-004",
+        "date": "2026-06-23",
+        "published_at": "2026-06-23",
+        "company": "小马智行",
+        "company_slug": "pony-ai",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 3,
+        "title": "小马智行新加坡 Robotaxi 正式向公众开放，海外 L4 商业化又下一城",
+        "summary_html": "小马智行宣布其<b>新加坡 Robotaxi</b> 服务已正式对普通公众开放预约，标志着中国 L4 自动驾驶公司在东南亚落地进入常态运营阶段。在文远知行与 Grab 于新加坡已有布局的背景下，小马智行的公众开放形成<b>双中国 L4 在新加坡竞争</b>的格局。小马智行近期同步在广深启动第七代 Robotaxi 商业接单，国内外双线并进。",
+        "source_name": "Jiemian.com",
+        "source_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1sdm82QVNFZGh0WFNrNVBXZV9iNlEtMjV5WVphRjJOWVFvV2JRdXNWV19hUWxUUktCa3UyRFQzRTRscjRBcFdLajNjcWtDQ1FxNVN1X2xHTjg?oc=5"
+      },
+      {
+        "id": "2026-06-23-005",
+        "date": "2026-06-23",
+        "published_at": "2026-06-23",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Tesla 德州事故 NHTSA 调查跟进：Tesla 官方称司机踩油门覆盖 Autopilot，事故时速达 73mph",
+        "summary_html": "德州 Katy 老太太死亡事故持续发酵。Tesla AI 负责人 Ashok Elluswamy 在 X 平台发文称：「<b>驾驶员在居民区手动将油门踩至 100%，覆盖了自动驾驶系统</b>，碰撞时速度达到 73mph，碰撞后油门仍被踩下。」马斯克转发，意在将责任归因于驾驶员。<b>NHTSA</b> 已正式启动特别调查程序，这将是对 Tesla Autopilot 在「驾驶员覆盖」情景下系统设计安全性的深度审视。",
+        "source_name": "WSJ",
+        "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQenlhdHVRTjc5MVVDYXNKb3lCdUxlZmpYTDBjYkhTNmF3QzM4UEJPekk5ZmZZZktHbjlzRDNjTlF3MVVvbGNaU2w5NjJtNGJJWk00Mm1Ed3dBa0JfR2k3aGs3YVFWM3FkdHBZeWUwZndPczJHOHNRTjdVRWd1NHozMnBEaG5pQ1JvMm5UT1JJV1YybVY2VTJGaWNHcVYzcUxZbEFOenhxQmhOWlRCQkhKazhSSTFlT3c?oc=5"
+      },
+      {
+        "id": "2026-06-23-006",
+        "date": "2026-06-23",
+        "published_at": "2026-06-23",
+        "company": "Lyft",
+        "company_slug": "lyft",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Lyft 宣布 AV 上平台须具备多传感器，实质排斥纯视觉 FSD 方案",
+        "summary_html": "Lyft CEO 在 Fortune 发文并官方推特宣布：<b>所有接入 Lyft 平台的自动驾驶车辆必须采用多传感器融合方案</b>，单传感器（纯视觉）方案将无法进入 Lyft 平台。此举被广泛解读为直接针对 <b>Tesla FSD</b>——Tesla Robotaxi 依赖摄像头和神经网络，不使用激光雷达。Lyft 此举在安全标准上与 Waymo（激光雷达 + 摄像头）站在同一边，可能对未来 AV-平台合作格局产生实质影响。",
+        "source_name": "Twitter @Lyft",
+        "source_url": "https://x.com/lyft/status/2069109852287254675"
+      },
+      {
+        "id": "2026-06-23-007",
+        "date": "2026-06-23",
+        "published_at": "2026-06-23",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Waymo 本周三连小事故：青少年探身出窗、洛杉矶逆行、乘客被困施工区，3800辆召回余波持续",
+        "summary_html": "本周 Waymo 在媒体端连续遭遇负面事件：<b>圣塔莫尼卡</b>有青少年被拍到探身出 Waymo 车窗危险行为；<b>洛杉矶</b>一辆 Waymo 被拍到逆行堵截对向车流；另一乘客在<b>施工区</b>内被困车内，随后被警察尾随处置。这些事件叠加此前 3800 辆因水感异常触发的软件召回，使本周成为 Waymo 公众形象压力较大的一周。Waymo 市值与融资规模上的强势，与在媒体端的密集负面形成鲜明对比。",
+        "source_name": "ABC7 Los Angeles",
+        "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPeWt4OGZBYmpoZ2dFWlRHc2NHSzA0Uk5uUXpLOTFkYUdGb3NOYW5vOXcxa1NuRVRzTUJkZnN5VTJoX0FUQWpMYm5TSklsazdET0FCV2NIUjlzLXlYSDhSZnkyQ2QzbXhlc1J3OUt0QVBjRVA1dUtUQnptWlExempOeXRyUHZMZTVqSnfSAY8BQVVfeXFMTzVibkg3b0NvazJ5TVQtTlZuc1BQdzJKWGVnb25yVUxHRm9oM1VlbmVPWVpTc0g3YmJLeDYyVDRBRFNwMXVFMFMxYnItSm52dGtHWDRpNWd5MGJ0ZElOc0MwR3ZmdV9zajE5aDNHVy1HcF8yUFN2T0hmSlptdVZ5Y0pIWXhJMmh3OWZEWWFiYVE?oc=5"
+      },
+      {
+        "id": "2026-06-23-008",
+        "date": "2026-06-23",
+        "published_at": "2026-06-23",
+        "company": "文远知行",
+        "company_slug": "weride",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 2,
+        "title": "文远知行联手吉利远程 + 冠忠巴士开发右舵 Robotaxi，直指香港及右驾市场",
+        "summary_html": "文远知行与<b>吉利远程商用车</b>、<b>冠忠巴士集团</b>签署三方战略合作协议，将联合开发<b>右舵 Robotaxi 车型</b>。冠忠巴士是香港最大巴士运营商之一，此次合作明确指向香港 Robotaxi 市场。吉利远程提供车辆制造平台，文远知行提供 L4 自动驾驶技术，冠忠巴士提供本地运营资源——三方优势互补。文远知行此前刚在苏黎世与 Uber 落地，香港是其下一个重点目标市场。",
+        "source_name": "新浪网",
+        "source_url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQVlVVdks5R0swRlpDZm5lMGFEQkF4LW9xNnRmT1lrZk9UbnMxcnY1RGNPaFdlb2RIOUFZZ2FOcEFLYWNqaGNheEVvb3A3RjB6b0FUbGVVdkZlSWhMaVhBS0x5S0pmZkRiY3BLTEFsU2xtRzh1VVFveDVoMl9od0REYjB2YUE1d0JTTjNiMG14ZHYxeHVrd3QyZmgzLTNOZ3BYMWl4V01hZ1RVSTFkTW5ER2taa1RobzlZbE5NSnpuMWpOdnJuVzNidTdIZXk5d1VrYzBneWoxT05BX19fZWM3NFlUSU1aN3ZITUow?oc=5"
+      }
+    ]
+  },
+  {
     "date": "2026-06-22",
     "items": [
       {
