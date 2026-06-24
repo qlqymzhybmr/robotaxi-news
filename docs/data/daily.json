@@ -1,5 +1,108 @@
 [
   {
+    "date": "2026-06-24",
+    "items": [
+      {
+        "id": "2026-06-24-001",
+        "date": "2026-06-24",
+        "published_at": "2026-06-24",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Tesla 官方承认德州事故 FSD 已启动，归咎司机覆盖，TSLA 单日跌逾 4%",
+        "summary_html": "Electrek 独家报道：Tesla 官方正式<b>承认德州 Katy 致命事故发生时 FSD 处于激活状态</b>，但强调司机通过将油门踩至 100% 覆盖了系统。Tesla AI 负责人 Ashok Elluswamy 详细披露：事故时速 73mph，碰撞后油门仍被踩住。此番承认迅速引发市场反应，<b>TSLA 单日跌幅超 4%</b>。分析人士指出，「FSD 开启+司机覆盖」场景下的系统设计责任，将成为<b>NHTSA 特别调查</b>的核心争议点——系统是否应在高速区域限制驾驶员全油门操作？这将是 FSD 安全设计的重大审视。",
+        "source_name": "Electrek",
+        "source_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5WTHRJMkhNUTYyQ2ROcW1mYmIzQzlZR1g1alJITkdYX2RERjF4blFmMm0xN0cyMFI3dmlHYVFZZXhPNTRQRlpVMmVnZUdJdlpEdzRIbzVLb3picnFJNnlXeUZ5Sy1ZUU4xeDd2bXBGUEg0bWc?oc=5"
+      },
+      {
+        "id": "2026-06-24-002",
+        "date": "2026-06-24",
+        "published_at": "2026-06-24",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Tesla FSD 双线新动向：芬兰或率先于欧盟批准上路，Grok 语音指令集成约 3 个月后落地",
+        "summary_html": "两则 Tesla FSD 新进展同步释放。其一，路透社报道<b>芬兰交通监管机构</b>正在研究是否可在欧盟集体决策之前率先批准 Tesla 监督级自动驾驶软件在本国上路，若成功将成为 FSD 进入欧洲市场的首个突破口。其二，马斯克宣布<b>Grok AI 将在约 3 个月内支持向 FSD 下达语音指令</b>，实现 AI 助手与自动驾驶系统的深度集成，进一步强化 Tesla 全栈软件生态护城河。",
+        "source_name": "Reuters",
+        "source_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQOVlTaVFyZnR0Q0hiWlpsc0ZZN1B0T2M1WHc2M2FxTldIZ2IwNGhDLS11c3hZbVZSZWFLLWVEdHZyYkhDR0ZjOEJEOEo3MF82Q0hEZXk4QWlyZVFEY0ZqWlJuVWlEQjA0LU9DSDZWTU54emR0YVBpZmw5WUQzMjZvME1FWUJteElzMDNlVXBuV2c3VTBEaENRQnV3Y3NISjdseUVvT1ZLSHFXeWdOMEZUeXE1ekJEc0JVcTMwYzdEOTBRNnBaOTFVbktHRU5mZ0NMcGw5TmVLRQ?oc=5"
+      },
+      {
+        "id": "2026-06-24-003",
+        "date": "2026-06-24",
+        "published_at": "2026-06-24",
+        "company": "Autobrains",
+        "company_slug": "autobrains",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "以色列 Autobrains 联手 Uber + Nvidia 在慕尼黑启动 Robotaxi 试点",
+        "summary_html": "以色列自动驾驶初创公司 <b>Autobrains</b> 宣布与 <b>Uber</b> 和 <b>Nvidia</b> 合作，在德国<b>慕尼黑</b>启动 Robotaxi 试点项目。Autobrains 采用「认知 AI」技术路线，主打无需海量标注数据、可直接从人类驾驶行为中自主学习的算法框架。此次三方合作中，Uber 提供需求端平台接入，Nvidia 提供算力基础，Autobrains 负责核心感知与决策系统。这是继 Waymo、Mobileye 之后，又一家在欧洲核心城市落地 Robotaxi 试点的玩家，也是 Uber AV 生态扩展路径的又一验证。",
+        "source_name": "Let's Data Science",
+        "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOM1JmVklIa183OEpvaFc1bmdvTG83WTg2MUpVOHhMN3d6eUJOSkFKdVozSWJlUE1jUHFMOHE1dHdYNVVmeFFGTF9pVFRaNTZwMVppOFJhazhaRWdhNzBCajh3Zmg3YnBmS1JDYWxUMnZHbmxmcHVYY0ZETGE4UnNjbTBEUmY2TkRVc2RiSU8xN3Z0WHdkQzBTU2lTcnoxeEMyMGc?oc=5"
+      },
+      {
+        "id": "2026-06-24-004",
+        "date": "2026-06-24",
+        "published_at": "2026-06-24",
+        "company": "萝卜快跑",
+        "company_slug": "apollo-go",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 3,
+        "title": "萝卜快跑（Apollo Go）与瑞士邮政 PostBus 合作，正式进入欧洲开启自动驾驶试验",
+        "summary_html": "百度旗下 <b>Apollo Go</b> 宣布与瑞士国家邮政运输公司 <b>PostBus</b> 签署合作协议，在瑞士启动<b>自动驾驶公共交通试验</b>。PostBus 是瑞士最重要的公共交通运营商之一，网络覆盖全国偏远山区与城镇。此次合作意味着萝卜快跑的 L4 技术正式落地欧洲，与文远知行苏黎世 + Uber 线路形成<b>中国 L4 出海欧洲双线并跑</b>格局。瑞士以严格的技术监管标准著称，此次落地也将成为中国自动驾驶技术国际认可度的重要背书。",
+        "source_name": "Insider Monkey",
+        "source_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPYjhyVVhRTTFBTlBWbjYxZ3R3NDZTSHRmM2NfczZTOUxvajZpUmFnQjQ0aFhMSEdVdVF4WjJ2SFRNT3hDNTdMUHU3b3dGRXZhVzRTNTU5bDMwTXVHSEhvQVFyNUw5ZmtyZGhnamJmUUFVUW55RW5tTDZtZEFIN1VaZTFfSTI4bzRaSk9OVml0djZnYmdTVzh1dEdRMW1jUnVBY1FEbm5RUTRzU1FVOXBlN2wzSFpxOUxSVnVDY0l3NWJNWXR1U2JWUE00OVlrdWE0SG5oZNIB3AFBVV95cUxNeGhwVWhNRzdCM2ItRmFGMVNZU0d6SFE1emM0RHlSUUwxS2tkSWtaMXR0NHBodWc3SlVodG4xUTc2aGVYSjRILXowbUR4V2Qzd25hb3VhVGNMNEtLYnhUTGw1MGVkMnlTdHlQRmx2clpvVWxyMXFxVndYdEVYUXJHUWUyUFMyMnpvbThuMm0xQWZjREtOa01HaFRnOVh0LWdMWWgxdEFWT3V2elJRd2tMY2RPQzdFaHhrTzZENzlWU0VXWkpWUDNRUWNvbXVfRjQyM1c0MmtLc29TbzhP?oc=5"
+      },
+      {
+        "id": "2026-06-24-005",
+        "date": "2026-06-24",
+        "published_at": "2026-06-24",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 2,
+        "title": "小鹏第二代 VLA 亮相，声称打造「中国最好用的自动驾驶」；MONA L03 同日发布，首设 750/1500TOPS 双算力选项",
+        "summary_html": "小鹏智驾事业部负责人刘先明发布第二代 <b>VLA（Vision-Language-Action）</b>模型，声称将带来中国最好用的自动驾驶体验，并透露此前已宣布的<b>5亿美元 AI 押注</b>将全面投入 VLA 技术研发——据报道此举导致 XPEV 股价承压。同日，小鹏发布<b>MONA L03 平价轿跑 SUV</b>，首次在该价位段提供 750TOPS 与 1500TOPS 两档算力版本供用户自选，并同时支持纯电与增程双动力方案，将高阶智驾的硬件选择权交还用户，是小鹏「全系智驾平权」战略的具体落地。",
+        "source_name": "汽车之家",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5JR2NaZ3hvYXl5UElkY0lNQmZrZVQwaGpEZmpReXlEcUNOWkxkdW9MOUQ4amtDMGt1WGZibEU2SnVMZ3drMEI0MmppVWViR3VGQ2dmczB6cDRXVUU?oc=5"
+      },
+      {
+        "id": "2026-06-24-006",
+        "date": "2026-06-24",
+        "published_at": "2026-06-24",
+        "company": "理想",
+        "company_slug": "li-auto",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 2,
+        "title": "理想 L9 Ultra 推 2 万元具身智能选装包（双马赫M100+多向激光雷达），L8 Ultra VLA 2.0 OTA 推理帧率提升 30%",
+        "summary_html": "理想推出 <b>L9 Ultra 具身智能选装包</b>，售价 <b>2 万元</b>，搭载双颗自研<b>马赫M100芯片</b>与多向激光雷达，进一步强化旗舰车型的感知层硬件冗余。与此同时，面向 L8 Ultra 推送的<b>OTA 9.0.2</b> 升级将 VLA 2.0 马赫智驾的推理帧率提升 30%，意味着实时感知与决策响应速度显著加快。两项举措串联来看：理想正以「可选装付费硬件 + 持续OTA软件升级」双轮驱动，构建智驾订阅与选装的商业闭环，探索单车后续变现路径。",
+        "source_name": "驱动之家",
+        "source_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9sZnF6eExVV1czLTU4V1hkX0hyUmFpYlF4bk94bld0NkRRd2RoUjktV0xiVnk0WVEwaXJoNFEtMUNjbXdRbXBTMjQ4VTRRak54QkI3SFBzU2E?oc=5"
+      },
+      {
+        "id": "2026-06-24-007",
+        "date": "2026-06-24",
+        "published_at": "2026-06-24",
+        "company": "理想",
+        "company_slug": "li-auto",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 2,
+        "title": "理想高管泼冷水：智驾领域「只认特斯拉」，国内其他品牌差距仍明显",
+        "summary_html": "理想汽车高管在近期访谈中公开表态，称在智能驾驶领域<b>「目前只认特斯拉」</b>，认为国内其他品牌虽在智驾上高调宣传，但实际差距仍然明显。此番言论在行业内引发广泛讨论：理想自身在智驾投入上持续加码（VLA 2.0、马赫芯片、具身智能），却同时对行业竞争者保持审慎态度，折射出智驾「宣传泡沫」与「实际体验」之间的分歧。从产品角度看，理想此举也有意将自身与「只会营销智驾」的竞品区隔，强化其「脚踏实地」的用户感知。",
+        "source_name": "搜狐网",
+        "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNMzJFWGJ2NldSM3dTSGxUVkdtejJMNmVTOU5lWlN4N0NFV2FHQkJtOGl0NE9nWThGTndZa0U1ZC0xZVJ0MnBzdFROZlpVOFlQQW9GWDVxemJjaVcyWGktMG9LdnNIZ2lYTUlxS2hIaGZ2YnRZMkNHeHRLSzZQT2RrQkR0RW9veG5I?oc=5"
+      }
+    ]
+  },
+  {
     "date": "2026-06-23",
     "items": [
       {
