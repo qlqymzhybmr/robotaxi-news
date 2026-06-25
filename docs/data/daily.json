@@ -1,5 +1,136 @@
 [
   {
+    "date": "2026-06-25",
+    "items": [
+      {
+        "id": "2026-06-25-001",
+        "date": "2026-06-25",
+        "published_at": "2026-06-25",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Amazon Zoox 发布升级版商业 Robotaxi：星空顶+面对面座椅，商业化发布在即",
+        "summary_html": "亚马逊旗下 <b>Zoox</b> 正式发布<b>新一代 Robotaxi 设计</b>，核心升级包括：<b>全景星空顶</b>提升乘客视野、沿用双向面对面座位布局并优化乘坐体验、加入多模态互动界面，以及进一步强化感知传感器冗余。Zoox 表示此次改款专为商业化运营设计，目标在<b>奥斯汀、旧金山等城市</b>加速商业落地——奥斯汀市议员已乘车体验并公开表示支持。这是继 Waymo、Cruise 之后，美国自动驾驶赛道再度出现<b>量产前大版本迭代</b>的信号，也是亚马逊持续加码自动驾驶的又一里程碑。",
+        "source_name": "凤凰网",
+        "source_url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE02Zzh1VU9nZDh5QUNReFpxSktrUXpGUDMxQU55Q2dONVJNSHc1dXcxN2h4OFcxSlIzNTloUWF4T2RNQnM4RDJGZw?oc=5"
+      },
+      {
+        "id": "2026-06-25-002",
+        "date": "2026-06-25",
+        "published_at": "2026-06-25",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Waymo 发布 220M+ 全自动驾驶里程安全报告：事故率持续优于人类基准，凤凰城数据最新更新",
+        "summary_html": "Waymo 发布迄今最大规模安全报告，覆盖<b>超过 2.206 亿英里全自动驾驶（无安全员）里程</b>，数据截至 2026 年 3 月。核心结论：<b>Waymo 在严重碰撞、气囊触发、行人事故等多项指标上均显著低于同类人类驾驶员基准</b>；随着运营区域从凤凰城扩展至旧金山、洛杉矶、奥斯汀等复杂城市环境，安全优势依然保持稳定甚至有所提升。Waymo 称这是业界目前<b>规模最大的 L4 真实道路安全数据集</b>，并已向 NHTSA 提交完整报告。这份数据将成为 Waymo 后续城市扩张谈判中的核心背书。",
+        "source_name": "KXAN Austin",
+        "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOY3RQZmF4T1FTaWJIZjJTQ3hnZnpJbFkyTk81SVM4TVZIVHo3LVUzT3d1WW1CNkI5dmdJR3ktM3NKUUFZRjZ4c2dtUHp5ck9mQnVxOWx1S3drMnJRcEVJeTJBQ013Unl6SWstaFZpRV9aWHNHRlRldE1QcTFJWDVrc1p6LUxONjZ4a2luQ1dFbDV0Y2Q5S3prSVk3V1NRemFX0gGmAUFVX3lxTE5YTHZrNHRoaE5iYU9HcTRwYVhIdENsdTdwdGZ6bDcyOEdXS19RVmNSOHBGei1CUjBiOXhjMVFoZUtmcGM1T0Z1SGkxWnBwWVlLSWtSSW9sVTBNV0pzZ3hfSi1wX3duSENfWUY1cWhNTmJ6Z0FhR2JIWXNKanBNMXM1RHAwZWt3Q2F0TDJPTGtiZ1d1SUF3LV9BTUwwbkRLUE1vR2VKV0E?oc=5"
+      },
+      {
+        "id": "2026-06-25-003",
+        "date": "2026-06-25",
+        "published_at": "2026-06-25",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Waymo 宣布召回 3800 辆 Robotaxi：软件误判施工区入口，旧金山乘客曝被困车内无法下车",
+        "summary_html": "就在发布安全报告的同一时间段，Waymo 向 NHTSA 提交<b>召回 3800+ 辆 Robotaxi</b> 的通知，原因是<b>软件在识别施工区封闭路段时存在缺陷</b>，可能导致车辆误入施工区。与此同时，旧金山有乘客公开反映<b>被困在 Waymo 车内、车辆驶入施工区后无法正常下客</b>；另有洛杉矶目击者报告 Waymo 逆向行驶阻断对向车流。Waymo 通过 OTA 已下推修复补丁，声称问题已修复。安全报告与召回通知同日出现，凸显 <b>L4 商业化「数据良好而边缘场景仍在演进」</b>的真实处境。",
+        "source_name": "WSJ",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOVTlOd2ozNE5JRlVpZUphUGVJUENDYmRPOXF0bW9VU2pXUGFHN1pSUF9CU19QcFRVamtINGtqNVVWN0NxNDhvbFBBVkxWVVBjMHgxa05vbkgyQV9QcW14RmNPWmRERHE5amo1RkVWQjhaNHJBa1JuY2lBaXQtb2lWZFNoeENZa05PVEZaYkJMWENoQ256VWs1ZjZCY0Q2M0FiMTdfZXN1ZzNQb3NHenI2dEdNMTVDNjdpajBsWkpldzU4dUI2?oc=5"
+      },
+      {
+        "id": "2026-06-25-004",
+        "date": "2026-06-25",
+        "published_at": "2026-06-25",
+        "company": "Wayve",
+        "company_slug": "wayve",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Stellantis、Wayve、Uber 三方联合上线伦敦 L4 Robotaxi，英国成全球商业落地新战场",
+        "summary_html": "英国 AI 自动驾驶公司 <b>Wayve</b> 宣布与 <b>Stellantis</b>（车辆平台）和 <b>Uber</b>（出行网络）达成三方合作，在<b>伦敦</b>正式上线 Level 4 Robotaxi 服务。Wayve 采用端到端大模型驱动的自动驾驶系统，以「全球可扩展」作为核心卖点：训练好的模型可快速适配不同国家城市路况，无需为每个城市重新建高精地图。Stellantis 提供车辆制造基础，Uber 提供需求侧平台——<b>三方分工模型</b>被认为是破解 L4 量产商业化困境的新路径。伦敦将成为继旧金山、凤凰城之后，<b>全球又一个 L4 Robotaxi 商业运营城市</b>。",
+        "source_name": "AOL.com",
+        "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVTRnQVM2OFIxMXZXb3lvMHJHakt4ck9idU5TZE9ZcE9wSkZUV3k2T0hZMlc2ampycGVobEVSa1dkUUVJTkJqdDBTRUItR2p3QzFlX0o2M3NyVmN6SFFyQUtVdmpCZlV2THhzU3c2RkptbUYyNHEzX0pGOE43dEJTX0RQMGY?oc=5"
+      },
+      {
+        "id": "2026-06-25-005",
+        "date": "2026-06-25",
+        "published_at": "2026-06-25",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Tesla 德州事故再升级：NTSB 加入调查，家属正式起诉索赔逾百万美元，Musk 回应「说不通」",
+        "summary_html": "Tesla 德州 Katy 致命事故持续发酵：<b>NTSB（美国国家运输安全委员会）</b>宣布加入调查，与此前已介入的 NHTSA 形成双轨并行——这是联邦级安全机构对单一 Tesla 事故最高规格的调查配置。同日，死者家属正式向德州法院提起诉讼，要求 <b>Tesla 及肇事驾驶员赔偿逾 100 万美元</b>，指控 Tesla 对 Autopilot/FSD 缺陷存在「重大过失与蓄意忽视」。马斯克在 X 发文回应称「FSD 在住宅区开得很慢，这起高速事故说不通」。争议焦点在于：<b>事故发生时 FSD 是否处于激活状态，以及驾驶员是否真的「主动覆盖」了系统</b>——与 Tesla 此前表述存在分歧。",
+        "source_name": "Houston Chronicle",
+        "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZFhfWTRrdjZhRmxRd1ZxSkszWjE0MS1yU0FxTUgwYmpNVDZwVGtTdjU3RGVxRXA0M0EtX2dWSU1udnZ3Tk9vNUxUdUdCQ20yTEJRZlRwVVF5aGF2YWdwS29Zb2Jfa2d0ZjQzdFk5QXM1VnRONlF0RW1Cd2NKRlY1VVA3RFNqZ3AyUksteGhNUndNNHBDRURwUGJTMXlZVnpEb1hvZGh0RHRsZWYtVDhDSDlR?oc=5"
+      },
+      {
+        "id": "2026-06-25-006",
+        "date": "2026-06-25",
+        "published_at": "2026-06-25",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 3,
+        "title": "Momenta 通过港交所聆讯，「物理 AI 第一股」冲击千亿港元估值，2025 年亏损 34 亿元",
+        "summary_html": "<b>Momenta</b> 正式通过港交所聆讯，预计<b>下周启动赴港上市</b>，被外界称为<b>「物理 AI 第一股」</b>。招股书披露：2025 年净亏损 34 亿元，但毛利率已升至 <b>71.6%</b>，核心大客户包括上汽、奔驰等主机厂；其自研「量产世界模型」技术主张用端到端大模型替代传统感知+规划分层架构，以此支撑千亿港元估值逻辑。外界争议集中于：<b>智驾行业估值普遍破发</b>（Mobileye、文远知行等均跌破发行价），Momenta 如何打破魔咒？分析人士认为关键在于其「<b>飞轮效应</b>」——量产数据回流训练世界模型，再反哺量产系统的闭环是否能形成真正壁垒。",
+        "source_name": "新浪财经",
+        "source_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPV01iaVpVeWRkaFhCQldzWm1RNWliZkZ0ZFhTdU5FMWczVkRNNDhXd0djYkFLWUtJcXo5Tk90Ym5qdUd5RGZ2UjE2WTZOSERWQ2FkSEdRcDR4WWxJUm9ZUllWdDhWNElZb2lkN0xpeVN4OXluaEhqRlkwaXhBdm44MEI2dEdjT3ZVdGc?oc=5"
+      },
+      {
+        "id": "2026-06-25-007",
+        "date": "2026-06-25",
+        "published_at": "2026-06-25",
+        "company": "曹操出行",
+        "company_slug": "caocao",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 2,
+        "title": "曹操出行携手美国 May Mobility 进军欧洲 Robotaxi 市场，2030 年目标 10 万辆规模",
+        "summary_html": "吉利旗下<b>曹操出行</b>宣布与美国自动驾驶公司 <b>May Mobility</b> 达成战略合作，双方计划共同开拓<b>欧洲 Robotaxi 市场</b>。合作模式为：曹操出行提供<b>车队运营与乘客调度</b>经验，May Mobility 提供其<b>「原地自主」（In-Situ Autonomy）</b>技术——一种以低速固定路线起步、逐步向城市复杂场景扩展的渐进式 L4 路线。May Mobility 官推同步确认：目标帮助曹操出行实现 <b>2030 年 10 万台 Robotaxi</b> 的欧洲部署。这是继萝卜快跑进入瑞士、文远知行落地新加坡之后，又一家中国出行平台借助外部技术合作加速国际化布局。",
+        "source_name": "观点网",
+        "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1aRndLTGpSeFNWNWlyNFMxR1loeUVZMmRTeWFmWEpCakFaYmhvTW1EWVVXREh6a3gxb3dJeDhSQ0NNYl93LW02UFB0Xzd5R2tUVEJha3pUdl9QaHNVdEcwMGVB?oc=5"
+      },
+      {
+        "id": "2026-06-25-008",
+        "date": "2026-06-25",
+        "published_at": "2026-06-25",
+        "company": "文远知行",
+        "company_slug": "weride",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 3,
+        "title": "文远知行+Grab 新加坡 Robotaxi 正式公开运营，全球版图扩至 12 国含斯洛伐克新线",
+        "summary_html": "文远知行（WeRide）与<b>东南亚出行巨头 Grab</b> 合作的<b>新加坡 Robotaxi 服务</b>正式对公众开放运营。这是文远知行在亚太地区继韩国、阿联酋之后推出的<b>又一公开商业化市场</b>，通过 Grab 平台接单，用户可直接在 Grab App 呼叫文远知行无人车。同日，文远知行还宣布<b>全球版图扩至 12 国</b>，斯洛伐克首个自动驾驶项目正式启动。此外，此前与联想集团宣布的<b>20 万台自动驾驶车辆部署合作</b>进入落地推进阶段。多线同步推进，令文远知行成为目前<b>国际化布局最广的中国 L4 企业</b>。",
+        "source_name": "汽车之家",
+        "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9GbVpRUDRZdjE1N09CVWlpQWFIV0lvd0ZkSkFtb2lOVmI1ODdfajZoSWs4T0JQOWo1Yy16N3NTNlJ2S3ZnM2tyenNGV2xuWkFoaHZUeDY1a1N0ejdVWUE?oc=5"
+      },
+      {
+        "id": "2026-06-25-009",
+        "date": "2026-06-25",
+        "published_at": "2026-06-25",
+        "company": "理想",
+        "company_slug": "li-auto",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 2,
+        "title": "理想 AD Pro 4.0 重磅升级：行业首个单颗征程 6M 芯片城市 NOA 量产，理想 L8 Livis 同步上市",
+        "summary_html": "理想推出 <b>AD Pro 4.0</b> 版本，核心亮点是<b>行业首次在单颗地平线征程 6M 芯片上实现城市 NOA 量产</b>（此前城市 NOA 普遍需要双芯片），大幅降低硬件成本的同时维持性能，是低端车型普及高阶智驾的重要技术节点。配套发布的<b>全新理想 L8 Livis</b> 单车搭载 4 颗激光雷达，采用<b>马赫 100 芯片支撑的新一代自动驾驶架构</b>，理想称之为「重新定义旗舰智驾标准」。结合理想董事长近日亲自揭短「车企智驾零事故数据的统计口径问题」，理想正在通过<b>技术透明化与产品分级差异化</b>双向构建用户信任。",
+        "source_name": "新浪网",
+        "source_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1lQUdXTkFhdTd3QVVvWlVvdkZGcW9RU2hoZjdhNTlXbDQwNXRrUDdpaVEtQWFmU18wWGpYeUNxNnBKZW9ReGl1RTItRkNXNTVuSzJSSVRkdFNIRDNkMjFEZUlLc2hEQlNncmdGU0RSVlVTZw?oc=5"
+      }
+    ]
+  },
+  {
     "date": "2026-06-24",
     "items": [
       {
