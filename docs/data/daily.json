@@ -1,5 +1,136 @@
 [
   {
+    "date": "2026-06-26",
+    "items": [
+      {
+        "id": "2026-06-26-001",
+        "date": "2026-06-26",
+        "published_at": "2026-06-25",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Waymo 注册德国实体，Robotaxi 版图首次延伸至欧洲大陆",
+        "summary_html": "Waymo 在德国正式注册法律实体，探索欧洲大陆 Robotaxi 扩张；继英国 Wayve+Stellantis+Uber 三方合作之后，欧洲 L4 竞争格局迅速升温，Waymo 正直接布局德国及周边市场，欧洲有望成为继美国之后的第二主战场。",
+        "source_name": "Transport Topics",
+        "source_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9XT002NmZNX0VMazdzeS1sU01IdHRZMkw1QkhOcVNYUHVlcWRwRmt5U3NzU1dFeGZKMDdZb0NRZnoxa3Z0cFVwUF9aR0d3OWkzWWNfWWdPcDBISTRRT2ppT1NtbDFKN3d3ZldR?oc=5"
+      },
+      {
+        "id": "2026-06-26-002",
+        "date": "2026-06-26",
+        "published_at": "2026-06-26",
+        "company": "NHTSA",
+        "company_slug": "nhtsa",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "美国交通部拟取消 Robotaxi 强制刹车踏板规定，为特斯拉、Waymo 扫清量产门槛",
+        "summary_html": "NHTSA 拟修改联邦机动车安全标准，取消完全无人驾驶车辆必须配备制动踏板的强制要求，刹车性能标准本身保持不变；该提案直接降低特斯拉 Cybercab 与 Waymo 下一代无方向盘车型的量产合规难度，行业将此视为重大监管利好。",
+        "source_name": "富途牛牛",
+        "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPRmJ1aG9ZazBjeGg4ejQ3RE40d1EzLXBBNVgwR1VURHhGZThNaXhXbWtLZi1pLTVYeTRwdGJvZkdlRGhIZXVyTEttaVlXaHROTFFTa281bVNBSFdMLVJiVXhwc1BqNzUzazhieUx4cHAzRGRxc0hValRjWXJYUGlST2VtbmE1c3hTdVR0ekdhSXI5QXFlNTNOVFJwUjdMWjFjSkhUa3d3?oc=5"
+      },
+      {
+        "id": "2026-06-26-003",
+        "date": "2026-06-26",
+        "published_at": "2026-06-26",
+        "company": "Nuro",
+        "company_slug": "nuro",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Uber 承诺 5 亿美元投资 Nuro，Robotaxi 赛道整合提速",
+        "summary_html": "据报道 Uber 向 Robotaxi 初创公司 Nuro 承诺 5 亿美元投资，Nuro 近期以施工区应对技术受到关注；Uber 此前已分别入局 Wayve、BYD 等，正以平台整合者身份加速构建 Robotaxi 生态，本次投资显示其在 L4 自动驾驶领域的押注进一步深化。",
+        "source_name": "MSN",
+        "source_url": "https://news.google.com/rss/articles/CBMiwgJBVV95cUxOX0tOWDdBSXA1RWRFWjlXYTZWODd1Q3kyZkdZR2dybWJJdXZpN3IzRW8wWE5lV2ZlWDVXSmZ0NllVeVZmcl9FTmRTS25LS2NCSDlZNEVKRWtBckNlem0yTEg0XzlxaWh1QnJiWVFsNHNsbi1tWUZaeDRfbG5ZN2hfU3hUaS1aMjl2M1lHc0dFOVZ2YXgtQlFueWFkTkVZbGhUS3ViOTlFTjRpUnY1QTRWbDZGUWN4bGh1cjgwbXVOTW5xNVZwYm43YUhFX1B1Tm5HMFZEaEloZ3I2TnZHZk1KS3dqMzZXbjFkQk9lMXZyQjZIbWdiLW9IMlVNSkJFSHNxU2ZtTTh6bmxqSEktYTdFTGNoemtBVzUwRndBVWVLQlFiZW5fcEJJYkpCdERyVWZsYm1rM29uWW1GNnc4QlF4aHdR?oc=5"
+      },
+      {
+        "id": "2026-06-26-004",
+        "date": "2026-06-26",
+        "published_at": "2026-06-25",
+        "company": "UNECE",
+        "company_slug": "unece",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "联合国批准全球首个自动驾驶系统 GTR，跨境 Robotaxi 合规迎来统一框架",
+        "summary_html": "联合国车辆法规协调世界论坛 (WP.29) 正式批准首个自动驾驶系统全球技术法规 (ADS GTR)，为 L3 及以上级别自动驾驶建立国际统一安全框架；该法规有助于中国车企在欧美市场实现 Robotaxi 和高阶智驾产品的跨境合规，降低多地市场准入壁垒。",
+        "source_name": "网通社",
+        "source_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xbGxuMF96SnY4RDl6bEZ5LWhRWHo0ZV96VURmNTRHdldVakVXMG5sN0I0cm01a3hsZDhrRXdpX191X1BtSE1nVm9JS3pjamlDbWVUcXk1dW44dw?oc=5"
+      },
+      {
+        "id": "2026-06-26-005",
+        "date": "2026-06-26",
+        "published_at": "2026-06-25",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Waymo Nashville 正式向公众全面开放，无需邀请码即可召车",
+        "summary_html": "Waymo One 纳什维尔服务解除邀请制，无需邀请码即可下载 App 直接召车；这是 Waymo 继凤凰城、旧金山、洛杉矶之后的第四个完全公开市场，正值同步在德国注册实体，显示 Waymo 全球规模化扩张路线全面加速。",
+        "source_name": "Axios",
+        "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNejR5VFdhQ0dJc1hObXZoRklRRktPdUJkUXptZlUyTURhWFlJMGlVdHZXMklKdWMwbU1mbGlXXzlvWmNzdTIwRnNadHNiVTNHWng2WFZvWmpxTU9yS3h5TkZjWVF1eV9Ib1RlVk43RDRWVm5ZWURucU02amZydERUdHo2Vlp2ajFENzdidw?oc=5"
+      },
+      {
+        "id": "2026-06-26-006",
+        "date": "2026-06-26",
+        "published_at": "2026-06-26",
+        "company": "曹操出行",
+        "company_slug": "caocao",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 3,
+        "title": "曹操出行携手 K2 集团，计划年内于阿布扎比投放首批 Robotaxi",
+        "summary_html": "曹操出行与阿联酋 K2 集团达成战略合作，计划 2026 年内于阿布扎比投放首批 Robotaxi 车辆；这是中国出行平台首次以中东为支点落地 Robotaxi 运营，叠加与 May Mobility 的欧洲布局，曹操出行正快速构建多地区全球化 Robotaxi 版图。",
+        "source_name": "搜狐网",
+        "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOa04tSnJScndjT0drTkVWcUhQZ0RBaGpKM2d2ZkpfcUg0ZUNOdExISkt4YkJWRUpRdXkwNEx4dnczSHktdk9sZGxwdHozVEwwQzBXbThRc2xvVHB5WnpmU1ktNk9HZlR5Rnd5akN0b2ZkSVBYbFVUaVhROXVxYlZjS0dxQVVZaUR4Y1dnMg?oc=5"
+      },
+      {
+        "id": "2026-06-26-007",
+        "date": "2026-06-26",
+        "published_at": "2026-06-25",
+        "company": "鸿蒙智行 (华为)",
+        "company_slug": "huawei",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 3,
+        "title": "华为余承东：鸿蒙智行全系交付超 143 万辆，乾崑智驾里程突破 121.86 亿公里",
+        "summary_html": "华为余承东公布里程碑数据：鸿蒙智行旗下赛力斯、智界、享界、傲界全系累计交付超 143 万辆；乾崑智驾辅助里程突破 121.86 亿公里，以规模化交付数据彰显华为智驾生态的商业落地能力，成为当前国内量产智驾的最大体量参照。",
+        "source_name": "新浪网",
+        "source_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPUDUxNXFHMWx1ZjI5Q29tcDRaTUQyVUJHcDRjUk5WbDA5S2JEUVp0N0hpcEM2b2l6THhpWTREUF9Hc0J6SG0wYndaVkFCV3o4Ul9nZUFKUi14eXoteTdldWFkQUx4WlppOGM5RG4ySEQtLXJFLXI0QUJDS1JCRGJJeU5B?oc=5"
+      },
+      {
+        "id": "2026-06-26-008",
+        "date": "2026-06-26",
+        "published_at": "2026-06-25",
+        "company": "理想 (Li Auto)",
+        "company_slug": "lixiang",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 2,
+        "title": "理想汽车：全栈自研智驾年底追上特斯拉，重金押注高阶自动驾驶",
+        "summary_html": "理想汽车 CTO 詹锟公开表态：将全面加大全栈自研智驾系统投入，计划年底追平特斯拉 FSD 水平；理想前一日刚发布 AD Pro 4.0，此次再亮「追赶特斯拉」战略目标，标志理想正从「智驾跟随者」向主动对标一线玩家转型。",
+        "source_name": "驱动之家",
+        "source_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5teWV1cklsaXBaaFExYjdrQ3psdVViMVB6OTJUNmRLbm1ZVFlLNndiOXZqMFVGdG8yX1dZcXZoWVFVTkpVN29tank1eXE1dmkxSktjemJFamI?oc=5"
+      },
+      {
+        "id": "2026-06-26-009",
+        "date": "2026-06-26",
+        "published_at": "2026-06-25",
+        "company": "百度",
+        "company_slug": "baidu",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 2,
+        "title": "全球 Robotaxi 指数出炉：百度 Apollo Go 登顶，中国商业化规模领跑全球",
+        "summary_html": "一份全球 Robotaxi 指数报告显示，百度 Apollo Go 在商业化规模、安全表现与覆盖城市等维度综合排名第一；中国 Robotaxi 市场运营总里程已超越美国，萝卜快跑在武汉等城市的高密度商业运营成为关键驱动力。",
+        "source_name": "网通社",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9CbHpqSHZib2hPTklUZlNtU3ZOWkdpLWV3cWFkd2d2ci1yNS1kQmVtM2dlNWMzWHI5NXh2c3VSc3pPQkZpN3FYenJwY3liV2Y4NGtDQUJONENOWXM?oc=5"
+      }
+    ]
+  },
+  {
     "date": "2026-06-25",
     "items": [
       {
