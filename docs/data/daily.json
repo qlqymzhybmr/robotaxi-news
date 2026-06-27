@@ -1,5 +1,136 @@
 [
   {
+    "date": "2026-06-27",
+    "items": [
+      {
+        "id": "2026-06-27-001",
+        "date": "2026-06-27",
+        "published_at": "2026-06-27",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Zoox发布升级版量产Robotaxi，重新设计车身，下半年启动量产",
+        "summary_html": "亚马逊旗下自动驾驶子公司Zoox正式发布升级版Robotaxi，车身经全新重新设计，提升乘坐空间与可靠性，计划于2026年下半年启动系列量产。新车型针对大规模ride-hailing场景优化，标志着Zoox从研发阶段进入商业化冲刺。<br>此次发布令外界聚焦亚马逊的Robotaxi商业化时间表，与Waymo和特斯拉的赛道竞争态势进一步明朗。",
+        "source_name": "AOL.com",
+        "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPcmR4VnZhSENFWGVBdWZYb3FNelduQS16QV83UHRGel9XakYzWmx1SkFKcVpaMmdjRjVLR2QyU1NtOXdBNG9xeHJRcDdCbWszWTRrUnQ3SnpEeG1ybEJvVmNtUWRZY3FiMTJ1ZEJMTWJSTW9BVU5ZLU92VENhTE45ZGcwdFRabjZSZzZz?oc=5"
+      },
+      {
+        "id": "2026-06-27-002",
+        "date": "2026-06-27",
+        "published_at": "2026-06-26",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Tesla和解FSD致行人死亡诉讼，德州撞入民宅案同日启动联邦调查",
+        "summary_html": "Tesla就一起使用Full Self-Driving功能导致行人死亡的诉讼达成庭外和解，金额未披露。同日，德州一辆Tesla在FSD模式下撞入民宅并造成人员死亡，NHTSA宣布启动联邦正式调查。<br>两起事件叠加，令Tesla FSD的法律与监管风险在同一天集中爆发，外界对其全自动驾驶系统的安全性与责任归属再度提出强烈质疑。",
+        "source_name": "TechCrunch",
+        "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUGppeHM2SUZCeElBTHBqX2ZONTJCcmxOMlllcjJocHptbGdVSy1sdWJIbXZyVDNtQmVsblBQS3VGR1BLeWx5MnpvSFNDWjEzM2xaVDBnTGFYZldUMHkxcF9mRWk3ZUktQTRVVE1oV19lTGsyQVA0TzhWTXdfT1JERDhnZGtaV3hYemFsdzV3ekVGZHNmOUl1VXpSNGlNWmNqS0VF?oc=5"
+      },
+      {
+        "id": "2026-06-27-003",
+        "date": "2026-06-27",
+        "published_at": "2026-06-26",
+        "company": "Mobileye",
+        "company_slug": "mobileye",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Mobileye宣布独立运营美国Robotaxi业务计划，股价当日跌7.1%",
+        "summary_html": "Mobileye宣布将在美国独立运营全资拥有的Robotaxi业务，从纯技术供应商向终端运营商战略转型。消息公布后，市场对其商业模式可行性与资本需求产生疑虑，MBLY股价当日下跌7.1%。<br>此举标志着Mobileye战略方向的重大转变，直接与Waymo等全栈L4运营商形成竞争，也反映出自动驾驶芯片和感知企业试图掌控全链路价值的行业趋势。",
+        "source_name": "simplywall.st",
+        "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSEVOV1BueEJMbzFjTDR2alFWWlk5enJzVmZvQnlpR1FUUVBiVlZHMHF6WFJ0VXI4aWN6bTZkR0RHM1BrTi02UnRrNWxrczNTcHBDeG91NVZLWnlPMzB0YmQwVm42RTVYUmk0Vm0xZjJVNHI3QUFnNGhiSFpWaE5zZG1XY2hSZmpYdEU2MWNEYWdMQ3RLUktpeUhTN0tjeld4NVpRQ1VtcEtDbnRUdUZlMTNNMW1PN0xXU2p3dzVPRWp5bWVUUXZhMV90UFIzTnJxeWfSAdcBQVVfeXFMTnR0bE5TYnpLOC1OM1FDRGJMMTJ0Sm5XYzE4bURpcUUwelgxZHI1QmlUd0ZnRXNkOTE3U1dkWXZCYU5EcGNwenRwalVyNlRDbUdFdkpWNjRudGczaWpfNnRrUnhCV3F5RWFkRHhvYVNIbWFhQ09UVnpxNnlpV2thQmVpSVdDc0dVS3BwWVlqRnFwTWE3WnlWWnRLcmx2UEFaWThhWU01OGUtUjFOTTdYN3JGU3hGcUZuMU5sQVo2Umh4ZFZCVkRfQTRBLUdqdXVVTDI1TXF5THM?oc=5"
+      },
+      {
+        "id": "2026-06-27-004",
+        "date": "2026-06-27",
+        "published_at": "2026-06-26",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 3,
+        "title": "奔驰与新加坡GIC确认基石投资，Momenta港股IPO获重量级背书",
+        "summary_html": "彭博社独家报道，梅赛德斯-奔驰与新加坡主权财富基金GIC确认将作为基石投资者支持Momenta的香港IPO，增强上市确定性与估值信心。Momenta此前已完成港交所聆讯，获得奔驰战略背书延续双方在智驾供应链的深度绑定。<br>在全球智驾板块股价普遍承压背景下，此次基石投资为Momenta IPO注入强心针，有望带动国内智驾赛道情绪回升。",
+        "source_name": "Bloomberg.com",
+        "source_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQU25MUEpxdi1IMVY5WGpFZnJraFpfZ3dsR1MweUJJUzktXzZBR2pNYjd2cHY0YjBxYWdCcTdVUS12Z1dUSHdpTldrODFKOExVR2VwQjdoMUwtU3ZXM1pZUkY2TXN2YTZGajk3MU45aE5UOGsyWS0xY1VkcTJnbFVSY0ZRamI1cnFZbzhkZmtTT0JrWGVZRkZNLXo3WHRiaFR6S2N5M3RJbk9Jb2RuS2c?oc=5"
+      },
+      {
+        "id": "2026-06-27-005",
+        "date": "2026-06-27",
+        "published_at": "2026-06-26",
+        "company": "曹操出行",
+        "company_slug": "caocao-chuxing",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 3,
+        "title": "曹操出行布局香港Robotaxi，联手May Mobility双线拓展欧洲市场",
+        "summary_html": "曹操出行宣布在香港推进Robotaxi落地，打造「全球首个RoboX战略标杆」；同时与美国自动驾驶公司May Mobility达成战略合作，携手开拓欧洲Robotaxi市场。<br>继此前阿布扎比布局后，曹操出行在不到一周内连续拿下香港与欧洲两个新市场，形成「港澳+中东+欧洲」海外多线并进格局，展示吉利系Robotaxi的全球化雄心。",
+        "source_name": "凤凰网",
+        "source_url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9qMFNoZkM2UElWSXpaRWhBMlBVMVQ1RmJOWE1TeVFIMll1RUp2UWJ4SXJ1Y21iZy1qZjBkR3lqbjgtZE1Xa3NYYg?oc=5"
+      },
+      {
+        "id": "2026-06-27-006",
+        "date": "2026-06-27",
+        "published_at": "2026-06-27",
+        "company": "理想 (Li Auto)",
+        "company_slug": "li-auto",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 3,
+        "title": "理想发布马赫M100自研芯片与马赫VLA智驾架构，对标特斯拉FSD V14",
+        "summary_html": "理想汽车发布首款自研智驾芯片「马赫M100」与「马赫VLA」端到端智驾架构，算力与模型规模均向特斯拉FSD V14对齐，目标在2026年底完成技术追赶。马赫M100采用自研神经网络处理器，马赫VLA基于视觉-语言-行动统一大模型。<br>此次发布标志着理想从采购智驾方案到「自研芯片+架构」的战略跃升，与华为、小鹏形成三足鼎立态势。",
+        "source_name": "网通社",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBITE90NDdaNG1BRkVESkdDRlNzdzQ5VnBuV0xxLWNPWWF1bFlYbmJkbzN3Q0xtaXlicVk5TFNhSF9pVjVBWWoxQXJDSVJSNWlvbHRtTUYyd1p6MEE?oc=5"
+      },
+      {
+        "id": "2026-06-27-007",
+        "date": "2026-06-27",
+        "published_at": "2026-06-26",
+        "company": "小马智行 (Pony.ai)",
+        "company_slug": "pony-ai",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 2,
+        "title": "小马智行第七代Robotaxi亮相重庆车展，CFO：规模扩张优先于短期盈利",
+        "summary_html": "2025重庆车展上，小马智行展出第七代Robotaxi，融合最新感知与计算架构，主打规模化可量产性。CFO王皓俊接受采访表示，Robotaxi不是「卖车生意」，当前核心战略是规模扩张优先于短期盈利，以里程积累和车队密度构筑护城河。<br>这一立场与Waymo等头部玩家保持一致，也与国内互联网化Robotaxi运营逻辑吻合。",
+        "source_name": "凤凰网汽车",
+        "source_url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9nM0pnRy1nMUtTLVM0Sk1zdXlxSEhYY0JNUVFDcmhiOVFoM2ZYdUZLdnhtWlFDelRhQzNseWVuWWVfVWI1VDJsVDNlaGc?oc=5"
+      },
+      {
+        "id": "2026-06-27-008",
+        "date": "2026-06-27",
+        "published_at": "2026-06-26",
+        "company": "地平线 (Horizon Robotics)",
+        "company_slug": "horizon-robotics",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 2,
+        "title": "比亚迪与地平线HSD智驾合作疑似谈妥，王传福与余凯同框试驾海豹",
+        "summary_html": "据新浪微博流出信息，比亚迪董事长王传福与地平线创始人余凯被拍到同框试驾比亚迪海豹，结合余凯发微博暗示「搞了一票特别大的」，市场普遍判断双方智驾合作已谈妥。<br>若比亚迪与地平线HSD（全栈自研高阶智驾方案）正式合作，将是继华为之后国内最大规模的智驾供应链整合，对现有格局影响深远。",
+        "source_name": "新浪网",
+        "source_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1SX1pacEY0Qmlvd1F6X2lyenB0OXU0SGVTOXV1X2pHUk1NcmQ2cGt3VjJnVWdCX01uMjFhcFZrVFQ1Vmk0TTdGb21mbVFuQlVCa3JKQ0RTNXJjbUNLdjdXRnpFbw?oc=5"
+      },
+      {
+        "id": "2026-06-27-009",
+        "date": "2026-06-27",
+        "published_at": "2026-06-27",
+        "company": "小鹏 (XPeng)",
+        "company_slug": "xpeng",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 2,
+        "title": "小鹏AI天玑5.4.0全球首发，VLA 2.0借WP.29法规推进2026年底海外合法落地",
+        "summary_html": "小鹏发布AI天玑OS 5.4.0，推出智驾云端大模型竞争新版本；同时宣布VLA 2.0将借助WP.29全球汽车法规框架，计划于2026年底率先合法进入多个海外市场。<br>这是中国智驾企业首次明确以WP.29法规合规路径作为出海切入点，意义超越单纯技术竞争，进入政策合规与市场准入博弈新阶段。",
+        "source_name": "网通社",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE40akFpNFFsWmxZMGhLTWVra0NrN2RxVzdpeHRfMmdKX2RSSGlVdWNsSUJ3SmpYNUtuVlNwblA4M1dZLXlVRm00TDl6TEZ3clNfY0FtX1VmT3hSdTQ?oc=5"
+      }
+    ]
+  },
+  {
     "date": "2026-06-26",
     "items": [
       {
