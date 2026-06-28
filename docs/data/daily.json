@@ -1,5 +1,136 @@
 [
   {
+    "date": "2026-06-28",
+    "items": [
+      {
+        "id": "2026-06-28-001",
+        "date": "2026-06-28",
+        "published_at": "2026-06-27",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Tesla Cybercab Robotaxi正式公布亚利桑那州运营城市，商业化版图进一步落地",
+        "summary_html": "Tesla正式公布Cybercab Robotaxi将覆盖亚利桑那州多个城市，继德州奥斯汀小规模试运营后，亚利桑那州成为下一个明确落地市场，意味着Tesla Robotaxi商业化地理版图开始系统性扩张。<br>此次城市名单的公布是Tesla FSD/Robotaxi从「演示」到「可查可核对的承诺」的关键步骤，也给监管机构和竞争对手提供了清晰的时间与地点参照。",
+        "source_name": "BASENOR",
+        "source_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNTlR4UGhNU2FWSTNQUDhqeTh5UWZQVS1xUHJtVEFvNUNhcEVYdk5kUFRkd2xCMlZUU2JnSFVBU0ltSjRvQndFTUYxYl9fUkptRHdwcHJQcTJMYW9RZTlMNWd1bHQzM1RLU3RSUlpOOU9wX2hFU19HYUdpVXgtX3JXMUtCcnZxUmQ4NEhOUE16V28tUkh2MmR5Rw?oc=5"
+      },
+      {
+        "id": "2026-06-28-002",
+        "date": "2026-06-28",
+        "published_at": "2026-06-27",
+        "company": "Wayve",
+        "company_slug": "wayve",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "英国Wayve正式在伦敦启动Robotaxi服务，欧洲L4商业化运营实质落地",
+        "summary_html": "英国自动驾驶公司Wayve宣布正式在伦敦启动Robotaxi服务，成为继Waymo（美国）之后又一在主要城市完成商业化运营的L4公司。Wayve背靠微软、软银等投资方，技术路线基于端到端神经网络与泛化学习。<br>伦敦属于全球监管最严格的城市之一，Wayve的成功商业落地为欧洲Robotaxi赛道提供重要里程碑，也对中国企业出海欧洲形成竞争压力。",
+        "source_name": "MSN",
+        "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdXBHT2pYRFhDeWVmUGFUVHZqVUZrX1JULTByQ1p2a2dnc1hpZXVUbURtc3BGRHBiMURUOHU5aTRBUnZyTC1FMW9aWE9VLW9peTJ0UlNWbW81bDFWTmZvQ0o0N19FdFFpMlQ1c3NYa2lhdk9tUDRiRzBxdldLZGZmemo5R1Q2d3B5Si1nT1NiR2FyOE5WWWQ2bDJSMjVYalNPMTEzSjI1QS1YejladjBBS19HRQ?oc=5"
+      },
+      {
+        "id": "2026-06-28-003",
+        "date": "2026-06-28",
+        "published_at": "2026-06-27",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Tesla Robotaxi运营车队缩水至仅20辆，与Waymo商业规模差距急剧拉大",
+        "summary_html": "据报道，Tesla在德州的Robotaxi实际运营车队已缩减至约20辆，与Waymo全美数千辆商业运营车队的规模相比差距悬殊。外界对Tesla Robotaxi短期内实现大规模商业化的预期明显下修。<br>此前德州官员表示Tesla车队「有望大幅扩张」，但当前数字显示进展远未达市场预期，与Musk年初所描述的宏大商业化时间表形成鲜明对比。",
+        "source_name": "汽车之家",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBtM0xXM0pSY0xGcGF2VGNOekJPeUFuNVZSYVRwTkhmNjcxMjZtbUpHNFQ5MnhTeWpyZm81azVGWkdYb1drT0pHSjJRNnM1RXdPSGVsQk12LUlFc1k?oc=5"
+      },
+      {
+        "id": "2026-06-28-004",
+        "date": "2026-06-28",
+        "published_at": "2026-06-27",
+        "company": "曹操出行",
+        "company_slug": "caocao-chuxing",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 3,
+        "title": "曹操出行发布RoboX战略：2030年目标全球部署10万辆Robotaxi",
+        "summary_html": "曹操出行正式发布RoboX长期战略，目标在2030年实现全球部署10万辆Robotaxi，打造全球最大的L4级自动驾驶出行网络。RoboX战略以「人机共驾→全无人→规模化」三阶段路径推进，涵盖中国、中东、香港、欧洲等多个市场。<br>10万辆目标远超当前Waymo数千辆规模，彰显吉利系Robotaxi的激进扩张路线，但同时也对资本、技术和监管资源提出极高要求。",
+        "source_name": "新浪网",
+        "source_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5uWlRrZ2hPcVdhbGw4c3VNRXlScS1qSkNBcUdUZEhoc2o4ZnJCMlFkTzNCbzJTUVF3UFQtR1ZlN2pqcWFWcnZYdHhrY2l5Nk5GaWJOMUlyNkwtNUJ3WVVxVEd6czBMUWhyMDRldG80ZmhoU1NpczFQdHRZY2RLQQ?oc=5"
+      },
+      {
+        "id": "2026-06-28-005",
+        "date": "2026-06-28",
+        "published_at": "2026-06-27",
+        "company": "比亚迪 (BYD)",
+        "company_slug": "byd",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 3,
+        "title": "王传福宣布比亚迪全系标配智驾仅需1.2万元，让智驾成为行业标配",
+        "summary_html": "比亚迪董事长王传福宣布，比亚迪将推动全系车型搭载智能驾驶系统，标配价格仅需12000元，目标让智驾像安全带和安全气囊一样成为汽车标准配置。这是迄今为止覆盖面最广的主流车企智驾普及宣言。<br>比亚迪作为全球最大电动车厂商，此举将把高阶智驾的受众从豪华市场拉低至十万元级家用车，对小鹏、华为等智驾供应商的定价体系和市场格局形成深远影响。",
+        "source_name": "新浪网",
+        "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOc2J0NTFfQzBVa3E2TEFGdko2ZmVtd2VqbXRRNlRISU1lVUl1VEY5dmpYaS1IdEZYekU2V3NxajNDdEY4bFRCUG5HM2NSell1OWNGLTBfQ2I5d2x6QXd1N3VuMlFVb1lLMUhLamI3V0pwRGltVlkxeEdKZEFQS0xJRVJfN1lmYW54ODVaYzlzRQ?oc=5"
+      },
+      {
+        "id": "2026-06-28-006",
+        "date": "2026-06-28",
+        "published_at": "2026-06-27",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Zoox计划每周量产最多100辆升级版Robotaxi，产能规划具体落地",
+        "summary_html": "继发布升级版Robotaxi之后，Zoox披露具体产能规划：目标将升级版Robotaxi的周产能提升至最多100辆，对应年化约5000辆的规模。这是Zoox从研发原型转向可交付产品的关键量化指标。<br>相比Waymo目前依赖捷豹I-PACE改装、Cruise和Tesla各自的供应链路径，Zoox的专用车型量产规划代表一条差异化的垂直整合路线，也为亚马逊的自动驾驶商业化提供了更清晰的时间轴。",
+        "source_name": "AOL.com",
+        "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5sTnNWQjhNOUdVeDB4SV9XdEdzWlNLOEFaa29PclpQUjBrODVVSUZKLTZjX3RXaXl5ZVY0c3JsTkpJQmo0QWZPRFZRZVlpa0g4MzRIN0o5clF6MlFQOW5KdTBDc0g5NGpsZ1hPdkd4MklwbjFHTXpUdmUtOEZBdWM?oc=5"
+      },
+      {
+        "id": "2026-06-28-007",
+        "date": "2026-06-28",
+        "published_at": "2026-06-27",
+        "company": "Lyft",
+        "company_slug": "lyft",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Lyft为AV平台设立新多传感器安全标准，推动Robotaxi行业规范化",
+        "summary_html": "Lyft宣布对接入其平台的自动驾驶车辆提高安全门槛，要求配备多传感器冗余方案，包括摄像头、雷达、激光雷达的组合，而非依赖单一传感器体系。<br>作为正在积极整合Waymo、Mobileye等合作方Robotaxi服务的平台，Lyft此举在行业层面具有标准制定意义：第三方运营平台通过准入规则推动安全门槛上移，是AV生态走向规范化的重要信号。",
+        "source_name": "Small Business Trends",
+        "source_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZ1BLaTBubWExZ1dJdUVPLWd0ZVRMTmJ1LW9fcE5nS2xHdFRxUnBCcFpRT3RMTENtOVFTV3lWUVNkbmhEOWd3OHA2U2hIUXZwejhsZEIyQklNaHRESkRNRC1fdFowSFV4M2hjNV9NcnhUcWhwYmpSMlV6OGFmUWtucHhZOEh0WnhKZ21OMmF6eXZ5YnRxTmNNQkZVcVFYdGQwc2lZ?oc=5"
+      },
+      {
+        "id": "2026-06-28-008",
+        "date": "2026-06-28",
+        "published_at": "2026-06-27",
+        "company": "文远知行 (WeRide)",
+        "company_slug": "weride",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 2,
+        "title": "文远知行押注右驾Robotaxi全球差异化战略：护城河能否持续？",
+        "summary_html": "Yahoo Finance分析文远知行以右驾Robotaxi为切入点构建全球护城河的战略：右驾市场（英国、澳洲、印度、东南亚、日本等）Waymo等美系玩家覆盖较弱，文远知行凭借新加坡公开运营经验率先形成规模优势。<br>分析认为若文远知行能在多个右驾市场建立早期网络效应，可形成美系竞争对手难以快速追赶的差异化壁垒，是中国L4公司海外差异化竞争的有效路径。",
+        "source_name": "Yahoo Finance",
+        "source_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOSl90Wm5OUlVHaG9nNzlucHNlQlVDaEw5eEZ5SFE0bUMzSUZZemFWbE1CQUUyR2hoVXJRXzA5U2o4dnVTUTlwS0N2TUF5eVYtbmdMVWVmSXZoVkRMcndYeHFWWDY1clZjVWlHZ3o0WnhVTUpoSlJsckMzb2J6WF9IUHFjVzRqVWJwWjR3eGJtTTNmV1Z0U2c?oc=5"
+      },
+      {
+        "id": "2026-06-28-009",
+        "date": "2026-06-28",
+        "published_at": "2026-06-27",
+        "company": "理想 (Li Auto)",
+        "company_slug": "li-auto",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 2,
+        "title": "理想创始人主动揭短：车企智驾「零事故」数据背后的真相",
+        "summary_html": "理想汽车创始人李想在社交媒体主动「揭短」，披露车企智驾「零事故」数据的口径与统计方式，指出行业普遍存在定义不统一、部分事故未纳入统计的问题，呼吁行业采用更透明的数据标准。<br>此举罕见地由车企主动打破行业惯例，具有舆论引领意义：若头部车企推动统一口径，将重塑消费者对智驾安全评估的判断框架，也可能倒逼监管制定更严格的数据披露要求。",
+        "source_name": "汽车之家",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9DSkJjdXE4UTF1YWtWaV9OVlNFSFFPVW5lbUZrQ1J4M0dTbnJ0b04zN2NMZ052YW9ESlRkLTBQRzV4M2k0bndGOEU0UXMxeDN4ZVdtNjQyV2tNYUk?oc=5"
+      }
+    ]
+  },
+  {
     "date": "2026-06-27",
     "items": [
       {
