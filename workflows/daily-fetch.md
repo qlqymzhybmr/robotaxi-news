@@ -330,14 +330,59 @@ Phase 2 完成后,**不等用户说话**,直接按 `workflows/daily-publish.md` 
 
 ---
 
+## Phase 4：Uber CEO 访谈提醒（自动执行）
+
+Phase 3 完成后，**立即执行**以下搜索，无需用户手动触发。
+
+### 目标
+
+搜索 Uber CEO Dara Khosrowshahi 近期的对外访谈。不限平台（YouTube、Podcast、媒体专访均算）。
+
+### 搜索关键词（轮流尝试，至少用前两组）
+
+1. `"Dara Khosrowshahi" interview 2026`
+2. `"Uber CEO" podcast interview 2026`
+3. `Dara Khosrowshahi podcast OR talk OR conversation`
+
+### 判断是否有新内容
+
+- 只关注**最近 14 天内**发布的访谈（发布日期与今天相差 ≤ 14 天）
+- 跳过：新闻报道、公司公告、二手引用、采访文字稿（非视频/音频访谈）
+- 保留：YouTube 视频、Podcast 单集、现场演讲录像
+
+### 有新访谈时
+
+在 `data/daily/YYYY-MM-DD.md` 文件**末尾另起一段**，追加：
+
+```markdown
+---
+
+## Uber CEO 访谈提醒
+
+- **节目/平台**：节目名称（如 Decoder with Nilay Patel / Invest Like the Best）
+- **发布日期**：YYYY-MM-DD
+- **链接**：[标题](url)
+- **时长**：约 XX 分钟（如已知）
+- **摘要**：一句话概括访谈主题，例如：讨论 Uber Robotaxi 战略、自动驾驶合作伙伴关系、未来城市出行。
+```
+
+如果本次搜索有**多个新访谈**，每个写一个列表条目。
+
+### 无新访谈时
+
+不追加任何内容，不提示，继续执行结束动作。
+
+---
+
 ## 结束动作
 
-Phase 1 + Phase 2 + Phase 3 全部完成后,统一告诉用户:
+Phase 1 + Phase 2 + Phase 3 + Phase 4 全部完成后,统一告诉用户:
 
 ```
 今日 daily 抓取完成:
 - 共 X 条新闻(⭐⭐⭐ x 条 / ⭐⭐ x 条 / ⭐ x 条),写入 data/daily/YYYY-MM-DD.md
-- 自动发布:X 条(⭐⭐+)已写入 docs/data/daily.json
+- 自动发布:X 条已写入 docs/data/daily.json
+- Uber CEO 访谈:有新访谈 / 无新内容
 
 请用 VS Code 打开 data/daily/YYYY-MM-DD.md,把认为重要的条目 [ ] 改成 [x]（供 weekly 使用）。
 发布网页请运行:git add -A && git commit -m "daily YYYY-MM-DD" && git push
