@@ -1,5 +1,136 @@
 [
   {
+    "date": "2026-06-29",
+    "items": [
+      {
+        "id": "2026-06-29-001",
+        "date": "2026-06-29",
+        "published_at": "2026-06-28",
+        "company": "GM",
+        "company_slug": "gm",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "GM正式放弃Robotaxi商业化路线，战略全面转向个人车辆自动驾驶",
+        "summary_html": "通用汽车（GM）宣布放弃以Robotaxi为核心的商业化路线，战略重心转向个人乘用车的自动驾驶能力（ADAS/L2+/L3）。这是Cruise 2023年因安全事故关闭Robotaxi业务后，GM对AV战略的明确再定位。<br>GM此举标志着第一波「独立Robotaxi公司路线」模式的终结：继Argo AI（福特+大众）2022年倒闭、Cruise 2023年暂停后，GM不再押注外部L4商业化，转而专注于面向数百万普通车主的高阶辅助驾驶，与Tesla FSD和中国智驾路线日趋相似。",
+        "source_name": "MSN",
+        "source_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaE1NcDg5MmNsZnlIZGNVTmk3cUJweTZZYW1jRHUtLUc4b1BEUzkyREVadFFYRHVJNkFubWtKbElRVDNvSFBRVE5GdTlGdk1GTGZOTVNVdVZ3VEh3Z1B5RFZ5eld0M192SDI5Q0tZVXVzMEhPZk8xMzg1MjQydHJXV19wUkJjVVN5UXVRTUwyZTFQY2xubFd4eGdGU1U5OUZ2UXN1czln?oc=5"
+      },
+      {
+        "id": "2026-06-29-002",
+        "date": "2026-06-29",
+        "published_at": "2026-06-28",
+        "company": "Volkswagen",
+        "company_slug": "volkswagen",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "大众计划终止与博世自动驾驶合作，欧洲AV格局面临重大重组",
+        "summary_html": "据报道，大众汽车（Volkswagen）计划终止与博世（Bosch）的自动驾驶联合开发合作，这将标志着欧洲最大车企在AV技术路线上的重大战略调整。大众+博世此前的合作被视为欧洲本土AV产业链的核心一环。<br>结合同日GM宣布放弃Robotaxi的消息，欧美两大传统车厂同步收缩L4投入，引发行业对「传统车企AV第一波浪潮是否正在系统性退潮」的深层反思，也进一步凸显以Waymo为代表的纯AV专业公司的相对优势。",
+        "source_name": "Seeking Alpha",
+        "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdWlDNjhsUjA4MldfR0VfRVlMQTFXZDdPb3ZHbUpweVNqTzZRSUVzU3dCTkpKVElHQzdDa19NOHZXamNuYWZmN2RKOEVadzRqaWU0MFFYbmY2dTJReEprdmVFOTlYNk9YVF9yZldQTGZ3Z0laUnNnMlRKMksxYzBYS3NEajRFbWFjSDdYMHJWWlBRNmNFQkxSSmRXSEJaZw?oc=5"
+      },
+      {
+        "id": "2026-06-29-003",
+        "date": "2026-06-29",
+        "published_at": "2026-06-28",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Tesla亚洲区6月30日截止FSD一次性购买，全面转向订阅制商业模式",
+        "summary_html": "Tesla宣布在亚洲市场（含日本、韩国、台湾、澳大利亚等地区）于6月30日终止FSD的一次性购买选项，此后仅保留月/年订阅制。这是Tesla FSD全球商业模式向订阅制转型的最新一步。<br>订阅制对Tesla而言意味着更稳定的经常性收入流，也为未来Robotaxi基于车辆的货币化预留了商业基础。对消费者而言，一次性购买选项的取消将影响部分用户购车决策，也引发对「永久授权」保障失去的担忧。",
+        "source_name": "Gagadget.com",
+        "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUDVrZjBIVnFWZUdnOTNPaEZYU0FXSDlrUGdkTHhodk54T3lLbjhOeEhJS25iVlplTDBkRnBFREdjZVl2WmNIeGswVEJIOTJCUWhOVHpvUUUtaE1sWlI1enFldTh0M0l4Q2ZzMmNlWjd4SlB6amxuTEVpV3JJUzNTUGR6Rkw0ZWJveEo1QVpRLXJvWldzU1NqenNOM2JOMFpWeFZHaVdLTWtYRi0yRTN2ZVBMZ0NXQVpuSUhZSdIBwgFBVV95cUxNWTNuOGxobzRJSGEzNHhCSGp2OXRKWFZNeWc1WHg1OEpHSG9xYzZqaHZjR2otcXozQUdaMlZVOFBVR0lHZkVqRmZhV3luLVQxR0FLVVpxcEJ2S3NRWE1DTGJ5bFJ4UDdxNDFzNWxrT1ZvNHU1dlIwX2IyYnprTURHWGxLOVJiam9pX0VhWXRYSGRoTVJXcUpPY0YtUVg1a1p1cXhqdkQwajk4bndCdFVxajdUZFJmZTJac1RyOGU4Z0VmZw?oc=5"
+      },
+      {
+        "id": "2026-06-29-004",
+        "date": "2026-06-29",
+        "published_at": "2026-06-29",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 3,
+        "title": "Momenta港股正式启动招股，7月8日挂牌，拟募资59亿港元，GIC/奔驰/比亚迪均认购",
+        "summary_html": "Momenta宣布正式开启香港IPO招股程序，拟募资最高59亿港元（约7.5亿美元），计划于2026年7月8日在港交所挂牌上市。战略投资者认购方包括新加坡政府投资公司（GIC）、奔驰及比亚迪，阵容强劲。<br>Momenta此次IPO时间节点与中国自动驾驶行业商业化加速高度吻合，募资将用于高阶智驾大规模量产和Robotaxi技术研发。作为中国端到端智驾「飞轮」路线的代表企业，Momenta IPO也是2026年自动驾驶赛道最受关注的资本事件之一。",
+        "source_name": "Reuters",
+        "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPMXBzSS1FRWtWeG11bWxfQXNvNlNKckJSQmdzanRtalNmVmFHb25EYVFGRUNvTGpvRzM2cEYyRDNkdWgzQzJ2Z2h5UHNKcDZGS241RmoxRkFJQTRHT1lPTDY2RFI1UFAyS0laaHc2ZFpFOUoycl9LYWFnZDZDa3EwdkFzOFZiSzFCRmRvMzFMWTlERnRVam5CbnRNUHN2WWdQaWhVTGl3elpQbW0wSmFYRnhEck5mZVQ1bUlMYnN2SmFUMDQ0RW5PdTBLZW5GZUZTOUNFb09SdmdzZlk?oc=5"
+      },
+      {
+        "id": "2026-06-29-005",
+        "date": "2026-06-29",
+        "published_at": "2026-06-29",
+        "company": "比亚迪 (BYD)",
+        "company_slug": "byd",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 3,
+        "title": "比亚迪自研智驾芯片预计2027年量产上车，王传福：智能化下半场赢在芯片",
+        "summary_html": "比亚迪自研智驾芯片最新进展曝光：预计2027年首搭量产车型，届时比亚迪将实现从车机芯片到智驾芯片的全栈自研。王传福重申「智能化下半场的竞争关键在芯片」，此前已与地平线开展合作，但自研芯片战略显示其长期目标是摆脱对外部芯片供应商的依赖。<br>若2027年如期量产，比亚迪将成为中国少数具备端到端自研智驾芯片能力的车企，与Tesla Dojo+HW4的垂直整合路线高度对标，也将对地平线、高通、英伟达等芯片供应商产生深远影响。",
+        "source_name": "证券时报",
+        "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9zSkFMR0p0NENTOVdTQkdHRkFhT2NPNXc0YWNXMEJYR3dWWll1UjdDOGxqaHMzOU9uSFlFNU16WjYxc29scVpiS0ZUR1M5V0t3SVJTekJzeWxmMzlxZGc?oc=5"
+      },
+      {
+        "id": "2026-06-29-006",
+        "date": "2026-06-29",
+        "published_at": "2026-06-28",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Waymo最新款Robotaxi亮相，PCMag与Zoox进行首次横向对比",
+        "summary_html": "PCMag对Waymo最新款Robotaxi和亚马逊旗下Zoox升级版Robotaxi进行横向对比分析，从车型设计、传感器配置、乘坐体验和运营城市等维度全面评估。Waymo依托更成熟的运营经验和更广泛的城市覆盖占据优势，Zoox则在专用车型设计和乘坐舒适性上具备差异化。<br>此次对比时机恰当：两款车均在2026年夏季进入规模化阶段，为市场提供了直观的「第一代商业Robotaxi」横向基准参照。",
+        "source_name": "PCMag",
+        "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRnFFYlRIQ3J5VmszMFZLTEloVi1QNnpPRUVvVkVPOGhDSnc2MUd0YkVEV0RsUlh3V2d6OXJKYlpBOXkydkhTbUg3Z1NRLVFad2ZmSloxQWQ0WE1ETS1LcjdHMDROV1FjS1RZbkxOMHRXZlNMZG1WdjFkZ3loYktjMnVSeE1PNVRpR1VzUmJsdUg5VGlkNldDSWw1eEQyblhM?oc=5"
+      },
+      {
+        "id": "2026-06-29-007",
+        "date": "2026-06-29",
+        "published_at": "2026-06-28",
+        "company": "小马智行 (Pony.ai)",
+        "company_slug": "pony-ai",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 2,
+        "title": "小马智行Robotaxi被记录加塞违规变道，官方回应引发安全信任讨论",
+        "summary_html": "有用户通过行车记录仪拍下小马智行Robotaxi在道路上加塞违规变道的视频并引发广泛关注，小马智行官方随后发表声明回应，公布事发经过及系统决策依据。<br>此类事件对处于商业化关键期的Robotaxi公司影响尤为显著：公众对「无人驾驶是否比人类驾驶更守规矩」的期待极高，一次违规变道视频的病毒式传播，对公众信任的杀伤力往往超过系统整体安全统计数据，也对Robotaxi公司的实时舆情管理能力提出考验。",
+        "source_name": "新浪财经",
+        "source_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9razFhdXRmbzczMmhIU29hZFNuTmVxWmFaUzlUa19oanNaVURXaS1qaWR5V1poTFBQUFhOaVlWN1ZRRWdOWGRubk5zdjhpNlJRMWN0WXlBN0twZjdiTUhsMEJwb1VCTlJnNjhIT0U5MFpDR2VvMnc?oc=5"
+      },
+      {
+        "id": "2026-06-29-008",
+        "date": "2026-06-29",
+        "published_at": "2026-06-28",
+        "company": "零跑 (Leapmotor)",
+        "company_slug": "leapmotor",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 2,
+        "title": "零跑高速智驾事故：后排乘客双臂骨折，车企拒绝退车引发法律责任争议",
+        "summary_html": "一名零跑汽车车主在高速公路开启智驾功能后发生碰撞事故，导致后排乘客双臂骨折、车辆报废。车主要求零跑退车并承担伤者医疗费，零跑以「不符合退车条件」为由拒绝。事件在社交媒体上持续发酵。<br>这一案例将智驾事故的法律责任归属问题推到台前：智驾功能开启时发生事故，责任究竟归用户还是车企？目前中国法规对此界定仍不清晰，此类案例的裁决结果将对整个智驾行业的用户协议和产品责任边界产生重要示范效应。",
+        "source_name": "新浪财经",
+        "source_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBIOFpfY0ZLbXhQUE5qUFhuZkQ3ZnRPcXRjdlljQnlncEVYTjNYeEZLd3VMSnNyWUJHcExoR0wtajlfd1VUbVlacDlkczRCRjYtNjBfSkxJWHNqNmxPaXA5TXczZ1hfT2hSUjg2ejZiOURMZUJGbUZtMw?oc=5"
+      },
+      {
+        "id": "2026-06-29-009",
+        "date": "2026-06-29",
+        "published_at": "2026-06-28",
+        "company": "小米 (Xiaomi Auto)",
+        "company_slug": "xiaomi",
+        "group": "国内",
+        "sub_group": "国内智驾",
+        "rating": 2,
+        "title": "小米YU7 GT刷新纽北赛道自动驾驶圈速纪录，官方：为极端工况验证智驾边界",
+        "summary_html": "小米汽车YU7 GT在德国纽博格林赛道（纽北）以自动驾驶模式完成圈速挑战，刷新该赛道自动驾驶圈速纪录。小米官方回应称，挑战纽北的核心目的并非追求纪录本身，而是在极端高速和复杂弯道工况下验证智驾系统的边界能力，以「救车逻辑」作为技术突破方向。<br>评论认为此次纽北挑战的意义超越成绩本身：小米通过极端工况公开测试将智驾能力从「城市场景」延伸至「赛道极限」，是中国车企智驾技术自信心和全球化营销叙事走向新阶段的标志性事件。",
+        "source_name": "汽车之家",
+        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5lMksyd1dvc3dvZS15Q292ZXRXQ3MyOHM2Ung4ZjN6cE5XWUhPZGRMZjVaaFlIY2FaWUlYTmZrcGdIcDJZd2M4WTl6QmpFbjNqWUxMcE9wcUN6aFE?oc=5"
+      }
+    ]
+  },
+  {
     "date": "2026-06-28",
     "items": [
       {
