@@ -1,5 +1,136 @@
 [
   {
+    "date": "2026-06-30",
+    "items": [
+      {
+        "id": "2026-06-30-001",
+        "date": "2026-06-30",
+        "published_at": "2026-06-29",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Waymo与Uber终止凤凰城近三年合作，车辆回归独立App并转入DoorDash配送",
+        "summary_html": "6月29日，Uber与Waymo正式终止在亚利桑那州凤凰城长达近三年的Robotaxi合作试点，Waymo叫车入口从Uber App中移除，车辆重新并入Waymo One独立平台运营。Reuters、CNBC、Bloomberg均证实此次拆伙属于「计划性退出」，凤凰城合作被定性为刻意限规模的试点，主要目的是为此后在奥斯汀和亚特兰大的深度协作积累经验。<br>Uber方面表示将另行宣布凤凰城新合作伙伴，Waymo凤凰城车队随即转向DoorDash自动配送，进一步拓展多模式商业化收入。此次拆伙标志着Waymo与Uber的关系从合作伙伴走向伦敦、洛杉矶等新市场的直接竞争态势，Uber同日宣布与Lucid Air+Nuro的新合作，以多元AV伙伴策略应对潜在合作伙伴流失风险。",
+        "source_name": "Reuters",
+        "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVFhWSHl4RkpSamZpOGZXRnNLNUVuQnZzTFRBSHpxX2hrQzBnRk9iOW5jbnMzZ3FleFlTb1BtM18temswYW5Hc2F1Zy1FQkhwVzlMQ0E4U0RpYmR3eENaX2JDajhzbFJsT281V1FRMGdobzVtS2JYT2ZXUE9aRnp5VFpnWFlDN2NWYVBwSHkwX3JSUQ?oc=5"
+      },
+      {
+        "id": "2026-06-30-002",
+        "date": "2026-06-30",
+        "published_at": "2026-06-29",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 3,
+        "title": "Tesla FSD V14 Lite扩展至HW3旧款车主，Q2交付超预期推动股价突破$400",
+        "summary_html": "6月29日，Tesla将FSD V14 Lite推送至搭载HW3（硬件版本3）的旧款车辆，使数百万存量车主得以升级体验最新自动驾驶功能。Tesla官方Twitter发布「v14 Lite review」，外媒zecar报道澳大利亚可能是下一个推送市场，FSD全球化部署步伐加速。此前V14仅适配HW4新硬件，此次回溯推送被视为向用户兑现硬件投资承诺的关键举措。<br>消息公布后TSLA股价飙升突破400美元，Q2交付数据同期超预期，共同缓解市场对EV增速放缓的担忧。摩根大通与摩根士丹利均在同日指出Tesla Cybercab车队（约42辆）远小于Waymo（577辆）系「有意为之」——Tesla优先推进FSD在存量私家车上的渗透和数据积累，而非急于扩张商业Robotaxi车队，为下半年Cybercab量产和FSD订阅商业化做规模铺垫。",
+        "source_name": "MarketWatch",
+        "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMDdWZnhLREJEZkx2ZXBtTTVweXh0dGlnSE01YndXUnNMaTlzSS04cjVINURpeUR2OFVzYWFqQWpxRXJ0X0xmWHJ2VlZvQkVNQkRtQ1pfUWpEQ3lHQS1lTDZYdkJLOGRkLWR3X09FNHFYUXRXQlI1U25ZNVZ2M3ZZcWVDemJzR1pLeWFOTWwwWEJzWDdaUzNTdXhGb0FBOHR3QmctbDJDdHgxNXg1WHQ0TFc0OFRCSVNEMmxFdUFnUQ?oc=5"
+      },
+      {
+        "id": "2026-06-30-003",
+        "date": "2026-06-30",
+        "published_at": "2026-06-29",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Tesla Simi Valley咖啡厅撞车事故1死数伤，FSD安全危机持续发酵",
+        "summary_html": "6月29日深夜，加州希米谷（Simi Valley）一家购物中心内的咖啡厅发生特斯拉撞车事故，造成1名女性死亡、多名行人受伤，车辆直接冲入咖啡厅室内。NBC Los Angeles和LA Times均发布现场报道，目前官方尚未确认事故是否与Autopilot或FSD功能激活相关。<br>此事故紧随上周NHTSA宣布对Tesla Autopilot撞房死亡事故展开调查后发生，使Tesla安全形象在同一周内再度承压。尤其值得关注的是，事故与Tesla FSD V14 Lite扩大覆盖范围的公告发生于同一天，将对Tesla推动FSD立法层面保护的努力形成双重舆论压力，再度引发业界对「L2+如何界定事故责任边界」这一核心法律议题的讨论。",
+        "source_name": "NBC Los Angeles",
+        "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQdDgzUEh4eUZrLW9SV2JpS1ZJdFFIb05nRzBTVDRUU1h6dlFmcDQwSGxhc3dMcHFwOTIzemlMVjZhck9TR2RlSFVFaElpbDhUSF9QTlFBVGdxdUxwb2ZMUjFiZ1RVczY4YlY4ZFdnVjlncmV5LXRmZF9uYTY1bWhjeVZjYWhtUFZpTk9rQkNVWVhUQVJlZnMxMW4zSVE1ZmhvMzllWG5kdTlvQVctUzdqR3hGMExKZ1XSAb8BQVVfeXFMTWFmbURGYlQyOTVpQnRFVUY1ZU5rOHk5WVhVNWdkcjZiZGMyREhZVGRSQWc2Ni1ZVFFvSWY2Ym5RT09tOUxTTUs2M0d3WHpSTmNDRTNvQUVyTGpuWHlZVnZyTHhZdFpQa0FTQ2ZkQlY2eXVMeUV2U1R6djc3anotM0JnazE5SnZFNWFqMU9QeXBhZ2JpcFJ2WGhuQnJIX3NaakgwbGQ1TF9KX0k1aUtVbmFRZVRaRGVVLXM5NElLZWc?oc=5"
+      },
+      {
+        "id": "2026-06-30-004",
+        "date": "2026-06-30",
+        "published_at": "2026-06-29",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "rating": 2,
+        "title": "Zoox量产前完成最终设计调整，亚马逊背书下规模生产临近",
+        "summary_html": "6月29日，Yahoo Autos等媒体报道Zoox在正式启动大规模生产前，对其Robotaxi车辆进行了若干外观和功能层面的最终设计改进（makeover），意味着车辆设计已进入量产定稿阶段，产线准备工作全面推进。Zoox为Amazon全资子公司，其车型为双向行驶的专用Robotaxi，无方向盘和踏板，设计理念完全围绕L4无监督自动驾驶构建。<br>同日Zoox在X（Twitter）上公布引入拥有25年全球HR经验的新任人力资源领导层，通常预示企业进入快速扩张期。结合设计最终定型的消息，Zoox商业化节奏正在明显加快，业界普遍预期2026年内将开展小规模付费试运营，届时将成为继Waymo之后美国市场第二家运营专属Robotaxi车型的公司。",
+        "source_name": "Yahoo Autos",
+        "source_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWTJaR0puMXdYbFc5SGsxVHFWMXlJOEY1QzV4V0xRZEREUmxuWl9rdHZlWUtHV2xCNGhOS19PaWZFODNSUDcwLWdFYVFXQXRKYUo3NHpWcWFuT1FwblJKRkdSUVRqSzgwR1h5ZllXdW1xN2ppRWJLMDYtbUdlUVdJY1dzN05VV1NzQ3VLczBtOXVjYkoyMUU0YVBoeExkZGd4?oc=5"
+      },
+      {
+        "id": "2026-06-30-005",
+        "date": "2026-06-30",
+        "published_at": "2026-06-29",
+        "company": "Uber",
+        "company_slug": "uber",
+        "group": "国外",
+        "sub_group": "国外出行平台",
+        "rating": 3,
+        "title": "Uber与Lucid Air+Nuro合作旧金山高端Robotaxi测试，Lucid股价单日涨15%",
+        "summary_html": "6月29日，据NewsCord援引多源报道，Uber正在旧金山测试以Lucid Air豪华电动轿车为载体、搭载Nuro自动驾驶系统的高端Robotaxi服务，消息确认后Lucid（LCID）股价当日上涨约15%，市场将其解读为Lucid在整车销售之外找到重要商业化路径。同日Uber还强化与Rivian的AV合作，进一步丰富多元化无人车队布局。分析师同日将Uber目标价上调至$100，理由是其Robotaxi合作伙伴生态加速扩张。<br>这一新合作宣布于Uber终止Waymo凤凰城合作的同一天，节奏之密集清晰传达出Uber「技术不可知论」平台战略：不依赖任何单一AV合作伙伴，以多条腿走路分散风险。Nuro原以最后一公里商品配送机器人起家，此次进入载人Robotaxi领域是其商业模式的重大转型，Uber通过整合Lucid车辆+Nuro算法的轻资产模式快速切入高端市场，为Waymo之外的旧金山市场提供新的高端Robotaxi选项。",
+        "source_name": "NewsCord",
+        "source_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTzJlVmVQVE9XVTVzWEtJcnVHQndFaEJPTTB2UVB0TFNub3ZSQTNoVXFNSkxoX0pzN2NqX2w5Vml1QXFxTUVHc1BGVnJTOTlSZDFFUzJ2WWZFNm10Ynd0dTliaU00WHRRdFdIRTdfVXZSYnlNV290NG0weXVva3gtT0FDLWZtcEp6cHV4b0xmR1VBbllBWkFXeEU1a2hPRHYxdm92T2NMSTNsZjZqd19NMXJkelRQMU5SQTlCc0FEVDZqTElvNTBhRDlRZ19ta3lwekNwM0tUWW5GMEJNQ2huZVJTcw?oc=5"
+      },
+      {
+        "id": "2026-06-30-006",
+        "date": "2026-06-30",
+        "published_at": "2026-06-29",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 3,
+        "title": "Momenta港股IPO正式招股，目标募资$752M，GM/宝马/奔驰/比亚迪战略入股",
+        "summary_html": "6月29日，Momenta正式启动香港IPO招股，目标融资额达7.52亿美元（约58亿港元），被中国财经媒体称为冲刺「物理AI第一股」。此次IPO投资人阵容豪华：通用汽车（GM）、宝马、比亚迪、奔驰均以战略股东身份入局，覆盖中外主流车企。宝马与Momenta同日确认「全新智驾方案将于2026年落地量产」。Momenta目前已在全球210款车型上获得前装定点合同，居国内智驾方案商前列。<br>Momenta IPO是国内智驾供应商从ToB技术服务走向资本市场的重要里程碑，也是继文远知行在美上市后规模最大的中国自动驾驶资本事件。宝马、奔驰双双入股同一家中国供应商，打破欧洲车企对华供应链合作惯例，对华为引望、地平线等国内竞争对手形成直接压力，智驾供应链格局正在以Momenta为新节点加速重塑。",
+        "source_name": "MSN",
+        "source_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNU2pCSFlfMllmQTBFN1B0SHhEM0FaM3lkSi1sMlZEcl9xa1lDMVJMOUx3bjN3RFE1TVJlTmk4dmRrRUFMbERYeE12V2c4NUlwcVVyNXdTSzZHZVEwaUJwZ1hHNFpwZnY3Z3RNUjFSR1lrLXhJUzF4aGFaNHoxUzY0eGdsOVRybHUyX2VsR2cwQ0FCdlJvdzBQaXcwazhIMkdMeklSTzM1dndJM2NWR2w0OC1nVEdPZUhYU2doNWZUeFN2OTBL?oc=5"
+      },
+      {
+        "id": "2026-06-30-007",
+        "date": "2026-06-30",
+        "published_at": "2026-06-29",
+        "company": "地平线",
+        "company_slug": "horizon-robotics",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "rating": 3,
+        "title": "地平线HSD V2.0发布+智驾芯片市占跃居第二超华为，股价单日暴涨15%+",
+        "summary_html": "6月29日，地平线两大重磅进展集中爆发：其一，HSD V2.0（Horizon Smart Driving 2.0）正式亮相，采用「世界模型×强化学习」端到端技术架构，城区NOA能力大幅提升，首发搭载车型为iCAR V27（奇瑞旗下品牌）；其二，市场数据显示地平线智驾芯片市占率跃居行业第二，超越华为，市场格局形成「地平线+华为双强」格局。地平线机器人-W（2111.HK）早盘涨幅接近15%。<br>HSD V2.0最核心突破在于将「世界模型」能力引入量产级智驾方案，使系统具备对未来驾驶场景的预判能力，这一能力此前仅在Tesla FSD和小鹏X-Mind等旗舰系统中应用。首发OEM选择iCAR而非高端品牌，体现地平线战略方向：以HSD V2.0打通中低价位智驾市场，依托比亚迪等量产大户快速跑量，与华为主打高端路线形成差异化竞争。",
+        "source_name": "新浪财经",
+        "source_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQNnExS004NUNKMGpxQnRGd1U1c09TdFhvNW1qbjVDN1J0Mm5YZzdTLUwxYjcwVkQ2eXhKWkhMbGxISXVtcGRfUEVsUl9taHZEQUhpWGtGb0RIQ1hmeC05TFk1NVlPMUlsSzNyaWtqVk96YTlRSW9LNlhia0o0UzZMdGs1a2Q?oc=5"
+      },
+      {
+        "id": "2026-06-30-008",
+        "date": "2026-06-30",
+        "published_at": "2026-06-29",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "rating": 3,
+        "title": "小鹏CVPR 2026发布X-Mind世界模型，CEO何小鹏：2026年底自动驾驶将全球合法化",
+        "summary_html": "6月29日，小鹏汽车在CVPR 2026（国际计算机视觉与模式识别大会）上正式发布X-Mind自动驾驶世界模型框架，核心能力定义为「Future-Foresight Brain（未来预视大脑）」，通过世界模型对未来驾驶场景进行预判推演。多家英文媒体发布官方公告，CEO何小鹏个人公开声明：「2026年底自动驾驶可以合法进入全球市场」。同日小鹏还推送OTA 5.9.5更新（覆盖10个核心模块、50+功能升级），并透露小鹏GX单日大定再创新高。<br>X-Mind是小鹏向「端到端+世界模型」架构全面迁移的标志性节点，将技术定位从「量产智驾」拉升至「自动驾驶基础模型」层面，与Tesla FSD、Waymo驾驶基础模型形成学术和工程层面的正面对话。何小鹏「全球合法化」表态基于美、欧、中均在加速推进L3+立法进程的背景，以CEO公开喊话明确预测2026年底节点，小鹏正在构建「学术认可+商业落地+政策预判」三位一体的技术叙事。",
+        "source_name": "Yahoo Finance",
+        "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTXI4ZXpsYjNyMDVNYkt2M1BNdFNBYnRnaGo2d1g0TEdnZHdhWlJkbFpwUmFhYjdwQV9wYVJPVG9XVGtoZG1zY0FqYWR5VlliYnRMUU9FOURfYzNCQ3dZcHVhckxrel96MWx0dVpxdnQtLWl6bUVQX29DM0c0R0JaNGtreVdYaFp4dWVESVpIY0FhQlJWQmtRbVdsQQ?oc=5"
+      },
+      {
+        "id": "2026-06-30-009",
+        "date": "2026-06-30",
+        "published_at": "2026-06-29",
+        "company": "华为",
+        "company_slug": "huawei",
+        "group": "国内",
+        "sub_group": "国内华为系 / 互联网大厂",
+        "rating": 2,
+        "title": "华为鸿蒙享界G9无伪装实车曝光，搭载乾崑896线双光路图像级激光雷达",
+        "summary_html": "6月29日，鸿蒙智行享界G9无伪装测试车现身户外，新浪科技和网通社发布现场实拍，确认车辆实装华为乾崑896线双光路图像级激光雷达。这一配置来自华为途灵平台完成三轮结构性升级后的最新成果——896线激光雷达相较行业主流的192线/256线产品，点云密度和远距离分辨率大幅提升，配合数字底盘引擎可实现底盘主动预判功能。<br>享界G9是华为乾崑ADS 5在豪华轿车市场的旗舰落地车型，由北汽旗下享界品牌出品，「双光路图像级」架构使同一激光发射器可生成测距和成像两套数据流，在暗光和复杂天气下感知性能更优。华为途灵平台持续加重对高线束激光雷达的投入，与地平线HSD V2.0主推视觉+低成本方向形成鲜明技术路线分野，两条路线的市场成效将在下半年迎来关键验证期。",
+        "source_name": "新浪网",
+        "source_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB0M1lsQ1dvakF2RndDWXdsOWM1cjh6eUVaRnY0aDhtcVpPYVJ3YUpOcEJqMHV6bGs1aTZDQkF0Q29adUZPb0U1akx6aUR3Zkt3WFJXU3RpWUVpZjVLT0t4TnJkUnhMNUxfbVJtZmJLajhKdXZ0VHY1SHVHLTVvSDA?oc=5"
+      }
+    ]
+  },
+  {
     "date": "2026-06-29",
     "items": [
       {
