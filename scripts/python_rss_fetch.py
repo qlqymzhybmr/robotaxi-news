@@ -141,6 +141,8 @@ def fetch_direct_feed(
     errors: List[str] = []
     items: List[dict] = []
     is_reddit = is_reddit_feed(feed.url)
+    if is_reddit:
+        time.sleep(3)  # Reddit rate-limit: space requests at least 3s apart
     try:
         req_headers = {"User-Agent": BROWSER_UA} if is_reddit else {}
         parsed = feedparser.parse(feed.url, request_headers=req_headers)

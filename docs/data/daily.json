@@ -25,10 +25,10 @@
         "group": "overseas",
         "sub_group": null,
         "rating": 3,
-        "title": "Tesla FSD 德州司机因辅助驾驶事故被起诉过失杀人，自动驾驶法律责任迎里程碑案件",
-        "summary_html": "德州奥斯汀一名 Tesla 驾驶员在使用驾驶辅助功能期间发生致命事故，被当地检察官以过失杀人罪提起诉讼，成为美国首批因使用辅助驾驶功能而面临刑事追诉的案例之一。此前法庭文件已披露 FSD 本身在事故前已启动减速，但驾驶员随后踩下油门超控系统——法律焦点因此聚焦于驾驶员责任与系统滥用的边界。本案走向将对全美辅助驾驶事故的刑事与民事责任框架产生深远影响，是自动驾驶商业化进程中最重要的法律节点之一。",
-        "source_name": "Austin American-Statesman",
-        "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcFF5WkhHQm02NktBbFVqd2t6OU1raVdJNHNPcHo1QmVjVlBCNFk2SkVfaWpBOFdfNHVtZnozWXpTZ0NZa2FxOFRITktSMTViNl9VbVRMYUl6QzVtSEdmNmdCQzRQRXRSSFh1djVyRnlVYUFIUzd1T0dIbU9SZXlCQ2ozbDRSY29fd0JGMA?oc=5"
+        "title": "Tesla FSD 德州凯蒂车主被起诉过失杀人：蓄意踩油门超控 FSD，撞屋致 76 ���老人身亡",
+        "summary_html": "德州哈里斯县检察官于 7 月 1 日对凯蒂（休斯顿郊区）Tesla 车主 Michael David Butler（44 岁）正式提起过失杀人诉讼。6 月 19 日，他驾驶 Model 3 在住宅小区街道上强行超控 FSD、将油门踩至 100%，以 73 英里时速冲入一户民居，致 76 岁老人 Martha Avila 当场身亡。最关键的证据来自其手机搜索记录：事故数周前，他曾多次搜索&ldquo;tesla fsd not aggressive enough 2026&rdquo;和&ldquo;FSD is too timid&rdquo;，直接证明超控出于主观故意而非误操作。Butler 以 15 万美元保释，面临二级重罪最高 20 年刑期。这是美国首批因主动超控辅助驾驶系统引发事故而被追究刑责的案例，将深刻影响全美自动驾驶责任认定框架。",
+        "source_name": "Electrek",
+        "source_url": "https://electrek.co/2026/07/03/tesla-fsd-driver-manslaughter-katy-crash/"
       },
       {
         "id": "2026-07-05-003",
