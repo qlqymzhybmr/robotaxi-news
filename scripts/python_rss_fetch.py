@@ -36,6 +36,13 @@ DIRECT_FEED_SECTIONS = {
     "## 社区 / 媒体 RSS（Reddit 热帖）",
 }
 
+# Reddit blocks non-browser UAs; use a full Chrome UA to avoid 403
+BROWSER_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/126.0.0.0 Safari/537.36"
+)
+
 # Reddit AV relevance: title must contain at least one of these keywords
 REDDIT_AV_KEYWORDS = [
     "autonomous", "self-driving", "self driving", "robotaxi", "driverless",
@@ -133,11 +140,28 @@ def fetch_direct_feed(
     """Fetch a direct RSS feed (company blog/newsroom) and filter by time window."""
     errors: List[str] = []
     items: List[dict] = []
+    is_reddit = is_reddit_feed(feed.url)
     try:
-        parsed = feedparser.parse(feed.url)
+        req_headers = {"User-Agent": BROWSER_UA} if is_reddit else {}
+        parsed = feedparser.parse(feed.url, request_headers=req_headers)
     except Exception as e:
         errors.append(f"{feed.company} [direct] parse_error: {e}")
         return items, errors
+
+    # Reddit 403 detection: report explicitly rather than silently returning 0 items
+    if is_reddit:
+        http_status = parsed.get("status", 0)
+        if http_status == 403:
+            errors.append(
+                f"⚠️ [REDDIT_403] {feed.company}: {feed.url} 返回 403，"
+                f"Reddit 已屏蔽该请求（UA 或 IP 被封）"
+            )
+            return items, errors
+        if http_status == 429:
+            errors.append(
+                f"⚠️ [REDDIT_429] {feed.company}: {feed.url} 返回 429，触发限速"
+            )
+            return items, errors
 
     # Twitter/X RSSHub auth expiry detection
     if is_twitter_rsshub_feed(feed.url):
@@ -148,8 +172,6 @@ def fetch_direct_feed(
                 f"请到 Railway Variables 更新 TWITTER_AUTH_TOKEN。详情: {auth_err}"
             )
             return items, errors
-
-    is_reddit = is_reddit_feed(feed.url)
     # Safe accessor for feed metadata (handles both FeedParserDict and legacy _Feed objects)
     _feed_meta = parsed.get("feed", {}) if hasattr(parsed, "get") else getattr(parsed, "feed", {}) or {}
     _feed_title = _feed_meta.get("title", feed.company) if hasattr(_feed_meta, "get") else getattr(_feed_meta, "title", feed.company)
