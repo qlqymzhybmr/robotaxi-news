@@ -751,8 +751,21 @@ function renderWeeklyEdit() {
     </div>`;
   }).join('');
   container.innerHTML = `
-    <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 mb-3 text-sm text-blue-800">
-      <b>编辑模式</b> · 点击文字编辑，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+B</kbd> 加粗，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+Z</kbd> 撤销，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+V</kbd> 粘贴图片（点击图片可调整大小）。悬停显示增删按钮。
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 mb-2 text-sm text-blue-800">
+      <b>编辑模式</b> · 点击文字编辑，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+B</kbd> 加粗，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+Z</kbd> 撤销，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+V</kbd> 粘贴图片（点击图片调整大小）。悬停显示增删按钮。
+    </div>
+    <div class="flex items-center gap-1 mb-3 px-1">
+      <button onmousedown="event.preventDefault();document.execCommand('bold')" title="加粗 Ctrl+B"
+              class="w-7 h-7 flex items-center justify-center text-sm font-bold text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">B</button>
+      <button onmousedown="event.preventDefault();document.execCommand('italic')" title="斜体 Ctrl+I"
+              class="w-7 h-7 flex items-center justify-center text-sm italic text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">I</button>
+      <div class="w-px h-5 bg-gray-200 mx-1"></div>
+      <button onmousedown="event.preventDefault();document.execCommand('justifyLeft')" title="左对齐"
+              class="px-2 h-7 flex items-center justify-center text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none text-xs">左</button>
+      <button onmousedown="event.preventDefault();document.execCommand('justifyCenter')" title="居中"
+              class="px-2 h-7 flex items-center justify-center text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none text-xs">中</button>
+      <button onmousedown="event.preventDefault();document.execCommand('justifyRight')" title="右对齐"
+              class="px-2 h-7 flex items-center justify-center text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none text-xs">右</button>
     </div>
     ${patNote}
     <div id="weekly-edit-status" class="hidden mb-3"></div>
@@ -843,8 +856,8 @@ function alignEditImage(align) {
 }
 
 function handleEditPaste(e) {
-  // 1. 优先从 text/html 同步提取 img src URL（从网页复制图片时有效）
   const htmlData = e.clipboardData?.getData('text/html') || '';
+  // 1. 网页图片：从 text/html 提取 src URL
   if (htmlData) {
     const match = htmlData.match(/<img[^>]+src=["']([^"']+)["']/i);
     if (match && match[1] && !match[1].startsWith('blob:')) {
@@ -853,12 +866,19 @@ function handleEditPaste(e) {
       return;
     }
   }
-  // 2. 尝试二进制图片数据（截图、从文件复制）
+  // 2. 截图 / 文件图片（二进制）
   const items = Array.from(e.clipboardData?.items || []);
   const imageItem = items.find(i => i.type.startsWith('image/'));
   if (imageItem) {
     e.preventDefault();
     imageToBase64AndInsert(imageItem);
+    return;
+  }
+  // 3. 文字粘贴：去掉外来格式，只插入纯文字，避免字体/颜色污染
+  const textData = e.clipboardData?.getData('text/plain') || '';
+  if (textData) {
+    e.preventDefault();
+    document.execCommand('insertText', false, textData);
   }
 }
 
@@ -965,26 +985,26 @@ async function generateWeeklyPNG() {
       const entriesHtml = (section.entries || []).map((entry, idx) => {
         const subs = entry.sub_items || [];
         const subHtml = subs.map((si, sii) =>
-          `<div style="display:flex;gap:6px;margin-top:6px;font-size:13px;line-height:1.8;color:#1a1a1a;font-family:${YH};padding-left:2px;">
-            <span style="flex-shrink:0;font-weight:600;color:#444;min-width:18px;">${String.fromCharCode(96 + sii + 1)}.</span>
+          `<div style="display:flex;gap:6px;margin-top:7px;font-size:13px;line-height:1.8;font-family:${YH};">
+            <span style="flex-shrink:0;font-weight:600;color:#333;min-width:20px;">${String.fromCharCode(96 + sii + 1)}.</span>
             <span style="color:#1a1a1a;">${si.content_html || ''}</span>
           </div>`
         ).join('');
         return `<div style="margin-bottom:16px;font-family:${YH};">
-          <div style="display:flex;gap:6px;align-items:baseline;background:#eff6ff;border-radius:3px;padding:5px 10px;">
-            <span style="flex-shrink:0;font-size:14px;font-weight:bold;color:#1a1a1a;min-width:18px;">${idx + 1}.</span>
+          <div style="display:flex;gap:6px;align-items:baseline;background:#eff6ff;border-radius:2px;padding:3px 8px 3px 6px;">
+            <span style="flex-shrink:0;font-size:14px;font-weight:bold;color:#1a1a1a;min-width:20px;">${idx + 1}.</span>
             <div style="font-size:14px;font-weight:bold;line-height:1.7;color:#1a1a1a;font-family:${YH};">${entry.headline_html || ''}</div>
           </div>
-          <div style="padding-left:10px;">${subHtml}</div>
+          <div style="padding-left:26px;">${subHtml}</div>
         </div>`;
       }).join('');
       return `<div style="margin-bottom:22px;font-family:${YH};">
-        <div style="font-size:16px;font-weight:bold;color:#1a1a1a;margin-bottom:12px;padding-bottom:6px;border-bottom:1.5px solid #d1d5db;font-family:${YH};">${escHtml(section.name)}</div>
+        <div style="font-size:16px;font-weight:bold;color:#1a1a1a;margin-bottom:12px;padding-bottom:5px;border-bottom:1.5px solid #d1d5db;font-family:${YH};">${escHtml(section.name)}</div>
         ${entriesHtml}
       </div>`;
     }).join('');
     printDiv.innerHTML = `
-      <div style="font-size:20px;font-weight:bold;color:#1a1a1a;border-bottom:2.5px solid #1a1a1a;padding-bottom:8px;margin-bottom:28px;font-family:${YH};">${escHtml(week.title || week.week_id)}</div>
+      <div style="font-size:22px;font-weight:bold;color:#1a1a1a;border-bottom:3px solid #1d4ed8;padding-bottom:8px;margin-bottom:28px;font-family:${YH};">${escHtml(week.title || week.week_id)}</div>
       ${sectionsHtml}`;
     document.body.appendChild(printDiv);
     const canvas = await html2canvas(printDiv, { scale: 2, useCORS: true, allowTaint: true, backgroundColor: '#ffffff', width: 820 });
