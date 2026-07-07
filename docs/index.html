@@ -95,6 +95,8 @@ const WEEKLY_OVERRIDES_PATH = 'docs/data/weekly_overrides.json';
 let weeklyOverridesData = {};  // { week_id: week_object }
 let editWeekData = null;
 let weeklyEditMode = false;
+let undoStack = [];
+let weeklyEditKeyHandler = null;
 
 async function init() {
   if (location.hash.startsWith('#weekly')) currentTab = 'weekly';
@@ -531,11 +533,22 @@ function enterWeeklyEditMode() {
   const week = weeklyOverridesData[rawWeek.week_id] || rawWeek;
   editWeekData = JSON.parse(JSON.stringify(week));
   weeklyEditMode = true;
+  undoStack = [];
+  weeklyEditKeyHandler = (e) => {
+    if (e.ctrlKey && !e.shiftKey && (e.key === 'z' || e.key === 'Z')) {
+      if (document.activeElement && document.activeElement.contentEditable === 'true') return;
+      e.preventDefault();
+      undoEdit();
+    }
+  };
+  document.addEventListener('keydown', weeklyEditKeyHandler);
   updateWeeklyEditBtn();
   renderWeeklyEdit();
 }
 
 function exitWeeklyEditMode() {
+  if (weeklyEditKeyHandler) { document.removeEventListener('keydown', weeklyEditKeyHandler); weeklyEditKeyHandler = null; }
+  undoStack = [];
   editWeekData = null;
   weeklyEditMode = false;
   updateWeeklyEditBtn();
@@ -569,6 +582,32 @@ function collectEditWeekDataFromDOM() {
   });
 }
 
+function pushUndo() {
+  collectEditWeekDataFromDOM();
+  undoStack.push(JSON.parse(JSON.stringify(editWeekData)));
+  if (undoStack.length > 20) undoStack.shift();
+}
+
+function undoEdit() {
+  if (!undoStack.length) { showWeeklyEditStatus('info', '已无可撤销的操作'); return; }
+  editWeekData = undoStack.pop();
+  renderWeeklyEdit();
+  const left = undoStack.length;
+  showWeeklyEditStatus('info', left > 0 ? `已撤销 · 还可撤销 ${left} 步` : '已撤销 · 无更多历史');
+}
+
+function deleteSection(si) {
+  pushUndo();
+  editWeekData.sections.splice(si, 1);
+  renderWeeklyEdit();
+}
+
+function deleteEntry(si, ei) {
+  pushUndo();
+  if (editWeekData.sections[si]) editWeekData.sections[si].entries.splice(ei, 1);
+  renderWeeklyEdit();
+}
+
 function addSubItem(si, ei) {
   collectEditWeekDataFromDOM();
   const entry = editWeekData && editWeekData.sections[si] && editWeekData.sections[si].entries[ei];
@@ -579,7 +618,7 @@ function addSubItem(si, ei) {
 }
 
 function removeSubItem(si, ei, sii) {
-  collectEditWeekDataFromDOM();
+  pushUndo();
   const entry = editWeekData && editWeekData.sections[si] && editWeekData.sections[si].entries[ei];
   if (!entry || !entry.sub_items) return;
   entry.sub_items.splice(sii, 1);
@@ -602,26 +641,34 @@ function renderWeeklyEdit() {
                class="flex-1 text-sm text-gray-700 leading-relaxed outline-none rounded px-1.5 py-0.5 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/30 transition-colors cursor-text"
                >${subItem.content_html || ''}</div>
           <button onclick="removeSubItem(${si},${ei},${sii})"
-                  class="opacity-0 group-hover/item:opacity-100 shrink-0 w-5 h-5 flex items-center justify-center text-gray-300 hover:text-red-400 rounded text-base transition-all mt-0.5" title="删除">×</button>
+                  class="opacity-0 group-hover/item:opacity-100 shrink-0 w-5 h-5 flex items-center justify-center text-gray-300 hover:text-red-400 rounded text-base transition-all mt-0.5" title="删除要点">×</button>
         </div>`
       ).join('');
       return `<div class="mb-4 p-2 -mx-2 rounded-lg border border-transparent hover:border-blue-100 transition-colors group/entry">
-        <div contenteditable="true" data-edit-headline="${si}-${ei}"
-             class="text-sm font-semibold text-gray-800 leading-relaxed outline-none rounded px-1.5 py-0.5 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/30 transition-colors cursor-text"
-             >${entry.headline_html || ''}</div>
-        <div class="ml-0">${subItemsHtml}</div>
+        <div class="flex items-start gap-1">
+          <div contenteditable="true" data-edit-headline="${si}-${ei}"
+               class="flex-1 text-sm font-semibold text-gray-800 leading-relaxed outline-none rounded px-1.5 py-0.5 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/30 transition-colors cursor-text"
+               >${entry.headline_html || ''}</div>
+          <button onclick="deleteEntry(${si},${ei})"
+                  class="opacity-0 group-hover/entry:opacity-100 shrink-0 text-xs text-red-400 hover:text-red-600 border border-red-200 hover:border-red-400 rounded px-1.5 py-0.5 mt-0.5 transition-all whitespace-nowrap">删除条目</button>
+        </div>
+        <div>${subItemsHtml}</div>
         <button onclick="addSubItem(${si},${ei})"
                 class="mt-1.5 ml-1 opacity-0 group-hover/entry:opacity-100 text-xs text-blue-400 hover:text-blue-600 transition-all">＋ 添加要点</button>
       </div>`;
     }).join('');
-    return `<div class="mb-8">
-      <h2 class="text-base font-bold text-gray-800 mb-4 pb-2 border-b border-gray-100">${escHtml(section.name)}</h2>
+    return `<div class="mb-8 group/section">
+      <div class="flex items-center justify-between mb-4 pb-2 border-b border-gray-100">
+        <h2 class="text-base font-bold text-gray-800">${escHtml(section.name)}</h2>
+        <button onclick="deleteSection(${si})"
+                class="opacity-0 group-hover/section:opacity-100 text-xs text-red-400 hover:text-red-600 border border-red-200 hover:border-red-400 rounded px-2 py-0.5 transition-all">删除整节</button>
+      </div>
       ${entriesHtml}
     </div>`;
   }).join('');
   container.innerHTML = `
     <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 mb-3 text-sm text-blue-800">
-      <b>编辑模式</b> · 直接点击文字即可编辑，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+B</kbd> 加粗。蓝色框出现表示该区域可编辑。
+      <b>编辑模式</b> · 点击文字编辑，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+B</kbd> 加粗，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+Z</kbd> 撤销删除操作。悬停显示删除按钮。
     </div>
     ${patNote}
     <div id="weekly-edit-status" class="hidden mb-3"></div>
@@ -661,6 +708,8 @@ async function saveWeeklyOverride() {
     const putRes = await fetch(apiBase, { method: 'PUT', headers, body: JSON.stringify(body) });
     if (!putRes.ok) throw new Error(`GitHub API PUT ${putRes.status}: ${await putRes.text()}`);
     showWeeklyEditStatus('success', `✓ ${editWeekData.week_id} 编辑版已保存到 GitHub`);
+    if (weeklyEditKeyHandler) { document.removeEventListener('keydown', weeklyEditKeyHandler); weeklyEditKeyHandler = null; }
+    undoStack = [];
     weeklyEditMode = false;
     editWeekData = null;
     updateWeeklyEditBtn();
@@ -703,7 +752,8 @@ async function generateWeeklyPNG() {
   try {
     await loadHtml2Canvas();
     const printDiv = document.createElement('div');
-    printDiv.style.cssText = 'position:fixed;left:-9999px;top:0;width:820px;background:#fff;padding:44px 52px;font-family:"Microsoft YaHei",SimHei,Arial,sans-serif;font-size:14px;line-height:1.8;color:#1a1a1a;';
+    const YH = '"Microsoft YaHei","微软雅黑","PingFang SC","Hiragino Sans GB",Arial,sans-serif';
+    printDiv.style.cssText = `position:fixed;left:-9999px;top:0;width:820px;background:#fff;padding:48px 56px;font-family:${YH};font-size:14px;line-height:1.85;color:#1a1a1a;word-break:break-all;`;
     const sectionsHtml = (week.sections || []).map((section) => {
       const entriesHtml = (section.entries || []).map((entry, idx) => {
         const subs = entry.sub_items || [];
@@ -711,27 +761,27 @@ async function generateWeeklyPNG() {
         if (subs.length === 0) {
           bodyHtml = '';
         } else if (subs.length === 1) {
-          bodyHtml = `<div style="margin-top:8px;font-size:13px;line-height:1.8;color:#333;">${subs[0].content_html || ''}</div>`;
+          bodyHtml = `<div style="margin-top:7px;font-size:13px;line-height:1.85;color:#222;font-family:${YH};">${subs[0].content_html || ''}</div>`;
         } else {
           bodyHtml = subs.map((si, sii) =>
-            `<div style="display:flex;gap:6px;margin-top:8px;font-size:13px;line-height:1.8;color:#333;">
-              <span style="flex-shrink:0;font-weight:bold;color:#1a1a1a;min-width:18px;">${String.fromCharCode(96 + sii + 1)}.</span>
+            `<div style="display:flex;gap:8px;margin-top:8px;font-size:13px;line-height:1.85;color:#222;font-family:${YH};">
+              <span style="flex-shrink:0;font-weight:bold;color:#1a1a1a;min-width:20px;">${String.fromCharCode(96 + sii + 1)}.</span>
               <span>${si.content_html || ''}</span>
             </div>`
           ).join('');
         }
-        return `<div style="margin-bottom:18px;">
-          <div style="font-size:14px;font-weight:bold;line-height:1.7;color:#1a1a1a;">${idx + 1}. ${entry.headline_html || ''}</div>
+        return `<div style="margin-bottom:20px;font-family:${YH};">
+          <div style="font-size:14px;font-weight:bold;line-height:1.75;color:#1a1a1a;font-family:${YH};">${idx + 1}. ${entry.headline_html || ''}</div>
           ${bodyHtml}
         </div>`;
       }).join('');
-      return `<div style="margin-bottom:22px;">
-        <div style="font-size:16px;font-weight:bold;color:#1a1a1a;margin-bottom:14px;padding-bottom:4px;">${escHtml(section.name)}</div>
+      return `<div style="margin-bottom:24px;font-family:${YH};">
+        <div style="font-size:17px;font-weight:bold;color:#1a1a1a;margin-bottom:16px;font-family:${YH};">${escHtml(section.name)}</div>
         ${entriesHtml}
       </div>`;
     }).join('');
     printDiv.innerHTML = `
-      <div style="font-size:22px;font-weight:bold;color:#1a1a1a;border-bottom:3px solid #1d4ed8;padding-bottom:10px;margin-bottom:28px;">${escHtml(week.title || week.week_id)}</div>
+      <div style="font-size:22px;font-weight:bold;color:#1a1a1a;border-bottom:3px solid #1d4ed8;padding-bottom:10px;margin-bottom:30px;font-family:${YH};">${escHtml(week.title || week.week_id)}</div>
       ${sectionsHtml}`;
     document.body.appendChild(printDiv);
     const canvas = await html2canvas(printDiv, { scale: 2, useCORS: true, backgroundColor: '#ffffff', width: 820 });
