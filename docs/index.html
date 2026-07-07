@@ -97,6 +97,7 @@ let editWeekData = null;
 let weeklyEditMode = false;
 let undoStack = [];
 let weeklyEditKeyHandler = null;
+let weeklyPasteHandler = null;
 
 async function init() {
   if (location.hash.startsWith('#weekly')) currentTab = 'weekly';
@@ -391,14 +392,17 @@ function renderWeeklyClassicView() {
   const sectionsHtml = (week.sections || []).map((section) => {
     const entriesHtml = (section.entries || []).map((entry, ei) => {
       const subItemsHtml = (entry.sub_items || []).map((si, sii) =>
-        `<div class="flex items-start gap-2 mt-1.5 rounded-md px-2.5 py-1.5 bg-blue-50 border-l-2 border-blue-300">
-          <span class="shrink-0 text-sm font-bold text-blue-600 select-none min-w-[18px]">${String.fromCharCode(96 + sii + 1)}.</span>
+        `<div class="flex items-start gap-2 mt-1.5 ml-1 py-0.5">
+          <span class="shrink-0 text-sm font-semibold text-gray-500 select-none min-w-[20px]">${String.fromCharCode(96 + sii + 1)}.</span>
           <span class="text-sm text-gray-700 leading-relaxed">${si.content_html || ''}</span>
         </div>`
       ).join('');
-      return `<div class="mb-5 flex items-start gap-2">
-        <span class="shrink-0 text-sm font-semibold text-gray-500 select-none mt-0.5">${ei + 1}.</span>
-        <div class="flex-1"><div class="text-sm font-semibold text-gray-800 leading-relaxed">${entry.headline_html || ''}</div>${subItemsHtml}</div>
+      return `<div class="mb-4">
+        <div class="flex items-start gap-2 rounded-md px-2.5 py-1.5 bg-blue-50 border-l-2 border-blue-400">
+          <span class="shrink-0 text-sm font-bold text-blue-700 select-none min-w-[20px] mt-0.5">${ei + 1}.</span>
+          <div class="text-sm font-semibold text-gray-800 leading-relaxed">${entry.headline_html || ''}</div>
+        </div>
+        <div class="ml-2">${subItemsHtml}</div>
       </div>`;
     }).join('');
     return `<div class="mb-8"><h2 class="text-base font-bold text-gray-800 mb-4 pb-2 border-b border-gray-100">${escHtml(section.name)}</h2>${entriesHtml}</div>`;
@@ -550,12 +554,20 @@ function enterWeeklyEditMode() {
     }
   };
   document.addEventListener('keydown', weeklyEditKeyHandler);
+  weeklyPasteHandler = handleEditPaste;
+  const editContainer = document.getElementById('weekly-content');
+  if (editContainer) editContainer.addEventListener('paste', weeklyPasteHandler);
   updateWeeklyEditBtn();
   renderWeeklyEdit();
 }
 
 function exitWeeklyEditMode() {
   if (weeklyEditKeyHandler) { document.removeEventListener('keydown', weeklyEditKeyHandler); weeklyEditKeyHandler = null; }
+  if (weeklyPasteHandler) {
+    const editContainer = document.getElementById('weekly-content');
+    if (editContainer) editContainer.removeEventListener('paste', weeklyPasteHandler);
+    weeklyPasteHandler = null;
+  }
   undoStack = [];
   editWeekData = null;
   weeklyEditMode = false;
@@ -643,29 +655,27 @@ function renderWeeklyEdit() {
   const sectionsHtml = (editWeekData.sections || []).map((section, si) => {
     const entriesHtml = (section.entries || []).map((entry, ei) => {
       const subItemsHtml = (entry.sub_items || []).map((subItem, sii) =>
-        `<div class="flex items-start gap-2 mt-1.5 rounded-md px-2.5 py-1.5 bg-blue-50 border-l-2 border-blue-300 group/item">
-          <span class="shrink-0 text-sm font-bold text-blue-600 select-none min-w-[18px] pt-0.5">${String.fromCharCode(96 + sii + 1)}.</span>
+        `<div class="flex items-start gap-2 mt-1.5 ml-1 py-0.5 group/item">
+          <span class="shrink-0 text-sm font-semibold text-gray-500 select-none min-w-[20px] pt-0.5">${String.fromCharCode(96 + sii + 1)}.</span>
           <div contenteditable="true" data-edit-content="${si}-${ei}-${sii}"
-               class="flex-1 text-sm text-gray-700 leading-relaxed outline-none rounded px-1 border border-transparent hover:border-blue-300 focus:border-blue-500 focus:bg-white transition-colors cursor-text"
+               class="flex-1 text-sm text-gray-700 leading-relaxed outline-none rounded px-1 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/40 transition-colors cursor-text"
                >${subItem.content_html || ''}</div>
           <button onclick="removeSubItem(${si},${ei},${sii})"
-                  class="opacity-0 group-hover/item:opacity-100 shrink-0 w-5 h-5 flex items-center justify-center text-blue-300 hover:text-red-400 rounded text-base transition-all" title="删除要点">×</button>
+                  class="opacity-0 group-hover/item:opacity-100 shrink-0 w-5 h-5 flex items-center justify-center text-gray-300 hover:text-red-400 rounded text-base transition-all" title="删除要点">×</button>
         </div>`
       ).join('');
-      return `<div class="mb-4 flex items-start gap-2 group/entry p-1 -mx-1 rounded-lg border border-transparent hover:border-blue-100 transition-colors">
-        <span class="shrink-0 text-sm font-semibold text-gray-500 select-none mt-0.5 pt-0.5">${ei + 1}.</span>
-        <div class="flex-1">
-          <div class="flex items-start gap-1">
-            <div contenteditable="true" data-edit-headline="${si}-${ei}"
-                 class="flex-1 text-sm font-semibold text-gray-800 leading-relaxed outline-none rounded px-1.5 py-0.5 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/30 transition-colors cursor-text"
-                 >${entry.headline_html || ''}</div>
-            <button onclick="deleteEntry(${si},${ei})"
-                    class="opacity-0 group-hover/entry:opacity-100 shrink-0 text-xs text-red-400 hover:text-red-600 border border-red-200 hover:border-red-400 rounded px-1.5 py-0.5 transition-all whitespace-nowrap">删除条目</button>
-          </div>
-          <div class="mt-0.5">${subItemsHtml}</div>
-          <button onclick="addSubItem(${si},${ei})"
-                  class="mt-1 opacity-0 group-hover/entry:opacity-100 text-xs text-blue-400 hover:text-blue-600 transition-all">＋ 添加要点</button>
+      return `<div class="mb-4 group/entry">
+        <div class="flex items-start gap-1 rounded-md px-2 py-1.5 bg-blue-50 border-l-2 border-blue-400 hover:border-blue-500 transition-colors">
+          <span class="shrink-0 text-sm font-bold text-blue-700 select-none min-w-[20px] mt-0.5">${ei + 1}.</span>
+          <div contenteditable="true" data-edit-headline="${si}-${ei}"
+               class="flex-1 text-sm font-semibold text-gray-800 leading-relaxed outline-none cursor-text focus:outline-none"
+               >${entry.headline_html || ''}</div>
+          <button onclick="deleteEntry(${si},${ei})"
+                  class="opacity-0 group-hover/entry:opacity-100 shrink-0 text-xs text-red-400 hover:text-red-600 border border-red-200 hover:border-red-400 rounded px-1.5 py-0.5 transition-all whitespace-nowrap ml-1">删除</button>
         </div>
+        <div class="ml-2">${subItemsHtml}</div>
+        <button onclick="addSubItem(${si},${ei})"
+                class="mt-1 ml-1 opacity-0 group-hover/entry:opacity-100 text-xs text-blue-400 hover:text-blue-600 transition-all">＋ 添加要点</button>
       </div>`;
     }).join('');
     return `<div class="mb-8 group/section">
@@ -692,6 +702,51 @@ function renderWeeklyEdit() {
       <p class="text-sm text-gray-400 mb-5">${escHtml(editWeekData.date_range || '')}</p>
       ${sectionsHtml}
     </div>`;
+}
+
+function handleEditPaste(e) {
+  const items = Array.from(e.clipboardData?.items || []);
+  const imageItem = items.find(i => i.type.startsWith('image/'));
+  if (!imageItem) return;
+  e.preventDefault();
+  const htmlItem = items.find(i => i.type === 'text/html');
+  if (htmlItem) {
+    htmlItem.getAsString((html) => {
+      const match = html.match(/<img[^>]+src=["']([^"']+)["']/i);
+      if (match && match[1] && !match[1].startsWith('data:') && !match[1].startsWith('blob:')) {
+        insertImageAtCursor(match[1]);
+      } else {
+        imageToBase64AndInsert(imageItem);
+      }
+    });
+  } else {
+    imageToBase64AndInsert(imageItem);
+  }
+}
+
+function imageToBase64AndInsert(clipboardItem) {
+  const blob = clipboardItem.getAsFile();
+  if (!blob) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => insertImageAtCursor(ev.target.result);
+  reader.readAsDataURL(blob);
+}
+
+function insertImageAtCursor(src) {
+  const img = document.createElement('img');
+  img.src = src;
+  img.style.cssText = 'max-width:100%;height:auto;display:block;margin:8px 0;border-radius:4px;cursor:pointer;';
+  img.title = '点击选中 · 粘贴图片';
+  const sel = window.getSelection();
+  if (sel && sel.rangeCount) {
+    const range = sel.getRangeAt(0);
+    range.deleteContents();
+    range.insertNode(img);
+    range.setStartAfter(img);
+    range.collapse(true);
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
 }
 
 async function saveWeeklyOverride() {
@@ -775,18 +830,18 @@ async function generateWeeklyPNG() {
           bodyHtml = `<div style="margin-top:7px;font-size:13px;line-height:1.85;color:#222;font-family:${YH};">${subs[0].content_html || ''}</div>`;
         } else {
           bodyHtml = subs.map((si, sii) =>
-            `<div style="display:flex;gap:8px;margin-top:8px;font-size:13px;line-height:1.85;color:#222;font-family:${YH};background:#dbeafe;border-left:3px solid #3b82f6;border-radius:4px;padding:6px 10px;">
-              <span style="flex-shrink:0;font-weight:bold;color:#1d4ed8;min-width:20px;">${String.fromCharCode(96 + sii + 1)}.</span>
+            `<div style="display:flex;gap:8px;margin-top:8px;font-size:13px;line-height:1.85;color:#374151;font-family:${YH};padding:2px 0 2px 4px;">
+              <span style="flex-shrink:0;font-weight:600;color:#6b7280;min-width:20px;">${String.fromCharCode(96 + sii + 1)}.</span>
               <span>${si.content_html || ''}</span>
             </div>`
           ).join('');
         }
-        return `<div style="margin-bottom:20px;font-family:${YH};display:flex;gap:8px;align-items:flex-start;">
-          <span style="flex-shrink:0;font-size:14px;font-weight:bold;color:#374151;min-width:22px;">${idx + 1}.</span>
-          <div style="flex:1;">
+        return `<div style="margin-bottom:20px;font-family:${YH};">
+          <div style="display:flex;gap:8px;align-items:flex-start;background:#dbeafe;border-left:3px solid #3b82f6;border-radius:4px;padding:8px 12px;">
+            <span style="flex-shrink:0;font-size:14px;font-weight:bold;color:#1d4ed8;min-width:22px;">${idx + 1}.</span>
             <div style="font-size:14px;font-weight:bold;line-height:1.75;color:#1a1a1a;font-family:${YH};">${entry.headline_html || ''}</div>
-            ${bodyHtml}
           </div>
+          <div style="padding-left:8px;">${bodyHtml}</div>
         </div>`;
       }).join('');
       return `<div style="margin-bottom:24px;font-family:${YH};">
@@ -798,7 +853,7 @@ async function generateWeeklyPNG() {
       <div style="font-size:22px;font-weight:bold;color:#1a1a1a;border-bottom:3px solid #1d4ed8;padding-bottom:10px;margin-bottom:30px;font-family:${YH};">${escHtml(week.title || week.week_id)}</div>
       ${sectionsHtml}`;
     document.body.appendChild(printDiv);
-    const canvas = await html2canvas(printDiv, { scale: 2, useCORS: true, backgroundColor: '#ffffff', width: 820 });
+    const canvas = await html2canvas(printDiv, { scale: 2, useCORS: true, allowTaint: true, backgroundColor: '#ffffff', width: 820 });
     document.body.removeChild(printDiv);
     const link = document.createElement('a');
     link.download = `${week.week_id || 'weekly'}.png`;
