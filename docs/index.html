@@ -60,7 +60,8 @@
         </div>
         <div class="w-px self-stretch bg-gray-200 mx-1"></div>
         <button id="weekly-edit-btn" onclick="toggleWeeklyEditMode()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">编辑周报</button>
-        <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成 PNG</button>
+        <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成图片(测试)</button>
+        <button id="weekly-onenote-btn" onclick="copyToOneNote()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">复制到 OneNote</button>
       </div>
       <div id="weekly-format-bar" class="hidden items-center gap-1 pt-2 border-t border-gray-100 mt-2">
         <span class="text-xs text-gray-400 mr-1">格式</span>
@@ -1021,7 +1022,51 @@ async function generateWeeklyPNG() {
   } catch (err) {
     alert('PNG 生成失败：' + err.message);
   } finally {
-    if (pngBtn) { pngBtn.disabled = false; pngBtn.textContent = '生成 PNG'; }
+    if (pngBtn) { pngBtn.disabled = false; pngBtn.textContent = '生成图片(测试)'; }
+  }
+}
+
+// ─── OneNote copy ────────────────────────────────────────────────────────────
+
+function htmlToMarkdown(html) {
+  if (!html) return '';
+  return html
+    .replace(/<strong>([\s\S]*?)<\/strong>/gi, '**$1**')
+    .replace(/<b>([\s\S]*?)<\/b>/gi, '**$1**')
+    .replace(/<em>([\s\S]*?)<\/em>/gi, '*$1*')
+    .replace(/<i>([\s\S]*?)<\/i>/gi, '*$1*')
+    .replace(/<a[^>]*>([\s\S]*?)<\/a>/gi, '$1')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ')
+    .trim();
+}
+
+async function copyToOneNote() {
+  const rawWeekId = document.getElementById('filter-week').value;
+  const rawWeek = weeklyData.find((w) => w.week_id === rawWeekId) || weeklyData[0];
+  if (!rawWeek) { alert('请先选择一个周报'); return; }
+  const rawOverride = weeklyOverridesData[rawWeek.week_id];
+  const week = (weeklyDisplayVersion === 'edited' && rawOverride) ? rawOverride : rawWeek;
+
+  let md = `# ${week.title || week.week_id}\n\n`;
+  (week.sections || []).forEach((section) => {
+    md += `## ${section.name}\n\n`;
+    (section.entries || []).forEach((entry, idx) => {
+      md += `${idx + 1}. **${htmlToMarkdown(entry.headline_html)}**\n`;
+      (entry.sub_items || []).forEach((si, sii) => {
+        md += `   ${String.fromCharCode(96 + sii + 1)}. ${htmlToMarkdown(si.content_html)}\n`;
+      });
+      md += '\n';
+    });
+  });
+
+  const btn = document.getElementById('weekly-onenote-btn');
+  try {
+    await navigator.clipboard.writeText(md);
+    if (btn) { btn.textContent = '✓ 已复制'; btn.className = btn.className.replace('text-gray-600', 'text-green-600'); }
+    setTimeout(() => { if (btn) { btn.textContent = '复制到 OneNote'; btn.className = btn.className.replace('text-green-600', 'text-gray-600'); } }, 2500);
+  } catch (e) {
+    alert('复制失败，请检查浏览器剪贴板权限：' + e.message);
   }
 }
 
