@@ -55,6 +55,7 @@
           <button id="view-report" class="px-3 py-1 text-xs rounded-md transition-colors" onclick="setWeeklyView('report')">报告样式</button>
         </div>
         <button id="weekly-edit-btn" onclick="toggleWeeklyEditMode()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">编辑周报</button>
+        <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成 PNG</button>
       </div>
       <div id="weekly-active-filters" class="hidden mt-2 flex flex-wrap gap-2"></div>
     </div>
@@ -553,31 +554,33 @@ function updateWeeklyEditBtn() {
   }
 }
 
-function updateEntryHeadline(si, ei, value) {
-  if (editWeekData && editWeekData.sections[si] && editWeekData.sections[si].entries[ei]) {
-    editWeekData.sections[si].entries[ei].headline_html = value;
-  }
-}
-
-function updateSubItemField(si, ei, sii, field, value) {
-  const subItem = editWeekData && editWeekData.sections[si] && editWeekData.sections[si].entries[ei] && editWeekData.sections[si].entries[ei].sub_items && editWeekData.sections[si].entries[ei].sub_items[sii];
-  if (!subItem) return;
-  if (field === 'label') subItem.label = value;
-  else if (field === 'content') subItem.content_html = value;
+function collectEditWeekDataFromDOM() {
+  if (!editWeekData) return;
+  document.querySelectorAll('[data-edit-headline]').forEach((el) => {
+    const [si, ei] = el.getAttribute('data-edit-headline').split('-').map(Number);
+    if (editWeekData.sections[si] && editWeekData.sections[si].entries[ei]) {
+      editWeekData.sections[si].entries[ei].headline_html = el.innerHTML.trim();
+    }
+  });
+  document.querySelectorAll('[data-edit-content]').forEach((el) => {
+    const [si, ei, sii] = el.getAttribute('data-edit-content').split('-').map(Number);
+    const subs = editWeekData.sections[si] && editWeekData.sections[si].entries[ei] && editWeekData.sections[si].entries[ei].sub_items;
+    if (subs && subs[sii] !== undefined) subs[sii].content_html = el.innerHTML.trim();
+  });
 }
 
 function addSubItem(si, ei) {
-  if (!editWeekData) return;
-  const entry = editWeekData.sections[si] && editWeekData.sections[si].entries[ei];
+  collectEditWeekDataFromDOM();
+  const entry = editWeekData && editWeekData.sections[si] && editWeekData.sections[si].entries[ei];
   if (!entry) return;
   if (!entry.sub_items) entry.sub_items = [];
-  entry.sub_items.push({ label: '要点', content_html: '' });
+  entry.sub_items.push({ label: '', content_html: '新内容' });
   renderWeeklyEdit();
 }
 
 function removeSubItem(si, ei, sii) {
-  if (!editWeekData) return;
-  const entry = editWeekData.sections[si] && editWeekData.sections[si].entries[ei];
+  collectEditWeekDataFromDOM();
+  const entry = editWeekData && editWeekData.sections[si] && editWeekData.sections[si].entries[ei];
   if (!entry || !entry.sub_items) return;
   entry.sub_items.splice(sii, 1);
   renderWeeklyEdit();
@@ -588,53 +591,53 @@ function renderWeeklyEdit() {
   if (!editWeekData) return;
   const pat = localStorage.getItem('gh_pat') || '';
   const patNote = pat
-    ? `<div class="flex items-center gap-1.5 text-xs text-green-600 mb-3"><span>🔑</span> GitHub PAT 已设置，可直接保存</div>`
-    : `<div class="flex items-center gap-1.5 text-xs text-amber-600 mb-3"><span>⚠️</span> 请先在「周报选稿」tab 中设置 GitHub PAT</div>`;
+    ? `<p class="text-xs text-green-600 mb-2">🔑 GitHub PAT 已设置，可直接保存</p>`
+    : `<p class="text-xs text-amber-600 mb-2">⚠️ 请先在「周报选稿」tab 中设置 GitHub PAT</p>`;
   const sectionsHtml = (editWeekData.sections || []).map((section, si) => {
     const entriesHtml = (section.entries || []).map((entry, ei) => {
       const subItemsHtml = (entry.sub_items || []).map((subItem, sii) =>
-        `<div class="flex gap-2 items-start mt-2">
-          <input type="text" class="w-24 shrink-0 text-xs border border-gray-200 rounded px-2 py-1 bg-white focus:outline-none focus:ring-1 focus:ring-blue-300"
-                 placeholder="标签" value="${escAttr(subItem.label || '')}"
-                 oninput="updateSubItemField(${si},${ei},${sii},'label',this.value)">
-          <textarea class="flex-1 text-sm border border-gray-200 rounded px-2 py-1 bg-white focus:outline-none focus:ring-1 focus:ring-blue-300 resize-y font-mono" style="min-height:60px"
-                    oninput="updateSubItemField(${si},${ei},${sii},'content',this.value)">${escHtml(subItem.content_html || '')}</textarea>
-          <button onclick="removeSubItem(${si},${ei},${sii})" class="shrink-0 text-gray-300 hover:text-red-400 text-xl leading-none mt-1 transition-colors" title="删除要点">×</button>
+        `<div class="flex items-start gap-2 mt-2 group/item">
+          <span class="shrink-0 text-sm text-gray-400 pt-0.5 select-none">•</span>
+          <div contenteditable="true" data-edit-content="${si}-${ei}-${sii}"
+               class="flex-1 text-sm text-gray-700 leading-relaxed outline-none rounded px-1.5 py-0.5 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/30 transition-colors cursor-text"
+               >${subItem.content_html || ''}</div>
+          <button onclick="removeSubItem(${si},${ei},${sii})"
+                  class="opacity-0 group-hover/item:opacity-100 shrink-0 w-5 h-5 flex items-center justify-center text-gray-300 hover:text-red-400 rounded text-base transition-all mt-0.5" title="删除">×</button>
         </div>`
       ).join('');
-      return `<div class="p-3 border border-gray-100 rounded-lg bg-gray-50 mb-3">
-        <div class="mb-2">
-          <span class="text-xs text-gray-400 block mb-1">标题</span>
-          <textarea class="w-full text-sm border border-gray-200 rounded px-2 py-1 bg-white focus:outline-none focus:ring-1 focus:ring-blue-300 resize-y font-mono" style="min-height:48px"
-                    oninput="updateEntryHeadline(${si},${ei},this.value)">${escHtml(entry.headline_html || '')}</textarea>
-        </div>
-        <div>${subItemsHtml}</div>
-        <button onclick="addSubItem(${si},${ei})" class="mt-2 text-xs text-blue-500 hover:text-blue-700 transition-colors">＋ 添加要点</button>
+      return `<div class="mb-4 p-2 -mx-2 rounded-lg border border-transparent hover:border-blue-100 transition-colors group/entry">
+        <div contenteditable="true" data-edit-headline="${si}-${ei}"
+             class="text-sm font-semibold text-gray-800 leading-relaxed outline-none rounded px-1.5 py-0.5 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/30 transition-colors cursor-text"
+             >${entry.headline_html || ''}</div>
+        <div class="ml-0">${subItemsHtml}</div>
+        <button onclick="addSubItem(${si},${ei})"
+                class="mt-1.5 ml-1 opacity-0 group-hover/entry:opacity-100 text-xs text-blue-400 hover:text-blue-600 transition-all">＋ 添加要点</button>
       </div>`;
     }).join('');
-    return `<div class="mb-6">
-      <h2 class="text-sm font-bold text-gray-700 mb-3 pb-1.5 border-b border-gray-200">${escHtml(section.name)}</h2>
+    return `<div class="mb-8">
+      <h2 class="text-base font-bold text-gray-800 mb-4 pb-2 border-b border-gray-100">${escHtml(section.name)}</h2>
       ${entriesHtml}
     </div>`;
   }).join('');
   container.innerHTML = `
-    <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-4 text-sm text-amber-800">
-      <b>编辑模式</b> · 标题和要点均支持直接编辑原始 HTML 标签。编辑完成后点击「保存编辑版」写入 GitHub。
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 mb-3 text-sm text-blue-800">
+      <b>编辑模式</b> · 直接点击文字即可编辑，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+B</kbd> 加粗。蓝色框出现表示该区域可编辑。
     </div>
     ${patNote}
     <div id="weekly-edit-status" class="hidden mb-3"></div>
-    <div class="flex gap-2 mb-4">
+    <div class="flex gap-2 mb-4 flex-wrap">
       <button onclick="saveWeeklyOverride()" class="px-4 py-1.5 text-sm bg-green-500 text-white rounded-lg hover:bg-green-600 font-medium transition-colors">保存编辑版到 GitHub</button>
       <button onclick="exitWeeklyEditMode()" class="px-4 py-1.5 text-sm border border-gray-200 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">取消</button>
     </div>
     <div class="bg-white rounded-xl border border-gray-100 p-6">
       <h1 class="text-xl font-bold text-gray-900 mb-1">${escHtml(editWeekData.title || editWeekData.week_id)}</h1>
-      <p class="text-sm text-gray-400 mb-5">${escHtml(editWeekData.date_range || '')} · 编辑中…</p>
+      <p class="text-sm text-gray-400 mb-5">${escHtml(editWeekData.date_range || '')}</p>
       ${sectionsHtml}
     </div>`;
 }
 
 async function saveWeeklyOverride() {
+  collectEditWeekDataFromDOM();
   if (!editWeekData) return;
   const token = localStorage.getItem('gh_pat') || '';
   if (!token) { showWeeklyEditStatus('error', '请先在「周报选稿」tab 中填写并保存 GitHub PAT'); return; }
@@ -675,6 +678,73 @@ function showWeeklyEditStatus(type, msg) {
   const colors = { success: 'bg-green-50 border-green-200 text-green-800', error: 'bg-red-50 border-red-200 text-red-800', info: 'bg-blue-50 border-blue-200 text-blue-800' };
   el.className = `mb-3 p-3 rounded-lg border text-sm ${colors[type] || colors.info}`;
   el.textContent = msg;
+}
+
+// ─── Weekly PNG Generation ────────────────────────────────────────────────────
+
+function loadHtml2Canvas() {
+  return new Promise((resolve, reject) => {
+    if (window.html2canvas) { resolve(); return; }
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+    s.onload = resolve;
+    s.onerror = () => reject(new Error('无法加载 html2canvas'));
+    document.head.appendChild(s);
+  });
+}
+
+async function generateWeeklyPNG() {
+  const rawWeekId = document.getElementById('filter-week').value;
+  const rawWeek = weeklyData.find((w) => w.week_id === rawWeekId) || weeklyData[0];
+  if (!rawWeek) { alert('请先选择一个周报'); return; }
+  const week = weeklyOverridesData[rawWeek.week_id] || rawWeek;
+  const pngBtn = document.getElementById('weekly-png-btn');
+  if (pngBtn) { pngBtn.disabled = true; pngBtn.textContent = '生成中…'; }
+  try {
+    await loadHtml2Canvas();
+    const printDiv = document.createElement('div');
+    printDiv.style.cssText = 'position:fixed;left:-9999px;top:0;width:820px;background:#fff;padding:44px 52px;font-family:"Microsoft YaHei",SimHei,Arial,sans-serif;font-size:14px;line-height:1.8;color:#1a1a1a;';
+    const sectionsHtml = (week.sections || []).map((section) => {
+      const entriesHtml = (section.entries || []).map((entry, idx) => {
+        const subs = entry.sub_items || [];
+        let bodyHtml = '';
+        if (subs.length === 0) {
+          bodyHtml = '';
+        } else if (subs.length === 1) {
+          bodyHtml = `<div style="margin-top:8px;font-size:13px;line-height:1.8;color:#333;">${subs[0].content_html || ''}</div>`;
+        } else {
+          bodyHtml = subs.map((si, sii) =>
+            `<div style="display:flex;gap:6px;margin-top:8px;font-size:13px;line-height:1.8;color:#333;">
+              <span style="flex-shrink:0;font-weight:bold;color:#1a1a1a;min-width:18px;">${String.fromCharCode(96 + sii + 1)}.</span>
+              <span>${si.content_html || ''}</span>
+            </div>`
+          ).join('');
+        }
+        return `<div style="margin-bottom:18px;">
+          <div style="font-size:14px;font-weight:bold;line-height:1.7;color:#1a1a1a;">${idx + 1}. ${entry.headline_html || ''}</div>
+          ${bodyHtml}
+        </div>`;
+      }).join('');
+      return `<div style="margin-bottom:22px;">
+        <div style="font-size:16px;font-weight:bold;color:#1a1a1a;margin-bottom:14px;padding-bottom:4px;">${escHtml(section.name)}</div>
+        ${entriesHtml}
+      </div>`;
+    }).join('');
+    printDiv.innerHTML = `
+      <div style="font-size:22px;font-weight:bold;color:#1a1a1a;border-bottom:3px solid #1d4ed8;padding-bottom:10px;margin-bottom:28px;">${escHtml(week.title || week.week_id)}</div>
+      ${sectionsHtml}`;
+    document.body.appendChild(printDiv);
+    const canvas = await html2canvas(printDiv, { scale: 2, useCORS: true, backgroundColor: '#ffffff', width: 820 });
+    document.body.removeChild(printDiv);
+    const link = document.createElement('a');
+    link.download = `${week.week_id || 'weekly'}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  } catch (err) {
+    alert('PNG 生成失败：' + err.message);
+  } finally {
+    if (pngBtn) { pngBtn.disabled = false; pngBtn.textContent = '生成 PNG'; }
+  }
 }
 
 // ─── Selections tab ──────────────────────────────────────────────────────────
