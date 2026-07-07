@@ -1028,28 +1028,27 @@ async function generateWeeklyPNG() {
 
 // ─── OneNote copy ────────────────────────────────────────────────────────────
 
-function generateOneNoteHTML(week) {
-  const YH = 'font-family:"Microsoft YaHei","微软雅黑",sans-serif;';
-  let html = `<html><body style="${YH}font-size:11pt;line-height:1.5;color:#000;">`;
-  html += `<p style="${YH}margin:0 0 6pt 0;"><span style="${YH}font-size:20pt;font-weight:bold;color:#1565c0;text-decoration:underline;">${escHtml(week.title || week.week_id)}</span></p>`;
+function generateOneNoteInnerHTML(week) {
+  const YH = '"Microsoft YaHei","微软雅黑",sans-serif';
+  const s = `font-family:${YH};`;
+  let html = '';
+  html += `<p style="${s}margin:0 0 8pt 0;"><span style="${s}font-size:20pt;font-weight:bold;color:#1565c0;text-decoration:underline;">${escHtml(week.title || week.week_id)}</span></p>`;
   (week.sections || []).forEach((section) => {
-    html += `<p style="margin:0;">&nbsp;</p>`;
-    html += `<p style="${YH}margin:0;"><span style="${YH}font-size:13pt;font-weight:bold;color:#000;">${escHtml(section.name)}</span></p>`;
-    html += `<p style="margin:0;">&nbsp;</p>`;
-    html += `<ol style="${YH}font-size:11pt;margin-top:0;">`;
+    html += `<p style="${s}margin:10pt 0 0 0;">&nbsp;</p>`;
+    html += `<p style="${s}margin:0 0 6pt 0;"><span style="${s}font-size:13pt;font-weight:bold;color:#000;">${escHtml(section.name)}</span></p>`;
+    html += `<ol style="${s}font-size:11pt;margin:0;padding-left:22pt;">`;
     (section.entries || []).forEach((entry) => {
-      html += `<li><strong>${entry.headline_html || ''}</strong>`;
+      html += `<li style="${s}font-size:11pt;margin-bottom:3pt;"><strong>${entry.headline_html || ''}</strong>`;
       const subs = entry.sub_items || [];
       if (subs.length > 0) {
-        html += `<ol type="a">`;
-        subs.forEach((si) => { html += `<li>${si.content_html || ''}</li>`; });
+        html += `<ol type="a" style="${s}font-size:11pt;margin:2pt 0;padding-left:18pt;">`;
+        subs.forEach((si) => { html += `<li style="${s}font-size:11pt;">${si.content_html || ''}</li>`; });
         html += `</ol>`;
       }
       html += `</li>`;
     });
     html += `</ol>`;
   });
-  html += `</body></html>`;
   return html;
 }
 
@@ -1062,20 +1061,25 @@ async function copyToOneNote() {
 
   const btn = document.getElementById('weekly-onenote-btn');
   try {
-    const htmlContent = generateOneNoteHTML(week);
-    if (navigator.clipboard && window.ClipboardItem) {
-      await navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([htmlContent], { type: 'text/html' }) })]);
-    } else {
-      // 降级：复制纯 HTML 文本
-      await navigator.clipboard.writeText(htmlContent);
-    }
+    const el = document.createElement('div');
+    el.style.cssText = 'position:fixed;left:-9999px;top:0;font-family:"Microsoft YaHei","微软雅黑",sans-serif;font-size:11pt;line-height:1.5;color:#000;background:#fff;';
+    el.innerHTML = generateOneNoteInnerHTML(week);
+    document.body.appendChild(el);
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    sel.removeAllRanges();
+    document.body.removeChild(el);
     if (btn) {
       const orig = btn.textContent;
       btn.textContent = '✓ 已复制';
       setTimeout(() => { if (btn) btn.textContent = orig; }, 1500);
     }
   } catch (e) {
-    alert('复制失败，请检查浏览器剪贴板权限：' + e.message);
+    alert('复制失败：' + e.message);
   }
 }
 
