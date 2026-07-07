@@ -45,7 +45,7 @@
     </div>
     <div id="daily-active-filters" class="hidden pb-3 flex flex-wrap gap-2"></div>
 
-    <div id="weekly-filters" class="hidden pb-3">
+    <div id="weekly-filters" class="hidden pb-2">
       <div class="flex flex-wrap items-center gap-2">
         <select id="filter-week" class="text-sm border border-gray-200 rounded-lg px-2.5 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" onchange="onWeekChange()">
           <option value="">选择周次</option>
@@ -54,13 +54,27 @@
           <button id="view-classic" class="px-3 py-1 text-xs rounded-md transition-colors" onclick="setWeeklyView('classic')">经典样式</button>
           <button id="view-report" class="px-3 py-1 text-xs rounded-md transition-colors" onclick="setWeeklyView('report')">报告样式</button>
         </div>
-        <div class="w-px self-stretch bg-gray-200 mx-1"></div>
-        <button id="weekly-edit-btn" onclick="toggleWeeklyEditMode()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">编辑周报</button>
         <div id="weekly-version-toggle" class="hidden inline-flex rounded-lg border border-amber-200 bg-amber-50 p-0.5">
           <button id="ver-btn-original" onclick="setWeekVersion('original')" class="px-2.5 py-1 text-xs rounded-md transition-colors text-amber-700 hover:bg-amber-100">原版</button>
           <button id="ver-btn-edited" onclick="setWeekVersion('edited')" class="px-2.5 py-1 text-xs rounded-md transition-colors bg-amber-400 text-white">已编辑</button>
         </div>
+        <div class="w-px self-stretch bg-gray-200 mx-1"></div>
+        <button id="weekly-edit-btn" onclick="toggleWeeklyEditMode()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">编辑周报</button>
         <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成 PNG</button>
+      </div>
+      <div id="weekly-format-bar" class="hidden items-center gap-1 pt-2 border-t border-gray-100 mt-2">
+        <span class="text-xs text-gray-400 mr-1">格式</span>
+        <button onmousedown="event.preventDefault();document.execCommand('bold')" title="加粗 Ctrl+B"
+                class="w-7 h-7 flex items-center justify-center text-sm font-bold text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">B</button>
+        <button onmousedown="event.preventDefault();document.execCommand('italic')" title="斜体 Ctrl+I"
+                class="w-7 h-7 flex items-center justify-center text-sm italic text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">I</button>
+        <div class="w-px h-5 bg-gray-200 mx-1"></div>
+        <button onmousedown="event.preventDefault();document.execCommand('justifyLeft')" title="左对齐"
+                class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">左</button>
+        <button onmousedown="event.preventDefault();document.execCommand('justifyCenter')" title="居中"
+                class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">中</button>
+        <button onmousedown="event.preventDefault();document.execCommand('justifyRight')" title="右对齐"
+                class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">右</button>
       </div>
       <div id="weekly-active-filters" class="hidden mt-2 flex flex-wrap gap-2"></div>
     </div>
@@ -609,6 +623,8 @@ function enterWeeklyEditMode() {
     editContainer.addEventListener('mousedown', weeklyImgClickHandler);
   }
   updateWeeklyEditBtn();
+  const fmtBar = document.getElementById('weekly-format-bar');
+  if (fmtBar) fmtBar.classList.replace('hidden', 'flex');
   renderWeeklyEdit();
 }
 
@@ -624,6 +640,8 @@ function exitWeeklyEditMode() {
   editWeekData = null;
   weeklyEditMode = false;
   updateWeeklyEditBtn();
+  const fmtBar2 = document.getElementById('weekly-format-bar');
+  if (fmtBar2) fmtBar2.classList.replace('flex', 'hidden');
   renderWeekly();
 }
 
@@ -751,21 +769,8 @@ function renderWeeklyEdit() {
     </div>`;
   }).join('');
   container.innerHTML = `
-    <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 mb-2 text-sm text-blue-800">
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 mb-3 text-sm text-blue-800">
       <b>编辑模式</b> · 点击文字编辑，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+B</kbd> 加粗，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+Z</kbd> 撤销，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+V</kbd> 粘贴图片（点击图片调整大小）。悬停显示增删按钮。
-    </div>
-    <div class="flex items-center gap-1 mb-3 px-1">
-      <button onmousedown="event.preventDefault();document.execCommand('bold')" title="加粗 Ctrl+B"
-              class="w-7 h-7 flex items-center justify-center text-sm font-bold text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">B</button>
-      <button onmousedown="event.preventDefault();document.execCommand('italic')" title="斜体 Ctrl+I"
-              class="w-7 h-7 flex items-center justify-center text-sm italic text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">I</button>
-      <div class="w-px h-5 bg-gray-200 mx-1"></div>
-      <button onmousedown="event.preventDefault();document.execCommand('justifyLeft')" title="左对齐"
-              class="px-2 h-7 flex items-center justify-center text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none text-xs">左</button>
-      <button onmousedown="event.preventDefault();document.execCommand('justifyCenter')" title="居中"
-              class="px-2 h-7 flex items-center justify-center text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none text-xs">中</button>
-      <button onmousedown="event.preventDefault();document.execCommand('justifyRight')" title="右对齐"
-              class="px-2 h-7 flex items-center justify-center text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none text-xs">右</button>
     </div>
     ${patNote}
     <div id="weekly-edit-status" class="hidden mb-3"></div>
@@ -980,31 +985,31 @@ async function generateWeeklyPNG() {
     await loadHtml2Canvas();
     const printDiv = document.createElement('div');
     const YH = '"Microsoft YaHei","微软雅黑","PingFang SC","Hiragino Sans GB",Arial,sans-serif';
-    printDiv.style.cssText = `position:fixed;left:-9999px;top:0;width:820px;background:#fff;padding:44px 52px;font-family:${YH};font-size:14px;line-height:1.8;color:#1a1a1a;word-break:break-word;`;
+    printDiv.style.cssText = `position:fixed;left:-9999px;top:0;width:820px;background:#fff;padding:40px 52px;font-family:${YH};font-size:14px;line-height:1.6;color:#1a1a1a;word-break:break-word;`;
     const sectionsHtml = (week.sections || []).map((section) => {
       const entriesHtml = (section.entries || []).map((entry, idx) => {
         const subs = entry.sub_items || [];
         const subHtml = subs.map((si, sii) =>
-          `<div style="display:flex;gap:6px;margin-top:7px;font-size:13px;line-height:1.8;font-family:${YH};">
+          `<div style="display:flex;gap:6px;margin-top:5px;font-size:13px;line-height:1.6;font-family:${YH};">
             <span style="flex-shrink:0;font-weight:600;color:#333;min-width:20px;">${String.fromCharCode(96 + sii + 1)}.</span>
             <span style="color:#1a1a1a;">${si.content_html || ''}</span>
           </div>`
         ).join('');
-        return `<div style="margin-bottom:16px;font-family:${YH};">
-          <div style="display:flex;gap:6px;align-items:baseline;background:#eff6ff;border-radius:2px;padding:3px 8px 3px 6px;">
+        return `<div style="margin-bottom:12px;font-family:${YH};">
+          <div style="display:flex;gap:5px;align-items:baseline;">
             <span style="flex-shrink:0;font-size:14px;font-weight:bold;color:#1a1a1a;min-width:20px;">${idx + 1}.</span>
-            <div style="font-size:14px;font-weight:bold;line-height:1.7;color:#1a1a1a;font-family:${YH};">${entry.headline_html || ''}</div>
+            <div style="font-size:14px;font-weight:bold;line-height:1.6;color:#1a1a1a;font-family:${YH};">${entry.headline_html || ''}</div>
           </div>
-          <div style="padding-left:26px;">${subHtml}</div>
+          <div style="padding-left:25px;">${subHtml}</div>
         </div>`;
       }).join('');
-      return `<div style="margin-bottom:22px;font-family:${YH};">
-        <div style="font-size:16px;font-weight:bold;color:#1a1a1a;margin-bottom:12px;padding-bottom:5px;border-bottom:1.5px solid #d1d5db;font-family:${YH};">${escHtml(section.name)}</div>
+      return `<div style="margin-bottom:18px;font-family:${YH};">
+        <div style="font-size:15px;font-weight:bold;color:#1a1a1a;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid #d1d5db;font-family:${YH};">${escHtml(section.name)}</div>
         ${entriesHtml}
       </div>`;
     }).join('');
     printDiv.innerHTML = `
-      <div style="font-size:22px;font-weight:bold;color:#1a1a1a;border-bottom:3px solid #1d4ed8;padding-bottom:8px;margin-bottom:28px;font-family:${YH};">${escHtml(week.title || week.week_id)}</div>
+      <div style="font-size:16px;font-weight:bold;color:#1d4ed8;margin-bottom:20px;font-family:${YH};">${escHtml(week.title || week.week_id)}</div>
       ${sectionsHtml}`;
     document.body.appendChild(printDiv);
     const canvas = await html2canvas(printDiv, { scale: 2, useCORS: true, allowTaint: true, backgroundColor: '#ffffff', width: 820 });
