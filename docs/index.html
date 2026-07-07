@@ -56,6 +56,10 @@
         </div>
         <button id="weekly-edit-btn" onclick="toggleWeeklyEditMode()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">编辑周报</button>
         <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成 PNG</button>
+        <div id="weekly-version-toggle" class="hidden inline-flex rounded-lg border border-amber-200 bg-amber-50 p-0.5">
+          <button id="ver-btn-original" onclick="setWeekVersion('original')" class="px-2.5 py-1 text-xs rounded-md transition-colors text-amber-700 hover:bg-amber-100">原版</button>
+          <button id="ver-btn-edited" onclick="setWeekVersion('edited')" class="px-2.5 py-1 text-xs rounded-md transition-colors bg-amber-400 text-white">已编辑</button>
+        </div>
       </div>
       <div id="weekly-active-filters" class="hidden mt-2 flex flex-wrap gap-2"></div>
     </div>
@@ -93,11 +97,13 @@ const SELECTIONS_PATH = 'docs/data/selections.json';
 const WEEKLY_OVERRIDES_PATH = 'docs/data/weekly_overrides.json';
 
 let weeklyOverridesData = {};  // { week_id: week_object }
+let weeklyDisplayVersion = 'edited'; // 'edited' | 'original'
 let editWeekData = null;
 let weeklyEditMode = false;
 let undoStack = [];
 let weeklyEditKeyHandler = null;
 let weeklyPasteHandler = null;
+let weeklyImgClickHandler = null;
 let selectedEditImg = null;
 
 async function init() {
@@ -332,7 +338,28 @@ function filterByCompany(company) {
 
 function onWeekChange() {
   if (weeklyEditMode) { weeklyEditMode = false; editWeekData = null; updateWeeklyEditBtn(); }
+  weeklyDisplayVersion = 'edited';
+  updateWeekVersionToggle();
   renderWeekly();
+}
+
+function setWeekVersion(v) {
+  weeklyDisplayVersion = v;
+  updateWeekVersionToggle();
+  renderWeekly();
+}
+
+function updateWeekVersionToggle() {
+  const rawWeekId = document.getElementById('filter-week')?.value;
+  const rawWeek = weeklyData.find((w) => w.week_id === rawWeekId) || weeklyData[0];
+  const hasOverride = rawWeek && !!weeklyOverridesData[rawWeek.week_id];
+  const toggleDiv = document.getElementById('weekly-version-toggle');
+  if (!toggleDiv) return;
+  if (!hasOverride) { toggleDiv.classList.add('hidden'); return; }
+  toggleDiv.classList.remove('hidden');
+  const base = 'px-2.5 py-1 text-xs rounded-md transition-colors';
+  document.getElementById('ver-btn-original').className = base + (weeklyDisplayVersion === 'original' ? ' bg-amber-400 text-white' : ' text-amber-700 hover:bg-amber-100');
+  document.getElementById('ver-btn-edited').className = base + (weeklyDisplayVersion === 'edited' ? ' bg-amber-400 text-white' : ' text-amber-700 hover:bg-amber-100');
 }
 
 function setWeeklyView(view) {
@@ -375,6 +402,7 @@ function removeWeeklyChip(key) {
 
 function renderWeekly() {
   if (weeklyEditMode) return renderWeeklyEdit();
+  updateWeekVersionToggle();
   if (weeklyView === 'report') return renderWeeklyReportView();
   return renderWeeklyClassicView();
 }
@@ -386,9 +414,14 @@ function renderWeeklyClassicView() {
   const rawWeekId = document.getElementById('filter-week').value;
   const rawWeek = weeklyData.find((w) => w.week_id === rawWeekId) || weeklyData[0];
   if (!rawWeek) return (container.innerHTML = emptyState('No weekly report'));
-  const week = weeklyOverridesData[rawWeek.week_id] || rawWeek;
-  const isOverridden = !!weeklyOverridesData[rawWeek.week_id];
-  const overrideBadge = isOverridden ? `<span class="inline-flex items-center gap-1 text-xs bg-amber-50 text-amber-600 border border-amber-200 rounded-full px-2 py-0.5 ml-2">✏️ 已手动编辑</span>` : '';
+  const rawOverride = weeklyOverridesData[rawWeek.week_id];
+  const week = (weeklyDisplayVersion === 'edited' && rawOverride) ? rawOverride : rawWeek;
+  const isOverridden = !!rawOverride;
+  const overrideBadge = isOverridden
+    ? (weeklyDisplayVersion === 'original'
+        ? `<span class="inline-flex items-center gap-1 text-xs bg-gray-100 text-gray-500 border border-gray-200 rounded-full px-2 py-0.5 ml-2">原版</span>`
+        : `<span class="inline-flex items-center gap-1 text-xs bg-amber-50 text-amber-600 border border-amber-200 rounded-full px-2 py-0.5 ml-2">✏️ 已手动编辑</span>`)
+    : '';
   const generatedAt = week.generated_at ? `<p class="text-sm text-gray-400 mb-6">Generated: ${escHtml(week.generated_at.replace('T', ' ').replace('+08:00', ' +08:00'))}</p>` : '';
   const sectionsHtml = (week.sections || []).map((section) => {
     const entriesHtml = (section.entries || []).map((entry, ei) => {
@@ -418,9 +451,14 @@ function renderWeeklyReportView() {
   const rawWeekId = document.getElementById('filter-week').value;
   const rawWeek = weeklyData.find((w) => w.week_id === rawWeekId) || weeklyData[0];
   if (!rawWeek) return (container.innerHTML = emptyState('No weekly report'));
-  const week = weeklyOverridesData[rawWeek.week_id] || rawWeek;
-  const isOverridden = !!weeklyOverridesData[rawWeek.week_id];
-  const overrideBadge = isOverridden ? `<span class="inline-flex items-center gap-1 text-xs bg-amber-50 text-amber-600 border border-amber-200 rounded-full px-2 py-0.5 ml-2">✏️ 已手动编辑</span>` : '';
+  const rawOverride2 = weeklyOverridesData[rawWeek.week_id];
+  const week = (weeklyDisplayVersion === 'edited' && rawOverride2) ? rawOverride2 : rawWeek;
+  const isOverridden = !!rawOverride2;
+  const overrideBadge = isOverridden
+    ? (weeklyDisplayVersion === 'original'
+        ? `<span class="inline-flex items-center gap-1 text-xs bg-gray-100 text-gray-500 border border-gray-200 rounded-full px-2 py-0.5 ml-2">原版</span>`
+        : `<span class="inline-flex items-center gap-1 text-xs bg-amber-50 text-amber-600 border border-amber-200 rounded-full px-2 py-0.5 ml-2">✏️ 已手动编辑</span>`)
+    : '';
   const sections = week.sections || [];
   const totalEntries = sections.reduce((acc, s) => acc + ((s.entries || []).length), 0);
   const tocHtml = sections.map((section, idx) => `<a href="#" onclick="scrollToWeeklySection('sec-${idx}'); return false;" class="block rounded-lg border border-gray-200 px-3 py-2 hover:bg-gray-50 transition-colors"><div class="text-sm font-semibold text-gray-800">${idx + 1}. ${escHtml(section.name)}</div><div class="text-xs text-gray-500 mt-0.5">${(section.entries || []).length} items</div></a>`).join('');
@@ -543,7 +581,8 @@ function enterWeeklyEditMode() {
   const rawWeekId = document.getElementById('filter-week').value;
   const rawWeek = weeklyData.find((w) => w.week_id === rawWeekId) || weeklyData[0];
   if (!rawWeek) return;
-  const week = weeklyOverridesData[rawWeek.week_id] || rawWeek;
+  const rawOverride3 = weeklyOverridesData[rawWeek.week_id];
+  const week = (weeklyDisplayVersion === 'edited' && rawOverride3) ? rawOverride3 : rawWeek;
   editWeekData = JSON.parse(JSON.stringify(week));
   weeklyEditMode = true;
   undoStack = [];
@@ -556,19 +595,27 @@ function enterWeeklyEditMode() {
   };
   document.addEventListener('keydown', weeklyEditKeyHandler);
   weeklyPasteHandler = handleEditPaste;
+  weeklyImgClickHandler = (e) => {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+      e.stopPropagation();
+      selectEditImage(e.target);
+    }
+  };
   const editContainer = document.getElementById('weekly-content');
-  if (editContainer) editContainer.addEventListener('paste', weeklyPasteHandler);
+  if (editContainer) {
+    editContainer.addEventListener('paste', weeklyPasteHandler);
+    editContainer.addEventListener('mousedown', weeklyImgClickHandler);
+  }
   updateWeeklyEditBtn();
   renderWeeklyEdit();
 }
 
 function exitWeeklyEditMode() {
   if (weeklyEditKeyHandler) { document.removeEventListener('keydown', weeklyEditKeyHandler); weeklyEditKeyHandler = null; }
-  if (weeklyPasteHandler) {
-    const editContainer = document.getElementById('weekly-content');
-    if (editContainer) editContainer.removeEventListener('paste', weeklyPasteHandler);
-    weeklyPasteHandler = null;
-  }
+  const editContainer2 = document.getElementById('weekly-content');
+  if (weeklyPasteHandler && editContainer2) { editContainer2.removeEventListener('paste', weeklyPasteHandler); weeklyPasteHandler = null; }
+  if (weeklyImgClickHandler && editContainer2) { editContainer2.removeEventListener('mousedown', weeklyImgClickHandler); weeklyImgClickHandler = null; }
   const imgTb = document.getElementById('edit-img-toolbar');
   if (imgTb) imgTb.style.display = 'none';
   if (selectedEditImg) { selectedEditImg.style.outline = ''; selectedEditImg = null; }
@@ -775,21 +822,21 @@ function removeEditImage() {
 }
 
 function handleEditPaste(e) {
+  // 1. 优先从 text/html 同步提取 img src URL（从网页复制图片时有效）
+  const htmlData = e.clipboardData?.getData('text/html') || '';
+  if (htmlData) {
+    const match = htmlData.match(/<img[^>]+src=["']([^"']+)["']/i);
+    if (match && match[1] && !match[1].startsWith('blob:')) {
+      e.preventDefault();
+      insertImageAtCursor(match[1]);
+      return;
+    }
+  }
+  // 2. 尝试二进制图片数据（截图、从文件复制）
   const items = Array.from(e.clipboardData?.items || []);
   const imageItem = items.find(i => i.type.startsWith('image/'));
-  if (!imageItem) return;
-  e.preventDefault();
-  const htmlItem = items.find(i => i.type === 'text/html');
-  if (htmlItem) {
-    htmlItem.getAsString((html) => {
-      const match = html.match(/<img[^>]+src=["']([^"']+)["']/i);
-      if (match && match[1] && !match[1].startsWith('data:') && !match[1].startsWith('blob:')) {
-        insertImageAtCursor(match[1]);
-      } else {
-        imageToBase64AndInsert(imageItem);
-      }
-    });
-  } else {
+  if (imageItem) {
+    e.preventDefault();
     imageToBase64AndInsert(imageItem);
   }
 }
@@ -807,7 +854,6 @@ function insertImageAtCursor(src) {
   img.src = src;
   img.style.cssText = 'max-width:100%;height:auto;display:block;margin:8px 0;border-radius:4px;cursor:pointer;';
   img.title = '点击调整大小';
-  img.addEventListener('click', (e) => { e.stopPropagation(); selectEditImage(img); });
   const sel = window.getSelection();
   if (sel && sel.rangeCount) {
     const range = sel.getRangeAt(0);
@@ -831,6 +877,8 @@ async function saveWeeklyOverride() {
   try {
     editWeekData.edited_at = new Date().toISOString();
     weeklyOverridesData[editWeekData.week_id] = editWeekData;
+    weeklyDisplayVersion = 'edited';
+    updateWeekVersionToggle();
     const overridesArr = Object.values(weeklyOverridesData).sort((a, b) => (b.week_id || '').localeCompare(a.week_id || ''));
     const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${WEEKLY_OVERRIDES_PATH}`;
     const headers = { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' };
@@ -883,7 +931,8 @@ async function generateWeeklyPNG() {
   const rawWeekId = document.getElementById('filter-week').value;
   const rawWeek = weeklyData.find((w) => w.week_id === rawWeekId) || weeklyData[0];
   if (!rawWeek) { alert('请先选择一个周报'); return; }
-  const week = weeklyOverridesData[rawWeek.week_id] || rawWeek;
+  const rawOverride4 = weeklyOverridesData[rawWeek.week_id];
+  const week = (weeklyDisplayVersion === 'edited' && rawOverride4) ? rawOverride4 : rawWeek;
   const pngBtn = document.getElementById('weekly-png-btn');
   if (pngBtn) { pngBtn.disabled = true; pngBtn.textContent = '生成中…'; }
   try {
