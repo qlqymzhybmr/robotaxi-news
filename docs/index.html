@@ -54,12 +54,13 @@
           <button id="view-classic" class="px-3 py-1 text-xs rounded-md transition-colors" onclick="setWeeklyView('classic')">经典样式</button>
           <button id="view-report" class="px-3 py-1 text-xs rounded-md transition-colors" onclick="setWeeklyView('report')">报告样式</button>
         </div>
+        <div class="w-px self-stretch bg-gray-200 mx-1"></div>
         <button id="weekly-edit-btn" onclick="toggleWeeklyEditMode()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">编辑周报</button>
-        <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成 PNG</button>
         <div id="weekly-version-toggle" class="hidden inline-flex rounded-lg border border-amber-200 bg-amber-50 p-0.5">
           <button id="ver-btn-original" onclick="setWeekVersion('original')" class="px-2.5 py-1 text-xs rounded-md transition-colors text-amber-700 hover:bg-amber-100">原版</button>
           <button id="ver-btn-edited" onclick="setWeekVersion('edited')" class="px-2.5 py-1 text-xs rounded-md transition-colors bg-amber-400 text-white">已编辑</button>
         </div>
+        <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成 PNG</button>
       </div>
       <div id="weekly-active-filters" class="hidden mt-2 flex flex-wrap gap-2"></div>
     </div>
@@ -773,13 +774,19 @@ function getOrCreateImgToolbar() {
   tb.id = 'edit-img-toolbar';
   tb.style.cssText = 'display:none;position:fixed;z-index:9999;background:rgba(15,23,42,0.92);border-radius:6px;padding:4px 8px;gap:4px;align-items:center;box-shadow:0 3px 12px rgba(0,0,0,0.35);pointer-events:all;';
   const btnStyle = 'color:#e2e8f0;font-size:11px;padding:2px 7px;border-radius:4px;border:1px solid rgba(255,255,255,0.15);cursor:pointer;background:transparent;transition:background 0.1s;';
+  const hov = "onmouseenter=\"this.style.background='rgba(255,255,255,0.12)'\" onmouseleave=\"this.style.background='transparent'\"";
   tb.innerHTML = `
     <span style="color:#94a3b8;font-size:11px;margin-right:2px;">宽度</span>
-    <button style="${btnStyle}" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='transparent'" onclick="resizeEditImage(25)">25%</button>
-    <button style="${btnStyle}" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='transparent'" onclick="resizeEditImage(50)">50%</button>
-    <button style="${btnStyle}" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='transparent'" onclick="resizeEditImage(75)">75%</button>
-    <button style="${btnStyle}" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='transparent'" onclick="resizeEditImage(100)">100%</button>
-    <span style="color:#475569;margin:0 3px;">|</span>
+    <button style="${btnStyle}" ${hov} onclick="resizeEditImage(25)">25%</button>
+    <button style="${btnStyle}" ${hov} onclick="resizeEditImage(50)">50%</button>
+    <button style="${btnStyle}" ${hov} onclick="resizeEditImage(75)">75%</button>
+    <button style="${btnStyle}" ${hov} onclick="resizeEditImage(100)">100%</button>
+    <span style="color:#475569;margin:0 4px;">|</span>
+    <span style="color:#94a3b8;font-size:11px;margin-right:2px;">对齐</span>
+    <button style="${btnStyle}" ${hov} onclick="alignEditImage('left')" title="左对齐">⬛左</button>
+    <button style="${btnStyle}" ${hov} onclick="alignEditImage('center')" title="居中">居中</button>
+    <button style="${btnStyle}" ${hov} onclick="alignEditImage('right')" title="右对齐">右⬛</button>
+    <span style="color:#475569;margin:0 4px;">|</span>
     <button style="${btnStyle.replace('#e2e8f0','#f87171')}" onmouseenter="this.style.background='rgba(239,68,68,0.25)'" onmouseleave="this.style.background='transparent'" onclick="removeEditImage()">删除</button>
   `;
   document.body.appendChild(tb);
@@ -819,6 +826,20 @@ function removeEditImage() {
   if (selectedEditImg) { pushUndo(); selectedEditImg.remove(); selectedEditImg = null; }
   const tb = document.getElementById('edit-img-toolbar');
   if (tb) tb.style.display = 'none';
+}
+
+function alignEditImage(align) {
+  if (!selectedEditImg) return;
+  if (align === 'center') {
+    selectedEditImg.style.margin = '8px auto';
+    selectedEditImg.style.display = 'block';
+  } else if (align === 'left') {
+    selectedEditImg.style.margin = '8px auto 8px 0';
+    selectedEditImg.style.display = 'block';
+  } else {
+    selectedEditImg.style.margin = '8px 0 8px auto';
+    selectedEditImg.style.display = 'block';
+  }
 }
 
 function handleEditPaste(e) {
@@ -939,38 +960,31 @@ async function generateWeeklyPNG() {
     await loadHtml2Canvas();
     const printDiv = document.createElement('div');
     const YH = '"Microsoft YaHei","微软雅黑","PingFang SC","Hiragino Sans GB",Arial,sans-serif';
-    printDiv.style.cssText = `position:fixed;left:-9999px;top:0;width:820px;background:#fff;padding:48px 56px;font-family:${YH};font-size:14px;line-height:1.85;color:#1a1a1a;word-break:break-all;`;
+    printDiv.style.cssText = `position:fixed;left:-9999px;top:0;width:820px;background:#fff;padding:44px 52px;font-family:${YH};font-size:14px;line-height:1.8;color:#1a1a1a;word-break:break-word;`;
     const sectionsHtml = (week.sections || []).map((section) => {
       const entriesHtml = (section.entries || []).map((entry, idx) => {
         const subs = entry.sub_items || [];
-        let bodyHtml = '';
-        if (subs.length === 0) {
-          bodyHtml = '';
-        } else if (subs.length === 1) {
-          bodyHtml = `<div style="margin-top:7px;font-size:13px;line-height:1.85;color:#222;font-family:${YH};">${subs[0].content_html || ''}</div>`;
-        } else {
-          bodyHtml = subs.map((si, sii) =>
-            `<div style="display:flex;gap:8px;margin-top:8px;font-size:13px;line-height:1.85;color:#374151;font-family:${YH};padding:2px 0 2px 4px;">
-              <span style="flex-shrink:0;font-weight:600;color:#6b7280;min-width:20px;">${String.fromCharCode(96 + sii + 1)}.</span>
-              <span>${si.content_html || ''}</span>
-            </div>`
-          ).join('');
-        }
-        return `<div style="margin-bottom:20px;font-family:${YH};">
-          <div style="display:flex;gap:8px;align-items:flex-start;background:#dbeafe;border-left:3px solid #3b82f6;border-radius:4px;padding:8px 12px;">
-            <span style="flex-shrink:0;font-size:14px;font-weight:bold;color:#1d4ed8;min-width:22px;">${idx + 1}.</span>
-            <div style="font-size:14px;font-weight:bold;line-height:1.75;color:#1a1a1a;font-family:${YH};">${entry.headline_html || ''}</div>
+        const subHtml = subs.map((si, sii) =>
+          `<div style="display:flex;gap:6px;margin-top:6px;font-size:13px;line-height:1.8;color:#1a1a1a;font-family:${YH};padding-left:2px;">
+            <span style="flex-shrink:0;font-weight:600;color:#444;min-width:18px;">${String.fromCharCode(96 + sii + 1)}.</span>
+            <span style="color:#1a1a1a;">${si.content_html || ''}</span>
+          </div>`
+        ).join('');
+        return `<div style="margin-bottom:16px;font-family:${YH};">
+          <div style="display:flex;gap:6px;align-items:baseline;background:#eff6ff;border-radius:3px;padding:5px 10px;">
+            <span style="flex-shrink:0;font-size:14px;font-weight:bold;color:#1a1a1a;min-width:18px;">${idx + 1}.</span>
+            <div style="font-size:14px;font-weight:bold;line-height:1.7;color:#1a1a1a;font-family:${YH};">${entry.headline_html || ''}</div>
           </div>
-          <div style="padding-left:8px;">${bodyHtml}</div>
+          <div style="padding-left:10px;">${subHtml}</div>
         </div>`;
       }).join('');
-      return `<div style="margin-bottom:24px;font-family:${YH};">
-        <div style="font-size:17px;font-weight:bold;color:#1a1a1a;margin-bottom:16px;font-family:${YH};">${escHtml(section.name)}</div>
+      return `<div style="margin-bottom:22px;font-family:${YH};">
+        <div style="font-size:16px;font-weight:bold;color:#1a1a1a;margin-bottom:12px;padding-bottom:6px;border-bottom:1.5px solid #d1d5db;font-family:${YH};">${escHtml(section.name)}</div>
         ${entriesHtml}
       </div>`;
     }).join('');
     printDiv.innerHTML = `
-      <div style="font-size:22px;font-weight:bold;color:#1a1a1a;border-bottom:3px solid #1d4ed8;padding-bottom:10px;margin-bottom:30px;font-family:${YH};">${escHtml(week.title || week.week_id)}</div>
+      <div style="font-size:20px;font-weight:bold;color:#1a1a1a;border-bottom:2.5px solid #1a1a1a;padding-bottom:8px;margin-bottom:28px;font-family:${YH};">${escHtml(week.title || week.week_id)}</div>
       ${sectionsHtml}`;
     document.body.appendChild(printDiv);
     const canvas = await html2canvas(printDiv, { scale: 2, useCORS: true, allowTaint: true, backgroundColor: '#ffffff', width: 820 });
