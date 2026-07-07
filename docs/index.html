@@ -59,9 +59,9 @@
           <button id="ver-btn-edited" onclick="setWeekVersion('edited')" class="px-2.5 py-1 text-xs rounded-md transition-colors bg-amber-400 text-white">已编辑</button>
         </div>
         <div class="w-px self-stretch bg-gray-200 mx-1"></div>
-        <button id="weekly-edit-btn" onclick="toggleWeeklyEditMode()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">编辑周报</button>
-        <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成图片(测试)</button>
-        <button id="weekly-onenote-btn" onclick="copyToOneNote()" class="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">复制到 OneNote</button>
+        <button id="weekly-edit-btn" onclick="toggleWeeklyEditMode()" class="px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">编辑周报</button>
+        <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成图片(测试)</button>
+        <button id="weekly-onenote-btn" onclick="copyToOneNote()" class="px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">复制到OneNote</button>
       </div>
       <div id="weekly-format-bar" class="hidden items-center gap-1 pt-2 border-t border-gray-100 mt-2">
         <span class="text-xs text-gray-400 mr-1">格式</span>
@@ -1028,17 +1028,27 @@ async function generateWeeklyPNG() {
 
 // ─── OneNote copy ────────────────────────────────────────────────────────────
 
-function htmlToMarkdown(html) {
-  if (!html) return '';
-  return html
-    .replace(/<strong>([\s\S]*?)<\/strong>/gi, '**$1**')
-    .replace(/<b>([\s\S]*?)<\/b>/gi, '**$1**')
-    .replace(/<em>([\s\S]*?)<\/em>/gi, '*$1*')
-    .replace(/<i>([\s\S]*?)<\/i>/gi, '*$1*')
-    .replace(/<a[^>]*>([\s\S]*?)<\/a>/gi, '$1')
-    .replace(/<[^>]+>/g, '')
-    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ')
-    .trim();
+function generateOneNoteHTML(week) {
+  const YH = 'font-family:"Microsoft YaHei","微软雅黑",sans-serif;';
+  let html = `<html><body style="${YH}font-size:11pt;line-height:1.5;color:#000;">`;
+  html += `<h1 style="${YH}font-size:14pt;font-weight:bold;color:#000;">${escHtml(week.title || week.week_id)}</h1>`;
+  (week.sections || []).forEach((section) => {
+    html += `<h2 style="${YH}font-size:12pt;font-weight:bold;color:#000;">${escHtml(section.name)}</h2>`;
+    html += `<ol style="${YH}font-size:11pt;">`;
+    (section.entries || []).forEach((entry) => {
+      html += `<li><strong>${entry.headline_html || ''}</strong>`;
+      const subs = entry.sub_items || [];
+      if (subs.length > 0) {
+        html += `<ol type="a">`;
+        subs.forEach((si) => { html += `<li>${si.content_html || ''}</li>`; });
+        html += `</ol>`;
+      }
+      html += `</li>`;
+    });
+    html += `</ol>`;
+  });
+  html += `</body></html>`;
+  return html;
 }
 
 async function copyToOneNote() {
@@ -1048,23 +1058,20 @@ async function copyToOneNote() {
   const rawOverride = weeklyOverridesData[rawWeek.week_id];
   const week = (weeklyDisplayVersion === 'edited' && rawOverride) ? rawOverride : rawWeek;
 
-  let md = `# ${week.title || week.week_id}\n\n`;
-  (week.sections || []).forEach((section) => {
-    md += `## ${section.name}\n\n`;
-    (section.entries || []).forEach((entry, idx) => {
-      md += `${idx + 1}. **${htmlToMarkdown(entry.headline_html)}**\n`;
-      (entry.sub_items || []).forEach((si, sii) => {
-        md += `   ${String.fromCharCode(96 + sii + 1)}. ${htmlToMarkdown(si.content_html)}\n`;
-      });
-      md += '\n';
-    });
-  });
-
   const btn = document.getElementById('weekly-onenote-btn');
   try {
-    await navigator.clipboard.writeText(md);
-    if (btn) { btn.textContent = '✓ 已复制'; btn.className = btn.className.replace('text-gray-600', 'text-green-600'); }
-    setTimeout(() => { if (btn) { btn.textContent = '复制到 OneNote'; btn.className = btn.className.replace('text-green-600', 'text-gray-600'); } }, 2500);
+    const htmlContent = generateOneNoteHTML(week);
+    if (navigator.clipboard && window.ClipboardItem) {
+      await navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([htmlContent], { type: 'text/html' }) })]);
+    } else {
+      // 降级：复制纯 HTML 文本
+      await navigator.clipboard.writeText(htmlContent);
+    }
+    if (btn) {
+      const orig = btn.textContent;
+      btn.textContent = '✓ 已复制';
+      setTimeout(() => { if (btn) btn.textContent = orig; }, 1500);
+    }
   } catch (e) {
     alert('复制失败，请检查浏览器剪贴板权限：' + e.message);
   }
