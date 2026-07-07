@@ -98,6 +98,7 @@ let weeklyEditMode = false;
 let undoStack = [];
 let weeklyEditKeyHandler = null;
 let weeklyPasteHandler = null;
+let selectedEditImg = null;
 
 async function init() {
   if (location.hash.startsWith('#weekly')) currentTab = 'weekly';
@@ -568,6 +569,9 @@ function exitWeeklyEditMode() {
     if (editContainer) editContainer.removeEventListener('paste', weeklyPasteHandler);
     weeklyPasteHandler = null;
   }
+  const imgTb = document.getElementById('edit-img-toolbar');
+  if (imgTb) imgTb.style.display = 'none';
+  if (selectedEditImg) { selectedEditImg.style.outline = ''; selectedEditImg = null; }
   undoStack = [];
   editWeekData = null;
   weeklyEditMode = false;
@@ -645,6 +649,15 @@ function removeSubItem(si, ei, sii) {
   renderWeeklyEdit();
 }
 
+function addEntry(si) {
+  collectEditWeekDataFromDOM();
+  const section = editWeekData && editWeekData.sections[si];
+  if (!section) return;
+  if (!section.entries) section.entries = [];
+  section.entries.push({ headline_html: '新标题', sub_items: [] });
+  renderWeeklyEdit();
+}
+
 function renderWeeklyEdit() {
   const container = document.getElementById('weekly-content');
   if (!editWeekData) return;
@@ -685,11 +698,13 @@ function renderWeeklyEdit() {
                 class="opacity-0 group-hover/section:opacity-100 text-xs text-red-400 hover:text-red-600 border border-red-200 hover:border-red-400 rounded px-2 py-0.5 transition-all">删除整节</button>
       </div>
       ${entriesHtml}
+      <button onclick="addEntry(${si})"
+              class="mt-1 opacity-0 group-hover/section:opacity-100 text-xs text-green-600 hover:text-green-800 border border-green-200 hover:border-green-400 rounded px-2 py-0.5 transition-all">＋ 添加标题</button>
     </div>`;
   }).join('');
   container.innerHTML = `
     <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 mb-3 text-sm text-blue-800">
-      <b>编辑模式</b> · 点击文字编辑，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+B</kbd> 加粗，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+Z</kbd> 撤销删除操作。悬停显示删除按钮。
+      <b>编辑模式</b> · 点击文字编辑，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+B</kbd> 加粗，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+Z</kbd> 撤销，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+V</kbd> 粘贴图片（点击图片可调整大小）。悬停显示增删按钮。
     </div>
     ${patNote}
     <div id="weekly-edit-status" class="hidden mb-3"></div>
@@ -702,6 +717,61 @@ function renderWeeklyEdit() {
       <p class="text-sm text-gray-400 mb-5">${escHtml(editWeekData.date_range || '')}</p>
       ${sectionsHtml}
     </div>`;
+}
+
+function getOrCreateImgToolbar() {
+  let tb = document.getElementById('edit-img-toolbar');
+  if (tb) return tb;
+  tb = document.createElement('div');
+  tb.id = 'edit-img-toolbar';
+  tb.style.cssText = 'display:none;position:fixed;z-index:9999;background:rgba(15,23,42,0.92);border-radius:6px;padding:4px 8px;gap:4px;align-items:center;box-shadow:0 3px 12px rgba(0,0,0,0.35);pointer-events:all;';
+  const btnStyle = 'color:#e2e8f0;font-size:11px;padding:2px 7px;border-radius:4px;border:1px solid rgba(255,255,255,0.15);cursor:pointer;background:transparent;transition:background 0.1s;';
+  tb.innerHTML = `
+    <span style="color:#94a3b8;font-size:11px;margin-right:2px;">宽度</span>
+    <button style="${btnStyle}" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='transparent'" onclick="resizeEditImage(25)">25%</button>
+    <button style="${btnStyle}" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='transparent'" onclick="resizeEditImage(50)">50%</button>
+    <button style="${btnStyle}" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='transparent'" onclick="resizeEditImage(75)">75%</button>
+    <button style="${btnStyle}" onmouseenter="this.style.background='rgba(255,255,255,0.12)'" onmouseleave="this.style.background='transparent'" onclick="resizeEditImage(100)">100%</button>
+    <span style="color:#475569;margin:0 3px;">|</span>
+    <button style="${btnStyle.replace('#e2e8f0','#f87171')}" onmouseenter="this.style.background='rgba(239,68,68,0.25)'" onmouseleave="this.style.background='transparent'" onclick="removeEditImage()">删除</button>
+  `;
+  document.body.appendChild(tb);
+  document.addEventListener('click', (e) => {
+    if (!tb.contains(e.target) && e.target !== selectedEditImg) {
+      tb.style.display = 'none';
+      if (selectedEditImg) { selectedEditImg.style.outline = ''; selectedEditImg = null; }
+    }
+  });
+  return tb;
+}
+
+function selectEditImage(img) {
+  selectedEditImg = img;
+  img.style.outline = '2px solid #3b82f6';
+  img.style.borderRadius = '4px';
+  const tb = getOrCreateImgToolbar();
+  const rect = img.getBoundingClientRect();
+  tb.style.top = Math.max(4, rect.top - 38) + 'px';
+  tb.style.left = rect.left + 'px';
+  tb.style.display = 'flex';
+}
+
+function resizeEditImage(pct) {
+  if (!selectedEditImg) return;
+  selectedEditImg.style.width = pct + '%';
+  selectedEditImg.style.height = 'auto';
+  const tb = document.getElementById('edit-img-toolbar');
+  if (tb) {
+    const rect = selectedEditImg.getBoundingClientRect();
+    tb.style.top = Math.max(4, rect.top - 38) + 'px';
+    tb.style.left = rect.left + 'px';
+  }
+}
+
+function removeEditImage() {
+  if (selectedEditImg) { pushUndo(); selectedEditImg.remove(); selectedEditImg = null; }
+  const tb = document.getElementById('edit-img-toolbar');
+  if (tb) tb.style.display = 'none';
 }
 
 function handleEditPaste(e) {
@@ -736,7 +806,8 @@ function insertImageAtCursor(src) {
   const img = document.createElement('img');
   img.src = src;
   img.style.cssText = 'max-width:100%;height:auto;display:block;margin:8px 0;border-radius:4px;cursor:pointer;';
-  img.title = '点击选中 · 粘贴图片';
+  img.title = '点击调整大小';
+  img.addEventListener('click', (e) => { e.stopPropagation(); selectEditImage(img); });
   const sel = window.getSelection();
   if (sel && sel.rangeCount) {
     const range = sel.getRangeAt(0);
