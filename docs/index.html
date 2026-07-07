@@ -1009,7 +1009,7 @@ async function generateWeeklyPNG() {
       </div>`;
     }).join('');
     printDiv.innerHTML = `
-      <div style="font-size:16px;font-weight:bold;color:#1d4ed8;margin-bottom:20px;font-family:${YH};">${escHtml(week.title || week.week_id)}</div>
+      <div style="font-size:16px;font-weight:bold;color:#1a1a1a;border-bottom:2.5px solid #1d4ed8;padding-bottom:6px;margin-bottom:18px;font-family:${YH};">${escHtml(week.title || week.week_id)}</div>
       ${sectionsHtml}`;
     document.body.appendChild(printDiv);
     const canvas = await html2canvas(printDiv, { scale: 2, useCORS: true, allowTaint: true, backgroundColor: '#ffffff', width: 820 });
