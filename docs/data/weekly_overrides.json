@@ -26,7 +26,7 @@
           {
             "company": "Tesla",
             "company_slug": "tesla",
-            "headline_html": "<p class=\"MsoNormal\"><span lang=\"EN-US\" style=\"font-family:&quot;微软雅黑&quot;,sans-serif\">Tesla</span><span style=\"font-family:&quot;微软雅黑&quot;,sans-serif\">：在加州冲上路缘撞倒数人并致一人死亡，<span lang=\"EN-US\">FSD </span>是否启用尚不确定；在奥斯汀测试无方向盘和踏板的量产<span lang=\"EN-US\"> robotaxi</span>；在美国推送适用于旧款硬件的<span lang=\"EN-US\"> FSD v14 Lite </span>蒸馏版本；检方确认此前闯入民宅致死事故并非<span lang=\"EN-US\"> FSD </span>系统原因；在迈阿密推出全无人<span lang=\"EN-US\"> robotaxi </span>服务<span lang=\"EN-US\"> <o:p></o:p></span></span></p>",
+            "headline_html": "<p class=\"MsoNormal\"><font face=\"微软雅黑, sans-serif\">Tesla：在加州冲上路缘撞倒数人并致一人死亡，FSD 是否启用尚不确定；在奥斯汀测试无方向盘和踏板的量产 robotaxi；在美国推送适用于旧款硬件的 FSD v14 Lite 蒸馏版本；检方确认此前闯入民宅致死事故并非 FSD 系统原因；在迈阿密推出全无人 robotaxi 服务&nbsp;</font></p>",
             "sub_items": [
               {
                 "label": "a",
@@ -53,7 +53,7 @@
         ]
       }
     ],
-    "edited_at": "2026-07-07T07:44:05.184Z"
+    "edited_at": "2026-07-07T07:58:41.248Z"
   },
   {
     "week_id": "2026-W27",
