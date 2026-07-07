@@ -1031,10 +1031,12 @@ async function generateWeeklyPNG() {
 function generateOneNoteHTML(week) {
   const YH = 'font-family:"Microsoft YaHei","微软雅黑",sans-serif;';
   let html = `<html><body style="${YH}font-size:11pt;line-height:1.5;color:#000;">`;
-  html += `<h1 style="${YH}font-size:14pt;font-weight:bold;color:#000;">${escHtml(week.title || week.week_id)}</h1>`;
+  html += `<h1 style="${YH}font-size:20pt;font-weight:bold;color:#1565c0;text-decoration:underline;">${escHtml(week.title || week.week_id)}</h1>`;
   (week.sections || []).forEach((section) => {
-    html += `<h2 style="${YH}font-size:12pt;font-weight:bold;color:#000;">${escHtml(section.name)}</h2>`;
-    html += `<ol style="${YH}font-size:11pt;">`;
+    html += `<p style="margin:0;">&nbsp;</p>`;
+    html += `<h2 style="${YH}font-size:13pt;font-weight:bold;color:#000;margin:0;">${escHtml(section.name)}</h2>`;
+    html += `<p style="margin:0;">&nbsp;</p>`;
+    html += `<ol style="${YH}font-size:11pt;margin-top:0;">`;
     (section.entries || []).forEach((entry) => {
       html += `<li><strong>${entry.headline_html || ''}</strong>`;
       const subs = entry.sub_items || [];
