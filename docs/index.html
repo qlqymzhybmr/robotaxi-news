@@ -389,9 +389,17 @@ function renderWeeklyClassicView() {
   const overrideBadge = isOverridden ? `<span class="inline-flex items-center gap-1 text-xs bg-amber-50 text-amber-600 border border-amber-200 rounded-full px-2 py-0.5 ml-2">✏️ 已手动编辑</span>` : '';
   const generatedAt = week.generated_at ? `<p class="text-sm text-gray-400 mb-6">Generated: ${escHtml(week.generated_at.replace('T', ' ').replace('+08:00', ' +08:00'))}</p>` : '';
   const sectionsHtml = (week.sections || []).map((section) => {
-    const entriesHtml = (section.entries || []).map((entry) => {
-      const subItemsHtml = (entry.sub_items || []).map((si) => `<div class="ml-5 mt-2 text-sm text-gray-700 leading-relaxed flex"><span class="mr-2 text-gray-400">•</span><span>${si.content_html || ''}</span></div>`).join('');
-      return `<div class="mb-5"><div class="text-sm font-semibold text-gray-800 leading-relaxed">${entry.headline_html || ''}</div>${subItemsHtml}</div>`;
+    const entriesHtml = (section.entries || []).map((entry, ei) => {
+      const subItemsHtml = (entry.sub_items || []).map((si, sii) =>
+        `<div class="flex items-start gap-2 mt-1.5 rounded-md px-2.5 py-1.5 bg-blue-50 border-l-2 border-blue-300">
+          <span class="shrink-0 text-sm font-bold text-blue-600 select-none min-w-[18px]">${String.fromCharCode(96 + sii + 1)}.</span>
+          <span class="text-sm text-gray-700 leading-relaxed">${si.content_html || ''}</span>
+        </div>`
+      ).join('');
+      return `<div class="mb-5 flex items-start gap-2">
+        <span class="shrink-0 text-sm font-semibold text-gray-500 select-none mt-0.5">${ei + 1}.</span>
+        <div class="flex-1"><div class="text-sm font-semibold text-gray-800 leading-relaxed">${entry.headline_html || ''}</div>${subItemsHtml}</div>
+      </div>`;
     }).join('');
     return `<div class="mb-8"><h2 class="text-base font-bold text-gray-800 mb-4 pb-2 border-b border-gray-100">${escHtml(section.name)}</h2>${entriesHtml}</div>`;
   }).join('');
@@ -635,26 +643,29 @@ function renderWeeklyEdit() {
   const sectionsHtml = (editWeekData.sections || []).map((section, si) => {
     const entriesHtml = (section.entries || []).map((entry, ei) => {
       const subItemsHtml = (entry.sub_items || []).map((subItem, sii) =>
-        `<div class="flex items-start gap-2 mt-2 group/item">
-          <span class="shrink-0 text-sm text-gray-400 pt-0.5 select-none">•</span>
+        `<div class="flex items-start gap-2 mt-1.5 rounded-md px-2.5 py-1.5 bg-blue-50 border-l-2 border-blue-300 group/item">
+          <span class="shrink-0 text-sm font-bold text-blue-600 select-none min-w-[18px] pt-0.5">${String.fromCharCode(96 + sii + 1)}.</span>
           <div contenteditable="true" data-edit-content="${si}-${ei}-${sii}"
-               class="flex-1 text-sm text-gray-700 leading-relaxed outline-none rounded px-1.5 py-0.5 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/30 transition-colors cursor-text"
+               class="flex-1 text-sm text-gray-700 leading-relaxed outline-none rounded px-1 border border-transparent hover:border-blue-300 focus:border-blue-500 focus:bg-white transition-colors cursor-text"
                >${subItem.content_html || ''}</div>
           <button onclick="removeSubItem(${si},${ei},${sii})"
-                  class="opacity-0 group-hover/item:opacity-100 shrink-0 w-5 h-5 flex items-center justify-center text-gray-300 hover:text-red-400 rounded text-base transition-all mt-0.5" title="删除要点">×</button>
+                  class="opacity-0 group-hover/item:opacity-100 shrink-0 w-5 h-5 flex items-center justify-center text-blue-300 hover:text-red-400 rounded text-base transition-all" title="删除要点">×</button>
         </div>`
       ).join('');
-      return `<div class="mb-4 p-2 -mx-2 rounded-lg border border-transparent hover:border-blue-100 transition-colors group/entry">
-        <div class="flex items-start gap-1">
-          <div contenteditable="true" data-edit-headline="${si}-${ei}"
-               class="flex-1 text-sm font-semibold text-gray-800 leading-relaxed outline-none rounded px-1.5 py-0.5 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/30 transition-colors cursor-text"
-               >${entry.headline_html || ''}</div>
-          <button onclick="deleteEntry(${si},${ei})"
-                  class="opacity-0 group-hover/entry:opacity-100 shrink-0 text-xs text-red-400 hover:text-red-600 border border-red-200 hover:border-red-400 rounded px-1.5 py-0.5 mt-0.5 transition-all whitespace-nowrap">删除条目</button>
+      return `<div class="mb-4 flex items-start gap-2 group/entry p-1 -mx-1 rounded-lg border border-transparent hover:border-blue-100 transition-colors">
+        <span class="shrink-0 text-sm font-semibold text-gray-500 select-none mt-0.5 pt-0.5">${ei + 1}.</span>
+        <div class="flex-1">
+          <div class="flex items-start gap-1">
+            <div contenteditable="true" data-edit-headline="${si}-${ei}"
+                 class="flex-1 text-sm font-semibold text-gray-800 leading-relaxed outline-none rounded px-1.5 py-0.5 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/30 transition-colors cursor-text"
+                 >${entry.headline_html || ''}</div>
+            <button onclick="deleteEntry(${si},${ei})"
+                    class="opacity-0 group-hover/entry:opacity-100 shrink-0 text-xs text-red-400 hover:text-red-600 border border-red-200 hover:border-red-400 rounded px-1.5 py-0.5 transition-all whitespace-nowrap">删除条目</button>
+          </div>
+          <div class="mt-0.5">${subItemsHtml}</div>
+          <button onclick="addSubItem(${si},${ei})"
+                  class="mt-1 opacity-0 group-hover/entry:opacity-100 text-xs text-blue-400 hover:text-blue-600 transition-all">＋ 添加要点</button>
         </div>
-        <div>${subItemsHtml}</div>
-        <button onclick="addSubItem(${si},${ei})"
-                class="mt-1.5 ml-1 opacity-0 group-hover/entry:opacity-100 text-xs text-blue-400 hover:text-blue-600 transition-all">＋ 添加要点</button>
       </div>`;
     }).join('');
     return `<div class="mb-8 group/section">
@@ -764,15 +775,18 @@ async function generateWeeklyPNG() {
           bodyHtml = `<div style="margin-top:7px;font-size:13px;line-height:1.85;color:#222;font-family:${YH};">${subs[0].content_html || ''}</div>`;
         } else {
           bodyHtml = subs.map((si, sii) =>
-            `<div style="display:flex;gap:8px;margin-top:8px;font-size:13px;line-height:1.85;color:#222;font-family:${YH};">
-              <span style="flex-shrink:0;font-weight:bold;color:#1a1a1a;min-width:20px;">${String.fromCharCode(96 + sii + 1)}.</span>
+            `<div style="display:flex;gap:8px;margin-top:8px;font-size:13px;line-height:1.85;color:#222;font-family:${YH};background:#dbeafe;border-left:3px solid #3b82f6;border-radius:4px;padding:6px 10px;">
+              <span style="flex-shrink:0;font-weight:bold;color:#1d4ed8;min-width:20px;">${String.fromCharCode(96 + sii + 1)}.</span>
               <span>${si.content_html || ''}</span>
             </div>`
           ).join('');
         }
-        return `<div style="margin-bottom:20px;font-family:${YH};">
-          <div style="font-size:14px;font-weight:bold;line-height:1.75;color:#1a1a1a;font-family:${YH};">${idx + 1}. ${entry.headline_html || ''}</div>
-          ${bodyHtml}
+        return `<div style="margin-bottom:20px;font-family:${YH};display:flex;gap:8px;align-items:flex-start;">
+          <span style="flex-shrink:0;font-size:14px;font-weight:bold;color:#374151;min-width:22px;">${idx + 1}.</span>
+          <div style="flex:1;">
+            <div style="font-size:14px;font-weight:bold;line-height:1.75;color:#1a1a1a;font-family:${YH};">${entry.headline_html || ''}</div>
+            ${bodyHtml}
+          </div>
         </div>`;
       }).join('');
       return `<div style="margin-bottom:24px;font-family:${YH};">
