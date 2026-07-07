@@ -60,7 +60,7 @@
         </div>
         <div class="w-px self-stretch bg-gray-200 mx-1"></div>
         <button id="weekly-edit-btn" onclick="toggleWeeklyEditMode()" class="px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">编辑周报</button>
-        <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成图片(测试)</button>
+        <button id="weekly-png-btn" onclick="generateWeeklyPNG()" class="px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">生成图片 (测试)</button>
         <button id="weekly-onenote-btn" onclick="copyToOneNote()" class="px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">复制到OneNote</button>
       </div>
       <div id="weekly-format-bar" class="hidden items-center gap-1 pt-2 border-t border-gray-100 mt-2">
@@ -1022,7 +1022,7 @@ async function generateWeeklyPNG() {
   } catch (err) {
     alert('PNG 生成失败：' + err.message);
   } finally {
-    if (pngBtn) { pngBtn.disabled = false; pngBtn.textContent = '生成图片(测试)'; }
+    if (pngBtn) { pngBtn.disabled = false; pngBtn.textContent = '生成图片 (测试)'; }
   }
 }
 
