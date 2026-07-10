@@ -1,5 +1,121 @@
 [
   {
+    "week_id": "2026-W29-WIP",
+    "date_range": "0707-0710（WIP）",
+    "title": "无人驾驶行业0707-0710重要新闻（WIP）",
+    "generated_at": "2026-07-10T22:00:00+08:00",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>4城最大规模扩张本周落地，独立日余波立案调查，社会抗议与地理突破同步上演",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月8日</b>，Waymo 宣布历史上单日新增城市数量最多的扩张：<b>拉斯维加斯即日起</b>向公众开放完全无人驾驶；<b>丹佛、圣地亚哥、坦帕</b>陆续跟进，IBD 直接以「Waymo Widens Lead Over Tesla」为题报道。<b>7月10日</b>具体落地情况：圣地亚哥<b>正式向公众开放</b>，较预期更早；<b>萨克拉门托</b>开启加州第 4 个测试城市；<b>路易斯安那州杰斐逊教区</b>（紧邻新奥尔良）开始测试，这是 Waymo 首次进入美国东南部海湾沿岸，战略版图从西海岸向南部延伸的信号明确。"
+              },
+              {
+                "label": "b",
+                "content_html": "独立日余波本周持续发酵：<b>7月9日</b>，新细节确认一辆 Waymo <b>多次碾压正在燃放的烟花后起火</b>，性质远比「电量耗尽堵塞道路」严重；<b>7月8日</b>，旧金山市监督委员 Connie Chan 正式宣布立案调查，核心追问：Waymo 如何实时监控节假日高密度运营安全、为何未能在电量耗尽前撤回车辆。同日另一安全事件：San Mateo 两名 <b>15 岁少年</b>在 Waymo 车内饮酒+用玩具枪向外射击，Waymo 通过远程监控检测异常后<b>主动将两人送至警察局</b>——这是首次有记录的 Waymo 主动移交违规乘客案例，引发车内隐私与公共安全边界的广泛讨论。<b>7月10日</b>，NHTSA 向 Waymo 等 AV 企业发出<b>官方书面警告</b>，称 AV 干扰急救人员通行已是「令人担忧的趋势」，联邦层面首次以书面形式正式施压整个行业。"
+              },
+              {
+                "label": "c",
+                "content_html": "扩张越快、社会摩擦越明显：<b>7月10日</b>，亚特兰大多名 Uber/Lyft 司机集体走上街头，向市政府请愿要求对 Waymo 扩张设置限制，认为现行监管对人类司机保护不足；Reddit r/SelfDrivingCars 同期热帖揭示纽约 TLC 游说团体<b>自 2021 年起持续阻止</b>无驾驶员位 AV 上路立法，现任市长参加过出租车工会绝食抗议、政治立场明确——与 Waymo 在西部各城市已成日常的态势对比鲜明，东部大城市的准入壁垒远未松动。"
+              }
+            ]
+          },
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>过失杀人起诉历史时刻 + FSD 安全漏洞补强同步进行，Robotaxi 多城扩张但规模保守",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月8日</b>，德州（Katy/Houston）一起 Tesla FSD 相关致命事故的驾驶员<b>被正式以过失杀人罪起诉</b>，成为美国迄今对 FSD 相关事故驾驶员追究刑责最高级别的案例之一。行车数据显示 FSD 当时已在主动减速，司机手动踩油门覆盖系统、以 73mph 冲入民宅致 76 岁老人死亡；手机搜索历史「tesla fsd not aggressive enough」成为蓄意超控的关键证据，司机面临最高 20 年刑期。案件将深刻影响 AV 责任认定框架与 FSD 保险定价。"
+              },
+              {
+                "label": "b",
+                "content_html": "FSD 安全机制本周「漏洞与补强并行」：<b>7月7日</b>，应用代码逆向分析显示 Tesla 即将新增<b>面部识别安全门槛</b>，启动 FSD 前须通过摄像头身份验证——被解读为对近期系列睡车事件的主动应对；但<b>7月8日</b>同日曝光的加拿大视频正好展示现有 DMS 的已知盲点：驾驶员<b>戴墨镜入睡</b>，系统无法识别眼部注视方向，Waymo 穿越山区高速全程无人干预。两条新闻叠加印证：面部识别升级既是必要举措，也说明当前状态不够可靠。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>7月9日</b>，新泽西州议会提出 Robotaxi 强制配备激光雷达法案，The Verge 标题直接写出「<b>the robotaxi law that could ban Tesla</b>」。法案背后是出租车游说团体的压力，逻辑与纽约 TLC 一脉相承；法案若通过，将把纯视觉路线排斥在 NJ 市场之外，是 Tesla Robotaxi 面临的最直接监管封杀风险。目前法案尚在审议，但已引发行业高度警惕。"
+              },
+              {
+                "label": "d",
+                "content_html": "扩张层面：<b>7月8日</b>，Tesla Robotaxi 正式扩展至<b>迈阿密商业运营</b>（继奥斯汀后第 2 城）+<b>新奥尔良测试</b>，向东南部推进；但<b>7月10日</b>实地统计曝光，迈阿密车队实际规模<b>远比预期保守</b>，与 Waymo 本周激进多城扩张形成强烈对比——Tesla 的策略是「可控规模下积累真实数据」，而非追求快速覆盖。"
+              }
+            ]
+          },
+          {
+            "company": "Uber / Lyft",
+            "company_slug": "uber",
+            "headline_html": "<b>出行平台选边：</b>Uber 联合 Nuro + Lucid 造车年底上线，Lyft 明确不造车押注合作",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月8日</b>，Nuro 官方宣布 <b>Uber 团队正式到访总部</b>，Uber + Nuro + Lucid Motors 三方联合 Robotaxi 项目「进展顺利且势头强劲」，<b>年底前上线</b>目标明确。Nuro 提供 AV 技术栈、Lucid 提供高端电动车平台，Uber 负责平台分发——这是 Uber 继结束与 Waymo 凤凰城合作后，首次深度参与 Robotaxi 联合造车，从「渠道方」向「生态共建方」升级。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>7月10日</b>，Lyft CEO David Risher 明确表态：Lyft 不会自研 Robotaxi，「我们是卓越的运营商，而不是自动驾驶开发商」，继续走多家 AV 公司（Mobileye、Motional 等）平台合作路线。Jeff Bezos 近期加入 Lyft 董事会被分析认为将打通 Lyft 与亚马逊旗下 Zoox 的合作路径。Uber 和 Lyft 本周用截然不同的姿态向市场发出信号：同为出行平台，Uber 选择联合造车，Lyft 选择坚守运营。"
+              }
+            ]
+          },
+          {
+            "company": "Zoox / Mobileye",
+            "company_slug": "zoox",
+            "headline_html": "<b>Zoox 追近 + Mobileye 入局：</b>美国 Robotaxi 赛道第二梯队开始加速",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月10日</b>，USA Today 发布深度对比报道：Zoox 在拉斯维加斯的活跃用户数量<b>显著增长</b>，与 Waymo 的差距持续缩小。Zoox 的差异化在于专用车型设计（无方向盘、双向行驶胶囊舱）带来的乘坐体验优势，叠加亚马逊的深厚资本后盾。随着拉斯维加斯成为 Waymo 和 Zoox 同城竞争的第一个主战场，2026 年下半年的数据将是行业第一次对两大 L4 玩家的真实横向比较。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>7月7日</b>，Mobileye 公布在美国推出商业 Robotaxi 的时间表：<b>目标 2027 年落地</b>，将成为继 Waymo、Tesla、Zoox 之后第四家进入美国商业 Robotaxi 市场的玩家。Mobileye 的路径与传统 L4 公司不同——其核心优势来自为全球数百万辆汽车提供 ADAS 芯片积累的海量感知数据，2027 年若如期落地，将使美国 Robotaxi 赛道从目前的「双强」格局正式进入「多强竞争」阶段。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "小鹏",
+            "company_slug": "xpeng",
+            "headline_html": "<b>小鹏：</b>内测首单 + GX 量产下线 + 独立业务部三箭齐发，Robotaxi 商业化闭环本周建立",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月9日</b>，小鹏 Robotaxi 完成<b>内部测试第一单</b>，CEO 何小鹏亲自首乘「首吃螃蟹」，叫车—乘车—支付全链路打通，从立项到首单历时 <b>8 个月</b>。这是中国车企中少数真正完成 Robotaxi「内测可运营」里程碑的案例，继 Waymo、Tesla 之后，验证了国内 L4 玩家自主商业化闭环的可行性。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>7月10日</b>，两项重磅同日落地：其一，小鹏 GX Robotaxi 专用车型<b>前装量产正式下线</b>，搭载纯视觉 VLA 大模型、算力 3000 TOPS，L4 级智驾进入可量产交付阶段；其二，<b>正式成立独立 Robotaxi 业务部门</b>，独立建制、独立 KPI，专注 L4 商业化运营。结合前一日内测首单，小鹏在<b>技术—组织—产品</b>三个维度同周到位，官方表示「拟下半年启动载客示范运营」，是本周国内智驾最重磅的商业化信号。"
+              }
+            ]
+          },
+          {
+            "company": "华为",
+            "company_slug": "huawei",
+            "headline_html": "<b>华为：</b>ADS 5.0 正式发布——896 线激光雷达上车，硬件感知层再立差异化护城河",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月7日</b>，华为正式发布 <b>ADS 5.0</b> 智能驾驶系统，核心亮点是搭载业界领先的 <b>896 线激光雷达</b>，感知精度和点云分辨率大幅跃升，首搭问界 M9 新款，并同步公开共光路舱内激光雷达技术细节。ADS 5.0 是华为在端到端大模型架构之外，继续在<b>硬件感知层</b>构建差异化壁垒的最新动作——与以纯视觉路线为主流趋势的国内竞品形成鲜明对照，意在高端市场维持「感知硬件碾压」的护城河，巩固鸿蒙智行高端产品线在智驾市场的定价权。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W28",
     "date_range": "0630-0706",
     "title": "无人驾驶行业0630-0706重要新闻",
