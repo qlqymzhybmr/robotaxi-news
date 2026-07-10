@@ -68,7 +68,23 @@
     {"city": "Las Vegas NV",      "site": "reviewjournal.com",     "name": "Las Vegas Review-Journal"},
     {"city": "Las Vegas NV",      "site": "lasvegassun.com",       "name": "Las Vegas Sun"},
     {"city": "Las Vegas NV",      "site": "8newsnow.com",          "name": "KLAS 8NewsNow"},
-    {"city": "Las Vegas NV",      "site": "ktnv.com",              "name": "KTNV ABC13 LV"}
+    {"city": "Las Vegas NV",      "site": "ktnv.com",              "name": "KTNV ABC13 LV"},
+    {"city": "San Diego CA",      "site": "sandiegouniontribune.com", "name": "San Diego Union-Tribune"},
+    {"city": "San Diego CA",      "site": "fox5sandiego.com",      "name": "Fox 5 San Diego"},
+    {"city": "San Diego CA",      "site": "nbcsandiego.com",       "name": "NBC 7 San Diego"},
+    {"city": "San Diego CA",      "site": "10news.com",            "name": "KGTV ABC10 San Diego"},
+    {"city": "Sacramento CA",     "site": "sacbee.com",            "name": "Sacramento Bee"},
+    {"city": "Sacramento CA",     "site": "kcra.com",              "name": "KCRA NBC3 Sacramento"},
+    {"city": "Sacramento CA",     "site": "abc10.com",             "name": "KXTV ABC10 Sacramento"},
+    {"city": "Sacramento CA",     "site": "fox40.com",             "name": "KTXL Fox40 Sacramento"},
+    {"city": "Tampa FL",          "site": "tampabay.com",          "name": "Tampa Bay Times"},
+    {"city": "Tampa FL",          "site": "wfla.com",              "name": "WFLA NBC8 Tampa"},
+    {"city": "Tampa FL",          "site": "fox13news.com",         "name": "Fox13 WTVT Tampa"},
+    {"city": "Tampa FL",          "site": "abcactionnews.com",     "name": "WFTS ABC Action Tampa"},
+    {"city": "New Orleans LA",    "site": "nola.com",              "name": "Times-Picayune / nola.com"},
+    {"city": "New Orleans LA",    "site": "fox8live.com",          "name": "WWL-TV Fox8 New Orleans"},
+    {"city": "New Orleans LA",    "site": "wdsu.com",              "name": "WDSU NBC6 New Orleans"},
+    {"city": "New Orleans LA",    "site": "wgno.com",              "name": "WGNO ABC26 New Orleans"}
   ],
   "Tesla": [
     {"city": "Austin TX",         "site": "statesman.com",         "name": "Austin American-Statesman"},
@@ -88,7 +104,10 @@
     {"city": "Miami FL",          "site": "miamiherald.com",       "name": "Miami Herald"},
     {"city": "Miami FL",          "site": "local10.com",           "name": "WPLG Local10"},
     {"city": "Nashville TN",      "site": "tennessean.com",        "name": "The Tennessean"},
-    {"city": "Nashville TN",      "site": "wkrn.com",              "name": "WKRN ABC2"}
+    {"city": "Nashville TN",      "site": "wkrn.com",              "name": "WKRN ABC2"},
+    {"city": "New Orleans LA",    "site": "nola.com",              "name": "Times-Picayune / nola.com"},
+    {"city": "New Orleans LA",    "site": "fox8live.com",          "name": "WWL-TV Fox8 New Orleans"},
+    {"city": "New Orleans LA",    "site": "wdsu.com",              "name": "WDSU NBC6 New Orleans"}
   ],
   "Aurora Innovation": [
     {"city": "Dallas TX",         "site": "dallasnews.com",        "name": "Dallas Morning News"},
