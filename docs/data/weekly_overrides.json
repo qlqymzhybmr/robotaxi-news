@@ -28,6 +28,15 @@
             ]
           },
           {
+            "headline_html": "Tesla：Cybercab即将提供员工乘车服务",
+            "sub_items": [
+              {
+                "label": "",
+                "content_html": "<b>7月11日</b>，Tesla发布视频表示，Cybercab <b>即将在 Giga Texas</b>&nbsp;<b>为员工</b>提供乘车服务。"
+              }
+            ]
+          },
+          {
             "headline_html": "监管动作：NHTSA书面要求AV公司整改干扰公共应急事故缺陷；新泽西州法案可能要求Robotaxi强制配备激光雷达；亚特兰大网约车司机群体发起对Waymo车辆扩张的街头抗议",
             "sub_items": [
               {
@@ -63,7 +72,7 @@
         ]
       }
     ],
-    "edited_at": "2026-07-11T05:41:02.164Z"
+    "edited_at": "2026-07-11T05:49:37.774Z"
   },
   {
     "week_id": "2026-W28",
