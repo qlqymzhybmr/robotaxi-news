@@ -208,6 +208,7 @@
 
 - Waymo | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/waymo
 - Tesla | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/Tesla
+- Tesla Robotaxi | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/teslarobotaxi
 - Zoox | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/zoox
 - Wayve | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/wayve_ai
 - Uber | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/uber
@@ -240,6 +241,7 @@
 |------|--------|------|------|
 | Waymo | @waymo | overseas | ⭐ |
 | Tesla | @Tesla | overseas | ⭐ |
+| Tesla Robotaxi | @teslarobotaxi | overseas | ⭐ |
 | Zoox | @zoox | overseas | ⭐ |
 | Wayve | @wayve_ai | overseas | ⭐ |
 | Uber | @uber | overseas | ⭐ |
