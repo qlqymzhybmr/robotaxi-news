@@ -28,11 +28,15 @@
             ]
           },
           {
-            "headline_html": "Tesla：Cybercab即将提供员工乘车服务",
+            "headline_html": "Tesla：Cybercab即将提供员工乘车服务；",
             "sub_items": [
               {
                 "label": "",
                 "content_html": "<b>7月11日</b>，Tesla发布视频表示，Cybercab <b>即将在 Giga Texas</b>&nbsp;<b>为员工</b>提供乘车服务。"
+              },
+              {
+                "label": "",
+                "content_html": "<b>7月11日</b>，<b>斯洛文尼亚</b>基础设施部长在X上表示，<b>Tesla FSD (Supervised)</b> 将很快在该国落地。这将是继荷兰、立陶宛、爱沙尼亚、丹麦和比利时后，第<b>6</b>个<b>可能批准FSD落地</b>的欧洲国家。"
               }
             ]
           },
@@ -72,7 +76,7 @@
         ]
       }
     ],
-    "edited_at": "2026-07-11T06:01:23.088Z"
+    "edited_at": "2026-07-12T06:25:05.645Z"
   },
   {
     "week_id": "2026-W28",
