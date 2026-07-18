@@ -196,6 +196,9 @@
 
 - NVIDIA | overseas | ⭐ | https://nvidianews.nvidia.com/cats/driving.xml
 - Aurora Innovation | overseas | | https://aurora.tech/rss.xml
+- Not A Tesla App | overseas | ⭐ | https://www.notateslaapp.com/rss
+- The Driverless Digest | overseas | ⭐ | https://thedriverlessdigest.com/feed
+- Robonomics | overseas | | https://robonomics.substack.com/feed
 
 ---
 
