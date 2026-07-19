@@ -11,67 +11,41 @@
           {
             "company": "Waymo",
             "company_slug": "waymo",
-            "headline_html": "<b>Waymo：</b>旧金山市长致函要求州政府立法；伦敦发生路测车碰撞事故；夏洛特车队同步完成换代",
+            "headline_html": "<b>Waymo：</b>旧金山市长致函要求州政府修正监管框架；伦敦发生路测车碰撞事故；夏洛特车队新增Ojai车型",
             "sub_items": [
               {
                 "label": "b",
-                "content_html": "<div>7月15日，凌晨2点左右，Waymo在英国伦敦路测中发生碰撞，除测试车外，共2辆车受损，4人受伤。据Waymo发言人表示，事发时车辆由安全员以手动模式驾驶，在变道时有一93mph的超速车辆接近（路段限速50mph），该车辆与另一车辆碰撞后，随后与Waymo车辆发生碰撞。</div>"
+                "content_html": "<div>7月15日，凌晨2点左右，Waymo 在英国伦敦路测中发生碰撞，除测试车外，共2辆车受损，4人受伤。据 Waymo 发言人表示，事发时车辆由安全员以手动模式驾驶，在变道时有一93mph的超速车辆接近（路段限速50mph），该车辆与另一车辆碰撞后，随后与 Waymo 车辆发生碰撞。</div>"
               },
               {
                 "label": "",
-                "content_html": "7月17日，旧金山市长 Daniel Lurie 正式致函州交通部长 Toks Omishakin，信中要求升级当前的监管框架，要求Waymo 等自动驾驶车辆提升在极端情况中的表现，起因包括 7 月 4 日独立日的堵车事件及近期多起交通混乱事件。"
+                "content_html": "7月17日，旧金山市长 Daniel Lurie 正式致函州交通部长 Toks Omishakin，信中要求升级当前的监管框架，要求 Waymo 等自动驾驶车辆提升在极端情况中的表现，起因包括 7 月 4 日独立日的堵车事件，25年12月大范围停电导致车辆停运事件，以及近期多起交通混乱事件。"
+              },
+              {
+                "label": "",
+                "content_html": "7月17日，Waymo 在北卡罗来纳州夏洛特（Charlotte）新增了10多辆六代车型Ojai进行路测，目前已经完成了地图采集，但车辆仍处于有安全员状态。今年2月 Waymo 开始在该地路测，当时仅有捷豹车型。"
               }
             ]
           },
           {
             "company": "Tesla",
             "company_slug": "tesla",
-            "headline_html": "<b>Tesla：</b>NHTSA 将 FSD 调查升至召回级、NTSB 连出两份「驾驶员覆盖」结论，Robotaxi 多城扩张与安全监管压力并行",
+            "headline_html": "<b>Tesla：</b>得州新增58辆Model Y注册为Robotaxi",
             "sub_items": [
-              {
-                "label": "a",
-                "content_html": "<b>7月14日</b>，NHTSA 正式将对 <b>Tesla FSD 的缺陷调查升级为召回级别</b>，这是美国联邦监管层对 Tesla 自动驾驶商业化计划施加的最高烈度压力；与 FSD 谋求中国落地的进程同日曝光，外部监管与扩张战略之间的张力前所未有地集中。"
-              },
-              {
-                "label": "b",
-                "content_html": "本周 NTSB 同时公布两起 FSD 事故调查结论，方向高度一致：<b>7月17日</b>，NTSB 认定德州 Katy 致命事故（76 岁老人遇难）中 <b>FSD 系统无责</b>，驾驶员主动踩满油门覆盖系统是直接原因；<b>7月18日</b>，另一起 FSD 闯入民宅事故同样被 NTSB 认定为<b>驾驶员强踩油门人为覆盖</b>所致。两份结论接连释放对 Tesla 技术层面的利好背书，但 NHTSA 同期升级调查的「一紧一松」格局也使 Tesla 的监管前景依然复杂。"
-              },
               {
                 "label": "c",
-                "content_html": "扩张层面：<b>7月16日</b>，Tesla 再次为德克萨斯 Robotaxi 车队<b>登记 58 辆 Model Y</b>，车队规模稳步增长；<b>7月18日</b>，迈阿密服务正式开展且 Cybercab 阵容同步扩大。但 The Motley Fool <b>7月17日</b>的实地分析给出泼冷水结论：迈阿密当前服务覆盖范围<b>远比外界预期小</b>，与 Waymo 同期激进多城扩张形成对比，Tesla 的策略仍是「可控规模下积累真实数据」。"
-              }
-            ]
-          },
-          {
-            "company": "Uber",
-            "company_slug": "uber",
-            "headline_html": "<b>Uber：</b>148 亿美元收购 Delivery Hero 打通全球配送版图，Lucid+Nuro 供车协议同周落地，DC 听证对阵 Waymo",
-            "sub_items": [
-              {
-                "label": "b",
-                "content_html": "<b>7月19日</b>，纯电豪华车企 <b>Lucid</b> 正式与 Uber 及自动驾驶技术商 <b>Nuro</b> 签署 Robotaxi 车队供车协议，为 Nuro 提供定制 EV 底盘，消息公布后 <b>LCID 股价跳涨</b>；Uber+Nuro+Lucid 三方模式构建出「平台+AI+整车」的新型 Robotaxi 产业链分工。此外在 <b>7月14日</b> DC 立法听证中，Uber 立场与 Waymo 截然相反，力推要求 85% 订单由人工完成的混合规定，将监管博弈带入新战线。"
+                "content_html": "7月15日，Tesla 在得州 Robotaxi 车队新增登记 58 辆 Model Y，规模增长至175辆；对比 Waymo 在得州为642辆。"
               }
             ]
           },
           {
             "company": "Zoox",
             "company_slug": "zoox",
-            "headline_html": "<b>Zoox：</b>烟雾识别缺陷触发 105 辆 Robotaxi 召回，感知边界短板正面暴露",
+            "headline_html": "<b>Zoox：</b>烟雾识别缺陷触发 105 辆 Robotaxi 召回",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>7月18日</b>，亚马逊旗下 Zoox 发布软件召回，涉及 <b>105 辆自动驾驶出租车</b>，原因是感知系统在<b>浓烟/火灾场景</b>下存在识别盲区，测试中一辆车曾误入火场救援区域；OTA 升级已推送修复，NHTSA 收到相关报告。召回直接揭示当前感知系统对非常规气象场景的应对能力局限，对正处规模扩张期的整个行业是一次公开的边界考验。"
-              }
-            ]
-          },
-          {
-            "company": "MOIA",
-            "company_slug": "moia",
-            "headline_html": "<b>MOIA（大众）：</b>欧洲 Robotaxi 商业化破冰——汉堡 ID.Buzz 全无人驾驶拼车正式对公众开放",
-            "sub_items": [
-              {
-                "label": "a",
-                "content_html": "<b>7月19日</b>，大众旗下 <b>MOIA</b> 在德国汉堡正式推出基于 <b>ID.Buzz</b> 的全无人驾驶拼车商业运营，向公众开放预约，这是欧洲迄今<b>最大规模的商业化无人驾驶出行服务</b>，标志着欧洲 Robotaxi 商业化正式破冰。MOIA 以大众本土制造、欧洲法规积累和 ID.Buzz 的品牌亲和力作为差异化优势，避开与 Waymo 的正面竞争，为欧洲市场提供了一套「本土玩家优先」的 Robotaxi 落地路径。"
+                "content_html": "7月18日，亚马逊旗下 Zoox 发布软件召回，涉及 105 辆Robotaxi；Zoox在其提交给NHTSA的报告中披露，6月20日，一辆Zoox在拉斯维加斯（Las Vegas）遇到正发生火灾的现场，由于现场浓烟遮蔽且未使用锥形路标封锁，Zoox车辆驶入了现场，最终紧急刹车停下。公司表示，原因是感知系统在浓烟/火灾场景下存在识别盲区，且这是唯一一场类似事件。"
               }
             ]
           }
@@ -142,7 +116,7 @@
         ]
       }
     ],
-    "edited_at": "2026-07-19T14:13:54.717Z"
+    "edited_at": "2026-07-19T14:37:55.356Z"
   },
   {
     "week_id": "2026-W29-WIP",
