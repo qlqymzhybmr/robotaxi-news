@@ -57,11 +57,11 @@
           {
             "company": "百度",
             "company_slug": "baidu",
-            "headline_html": "<b>百度：&nbsp;</b>；将在哈萨克斯坦部署Robotaxi",
+            "headline_html": "<b>百度：Apollo Go开始在迪拜部分区域开展全无人收费运营&nbsp;</b>；将在哈萨克斯坦部署Robotaxi",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "7月15日-16日，《海湾新闻》披露百度 Apollo Go（萝卜快跑）在迪拜朱美拉和乌姆苏盖姆区域的无人出租车票价体系，商业化运营落地细节首次对外公开。"
+                "content_html": "7月15日，百度 Apollo Go已经在迪拜朱美拉（Jumeirah）和乌姆苏盖姆（Umm Suqeim）区域开展全无人收费运营；用户可通过Apollo Go APP叫车，初期费用固定为单程5迪拉姆（~1.4美元），且只能就近在公交车站上下车，车型为DH5（对应国内RT6），最多乘坐3人，实测服务时间为09:00-17:00。该区域从今年2月开始试运营，当时需通过Uber APP来进行预约。<div><i>（APP验证下，截图 - 实际叫车截图）</i></div><div><img src=\"https://media.assettype.com/gulfnews%2F2026-07-17%2Fb3epwvbk%2FTaxi-20.jpg?w=640&amp;amp;auto=format%2Ccompress\" title=\"点击调整大小\" style=\"max-width: 100%; height: auto; display: block; margin: 8px auto 8px 0px; border-radius: 4px; cursor: pointer; width: 25%;\"></div>"
               },
               {
                 "label": "",
@@ -83,7 +83,7 @@
         ]
       }
     ],
-    "edited_at": "2026-07-19T15:02:00.589Z"
+    "edited_at": "2026-07-19T15:33:32.553Z"
   },
   {
     "week_id": "2026-W29-WIP",
