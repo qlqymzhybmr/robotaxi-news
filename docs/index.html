@@ -84,22 +84,27 @@
                 class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">×2</button>
         <button onmousedown="event.preventDefault();insertImageGrid(3)" title="三图并排+标题"
                 class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">×3</button>
-        <div id="weekly-img-tools" style="display:none" class="items-center gap-1 flex">
-          <div class="w-px h-5 bg-gray-200 mx-1"></div>
-          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-1.5 rounded mr-1">图片</span>
-          <button onmousedown="event.preventDefault();resizeEditImage(25)" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">25%</button>
-          <button onmousedown="event.preventDefault();resizeEditImage(50)" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">50%</button>
-          <button onmousedown="event.preventDefault();resizeEditImage(75)" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">75%</button>
-          <button onmousedown="event.preventDefault();resizeEditImage(100)" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">100%</button>
-          <div class="w-px h-5 bg-gray-200 mx-1"></div>
-          <button onmousedown="event.preventDefault();alignEditImage('left')" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">左</button>
-          <button onmousedown="event.preventDefault();alignEditImage('center')" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">中</button>
-          <button onmousedown="event.preventDefault();alignEditImage('right')" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">右</button>
-          <div class="w-px h-5 bg-gray-200 mx-1"></div>
-          <button onmousedown="event.preventDefault();editImageCaption()" class="px-2 h-7 flex items-center justify-center text-xs text-green-600 rounded hover:bg-green-50 border border-transparent hover:border-green-200 transition-colors select-none">标题</button>
-          <div class="w-px h-5 bg-gray-200 mx-1"></div>
-          <button onmousedown="event.preventDefault();removeEditImage()" class="px-2 h-7 flex items-center justify-center text-xs text-red-500 rounded hover:bg-red-50 border border-transparent hover:border-red-200 transition-colors select-none">删除图片</button>
+      </div>
+      <div id="weekly-img-tools" style="display:none" class="items-center gap-2 pt-2 border-t border-blue-100 mt-2">
+        <span class="text-xs font-medium text-blue-500 shrink-0">📷 选中图片</span>
+        <div class="w-px h-4 bg-gray-200"></div>
+        <span class="text-xs text-gray-400 shrink-0">宽度</span>
+        <div class="flex gap-1">
+          <button onmousedown="event.preventDefault();resizeEditImage(25)" class="px-2 h-6 text-xs text-gray-600 rounded hover:bg-gray-100 border border-gray-200 transition-colors select-none">25%</button>
+          <button onmousedown="event.preventDefault();resizeEditImage(50)" class="px-2 h-6 text-xs text-gray-600 rounded hover:bg-gray-100 border border-gray-200 transition-colors select-none">50%</button>
+          <button onmousedown="event.preventDefault();resizeEditImage(75)" class="px-2 h-6 text-xs text-gray-600 rounded hover:bg-gray-100 border border-gray-200 transition-colors select-none">75%</button>
+          <button onmousedown="event.preventDefault();resizeEditImage(100)" class="px-2 h-6 text-xs text-gray-600 rounded hover:bg-gray-100 border border-gray-200 transition-colors select-none">100%</button>
         </div>
+        <div class="w-px h-4 bg-gray-200"></div>
+        <span class="text-xs text-gray-400 shrink-0">对齐</span>
+        <div class="flex gap-1">
+          <button onmousedown="event.preventDefault();alignEditImage('left')" class="px-2 h-6 text-xs text-gray-600 rounded hover:bg-gray-100 border border-gray-200 transition-colors select-none">左</button>
+          <button onmousedown="event.preventDefault();alignEditImage('center')" class="px-2 h-6 text-xs text-gray-600 rounded hover:bg-gray-100 border border-gray-200 transition-colors select-none">中</button>
+          <button onmousedown="event.preventDefault();alignEditImage('right')" class="px-2 h-6 text-xs text-gray-600 rounded hover:bg-gray-100 border border-gray-200 transition-colors select-none">右</button>
+        </div>
+        <div class="w-px h-4 bg-gray-200"></div>
+        <button onmousedown="event.preventDefault();editImageCaption()" class="px-3 h-6 text-xs text-green-700 bg-green-50 rounded border border-green-200 hover:bg-green-100 transition-colors select-none">+ 标题</button>
+        <button onmousedown="event.preventDefault();removeEditImage()" class="px-3 h-6 text-xs text-red-500 bg-red-50 rounded border border-red-200 hover:bg-red-100 transition-colors select-none">删除</button>
       </div>
       <div id="weekly-active-filters" class="hidden mt-2 flex flex-wrap gap-2"></div>
     </div>
