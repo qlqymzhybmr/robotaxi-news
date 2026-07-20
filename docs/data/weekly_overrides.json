@@ -61,7 +61,7 @@
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>7月15日</b>，百度 Apollo Go已经在迪拜朱美拉（Jumeirah）和乌姆苏盖姆（Umm Suqeim）区域开展<b>全无人收费运营</b>；用户可通过Apollo Go APP叫车，初期费用固定为单程<b>5迪拉姆（~1.4美元）</b>，且只能就近在公交车站上下车，车型为DH5（对应国内RT6），最多乘坐3人，实测服务时间为09:00-17:00。该区域从今年2月开始试运营，当时需通过Uber APP来进行预约。<div><i>（APP验证下，截图 - 实际叫车截图）</i></div><div><img src=\"https://media.assettype.com/gulfnews%2F2026-07-17%2Fb3epwvbk%2FTaxi-20.jpg?w=640&amp;amp;auto=format%2Ccompress\" title=\"点击调整大小\" style=\"max-width: 100%; height: auto; display: block; margin: 8px auto 8px 0px; border-radius: 4px; cursor: pointer; width: 25%;\"></div>"
+                "content_html": "<b>7月15日</b>，百度 Apollo Go已经在迪拜朱美拉（Jumeirah）和乌姆苏盖姆（Umm Suqeim）区域开展<b>全无人收费运营</b>；用户可通过Apollo Go APP叫车，初期费用固定为单程<b>5迪拉姆（~1.4美元）</b>，且只能就近在公交车站上下车，车型为DH5（对应国内RT6），最多乘坐3人，实测服务时间为09:00-17:00。该区域从今年2月开始试运营，当时需通过Uber APP来进行预约。<div><i>（APP验证下，百度Apollo Go在迪拜的运营区域为图片蓝框划分区域，区域内各点位/行程均为一口价5迪拉姆，推测初期投放车辆较少，两次打到同一辆车）</i></div><div><img src=\"https://media.assettype.com/gulfnews%2F2026-07-17%2Fb3epwvbk%2FTaxi-20.jpg?w=640&amp;amp;auto=format%2Ccompress\" title=\"点击调整大小\" style=\"max-width: 100%; height: auto; display: block; margin: 8px auto 8px 0px; border-radius: 4px; cursor: pointer; width: 25%;\"></div>"
               },
               {
                 "label": "",
@@ -83,7 +83,7 @@
         ]
       }
     ],
-    "edited_at": "2026-07-20T05:32:36.960Z"
+    "edited_at": "2026-07-20T06:46:27.431Z"
   },
   {
     "week_id": "2026-W29-WIP",
