@@ -84,6 +84,22 @@
                 class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">×2</button>
         <button onmousedown="event.preventDefault();insertImageGrid(3)" title="三图并排+标题"
                 class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">×3</button>
+        <div id="weekly-img-tools" style="display:none" class="items-center gap-1 flex">
+          <div class="w-px h-5 bg-gray-200 mx-1"></div>
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-1.5 rounded mr-1">图片</span>
+          <button onmousedown="event.preventDefault();resizeEditImage(25)" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">25%</button>
+          <button onmousedown="event.preventDefault();resizeEditImage(50)" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">50%</button>
+          <button onmousedown="event.preventDefault();resizeEditImage(75)" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">75%</button>
+          <button onmousedown="event.preventDefault();resizeEditImage(100)" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">100%</button>
+          <div class="w-px h-5 bg-gray-200 mx-1"></div>
+          <button onmousedown="event.preventDefault();alignEditImage('left')" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">左</button>
+          <button onmousedown="event.preventDefault();alignEditImage('center')" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">中</button>
+          <button onmousedown="event.preventDefault();alignEditImage('right')" class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">右</button>
+          <div class="w-px h-5 bg-gray-200 mx-1"></div>
+          <button onmousedown="event.preventDefault();editImageCaption()" class="px-2 h-7 flex items-center justify-center text-xs text-green-600 rounded hover:bg-green-50 border border-transparent hover:border-green-200 transition-colors select-none">标题</button>
+          <div class="w-px h-5 bg-gray-200 mx-1"></div>
+          <button onmousedown="event.preventDefault();removeEditImage()" class="px-2 h-7 flex items-center justify-center text-xs text-red-500 rounded hover:bg-red-50 border border-transparent hover:border-red-200 transition-colors select-none">删除图片</button>
+        </div>
       </div>
       <div id="weekly-active-filters" class="hidden mt-2 flex flex-wrap gap-2"></div>
     </div>
@@ -128,6 +144,7 @@ let undoStack = [];
 let weeklyEditKeyHandler = null;
 let weeklyPasteHandler = null;
 let weeklyImgClickHandler = null;
+let weeklyImgDeselHandler = null;
 let selectedEditImg = null;
 
 async function init() {
@@ -631,6 +648,16 @@ function enterWeeklyEditMode() {
     editContainer.addEventListener('paste', weeklyPasteHandler);
     editContainer.addEventListener('mousedown', weeklyImgClickHandler);
   }
+  weeklyImgDeselHandler = (e) => {
+    if (!selectedEditImg) return;
+    const imgTools = document.getElementById('weekly-img-tools');
+    if (e.target === selectedEditImg) return;
+    if (imgTools && imgTools.contains(e.target)) return;
+    selectedEditImg.style.outline = '';
+    selectedEditImg = null;
+    if (imgTools) imgTools.style.display = 'none';
+  };
+  document.addEventListener('click', weeklyImgDeselHandler);
   updateWeeklyEditBtn();
   const fmtBar = document.getElementById('weekly-format-bar');
   if (fmtBar) fmtBar.classList.replace('hidden', 'flex');
@@ -642,8 +669,11 @@ function exitWeeklyEditMode() {
   const editContainer2 = document.getElementById('weekly-content');
   if (weeklyPasteHandler && editContainer2) { editContainer2.removeEventListener('paste', weeklyPasteHandler); weeklyPasteHandler = null; }
   if (weeklyImgClickHandler && editContainer2) { editContainer2.removeEventListener('mousedown', weeklyImgClickHandler); weeklyImgClickHandler = null; }
+  if (weeklyImgDeselHandler) { document.removeEventListener('click', weeklyImgDeselHandler); weeklyImgDeselHandler = null; }
   const imgTb = document.getElementById('edit-img-toolbar');
   if (imgTb) imgTb.style.display = 'none';
+  const imgTools = document.getElementById('weekly-img-tools');
+  if (imgTools) imgTools.style.display = 'none';
   if (selectedEditImg) { selectedEditImg.style.outline = ''; selectedEditImg = null; }
   undoStack = [];
   editWeekData = null;
@@ -829,26 +859,21 @@ function getOrCreateImgToolbar() {
 }
 
 function selectEditImage(img) {
+  if (selectedEditImg && selectedEditImg !== img) selectedEditImg.style.outline = '';
   selectedEditImg = img;
   img.style.outline = '2px solid #3b82f6';
   img.style.borderRadius = '4px';
-  const tb = getOrCreateImgToolbar();
-  const rect = img.getBoundingClientRect();
-  tb.style.top = Math.max(4, rect.top - 38) + 'px';
-  tb.style.left = rect.left + 'px';
-  tb.style.display = 'flex';
+  const imgTools = document.getElementById('weekly-img-tools');
+  if (imgTools) imgTools.style.display = 'flex';
+  // 隐藏旧浮层（如果存在）
+  const tb = document.getElementById('edit-img-toolbar');
+  if (tb) tb.style.display = 'none';
 }
 
 function resizeEditImage(pct) {
   if (!selectedEditImg) return;
   selectedEditImg.style.width = pct + '%';
   selectedEditImg.style.height = 'auto';
-  const tb = document.getElementById('edit-img-toolbar');
-  if (tb) {
-    const rect = selectedEditImg.getBoundingClientRect();
-    tb.style.top = Math.max(4, rect.top - 38) + 'px';
-    tb.style.left = rect.left + 'px';
-  }
 }
 
 function removeEditImage() {
@@ -884,25 +909,17 @@ function getActiveGridSlot() {
 
 function editImageCaption() {
   if (!selectedEditImg) return;
-  const figure = selectedEditImg.closest('figure');
+  pushUndo();
+  let figure = selectedEditImg.closest('figure');
   if (!figure) {
-    // 图片不在 figure 里，用 prompt 方式加标题
-    const cap = prompt('输入图片标题（留空则不加）:', '');
-    if (cap === null) return;
-    if (cap.trim()) {
-      const fig = document.createElement('figure');
-      fig.style.cssText = 'margin:0;text-align:center;display:inline-block;width:' + (selectedEditImg.style.width || '100%');
-      selectedEditImg.replaceWith(fig);
-      fig.appendChild(selectedEditImg);
-      selectedEditImg.style.width = '100%';
-      const caption = document.createElement('figcaption');
-      caption.style.cssText = 'font-size:12px;color:#6b7280;margin-top:6px;text-align:center';
-      caption.textContent = cap.trim();
-      fig.appendChild(caption);
-    }
-    return;
+    // 独立图片：就地包一层 figure
+    figure = document.createElement('figure');
+    figure.style.cssText = 'margin:8px auto;text-align:center;display:block';
+    selectedEditImg.replaceWith(figure);
+    figure.appendChild(selectedEditImg);
+    selectedEditImg.style.display = 'block';
+    selectedEditImg.style.margin = '0 auto';
   }
-  // 图片已在 figure（图片组）里，直接 focus 对应 figcaption
   let caption = figure.querySelector('figcaption');
   if (!caption) {
     caption = document.createElement('figcaption');
@@ -910,10 +927,7 @@ function editImageCaption() {
     caption.textContent = '图片标题';
     figure.appendChild(caption);
   }
-  const tb = document.getElementById('edit-img-toolbar');
-  if (tb) tb.style.display = 'none';
-  if (selectedEditImg) { selectedEditImg.style.outline = ''; selectedEditImg = null; }
-  // 选中 figcaption 文字，让用户直接编辑
+  // 选中标题文字，让用户直接改
   const range = document.createRange();
   range.selectNodeContents(caption);
   const sel = window.getSelection();
