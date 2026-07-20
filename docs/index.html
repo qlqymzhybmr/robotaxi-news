@@ -999,18 +999,19 @@ function insertImageAtCursor(src) {
 
 function insertImageGrid(cols) {
   pushUndo();
-  const figures = Array.from({length: cols}, () =>
-    `<figure style="margin:0;text-align:center;min-width:0">` +
+  const pct = Math.round(100 / cols);
+  const cells = Array.from({length: cols}, () =>
+    `<td style="width:${pct}%;padding:6px;text-align:center;vertical-align:top;border:none">` +
+    `<figure style="margin:0;text-align:center">` +
     `<div class="img-grid-slot" style="min-height:80px;background:#f3f4f6;border:1.5px dashed #d1d5db;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#9ca3af;font-size:12px;cursor:text">Ctrl+V 粘贴图片</div>` +
     `<figcaption style="font-size:12px;color:#6b7280;margin-top:6px;text-align:center">图片标题</figcaption>` +
-    `</figure>`
+    `</figure></td>`
   ).join('');
-  const grid = document.createElement('div');
+  const grid = document.createElement('table');
   grid.className = 'img-grid-block';
-  grid.style.cssText = `display:grid;grid-template-columns:repeat(${cols},1fr);gap:12px;margin:12px 0;`;
-  grid.innerHTML = figures;
+  grid.style.cssText = `width:100%;border-collapse:collapse;margin:12px 0;table-layout:fixed;`;
+  grid.innerHTML = `<tbody><tr>${cells}</tr></tbody>`;
 
-  // 点击占位格时把光标移入，粘贴图片替换占位格
   grid.querySelectorAll('.img-grid-slot').forEach(slot => {
     slot.addEventListener('click', () => {
       const range = document.createRange();
