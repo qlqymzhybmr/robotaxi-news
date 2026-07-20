@@ -76,6 +76,14 @@
                 class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">中</button>
         <button onmousedown="event.preventDefault();document.execCommand('justifyRight')" title="右对齐"
                 class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">右</button>
+        <div class="w-px h-5 bg-gray-200 mx-1"></div>
+        <span class="text-xs text-gray-400 mr-1">插图组</span>
+        <button onmousedown="event.preventDefault();insertImageGrid(1)" title="单图+标题"
+                class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">×1</button>
+        <button onmousedown="event.preventDefault();insertImageGrid(2)" title="两图并排+标题"
+                class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">×2</button>
+        <button onmousedown="event.preventDefault();insertImageGrid(3)" title="三图并排+标题"
+                class="px-2 h-7 flex items-center justify-center text-xs text-gray-600 rounded hover:bg-gray-100 border border-transparent hover:border-gray-200 transition-colors select-none">×3</button>
       </div>
       <div id="weekly-active-filters" class="hidden mt-2 flex flex-wrap gap-2"></div>
     </div>
@@ -806,6 +814,8 @@ function getOrCreateImgToolbar() {
     <button style="${btnStyle}" ${hov} onclick="alignEditImage('center')" title="居中">居中</button>
     <button style="${btnStyle}" ${hov} onclick="alignEditImage('right')" title="右对齐">右⬛</button>
     <span style="color:#475569;margin:0 4px;">|</span>
+    <button style="${btnStyle.replace('#e2e8f0','#86efac')}" onmouseenter="this.style.background='rgba(134,239,172,0.2)'" onmouseleave="this.style.background='transparent'" onclick="editImageCaption()" title="编辑图片标题">标题</button>
+    <span style="color:#475569;margin:0 4px;">|</span>
     <button style="${btnStyle.replace('#e2e8f0','#f87171')}" onmouseenter="this.style.background='rgba(239,68,68,0.25)'" onmouseleave="this.style.background='transparent'" onclick="removeEditImage()">删除</button>
   `;
   document.body.appendChild(tb);
@@ -861,14 +871,68 @@ function alignEditImage(align) {
   }
 }
 
+function getActiveGridSlot() {
+  const sel = window.getSelection();
+  if (!sel || !sel.rangeCount) return null;
+  let node = sel.getRangeAt(0).startContainer;
+  while (node && node !== document) {
+    if (node.classList && node.classList.contains('img-grid-slot')) return node;
+    node = node.parentNode;
+  }
+  return null;
+}
+
+function editImageCaption() {
+  if (!selectedEditImg) return;
+  const figure = selectedEditImg.closest('figure');
+  if (!figure) {
+    // 图片不在 figure 里，用 prompt 方式加标题
+    const cap = prompt('输入图片标题（留空则不加）:', '');
+    if (cap === null) return;
+    if (cap.trim()) {
+      const fig = document.createElement('figure');
+      fig.style.cssText = 'margin:0;text-align:center;display:inline-block;width:' + (selectedEditImg.style.width || '100%');
+      selectedEditImg.replaceWith(fig);
+      fig.appendChild(selectedEditImg);
+      selectedEditImg.style.width = '100%';
+      const caption = document.createElement('figcaption');
+      caption.style.cssText = 'font-size:12px;color:#6b7280;margin-top:6px;text-align:center';
+      caption.textContent = cap.trim();
+      fig.appendChild(caption);
+    }
+    return;
+  }
+  // 图片已在 figure（图片组）里，直接 focus 对应 figcaption
+  let caption = figure.querySelector('figcaption');
+  if (!caption) {
+    caption = document.createElement('figcaption');
+    caption.style.cssText = 'font-size:12px;color:#6b7280;margin-top:6px;text-align:center';
+    caption.textContent = '图片标题';
+    figure.appendChild(caption);
+  }
+  const tb = document.getElementById('edit-img-toolbar');
+  if (tb) tb.style.display = 'none';
+  if (selectedEditImg) { selectedEditImg.style.outline = ''; selectedEditImg = null; }
+  // 选中 figcaption 文字，让用户直接编辑
+  const range = document.createRange();
+  range.selectNodeContents(caption);
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+  caption.focus();
+}
+
 function handleEditPaste(e) {
   const htmlData = e.clipboardData?.getData('text/html') || '';
+  const slot = getActiveGridSlot();
+
   // 1. 网页图片：从 text/html 提取 src URL
   if (htmlData) {
     const match = htmlData.match(/<img[^>]+src=["']([^"']+)["']/i);
     if (match && match[1] && !match[1].startsWith('blob:')) {
       e.preventDefault();
-      insertImageAtCursor(match[1]);
+      if (slot) insertImageAtCursorInGrid(match[1], slot);
+      else insertImageAtCursor(match[1]);
       return;
     }
   }
@@ -877,7 +941,8 @@ function handleEditPaste(e) {
   const imageItem = items.find(i => i.type.startsWith('image/'));
   if (imageItem) {
     e.preventDefault();
-    imageToBase64AndInsert(imageItem);
+    if (slot) { const blob = imageItem.getAsFile(); if (blob) { const r = new FileReader(); r.onload = ev => insertImageAtCursorInGrid(ev.target.result, slot); r.readAsDataURL(blob); } }
+    else imageToBase64AndInsert(imageItem);
     return;
   }
   // 3. 文字粘贴：去掉外来格式，只插入纯文字，避免字体/颜色污染
@@ -911,6 +976,52 @@ function insertImageAtCursor(src) {
     sel.removeAllRanges();
     sel.addRange(range);
   }
+}
+
+function insertImageGrid(cols) {
+  pushUndo();
+  const figures = Array.from({length: cols}, () =>
+    `<figure style="margin:0;text-align:center;min-width:0">` +
+    `<div class="img-grid-slot" style="min-height:80px;background:#f3f4f6;border:1.5px dashed #d1d5db;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#9ca3af;font-size:12px;cursor:text">Ctrl+V 粘贴图片</div>` +
+    `<figcaption style="font-size:12px;color:#6b7280;margin-top:6px;text-align:center">图片标题</figcaption>` +
+    `</figure>`
+  ).join('');
+  const grid = document.createElement('div');
+  grid.className = 'img-grid-block';
+  grid.style.cssText = `display:grid;grid-template-columns:repeat(${cols},1fr);gap:12px;margin:12px 0;`;
+  grid.innerHTML = figures;
+
+  // 点击占位格时把光标移入，粘贴图片替换占位格
+  grid.querySelectorAll('.img-grid-slot').forEach(slot => {
+    slot.addEventListener('click', () => {
+      const range = document.createRange();
+      range.selectNodeContents(slot);
+      range.collapse(false);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+      slot.focus();
+    });
+  });
+
+  const sel = window.getSelection();
+  if (sel && sel.rangeCount) {
+    const range = sel.getRangeAt(0);
+    range.deleteContents();
+    range.insertNode(grid);
+    range.setStartAfter(grid);
+    range.collapse(true);
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+}
+
+function insertImageAtCursorInGrid(src, slot) {
+  const img = document.createElement('img');
+  img.src = src;
+  img.style.cssText = 'width:100%;height:auto;display:block;border-radius:4px;cursor:pointer;';
+  img.title = '点击调整大小';
+  slot.replaceWith(img);
 }
 
 async function saveWeeklyOverride() {
