@@ -475,7 +475,7 @@ function renderWeeklyClassicView() {
     const entriesHtml = (section.entries || []).map((entry, ei) => {
       const subItemsHtml = (entry.sub_items || []).map((si, sii) =>
         `<div class="flex items-start gap-2 mt-1.5 ml-1 py-0.5">
-          <span class="shrink-0 text-sm font-semibold text-gray-500 select-none min-w-[20px]">${String.fromCharCode(96 + sii + 1)}.</span>
+          <span class="sub-item-label shrink-0 text-sm font-semibold text-gray-500 select-none min-w-[20px]">${String.fromCharCode(96 + sii + 1)}.</span>
           <span class="text-sm text-gray-700 leading-relaxed">${si.content_html || ''}</span>
         </div>`
       ).join('');
@@ -1185,15 +1185,19 @@ function generateOneNoteHTML(week) {
 }
 
 async function copyToOneNote() {
-  const rawWeekId = document.getElementById('filter-week').value;
-  const rawWeek = weeklyData.find((w) => w.week_id === rawWeekId) || weeklyData[0];
-  if (!rawWeek) { alert('请先选择一个周报'); return; }
-  const rawOverride = weeklyOverridesData[rawWeek.week_id];
-  const week = (weeklyDisplayVersion === 'edited' && rawOverride) ? rawOverride : rawWeek;
-
+  const container = document.getElementById('weekly-content');
+  if (!container) { alert('找不到周报内容'); return; }
   const btn = document.getElementById('weekly-onenote-btn');
   try {
-    const htmlContent = generateOneNoteHTML(week);
+    const clone = container.cloneNode(true);
+    // 去掉 sub-item 字母标签（a. b. c.），保留条目序号（1. 2.）
+    clone.querySelectorAll('.sub-item-label').forEach(el => el.remove());
+    // 去掉编辑模式产生的图片选中高亮
+    clone.querySelectorAll('img').forEach(img => { img.style.outline = ''; img.style.borderRadius = ''; });
+    // 去掉占位格（未贴图的空格子）
+    clone.querySelectorAll('.img-grid-slot').forEach(el => el.remove());
+    const YH = 'font-family:"Microsoft YaHei","微软雅黑",sans-serif;font-size:11pt;line-height:1.5;color:#000;';
+    const htmlContent = `<html><body style="${YH}">${clone.innerHTML}</body></html>`;
     await navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([htmlContent], { type: 'text/html' }) })]);
     if (btn) {
       const orig = btn.textContent;
