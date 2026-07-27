@@ -1,5 +1,113 @@
 [
   {
+    "week_id": "2026-W31-WIP",
+    "date_range": "0721-0726（WIP）",
+    "title": "无人驾驶行业0721-0726重要新闻（WIP）",
+    "generated_at": "2026-07-26T22:00:00+08:00",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>Q2财报强叙事（480K交付+38万英里零事故）驱动多城扩张同步落地，但监管危机与实际运营事故接连打击——本周12条选中，是所有公司中信息密度最高的一周",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>扩张叙事：</b><b>7月22日</b> Q2财报发布，<b>48万辆</b>交付创记录，北美超 <b>55%</b> 含 FSD 订阅，奥斯汀 Robotaxi 累计超 <b>38万英里零重大事故</b>，FSD V15 进入真实路测。财报当日配合 <b>Tampa 和 Orlando 同步开放</b>无监督服务（<b>7月22、26日</b>），德州以外首次双城落地，Tesla 以精心策划的「叙事-执行」节奏维持 Robotaxi 热度。<b>7月25日</b>，官方渠道进一步暗示 Robotaxi 将进入<b>南美</b>市场，若落地将是 Tesla 首次走出美国国境，规模扩张野心仍持续外溢。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>监管与安全危机：</b><b>7月21日</b>，休斯顿遥控员在协助 Robotaxi 脱困时碰撞隐藏树桩，是第三起「ADS 失效→人工接管→操作失误」模式事故，NHTSA 首次将此类失误正式编码为遥控操作事故。<b>7月23日</b>，法国监管机构正式要求暂停或修改 FSD——<b>欧洲首个主要市场明确禁止 FSD 运营</b>，若标准蔓延至 EU 成员国，Tesla 欧洲 Robotaxi 路径将遭系统性打击；同日 NHTSA 数据显示 Tesla FSD 单月碰撞 <b>207 起</b>，创历史最高月度纪录。<b>7月24日</b>，奥兰多开服次日即出现<b>单行道逆行视频</b>在社交媒体大范围传播，是商业运营阶段传播力最强的负面事件之一。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>话语收紧与法规压力：</b><b>7月26日</b>，Tesla 在佛罗里达累计 <b>38 万无监督里程</b>，与 Waymo 超 3000 万英里差距仍在数量级层面；分析指出 Tesla 官方话语正从「激进扩张」转向务实——不再给出具体商业化时间承诺，重心从「开城数量」转向「里程质量」。同日 NHTSA 拟出台新车门法规，要求外部救援可快速开启，Tesla <b>隐藏式把手设计</b>可能面临重新设计，无人值守 Robotaxi 场景影响更深。"
+              }
+            ]
+          },
+          {
+            "company": "Waymo / Uber",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo / Uber：</b>FT独家披露Waymo 2028年拟终止Uber独家协议、自建消费者App，Uber股价单日跌5%——L4渠道生态面临结构性重组",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月24日</b>，媒体报道称Waymo计划最晚于<b>2028年5月终止与Uber的独家合作协议</b>，并计划于2028年1月在亚特兰大、奥斯汀推出自有平台Robotaxi 消费者 App，该消息发布后<b>Uber股价单日跌幅近 5%</b>。"
+              },
+              {
+                "label": "",
+                "content_html": "新内容"
+              }
+            ]
+          },
+          {
+            "company": "文远知行",
+            "company_slug": "weride",
+            "headline_html": "<b>文远知行：</b>Robotaxi首次进入欧洲，携手Uber落地马德里——中国L4企业国际化版图再扩张",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月24日</b>，文远知行 Robotaxi 在西班牙<b>马德里</b>正式开始试运营，成为<b>首家进入欧洲的中国 L4 自动驾驶企业</b>；通过 Uber App 接单，运营模式参照 Waymo One 与 Uber 的合作框架。马德里此前，文远知行已在广州、武汉、迪拜、新加坡等多城运营，欧洲站是其全球版图的关键一跃，也是中国 AV 企业「出海」路径中地理范围最广的单次扩展。"
+              }
+            ]
+          },
+          {
+            "company": "Volkswagen",
+            "company_slug": "volkswagen",
+            "headline_html": "<b>大众：</b>ID. Buzz Robotaxi驶上洛杉矶街头——传统OEM+Mobileye技术路线正式入场美国市场",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月25-26日</b>，大众旗下 <b>ID. Buzz</b> Robotaxi 正式出现在洛杉矶街头，采用 Mobileye Drive 技术栈，代表「传统大 OEM + 外部 L4 方案商」商业化路径正式入场美国市场。洛杉矶的高密度复杂交通将成为 Mobileye 与 Waymo、Tesla 直接性能对比的真实样本；同期 Mobileye 创始人 CEO Amnon Shashua 宣布计划卸任，从 ADAS 向 Robotaxi L4 的转型节奏滞后背景下，创始人离场后的方向选择将是关键变量。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "萝卜快跑",
+            "company_slug": "apollo",
+            "headline_html": "<b>萝卜快跑：</b>获香港全无人驾驶测试首照——全球右舵市场历史性首次，国际化战略重要里程碑",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月23-24日</b>，百度萝卜快跑获得香港特区政府颁发<b>首个全无人驾驶（无安全员）测试牌照</b>，将于 7 月 27 日在港开展测试——这是<b>全球右舵驾驶市场的历史性首次</b>。香港《道路交通（修订）条例》已完成立法基础，此次牌照发放标志监管框架正式落地；右舵市场覆盖香港、英国、澳大利亚、日本、新加坡等，香港作为首站具有极高示范价值，对萝卜快跑后续拓展英语系市场具有战略铺垫意义。"
+              }
+            ]
+          },
+          {
+            "company": "Momenta",
+            "company_slug": "momenta",
+            "headline_html": "<b>Momenta：</b>获深圳道路测试许可，继上海苏州无锡后再入一线城市",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月22日</b>，深圳市正式向 Momenta 发放智能网联汽车道路测试许可，这是 Momenta 继上海、苏州、无锡之后获得测试资质的又一<b>一线城市</b>。深圳是国内智驾法规最为积极的城市之一，今年已密集发放 Robotaxi 测试许可；Momenta「飞轮数据」策略依托多城并行积累多样化场景数据，深圳的高密度城区与复杂立交体系将为其模型迭代带来新的边缘场景覆盖。"
+              }
+            ]
+          },
+          {
+            "company": "L3政策",
+            "company_slug": "regulation",
+            "headline_html": "<b>L3政策：</b>准入名单大批扩容，12款车获资质含合资豪华品牌——L3从自主实验赛道正式进入主流消费市场",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月21日</b>，公安部 GA/T 2388-2026 规则 7 月 1 日落地后，L3 准入名单首次大批扩容：<b>12 款车型率先完成资质认证</b>，涵盖长安深蓝、极狐、比亚迪 U8/U9 及<b>奔驰 S 级、宝马 7 系</b>等合资豪华品牌。豪华合资品牌拿到准入，意味着 L3 不再只是自主品牌的「实验赛道」，合规上路正式进入主流消费市场；对自动驾驶方案商而言，这也意味着 OEM 采购 L3 系统的商业压力将真实落地，高阶智驾量产节奏全面提速。"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "edited_at": "2026-07-27T02:47:49.902Z"
+  },
+  {
     "week_id": "2026-W30-WIP",
     "date_range": "0714-0719（WIP）",
     "title": "无人驾驶行业0714-0719重要新闻（WIP）",
