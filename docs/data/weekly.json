@@ -1,5 +1,138 @@
 [
   {
+    "week_id": "2026-W32",
+    "date_range": "0728-0803",
+    "title": "无人驾驶行业0728-0803重要新闻",
+    "generated_at": "2026-08-02T20:00:00+08:00",
+    "sections": [
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "百度/萝卜快跑",
+            "company_slug": "baidu",
+            "headline_html": "<b>百度/萝卜快跑：</b>伦敦 Robotaxi 测试启动，中国 L4 领跑全球右舵市场",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月28日</b>，Apollo Go 在英国<b>伦敦</b>正式开始路测，成为首家进入英国的中国 L4 自动驾驶企业，合作方涵盖 <b>Freenow</b>、<b>Uber</b>、<b>Lyft</b>，计划 <b>2027 年</b>向伦敦公众开放乘车服务；萝卜快跑同步宣布伦敦车辆路测启动，以香港（全无人驾驶首照）为第一站、伦敦为第二站，构建&ldquo;右舵市场 L4 领导者&rdquo;布局。"
+              }
+            ]
+          },
+          {
+            "company": "Momenta",
+            "company_slug": "momenta",
+            "headline_html": "<b>Momenta：</b>中国首家获德国全境 L4 测试许可，同日 Uber 再度增持股份",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月29日</b>，Momenta 获得德国联邦汽车运输局（<b>KBA</b>）颁发的<b>全境 L4 级自动驾驶测试许可</b>，成为中国首家可在德国全境开展 L4 测试的企业；同日 <b>Uber</b> 宣布再度增持 Momenta 股份；该许可直接服务于 Momenta 与大众的前装量产合作，是中德智驾深度绑定商业落地的关键进展。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>切断 Uber 合作 + 单周宣布新增 6 城 + Waymo Korea 成立 + Sacramento 进入倒计时，安全与运营挑战同步并行",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月30日</b>，Waymo 宣布放弃与 Uber 的渠道合作，<b>独立进入两个新城市</b>，双方从合作伙伴走向全面竞争；同日宣布在韩国注册子公司 <b>Waymo Korea</b>，亚太布局再落一子；<b>8月1日</b>，Waymo 宣布将完全无人驾驶 Robotaxi 服务扩张至<b>新增 6 座城市</b>，创单次宣布数量之最；<b>7月31日</b>，Waymo 在<b>匹兹堡</b>以<b>极氪（Zeekr）</b>车型为平台开展自动驾驶测试，探索 Ojai 专属平台之外的量产低成本车型路线。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>7月29日</b>，CBS News 报道 Waymo 计划 <b>8 月</b>在<b>萨克拉门托（Sacramento）</b>正式推出服务，该城市为加州主要监管机构所在地，首批乘客等待申请已逾三年；<b>8月2日</b>，当地市议员证实距正式开放<b>仅剩数周</b>。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>7月27日</b>，Waymo 亚特兰大无人车被对向车辆以约 <b>33mph</b> 速度追尾后起火燃烧，为当周第二起严重安全事故；<b>7月30日</b>，Waymo 重返<b>凤凰城</b>及<b>旧金山湾区</b>高速公路运营；<b>7月28日</b>，美国国会议员提出新立法，拟要求 Robotaxi 运营商设立最低<b>应急响应安全标准</b>；<b>8月3日</b>，Waymo 就<b>圣塔莫尼卡（Santa Monica）</b>充电站夜间禁令正式提起上诉，充电基础设施合规纠纷首次进入司法程序。"
+              }
+            ]
+          },
+          {
+            "company": "Uber + Rivian",
+            "company_slug": "uber",
+            "headline_html": "<b>Uber + Rivian：</b>12 亿美元协议重建自营车队，Lucid-Nuro 联盟同步浮现",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月29日</b>，Uber 宣布向 <b>Rivian</b> 投资最多 <b>12 亿美元</b>，签约采购最多 <b>5 万辆</b> R2 用于 Uber 自营 Robotaxi 车队，是对 Waymo 切断合作的直接回应；Rivian 同步宣布将于 <b>2026 年底</b>向车主推出<b>点到点（Point-to-Point）自动驾驶系统</b>，与 Uber 合作并行的自营 AV 路线同步推进。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>7月31日</b>，<b>Nuro</b> 获加州 DMV 关键许可，<b>Uber-Lucid-Nuro</b> 三方 Robotaxi 联盟初步成形，以高端电动车底盘、运营网络和无人驾驶技术形成互补；<b>Lucid</b> 股价当日涨超 <b>7%</b>；需注意 Nuro 本次获批为无人<b>配送</b>许可，载人 Robotaxi 许可仍需独立申请。"
+              }
+            ]
+          },
+          {
+            "company": "Zoox",
+            "company_slug": "zoox",
+            "headline_html": "<b>Zoox：</b>获美国首批无方向盘 Robotaxi 联邦商业运营许可，拉斯维加斯首发",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月31日</b>，美国联邦政府正式批准 Zoox 开展付费无人驾驶出租车商业运营，Zoox 成为全球首家获得美国联邦级许可的无方向盘、无踏板原生 Robotaxi 公司；首发城市<b>拉斯维加斯</b>；联邦批准允许 Zoox 无需逐州申请豁免直接商业运营，为所有目的型车辆（PBV）路线打开先例。"
+              }
+            ]
+          },
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>东南部扩城加速 + FSD Issaquah 严重事故，安全与商业化矛盾持续",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月27日</b>，Tesla Robotaxi 正式进入北卡罗来纳州<b>夏洛特（Charlotte）</b>，是东南部首个非德克萨斯/佛罗里达城市；7 月内已连续开放 <b>Tampa、Orlando、Charlotte</b> 三城，月度开城速度为商业化以来最快。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月2日</b>，一辆处于 <b>FSD</b> 模式的 <b>Model Y</b> 在华盛顿州<b>伊萨夸（Issaquah）</b>发生严重事故，车尾被对向侧穿车辆截断，<b>NHTSA</b> 启动初步调查（PI）；这是 Tesla FSD 一个月内第二起严重事故公开报道，时间节点与东南部快速扩城同步。"
+              }
+            ]
+          },
+          {
+            "company": "大众",
+            "company_slug": "volkswagen",
+            "headline_html": "<b>大众：</b>ID. Buzz Robotaxi 正式驶入洛杉矶，欧洲 OEM 专属 Robotaxi 首次落地美国",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月2日</b>，大众旗下 <b>ID. Buzz Robotaxi</b>（由 <b>MOIA</b> 运营，<b>Mobileye</b> 提供驾驶堆栈）正式现身<b>洛杉矶</b>街头，欧洲汽车制造商首次以专属 Robotaxi 车型形式进入美国市场，直接与 Waymo、Zoox 展开竞争；ID. Buzz 此前已在<b>汉堡</b>进行商业试运营，洛杉矶为其首个美国城市。"
+              }
+            ]
+          },
+          {
+            "company": "Grab",
+            "company_slug": "grab",
+            "headline_html": "<b>Grab：</b>新加坡榜鹅 AV 接送服务上线，2026 年 Q4 前商业化",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>7月29日</b>，Grab 在新加坡<b>榜鹅（Punggol）</b>新镇正式启动按需自动驾驶接送服务试点，计划 <b>2026 年 Q4</b> 前实现商业化；东南亚最大出行平台（覆盖 <b>8 国</b>）首次在核心主业上叠加 L4 自动驾驶产品，与同日进入新加坡市场的小马智行形成直接竞争。"
+              }
+            ]
+          },
+          {
+            "company": "Wayve",
+            "company_slug": "wayve",
+            "headline_html": "<b>Wayve：</b>合作版图持续扩张，自动驾驶软件平台化路线获分析师认可",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月2日</b>，英国 <b>Wayve</b> 持续扩大与全球 OEM 及 Tier 1 供应商合作网络；其以大规模道路数据训练通用驾驶模型后授权给不同 OEM 的轻资产路线，被分析师认为进入类操作系统级别的战略竞争阶段，与华为智驾授权模式高度相似。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W31-WIP",
     "date_range": "0721-0726（WIP）",
     "title": "无人驾驶行业0721-0726重要新闻（WIP）",
