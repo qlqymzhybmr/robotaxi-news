@@ -1,5 +1,86 @@
 [
   {
+    "week_id": "2026-W33",
+    "date_range": "0804-0810",
+    "title": "无人驾驶行业0804-0810重要新闻",
+    "generated_at": "2026-08-10T22:00:00+08:00",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>达拉斯全面开放创商业化新格局 + CEO 激光雷达宣言 + Ojai 量产进行时，扩张高峰中首例行人死亡事故重燃安全争议",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月5日</b>，Waymo One 宣布达拉斯服务进入<b>完全开放阶段</b>：无需邀请码、无需候补名单，任何人通过 Waymo One App 即可在达拉斯直接叫车；达拉斯成为继旧金山、洛杉矶、凤凰城之后第四个<b>完全开放</b>的 Waymo One 城市，也是 Waymo 首个全面开放的德克萨斯市场；此举与同期宣布的 Sacramento 倒计时、单次宣布最多 <b>6 座新城市</b>（8 月 1 日）共同标志着 Waymo 2026 年扩张节奏进入最高档。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月7日</b>，Waymo CEO Dmitri Dolgov 公开表态：<b>纯视觉（Camera-Only）系统无法支撑完全自动驾驶</b>，多传感器融合（激光雷达+摄像头+雷达）是实现 L4 所需安全冗余的<b>必要条件</b>；此言论是对 Tesla FSD 和国内部分厂商纯视觉路线的直接回应，与华为引望观点高度一致，行业共识正在围绕「L4 必须有激光雷达」形成。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>8月8日</b>，Waymo 下一代专用 Robotaxi 车型 <b>Ojai</b>（与极氪合作打造，Baby Blue 配色）在<b>西雅图</b>街头被目击——这是 Ojai 首次出现在达拉斯、旧金山、洛杉矶等现有商业城市之外的新地点；同日 Waymo 宣布正在为 Ojai 的<b>大规模量产部署</b>做最终准备，Ojai 相比现有车队专为 Robotaxi 运营优化，维护成本更低、传感器布局更紧凑；西雅图出现暗示 Waymo 可能即将宣布新的商业扩张城市。"
+              },
+              {
+                "label": "d",
+                "content_html": "<b>8月9日</b>，达拉斯发生 Waymo 商业运营以来<b>首例行人死亡事故</b>：一名行人被一辆人类驾驶的 SUV 高速撞倒，撞击力将其抛入对向 Waymo 车道后被 Waymo 撞上身亡；初步调查显示 Waymo <b>并非主要肇事方</b>——行人系先被 SUV 撞倒才进入 Waymo 行驶路径，Waymo 可能在极短距离内无法有效制动；无论责任归属如何，NHTSA 和 NTSB 均已启动调查，事故将加速美国各州对 Robotaxi 安全报告的立法讨论，与达拉斯同日的全面开放（sub-item a）形成强烈对比。"
+              }
+            ]
+          },
+          {
+            "company": "Zoox",
+            "company_slug": "zoox",
+            "headline_html": "<b>Zoox：</b>一周内完成「获许可 → 宣布日期 → 正式收费」三连跳，成为美国第二家无安全员付费 Robotaxi",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月5日</b>，内华达州监管机构正式批准 Zoox 在<b>拉斯维加斯</b>向乘客收取费用；这是继 7 月 31 日获 <b>NHTSA 联邦商业豁免许可</b>之后的又一关键突破——联邦许可解决合规基础，州级许可解决<b>收费权限</b>；Zoox 的产品差异化：无方向盘、无刹车踏板、双向行驶的专用 Robotaxi 设计，是全球迄今唯一获联邦 NHTSA 豁免的此类原生 Robotaxi 车型。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月7日</b>，Zoox 正式宣布将于 <b>8 月 10 日</b>在拉斯维加斯开始向乘客收费，结束自 2024 年以来长达两年的免费试乘阶段；定价暂未公布；下一步计划于 2026 年底启动旧金山商业化许可申请，Amazon 双轨商业模式（载人出行 + 包裹配送）将从拉斯维加斯向全美扩张。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>8月10日</b>，Zoox 拉斯维加斯付费 Robotaxi 如期<b>全面开放</b>；Amazon 以约 <b>12 亿美元</b>于 2020 年收购 Zoox，历经 6 年研发、2 轮 CEO 更迭，终于在 2026 年完成商业收费——这是 L4 Robotaxi 行业内继 Waymo 之后的第二家商业化里程碑，也标志着美国 Robotaxi 市场正式从&ldquo;Waymo 独角戏&rdquo;走向&ldquo;多玩家竞争&rdquo;格局。"
+              }
+            ]
+          },
+          {
+            "company": "Uber",
+            "company_slug": "uber",
+            "headline_html": "<b>Uber：</b>联手 Wayve 获伦敦首张商业牌照 + Lucid-Nuro 联盟成形，AV 分发平台战略在欧美两大洲同步落子",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月6日</b>，Uber 与英国 L4 公司 <b>Wayve</b> 联合宣布获得伦敦交通局（TfL）颁发的<b>英国首张 Robotaxi 商业运营牌照</b>，标志着伦敦成为欧洲首个正式批准 Robotaxi 商业运营的主要城市；合作模式：Wayve 提供纯视觉+大模型端到端 L4 技术栈，Uber 提供出行平台和用户入口；TfL 以严格著称，此次批准将推动巴黎、柏林等欧洲主要城市加速 Robotaxi 监管框架建设，对中国 L4 公司（WeRide 已进入丹麦、新加坡）进入欧洲亦具参考意义。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月6日</b>，<b>Lucid Motors</b> 宣布与 Uber 和 <b>Nuro</b> 合作，以 Lucid Air 豪华电动车为平台联合测试 <b>100 辆 Robotaxi</b>；Lucid 此举意在通过 B2B 车辆供应开辟新收入来源，以对冲自身消费端销量压力；同步公布 <b>14 亿美元</b>现金改组方案；Uber-Lucid-Nuro 三角联盟与 Uber+Rivian（7 月 29 日，12 亿美元、5 万辆 R2）并行，Uber 正构建多车型、多技术提供方的宽谱 Robotaxi 分发网络。"
+              }
+            ]
+          },
+          {
+            "company": "NVIDIA",
+            "company_slug": "nvidia",
+            "headline_html": "<b>NVIDIA：</b>发布 Alpamayo 2 Super——专为 Robotaxi 打造的开源前沿大模型，生态锁定战略延伸至 L4 应用层",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月5日</b>，Jensen Huang 宣布推出 <b>Alpamayo 2 Super</b>：NVIDIA 面向 Robotaxi 和自动驾驶领域的<b>开源</b>前沿 AI 大模型，专为感知、预测和规划三大核心任务设计，可直接部署在 <b>NVIDIA DRIVE AGX</b> 平台上；相比 Alpamayo 1（2025 年发布），Super 版在多目标跨帧追踪、复杂路口规划和长尾场景泛化上实现大幅提升；逻辑与 Meta 开源 LLaMA 高度相似——通过开放前沿模型建立行业生态护城河，让中小 AV 公司直接站在 NVIDIA 肩膀上，进而锁定 DRIVE AGX 硬件平台需求。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W32",
     "date_range": "0728-0803",
     "title": "无人驾驶行业0728-0803重要新闻",
