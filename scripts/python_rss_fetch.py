@@ -327,15 +327,31 @@ def pick_query_name(company_name: str, lang: str) -> str:
 
 
 
+def _gnews_search_url(title: str, lang: str = "en", site: str = "") -> str:
+    """
+    Build a permanent Google News search URL for an article.
+
+    Google News RSS article URLs (CBMi… tokens) are temporary and expire within
+    days. A search URL is permanent: users can always find the article by title.
+
+    - `site` (optional): if provided, appends site:<domain> to scope results
+      to a specific outlet (used for Track A local-media queries).
+    """
+    params = {
+        "en": ("en-US", "US", "US:en"),
+        "zh": ("zh-CN", "CN", "CN:zh-Hans"),
+    }.get(lang, ("en-US", "US", "US:en"))
+    query = title[:100]
+    if site:
+        query = f"{query} site:{site}"
+    q = urllib.parse.quote(query)
+    return f"https://news.google.com/search?q={q}&hl={params[0]}&gl={params[1]}&ceid={params[2]}"
+
+
 def normalize_url(url: str, source_href: str = "") -> str:
     if not url:
         return source_href or url
-
-    # 按当前策略：优先保留 Google News 文章链接，确保可跳转
-    if "news.google.com/rss/articles/" in url:
-        return re.sub(r"([?&](hl|gl|ceid)=[^&]*)", "", url).rstrip("?&")
-
-    cleaned = re.sub(r"([?&](utm_[^=&]+|ved|ei)=[^&]*)", "", url).rstrip("?&")
+    cleaned = re.sub(r"([?&](utm_[^=&]+|ved|ei|oc)=[^&]*)", "", url).rstrip("?&")
     return cleaned or (source_href or url)
 
 def is_relevant(company_name: str, title: str, summary: str) -> bool:
@@ -426,7 +442,13 @@ def fetch_company_news(
                     source = entry.source.get("title", "")
                     source_href = entry.source.get("href", "")
 
-                link = normalize_url(getattr(entry, "link", ""), source_href=source_href)
+                raw_link = normalize_url(getattr(entry, "link", ""), source_href=source_href)
+                # Google News RSS article URLs (CBMi…) expire within days.
+                # Replace with a permanent Google News search URL for the title.
+                if "news.google.com" in raw_link:
+                    link = _gnews_search_url(title, lang=lang)
+                else:
+                    link = raw_link
                 local_key = (title, link)
 
                 items.append(
@@ -550,7 +572,12 @@ def fetch_local_media_news(
             if not is_relevant_local_media(company_name, title):
                 continue
 
-            link = normalize_url(getattr(entry, "link", ""))
+            raw_link = normalize_url(getattr(entry, "link", ""))
+            # Replace expiring Google News RSS URLs with a permanent site-scoped search URL.
+            if "news.google.com" in raw_link:
+                link = _gnews_search_url(title, lang="en", site=site)
+            else:
+                link = raw_link
             items.append({
                 "company": company_name,
                 "company_key": company_key,
