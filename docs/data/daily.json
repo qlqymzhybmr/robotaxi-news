@@ -14,7 +14,7 @@
         "original_date": "2026-08-10",
         "summary_html": "<ul><li>Amazon 旗下 Zoox 正式宣布在<b>拉斯维加斯</b>启动面向公众的付费 Robotaxi 商业运营，成为继 Waymo 之后美国第二家实现无安全员商业收费的 L4 公司</li><li>Zoox 差异化：采用<b>双向行驶</b>设计（无前后之分），乘客舱对称布局，专为城市高密度出行设计，是从零设计的专用 Robotaxi 车型</li><li>里程碑意义：2020 年被亚马逊以约 12 亿美元收购，历经 6 年研发，终于在 2026 年实现商业收费，标志着 L4 Robotaxi 商业化赛道正式向 Waymo 以外的玩家打开</li><li>拉斯维加斯优势：道路宽阔、网格化布局、气候干旱少雨、旅游客群对新技术接受度高</li></ul>",
         "source_name": "Google News",
-        "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWTMxMGNSUm5sVzIzMTMzMm5qU0lOWGFCbVRCcjZfZllYY1RiZHdGQ1NqeVE2bkxRdWd5Tld4d01zR"
+        "source_url": "https://news.google.com/search?q=Zoox%20Las%20Vegas%20paid%20robotaxi%20launch%20August%202026&hl=en-US&gl=US&ceid=US:en"
       },
       {
         "id": "2026-08-10-002",
@@ -28,7 +28,7 @@
         "original_date": "2026-08-09",
         "summary_html": "<ul><li>Waymo 向 NHTSA 提交召回报告，对约 <b>4000 辆</b> Robotaxi 推送强制 OTA 软件修复，原因是部分车辆在施工区未能正确识别和遵守临时交通管制标志</li><li>「召回」的实质：这是软件 OTA 修复，而非实体召回；NHTSA 监管框架要求此类软件缺陷必须以「召回」形式登记，即使通过 OTA 远程修复也需走正式流程</li><li>无人员伤亡：Waymo 在第一时间发现问题后主动上报；现行法规无法对无人车直接开罚单，揭示了 L4 监管的一个空白</li><li>行业意义：随着 Zoox（001）、小马智行等更多 L4 公司上路，此类「软件召回」将成为常态化监管机制</li></ul>",
         "source_name": "Google News",
-        "source_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOZGNEaDlWRWdzenhENjBpUjhjaTNXcXVRV3Z5MndiNkh2N0lSQUxiN2FubjZBVF82WUdiS3I2TDR5Z"
+        "source_url": "https://news.google.com/search?q=Waymo%20recall%204000%20NHTSA%20construction%20zone%20OTA%20software%20fix&hl=en-US&gl=US&ceid=US:en"
       },
       {
         "id": "2026-08-10-003",
@@ -42,7 +42,7 @@
         "original_date": "2026-08-09",
         "summary_html": "<ul><li>美国政府禁止普通消费者购买中国品牌电动车（高额关税+安全审查），但<b>商业车队运营商</b>（如 Waymo）目前仍在以大批量方式采购极氪（ZEEKR）等中国电动车用于 Robotaxi 运营</li><li>政策漏洞：消费者乘用车与商业车队采购适用不同的贸易规则；Waymo 旗下的 Ojai（极氪 RT）本质上是中美合资定制车型，绕过了部分对消费者的限制条款</li><li>潜在风险：若国会或行政令收紧商业车队采购层面的限制，将直接影响 Waymo 的车辆规模扩张计划，Ojai 的量产供应链将面临重大不确定性</li></ul>",
         "source_name": "Google News",
-        "source_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9tNk9XYXlRejNoNVBmLXVfTDUyUWxLYTFXa1RCUk1Yc1pUVXBlMi1XbVMzWTUtb3ZUenlTbjhZTnZab"
+        "source_url": "https://news.google.com/search?q=Waymo%20Zeekr%20Chinese%20electric%20vehicle%20fleet%20commercial&hl=en-US&gl=US&ceid=US:en"
       },
       {
         "id": "2026-08-10-004",
@@ -56,7 +56,7 @@
         "original_date": "2026-08-09",
         "summary_html": "<ul><li>Uber 宣布将在未来数年<b>投入逾 100 亿美元</b>用于 AV 生态合作（权益投资+预购协议），目标是覆盖 <b>15+ 个市场</b>的自动驾驶商业化运营</li><li>具体布局：与约 30 家 AV 合作伙伴签署协议；Hertz Oro Mobility 等专业车队运营商承接车辆资产管理；应用层统一分发各 AV 合作伙伴行程（「多供应商聚合平台」模式）</li><li>关键数据：当前 AV 行程占 Uber 每周 3 亿次出行的不到 <b>0.5%</b>，商业化仍处极早期</li><li>Uber 押注「做 AV 分发平台」而非自研 L4，通过规模化运营网络锁定 Waymo、Zoox 等 L4 公司对 Uber 平台的依赖</li></ul>",
         "source_name": "汽车之家",
-        "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9WTU1KcHVCbThBTEE5bWt0T0VlMDJZMDQta0JFMUI3ajYyRlpFWlV1d2FVMzhEc0lGU2ZWNHdVZ3g1Z"
+        "source_url": "https://news.google.com/search?q=Uber%20AV%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%20100%E4%BA%BF%E7%BE%8E%E5%85%83%20Q2%202026%E8%B4%A2%E6%8A%A5&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
       },
       {
         "id": "2026-08-10-005",
@@ -70,7 +70,7 @@
         "original_date": "2026-08-10",
         "summary_html": "<ul><li>小马智行（Pony.ai）披露 Robotruck 战略目标：到 <b>2030 年在中美合计部署 10 万辆</b>自动驾驶电动卡车，届时单车运营成本较人工驾驶下降约 <b>70%</b></li><li>路径：自有运营（PonyTon 品牌）+ 合作车队双轨并进，逐步实现从有安全员→无人运营的升级</li><li>成本逻辑：消除驾驶员薪酬（约占卡车运营成本 35%）+ 电气化降低燃油 + L4 系统可 24 小时连续运营，单位里程固定成本大幅摊薄</li><li>商业化意义：Robotruck 路线固定、ODD 可控，本质上押注比 Robotaxi 更快达到盈亏平衡</li></ul>",
         "source_name": "搜狐",
-        "source_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeGprOXB6b1FQbnUxamp0ZndfbGRsUHYtOGVIc1ZIcXFIbjNDN2JwOTN1aEN1el8wMFBuWnRFMFFNQ"
+        "source_url": "https://news.google.com/search?q=%E5%B0%8F%E9%A9%AC%E6%99%BA%E8%A1%8C%20Robotruck%2010%E4%B8%87%E8%BE%86%202030%E5%B9%B4%20PonyTon&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
       },
       {
         "id": "2026-08-10-006",
@@ -84,7 +84,7 @@
         "original_date": "2026-08-09",
         "summary_html": "<ul><li>曹操出行（吉利旗下 Robotaxi/网约车平台）宣布与<b>图灵奖得主</b>开展合作，聚焦「<b>可信 Robotaxi（Trustworthy Robotaxi）</b>」研究方向，即以数学可证明的安全性和可解释性为核心的 L4 方案</li><li>「可信 Robotaxi」区别于主流「大数据+黑盒神经网络」路线，强调系统行为的可验证性（Formal Verification）和安全边界的数学证明</li><li>学术顶级背书在 Waymo 达拉斯行人死亡（08-09-001）等事件背景下，能显著提升曹操出行在监管机构和公众眼中的公信力</li><li>曹操出行以「可信」为差异化卖点，在安全监管日趋严格的行业背景下开辟技术路线的新护城河</li></ul>",
         "source_name": "财经号",
-        "source_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9hOTNQWU1lc0hxQkJxYzlzTGZOai1qOVFHT2JfdTVRT25vMXdoLUlRQUY3LWZUT2NBdFpFb1dVS0Jwc"
+        "source_url": "https://news.google.com/search?q=%E6%9B%B9%E6%93%8D%E5%87%BA%E8%A1%8C%20%E5%9B%BE%E7%81%B5%E5%A5%96%20%E5%8F%AF%E4%BF%A1Robotaxi%20Trustworthy&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
       },
       {
         "id": "2026-08-10-007",
@@ -98,7 +98,7 @@
         "original_date": "2026-08-09",
         "summary_html": "<ul><li>比亚迪正式推出「<b>智驾兜底</b>」政策，承诺为搭载高阶智驾版本的车型提供技术能力背书：若智驾表现低于官方宣传标准，将提供补偿方案</li><li>政策背景：随着自动驾驶国家标准落地（08-08-009），监管对智驾能力宣传口径约束趋严；比亚迪率先以「兜底」政策主动承担能力验证责任，以主动合规换取市场信任</li><li>技术底气：自研 4nm 芯片（天神之眼 C）+ VLA 大模型（08-08-010）的完整技术栈，「兜底」建立在全栈控制力之上</li><li>「智驾兜底」若被消费者认可，将成为比亚迪在 10-20 万价格带的核心差异化卖点</li></ul>",
         "source_name": "汽车之家",
-        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5VSFFHLVljQ2tzN3dReGhsenV4MDFySjFxSG9melRfR09hTGVwVjUySWtxQ2c0VlhjLVlUWnVPTHdvY"
+        "source_url": "https://news.google.com/search?q=%E6%AF%94%E4%BA%9A%E8%BF%AA%20%E6%99%BA%E9%A9%BE%E5%85%9C%E5%BA%95%20%E9%AB%98%E9%98%B6%E6%99%BA%E9%A9%BE%202026&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
       },
       {
         "id": "2026-08-10-008",
@@ -112,7 +112,7 @@
         "original_date": "2026-08-09",
         "summary_html": "<ul><li>汽车之家实测小鹏「<b>纯视觉 VLA 2.0</b>」智驾系统，在复杂城市场景（施工绕行、借道逆行、突发行人横穿）下表现出色，结论是「被严重低估」</li><li>VLA 2.0 技术突破：VLA（视觉-语言-行动）架构使系统能理解道路语义（「为什么要借道」「这里是禁停区」），在罕见场景下的泛化能力显著优于传统纯视觉方案</li><li>与 Tesla FSD 对比：同为纯视觉但引入语言大模型的语义理解层，理论上能处理 Tesla FSD 纯感知框架难以应对的「语义复杂」场景</li><li>若纯视觉 VLA 能达到甚至超越激光雷达方案的城市 NOA 表现，将打破「高阶智驾必须有激光雷达」的行业共识</li></ul>",
         "source_name": "汽车之家",
-        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9YVzFHYWNOLS1VcGFyX1V0RV9hdUJuVWV5blI2M2licnVQMVhZNG5lODBuOGpTbV96TWk2YVdOSHQ2M"
+        "source_url": "https://news.google.com/search?q=%E5%B0%8F%E9%B9%8F%20VLA%202.0%20%E7%BA%AF%E8%A7%86%E8%A7%89%20%E6%99%BA%E9%A9%BE%20%E5%AE%9E%E6%B5%8B%20%E6%B1%BD%E8%BD%A6%E4%B9%8B%E5%AE%B6&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
       },
       {
         "id": "2026-08-10-009",
@@ -126,7 +126,7 @@
         "original_date": "2026-08-09",
         "summary_html": "<ul><li>小米 YU7（小米首款 SUV）正式明确智驾规格：<b>全系标配 700TOPS</b> 算力，购车满 <b>300 公里</b>即解锁城市 NOA</li><li>700TOPS 全系标配：YU7 最低配（约 23 万）搭载与高配相同算力，无「智驾减配」现象；先给足硬件，靠 OTA 逐步释放能力</li><li>300 公里里程激活城市 NOA：让用户先适应 L2 基础功能，降低初期事故风险，区别于华为、小鹏等「买了就能用」的即时开通策略</li><li>价格带上直接挑战理想 L6（20-27 万）和小鹏 G6（20-25 万），成为该价位段的新智驾性价比标杆</li></ul>",
         "source_name": "新浪汽车",
-        "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4tYlZwY0hTRERKTjNYdXNBMGtLQjN0R3h1YXdqNGNYSHE4TmJYY09odWxOYk9wSXhvOUxMV3hEdkxCc"
+        "source_url": "https://news.google.com/search?q=%E5%B0%8F%E7%B1%B3%20YU7%20700TOPS%20%E5%9F%8E%E5%B8%82NOA%20%E6%99%BA%E9%A9%BE%20300%E5%85%AC%E9%87%8C&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
       },
       {
         "id": "2026-08-10-010",
@@ -140,7 +140,7 @@
         "original_date": "2026-08-09",
         "summary_html": "<ul><li>广汽埃安 N60 全系（最低配 <b>10.98 万</b>起）标配含激光雷达的高阶智驾系统，城市 NOA 覆盖范围和变道逻辑与 20-30 万价位车型持平</li><li>10.98 万高阶智驾的行业意义：将激光雷达+高阶城市 NOA 门槛从 20 万+下探至 11 万以内，打破「激光雷达是高端车专属」的消费认知</li><li>同期对比：零跑 Lafa5 9.28 万起同样含激光雷达，说明 2026 年激光雷达已进入大规模价格战，智驾硬件成本快速下降</li><li>智驾能力「下沉」至 10 万级市场，将加速 L2 高阶功能的大众化渗透</li></ul>",
         "source_name": "新浪汽车",
-        "source_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1fYkwtZTFnVnh5MDBVRy02UnVMdV85R1g3czZZQlBtM3M0S01Rcm1ocndOM0FMMXdITUlLb09GbG9EN"
+        "source_url": "https://news.google.com/search?q=%E5%B9%BF%E6%B1%BD%E5%9F%83%E5%AE%89%20N60%20%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE%2010.98%E4%B8%87%20%E9%AB%98%E9%98%B6%E6%99%BA%E9%A9%BE&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
       },
       {
         "id": "2026-08-10-011",
@@ -154,7 +154,7 @@
         "original_date": "2026-08-09",
         "summary_html": "<ul><li>长安旗下深蓝品牌（Shen Lan）全新 S05 正式上市，搭载<b>地平线 HSD</b>（Horizon Smart Drive）智驾方案，覆盖从泊车到城市 NOA 的全场景</li><li>地平线 HSD 是面向车企的「软硬一体」方案：征程芯片+地平线中间件+上层算法打包交付，降低车企智驾研发门槛</li><li>长安集团多供应商并行策略：阿维塔用华为乾崑、深蓝 S05 用地平线 HSD、长安启源用 Mobileye，避免对单一智驾供应商过度依赖</li><li>深蓝 S05 属于走量 SUV，若销量达预期将为地平线 HSD 带来可观的量产里程数据，继大众（08-06-011）、采埃孚（08-08-011）之后进一步夯实地平线量产供应商地位</li></ul>",
         "source_name": "汽车之家",
-        "source_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9IYlpsQWRsQ1ZOVV9YVXdWdFBKa2g4eHAwWl9qSDZocjdFMzg5QVRtRlY4WVNXVzVpYlVvMy01R3FZY"
+        "source_url": "https://news.google.com/search?q=%E6%B7%B1%E8%93%9D%20S05%20%E5%9C%B0%E5%B9%B3%E7%BA%BF%20HSD%20%E6%99%BA%E9%A9%BE%20%E4%B8%8A%E5%B8%82&hl=zh-CN&gl=CN&ceid=CN:zh-Hans"
       }
     ]
   },
