@@ -15,7 +15,7 @@
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月4日</b>，Waymo One宣布达拉斯服务开启<b>商业运营阶段</b>（爱田机场暂未开放但预计近期通车），取消候补名单后任何人通过 Waymo One App即可在达拉斯叫车，达拉斯成为Waymo首个全面开放的德克萨斯市场。"
+                "content_html": "<b>8月4日</b>，Waymo One宣布达拉斯服务开启<b>商业运营阶段</b>（爱田机场暂未开放但计划近期通车），取消候补名单后任何人通过Waymo One App即可在达拉斯叫车，达拉斯成为Waymo首个全面开放的德克萨斯市场。"
               },
               {
                 "label": "c",
@@ -30,51 +30,39 @@
           {
             "company": "Zoox",
             "company_slug": "zoox",
-            "headline_html": "<b>Zoox：</b>一周内完成「获许可 → 宣布日期 → 正式收费」三连跳，成为美国第二家无安全员付费 Robotaxi",
+            "headline_html": "<b>Zoox：获得内华达州监管机构许可，在拉斯维加斯开启商业收费运营服务</b>",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月5日</b>，内华达州监管机构正式批准 Zoox 在<b>拉斯维加斯</b>向乘客收取费用；这是继 7 月 31 日获 <b>NHTSA 联邦商业豁免许可</b>之后的又一关键突破——联邦许可解决合规基础，州级许可解决<b>收费权限</b>；Zoox 的产品差异化：无方向盘、无刹车踏板、双向行驶的专用 Robotaxi 设计，是全球迄今唯一获联邦 NHTSA 豁免的此类原生 Robotaxi 车型。"
-              },
-              {
-                "label": "b",
-                "content_html": "<b>8月7日</b>，Zoox 正式宣布将于 <b>8 月 10 日</b>在拉斯维加斯开始向乘客收费，结束自 2024 年以来长达两年的免费试乘阶段；定价暂未公布；下一步计划于 2026 年底启动旧金山商业化许可申请，Amazon 双轨商业模式（载人出行 + 包裹配送）将从拉斯维加斯向全美扩张。"
-              },
-              {
-                "label": "c",
-                "content_html": "<b>8月10日</b>，Zoox 拉斯维加斯付费 Robotaxi 如期<b>全面开放</b>；Amazon 以约 <b>12 亿美元</b>于 2020 年收购 Zoox，历经 6 年研发、2 轮 CEO 更迭，终于在 2026 年完成商业收费——这是 L4 Robotaxi 行业内继 Waymo 之后的第二家商业化里程碑，也标志着美国 Robotaxi 市场正式从“Waymo 独角戏”走向“多玩家竞争”格局。"
+                "content_html": "<b>8月5日</b>，<b>内华达州监管机构正式批准Zoox在拉斯维加斯向乘客收取费用</b>，继7月31日获NHTSA联邦监管机构对于无方向盘/脚踏板的商业豁免许可之后也取得了州级许可。<b>8月10日，Zoox正式在拉斯维加斯提供商业收费运营服务</b>，结束自2024年以来长达两年的免费试乘阶段，下一步计划于2026年底启动旧金山商业化许可申请。"
               }
             ]
           },
           {
             "company": "Uber",
             "company_slug": "uber",
-            "headline_html": "<b>Uber：</b>联手 Wayve 获伦敦首张商业牌照 + Lucid-Nuro 联盟成形，AV 分发平台战略在欧美两大洲同步落子",
+            "headline_html": "<b>Uber：</b>联手Wayve获得伦敦首张商业牌照",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月6日</b>，Uber 与英国 L4 公司 <b>Wayve</b> 联合宣布获得伦敦交通局（TfL）颁发的<b>英国首张 Robotaxi 商业运营牌照</b>，标志着伦敦成为欧洲首个正式批准 Robotaxi 商业运营的主要城市；合作模式：Wayve 提供纯视觉+大模型端到端 L4 技术栈，Uber 提供出行平台和用户入口；TfL 以严格著称，此次批准将推动巴黎、柏林等欧洲主要城市加速 Robotaxi 监管框架建设，对中国 L4 公司（WeRide 已进入丹麦、新加坡）进入欧洲亦具参考意义。"
-              },
-              {
-                "label": "b",
-                "content_html": "<b>8月6日</b>，<b>Lucid Motors</b> 宣布与 Uber 和 <b>Nuro</b> 合作，以 Lucid Air 豪华电动车为平台联合测试 <b>100 辆 Robotaxi</b>；Lucid 此举意在通过 B2B 车辆供应开辟新收入来源，以对冲自身消费端销量压力；同步公布 <b>14 亿美元</b>现金改组方案；Uber-Lucid-Nuro 三角联盟与 Uber+Rivian（7 月 29 日，12 亿美元、5 万辆 R2）并行，Uber 正构建多车型、多技术提供方的宽谱 Robotaxi 分发网络。"
+                "content_html": "<b>8月5日</b>，Uber与<b>Wayve</b>联合宣布获得伦敦交通局（TfL）颁发的<b>英国Robotaxi私人出租车商业运营牌照</b>（Private Hire Vehicle License），共计发放15张私人出租车牌照，每车内都将配备<b>一名经过培训且持有伦敦交通局牌照的安全员</b>。目前已有超过10万人报名加入Uber waitlist，预计今年挑选部分乘客体验并反馈。<div><img src=\"https://www.silicon.co.uk/wp-content/uploads/2026/07/A-Wayve-autonomous-vehicle.-Image-credit-London-Assembly.jpg\" title=\"点击调整大小\" style=\"max-width: 100%; height: auto; display: block; margin: 8px auto; border-radius: 4px; cursor: pointer; width: 75%;\"><br></div>"
               }
             ]
           },
           {
             "company": "NVIDIA",
             "company_slug": "nvidia",
-            "headline_html": "<b>NVIDIA：</b>发布 Alpamayo 2 Super——专为 Robotaxi 打造的开源前沿大模型，生态锁定战略延伸至 L4 应用层",
+            "headline_html": "<b>NVIDIA：</b>发布为Robotaxi打造的开源模型Alpamayo 2 Super",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月5日</b>，Jensen Huang 宣布推出 <b>Alpamayo 2 Super</b>：NVIDIA 面向 Robotaxi 和自动驾驶领域的<b>开源</b>前沿 AI 大模型，专为感知、预测和规划三大核心任务设计，可直接部署在 <b>NVIDIA DRIVE AGX</b> 平台上；相比 Alpamayo 1（2025 年发布），Super 版在多目标跨帧追踪、复杂路口规划和长尾场景泛化上实现大幅提升；逻辑与 Meta 开源 LLaMA 高度相似——通过开放前沿模型建立行业生态护城河，让中小 AV 公司直接站在 NVIDIA 肩膀上，进而锁定 DRIVE AGX 硬件平台需求。"
+                "content_html": "<b>8月4日</b>，宣布推出<b>340亿参数</b>（320亿视觉-语言主干骨干网络 + 23亿动作解码器）的<b>自动驾驶推理大模型Alpamayo 2 Super</b>，该模型定位为云端训练模型，用于数据自动标注与训练、生成思维链日志等，可在云端H100 GPU上运行，并蒸馏部署成车端小模型。相比 Alpamayo 1（2025年发布），该版本在多目标跨帧追踪、复杂路口规划和长尾场景泛化上实现大幅提升。"
               }
             ]
           }
         ]
       }
     ],
-    "edited_at": "2026-08-10T03:17:16.671Z"
+    "edited_at": "2026-08-10T06:04:59.630Z"
   }
 ]
