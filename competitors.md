@@ -270,7 +270,7 @@
 ## 社区 / 媒体 RSS（Reddit 热帖）
 
 > Reddit 原生 RSS 免认证，覆盖自动驾驶社区分享的新闻、事故、政策帖。
-> 抓取时间窗口与其他来源一致（前日 10:00 ~ 当日 10:00 北京时间）。
+> 抓取时间窗口与其他来源一致（前日 09:00 ~ 当日 09:00 北京时间）。
 > 内容过滤：标题须含自动驾驶相关关键词，纯社交/调侃帖自动跳过。
 
 - Reddit/SelfDrivingCars | overseas | | https://www.reddit.com/r/SelfDrivingCars/new/.rss

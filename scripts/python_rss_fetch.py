@@ -577,7 +577,7 @@ def main() -> None:
     parser.add_argument("--competitors", default="competitors.md")
     parser.add_argument("--group", choices=["all", "overseas", "china"], default="all")
     parser.add_argument("--date", default=datetime.now(CN_TZ).strftime("%Y-%m-%d"))
-    parser.add_argument("--window-start-hour", type=int, default=10)
+    parser.add_argument("--window-start-hour", type=int, default=9)
     parser.add_argument("--output", default="data/tmp/raw_news.json")
     parser.add_argument("--local-media", default="data/local_media.json",
                         help="Path to local_media.json config (Track A)")
