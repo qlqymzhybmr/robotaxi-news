@@ -327,24 +327,22 @@ def pick_query_name(company_name: str, lang: str) -> str:
 
 
 
-def _gnews_search_url(title: str, lang: str = "en", site: str = "") -> str:
+def _make_search_url(title: str, lang: str = "en", site: str = "") -> str:
     """
-    Build a permanent Google News search URL for an article.
+    Build a permanent, findable search URL for an article.
 
-    Google News RSS article URLs (CBMi… tokens) are temporary and expire within
-    days. A search URL is permanent: users can always find the article by title.
-
-    - `site` (optional): if provided, appends site:<domain> to scope results
-      to a specific outlet (used for Track A local-media queries).
+    - Chinese articles (lang="zh"): use Baidu — far better coverage of
+      Chinese outlets (汽车之家, 新浪汽车, 盖世汽车, 搜狐 etc.) than Google News.
+    - English articles (lang="en"): use Google News search.
+    - `site` (optional): scope results to a specific domain (Track A local-media).
     """
-    params = {
-        "en": ("en-US", "US", "US:en"),
-        "zh": ("zh-CN", "CN", "CN:zh-Hans"),
-    }.get(lang, ("en-US", "US", "US:en"))
     query = title[:100]
     if site:
         query = f"{query} site:{site}"
     q = urllib.parse.quote(query)
+    if lang == "zh":
+        return f"https://www.baidu.com/s?wd={q}"
+    params = ("en-US", "US", "US:en")
     return f"https://news.google.com/search?q={q}&hl={params[0]}&gl={params[1]}&ceid={params[2]}"
 
 
@@ -446,7 +444,7 @@ def fetch_company_news(
                 # Google News RSS article URLs (CBMi…) expire within days.
                 # Replace with a permanent Google News search URL for the title.
                 if "news.google.com" in raw_link:
-                    link = _gnews_search_url(title, lang=lang)
+                    link = _make_search_url(title, lang=lang)
                 else:
                     link = raw_link
                 local_key = (title, link)
@@ -575,7 +573,7 @@ def fetch_local_media_news(
             raw_link = normalize_url(getattr(entry, "link", ""))
             # Replace expiring Google News RSS URLs with a permanent site-scoped search URL.
             if "news.google.com" in raw_link:
-                link = _gnews_search_url(title, lang="en", site=site)
+                link = _make_search_url(title, lang="en", site=site)
             else:
                 link = raw_link
             items.append({
