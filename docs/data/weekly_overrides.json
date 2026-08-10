@@ -15,11 +15,11 @@
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月4日</b>，Waymo One宣布达拉斯服务进入<b>商业运营阶段</b>（爱田机场暂未开放但计划近期通车），取消候补名单（Waing List）后任何人通过Waymo One App即可在达拉斯叫车，达拉斯成为Waymo首个全面开放的德克萨斯市场。"
+                "content_html": "<b>8月4日</b>，Waymo One宣布达拉斯服务进入<b>商业运营阶段</b>（爱田机场暂未开放但计划近期通车），取消候补名单（Waing List）后任何人通过Waymo One App即可在达拉斯叫车。"
               },
               {
                 "label": "c",
-                "content_html": "<b>8月7日</b>，Waymo下一代Robotaxi车型<b>Ojai</b>（与极氪合作打造）在<b>西雅图</b>街头被目击，这是 Ojai 首次出现在达拉斯、旧金山、洛杉矶等现有商业城市之外的新地点，同日 Waymo 宣布正在为Ojai的<b>大规模量产部署</b>做最终准备，Ojai车型维护成本更低、传感器布局更紧凑。<div><br></div>"
+                "content_html": "<b>8月7日</b>，Waymo下一代Robotaxi车型<b>Ojai</b>（与极氪合作打造）在<b>西雅图</b>街头被目击，这是 Ojai 首次出现在达拉斯、旧金山、洛杉矶等现有商业城市之外的新地点，同日Waymo宣布正在为Ojai的<b>大规模量产部署</b>做最终准备，Ojai车型维护成本更低、传感器布局更紧凑。"
               },
               {
                 "label": "d",
@@ -45,7 +45,7 @@
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月5日</b>，Uber与<b>Wayve</b>联合宣布获得伦敦交通局（TfL）颁发的<b>英国Robotaxi私人出租车商业运营牌照</b>（Private Hire Vehicle License），共计发放15张私人出租车牌照，每车内都将配备<b>一名经过培训且持有伦敦交通局牌照的安全员</b>。目前已有超过10万人报名加入Uber waitlist，预计今年将挑选部分乘客体验并反馈。<div><figure style=\"margin: 8px auto; text-align: center; display: block;\"><img src=\"https://www.silicon.co.uk/wp-content/uploads/2026/07/A-Wayve-autonomous-vehicle.-Image-credit-London-Assembly.jpg\" title=\"点击调整大小\" style=\"max-width: 100%; height: auto; display: block; margin: 0px auto; border-radius: 4px; cursor: pointer; width: 75%;\"><figcaption style=\"font-size: 12px; color: rgb(107, 114, 128); margin-top: 6px; text-align: center;\">（如图为xxxx）</figcaption></figure><br></div>"
+                "content_html": "<b>8月5日</b>，Uber与<b>Wayve</b>联合宣布获得伦敦交通局（TfL）颁发的<b>英国Robotaxi私人出租车商业运营牌照</b>（Private Hire Vehicle License），共计发放15张私人出租车牌照，每车内都将配备<b>一名经过培训且持有伦敦交通局牌照的安全员</b>。目前已有超过10万人报名加入Uber waitlist，预计今年将挑选部分乘客体验并反馈。<div><figure style=\"margin: 8px auto; text-align: center; display: block;\"><img src=\"https://www.silicon.co.uk/wp-content/uploads/2026/07/A-Wayve-autonomous-vehicle.-Image-credit-London-Assembly.jpg\" title=\"点击调整大小\" style=\"max-width: 100%; height: auto; display: block; margin: 0px auto; border-radius: 4px; cursor: pointer; width: 75%;\"><figcaption style=\"font-size: 12px; color: rgb(107, 114, 128); margin-top: 6px; text-align: center;\">（如图为配备Wayve自动驾驶套件的福特Mustang Mach-E电动车型）</figcaption></figure><br></div>"
               }
             ]
           },
@@ -63,6 +63,6 @@
         ]
       }
     ],
-    "edited_at": "2026-08-10T06:27:42.798Z"
+    "edited_at": "2026-08-10T06:32:38.909Z"
   }
 ]
