@@ -15,15 +15,15 @@
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月4日</b>，Waymo One宣布达拉斯服务开启<b>商业运营阶段</b>（爱田机场暂未开放但计划近期通车），取消候补名单后任何人通过Waymo One App即可在达拉斯叫车，达拉斯成为Waymo首个全面开放的德克萨斯市场。"
+                "content_html": "<b>8月4日</b>，Waymo One宣布达拉斯服务进入<b>商业运营阶段</b>（爱田机场暂未开放但计划近期通车），取消候补名单（Waing List）后任何人通过Waymo One App即可在达拉斯叫车，达拉斯成为Waymo首个全面开放的德克萨斯市场。"
               },
               {
                 "label": "c",
-                "content_html": "<b>8月7日</b>，Waymo下一代Robotaxi车型<b>Ojai</b>（与极氪合作打造）在<b>西雅图</b>街头被目击，这是 Ojai 首次出现在达拉斯、旧金山、洛杉矶等现有商业城市之外的新地点，同日 Waymo 宣布正在为Ojai的<b>大规模量产部署</b>做最终准备，Ojai车型维护成本更低、传感器布局更紧凑。<div><img src=\"https://cdn.geekwire.com/wp-content/uploads/2026/08/waymo1.png\" title=\"点击调整大小\" style=\"max-width: 100%; height: auto; display: block; margin: 8px auto; border-radius: 4px; cursor: pointer; width: 75%;\"><br></div>"
+                "content_html": "<b>8月7日</b>，Waymo下一代Robotaxi车型<b>Ojai</b>（与极氪合作打造）在<b>西雅图</b>街头被目击，这是 Ojai 首次出现在达拉斯、旧金山、洛杉矶等现有商业城市之外的新地点，同日 Waymo 宣布正在为Ojai的<b>大规模量产部署</b>做最终准备，Ojai车型维护成本更低、传感器布局更紧凑。<div><br></div>"
               },
               {
                 "label": "d",
-                "content_html": "<b>8月7日晚11点半</b>，达拉斯发生Waymo商业运营以来<b>首例致行人死亡事故</b>：美国达拉斯发生一起致命车祸， 一名行人被一辆人类驾驶的SUV高速撞击并抛飞~30英尺（9米）至对向车道，随后被Waymo车辆二次撞击致身亡；初步调查显示Waymo <b>并非主要肇事方</b>，监控显示Waymo在碰撞后立即紧急停下，但推测在极短距离内无法有效制动，当时车速为35MPH（~56km/h），NHTSA和NTSB均已启动调查。"
+                "content_html": "<b>8月7日晚11点半</b>，达拉斯发生Waymo商业运营以来<b>首例致行人死亡事故</b>， 一名行人被一辆人类驾驶的SUV高速撞击并抛飞~30英尺（~9米）至对向车道，随后被Waymo车辆二次撞击致身亡；初步调查显示Waymo<b>并非主要肇事方</b>，监控显示Waymo在碰撞后立即紧急刹车，但推测在极短距离内无法有效制动，当时车速为35MPH（~56km/h），NHTSA和NTSB均已启动调查。"
               }
             ]
           },
@@ -45,7 +45,7 @@
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月5日</b>，Uber与<b>Wayve</b>联合宣布获得伦敦交通局（TfL）颁发的<b>英国Robotaxi私人出租车商业运营牌照</b>（Private Hire Vehicle License），共计发放15张私人出租车牌照，每车内都将配备<b>一名经过培训且持有伦敦交通局牌照的安全员</b>。目前已有超过10万人报名加入Uber waitlist，预计今年挑选部分乘客体验并反馈。<div><img src=\"https://www.silicon.co.uk/wp-content/uploads/2026/07/A-Wayve-autonomous-vehicle.-Image-credit-London-Assembly.jpg\" title=\"点击调整大小\" style=\"max-width: 100%; height: auto; display: block; margin: 8px auto; border-radius: 4px; cursor: pointer; width: 75%;\"><br></div>"
+                "content_html": "<b>8月5日</b>，Uber与<b>Wayve</b>联合宣布获得伦敦交通局（TfL）颁发的<b>英国Robotaxi私人出租车商业运营牌照</b>（Private Hire Vehicle License），共计发放15张私人出租车牌照，每车内都将配备<b>一名经过培训且持有伦敦交通局牌照的安全员</b>。目前已有超过10万人报名加入Uber waitlist，预计今年将挑选部分乘客体验并反馈。<div><figure style=\"margin: 8px auto; text-align: center; display: block;\"><img src=\"https://www.silicon.co.uk/wp-content/uploads/2026/07/A-Wayve-autonomous-vehicle.-Image-credit-London-Assembly.jpg\" title=\"点击调整大小\" style=\"max-width: 100%; height: auto; display: block; margin: 0px auto; border-radius: 4px; cursor: pointer; width: 75%;\"><figcaption style=\"font-size: 12px; color: rgb(107, 114, 128); margin-top: 6px; text-align: center;\">（如图为xxxx）</figcaption></figure><br></div>"
               }
             ]
           },
@@ -63,6 +63,6 @@
         ]
       }
     ],
-    "edited_at": "2026-08-10T06:04:59.630Z"
+    "edited_at": "2026-08-10T06:27:42.798Z"
   }
 ]
