@@ -1056,16 +1056,30 @@ async function saveWeeklyOverride() {
   if (saveBtn) { saveBtn.disabled = true; saveBtn.textContent = '保存中…'; }
   try {
     editWeekData.edited_at = new Date().toISOString();
+    const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${WEEKLY_OVERRIDES_PATH}`;
+    const headers = { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' };
+
+    // Always fetch the authoritative state from GitHub API (bypasses CDN cache) to prevent overrides
+    // from prior weeks being lost when GitHub Pages serves a stale cached version on page load.
+    let sha = '';
+    const apiOverrides = {};
+    const getRes = await fetch(apiBase, { headers });
+    if (getRes.ok) {
+      const fd = await getRes.json();
+      sha = fd.sha || '';
+      try {
+        const decoded = JSON.parse(decodeURIComponent(escape(atob(fd.content.replace(/\n/g, '')))));
+        if (Array.isArray(decoded)) decoded.forEach(e => { if (e && e.week_id) apiOverrides[e.week_id] = e; });
+      } catch (_) {}
+    } else if (getRes.status !== 404) throw new Error(`GitHub API ${getRes.status}: ${await getRes.text()}`);
+
+    // Merge: GitHub API state is authoritative base; new edit overwrites its week
+    apiOverrides[editWeekData.week_id] = editWeekData;
     weeklyOverridesData[editWeekData.week_id] = editWeekData;
     weeklyDisplayVersion = 'edited';
     updateWeekVersionToggle();
-    const overridesArr = Object.values(weeklyOverridesData).sort((a, b) => (b.week_id || '').localeCompare(a.week_id || ''));
-    const apiBase = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${WEEKLY_OVERRIDES_PATH}`;
-    const headers = { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' };
-    let sha = '';
-    const getRes = await fetch(apiBase, { headers });
-    if (getRes.ok) { const fd = await getRes.json(); sha = fd.sha || ''; }
-    else if (getRes.status !== 404) throw new Error(`GitHub API ${getRes.status}: ${await getRes.text()}`);
+
+    const overridesArr = Object.values(apiOverrides).sort((a, b) => (b.week_id || '').localeCompare(a.week_id || ''));
     const content = JSON.stringify(overridesArr, null, 2) + '\n';
     const encoded = btoa(unescape(encodeURIComponent(content)));
     const body = { message: `weekly override: ${editWeekData.week_id}`, content: encoded };
