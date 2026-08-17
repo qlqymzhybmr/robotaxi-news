@@ -11,15 +11,11 @@
           {
             "company": "Waymo",
             "company_slug": "waymo",
-            "headline_html": "<b>Waymo：</b>完成2000万次付费行程里程碑；进口3200辆极氪补充LA车队（关税127.5%）；CPUC批准加州18县扩张；Ojai进入西雅图；梅萨积压953辆待部署",
+            "headline_html": "<b>Waymo：评估进军佛罗里达州皮内拉斯县</b>；Phoenix East Valley扩大 55平方英里服务范围；加州公共事业委员会获批服务扩展至加州18县；累计进口3,200辆Ojai",
             "sub_items": [
               {
-                "label": "a",
-                "content_html": "<b>8月10日</b>，Ojai批次首批抵达<b>西雅图</b>，开始部署准备，为进入新城市的信号"
-              },
-              {
                 "label": "b",
-                "content_html": "<b>8月13日，评估进军佛罗里达州Pinellas County（含圣彼得堡、克利尔沃特），将是东南部第二城</b>"
+                "content_html": "<b>8月13日，</b>媒体报告称Waymo正在评估进军<b>佛罗里达州皮内拉斯县（Pinellas County，含圣彼得堡、克利尔沃特）</b>的可能性。"
               },
               {
                 "label": "",
@@ -31,41 +27,29 @@
               },
               {
                 "label": "",
-                "content_html": "8月17日，媒体报告称 <b>Waymo已累计从中国进口 3,200 辆极氪电动车（Ojai）</b>，其中2,600 辆为今年内进口，<b>需缴纳 127.5% 进口关税</b>。预估Ojai 整车售价超10万美元，仍低于I-Pace的约20万美元。"
+                "content_html": "<b>8月17日</b>，媒体报告称 <b>Waymo已累计从中国进口 3,200 辆极氪电动车（Ojai）</b>，其中2,600 辆为今年内进口，<b>需缴纳 127.5% 进口关税</b>。预估Ojai 整车售价超10万美元，仍低于I-Pace的约20万美元。"
               }
             ]
           },
           {
             "company": "Tesla",
             "company_slug": "tesla",
-            "headline_html": "<b>Tesla：</b>获内华达州Robotaxi运营许可证；FSD在中国正式上线；拉斯维加斯申请5000辆仅批10辆事件欧洲媒体持续跟进",
+            "headline_html": "<b>Tesla：</b>获内华达州10辆Robotaxi运营许可牌照",
             "sub_items": [
               {
-                "label": "a",
-                "content_html": "<b>8月13日</b>，Tesla 获得<b>内华达州</b> Robotaxi 运营许可证，正式进入拉斯维加斯市场，与同周刚开业的 Zoox 同城竞技；坦帕湾时报记者同期首次体验 Tesla Robotaxi，报道整体流畅但复杂路口仍有迟疑。"
-              },
-              {
-                "label": "b",
-                "content_html": "<b>8月13日</b>，<b>Tesla FSD</b> 套件在中国正式开放，结束多年因监管与数据合规问题导致的延迟，是 Tesla 重入中国智驾市场的关键一步。"
-              },
-              {
                 "label": "c",
-                "content_html": "<b>8月14-16日</b>，Axios 披露 Tesla 此前向内华达州申请部署 <b>5000 辆</b> Robotaxi，监管实际仅批准 <b>10 辆</b>；事件在欧洲媒体持续发酵（The Independent 等跟进报道），强化外界对 Tesla Robotaxi 商业化时间表与公开宣传之间落差的质疑。"
+                "content_html": "<b>8月13日</b>，媒体披露 Tesla 此前向内华达州交通局申请部署 <b>5000 辆</b> Robotaxi，<b>Tesla实际获批 10 辆 Rabotaxi 商业运营许可牌照</b>（Autonomous vehicle network permit），运输服务的起止点必须均位于内华达州克拉克县境内，且仅限于拉斯维加斯大道走廊（Las Vegas Strip corridor），最高时速不超过 45英里，且需要适当的人工监督。"
               }
             ]
           },
           {
             "company": "Wayve / Uber",
             "company_slug": "wayve",
-            "headline_html": "Wayve：获伦敦TfL首批自动驾驶商业许可证，联手Uber推进Mach-E落地；Uber与东京日之丸交通达成Robotaxi试点合作，2026年底前上线",
+            "headline_html": "Wayve/Uber：东京日之丸交通达成Robotaxi试点合作",
             "sub_items": [
               {
-                "label": "a",
-                "content_html": "<b>8月11-12日</b>，<b>Wayve</b> 成为首家获得伦敦交通局（TfL）自动驾驶出租车商业运营许可的公司，当前阶段仍需安全员在场；与 Uber 合作在伦敦推出<b>福特 Mustang Mach-E</b> 自动驾驶乘车服务进入落地最后阶段，是英国 Robotaxi 商业化的里程碑事件。"
-              },
-              {
                 "label": "b",
-                "content_html": "<b>8月13日</b>，Uber 宣布与日本出租车巨头<b>日之丸交通</b>（Hinomaru Kotsu）及 Wayve 合作，于 <b>2026 年底</b>前在<b>东京</b>启动 Robotaxi 试点，面向普通乘客开放预约；这是 Wayve 首个亚洲商业化落地，也是 Uber 全球 Robotaxi 平台布局的重要延伸。"
+                "content_html": "<b>8月13日</b>，Uber 宣布与日本出租车巨头<b>日之丸交通</b>（Hinomaru Kotsu）及 Wayve 签署运营合作协议，计划于 <b>2026 年底前在东京启动 Robotaxi 试点</b>，面向普通乘客开放预约。日之丸交通将负责日常车队运营并在车内设置安全员，车辆为配备 Wayve 技术的 Nissan Leaf 纯电动车，Uber App 开放 Robotaxi 网约车服务。"
               }
             ]
           }
@@ -77,32 +61,37 @@
           {
             "company": "小马智行",
             "company_slug": "xiaoma",
-            "headline_html": "<b>小马智行：</b>与Uber扩大合作，计划在欧洲及中东新增4城部署超2000辆Robotaxi；自动驾驶总里程突破1亿公里",
+            "headline_html": "<b>小马智行：</b>与Uber扩大合作，计划在欧洲及中东部署超2000辆Robotaxi",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月13日</b>，小马智行与 Uber 宣布扩大战略合作，计划在欧洲及中东<b>新增 4 座城市</b>部署，届时 Robotaxi 总规模将超过 <b>2000 辆</b>，Reuters、CNBC、Bloomberg 同步报道，是中国自动驾驶公司出海迄今规模最大的商业合同；同步披露全球自动驾驶累计里程突破 <b>1 亿公里</b>，Robotaxi 与 Robotruck 双线商业化加速推进。"
+                "content_html": "<b>8月13日</b>，小马智行与 Uber 宣布扩大战略合作，双方计划在<b>欧洲部署 2,000 辆小马智行 Robotaxi</b>，并将合作进一步扩展至<b>中东</b>。"
               }
             ]
           },
           {
             "company": "如祺出行",
             "company_slug": "ruqi",
-            "headline_html": "如祺出行：腾讯出行接入，微信内可一键呼叫Robotaxi；文远知行Q2营收2.3亿、海外增164%，布局欧洲及澳大利亚",
+            "headline_html": "如祺出行：接入腾讯出行微信小程序，微信内可一键呼叫Robotaxi",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月11日</b>，腾讯出行服务正式接入<b>如祺出行 Robotaxi</b>，用户可在<b>微信</b>内直接一键呼叫自动驾驶出租车，是国内首次将 Robotaxi 整合进微信生态，如祺由此从实验性服务向日常出行选项转化。"
-              },
+                "content_html": "<b>8月11日</b>，<b>如祺出行 Robotaxi 正式接入“腾讯出行服务”微信小程序</b>，用户可在广州南沙、广州科学城等运营区域内，通过微信一键呼叫自动驾驶出租车。"
+              }
+            ]
+          },
+          {
+            "headline_html": "文远知行：将澳大利亚、韩国、日本和东南亚视为潜在的新扩张市场",
+            "sub_items": [
               {
-                "label": "b",
-                "content_html": "<b>8月12日</b>，<b>文远知行</b>发布 Q2 财报：营收 <b>2.3 亿元</b>，运营 Robotaxi 超过 <b>1800 辆</b>，海外收入同比增长 <b>164%</b>；公司同步宣布进军<b>澳大利亚</b>，目标 <b>2027 年</b>在欧洲城市开展公共出行服务试点，与小马智行共同形成国内 L4 公司海外扩张的集中信号。"
+                "label": "",
+                "content_html": "<b>8月12日</b>，路透社报道称文远知行正在积极与澳大利亚监管机构沟通 Robotaxi 部署计划，并评估进入东南亚、韩国、日本及更多欧洲国家的可能"
               }
             ]
           }
         ]
       }
     ],
-    "edited_at": "2026-08-17T05:38:19.921Z"
+    "edited_at": "2026-08-17T06:11:07.791Z"
   }
 ]
