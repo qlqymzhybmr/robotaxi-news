@@ -1,5 +1,102 @@
 [
   {
+    "week_id": "2026-W34",
+    "date_range": "0811-0817",
+    "title": "无人驾驶行业0811-0817重要新闻",
+    "generated_at": "2026-08-17T20:00:00+08:00",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>完成2000万次付费行程里程碑；进口3200辆极氪补充LA车队（关税127.5%）；CPUC批准加州18县扩张；Ojai进入西雅图；梅萨积压953辆待部署",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月10日</b>，Ojai批次首批抵达<b>西雅图</b>，开始部署准备，为进入新城市的信号；<b>8月13日</b>，评估进军佛罗里达州<b>Pinellas County</b>（含圣彼得堡、克利尔沃特），将是东南部第二城；<b>8月14日</b>，菲尼克斯东谷扩服务区 <b>55 平方英里</b>，覆盖 Chandler 和 Gilbert，同日披露梅萨工厂积压 <b>953 辆</b> Ojai 待部署，其中 <b>684 辆</b>已改装完成可随时上线。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月15日</b>，加州公共事业委员会（CPUC）正式批准 Waymo 扩张至全州 <b>18 个县</b>，覆盖<b>萨克拉门托</b>（首次）、<b>圣地亚哥</b>（首次）、湾区全域及洛杉矶大都市区新增区域，是 Waymo 有史以来最大单次监管批准。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>8月17日</b>，累计付费行程突破 <b>2000 万次</b>（距 1000 万次仅约半年，增速翻倍）；外媒同日确认已从中国进口 <b>3200 辆极氪</b>电动车至洛杉矶车队，尽管面临 <b>127.5%</b> 进口关税仍坚持采购，印证快速扩大规模的战略优先级远超成本控制，标志着「中国制造车身 + Waymo AV系统」的脑体分离模式正式落地。"
+              }
+            ]
+          },
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>获内华达州Robotaxi运营许可证；FSD在中国正式上线；拉斯维加斯申请5000辆仅批10辆事件欧洲媒体持续跟进",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月13日</b>，Tesla 获得<b>内华达州</b> Robotaxi 运营许可证，正式进入拉斯维加斯市场，与同周刚开业的 Zoox 同城竞技；坦帕湾时报记者同期首次体验 Tesla Robotaxi，报道整体流畅但复杂路口仍有迟疑。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月13日</b>，<b>Tesla FSD</b> 套件在中国正式开放，结束多年因监管与数据合规问题导致的延迟，是 Tesla 重入中国智驾市场的关键一步。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>8月14-16日</b>，Axios 披露 Tesla 此前向内华达州申请部署 <b>5000 辆</b> Robotaxi，监管实际仅批准 <b>10 辆</b>；事件在欧洲媒体持续发酵（The Independent 等跟进报道），强化外界对 Tesla Robotaxi 商业化时间表与公开宣传之间落差的质疑。"
+              }
+            ]
+          },
+          {
+            "company": "Wayve / Uber",
+            "company_slug": "wayve",
+            "headline_html": "Wayve：获伦敦TfL首批自动驾驶商业许可证，联手Uber推进Mach-E落地；Uber与东京日之丸交通达成Robotaxi试点合作，2026年底前上线",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月11-12日</b>，<b>Wayve</b> 成为首家获得伦敦交通局（TfL）自动驾驶出租车商业运营许可的公司，当前阶段仍需安全员在场；与 Uber 合作在伦敦推出<b>福特 Mustang Mach-E</b> 自动驾驶乘车服务进入落地最后阶段，是英国 Robotaxi 商业化的里程碑事件。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月13日</b>，Uber 宣布与日本出租车巨头<b>日之丸交通</b>（Hinomaru Kotsu）及 Wayve 合作，于 <b>2026 年底</b>前在<b>东京</b>启动 Robotaxi 试点，面向普通乘客开放预约；这是 Wayve 首个亚洲商业化落地，也是 Uber 全球 Robotaxi 平台布局的重要延伸。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "小马智行",
+            "company_slug": "xiaoma",
+            "headline_html": "<b>小马智行：</b>与Uber扩大合作，计划在欧洲及中东新增4城部署超2000辆Robotaxi；自动驾驶总里程突破1亿公里",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月13日</b>，小马智行与 Uber 宣布扩大战略合作，计划在欧洲及中东<b>新增 4 座城市</b>部署，届时 Robotaxi 总规模将超过 <b>2000 辆</b>，Reuters、CNBC、Bloomberg 同步报道，是中国自动驾驶公司出海迄今规模最大的商业合同；同步披露全球自动驾驶累计里程突破 <b>1 亿公里</b>，Robotaxi 与 Robotruck 双线商业化加速推进。"
+              }
+            ]
+          },
+          {
+            "company": "如祺出行",
+            "company_slug": "ruqi",
+            "headline_html": "如祺出行：腾讯出行接入，微信内可一键呼叫Robotaxi；文远知行Q2营收2.3亿、海外增164%，布局欧洲及澳大利亚",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月11日</b>，腾讯出行服务正式接入<b>如祺出行 Robotaxi</b>，用户可在<b>微信</b>内直接一键呼叫自动驾驶出租车，是国内首次将 Robotaxi 整合进微信生态，如祺由此从实验性服务向日常出行选项转化。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月12日</b>，<b>文远知行</b>发布 Q2 财报：营收 <b>2.3 亿元</b>，运营 Robotaxi 超过 <b>1800 辆</b>，海外收入同比增长 <b>164%</b>；公司同步宣布进军<b>澳大利亚</b>，目标 <b>2027 年</b>在欧洲城市开展公共出行服务试点，与小马智行共同形成国内 L4 公司海外扩张的集中信号。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W33",
     "date_range": "0804-0810",
     "title": "无人驾驶行业0804-0810重要新闻",
