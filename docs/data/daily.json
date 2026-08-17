@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-08-17",
+    "items": [
+      {
+        "id": "2026-08-17-001",
+        "date": "2026-08-17",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "完成 2000 万次付费行程里程碑",
+        "summary_html": "<p>Waymo Robotaxi 累计付费行程突破 <b>2000 万次</b>，距 2024 年底宣布 1000 万次仅约半年，行程规模翻倍增速印证其商业化扩张节奏。这一数据在 Waymo CEO 本周发起\"LiDAR vs 纯视觉\"之争的背景下再度发布，被解读为向 Tesla 展示真实规模化运营的底气。</p>",
+        "source_name": "ScienceBlog / Yahoo Finance",
+        "source_url": "https://news.google.com/search?q=Waymo+20+million+paid+rides+milestone+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-16",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-17-002",
+        "date": "2026-08-17",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "从中国运入 3200 辆极氪电动车至洛杉矶，关税 127.5% 仍划算",
+        "summary_html": "<p>Yahoo Finance 报道，Waymo 已将 <b>3200 辆</b> 由极氪（吉利旗下）在中国工厂生产的 Ojai 车型运抵洛杉矶用于扩充 Robotaxi 车队，即便面临 <b>127.5%</b> 的美国对华关税，总采购成本仍显著低于在美本地制造。此举标志着 Waymo 大规模量产部署正式进入实质阶段，也印证了\"脑（AV软件）体（车辆硬件）分离\"的产业格局——中国制造的电动车成为全球 L4 商业化的重要物理载体。</p>",
+        "source_name": "Yahoo Finance",
+        "source_url": "https://news.google.com/search?q=Waymo+3200+Zeekr+EVs+Los+Angeles+robotaxi+fleet+tariff+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-16",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-17-003",
+        "date": "2026-08-17",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "详解拉斯维加斯商业化安全测试框架",
+        "summary_html": "<p>Zoox 正式公布其支撑拉斯维加斯商业运营的安全测试方法论，涵盖场景模拟、影子测试与实地验证三层体系。此前 CEO 在召回危机期间主动呼吁出台更严监管规则，此次披露被视为配合 NHTSA 监管要求的主动透明化举措。</p>",
+        "source_name": "InsideEVs",
+        "source_url": "https://news.google.com/search?q=Zoox+robotaxi+safety+testing+Las+Vegas+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-16",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-17-004",
+        "date": "2026-08-17",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "港股首日挂牌上市（MOMENTA-W），早盘高开 5.55%",
+        "summary_html": "<p>Momenta 正式在香港联合交易所以 <b>MOMENTA-W</b> 为代号挂牌上市，首日早盘高开 <b>5.55%</b>。Momenta 采用华为、小米系惯用的同股不同权（WVR）架构。Momenta 是目前国内最受机构关注的端到端\"飞轮数据\"路线公司，已获德国 KBA 全境 L4 测试许可，在大众、上汽荣威等多家 OEM 前装量产。此次上市是 2026 年继文远知行（美股）之后，中国 L4 智驾赛道在二级市场的又一重要事件。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://www.baidu.com/s?wd=Momenta+%E6%B8%AF%E8%82%A1+%E9%A6%96%E6%8C%82+%E4%B8%8A%E5%B8%82+MOMENTA-W+2026",
+        "published_at": "2026-08-16",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-17-005",
+        "date": "2026-08-17",
+        "company": "文远知行",
+        "company_slug": "wenyuan",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "WRD 3.0 助力埃安 N60 夺得智驾大赛贵阳站双料冠军，累计七冠",
+        "summary_html": "<p>文远知行 WRD 3.0 智驾系统搭载的广汽埃安 N60 在中国智驾大赛贵阳站<b>预赛和决赛均夺冠</b>，累计斩获大赛 <b>7 次冠军</b>。大赛覆盖的参赛车型横跨 10 万至 30 万多价位段，埃安 N60 以 10 万级成本压制 30 万级对手的表现被行业广泛关注。对文远而言，赛事成绩是其 TO B 智驾方案商业化背书的重要来源。</p>",
+        "source_name": "汽车之家",
+        "source_url": "https://www.baidu.com/s?wd=%E6%96%87%E8%BF%9C%E7%9F%A5%E8%A1%8C+WRD+3.0+%E5%9F%83%E5%AE%89N60+%E6%99%BA%E9%A9%BE%E5%A4%A7%E8%B5%9B+%E4%B8%83%E5%86%A0+2026",
+        "published_at": "2026-08-16",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-17-006",
+        "date": "2026-08-17",
+        "company": "地平线 CEO 余凯",
+        "company_slug": "horizon",
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "title": "J7 将是全球最强悍自动驾驶芯片",
+        "summary_html": "<p>地平线创始人余凯在公开场合明确表态，即将推出的 <b>J7 芯片</b>将成为全球最强悍的自动驾驶芯片，剑指英伟达 DRIVE AGX Thor 和 Tesla AI5。J7 定位为地平线首款面向 L4 量产的高阶芯片，此前已有消息称其算力将大幅超越 J6。余凯同期点评 Tesla AI5 芯片，言辞上展现出正面竞争姿态。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://www.baidu.com/s?wd=%E5%9C%B0%E5%B9%B3%E7%BA%BFCEO%E4%BD%99%E5%87%AF+J7+%E5%85%A8%E7%90%83%E6%9C%80%E5%BC%BA%E6%82%8D+%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E8%8A%AF%E7%89%87+2026",
+        "published_at": "2026-08-16",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-17-007",
+        "date": "2026-08-17",
+        "company": "引望智能总裁",
+        "company_slug": "引望智能总裁",
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "title": "纯视觉智驾距离 L4 自动驾驶差距蛮大",
+        "summary_html": "<p>华为旗下智驾芯片独立公司引望智能（Insta360）总裁公开表态：<b>纯视觉智驾方案距离真正的 L4 自动驾驶差距蛮大</b>。这与本周 Waymo CEO Dmitri Dolgov 挑战特斯拉纯视觉路线的观点高度一致，也延续了引望/华为一贯的多传感器融合立场。在 Waymo vs Tesla 路线之争正面升温的背景下，中美两家头部 LiDAR 阵营罕见同周发声，行业共识正在凝聚。</p>",
+        "source_name": "汽车之家",
+        "source_url": "https://www.baidu.com/s?wd=%E5%BC%95%E6%9C%9B%E6%99%BA%E8%83%BD+%E7%BA%AF%E8%A7%86%E8%A7%89+L4+%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6+%E5%B7%AE%E8%B7%9D+2026",
+        "published_at": "2026-08-16",
+        "rating": 2,
+        "lang": "zh"
+      }
+    ]
+  },
+  {
     "date": "2026-08-16",
     "items": [
       {
