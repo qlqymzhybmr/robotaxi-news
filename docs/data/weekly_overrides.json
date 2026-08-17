@@ -11,15 +11,15 @@
           {
             "company": "Waymo",
             "company_slug": "waymo",
-            "headline_html": "<b>Waymo：评估进军佛罗里达州皮内拉斯县</b>；Phoenix East Valley扩大 55平方英里服务范围；加州公共事业委员会获批服务扩展至加州18县；累计进口3,200辆Ojai",
+            "headline_html": "<b>Waymo：评估进军佛罗里达州皮内拉斯县</b>；Phoenix East Valley扩大55平方英里服务范围；加州公共事业委员会批准其服务扩展至加州18县；累计进口3,200辆Ojai",
             "sub_items": [
               {
                 "label": "b",
-                "content_html": "<b>8月13日，</b>媒体报告称Waymo正在评估进军<b>佛罗里达州皮内拉斯县（Pinellas County，含圣彼得堡、克利尔沃特）</b>的可能性。"
+                "content_html": "<b>8月13日，</b>媒体报告称Waymo正在评估进军<b>佛罗里达州皮内拉斯县的可能性</b>（Pinellas County，含圣彼得堡、克利尔沃特）<b>。</b>"
               },
               {
                 "label": "",
-                "content_html": "<b>8月14日</b>，<b>Phoenix 东山谷（East Valley）扩大 55平方英里服务范围</b>，Phoenix 总服务覆盖面积达到 350平方英里。服务还将很快扩展至梅萨网关机场（Mesa Gateway Airport）。"
+                "content_html": "<b>8月14日</b>，<b>Phoenix 东山谷（East Valley）扩大 55 平方英里服务范围</b>，Phoenix 总服务覆盖面积达到 350平方英里。服务还将很快扩展至梅萨网关机场（Mesa Gateway Airport）。"
               },
               {
                 "label": "",
@@ -85,13 +85,13 @@
             "sub_items": [
               {
                 "label": "",
-                "content_html": "<b>8月12日</b>，路透社报道称文远知行正在积极与澳大利亚监管机构沟通 Robotaxi 部署计划，并评估进入东南亚、韩国、日本及更多欧洲国家的可能"
+                "content_html": "<b>8月13日</b>，路透社报道称，文远知行正在积极与澳大利亚监管机构沟通 Robotaxi 部署计划，并评估进入东南亚、韩国、日本及更多欧洲国家的可能"
               }
             ]
           }
         ]
       }
     ],
-    "edited_at": "2026-08-17T06:11:07.791Z"
+    "edited_at": "2026-08-17T06:14:43.927Z"
   }
 ]
