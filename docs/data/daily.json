@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-08-20",
+    "items": [
+      {
+        "id": "2026-08-20-001",
+        "date": "2026-08-20",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Ojai 正式向旧金山、凤凰城、洛杉矶全体公众开放；同步宣布集成 Gemini",
+        "summary_html": "<p>Waymo 正式宣布，新一代 Robotaxi <b>Ojai</b>（基于极氪车身）在<b>旧金山、凤凰城、洛杉矶</b>三城同步向所有公众开放，无需候补名单；早期用户反映车内空间更大、乘坐更安静，内饰与旧款 Jaguar I-PACE 明显不同。同步披露，Google 已将 <b>Gemini</b> 大语言模型集成进 Ojai 车机，提供语音对话与乘车辅助功能，是首个 L4 Robotaxi 前装 LLM 语音助手的商业案例。Forbes 等媒体指出 Ojai 的成本优势（极氪车身关税下仍划算）将加速车队规模化。</p>",
+        "source_name": "The Tech Buzz / KTLA / San Francisco Chronicle / Forbes",
+        "source_url": "https://news.google.com/search?q=Waymo+Ojai+open+all+riders+San+Francisco+Phoenix+Los+Angeles+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-19",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-20-002",
+        "date": "2026-08-20",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "进入洛斯加托斯（Los Gatos）及 Coastside 沿海地区，Bay Area 持续扩张",
+        "summary_html": "<p>Waymo 在湾区进一步扩张：<b>Los Gatos</b>（圣克拉拉县）和 <b>Coastside</b>（含 Half Moon Bay）先后获批，标志着 Waymo 服务区从城市核心区延伸至半岛郊区及沿海。这是 CPUC 18 县批准后湾区具体落地的连续动作。</p>",
+        "source_name": "Los Gatan / Coastside News",
+        "source_url": "https://news.google.com/search?q=Waymo+Los+Gatos+Coastside+robotaxi+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-19",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-20-003",
+        "date": "2026-08-20",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Cybercab 发布活动地点公布，UI 曝光显示分屏地图；Austin 新建 80 桩无线充电站",
+        "summary_html": "<p>Tesla 公布 Cybercab 正式发布活动地点，并开放公众无需 Robotaxi 试乘即可申请邀请入场（Not A Tesla App 报道）；内部 UI 截图曝光，显示分屏地图、漫游（Roaming）和竞技场（Rodeo）控制模式，暗示 Cybercab 将支持多种运营场景。同期，Austin 美国-Statesman 报道 Tesla 正在当地新建配备 <b>80 个无线充电桩</b>的充电站，为即将上路的 Cybercab 车队服务，进一步印证本月量产路试的时间表。</p>",
+        "source_name": "Not A Tesla App / Austin American-Statesman",
+        "source_url": "https://news.google.com/search?q=Tesla+Cybercab+launch+event+location+UI+Austin+charging+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-19",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-20-004",
+        "date": "2026-08-20",
+        "company": "Uber + 小马智行 + Verne",
+        "company_slug": "uber",
+        "group": "国外",
+        "sub_group": "国外出行平台",
+        "title": "在萨格勒布正式启动欧洲首个自动驾驶乘车服务",
+        "summary_html": "<p>Uber 与小马智行（Pony.ai）、克罗地亚本地出行公司 <b>Verne</b> 合作，在<b>萨格勒布（Zagreb，克罗地亚）</b>正式上线自动驾驶乘车服务，这是 Uber 在欧洲推出的<b>首个商业化自动驾驶乘车</b>。Reuters、Investing.com 等确认当日已有乘客乘坐，当前阶段仍有安全员在场。此次落地是此前宣布的 Pony.ai + Uber 欧洲/中东 2000 辆合同的第一个实际城市节点，Verne 是小马智行在克罗地亚的本地合作运营方。</p>",
+        "source_name": "Reuters / Investing.com / Reddit",
+        "source_url": "https://news.google.com/search?q=Uber+Pony.ai+Verne+Zagreb+autonomous+rides+Europe+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-19",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-20-005",
+        "date": "2026-08-20",
+        "company": "Rivian",
+        "company_slug": "rivian",
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1",
+        "title": "Rivian 拆分子公司 Also 完成 1.5 亿美元 D 轮融资，专攻自动驾驶小型 EV",
+        "summary_html": "<p>Rivian 旗下自动驾驶小型 EV 子公司 <b>Also</b> 完成 <b>1.5 亿美元 D 轮</b>融资（SiliconANGLE / Rivian 官方确认），目标加速自动驾驶小型电动车落地，定位低速/最后一英里场景，与 Nuro 等竞争。Also 独立运营，不依赖 Rivian 主品牌乘用车平台。</p>",
+        "source_name": "SiliconANGLE",
+        "source_url": "https://news.google.com/search?q=Rivian+Also+150M+Series+D+autonomous+small+EV+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-19",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-20-006",
+        "date": "2026-08-20",
+        "company": "如祺出行",
+        "company_slug": "ruqi",
+        "group": "国内",
+        "sub_group": "国内出行平台",
+        "title": "上半年亏损收窄 45.2%，但 Robotaxi 商业化变现路径仍待厘清",
+        "summary_html": "<p>如祺出行发布 2026 上半年业绩：<b>亏损同比收窄 45.2%</b>，运营效率持续改善；但搜狐报道指出 Robotaxi 变现难题尚未解决——补贴依赖与单车经济性之间的矛盾仍是核心挑战。文章认为 Robotaxi 已成\"行业共同押注方向\"，但各公司变现路径分化明显。</p>",
+        "source_name": "搜狐",
+        "source_url": "https://www.baidu.com/s?wd=%E5%A6%82%E7%A5%BA%E5%87%BA%E8%A1%8C+%E4%B8%8A%E5%8D%8A%E5%B9%B4%E4%BA%8F%E6%8D%9F%E6%94%B6%E7%AA%8445%25+Robotaxi%E5%8F%98%E7%8E%B0+2026",
+        "published_at": "2026-08-19",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-20-007",
+        "date": "2026-08-20",
+        "company": "比亚迪高管",
+        "company_slug": "byd",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "智驾能力已强过华为，数据量是关键壁垒",
+        "summary_html": "<p>比亚迪高管公开表态，<b>比亚迪自研智驾能力已超越华为</b>，核心差异化在于自有数据量规模——比亚迪年销量超300万辆带来的驾驶数据积累是外部供应商无法复制的壁垒。该言论引发行业关注，新浪报道标题称\"只是没人相信\"，暗示市场对比亚迪智驾感知度仍不及华为。背景：比亚迪正在强力推进\"天神之眼\"自研智驾，减少对华为等外部方案的依赖。</p>",
+        "source_name": "新浪网",
+        "source_url": "https://www.baidu.com/s?wd=%E6%AF%94%E4%BA%9A%E8%BF%AA%E9%AB%98%E7%AE%A1+%E6%99%BA%E9%A9%BE%E8%83%BD%E5%8A%9B%E6%AF%94%E5%8D%8E%E4%B8%BA%E5%BC%BA+%E6%95%B0%E6%8D%AE%E9%87%8F%E5%85%B3%E9%94%AE+2026",
+        "published_at": "2026-08-19",
+        "rating": 2,
+        "lang": "zh"
+      }
+    ]
+  },
+  {
     "date": "2026-08-19",
     "items": [
       {
