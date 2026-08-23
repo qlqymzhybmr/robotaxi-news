@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-08-23",
+    "items": [
+      {
+        "id": "2026-08-23-001",
+        "date": "2026-08-23",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Cybercab 正式发布活动日期确认，邀请函已发出；多方机构看多规模化路径",
+        "summary_html": "<p>Not A Tesla App 报道，Tesla 已向受邀者<b>正式发出 Cybercab 发布活动邀请函</b>，活动日期随之曝光，标志着 Cybercab 从\"即将到来\"进入倒计时阶段。同日，《纽约时报》、A News 等多家主流媒体以\"即将正式发布\"为主题跟进报道。JPMorgan 分析师同期指出，Tesla 对 Cybercab <b>规模化运营高度自信</b>，并强调未来更多无人驾驶车型在规划中；《华尔街日报》Dan Neil 试乘后公开称 Tesla FSD\"令人惊叹（Amazing）\"，另一篇 WSJ 评测将 FSD 评为新款 Model Y 的最大亮点。多重信号汇聚，Tesla Robotaxi 商业化节点预计将在近期正式明确。</p>",
+        "source_name": "Not A Tesla App / WSJ / JPMorgan / A News",
+        "source_url": "https://news.google.com/search?q=Tesla+Cybercab+launch+event+date+invite+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-22",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-23-002",
+        "date": "2026-08-23",
+        "company": "NVIDIA",
+        "company_slug": "nvidia",
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1",
+        "title": "NVIDIA Cosmos 3 发布，专为自动驾驶与机器人训练市场设计",
+        "summary_html": "<p>NVIDIA 正式发布 <b>Cosmos 3</b> 世界基础模型，明确瞄准<b>自动驾驶与具身机器人</b>的合成数据生成与训练市场（Gasgoo 报道）。Cosmos 系列的核心价值在于用物理引擎生成高质量\"世界模型\"训练数据，替代昂贵的真实道路数据采集，是 AV 公司在降低数据成本、加速迭代方面的关键工具。此前 Waymo、Aurora 等均已与 NVIDIA 在合成数据训练上有合作，Cosmos 3 的发布将进一步降低中小 AV 公司的训练门槛。</p>",
+        "source_name": "Gasgoo",
+        "source_url": "https://news.google.com/search?q=NVIDIA+Cosmos+3+autonomous+driving+robotics+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-22",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-23-003",
+        "date": "2026-08-23",
+        "company": "地平线余凯",
+        "company_slug": "horizon",
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "title": "HSD 绝对比特斯拉 FSD 更懂中国路，高阶辅助驾驶要让普通家庭用得上",
+        "summary_html": "<p>地平线 CEO <b>余凯</b>在成都车展多个场合公开发声，直接点名特斯拉 FSD，称<b>地平线 HSD（Horizon Smart Driving）在中国道路场景上绝对优于 FSD</b>，核心差异在于对中国本土路况、驾驶习惯与地图数据的深度适配。余凯同时提出\"让高阶辅助驾驶走入万千家庭\"的战略定位，强调地平线目标是将高阶智驾成本打入主流市场价格带。背景：地平线已通过博世渠道进入欧洲16国，国内与大众、BMW iX3 等合作同步落地，正从\"芯片供应商\"向\"智驾解决方案平台\"转型。</p>",
+        "source_name": "手机新浪网 / 新浪财经 / 驱动之家",
+        "source_url": "https://www.baidu.com/s?wd=%E5%9C%B0%E5%B9%B3%E7%BA%BF%E4%BD%99%E5%87%AF+HSD+%E6%AF%94%E7%89%B9%E6%96%AF%E6%8B%89FSD%E6%9B%B4%E6%87%82%E4%B8%AD%E5%9B%BD%E8%B7%AF+2026",
+        "published_at": "2026-08-22",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-23-004",
+        "date": "2026-08-23",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "title": "奔驰 GLE L 成都首发，60 万级豪华 SUV 首搭 Momenta 智驾",
+        "summary_html": "<p>成都车展，<b>奔驰 GLE L</b>（国内加长版）正式亮相，成为国内首款 <b>60 万级豪华 SUV 搭载 Momenta 智驾方案</b>的量产车型（汽车之家报道）。这标志着 Momenta 的客户结构从自主品牌（荣威、MG、大众）向顶级合资豪华品牌延伸，是其商业化版图的重要跃升。此前 Momenta 已与 BMW、上汽大众、现代 iX3 等合作，奔驰 GLE L 是迄今定价最高的合作车型。</p>",
+        "source_name": "汽车之家",
+        "source_url": "https://www.baidu.com/s?wd=%E5%A5%94%E9%A9%B0GLE+L+%E6%88%90%E9%83%BD%E8%BD%A6%E5%B1%95+Momenta%E6%99%BA%E9%A9%BE+2026",
+        "published_at": "2026-08-22",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-23-005",
+        "date": "2026-08-23",
+        "company": "一汽",
+        "company_slug": "faw",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "L4 级智驾与固态电池同步落地，科技向普通消费者下放",
+        "summary_html": "<p>一汽集团在成都车展披露，将推动 <b>L4 级自动驾驶</b>与<b>固态电池</b>两项前沿技术同步面向普通消费者落地（汽车之家两篇报道确认）。一汽此前已获 L4 Robotaxi 测试牌照，此次与固态电池打包落地的方向，意在构建\"长续航 + 高阶自动驾驶\"的完整产品组合，与华为系、小鹏等高阶智驾玩家形成差异化竞争。具体量产车型与时间节点待官方进一步披露。</p>",
+        "source_name": "汽车之家",
+        "source_url": "https://www.baidu.com/s?wd=%E4%B8%80%E6%B1%BD+L4%E6%99%BA%E9%A9%BE+%E5%9B%BA%E6%80%81%E7%94%B5%E6%B1%A0+%E6%99%AE%E6%83%A0+2026",
+        "published_at": "2026-08-22",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-23-006",
+        "date": "2026-08-23",
+        "company": "蔚来",
+        "company_slug": "nio",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "蔚来 2026 款\"5566\"系列正式上市，配置升级并新增智驾小蓝灯",
+        "summary_html": "<p>蔚来 2026 款全系（ES5、ES6、EC6、ET5 等\"5566\"阵列）正式上市，核心升级包括配置提升及新增<b>智驾状态指示\"小蓝灯\"</b>——这是蔚来首次在量产车上以物理灯光向外部环境主动告知自动驾驶激活状态，与 Waymo 的外部指示灯理念一致，也呼应了监管对 AV 外部可识别性的要求趋势。</p>",
+        "source_name": "汽车之家",
+        "source_url": "https://www.baidu.com/s?wd=%E8%94%9A%E6%9D%A52026%E6%AC%BE5566%E4%B8%8A%E5%B8%82+%E6%99%BA%E9%A9%BE%E5%B0%8F%E8%93%9D%E7%81%AF+2026",
+        "published_at": "2026-08-22",
+        "rating": 2,
+        "lang": "zh"
+      }
+    ]
+  },
+  {
     "date": "2026-08-22",
     "items": [
       {
