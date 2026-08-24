@@ -11,26 +11,22 @@
           {
             "company": "Tesla",
             "company_slug": "tesla",
-            "headline_html": "<b>Tesla：近期数据&nbsp;</b>Robotaxi 显示在奥斯汀进入全无人运营；Cybercab 定档9月3日德克萨斯发布；本月发生路障冲穿事故",
+            "headline_html": "<b>Tesla：</b>Cybercab 定档9月3日德克萨斯发布；本月发生路障冲撞事故",
             "sub_items": [
-              {
-                "label": "a",
-                "content_html": "<b>8月21日</b>，民间三方平台发布最新统计数据显示 Tesla Robotaxi（Model Y）在奥斯汀过去两周内记录的<b>170 次Robotaxi 行程</b>中，每趟行程<b>车内均未配备安全员</b>。"
-              },
               {
                 "label": "b",
                 "content_html": "<b>8月19日</b>，Tesla 宣布于 9月3日在<b>德克萨斯州奥斯汀举办 Cybercab 发布活动，</b>在奥斯汀正式上线服务并开放商业化运营，同步披露 FSD V15 已在Robotaxi车队展开测试。"
               },
               {
                 "label": "c",
-                "content_html": "<b>8月18日</b>，媒体报道称，一辆无安全员的特斯拉 Model Y Robotaxi 在奥斯汀误驶入隔离区域，在已检测障碍物并多次停顿的情况下，最终选择<b>直接冲撞并碾压塑料隔离柱</b>后驶离。"
+                "content_html": "<b>8月18日</b>，媒体报道称，一辆无安全员的特斯拉 Model Y Robotaxi 在奥斯汀误驶入隔离区域，在已检测障碍物到并多次停顿的情况下，最终选择<b>直接冲撞并碾压塑料隔离柱（Bollard）</b>后驶离。"
               }
             ]
           },
           {
             "company": "Waymo",
             "company_slug": "waymo",
-            "headline_html": "<b>Waymo：休斯顿发放商业运营服务；</b>Ojai 车型在旧金山、凤凰城、洛杉矶提供服务；发布自研5nm芯片；空车状态下持续录像",
+            "headline_html": "<b>Waymo：休斯顿开放商业运营服务；</b>Ojai 车型在旧金山、凤凰城、洛杉矶提供服务；发布5nm自研传感器数据处理芯片；空车状态下持续录像",
             "sub_items": [
               {
                 "label": "b",
@@ -42,22 +38,22 @@
               },
               {
                 "label": "",
-                "content_html": "<b>8月20日</b>，Waymo 发布首款自研<b>5nm ASIC自动驾驶芯片</b>，单芯片算力超1000 TOPS，三星提供车规级内存与闪存芯片；延续 Nvidia（推理芯片）与AMD（异构计算芯片）多供应商架构，形成冗余备份。"
+                "content_html": "<b>8月20日</b>，Waymo 发布首款自研<b>5nm ASIC自动驾驶数据处理芯片</b>，用于对传感器原始数据做实时融合处理。单芯片算力超1000 TOPS，三星提供车规级内存与闪存芯片。"
               },
               {
                 "label": "",
-                "content_html": "<b>8月23日</b>，媒体报道称 Waymo <b>空车状态下时持续录像</b>，29个外部摄像头及麦克风仍保持开启并记录周围街道与行人，Waymo 拒绝公开说明视/音频的具体存储时长。"
+                "content_html": "<b>8月23日</b>，媒体报道称 Waymo <b>空车状态下时持续录像</b>，29个外部摄像头及麦克风仍保持开启并记录周围街道与行人，Waymo 拒绝公开并说明视/音频存储时长。"
               }
             ]
           },
           {
             "company": "Uber + 小马智行 / 百度",
             "company_slug": "uber",
-            "headline_html": "<b>Uber：与小马智行在克罗地亚</b>萨格勒布推出Robotaxi商业化运营服务；与萝卜快跑在迪拜推出Robotaxi商业化运营服务",
+            "headline_html": "<b>Uber：与小马智行在克罗地亚</b>萨格勒布正式推出Robotaxi商业化运营服务；与萝卜快跑在迪拜推出Robotaxi商业化运营服务",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月19日</b>，Uber 联合小马智行及本地合作方 Verne 在<b>克罗地亚萨格勒布提供 Robotaxi商业化运营服务</b>，乘客可以通过 Uber App 叫到小马智行 Robotaxi 车辆，目前车内配备安全员，车辆运营时间为 7:00-21:00。"
+                "content_html": "<b>8月19日</b>，Uber 联合小马智行及本地合作方 Verne 在<b>克罗地亚萨格勒布提供 Robotaxi商业化运营服务</b>，乘客可以通过 Uber App 叫到小马智行 Robotaxi车辆，<b>目前车内配备安全员</b>，车辆运营时间为 7:00-21:00。"
               },
               {
                 "label": "b",
@@ -72,16 +68,16 @@
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>8月18日</b>，Zoox Robotaxi 付费商业运营服务扩展至<b>旧金山</b>；同日媒体在拉斯维加斯完成 6次试乘后披露，Zoox 同路线的<b>平均价格比 Lyft 高 ~57%</b>。"
+                "content_html": "<b>8月18日</b>，Zoox Robotaxi付费商业运营服务扩展至<b>旧金山</b>；同日媒体在拉斯维加斯试乘6次后披露，Zoox 同路线的<b>平均价格比 Lyft 高~57%</b>。"
               }
             ]
           },
           {
-            "headline_html": "监管审批：内华达交通局批准Tesla/Waymo/Uber合计部署 ~8,000辆Robotaxi",
+            "headline_html": "监管：内华达交通局批准Tesla/Waymo/Uber合计部署 ~8,000辆Robotaxi",
             "sub_items": [
               {
                 "label": "",
-                "content_html": "<b>8月21日</b>，<b>内华达州交通局</b>批准 Tesla、Waymo 及 Uber 在未来 12个月内在该州（Las Vegas 大都会区）~<b>8,000辆 Robotaxi的商业运营资格</b>（总额上限），其中特斯拉获得份额为 5,000辆，Waymo 与 Uber 均为 1,000辆。"
+                "content_html": "<b>8月21日</b>，<b>内华达州交通局</b>批准 Tesla、Waymo 及 Uber 在未来 12个月内在该州（Las Vegas 大都会区）~<b>8,000辆 Robotaxi的商业运营资格</b>（总额上限），其中特斯拉获得份额为 5,000辆，Waymo与Uber均为 1,000辆。"
               }
             ]
           }
@@ -104,7 +100,7 @@
         ]
       }
     ],
-    "edited_at": "2026-08-24T08:03:33.898Z"
+    "edited_at": "2026-08-24T08:12:22.178Z"
   },
   {
     "week_id": "2026-W34",
