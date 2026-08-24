@@ -1,5 +1,91 @@
 [
   {
+    "week_id": "2026-W35",
+    "date_range": "0818-0824",
+    "title": "W35 Robotaxi 周报（2026-08-18 ~ 2026-08-24）",
+    "generated_at": "2026-08-24",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>Robotaxi 在奥斯汀进入全无人运营；Cybercab 定档9月3日德克萨斯发布；本月发生路障冲穿事故",
+            "items": [
+              {
+                "summary_html": "<p><b>8月21日</b>，Tesla Robotaxi（Model Y）在奥斯汀正式进入全无人运营，车内无安全员；同日披露 FSD V15 定位「阶跃性提升」；Cybercab 后续透露将扩展更多专用车型。</p>"
+              },
+              {
+                "summary_html": "<p><b>8月19日</b>，Tesla 宣布 Cybercab 发布活动并开放公众抽签申请邀请函；<b>8月20日</b>，活动地点公布，UI 截图曝光（含分屏地图、Roaming/Rodeo 控制模式），Austin 新建80桩无线充电站；<b>8月23-24日</b>，多家媒体确认活动定档 <b>9月3日</b> 德克萨斯，Giga Texas 内目击 FSD V15 多车道停车标志训练。</p>"
+              },
+              {
+                "summary_html": "<p><b>8月18-19日</b>，Reddit 视频及 Electrek 报道确认，Tesla Robotaxi 在奥斯汀冲穿多个路障后继续行驶；无懈可击公告发出数周后即发生。</p>"
+              }
+            ]
+          },
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>Ojai 向三城全体公众开放并集成 Gemini；丹佛/休斯顿相继开放；发布自研5nm芯片；拉斯维加斯发生碰撞事故",
+            "items": [
+              {
+                "summary_html": "<p><b>8月20日</b>，新一代 Robotaxi Ojai（极氪车身）在旧金山、凤凰城、洛杉矶三城同步向所有乘客开放，无候补名单，车内集成 Gemini 语音助手。<b>8月19日</b>宣布进入丹佛（年内向公众开放）；<b>8月21日</b>休斯顿向全体公众开放；Bay Area 新增 Los Gatos 及 Coastside（Half Moon Bay）服务区。</p>"
+              },
+              {
+                "summary_html": "<p><b>8月20-21日</b>，Waymo 发布首款自研5nm ASIC自动驾驶芯片，算力超1000 TOPS；三星车规级内存配套供货；延续 Nvidia/AMD 多供应商架构。</p>"
+              },
+              {
+                "summary_html": "<p><b>8月19日</b>，拉斯维加斯南部一辆 Waymo 发生碰撞事故，至少1人受伤。<b>8月23日</b>，媒体报道 Waymo 空车时持续录像，拒绝说明存储时长。</p>"
+              }
+            ]
+          },
+          {
+            "company": "Uber + 小马智行 / 百度",
+            "company_slug": "uber",
+            "headline_html": "<b>Uber + 小马智行 / 百度：</b>萨格勒布启动欧洲首个商业自动驾驶乘车；百度 Apollo Go 迪拜全无人上线",
+            "items": [
+              {
+                "summary_html": "<p><b>8月19-20日</b>，Uber 联合小马智行（Pony.ai）及本地合作方 Verne 在克罗地亚萨格勒布上线商业自动驾驶乘车服务，当前仍有安全员，是 Uber 在欧洲首个商业化自动驾驶城市节点。</p>"
+              },
+              {
+                "summary_html": "<p><b>8月20-21日</b>，Uber 联合百度 Apollo Go 在迪拜上线全无人驾驶 Robotaxi，乘客通过 Uber App 呼叫；小马智行第七代 Robotaxi 同期正式接入 Uber 平台，股价涨近6%。</p>"
+              }
+            ]
+          },
+          {
+            "company": "Zoox",
+            "company_slug": "zoox",
+            "headline_html": "<b>Zoox：</b>付费服务扩展至旧金山；票价高于 Lyft 同路线约20-30%；内华达批准 Tesla/Waymo/Aviari 共7,000辆",
+            "items": [
+              {
+                "summary_html": "<p><b>8月18-19日</b>，Zoox 付费 Robotaxi 从拉斯维加斯扩展至旧金山；路线测试结果披露：同路线票价高于 Lyft 约20-30%。</p>"
+              },
+              {
+                "summary_html": "<p><b>8月21日</b>，内华达州交通局批准 Tesla、Waymo 及 Uber 旗下 AV 品牌 Aviari 在克拉克县（Las Vegas 大都会区）合计约7,000辆 Robotaxi 运营资格。</p>"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "鸿蒙智行",
+            "company_slug": "hongmeng",
+            "headline_html": "<b>鸿蒙智行：</b>尊界 V800/V680 获批合肥市 L3 级自动驾驶测试牌照",
+            "items": [
+              {
+                "summary_html": "<p><b>8月17日</b>，鸿蒙智行尊界 V800 和 V680 获批合肥市 L3 级自动驾驶测试牌照，首批获城市级 L3 测试许可的豪华 MPV；合肥是继上海之后第二个系统性推进 L3 测试的城市。</p>"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W34",
     "date_range": "0811-0817",
     "title": "无人驾驶行业0811-0817重要新闻",
