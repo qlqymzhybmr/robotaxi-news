@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-08-27",
+    "items": [
+      {
+        "id": "2026-08-27-001",
+        "date": "2026-08-27",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla Robotaxi 运营扩至 6am-10pm 全天候；无监督车队规模与智能度\"大幅提升\"",
+        "summary_html": "<p>Not A Tesla App、Reddit/SelfDrivingCars 等多渠道确认，Tesla Robotaxi 在奥斯汀的运营时间已正式扩展至<b>每天 6am-10pm、一周7天</b>，较此前大幅延长。Tesla 同步表示无监督（Unsupervised）车队规模\"<b>显著更大</b>\"，系统智能度也有明显提升。Austin American-Statesman 报道此次扩容恰逢 <b>Cybercab 9月3日</b>发布前一周，被视为 Tesla 为发布活动铺垫信心的重要信号——尽管上周刚发生了 Robotaxi 2.3英里耗时66分钟的负面事件。</p>",
+        "source_name": "Not A Tesla App / Austin American-Statesman",
+        "source_url": "https://news.google.com/search?q=Tesla+robotaxi+hours+expanded+6am+10pm+unsupervised+fleet+larger+smarter+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-26",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-27-002",
+        "date": "2026-08-27",
+        "company": "Tesla 澄清",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "中国 FSD 研发从未停止；官网省略系技术性调整非战略撤退",
+        "summary_html": "<p>Electrek 报道，此前 Tesla 中国官网被发现删去 FSD 相关描述，引发市场大规模揣测 Tesla 或放弃在华 FSD 推进计划。Tesla 随后正式否认，称<b>中国 FSD 研发工作持续推进</b>，官网改动属技术性页面调整，无战略意义。背景：Tesla FSD 在华受制于数据出境审查，一直未正式上线，但本次澄清显示 Tesla 仍将中国视为重要 FSD 市场。</p>",
+        "source_name": "Electrek",
+        "source_url": "https://news.google.com/search?q=Tesla+FSD+China+denies+abandoning+full+self-driving+website+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-26",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-27-003",
+        "date": "2026-08-27",
+        "company": "Waymo 两连发",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "严重事故率仅人类驾驶员 1/16；Axios 独家——\"相机不够，自动驾驶无 AI 捷径\"",
+        "summary_html": "<p><b>安全数据</b>：Waymo 官方发布数据，其 Robotaxi 严重事故发生率仅为人类司机的 <b>1/16</b>，同步发布《200M 英里全自动驾驶里程总结：10 大 AI 经验》白皮书，强调感知冗余与长尾场景积累的不可替代性。<b>技术路线立场</b>：Axios 独家报道，Waymo 明确表态<b>\"相机单独不够（Cameras aren't enough）\"</b>，自动驾驶无 AI 捷径可走，直接回应 Tesla 纯视觉路线的挑战。Waymo 同日宣布成为<b>维加斯威尼斯人酒店</b>首个官方 Robotaxi 合作伙伴，服务酒店客人出行。</p>",
+        "source_name": "Waymo 官方 / Axios / 新浪财经",
+        "source_url": "https://news.google.com/search?q=Waymo+accident+rate+1/16+human+drivers+no+AI+shortcut+cameras+not+enough+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-26",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-27-004",
+        "date": "2026-08-27",
+        "company": "萝卜快跑亮相第18届国际交通展",
+        "company_slug": "luobo",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "28城、2300万单；宣布加速全球出海",
+        "summary_html": "<p>凤凰网报道，百度萝卜快跑在<b>第18届国际交通技术展览会</b>上发布最新运营数据：已在国内 <b>28座城市</b>部署 Robotaxi，累计完成订单超 <b>2,300万单</b>。萝卜快跑同步宣布将加速<b>全球出海</b>布局，迪拜（Uber 合作全无人）已成首个海外商业落点，未来将持续推进中东、东南亚等市场。</p>",
+        "source_name": "凤凰网",
+        "source_url": "https://www.baidu.com/s?wd=%E8%90%9D%E5%8D%9C%E5%BF%AB%E8%B7%9F28%E5%9F%8E2300%E4%B8%87%E5%8D%95+%E5%9B%BD%E9%99%85%E4%BA%A4%E9%80%9A%E5%B1%95+%E5%87%BA%E6%B5%B7+2026",
+        "published_at": "2026-08-26",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-27-005",
+        "date": "2026-08-27",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "小马智行加入 MSCI 中国指数，成全球首家自动驾驶成分股",
+        "summary_html": "<p>南方财经报道，小马智行（Pony.ai）正式被纳入 <b>MSCI 中国指数</b>，成为全球<b>首家进入 MSCI 中国成分股的自动驾驶公司</b>。MSCI 指数是全球机构资金配置的重要基准，纳入意味着小马智行将获得被动资金持续流入，有助于改善其股票流动性与估值锚定，也是国际资本市场对其商业化进展的阶段性认可。</p>",
+        "source_name": "南方财经",
+        "source_url": "https://www.baidu.com/s?wd=%E5%B0%8F%E9%A9%AC%E6%99%BA%E8%A1%8C+MSCI%E4%B8%AD%E5%9B%BD%E6%8C%87%E6%95%B0+%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%88%90%E5%88%86%E8%82%A1+2026",
+        "published_at": "2026-08-26",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-27-006",
+        "date": "2026-08-27",
+        "company": "极氪 / Waymo",
+        "company_slug": "waymo",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "Waymo 每月从中国进口约300辆极氪CM1e（Ojai）用于 Robotaxi 车队",
+        "summary_html": "<p>网通社报道，Waymo 目前每月从中国进口约 <b>300辆极氪CM1e</b>（即 Ojai Robotaxi 的量产底盘），用于持续扩张其 Robotaxi 车队。这是目前已知最具体的 Waymo 车队补充速度数据：按此节奏，Waymo 每年新增约3,600辆，对应其在美国多城的扩张计划。数据同时揭示 Waymo 在整车制造端对<b>中国供应链的高度依赖</b>，在中美贸易摩擦背景下具有潜在供应链风险敞口。</p>",
+        "source_name": "网通社",
+        "source_url": "https://www.baidu.com/s?wd=Waymo%E6%AF%8F%E6%9C%88%E8%BF%9B%E5%8F%A3300%E8%BE%86%E6%9E%81%E6%B0%AACM1e+Ojai+Robotaxi+2026",
+        "published_at": "2026-08-26",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-27-007",
+        "date": "2026-08-27",
+        "company": "智己LS6无方向盘版测试车内饰首曝",
+        "company_slug": "zhiji",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "直指L5自动驾驶",
+        "summary_html": "<p>驱动之家、新浪财经等多家媒体披露，上汽智己 <b>LS6 无方向盘版本</b>测试车内饰照片曝光，车内已完全移除方向盘与驾驶操控装置，被解读为上汽正在为<b>L5 全自动驾驶</b>预研底盘架构。智己此前的 L6 已搭载 Momenta 高阶智驾，此次无方向盘版本测试或为技术验证平台，量产时间表尚未公布。</p>",
+        "source_name": "驱动之家 / 新浪财经",
+        "source_url": "https://www.baidu.com/s?wd=%E6%99%BA%E5%B7%B1LS6%E6%97%A0%E6%96%B9%E5%90%91%E7%9B%98%E6%B5%8B%E8%AF%95%E8%BD%A6+L5%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6+2026",
+        "published_at": "2026-08-26",
+        "rating": 2,
+        "lang": "zh"
+      }
+    ]
+  },
+  {
     "date": "2026-08-26",
     "items": [
       {
