@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-08-28",
+    "items": [
+      {
+        "id": "2026-08-28-001",
+        "date": "2026-08-28",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla 德州单日注册79辆 Robotaxi，车队总量达270辆；内华达5,000辆许可实际仅约20辆上路；宣布扩至奥斯汀/迈阿密以外城市",
+        "summary_html": "<p>Not A Tesla App 及多家媒体确认，Tesla <b>单日在德克萨斯州注册79辆 Model Y Robotaxi</b>，截至8月27日德州无监督车队总量已达 <b>270辆</b>，是目前最快的单日扩张速度记录。与此同时，The Drive 报道一个强烈对比：尽管内华达州已批准 Tesla 部署 <b>5,000辆</b>运营上限，实际上路运营的车辆仍约为 <b>20辆</b>，监管许可与实际落地之间存在约250倍的差距。另据报道，Elon Musk 宣布 Tesla Robotaxi 将在奥斯汀和迈阿密之外<b>扩张至更多城市</b>，具体名单尚未公布。</p>",
+        "source_name": "Not A Tesla App / The Drive",
+        "source_url": "https://news.google.com/search?q=Tesla+79+robotaxis+Texas+fleet+270+Nevada+5000+20+on+road+expand+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-27",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-28-002",
+        "date": "2026-08-28",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo 丹佛上线首周即发生碰撞事故；再炮轰 Tesla FSD——\"只是错误的顶峰（False Summit）\"",
+        "summary_html": "<p>9News 报道，一辆 Waymo 在<b>丹佛</b>发生与普通车辆的碰撞事故，是 Waymo 正式进入丹佛市场后极短时间内发生的首起碰撞记录。Electrek 同日援引 Waymo 高管采访，Waymo 将 Tesla FSD 的技术路线定性为\"<b>False Summit（伪顶峰）</b>\"——表面看来已接近终点，实则距真正的全自动驾驶还有更远的路要走，是对昨日 Axios \"no AI shortcut\" 立场的延续。Waymo 另宣布，<b>Ojai</b> 新一代 Robotaxi 已在洛杉矶等城市进入正常商业服务。</p>",
+        "source_name": "9News Denver / Electrek",
+        "source_url": "https://news.google.com/search?q=Waymo+Denver+crash+false+summit+Tesla+FSD+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-27",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-28-003",
+        "date": "2026-08-28",
+        "company": "Waymo / Zoox",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo 和 Zoox 的测试司机因 Robotaxi 频繁急刹急转遭受扭伤和鞭抽伤，劳工安全争议浮出水面",
+        "summary_html": "<p>一篇深度报道披露，Waymo 和 Zoox 的<b>安全员兼测试司机</b>正在以异常高的频率遭受<b>扭伤、颈部鞭抽伤（whiplash）、背痛</b>等职业伤害，根源在于 Robotaxi 在特定场景下的急刹车和急转向过于频繁，乘坐体验对人体冲击远超普通驾驶。这一报道将\"Robotaxi 是否安全\"的讨论从乘客延伸至<b>负责监控车辆的工人</b>，也引发对 AV 行业劳工保护标准缺失的批评。</p>",
+        "source_name": "相关媒体深度报道",
+        "source_url": "https://news.google.com/search?q=Waymo+Zoox+test+drivers+injuries+sprains+whiplash+robotaxi+workers+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-27",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-28-004",
+        "date": "2026-08-28",
+        "company": "现代 / Rivian",
+        "company_slug": "rivian",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "现代 2026 Q4 向 Waymo 交付首批 Ioniq 5 Robotaxi；Rivian 向投资人演示首款正常运转的自动驾驶原型",
+        "summary_html": "<p>新浪财经报道，现代汽车计划于 <b>2026年 Q4</b> 开始向 Waymo 交付首批基于 <b>Ioniq 5（艾尼氪5）</b> 打造的自动驾驶出租车，是继极氪 CM1e（Ojai）之后 Waymo 的第二款主力底盘车型。同日，Rivian 向合作伙伴和机构投资人进行独家演示，展示了其<b>正常运转的自动驾驶原型车</b>，意味着 Rivian 的 AV 开发进度明显加快。</p>",
+        "source_name": "新浪财经 / 相关媒体",
+        "source_url": "https://news.google.com/search?q=Hyundai+Ioniq5+Waymo+robotaxi+2026+Q4+delivery+Rivian+autonomous+prototype+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-27",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-28-005",
+        "date": "2026-08-28",
+        "company": "曹操出行",
+        "company_slug": "caocao",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "曹操出行 H1 营收突破百亿元，亏损收窄；将在香港和阿联酋部署 Robotaxi 车队",
+        "summary_html": "<p>曹操出行发布 2026 年上半年业绩：营收突破 <b>100亿元</b>，同比增长，亏损连续收窄。更受关注的是海外战略：曹操出行宣布将在<b>中国香港</b>和<b>阿联酋</b>推进 Robotaxi 车队部署，探索 L4 商业化落地新增长极。这是继滴滴、如祺、萝卜快跑之后，又一家国内网约车平台明确将 Robotaxi 海外扩张纳入中期战略，也是曹操出行首次公开披露 Robotaxi 出海时间表。</p>",
+        "source_name": "新浪财经 / 新京报 / 搜狐",
+        "source_url": "https://www.baidu.com/s?wd=%E6%9B%B9%E6%93%8D%E5%87%BA%E8%A1%8C%E4%B8%8A%E5%8D%8A%E5%B9%B4%E8%90%A5%E6%94%B6%E7%99%BE%E4%BA%BF+%E9%A6%99%E6%B8%AF%E9%98%BF%E8%81%94%E9%85%8DRobotaxi+2026",
+        "published_at": "2026-08-27",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-28-006",
+        "date": "2026-08-28",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "小鹏 Robotaxi 进入主驾无人路测；VLA 2.0\"30秒时间记忆\"正式上车",
+        "summary_html": "<p>多家媒体（新浪汽车、汽车之家）确认，小鹏 Robotaxi 已从\"副驾安全员\"模式升级为<b>主驾位置无人</b>的真正无人驾驶路测，两个月内完成超 <b>2,000次</b>内部试乘订单后，迈入无监督路测阶段。技术层面，小鹏同步发布<b>第二代 VLA 大模型</b>关键升级：AI 智驾系统加入<b>\"30秒时间记忆\"</b>机制，可在连续路况变化（如多个红绿灯路口）中保持对上下文的理解，避免每个路口从零决策。何小鹏此前宣布的 <b>2027年</b>无安全员载客运营目标路线图进一步清晰。</p>",
+        "source_name": "新浪汽车 / 汽车之家",
+        "source_url": "https://www.baidu.com/s?wd=%E5%B0%8F%E9%B9%8FRobotaxi%E4%B8%BB%E9%A9%BE%E6%97%A0%E4%BA%BA%E8%B7%AF%E6%B5%8B+VLA2.0%E6%97%B6%E9%97%B4%E8%AE%B0%E5%BF%86+2026",
+        "published_at": "2026-08-27",
+        "rating": 3,
+        "lang": "zh"
+      }
+    ]
+  },
+  {
     "date": "2026-08-27",
     "items": [
       {
