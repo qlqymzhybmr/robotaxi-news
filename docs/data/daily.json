@@ -24,6 +24,21 @@
         "company_slug": "waymo",
         "group": "国外",
         "sub_group": "国外 L4",
+        "title": "Waymo 在加州 Costco 停车场与小型厢式车碰撞；网传\"肇事逃逸\"系误读，Waymo 已停车处理",
+        "summary_html": "<p>Yahoo Autos 报道，一辆 Waymo Robotaxi 在<b>加利福尼亚州某 Costco 门店外</b>与一辆小型厢式车（minivan）发生碰撞。事故发生后网络流传\"Waymo 肇事逃逸\"的说法，但报道明确澄清：<b>Waymo 车辆在碰撞后停车等待处理，并非逃逸</b>，肇事逃逸指控系对事故视频或目击描述的误读。事故责任归属尚待调查，但这是 Waymo 同日（8月27日）在丹佛发生碰撞之外的<b>第二起记录在案碰撞事故</b>。</p>",
+        "source_name": "Yahoo Autos",
+        "source_url": "https://news.google.com/search?q=Waymo+Minivan+Collide+California+Costco+Hit-and-Run+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-27",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-28-003",
+        "date": "2026-08-28",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
         "title": "Waymo 丹佛上线首周即发生碰撞事故；再炮轰 Tesla FSD——\"只是错误的顶峰（False Summit）\"",
         "summary_html": "<p>9News 报道，一辆 Waymo 在<b>丹佛</b>发生与普通车辆的碰撞事故，是 Waymo 正式进入丹佛市场后极短时间内发生的首起碰撞记录。Electrek 同日援引 Waymo 高管采访，Waymo 将 Tesla FSD 的技术路线定性为\"<b>False Summit（伪顶峰）</b>\"——表面看来已接近终点，实则距真正的全自动驾驶还有更远的路要走，是对昨日 Axios \"no AI shortcut\" 立场的延续。Waymo 另宣布，<b>Ojai</b> 新一代 Robotaxi 已在洛杉矶等城市进入正常商业服务。</p>",
         "source_name": "9News Denver / Electrek",
@@ -33,7 +48,7 @@
         "lang": "zh"
       },
       {
-        "id": "2026-08-28-003",
+        "id": "2026-08-28-004",
         "date": "2026-08-28",
         "company": "Waymo / Zoox",
         "company_slug": "waymo",
@@ -48,7 +63,7 @@
         "lang": "zh"
       },
       {
-        "id": "2026-08-28-004",
+        "id": "2026-08-28-005",
         "date": "2026-08-28",
         "company": "现代 / Rivian",
         "company_slug": "rivian",
@@ -63,7 +78,7 @@
         "lang": "zh"
       },
       {
-        "id": "2026-08-28-005",
+        "id": "2026-08-28-006",
         "date": "2026-08-28",
         "company": "曹操出行",
         "company_slug": "caocao",
@@ -78,7 +93,7 @@
         "lang": "zh"
       },
       {
-        "id": "2026-08-28-006",
+        "id": "2026-08-28-007",
         "date": "2026-08-28",
         "company": "小鹏",
         "company_slug": "xpeng",
