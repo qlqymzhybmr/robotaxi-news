@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-08-29",
+    "items": [
+      {
+        "id": "2026-08-29-001",
+        "date": "2026-08-29",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Amazon 旗下 Zoox 在旧金山正式推出全无人 Robotaxi 商业服务，与 Waymo 和 Tesla 竞争全面升级",
+        "summary_html": "<p>finance.biggo.com 报道，<b>Amazon 旗下 Zoox</b> 宣布在<b>旧金山</b>正式向公众开放全无人驾驶 Robotaxi 服务，是继 Waymo 之后第二家在旧金山实现全无人商业化运营的公司。Zoox 使用自研的<b>双向电动厢式车</b>（无方向盘、无踏板），车内无安全员，乘客可正常付费乘坐。此次上线意味着亚马逊直接进入 Robotaxi 运营市场，旧金山由此形成 <b>Waymo（Ojai）/ Tesla（Cybercab）/ Zoox（自研厢式车）</b> 三方同台的局面。</p>",
+        "source_name": "finance.biggo.com / 多家媒体",
+        "source_url": "https://news.google.com/search?q=Zoox+San+Francisco+driverless+robotaxi+launch+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-28",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-29-002",
+        "date": "2026-08-29",
+        "company": "Waymo 自研芯片曝光",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "算力仅 160 TOPS，声称效能超越千 TOPS 级通用计算平台",
+        "summary_html": "<p>新浪财经报道，Waymo 披露其正在研发<b>专用自动驾驶芯片</b>，算力标称 <b>160 TOPS</b>，但 Waymo 表示针对自动驾驶任务深度优化后，实际效能超越市面 <b>1,000 TOPS</b> 级通用计算平台。这是 Waymo 首次公开\"造芯\"动作，标志着其从纯软件/算法公司向<b>软硬一体</b>架构转型，与 Tesla FSD 芯片、Mobileye EyeQ 路线趋同。自研芯片将直接压低单车算力成本，是 Waymo 实现单车盈利的关键变量之一。</p>",
+        "source_name": "新浪财经",
+        "source_url": "https://news.google.com/search?q=Waymo+custom+chip+160+TOPS+autonomous+driving+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-28",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-29-003",
+        "date": "2026-08-29",
+        "company": "Waymo 丹佛三车追尾事故最新进展",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "警方认定 Waymo 无责，追尾司机被开交通罚单",
+        "summary_html": "<p>KDVR、Westword 等多家媒体跟进报道，丹佛警方完成初步事故认定：<b>Waymo 无责</b>，为被追尾方；追尾的人类驾驶车辆司机已被开具<b>交通违规罚单</b>。这是 Waymo 丹佛上线首周（8月27日）碰撞事故的最新官方定性，警方无责认定与昨日 Waymo 加州 Costco 停车场碰撞事故形成对比——两起事故均已有后续进展，Waymo 方面均非主要责任方。</p>",
+        "source_name": "KDVR / Westword",
+        "source_url": "https://news.google.com/search?q=Waymo+Denver+crash+not+at+fault+trailing+driver+cited+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-28",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-29-004",
+        "date": "2026-08-29",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla FSD 正式在中国上线；FSD Lite 面向全球旧车型推送，时间表待定",
+        "summary_html": "<p>Mashable 报道，<b>Tesla FSD（Full Self-Driving）正式在中国市场上线</b>，是 FSD 获得中国监管许可后的正式商业落地。同日，Tesla 宣布 <b>FSD Lite</b>（面向旧硬件车型的轻量版）将在全球推送，涵盖澳大利亚、新西兰等非美国市场，但具体时间表\"尚不确定\"。Not A Tesla App 另确认，FSD v14 Lite 已进入澳新两国的开发确认阶段。FSD 中国上线对小鹏、华为鸿蒙等国内头部智驾玩家构成直接的市场压力。</p>",
+        "source_name": "Mashable / Not A Tesla App",
+        "source_url": "https://news.google.com/search?q=Tesla+FSD+Full+Self+Driving+China+launch+available+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-28",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-29-005",
+        "date": "2026-08-29",
+        "company": "Wayve",
+        "company_slug": "wayve",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Wayve + Uber 伦敦 Robotaxi 商业上线推迟，双方已持有 TfL 小型出租车牌照",
+        "summary_html": "<p>DM News 报道，Wayve 与 Uber 合作的伦敦 Robotaxi 项目宣布<b>商业上线推迟</b>，具体原因未公布。双方均已持有伦敦交通局（TfL）颁发的<b>小型出租车（minicab）运营牌照</b>，但实际上路仍需完成道路测试验证、保险合规等准备工作。这是英国首个获批商业牌照的 Robotaxi 项目首次披露延期，也印证了\"拿到牌照到正式上线\"之间仍有较长过渡期。</p>",
+        "source_name": "DM News",
+        "source_url": "https://news.google.com/search?q=Wayve+Uber+London+robotaxi+launch+delay+minicab+licence+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-28",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-29-006",
+        "date": "2026-08-29",
+        "company": "Volkswagen",
+        "company_slug": "volkswagen",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "大众 ID. Buzz 改装 Robotaxi 正式进入洛杉矶街道运营",
+        "summary_html": "<p>InsideEVs 报道，基于<b>大众 ID. Buzz</b> 打造的 Robotaxi 版本正式进入<b>洛杉矶</b>街道运营，是 ID. Buzz 首次在美国主要城市以 Robotaxi 形式上路。与 Waymo 使用极氪 CM1e（Ojai）、现代 Ioniq 5 等第三方底盘的策略不同，大众选择以<b>自有平台</b>直接参与 Robotaxi 市场。运营合作方及完整上线时间表尚未公布。</p>",
+        "source_name": "InsideEVs",
+        "source_url": "https://news.google.com/search?q=Volkswagen+ID+Buzz+Robotaxi+Los+Angeles+streets+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-28",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-29-007",
+        "date": "2026-08-29",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "小马智行与 Uber 扩大欧洲合作，Robotaxi 部署目标升至 2,000 辆",
+        "summary_html": "<p>scanx.trade 报道，小马智行与 Uber 宣布扩大此前签署的欧洲 Robotaxi 合作协议，新目标在欧洲<b>部署 2,000 辆</b> Robotaxi，并通过 <b>Uber App</b> 接入乘客端。这是对早前小马+Uber 欧洲合作框架的重大规模升级，也是中国 Robotaxi 公司在欧洲市场单一部署承诺规模最大的一次。结合小马在阿布扎比、扎格勒布、新加坡的既有落地，欧洲 2,000 辆计划标志着其海外策略从\"多点测试\"转向\"区域规模化部署\"。</p>",
+        "source_name": "scanx.trade",
+        "source_url": "https://news.google.com/search?q=Pony.ai+Uber+Europe+2000+robotaxis+expand+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-28",
+        "rating": 3,
+        "lang": "zh"
+      }
+    ]
+  },
+  {
     "date": "2026-08-28",
     "items": [
       {
