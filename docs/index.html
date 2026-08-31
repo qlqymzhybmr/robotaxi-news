@@ -124,11 +124,11 @@
   </div>
 </header>
 
-<main class="max-w-4xl mx-auto px-4 py-6">
+<main id="main-container" class="max-w-4xl mx-auto px-4 py-6">
   <div id="daily-content"></div>
-  <div id="weekly-outer" class="hidden relative">
+  <div id="weekly-outer" class="hidden">
     <div id="weekly-content"></div>
-    <aside id="source-sidebar" class="hidden fixed right-0 top-28 w-80 max-h-[calc(100vh-8rem)] overflow-y-auto bg-white border-l border-gray-200 shadow-lg p-4 z-10">
+    <aside id="source-sidebar" class="hidden sticky top-28 self-start max-h-[calc(100vh-8rem)] overflow-y-auto bg-white border border-gray-200 rounded-xl shadow-md p-4 z-10 w-80">
       <div class="flex items-center justify-between mb-3">
         <span class="text-sm font-semibold text-gray-700">来源</span>
         <button onclick="hideSources()" class="text-gray-400 hover:text-gray-600 text-xl leading-none">&times;</button>
@@ -223,6 +223,8 @@ function applyTabUI() {
   document.getElementById('weekly-filters').classList.toggle('hidden', !isWeekly);
   document.getElementById('weekly-outer').classList.toggle('hidden', !isWeekly);
   if (!isWeekly) hideSources();
+  const mainEl = document.getElementById('main-container');
+  if (mainEl) { mainEl.classList.toggle('max-w-4xl', !isWeekly); mainEl.classList.toggle('max-w-7xl', isWeekly); }
   document.getElementById('selections-filters').classList.toggle('hidden', !isSelections);
   document.getElementById('selections-content').classList.toggle('hidden', !isSelections);
   document.getElementById('tab-daily').className = 'px-4 py-1.5 rounded-full text-sm font-medium transition-colors ' + (isDaily ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
@@ -683,8 +685,12 @@ function showSources(ids, activeEl) {
       <a href="${escAttr(item.source_url || '#')}" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-500 hover:underline mt-1.5 block">${escHtml(item.source_name || '')} →</a>
     </div>`;
   }).join('');
+  const outer = document.getElementById('weekly-outer');
+  outer.style.display = 'grid';
+  outer.style.gridTemplateColumns = 'minmax(0,1fr) 22rem';
+  outer.style.gap = '1rem';
+  outer.style.alignItems = 'start';
   document.getElementById('source-sidebar').classList.remove('hidden');
-  document.getElementById('weekly-outer').style.paddingRight = '21rem';
 }
 
 function hideSources() {
@@ -692,7 +698,7 @@ function hideSources() {
   const sidebar = document.getElementById('source-sidebar');
   if (sidebar) sidebar.classList.add('hidden');
   const outer = document.getElementById('weekly-outer');
-  if (outer) outer.style.paddingRight = '';
+  if (outer) { outer.style.display = ''; outer.style.gridTemplateColumns = ''; outer.style.gap = ''; outer.style.alignItems = ''; }
 }
 
 // ─── Weekly Edit Mode ────────────────────────────────────────────────────────
