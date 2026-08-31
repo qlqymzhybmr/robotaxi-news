@@ -11,6 +11,10 @@
     .card { transition: box-shadow 0.15s ease; }
     .summary-html p { margin-bottom: 0.5em; }
     .summary-html p:last-child { margin-bottom: 0; }
+    .sub-item-src { cursor: pointer; border-radius: 4px; transition: background 0.12s; }
+    .sub-item-src:hover { background: #eff6ff; }
+    .sub-item-active { background: #dbeafe !important; }
+    .src-summary { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 min-h-screen">
@@ -122,7 +126,16 @@
 
 <main class="max-w-4xl mx-auto px-4 py-6">
   <div id="daily-content"></div>
-  <div id="weekly-content" class="hidden"></div>
+  <div id="weekly-outer" class="hidden relative">
+    <div id="weekly-content"></div>
+    <aside id="source-sidebar" class="hidden fixed right-0 top-28 w-80 max-h-[calc(100vh-8rem)] overflow-y-auto bg-white border-l border-gray-200 shadow-lg p-4 z-10">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-sm font-semibold text-gray-700">来源</span>
+        <button onclick="hideSources()" class="text-gray-400 hover:text-gray-600 text-xl leading-none">&times;</button>
+      </div>
+      <div id="source-sidebar-inner"></div>
+    </aside>
+  </div>
   <div id="selections-content" class="hidden"></div>
 </main>
 
@@ -169,6 +182,18 @@ async function init() {
   if (currentTab === 'daily') restoreDailyHash();
   else if (currentTab === 'weekly') restoreWeeklyHash();
   else renderSelections();
+
+  // Delegated click for sub-items with daily_ids
+  document.getElementById('weekly-outer').addEventListener('click', (e) => {
+    const subItem = e.target.closest('[data-daily-ids]');
+    if (!subItem) return;
+    if (e.target.closest('[contenteditable="true"]')) return;
+    if (e.target.closest('button')) return;
+    const ids = (subItem.dataset.dailyIds || '').split(',').map((s) => s.trim()).filter(Boolean);
+    const isActive = subItem.classList.contains('sub-item-active');
+    if (isActive) { hideSources(); return; }
+    showSources(ids, subItem);
+  });
 }
 
 async function fetchJSON(path) {
@@ -197,7 +222,8 @@ function applyTabUI() {
   document.getElementById('daily-content').classList.toggle('hidden', !isDaily);
   document.getElementById('daily-active-filters').classList.toggle('hidden', !isDaily || document.getElementById('daily-active-filters').childElementCount === 0);
   document.getElementById('weekly-filters').classList.toggle('hidden', !isWeekly);
-  document.getElementById('weekly-content').classList.toggle('hidden', !isWeekly);
+  document.getElementById('weekly-outer').classList.toggle('hidden', !isWeekly);
+  if (!isWeekly) hideSources();
   document.getElementById('selections-filters').classList.toggle('hidden', !isSelections);
   document.getElementById('selections-content').classList.toggle('hidden', !isSelections);
   document.getElementById('tab-daily').className = 'px-4 py-1.5 rounded-full text-sm font-medium transition-colors ' + (isDaily ? 'bg-blue-500 text-white' : 'text-gray-600 hover:bg-gray-100');
@@ -470,12 +496,16 @@ function renderWeeklyClassicView() {
   const generatedAt = '';
   const sectionsHtml = (week.sections || []).map((section) => {
     const entriesHtml = (section.entries || []).map((entry, ei) => {
-      const subItemsHtml = (entry.sub_items || []).map((si, sii) =>
-        `<div class="flex items-start gap-2 mt-1.5 ml-1 py-0.5">
+      const subItemsHtml = (entry.sub_items || []).map((si, sii) => {
+        const ids = (si.daily_ids || []).join(',');
+        const srcAttr = ids ? ` data-daily-ids="${escAttr(ids)}"` : '';
+        const srcClass = ids ? ' sub-item-src' : '';
+        const srcTitle = ids ? ' title="点击查看来源"' : '';
+        return `<div class="flex items-start gap-2 mt-1.5 ml-1 py-0.5${srcClass}"${srcAttr}${srcTitle}>
           <span class="shrink-0 text-sm font-semibold text-gray-500 select-none min-w-[20px]">${String.fromCharCode(96 + sii + 1)}.</span>
           <span class="text-sm text-gray-700 leading-relaxed">${si.content_html || ''}</span>
-        </div>`
-      ).join('');
+        </div>`;
+      }).join('');
       return `<div class="mb-4">
         <div class="flex items-start gap-2 rounded-md px-2.5 py-1.5 bg-blue-50 border-l-2 border-blue-400">
           <span class="shrink-0 text-sm font-bold text-blue-700 select-none min-w-[20px] mt-0.5">${ei + 1}.</span>
@@ -509,7 +539,13 @@ function renderWeeklyReportView() {
   const tocHtml = sections.map((section, idx) => `<a href="#" onclick="scrollToWeeklySection('sec-${idx}'); return false;" class="block rounded-lg border border-gray-200 px-3 py-2 hover:bg-gray-50 transition-colors"><div class="text-sm font-semibold text-gray-800">${idx + 1}. ${escHtml(section.name)}</div><div class="text-xs text-gray-500 mt-0.5">${(section.entries || []).length} items</div></a>`).join('');
   const sectionsHtml = sections.map((section, idx) => {
     const entriesHtml = (section.entries || []).map((entry) => {
-      const subItemsHtml = (entry.sub_items || []).map((si) => `<div class="ml-4 mt-2 text-sm text-gray-700 leading-relaxed flex"><span class="mr-2 text-gray-400">•</span><span>${si.content_html || ''}</span></div>`).join('');
+      const subItemsHtml = (entry.sub_items || []).map((si) => {
+        const ids = (si.daily_ids || []).join(',');
+        const srcAttr = ids ? ` data-daily-ids="${escAttr(ids)}"` : '';
+        const srcClass = ids ? ' sub-item-src' : '';
+        const srcTitle = ids ? ' title="点击查看来源"' : '';
+        return `<div class="ml-4 mt-2 text-sm text-gray-700 leading-relaxed flex${srcClass}"${srcAttr}${srcTitle}><span class="mr-2 text-gray-400 shrink-0">•</span><span>${si.content_html || ''}</span></div>`;
+      }).join('');
       return `<article class="rounded-lg border border-gray-200 p-4 bg-white"><h3 class="text-sm font-semibold text-gray-800 leading-relaxed">${entry.headline_html || ''}</h3>${subItemsHtml}</article>`;
     }).join('');
     return `<section id="sec-${idx}" class="mb-7 scroll-mt-28"><div class="flex items-center justify-between mb-3"><h2 class="text-base font-bold text-gray-900">${idx + 1}. ${escHtml(section.name)}</h2><span class="text-xs text-gray-500">${(section.entries || []).length} items</span></div><div class="space-y-3">${entriesHtml || emptyState('No content')}</div></section>`;
@@ -616,6 +652,50 @@ function escAttr(str) {
   return str.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
+// ─── Weekly Source Sidebar ───────────────────────────────────────────────────
+
+function showSources(ids, activeEl) {
+  document.querySelectorAll('.sub-item-active').forEach((el) => el.classList.remove('sub-item-active'));
+  if (activeEl) activeEl.classList.add('sub-item-active');
+  if (!ids || ids.length === 0) { hideSources(); return; }
+  const items = [];
+  ids.forEach((id) => {
+    const date = id.slice(0, 10);
+    const dayData = dailyData.find((d) => d.date === date);
+    if (dayData) {
+      const item = (dayData.items || []).find((i) => i.id === id);
+      if (item) items.push(item);
+    }
+  });
+  if (items.length === 0) { hideSources(); return; }
+  const inner = document.getElementById('source-sidebar-inner');
+  inner.innerHTML = items.map((item) => {
+    const stars = '★'.repeat(Math.max(0, Number(item.rating || 0)));
+    const ratingClass = (item.rating || 0) >= 3 ? 'text-orange-500' : 'text-yellow-500';
+    return `<div class="mb-4 pb-4 border-b border-gray-100 last:border-0 last:mb-0 last:pb-0">
+      <div class="flex flex-wrap gap-1 mb-1.5">
+        <span class="text-xs px-1.5 py-0.5 rounded bg-blue-50 text-blue-700">${escHtml(item.sub_group || '')}</span>
+        <span class="text-xs px-1.5 py-0.5 rounded bg-gray-100 text-gray-600">${escHtml(item.company || '')}</span>
+        <span class="text-xs ${ratingClass}">${stars}</span>
+        <span class="text-xs text-gray-400">${formatDateShort(item.date)}</span>
+      </div>
+      <p class="text-xs font-semibold text-gray-800 mb-1.5 leading-snug">${escHtml(item.title || '')}</p>
+      <div class="src-summary text-xs text-gray-600 leading-relaxed">${item.summary_html || ''}</div>
+      <a href="${escAttr(item.source_url || '#')}" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-500 hover:underline mt-1.5 block">${escHtml(item.source_name || '')} →</a>
+    </div>`;
+  }).join('');
+  document.getElementById('source-sidebar').classList.remove('hidden');
+  document.getElementById('weekly-outer').style.paddingRight = '21rem';
+}
+
+function hideSources() {
+  document.querySelectorAll('.sub-item-active').forEach((el) => el.classList.remove('sub-item-active'));
+  const sidebar = document.getElementById('source-sidebar');
+  if (sidebar) sidebar.classList.add('hidden');
+  const outer = document.getElementById('weekly-outer');
+  if (outer) outer.style.paddingRight = '';
+}
+
 // ─── Weekly Edit Mode ────────────────────────────────────────────────────────
 
 function toggleWeeklyEditMode() {
@@ -685,6 +765,7 @@ function exitWeeklyEditMode() {
   updateWeeklyEditBtn();
   const fmtBar2 = document.getElementById('weekly-format-bar');
   if (fmtBar2) fmtBar2.classList.replace('flex', 'hidden');
+  hideSources();
   renderWeekly();
 }
 
@@ -732,12 +813,14 @@ function undoEdit() {
 function deleteSection(si) {
   pushUndo();
   editWeekData.sections.splice(si, 1);
+  hideSources();
   renderWeeklyEdit();
 }
 
 function deleteEntry(si, ei) {
   pushUndo();
   if (editWeekData.sections[si]) editWeekData.sections[si].entries.splice(ei, 1);
+  hideSources();
   renderWeeklyEdit();
 }
 
@@ -755,6 +838,7 @@ function removeSubItem(si, ei, sii) {
   const entry = editWeekData && editWeekData.sections[si] && editWeekData.sections[si].entries[ei];
   if (!entry || !entry.sub_items) return;
   entry.sub_items.splice(sii, 1);
+  hideSources();
   renderWeeklyEdit();
 }
 
@@ -776,16 +860,18 @@ function renderWeeklyEdit() {
     : `<p class="text-xs text-amber-600 mb-2">⚠️ 请先在「周报选稿」tab 中设置 GitHub PAT</p>`;
   const sectionsHtml = (editWeekData.sections || []).map((section, si) => {
     const entriesHtml = (section.entries || []).map((entry, ei) => {
-      const subItemsHtml = (entry.sub_items || []).map((subItem, sii) =>
-        `<div class="flex items-start gap-2 mt-1.5 ml-1 py-0.5 group/item">
+      const subItemsHtml = (entry.sub_items || []).map((subItem, sii) => {
+        const ids = (subItem.daily_ids || []).join(',');
+        const srcAttr = ids ? ` data-daily-ids="${escAttr(ids)}"` : '';
+        return `<div class="flex items-start gap-2 mt-1.5 ml-1 py-0.5 group/item"${srcAttr}>
           <span class="shrink-0 text-sm font-semibold text-gray-500 select-none min-w-[20px] pt-0.5">${String.fromCharCode(96 + sii + 1)}.</span>
           <div contenteditable="true" data-edit-content="${si}-${ei}-${sii}"
                class="flex-1 text-sm text-gray-700 leading-relaxed outline-none rounded px-1 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/40 transition-colors cursor-text"
                >${subItem.content_html || ''}</div>
           <button onclick="removeSubItem(${si},${ei},${sii})"
                   class="opacity-0 group-hover/item:opacity-100 shrink-0 w-5 h-5 flex items-center justify-center text-gray-300 hover:text-red-400 rounded text-base transition-all" title="删除要点">×</button>
-        </div>`
-      ).join('');
+        </div>`;
+      }).join('');
       return `<div class="mb-4 group/entry">
         <div class="flex items-start gap-1 rounded-md px-2 py-1.5 bg-blue-50 border-l-2 border-blue-400 hover:border-blue-500 transition-colors">
           <span class="shrink-0 text-sm font-bold text-blue-700 select-none min-w-[20px] mt-0.5">${ei + 1}.</span>
