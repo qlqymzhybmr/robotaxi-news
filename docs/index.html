@@ -187,7 +187,6 @@ async function init() {
   document.getElementById('weekly-outer').addEventListener('click', (e) => {
     const subItem = e.target.closest('[data-daily-ids]');
     if (!subItem) return;
-    if (e.target.closest('[contenteditable="true"]')) return;
     if (e.target.closest('button')) return;
     const ids = (subItem.dataset.dailyIds || '').split(',').map((s) => s.trim()).filter(Boolean);
     const isActive = subItem.classList.contains('sub-item-active');
