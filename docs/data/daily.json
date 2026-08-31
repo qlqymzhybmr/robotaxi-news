@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-08-31",
+    "items": [
+      {
+        "id": "2026-08-31-001",
+        "date": "2026-08-31",
+        "company": "Waymo / Zoox 测试事故汇总",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "超 20 名安全驾驶员在 Robotaxi 测试中受伤",
+        "summary_html": "<p>乌克兰媒体 Межа 援引相关报告披露，<b>Waymo 和 Zoox 在 Robotaxi 道路测试期间共有超过 20 名安全驾驶员（safety driver）受伤</b>，受伤原因涵盖紧急制动、系统误操作及碰撞事故。该数据来源于向监管机构提交的事故报告汇总，并非单一事件。这是继 Waymo 丹佛追尾（08-27）、加州 Costco 碰撞（08-27）之后，进入监管视野的第三批涉 Waymo 安全事件；Zoox 同期也有多起记录。综合三类事故，测试阶段与商业运营阶段的安全数据正受到更严格审视。</p>",
+        "source_name": "Межа 援引监管报告",
+        "source_url": "https://news.google.com/search?q=Waymo+Zoox+20+drivers+injured+robotaxi+tests+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-30",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-31-002",
+        "date": "2026-08-31",
+        "company": "Waymo 高管公开炮轰",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "特斯拉纯视觉自动驾驶\"看不到足够信息\"",
+        "summary_html": "<p>Startup Fortune 援引 Axios 报道，Waymo 高层在公开采访中直接批评特斯拉的<b>纯摄像头（camera-only）自动驾驶方案</b>，称其\"无法感知足够的环境信息\"以支撑真正的自动驾驶安全性，并隐晦强调激光雷达（LiDAR）在恶劣天气与复杂城区场景中的不可替代性。这是 Waymo 高管近年来首次以如此直接的措辞公开点名批评特斯拉技术路线，时间节点恰在 Tesla Cybercab 旧金山上线后约两周，竞争态势明显升温。特斯拉方面未即时回应。</p>",
+        "source_name": "Startup Fortune / Axios",
+        "source_url": "https://news.google.com/search?q=Waymo+executive+Tesla+camera+only+self-driving+can%27t+see+enough+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-30",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-31-003",
+        "date": "2026-08-31",
+        "company": "Futurism 调查",
+        "company_slug": "futurism调查",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Uber 司机称 Waymo Robotaxi 正在压低他们的收入",
+        "summary_html": "<p>Futurism 发布调查报道，多名美国 Uber 司机表示，Waymo Robotaxi 大规模上线后其<b>接单量和小时收入明显下降</b>，部分司机反映旧金山地区高峰期订单被 Waymo 分流、等待时间延长。Waymo 目前旧金山单周行程已超 50 万次，是全美最高密度 Robotaxi 市场。这是有记录以来首批量化 Robotaxi 对平台司机经济影响的调查报告之一，将成为未来劳工监管讨论的重要数据节点。</p>",
+        "source_name": "Futurism",
+        "source_url": "https://news.google.com/search?q=Uber+drivers+Waymo+robotaxi+driving+down+pay+income+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-30",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-31-004",
+        "date": "2026-08-31",
+        "company": "Tesla Cybercab 路线规划翻车",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "2.3 英里报价 66 分钟",
+        "summary_html": "<p>Yahoo Autos / Chron 等多家媒体报道，有用户截图显示 Tesla Robotaxi（Cybercab）App 对一段<b>仅 2.3 英里的城区路程</b>报价行程时间 <b>66 分钟</b>，引发大量质疑。分析人士指出，这反映了 Cybercab 当前路线规划算法在高密度城区场景下的严重不足，可能源于过度保守的安全参数或地图数据缺失。这是 Cybercab 旧金山商业上线后曝光的最受关注用户体验问题之一，与 Tesla 铁粉的差评报告（\"ride was horrible, had to call an Uber\"）共同构成上线初期的 UX 危机。</p>",
+        "source_name": "Yahoo Autos / Chron",
+        "source_url": "https://news.google.com/search?q=Tesla+robotaxi+66+minutes+2.3+miles+route+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-30",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-31-005",
+        "date": "2026-08-31",
+        "company": "特斯拉中国 Robotaxi 违章或由厂商承担",
+        "company_slug": "特斯拉中国robotaxi违章或由厂商承",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "新责任分配框架落地",
+        "summary_html": "<p>Notebookcheck 报道，中国监管机构正在推进 Robotaxi 交通违章<b>责任归属新框架</b>，核心条款为：在自动驾驶模式下发生的违规行为，罚款与法律责任将<b>由 Tesla（厂商）而非乘客承担</b>。这是全球首个正式将 L4 级别自动驾驶违章责任归咎于厂商的监管框架，若落地将对特斯拉中国 Robotaxi 运营成本产生直接影响，也为其他国家 AV 立法提供参考样本。</p>",
+        "source_name": "Notebookcheck",
+        "source_url": "https://news.google.com/search?q=Tesla+robotaxi+traffic+violations+China+responsibility+manufacturer+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-30",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-31-006",
+        "date": "2026-08-31",
+        "company": "Gatik 完成 $200M 融资",
+        "company_slug": "gatik",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "继 PepsiCo 合作后，L4 自动驾驶卡车最大单轮融资",
+        "summary_html": "<p>Reddit Startup 版块援引报道，L4 自动驾驶卡车公司 <b>Gatik</b> 完成 <b>$200M（约合 14.5 亿元）</b>新一轮融资，是继与 <b>PepsiCo</b> 签署大规模商业合同后的首次重大融资。Gatik 专注于短途商业物流（middle-mile），已与沃尔玛、雀巢等头部客户实现量产合作。L4 商业卡车领域的 $200M 融资规模，是全球近 18 个月内仅次于 Waymo（2024）的最大单笔 L4 领域融资，标志着自动驾驶商用车赛道资本信心回暖。</p>",
+        "source_name": "Reddit / 相关媒体",
+        "source_url": "https://news.google.com/search?q=Gatik+200+million+raise+PepsiCo+self-driving+truck+2026&hl=en-US&gl=US&ceid=US:en",
+        "published_at": "2026-08-30",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-08-31-007",
+        "date": "2026-08-31",
+        "company": "小鹏第二代 VLA 正式发布",
+        "company_slug": "xpeng",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "\"让 AI 读懂时间\"，端到端能力大幅升级",
+        "summary_html": "<p>中金在线、汽车公社等媒体报道，小鹏汽车正式发布<b>第二代 VLA（Vision-Language-Action）模型</b>，核心升级点为使 AI 能够理解<b>时序信息</b>（\"让 AI 读懂时间\"），在复杂路口、变道时序判断、行人意图预测等场景显著优于一代。第二代 VLA 将率先搭载于小鹏 X9 等旗舰车型，并为小鹏此前承诺的 2027 年无安全员 Robotaxi 商业运营奠定技术基础。小鹏将其定位为\"不止于智驾\"的通用车端大模型升级。</p>",
+        "source_name": "中金在线 / 汽车公社",
+        "source_url": "https://www.baidu.com/s?wd=%E5%B0%8F%E9%B9%8F%E7%AC%AC%E4%BA%8C%E4%BB%A3VLA%E5%8F%91%E5%B8%83+%E8%AE%A9AI%E8%AF%BB%E6%87%82%E6%97%B6%E9%97%B4+2026",
+        "published_at": "2026-08-30",
+        "rating": 2,
+        "lang": "zh"
+      }
+    ]
+  },
+  {
     "date": "2026-08-30",
     "items": [
       {
