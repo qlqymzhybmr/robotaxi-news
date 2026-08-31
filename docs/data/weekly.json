@@ -1,5 +1,121 @@
 [
   {
+    "week_id": "2026-W36",
+    "date_range": "0825-0831",
+    "title": "无人驾驶行业0825-0831重要新闻",
+    "generated_at": "2026-08-31",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>Robotaxi 车队扩至270辆、全天候运营；Cybercab 路线规划翻车引发 UX 危机；FSD Lite 扩至澳新",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月27日</b>，Tesla Robotaxi 运营时间延长至 <b>6am–10pm 全天候</b>，车队规模与智能度“大幅提升”；<b>8月28日</b>，德克萨斯单日新增注79辆，累计车队约 <b>270辆</b>，并宣布服务区将从奥斯汀/迈阿密扩展至更多城市。内华达州内部文件显示5,000辆运营许可的实际在路车辆仅约 <b>20辆</b>，纸面数字与实际规模存在巨大落差。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月25日</b>，一名铁杆 Tesla 粉丝公开吐槽乘坐 Cybercab 体验，中途弃车改叫 Uber；<b>8月31日</b>，用户截图显示 Cybercab App 对 <b>2.3 英里路程报价66分钟</b>行程时间，路线规划算法严重失准。两起事件构成上线两周内的集中用户体验危机，引发行业对 Tesla 是否操之过急的讨论。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>8月26日</b>，多段实测视频曝光 Tesla FSD Lite 对路面 <b>树木、原木等大型障碍物“谆而不见”</b>，感知短板在纯视觉路线下显著暴露。<b>8月30日</b>，FSD Lite 正式向 <b>澳大利亚和新西兰</b>旧款硬件车型推送，是继中国之后首批非美国市场落地。"
+              }
+            ]
+          },
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>宣布进入慕尼黑；每月进口约300辆极氪 Ojai；丹佛/Costco 双碰撞后获警方无责认定；炮轰 Tesla FSD 为“False Summit”",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月26日</b>，Waymo 宣布 <b>慕尼黑</b>为欧洲首个 Robotaxi 城市，计划 <b>2027年底</b>上线；同期 Google 在西班牙注册 Waymo 子公司，欧洲法律实体布局同步推进。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月27日</b>，The Information 披露 Waymo 每月从中国进口约 <b>300辆极氪 CM1e（Ojai）</b>，年化蔶3,600辆；这是 Waymo 大规模扩张的核心供应链节点，也使中美供应链关系进一步受到审视。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>8月27日</b>，Waymo 丹佛上线首周（8月24日开放）即发生三车追尼事故；<b>8月28日</b>，加州 Costco 停车场另发生碰撞，网传“肂事逃逸”经 Waymo 澄清系误读；<b>8月29日</b>，丹佛警方正式认定 <b>Waymo 无责</b>，追尼方被开罚单。"
+              },
+              {
+                "label": "d",
+                "content_html": "<b>8月28日</b>，Waymo 高管公开炮轰 Tesla FSD，称其“仅仅是错误的顶峰（False Summit）”，直接质疑纯视觉路线；同期现代披露 <b>2026年Q4</b> 将向 Waymo 交付首批 Ioniq 5 Robotaxi，Rivian 则向投资人展示首辆正常运转的自动驾驶原型。<b>8月25日</b>，Waymo 宣布累计运行超3亿公里里程碑。"
+              }
+            ]
+          },
+          {
+            "company": "Zoox",
+            "company_slug": "zoox",
+            "headline_html": "<b>Zoox：</b>旧金山正式推出全无人商业 Robotaxi，SF 三强鼎立格局正式形成",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月28日</b>，Amazon 旅下 Zoox 在旧金山向公众开放全无人驾驶 Robotaxi 商业服务，使用自研 <b>双向厢式车</b>（无方向盘、无蹏板），车内无安全员，乘客可正常付费乘坐。旧金山由此形成 <b>Waymo（Ojai）/ Tesla（Cybercab）/ Zoox（自研厢式车）</b>三方同台竞争格局。"
+              }
+            ]
+          },
+          {
+            "company": "大众 / Wayve",
+            "company_slug": "volkswagen",
+            "headline_html": "<b>大众 / Wayve：</b>ID.Buzz Robotaxi 进入洛杉矶运营；Wayve+Uber 伦敦牌照已到手但上线推迟",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月28日</b>，基于大众 <b>ID.Buzz</b> 改装的 Robotaxi 版本正式进入 <b>洛杉矶</b>街道运营，是 ID.Buzz 在美国主要城市以 Robotaxi 形式的首次上路。大众选择以自有底盘直接入局，与 Waymo 使用极気、现代等第三方底盘的路线形成对比。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月28日</b>，Wayve 与 Uber 合作的伦敦 Robotaxi 项目宣布 <b>商业上线推迟</b>，双方均已持有伦敦交通局（TfL）<b>小型出租车（minicab）运营牌照</b>，但实际上路仍需完成保险合规、道路测试验证等工作。"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "小鹏",
+            "company_slug": "xpeng",
+            "headline_html": "<b>小鹏：</b>Robotaxi 主驾无人路测；VLA 2.0 上车“30秒时间记忆”；机器人完成 $900M A 轮融资",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月28日</b>，小鹏 Robotaxi 正式进入 <b>主驾无人路测</b>阶段，主驾无安全员，是国内新势力首个公开确认主驾无人路测的品牌，与2027年无安全员商业运营目标节奏一致。"
+              },
+              {
+                "label": "b",
+                "content_html": "<b>8月28日</b>，小鹏 <b>VLA 2.0</b> 正式上车，核心升级为 <b>“30秒时间记忆”</b>——模型可理解近30秒内行驶的时序特征（前车行为轨迹、路口意图预测等），在复杂路口及异常场景决策中显著优于一代。"
+              },
+              {
+                "label": "c",
+                "content_html": "<b>8月25日</b>，小鹏机器人业务完成 <b>$900M（瑦65亿元）A 轮融资</b>，估値级63亿美元；何小鹏财报会重申 <b>2027年 Robotaxi 无安全员载客</b>商业运营目标，机器人与 Robotaxi 构成小鹏中长期双轨成长叙事。"
+              }
+            ]
+          },
+          {
+            "company": "小马智行",
+            "company_slug": "xiaoma",
+            "headline_html": "<b>小马智行：</b>韩国首尔部署200辆 Robotaxi，2028年目标全无人商业运营",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>8月30日</b>，小马智行与韩国合作方 <b>FutureLink</b> 建立合资公司，首批在韩国道路部署 <b>200辆</b> Robotaxi，目标于 <b>2028年</b>在首尔实现全无人驾驶商业服务。这是中国头部 Robotaxi 公司在亚洲（除中国外）的首次规模化落地承诺。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W35",
     "date_range": "0818-0824",
     "title": "无人驾驶行业0818-0824重要新闻",
