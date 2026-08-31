@@ -688,16 +688,24 @@ function showSources(ids, activeEl) {
   outer.style.gridTemplateColumns = 'minmax(0,1fr) 22rem';
   outer.style.gap = '1rem';
   outer.style.alignItems = 'start';
-  document.getElementById('source-sidebar').classList.remove('hidden');
+  const sidebar = document.getElementById('source-sidebar');
+  sidebar.classList.remove('hidden');
   const mainEl = document.getElementById('main-container');
   if (mainEl) { mainEl.classList.remove('max-w-4xl'); mainEl.classList.add('max-w-7xl'); }
-  if (activeEl) activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  requestAnimationFrame(() => {
+    if (activeEl) {
+      const outerRect = outer.getBoundingClientRect();
+      const itemRect = activeEl.getBoundingClientRect();
+      sidebar.style.marginTop = Math.max(0, itemRect.top - outerRect.top) + 'px';
+      activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
 }
 
 function hideSources() {
   document.querySelectorAll('.sub-item-active').forEach((el) => el.classList.remove('sub-item-active'));
   const sidebar = document.getElementById('source-sidebar');
-  if (sidebar) sidebar.classList.add('hidden');
+  if (sidebar) { sidebar.classList.add('hidden'); sidebar.style.marginTop = ''; }
   const outer = document.getElementById('weekly-outer');
   if (outer) { outer.style.display = ''; outer.style.gridTemplateColumns = ''; outer.style.gap = ''; outer.style.alignItems = ''; }
   const mainEl = document.getElementById('main-container');
