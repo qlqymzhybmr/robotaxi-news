@@ -128,7 +128,7 @@
   <div id="daily-content"></div>
   <div id="weekly-outer" class="hidden">
     <div id="weekly-content"></div>
-    <aside id="source-sidebar" class="hidden sticky top-28 self-start max-h-[calc(100vh-8rem)] overflow-y-auto bg-white border border-gray-200 rounded-xl shadow-md p-4 z-10 w-80">
+    <aside id="source-sidebar" class="hidden max-h-screen overflow-y-auto bg-white border border-gray-200 rounded-xl shadow-md p-4 z-10 w-80">
       <div class="flex items-center justify-between mb-3">
         <span class="text-sm font-semibold text-gray-700">来源</span>
         <button onclick="hideSources()" class="text-gray-400 hover:text-gray-600 text-xl leading-none">&times;</button>
@@ -691,6 +691,7 @@ function showSources(ids, activeEl) {
   document.getElementById('source-sidebar').classList.remove('hidden');
   const mainEl = document.getElementById('main-container');
   if (mainEl) { mainEl.classList.remove('max-w-4xl'); mainEl.classList.add('max-w-7xl'); }
+  if (activeEl) activeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 function hideSources() {
