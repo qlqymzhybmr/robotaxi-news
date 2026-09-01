@@ -368,13 +368,47 @@ Phase 3 完成后，**立即执行**以下搜索，无需用户手动触发。
 
 ### 目标
 
-搜索 Uber CEO Dara Khosrowshahi 近期的对外访谈。不限平台（YouTube、Podcast、媒体专访均算）。
+搜索 Uber CEO Dara Khosrowshahi 近期的对外访谈。
 
-### 搜索关键词（轮流尝试，至少用前两组）
+**⚠️ 这个提醒独立于 daily，不写进 `data/daily/YYYY-MM-DD.md`**，而是在最终回复里单独成一块告诉用户。理由：它不是当日新闻，不参与勾选，也不进周报，混进 daily 文件只会干扰勾选流程。
+
+### 平台覆盖（都要查，不只是 YouTube）
+
+| 平台 | 查法 |
+|---|---|
+| YouTube | `site:youtube.com "Dara Khosrowshahi"` + WebSearch |
+| Spotify | `site:open.spotify.com "Dara Khosrowshahi"` |
+| Apple Podcasts | `site:podcasts.apple.com "Dara Khosrowshahi"` |
+| 媒体专访 / Transcript | 关键词搜索，见下 |
+| 现场活动 / 大会 | 关键词搜索，见下 |
+
+### 搜索关键词（轮流尝试，至少用前三组）
 
 1. `"Dara Khosrowshahi" interview 2026`
 2. `"Uber CEO" podcast interview 2026`
-3. `Dara Khosrowshahi podcast OR talk OR conversation`
+3. `"Dara Khosrowshahi" site:open.spotify.com OR site:podcasts.apple.com`
+4. `Dara Khosrowshahi podcast OR talk OR conversation`
+
+### 去重：查台账，只提醒没提醒过的
+
+读 `data/uber_ceo_interviews.json`：
+
+- `seen` 数组里**已有相同 `url`** 的 → **跳过，不再提醒**（否则同一期访谈会天天弹）
+- 不在里面的 → 走下面的日期核实；确认是新访谈后**提醒用户，并把它追加进 `seen`**
+
+追加时用 Python 写入（同 daily.json 的理由，避免手拼 JSON 出转义错）：
+
+```python
+import json, datetime
+p = "data/uber_ceo_interviews.json"
+d = json.load(open(p, encoding="utf-8"))
+d["seen"].append({
+    "url": "...", "title": "...", "platform": "YouTube",
+    "published_at": "2026-08-28",
+    "first_seen": datetime.date.today().isoformat(),
+})
+json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+```
 
 ### ⚠️ 强制日期核实（绝不跳过）
 
@@ -412,40 +446,118 @@ Phase 3 完成后，**立即执行**以下搜索，无需用户手动触发。
 
 ### 有新访谈时
 
-在 `data/daily/YYYY-MM-DD.md` 文件**末尾另起一段**，追加：
+**不写进 daily 文件**。改为两件事：
+
+1. 追加进 `data/uber_ceo_interviews.json` 的 `seen`（去重台账，见上）
+2. 在最终回复里**单独成一块**告诉用户：
 
 ```markdown
----
+## 🎙️ Uber CEO 访谈提醒（1 条新内容）
 
-## Uber CEO 访谈提醒
-
-- **节目/平台**：节目名称（如 Decoder with Nilay Patel / Invest Like the Best）
-- **发布日期**：YYYY-MM-DD（已核实的真实发布日期）
+- **节目/平台**：Decoder with Nilay Patel（YouTube）
+- **发布日期**：2026-08-28（已核实：视频页显示 "4 days ago"）
 - **链接**：[标题](url)
-- **时长**：约 XX 分钟（如已知）
-- **摘要**：一句话概括访谈主题，例如：讨论 Uber Robotaxi 战略、自动驾驶合作伙伴关系、未来城市出行。
+- **时长**：约 52 分钟
+- **摘要**：一句话概括访谈主题，例如讨论 Uber Robotaxi 战略、与 Waymo/小马智行的平台合作、未来城市出行。
 ```
 
-如果本次搜索有**多个新访谈**，每个写一个列表条目。
+多条就每条一个区块。**日期后面要注明是怎么核实的**（"视频页显示 4 days ago"、"单集页标注 Aug 28, 2026"），便于用户判断可信度。
 
 ### 无新访谈时
 
-不追加任何内容，不提示，继续执行结束动作。
+不提示，不写任何文件。结束动作里用一行带过即可（见下）。
+
+---
+
+## Phase 5：抓取源健康告警（自动执行）
+
+Phase 4 完成后执行。目的：**抓取源静默失效是最危险的故障** —— 凭证过期、路由下线、被封 IP，这些都不会报错，只会让某个源"今天恰好没新闻"，可能几周没人发现。
+
+### 数据来源
+
+脚本已经在输出 JSON 的**顶层 `health` 字段**里做好了分级，直接读，不要自己重新解析 `errors`：
+
+```json
+{
+  "health": {
+    "ok": false,
+    "alerts": [
+      { "level": "critical", "type": "TWITTER_AUTH_EXPIRED", "count": 22,
+        "what": "X(Twitter) 抓取凭证已失效…", "action": "到 Railway → …", "sources": ["…"] }
+    ],
+    "silent_feeds": ["IT之家"],
+    "missing_feeds": [],
+    "checked_feeds": 45
+  }
+}
+```
+
+命令行末尾也会打印同样的信息（`health=OK` 或 `health=NEEDS_ATTENTION` + 明细）。
+
+### 播报规则
+
+读 Phase 1 和 Phase 2 两份 JSON 的 `health`，**合并后**判断：
+
+| 情况 | 怎么做 |
+|---|---|
+| 两份都 `ok: true` | 结束动作里一行带过：`抓取源健康：正常（N 个源）`，不展开 |
+| 有 `level: critical` | **在最终回复最顶部**用 🚨 单独成块，把 `what` 和 `action` 原样告诉用户。这类问题只有用户能修，压在报告底部等于没说 |
+| 只有 `level: warning` | 结束动作里列一行，不单独成块 |
+| `silent_feeds` 非空 | 列出来，并说明"请求成功但返回 0 条，疑似上游改版或路由失效，连续 2 天出现就该查了" |
+| `missing_feeds` 非空 | 列出来（通常意味着脚本中途异常退出） |
+
+### critical 告警格式
+
+```markdown
+🚨 **抓取源故障：需要你处理**
+
+**X(Twitter) 抓取凭证已失效**，22 个 X 源当前抓不到任何内容。
+→ 到 Railway → rsshub 服务 → Variables 更新 `TWITTER_AUTH_TOKEN`。
+   取值：浏览器 DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value
+```
+
+### ⚠️ 不要做的事
+
+- **不要因为健康告警就中止发布**。抓到多少发多少，告警是附加信息
+- **不要把告警写进 daily 文件**。它不是新闻，会干扰勾选
+- **不要自己"猜"某个源是不是坏了**。只播报 `health` 里有的，`raw_counts` 为 0 才算静默，"今天没新闻"不是故障
 
 ---
 
 ## 结束动作
 
-Phase 1 + Phase 2 + Phase 3 + Phase 4 全部完成后,统一告诉用户:
+Phase 1 ~ Phase 5 全部完成后,统一告诉用户。
+
+**顺序很重要**：如果有 `critical` 健康告警，它排在**最前面**，因为那是唯一需要用户动手的事；其余按下面的模板。
 
 ```
+🚨 （仅当有 critical 告警时，按 Phase 5 的格式放在最顶部）
+
 今日 daily 抓取完成:
 - 共 X 条新闻(⭐⭐⭐ x 条 / ⭐⭐ x 条 / ⭐ x 条),写入 data/daily/YYYY-MM-DD.md
 - 自动发布:X 条已写入 docs/data/daily.json
-- Uber CEO 访谈:有新访谈 / 无新内容
+- 抓取源健康:正常（N 个源）/ N 个警告,详见上方
+- Uber CEO 访谈:无新内容 / 见下方单独区块
 
 请用 VS Code 打开 data/daily/YYYY-MM-DD.md,把认为重要的条目 [ ] 改成 [x]（供 weekly 使用）。
 发布网页请运行:git add -A && git commit -m "daily YYYY-MM-DD" && git push
+
+## 🎙️ Uber CEO 访谈提醒（仅当有新内容时，按 Phase 4 的格式单独成块）
 ```
 
 如果有 fetch 失败,补充提示:"注意:X 个 URL fetch 失败,请检查文件末尾的 ⚠️ 列表"
+
+---
+
+## 定期维护（不是每天，但别忘）
+
+这几件事不在每日流程里，但放着不管会慢慢劣化：
+
+| 事项 | 频率 | 命令 / 做法 |
+|------|------|------|
+| **滚动 daily 归档** | 约每月，或 daily.json 超过 100 天时 | `python scripts/roll_daily_archive.py --apply`（默认保留近 90 天，脚本对条目数做守恒校验，不一致会拒绝写入） |
+| **压缩周报图片** | 每次周报贴过新图之后 | `python scripts/compress_weekly_images.py --apply`（幂等，已是 WebP 的会跳过） |
+| **核查 local_media.json** | 每季度 | 各公司是否有新运营城市；旧站点是否还有效 |
+| **复查静默源** | 当 Phase 5 连续 2 天报同一个源 | 手动打开该 feed URL 确认是上游改版还是路由下线 |
+
+**为什么图片压缩要定期做**：网页的粘贴路径仍然是 `FileReader.readAsDataURL`，贴进去的新图还是未压缩 PNG。2026-09-01 时两张图就把 `weekly_overrides.json` 撑到 1.56MB、实际传输 1181KB，占了全站首屏的 61%。

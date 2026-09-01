@@ -30,9 +30,18 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 | "学习这次的判断" / "把这条加进 examples" | 直接编辑 `important-examples.md` | 每次划完重点后 |
 
 **默认执行策略(重要)**:
-- 说"跑今日新闻"时,skill **默认自动分两阶段执行**:
-  - Phase 1:国外组(Python 抓取 `competitors.md` 的国外公司)
-  - Phase 2:国内组(Python 抓取 `competitors.md` 的国内公司)
+- 说"跑今日新闻"时,skill **默认自动跑完 5 个 Phase**:
+
+| Phase | 做什么 | 产出去哪 |
+|------|------|------|
+| 1 | 国外组抓取 | `data/daily/YYYY-MM-DD.md` 国外 section |
+| 2 | 国内组抓取 | 同一文件的国内 section |
+| 3 | 自动发布 ⭐⭐+ | `docs/data/daily.json` |
+| 4 | **Uber CEO 访谈查询** | **不写文件,单独提醒用户**(见下) |
+| 5 | **抓取源健康告警** | **不写文件,单独提醒用户**(见下) |
+
+- Phase 1、2 的产物**合并写入同一份文件**,实习生体感是一次跑完、一份文件
+- Phase 4、5 **刻意不写进 daily 文件**:它们不是当日新闻,不参与勾选,也不进周报,混进去只会干扰勾选流程
 - 两阶段的产物**合并写入同一份文件** `data/daily/YYYY-MM-DD.md`(包含 "## 国外 L4" 和 "## 国内 L4" 等 section),实习生体感是一次跑完、一份文件
 - 分阶段的好处:避免单次 tool 调用过多导致上下文或 5 小时额度问题
 - 如果 Phase 1 跑完后中断(网络/额度),隔一段时间说"只跑国内组"即可补跑 Phase 2,不会覆盖已有的国外组内容
@@ -78,6 +87,42 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 - 旧的 Tier URL fetch 流程已下线,不再作为主流程执行
 - `archive/legacy-fetch/sources.md` 仅作历史归档与应急兜底参考,默认不批量抓取
 
+### 每天自动盯着的两件事(Phase 4 / Phase 5)
+
+这两件都是**每天 daily 跑完自动执行、有情况才提醒**,不需要单独触发,也不写进 daily 文件。
+
+**Phase 4:Uber CEO Dara Khosrowshahi 访谈**
+- 覆盖 YouTube、Spotify、Apple Podcasts、媒体专访、现场活动 —— 不只是 YouTube
+- **强制核实发布日期**:搜索摘要里出现"2026"不算数,必须打开页面确认真实上传/发布日期,确认不了就不报
+- 只报**距今 ≤ 14 天**的新访谈
+- 去重台账 `data/uber_ceo_interviews.json`:报过的不再报,避免同一期天天弹。不想再被某条打扰,手动加进 `seen` 即可
+
+**Phase 5:抓取源健康告警**
+- 抓取脚本在输出 JSON 的顶层 `health` 字段里做好分级,命令行也会打印
+- **critical**(凭证过期、IP 被封)→ 提到最终回复**最顶部**,因为只有用户能修
+- **warning**(限速、瞬时错误)→ 结束动作里列一行
+- **silent_feeds**(请求成功但返回 0 条)→ 单独列出,这是最隐蔽的故障类型
+- 为什么要专门做这个:**源静默失效不会报错**,只会让某个源"今天恰好没新闻",不主动播报可能几周没人发现
+
+典型的 critical 长这样:
+
+```
+🚨 X(Twitter) 抓取凭证已失效,22 个 X 源当前抓不到任何内容。
+   → 到 Railway → rsshub 服务 → Variables 更新 TWITTER_AUTH_TOKEN
+     取值:DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value
+```
+
+### 定期维护(不是每天,但别忘)
+
+| 事项 | 频率 | 命令 |
+|------|------|------|
+| 滚动 daily 归档 | 约每月 | `python scripts/roll_daily_archive.py --apply` |
+| 压缩周报图片 | 贴过新图之后 | `python scripts/compress_weekly_images.py --apply` |
+| 核查 local_media.json | 每季度 | 手动:各公司有无新运营城市 |
+| 复查静默源 | Phase 5 连续 2 天报同一个源 | 手动打开该 feed URL 确认 |
+
+两个脚本都**默认只预览、加 `--apply` 才写入**,且都是幂等的,重复跑安全。
+
 ### 这个 skill 做不到的事(必读)
 
 **为了让你和实习生有合理预期,必须明确以下限制:**
@@ -110,7 +155,9 @@ robotaxi-news/
 │   ├── daily-publish.md         # 每日精选自动发布到网页
 │   └── weekly-publish.md        # 周报自动发布到网页
 ├── scripts/
-│   └── python_rss_fetch.py      # 主流程 Python 召回脚本(读取 competitors.md 产出结构化 JSON)
+│   ├── python_rss_fetch.py      # 主流程 Python 召回脚本(读取 competitors.md 产出结构化 JSON + health 健康分级)
+│   ├── roll_daily_archive.py    # 定期:把 daily.json 的旧日期滚动进归档(带条目守恒校验)
+│   └── compress_weekly_images.py # 定期:压缩周报内联图片(PNG→WebP,幂等)
 ├── archive/
 │   ├── claude_structured_summary.py # 已归档:旧的 API 调用总结脚本(已由 Claude 直接总结替代)
 │   └── legacy-fetch/            # 已下线的旧抓取方案归档
@@ -118,12 +165,15 @@ robotaxi-news/
 │       └── ref/                 # 旧 Python/Gemini 抓取参考实现
 ├── data/
 │   ├── daily/                   # 每日抓取产物,文件名 YYYY-MM-DD.md
+│   ├── uber_ceo_interviews.json # Phase 4 去重台账(报过的访谈,避免重复提醒)
 │   └── reports/                 # 周报 HTML(YYYY-Wxx.html)+ JSON 副产物(YYYY-Wxx.json)
 └── docs/                        # GitHub Pages 网站根目录(固定用 /docs,GitHub 原生支持)
     ├── index.html               # 单文件网页(Tailwind CDN + 原生 JS)
     └── data/
-        ├── daily.json           # 每日精选数据(Claude 自动写入)
-        └── weekly.json          # 周报数据(Claude 自动写入)
+        ├── daily.json           # 每日精选,近 90 天(Phase 3 只写这个)
+        ├── daily-archive.json   # 每日精选,更早的历史(只由 roll_daily_archive.py 维护)
+        ├── weekly.json          # 周报数据(Claude 自动写入)
+        └── weekly_overrides.json # 周报人工修订 + 内联图片(定期跑压缩脚本)
 ```
 
 ---
@@ -218,26 +268,32 @@ python -c "import feedparser;f=feedparser.parse('https://example.com/feed');prin
 
 抓取本身(Python 跑 RSS)**不消耗 Claude token**,真正花 token 的是 Claude 读 JSON + 写总结。所以公司数量增加对 token 的影响远小于对**时长**的影响。
 
-### ⚠️ 真正的大头是 `docs/data/daily.json`,而且每天在涨
+### ⚠️ 真正的大头是 `docs/data/daily.json`
 
-| 指标 | 当前值(2026-09-01) |
-|------|------|
-| 文件大小 | **1.87 MB** |
-| 覆盖 | 141 天 / 1692 条新闻(2026-04-14 起) |
-| 增长 | 每天约 **14 KB** |
-| 全量读入的代价 | **约 53 万 token** |
-| 一年后预计 | 约 4.8 MB(全量读将超过 130 万 token) |
+2026-09-01 已按「近 90 天 + 归档」拆分,现状:
 
-**关键区分**:贵的是把它 **`Read` 进 Claude 上下文**(约 53 万 token);用 **Python 在进程内读它是 0 token**。
+| 文件 | 内容 | 全量读入上下文的代价 |
+|------|------|------|
+| `docs/data/daily.json` | 近 **90 天**(daily-publish 只写这里) | 约 **34 万 token** |
+| `docs/data/daily-archive.json` | 更早的历史(当前 51 天) | 约 19 万 token |
+
+每天仍增长约 14 KB,靠 `scripts/roll_daily_archive.py` 定期滚动封顶(见 `workflows/daily-fetch.md` 的「定期维护」)。
+
+**拆分是为了给网页首屏减负,不是为了省 Claude 的 token。** token 的正确解法是下面这条区分:
+
+**关键区分**:贵的是把它 **`Read` 进 Claude 上下文**;用 **Python 在进程内读它是 0 token**。
 
 所以 Phase 3 的规则是:
 
 | 动作 | 允许? | 代价 |
 |------|------|------|
-| `Read` 整份 `daily.json` | ❌ **禁止** | 约 53 万 token,且每天在涨 |
+| `Read` 整份 `daily.json` | ❌ **禁止** | 约 34 万 token,且每天在涨 |
+| `Read` 整份 `daily-archive.json` | ❌ **禁止**,而且 Phase 3 根本用不到它 | 约 19 万 token |
 | `Read` 前 10 行确认最新日期 | ✅ | 可忽略 |
 | Python `json.load` → 插入 → `json.dump` 写回 | ✅ **唯一正确做法** | 0 token |
 | 用 Edit / Write 手拼 JSON 字符串 | ❌ **禁止** | 见下 |
+
+**Phase 3 只写 `daily.json`,永远不要碰 `daily-archive.json`。** 归档是滚动脚本的职责,发布流程误写归档会造成日期重叠。
 
 **必须用 `workflows/daily-publish.md` 步骤 6 的 Python 写法**,原因有两个,缺一不可:
 1. **省 token**:文件由 Python 读,不进 Claude 上下文
@@ -297,6 +353,22 @@ git -C "D:\Desktop\robotaxi-news" pull origin main
 - **每日精选 tab**(默认):按日期倒序展示,支持按日期/公司/国内外筛选
 - **周报 tab**:按周次浏览,渲染结构化周报正文
 - 所有数据通过 JSON 文件驱动,无需后端服务器
+
+### 首屏性能(2026-09-01 优化)
+
+优化前每次打开网页要传 **1943 KB**(gzip 后),两个原因都不在直觉位置:
+
+| 文件 | 优化前传输 | 优化后 | 怎么做的 |
+|------|------|------|------|
+| `weekly_overrides.json` | **1181 KB**(占 61%) | 约 90 KB | 内联图片 PNG→WebP。它 99.6% 是两张 base64 图,而 base64 后的 PNG 几乎压不动(gzip 仅 1.3x),所以磁盘比 daily.json 小、传输却更大 |
+| `daily.json` | 680 KB | 约 430 KB | 拆成近 90 天 + 归档 |
+| `weekly.json` | 62 KB | 不变 | **本身没问题**,不用管 |
+
+**归档是"后台补齐"不是"不加载"**:`index.html` 的 `loadDailyArchive()` 在首屏渲染完成后才去拉 `daily-archive.json`,拉到后合并进 `dailyData` 并重建筛选器。**网页上看到的数据仍然是全量 141 天,一条不少**,只是不再阻塞首屏。
+
+改动时的两个坑(已处理,改这块代码要注意):
+- `buildDateFilter()` 是 **append 式**构建,重建前必须先清掉旧 option(保留第一项"全部日期"),否则会出现 141 个重复项
+- `buildCompanyFilter()` 会**整个重建下拉**,重建后必须从 `selectedCompanies` 还原勾选状态,否则用户已选的公司会被清空
 
 ### 首次部署
 
@@ -374,7 +446,8 @@ with open("docs/data/daily.json", "w", encoding="utf-8") as f:
 ```
 
 **防范措施**：
-- ✅ **禁止 `Read` 整份 `daily.json`**：现已 1.87MB / 约 53 万 token，且每天涨 14KB。只允许 `Read` 前 10 行确认最新日期，其余交给 Python
+- ✅ **禁止 `Read` 整份 `daily.json`**：现为 1.20MB / 约 34 万 token（近 90 天），且每天涨 14KB。只允许 `Read` 前 10 行确认最新日期，其余交给 Python
+- ✅ **Phase 3 不要碰 `daily-archive.json`**：归档由 `roll_daily_archive.py` 维护，发布流程误写会造成日期重叠
 - ✅ **禁止用 Edit / Write 手拼 JSON 字符串**：见下方 2026-09-01 的转义事故
 - ✅ **写入前后都用 Python 验证**：`python -c "import json;json.load(open('docs/data/daily.json',encoding='utf-8'))"`（不要用 `node -e "require(...)"`，它对语法错误的报错位置不精确）
 - ✅ **提交前检查**：确认 git diff 显示的是"新增今日数据"而不是"删除所有历史数据"

@@ -1,0 +1,11 @@
+{
+  "_comment": "Uber CEO Dara Khosrowshahi 访谈台账。daily-fetch 的 Phase 4 每天查一次，只对不在这里的新访谈提醒用户，提醒后追加进来。用途是去重——避免同一期访谈天天重复提醒。手动加一条也可以（比如已经看过、不想再被提醒）。",
+  "_schema": {
+    "url": "访谈链接（唯一键，比对时按 url 去重）",
+    "title": "标题",
+    "platform": "YouTube / Spotify / Apple Podcasts / 媒体专访 / 现场活动 等",
+    "published_at": "YYYY-MM-DD，必须是已核实的真实发布日期",
+    "first_seen": "YYYY-MM-DD，第一次提醒用户的日期"
+  },
+  "seen": []
+}

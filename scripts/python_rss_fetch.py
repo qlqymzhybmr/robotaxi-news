@@ -185,8 +185,15 @@ def fetch_direct_feed(
     feed: DirectFeed,
     window_start: datetime,
     window_end: datetime,
+    raw_counts: Dict[str, int] | None = None,
 ) -> Tuple[List[dict], List[str]]:
-    """Fetch a direct RSS feed (company blog/newsroom) and filter by time window."""
+    """Fetch a direct RSS feed (company blog/newsroom) and filter by time window.
+
+    `raw_counts`, when given, records how many entries the feed returned before
+    any window filtering. That is what separates "this source published nothing
+    today" from "this source is broken" — both look like zero items otherwise,
+    and a silently broken feed can go unnoticed for weeks.
+    """
     errors: List[str] = []
     items: List[dict] = []
     is_reddit = is_reddit_feed(feed.url)
@@ -221,6 +228,9 @@ def fetch_direct_feed(
     if parsed is None:
         errors.append(f"{feed.company} [direct] parse_error: no response")
         return items, errors
+
+    if raw_counts is not None:
+        raw_counts[feed.company] = len(getattr(parsed, "entries", []))
 
     # Reddit 403 detection: report explicitly rather than silently returning 0 items
     if is_reddit:
@@ -729,6 +739,65 @@ def fetch_local_media_news(
     return items, errors
 
 
+# 需要主动告知用户、且用户自己才能修的故障。key 是错误串里的标记，
+# value 是 (级别, 人话说明, 用户要做什么)。
+ALERT_RULES = [
+    ("TWITTER_AUTH_EXPIRED", "critical",
+     "X(Twitter) 抓取凭证已失效，所有 X 源当前抓不到任何内容",
+     "到 Railway → rsshub 服务 → Variables 更新 TWITTER_AUTH_TOKEN。"
+     "取值：浏览器 DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value"),
+    ("REDDIT_403", "critical",
+     "Reddit 拒绝了请求（UA 或 IP 被封），非限速问题，重试无用",
+     "需要更换出口 IP，或改用其他 UA / 接入 Reddit 官方 API"),
+    ("REDDIT_429", "warning",
+     "Reddit 限速，已按退避重试仍未取到",
+     "通常次日自愈；若连续多天出现，考虑拉长重试间隔或减少订阅的 subreddit 数量"),
+]
+
+
+def build_health_report(errors: List[str], raw_counts: Dict[str, int],
+                        expected_feeds: List[str]) -> dict:
+    """把零散的错误串归类成分级告警，供 daily-fetch 的 Phase 5 直接播报。
+
+    分三类：
+      alerts       —— 需要用户动手修的（凭证过期、被封禁）
+      silent_feeds —— 请求成功但一条都没返回的源，多半是上游改版或路由失效
+      missing      —— 压根没跑到的源
+    """
+    alerts = []
+    for marker, level, what, action in ALERT_RULES:
+        hits = [e for e in errors if marker in e]
+        if hits:
+            alerts.append({
+                "level": level,
+                "type": marker,
+                "count": len(hits),
+                "what": what,
+                "action": action,
+                "sources": [h.split(":")[0].split("]")[-1].strip() for h in hits][:8],
+            })
+
+    other = [e for e in errors
+             if not any(marker in e for marker, *_ in ALERT_RULES)]
+    if other:
+        alerts.append({
+            "level": "warning", "type": "OTHER_FETCH_ERROR", "count": len(other),
+            "what": "其他抓取错误（网络超时 / 解析失败等）",
+            "action": "多为瞬时问题，若同一源连续多天出现再排查",
+            "sources": other[:8],
+        })
+
+    silent = sorted(name for name, n in raw_counts.items() if n == 0)
+    missing = sorted(set(expected_feeds) - set(raw_counts))
+    return {
+        "ok": not alerts and not silent and not missing,
+        "alerts": alerts,
+        "silent_feeds": silent,
+        "missing_feeds": missing,
+        "checked_feeds": len(raw_counts),
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Robotaxi Python RSS fetcher")
     parser.add_argument("--competitors", default="competitors.md")
@@ -763,8 +832,9 @@ def main() -> None:
         all_items.extend(items)
         all_errors.extend(errors)
 
+    raw_counts: Dict[str, int] = {}
     for feed in direct_feeds:
-        items, errors = fetch_direct_feed(feed, window_start, window_end)
+        items, errors = fetch_direct_feed(feed, window_start, window_end, raw_counts)
         all_items.extend(items)
         all_errors.extend(errors)
 
@@ -781,8 +851,11 @@ def main() -> None:
             local_media_items_total += len(items)
 
     deduped = dedupe_news(all_items)
+    health = build_health_report(
+        all_errors, raw_counts, [f.company for f in direct_feeds])
 
     result = {
+        "health": health,
         "meta": {
             "generated_at": datetime.now(CN_TZ).isoformat(),
             "window_start": window_start.isoformat(),
@@ -809,6 +882,22 @@ def main() -> None:
         f"track_a_raw={local_media_items_total} "
         f"deduped={len(deduped)} errors={len(all_errors)} output={output_path}"
     )
+
+    # 健康状况直接打在命令行，不要只埋在 JSON 里——凭证过期这类问题
+    # 如果只是静默地少抓几条，可能几周都没人发现。
+    if health["ok"]:
+        print(f"health=OK ({health['checked_feeds']} 个直接订阅源全部正常)")
+    else:
+        print(f"health=NEEDS_ATTENTION")
+        for a in health["alerts"]:
+            tag = "🚨" if a["level"] == "critical" else "⚠️"
+            print(f"  {tag} [{a['type']}] {a['what']}（{a['count']} 处）")
+            print(f"     → {a['action']}")
+        if health["silent_feeds"]:
+            print(f"  ⚠️ 以下源请求成功但返回 0 条，疑似失效："
+                  f"{', '.join(health['silent_feeds'])}")
+        if health["missing_feeds"]:
+            print(f"  ⚠️ 以下源未执行到：{', '.join(health['missing_feeds'])}")
 
 
 if __name__ == "__main__":
