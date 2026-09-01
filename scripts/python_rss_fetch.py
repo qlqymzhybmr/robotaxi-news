@@ -190,13 +190,36 @@ def fetch_direct_feed(
     errors: List[str] = []
     items: List[dict] = []
     is_reddit = is_reddit_feed(feed.url)
-    if is_reddit:
-        time.sleep(3)  # Reddit rate-limit: space requests at least 3s apart
-    try:
-        req_headers = {"User-Agent": BROWSER_UA} if is_reddit else {}
-        parsed = feedparser.parse(feed.url, request_headers=req_headers)
-    except Exception as e:
-        errors.append(f"{feed.company} [direct] parse_error: {e}")
+    req_headers = {"User-Agent": BROWSER_UA} if is_reddit else {}
+
+    # Reddit rate-limits hard and a single 3s gap is not enough: in the
+    # 2026-09-01 health check r/teslamotors returned 429 twice and only came
+    # back on the third try ~40s in, and the 2026-09-01 production run lost two
+    # of three subreddits the same way. Retry with backoff rather than dropping
+    # the feed for the day. Non-Reddit feeds get one cheap retry too, which is
+    # enough for the transient IncompleteRead / 503 seen on RSSHub routes.
+    # 4 attempts for Reddit: r/teslamotors is high-traffic enough that it was
+    # still throttled after 3 (~43s), and it carries Tesla incident reports.
+    attempts = 4 if is_reddit else 2
+    backoff = 20 if is_reddit else 5
+    parsed = None
+    for attempt in range(attempts):
+        if is_reddit and attempt == 0:
+            time.sleep(3)  # baseline spacing between subreddit requests
+        elif attempt:
+            time.sleep(backoff)
+        try:
+            parsed = feedparser.parse(feed.url, request_headers=req_headers)
+        except Exception as e:
+            if attempt == attempts - 1:
+                errors.append(f"{feed.company} [direct] parse_error: {e}")
+                return items, errors
+            continue
+        # Retry only on rate limiting or an empty parse; anything else is final.
+        if parsed.get("status", 0) != 429 and getattr(parsed, "entries", []):
+            break
+    if parsed is None:
+        errors.append(f"{feed.company} [direct] parse_error: no response")
         return items, errors
 
     # Reddit 403 detection: report explicitly rather than silently returning 0 items
