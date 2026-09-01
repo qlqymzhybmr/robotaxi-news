@@ -1195,25 +1195,59 @@ async function saveWeeklyOverride() {
 
     // Always fetch the authoritative state from GitHub API (bypasses CDN cache) to prevent overrides
     // from prior weeks being lost when GitHub Pages serves a stale cached version on page load.
+    //
+    // 历史事故（2026-07 ~ 2026-08，W27~W35 多次丢失）：GitHub Contents API 对
+    // **超过 1MB 的文件不返回 content 字段**。当时这里是 try/catch 静默吞异常，
+    // 于是 atob('') -> JSON.parse('') 抛错被吞掉、apiOverrides 保持为空，
+    // 最后只写入当前这一周，把其他所有周静默删除。文件因为内联图片长期超 1MB，
+    // 所以每次保存都在丢数据，而且完全没有报错。
+    //
+    // 现在的原则：**读不到完整的现有内容就绝不写入**。宁可保存失败让用户看见，
+    // 也不要写出一个残缺文件。
     let sha = '';
     const apiOverrides = {};
     const getRes = await fetch(apiBase, { headers });
     if (getRes.ok) {
       const fd = await getRes.json();
       sha = fd.sha || '';
-      try {
-        const decoded = JSON.parse(decodeURIComponent(escape(atob(fd.content.replace(/\n/g, '')))));
-        if (Array.isArray(decoded)) decoded.forEach(e => { if (e && e.week_id) apiOverrides[e.week_id] = e; });
-      } catch (_) {}
+      let text = '';
+      if (fd.content) {
+        text = decodeURIComponent(escape(atob(fd.content.replace(/\n/g, ''))));
+      } else if (fd.git_url) {
+        // >1MB：Contents API 不给 content，但 Blobs API 仍然给（上限 100MB）
+        const blobRes = await fetch(fd.git_url, { headers });
+        if (blobRes.ok) {
+          const bd = await blobRes.json();
+          if (bd.content) text = decodeURIComponent(escape(atob(bd.content.replace(/\n/g, ''))));
+        }
+      }
+      if (!text) {
+        throw new Error('读不到 weekly_overrides.json 的现有内容，已中止保存（继续写入会删掉其他周的编辑）');
+      }
+      const decoded = JSON.parse(text);   // 解析失败就让它抛，不要吞
+      if (!Array.isArray(decoded)) {
+        throw new Error('weekly_overrides.json 不是数组，格式异常，已中止保存');
+      }
+      decoded.forEach(e => { if (e && e.week_id) apiOverrides[e.week_id] = e; });
     } else if (getRes.status !== 404) throw new Error(`GitHub API ${getRes.status}: ${await getRes.text()}`);
 
     // Merge: GitHub API state is authoritative base; new edit overwrites its week
+    const weeksBefore = Object.keys(apiOverrides).length;
+    const isNewWeek = !apiOverrides[editWeekData.week_id];
     apiOverrides[editWeekData.week_id] = editWeekData;
     weeklyOverridesData[editWeekData.week_id] = editWeekData;
     weeklyDisplayVersion = 'edited';
     updateWeekVersionToggle();
 
     const overridesArr = Object.values(apiOverrides).sort((a, b) => (b.week_id || '').localeCompare(a.week_id || ''));
+
+    // 最后一道闸：保存只允许「周数不变」（改已有周）或「+1」（新增一周）。
+    // 任何导致周数减少的情况都是 bug，宁可保存失败也不要覆盖掉历史编辑。
+    const expected = weeksBefore + (isNewWeek ? 1 : 0);
+    if (overridesArr.length !== expected) {
+      throw new Error(`保存前自检失败：预期 ${expected} 周，实际 ${overridesArr.length} 周，已中止以免丢失编辑`);
+    }
+
     const content = JSON.stringify(overridesArr, null, 2) + '\n';
     const encoded = btoa(unescape(encodeURIComponent(content)));
     const body = { message: `weekly override: ${editWeekData.week_id}`, content: encoded };
