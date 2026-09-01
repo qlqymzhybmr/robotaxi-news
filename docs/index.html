@@ -183,6 +183,9 @@ async function init() {
   else if (currentTab === 'weekly') restoreWeeklyHash();
   else renderSelections();
 
+  // 首屏已经渲染完毕，再去后台补历史归档（不 await，不阻塞首屏）
+  loadDailyArchive();
+
   // Delegated click for sub-items with daily_ids
   document.getElementById('weekly-outer').addEventListener('click', (e) => {
     const subItem = e.target.closest('[data-daily-ids]');
@@ -193,6 +196,38 @@ async function init() {
     if (isActive) { hideSources(); return; }
     showSources(ids, subItem);
   });
+}
+
+// daily.json 只保留近 90 天，更早的历史在 daily-archive.json（由
+// scripts/roll_daily_archive.py 滚动维护）。拆分的目的不是少加载数据，而是让首屏
+// 不必等全量历史——归档在这里后台补齐，补完后数据仍是完整的 141 天。
+async function loadDailyArchive() {
+  const arch = await fetchJSON('data/daily-archive.json');
+  if (!Array.isArray(arch) || !arch.length) return;
+  const seen = new Set(dailyData.map((e) => e && e.date));
+  const extra = arch.filter((e) => e && e.date && !seen.has(e.date));
+  if (!extra.length) return;
+  dailyData = dailyData.concat(extra).sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
+  // 日期下拉是 append 式构建的，重建前要先清掉旧选项（保留第一项"全部日期"），
+  // 否则会出现重复项；同时保住用户当前已经选中的值。
+  const dateSel = document.getElementById('filter-date');
+  const keepDate = dateSel ? dateSel.value : '';
+  if (dateSel) while (dateSel.options.length > 1) dateSel.remove(1);
+  buildDateFilter();
+  if (dateSel) dateSel.value = keepDate;
+
+  // 公司下拉会整个重建，勾选状态得从 selectedCompanies 还原回去。
+  buildCompanyFilter();
+  document.querySelectorAll('.company-cb').forEach((cb) => { cb.checked = selectedCompanies.has(cb.value); });
+  const allCb = document.getElementById('co-all');
+  const total = document.querySelectorAll('.company-cb').length;
+  if (allCb) allCb.checked = selectedCompanies.size > 0 && selectedCompanies.size === total;
+  updateCompanyBtnLabel();
+
+  initSelectionsDates();
+  if (currentTab === 'daily') applyFilters();
+  else if (currentTab === 'selections') renderSelections();
 }
 
 async function fetchJSON(path) {
