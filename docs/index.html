@@ -878,13 +878,24 @@ function deleteEntry(si, ei) {
   renderWeeklyEdit();
 }
 
-function addSubItem(si, ei) {
-  collectEditWeekDataFromDOM();
+// 显示用的 a/b/c 是按索引算的，但 label 字段也会存进 JSON，插入或删除后必须
+// 重新编号，否则存下来的 label 和实际顺序对不上。
+function relabelSubItems(entry) {
+  (entry.sub_items || []).forEach((s, i) => { s.label = String.fromCharCode(97 + i); });
+}
+
+// at 省略 = 追加到末尾；给了 at 就插入到该位置之前（用于在两条之间插入）。
+function addSubItem(si, ei, at) {
+  pushUndo();
   const entry = editWeekData && editWeekData.sections[si] && editWeekData.sections[si].entries[ei];
   if (!entry) return;
   if (!entry.sub_items) entry.sub_items = [];
-  entry.sub_items.push({ label: '', content_html: '新内容' });
+  const idx = Number.isInteger(at) ? Math.max(0, Math.min(at, entry.sub_items.length))
+                                   : entry.sub_items.length;
+  entry.sub_items.splice(idx, 0, { label: '', content_html: '新内容' });
+  relabelSubItems(entry);
   renderWeeklyEdit();
+  focusEditable(`[data-edit-content="${si}-${ei}-${idx}"]`);
 }
 
 function removeSubItem(si, ei, sii) {
@@ -892,17 +903,46 @@ function removeSubItem(si, ei, sii) {
   const entry = editWeekData && editWeekData.sections[si] && editWeekData.sections[si].entries[ei];
   if (!entry || !entry.sub_items) return;
   entry.sub_items.splice(sii, 1);
+  relabelSubItems(entry);
   hideSources();
   renderWeeklyEdit();
 }
 
-function addEntry(si) {
-  collectEditWeekDataFromDOM();
+function addEntry(si, at) {
+  pushUndo();
   const section = editWeekData && editWeekData.sections[si];
   if (!section) return;
   if (!section.entries) section.entries = [];
-  section.entries.push({ headline_html: '新标题', sub_items: [] });
+  const idx = Number.isInteger(at) ? Math.max(0, Math.min(at, section.entries.length))
+                                   : section.entries.length;
+  section.entries.splice(idx, 0, { headline_html: '新标题', sub_items: [] });
   renderWeeklyEdit();
+  focusEditable(`[data-edit-headline="${si}-${idx}"]`);
+}
+
+// 新插入的条目直接选中其占位文字，省得再手动点一下、删一遍「新内容」。
+function focusEditable(selector) {
+  const el = document.querySelector(selector);
+  if (!el) return;
+  el.focus();
+  const range = document.createRange();
+  range.selectNodeContents(el);
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(range);
+  el.scrollIntoView({ block: 'nearest' });
+}
+
+// 条目之间的插入条：平时透明，鼠标移到缝隙上才显形（Notion 式）。
+function insertBar(onclick, label) {
+  return `<div class="relative h-0">
+    <button type="button" onclick="${onclick}" title="${label}"
+            class="absolute -top-2 left-0 right-0 h-4 z-10 flex items-center gap-1.5 px-1 opacity-0 hover:opacity-100 focus:opacity-100 transition-opacity">
+      <span class="flex-1 h-px bg-blue-300"></span>
+      <span class="text-[11px] leading-none text-blue-500 whitespace-nowrap select-none">＋ ${label}</span>
+      <span class="flex-1 h-px bg-blue-300"></span>
+    </button>
+  </div>`;
 }
 
 function renderWeeklyEdit() {
@@ -917,7 +957,8 @@ function renderWeeklyEdit() {
       const subItemsHtml = (entry.sub_items || []).map((subItem, sii) => {
         const ids = (subItem.daily_ids || []).join(',');
         const srcAttr = ids ? ` data-daily-ids="${escAttr(ids)}"` : '';
-        return `<div class="flex items-start gap-2 mt-1.5 ml-1 py-0.5 group/item"${srcAttr}>
+        return insertBar(`addSubItem(${si},${ei},${sii})`, '插入要点') +
+        `<div class="flex items-start gap-2 mt-1.5 ml-1 py-0.5 group/item"${srcAttr}>
           <span class="shrink-0 text-sm font-semibold text-gray-500 select-none min-w-[20px] pt-0.5">${String.fromCharCode(96 + sii + 1)}.</span>
           <div contenteditable="true" data-edit-content="${si}-${ei}-${sii}"
                class="flex-1 text-sm text-gray-700 leading-relaxed outline-none rounded px-1 border border-transparent hover:border-blue-200 focus:border-blue-400 focus:bg-blue-50/40 transition-colors cursor-text"
@@ -926,7 +967,8 @@ function renderWeeklyEdit() {
                   class="opacity-0 group-hover/item:opacity-100 shrink-0 w-5 h-5 flex items-center justify-center text-gray-300 hover:text-red-400 rounded text-base transition-all" title="删除要点">×</button>
         </div>`;
       }).join('');
-      return `<div class="mb-4 group/entry">
+      return insertBar(`addEntry(${si},${ei})`, '插入标题') +
+      `<div class="mb-4 group/entry">
         <div class="flex items-start gap-1 rounded-md px-2 py-1.5 bg-blue-50 border-l-2 border-blue-400 hover:border-blue-500 transition-colors">
           <span class="shrink-0 text-sm font-bold text-blue-700 select-none min-w-[20px] mt-0.5">${ei + 1}.</span>
           <div contenteditable="true" data-edit-headline="${si}-${ei}"
@@ -953,7 +995,7 @@ function renderWeeklyEdit() {
   }).join('');
   container.innerHTML = `
     <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 mb-3 text-sm text-blue-800">
-      <b>编辑模式</b> · 点击文字编辑，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+B</kbd> 加粗，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+Z</kbd> 撤销，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+V</kbd> 粘贴图片（点击图片调整大小）。悬停显示增删按钮。
+      <b>编辑模式</b> · 点击文字编辑，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+B</kbd> 加粗，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+Z</kbd> 撤销，<kbd class="bg-blue-100 px-1 rounded text-xs font-mono">Ctrl+V</kbd> 粘贴图片（点击图片调整大小）。悬停显示增删按钮，<b>把鼠标移到两条之间的缝隙上可就地插入</b>。
     </div>
     ${patNote}
     <div id="weekly-edit-status" class="hidden mb-3"></div>
