@@ -24,13 +24,45 @@
 - 召回统一走 Python 抓取器(公司 + 关键词 + 时间窗),不再以 `archive/legacy-fetch/sources.md` 的 tier URL fetch 作为主流程。
 - `archive/legacy-fetch/sources.md` 仅作历史归档与兜底参考,默认不执行批量 fetch。
 
-**数据来源（四类）**:
-| 来源类型 | 说明 | 配置位置 |
-|------|------|------|
-| Track B：Google News RSS | 按公司名 + 关键词搜索，覆盖全量媒体报道，但受 Google 权重压制，地方小报容易被淹没 | `competitors.md` 国外/国内公司列表 |
-| Track A：本地媒体 site: 查询 | 对每家公司在其运营城市的指定本地媒体发起 `site:xxx.com` 专项查询，绕过 Google 权重，补漏地方 TV 台 / 地方报 | `data/local_media.json` |
-| 直接订阅 RSS | 公司官方博客/新闻室 + X(Twitter) via RSSHub | `competitors.md` → `## 直接订阅 RSS` / `## X（Twitter）RSS 订阅` |
-| Reddit 社区热帖 | r/SelfDrivingCars、r/Waymo、r/teslamotors；免认证，按 AV 关键词过滤 | `competitors.md` → `## 社区 / 媒体 RSS（Reddit 热帖）` |
+**数据来源（五类，全部并存，一次运行同时跑完）**:
+| 来源类型 | 说明 | 链接质量 | 配置位置 |
+|------|------|------|------|
+| Track B：Google News RSS | 按公司名 + 关键词搜索，覆盖全量媒体报道，但受 Google 权重压制，地方小报容易被淹没 | ⚠️ 搜索链接（见下方「链接策略」） | `competitors.md` 国外/国内公司列表 |
+| Track A：本地媒体 site: 查询 | 对每家公司在其运营城市的指定本地媒体发起 `site:xxx.com` 专项查询，绕过 Google 权重，补漏地方 TV 台 / 地方报 | ⚠️ 搜索链接 | `data/local_media.json` |
+| Track C：行业媒体 RSS | 综合财经/科技/汽车媒体大盘源（Electrek、CnEVPost、36氪、财新、华尔街见闻…），**必过主题关键词** | ✅ 发布方真实永久链接 | `competitors.md` → `## 行业媒体 RSS` |
+| 直接订阅 RSS | 公司官方博客/新闻室 + X(Twitter) via RSSHub | ✅ 发布方真实永久链接 | `competitors.md` → `## 直接订阅 RSS` / `## X（Twitter）RSS 订阅` |
+| Reddit 社区热帖 | r/SelfDrivingCars、r/Waymo、r/teslamotors；免认证，按 AV 关键词过滤 | ✅ Reddit 帖真实链接 | `competitors.md` → `## 社区 / 媒体 RSS（Reddit 热帖）` |
+
+**Track C 工作原理（2026-09-01 新增）**:
+- 与「直接订阅 RSS」的关键差别：公司新闻室条条相关，**不过滤**；Track C 是综合大盘源，绝大多数内容与自动驾驶无关，**每条必须命中 `MEDIA_TOPIC_KEYWORDS`**（定义在 `scripts/python_rss_fetch.py`）才进入管线。约 350 条原始条目 → 过滤后约 15 条。
+- 解析靠 section 标题区分：`FILTERED_FEED_SECTIONS` 里的 section 打 `filtered=True`，其余走原逻辑。**两种模式完全并存，Track A / Track B 行为未做任何改动。**
+- Track C 的独特价值有两点，都不是 Track B 能替代的：
+  1. **链接质量**：返回发布方真实永久 URL，不经 Google News 包装，不存在过期/搜不到问题
+  2. **补公司无关的新闻**：Track B 是按公司名检索的，**监管/政策类新闻往往不含任何公司名，会被结构性漏掉**。实测 2026-08-31「商务部等三部门发布车联网及自动驾驶数据合规指引」就是只有 Track C 抓到（36氪 + 华尔街见闻 + 界面 三源命中），Track B 全部漏掉。
+- ⚠️ RSSHub **没有汽车垂直媒体路由**（汽车之家 / 第一电动 / 盖世汽车 / 懂车帝 / 车东西均不存在），这部分仍只能靠 Track B 搜索召回。
+
+---
+
+## 链接策略（source_url 怎么来的，为什么有两种）
+
+写 daily 和 daily.json 时，`url` 字段有两种形态，**要能分辨**：
+
+**① 真实永久链接**（Track C / 直接订阅 / Reddit）
+形如 `https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/`。直接用，最优。
+
+**② 搜索链接**（Track A / Track B）
+形如 `https://www.google.com/search?q="标题" site:electrek.co`。
+
+**为什么不能给真实链接**：Google News RSS 返回的是 `CBMi…/AU_yqL…` 包装 URL，几天后失效。已实测排除全部还原方案——base64 解码（新格式解不出）、Google `batchexecute` 私有接口（4.9 秒/条且返回值已无 URL）、302 跳转（只跳到另一个包装）、Bing News RSS（已废弃）、DuckDuckGo（限流且有假阳性）。**这条路是死的，不要再试。**
+
+**因此搜索词按"结果可复现"来构造**（`_make_search_url()`）：
+1. 去掉 Google 给每条标题追加的 ` - 发布方` 后缀（纯噪音）
+2. 标题加引号做精确短语匹配，避免松散关键词的排序漂移
+3. 已知发布方域名时加 `site:` 限定，防止转载版和同题文章抢排名
+4. **用 `www.google.com` 网页搜索，不用 `news.google.com`** —— 新闻索引有时效衰减，几个月后旧文会掉出索引，这正是归档链接慢慢失效的原因；网页索引会长期保留
+5. 中文走百度且**不加 `site:`** —— 国内转载极多、百度对 UGC 子域收录不稳，加了经常零结果；不限定反而稳定能找到同一篇的某个副本
+
+**优先级**：同一事件如果 Track C 和 Track B 都抓到，**优先采用 Track C 的真实链接**作为权威源，Track B 的搜索链接降为辅助源。
 
 **Track A 工作原理**:
 - 脚本读取 `data/local_media.json`，对每个 `(公司, 站点)` 组合构建 `"CompanyName" site:outlet.com` 查询

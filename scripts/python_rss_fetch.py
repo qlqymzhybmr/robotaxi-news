@@ -28,13 +28,46 @@ class DirectFeed:
     region: str
     is_focus: bool
     url: str
+    # True for broad industry-media feeds, which must pass MEDIA_TOPIC_KEYWORDS.
+    filtered: bool = False
 
 
+# Feeds whose every entry is on-topic by construction (company newsrooms,
+# company X accounts, AV subreddits). Kept unfiltered apart from Reddit's own
+# keyword gate.
 DIRECT_FEED_SECTIONS = {
     "## 直接订阅 RSS",
     "## X（Twitter）RSS 订阅（via 自部署 RSSHub）",
     "## 社区 / 媒体 RSS（Reddit 热帖）",
 }
+
+# Broad industry / business media. These carry mostly unrelated stories
+# (财新最新, 第一财经头条, Electrek…), so every entry must pass a topic gate
+# before it enters the pipeline — otherwise a few hundred off-topic items a day
+# would drown the company signal.
+FILTERED_FEED_SECTIONS = {
+    "## 行业媒体 RSS",
+}
+
+# Topic gate for FILTERED_FEED_SECTIONS. Deliberately narrower than the
+# competitors.md search keywords: short generic tokens there (L3, L4, OTA, 融资)
+# match far too much free text to be safe as a standalone filter.
+MEDIA_TOPIC_KEYWORDS = [
+    # zh
+    "自动驾驶", "无人驾驶", "智驾", "无人出租", "自动驾驶出租", "智能驾驶",
+    "城市noa", "高阶智驾", "激光雷达", "无人车", "智能网联", "领航辅助",
+    # NOTE: "端到端" is deliberately absent — since ~2025 it is used at least as
+    # often for LLM architectures as for AV stacks, and it was the single
+    # biggest false-positive source on 雷峰网/钛媒体. Any genuine 端到端智驾
+    # story also carries 智驾 or 自动驾驶, so nothing real is lost.
+    "车路云", "萝卜快跑", "小马智行", "文远知行", "元戎启行",
+    "轻舟智航", "地平线", "禾赛", "速腾聚创",
+    # en
+    "autonomous driving", "autonomous vehicle", "self-driving", "driverless",
+    "robotaxi", "waymo", "cybercab", "autopilot", "full self-driving",
+    " fsd ", "adas", "lidar", "teleoperation", "safety driver",
+    "zoox", "pony.ai", "weride", "nuro", "mobileye", "motional", "wayve",
+]
 
 # Reddit blocks non-browser UAs; use a full Chrome UA to avoid 403
 BROWSER_UA = (
@@ -67,15 +100,24 @@ def is_reddit_relevant(title: str) -> bool:
 
 
 def parse_direct_feeds(path: Path) -> List[DirectFeed]:
-    """Parse all direct-feed sections from competitors.md."""
+    """Parse all direct-feed sections from competitors.md.
+
+    Two kinds of section are recognized: DIRECT_FEED_SECTIONS (on-topic by
+    construction) and FILTERED_FEED_SECTIONS (broad media, topic-gated). The
+    section a feed came from decides whether its entries get keyword-filtered.
+    """
     text = path.read_text(encoding="utf-8")
     feeds: List[DirectFeed] = []
     in_section = False
+    section_filtered = False
     for raw in text.splitlines():
         line = raw.strip()
         # Enter a recognized section
         if any(line.startswith(s) for s in DIRECT_FEED_SECTIONS):
-            in_section = True
+            in_section, section_filtered = True, False
+            continue
+        if any(line.startswith(s) for s in FILTERED_FEED_SECTIONS):
+            in_section, section_filtered = True, True
             continue
         # Leave section on any other ## heading (but keep scanning for more sections)
         if line.startswith("## "):
@@ -91,8 +133,15 @@ def parse_direct_feeds(path: Path) -> List[DirectFeed]:
                 region=region.strip(),
                 is_focus="⭐" in focus_raw,
                 url=url.strip(),
+                filtered=section_filtered,
             ))
     return feeds
+
+
+def is_media_topic_relevant(title: str, summary: str) -> bool:
+    """Topic gate for broad industry-media feeds (FILTERED_FEED_SECTIONS)."""
+    text = f" {title} {summary} ".lower()
+    return any(k in text for k in MEDIA_TOPIC_KEYWORDS)
 
 
 def is_twitter_rsshub_feed(url: str) -> bool:
@@ -188,9 +237,14 @@ def fetch_direct_feed(
             continue
 
         title = getattr(entry, "title", "")
+        summary = getattr(entry, "summary", "")
 
         # Reddit: title must contain AV keyword, skip pure social/discussion posts
         if is_reddit and not is_reddit_relevant(title):
+            continue
+
+        # Broad industry media: drop anything without an explicit AV signal.
+        if feed.filtered and not is_media_topic_relevant(title, summary):
             continue
 
         link = normalize_url(getattr(entry, "link", ""))
@@ -199,13 +253,13 @@ def fetch_direct_feed(
             "company_key": clean_company_name(feed.company),
             "region": feed.region,
             "is_focus": feed.is_focus,
-            "lang": "en",
+            "lang": "zh" if feed.region == "china" else "en",
             "title": title,
             "published_at": published.isoformat(),
             "source": _feed_title,
             "source_home": feed.url,
             "url": link,
-            "summary": getattr(entry, "summary", ""),
+            "summary": summary,
             "query": f"direct:{feed.url}",
         })
 
@@ -359,16 +413,27 @@ def _make_search_url(
 
     Google News RSS article links (CBMi…/AU_yqL…) are opaque wrappers that
     expire within days and cannot be decoded back to the publisher URL, so we
-    store a search that will keep resolving. Three things make that search
-    actually land on the article:
-      1. drop the ' - Publisher' suffix (noise),
-      2. quote the headline so it matches as an exact phrase,
-      3. scope to the publisher's domain when we know it.
+    store a search instead. Four things make that search land on the *same*
+    article every time it is clicked, months later:
+
+      1. drop the ' - Publisher' suffix Google appends (it is query noise),
+      2. quote the headline so it matches as an exact phrase rather than
+         as loose keywords whose ranking drifts over time,
+      3. scope to the publisher's domain when we know it, so syndicated
+         copies and same-topic articles cannot outrank the original,
+      4. search the *web* index, not news.google.com.
+
+    (4) matters most for the archive. news.google.com/search queries the news
+    index, which is recency-biased and ages stories out — a link that resolves
+    the week it is written silently stops resolving a few months later, which
+    is exactly how the daily archive rots. The web index keeps them.
 
     - Chinese articles (lang="zh"): use Baidu — far better coverage of
-      Chinese outlets (汽车之家, 新浪汽车, 盖世汽车, 搜狐 etc.) than Google News.
-    - English articles (lang="en"): use Google News search.
-    - `site` (optional): scope results to a specific domain.
+      Chinese outlets (汽车之家, 新浪汽车, 盖世汽车, 搜狐 etc.) than Google.
+      No site: scope here: Chinese syndication is heavy and Baidu's coverage of
+      UGC subdomains is patchy, so scoping often returns nothing at all, while
+      an unscoped exact phrase reliably finds *a* copy of the same article.
+    - English articles (lang="en"): Google web search, publisher-scoped.
     """
     headline = _clean_title(title, source_name)
     if len(headline) > 100:  # trim on a word boundary, never mid-word
@@ -379,8 +444,7 @@ def _make_search_url(
     q = urllib.parse.quote(query)
     if lang == "zh":
         return f"https://www.baidu.com/s?wd={q}"
-    params = ("en-US", "US", "US:en")
-    return f"https://news.google.com/search?q={q}&hl={params[0]}&gl={params[1]}&ceid={params[2]}"
+    return f"https://www.google.com/search?q={q}&hl=en"
 
 
 def normalize_url(url: str, source_href: str = "") -> str:

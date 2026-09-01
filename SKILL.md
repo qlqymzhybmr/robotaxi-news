@@ -46,11 +46,25 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 这个 skill **不依赖单一搜索**,用三层策略叠加:
 
 **第一层:Python 定向召回（主力）**
-- 启动时读取 `competitors.md` 的公司清单 + `## 搜索关键词`
-- 按公司执行 Python 抓取(基于 Google News RSS),严格过滤到 24 小时窗口
-- 抓取配额:
+
+一次运行同时跑**五类来源**,互相补漏,配置全部在 `competitors.md`:
+
+| 来源 | 抓什么 | 链接质量 |
+|------|------|------|
+| Track B：Google News RSS | 按公司名 + 关键词全网搜索（主力召回） | ⚠️ 搜索链接 |
+| Track A：本地媒体 site: 查询 | 各公司运营城市的地方报 / TV 台（`data/local_media.json`） | ⚠️ 搜索链接 |
+| Track C：行业媒体 RSS | 综合财经科技媒体大盘源，必过主题关键词 | ✅ 真实永久链接 |
+| 直接订阅 RSS | 公司官方新闻室 + X(Twitter) via 自部署 RSSHub | ✅ 真实永久链接 |
+| Reddit 社区热帖 | r/SelfDrivingCars、r/Waymo、r/teslamotors | ✅ 真实链接 |
+
+- 严格过滤到 24 小时窗口
+- 抓取配额（Track A / B）:
   - 重点公司(⭐):中英双语各抓,每语种最多 10 条
   - 普通公司:单语抓取为主(国内中文/国外英文),每语种最多 5 条
+
+**Track C 为什么单独存在**(2026-09-01 新增):Track B 是**按公司名检索**的,所以**不含公司名的监管/政策类新闻会被结构性漏掉**。实测 2026-08-31「商务部等三部门发布车联网及自动驾驶数据合规指引」只有 Track C 抓到,Track B 全漏。同时 Track C 返回发布方真实永久链接,不受下面的链接失效问题影响。
+
+**关于链接（重要,别再重复踩坑）**:Google News RSS 给的是几天后就失效的包装 URL,**还原成真实链接的路子已全部实测排除**——base64 解码、Google `batchexecute` 私有接口、302 跳转、Bing News RSS、DuckDuckGo 全部不可行(细节见 `workflows/daily-fetch.md` 的「链接策略」)。因此 Track A/B 的条目存的是**精心构造的搜索链接**(去发布方后缀 + 精确短语引号 + `site:` 限定 + 走网页索引而非新闻索引),目标是"每次点开都能稳定找到同一篇"。**同一事件若 Track C 也抓到,优先用 Track C 的真实链接。**
 
 **第二层:Claude 去重 + 结构化理解**
 - 候选新闻先由 Claude 做 URL 归一化去重 + 语义去重,避免同一事件重复写入
@@ -75,7 +89,8 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 5. **预估覆盖率:约 70-85%**。剩余 15-30% 需要靠人工补漏
 
 **降低漏查的措施**:
-- 强烈建议实习生每天看完 daily 后,**手动扫一眼 1-2 个垂直媒体**(推荐 CnEVPost、36氪汽车)作为 backup
+- **CnEVPost、36氪 已在 2026-09-01 接入 Track C 自动抓取**,不再需要手动扫。仍建议偶尔人工抽查一两个垂直媒体作为 backup
+- ⚠️ **汽车垂直媒体仍是盲区**:RSSHub 没有汽车之家 / 第一电动 / 盖世汽车 / 懂车帝 / 车东西 的路由,这几家目前只能靠 Track B 搜索召回,是已知最薄弱的一环
 - 如果发现某次明显漏查,告诉 Claude 调整 competitors.md 或启用 `archive/legacy-fetch/sources.md` 做应急补漏
 
 ---
@@ -170,6 +185,20 @@ robotaxi-news/
 ### 想加新的信息源
 当前主流程优先维护 `competitors.md` 的公司与关键词。`archive/legacy-fetch/sources.md` 仅在应急补漏时启用。
 
+**加一个新媒体 RSS 源**（推荐,链接质量最高）:在 `competitors.md` → `## 行业媒体 RSS` 下加一行 `媒体名 | 地区 | 是否重点 | RSS URL` 即可,脚本会自动带上主题关键词过滤。加之前先验证这个 feed 真的能出条目:
+
+```bash
+python -c "import feedparser;f=feedparser.parse('https://example.com/feed');print(len(f.entries))"
+```
+
+**注意区分两个 section**:
+- `## 直接订阅 RSS` —— 公司官方新闻室,条条相关,**不过滤**
+- `## 行业媒体 RSS` —— 综合大盘源,**强制过主题关键词**（`MEDIA_TOPIC_KEYWORDS`）
+
+放错 section 的后果:公司源放进行业媒体 section 会漏掉不含关键词的官方公告;大盘源放进直接订阅 section 会每天灌进几百条无关新闻。
+
+**调整主题关键词**:改 `scripts/python_rss_fetch.py` 的 `MEDIA_TOPIC_KEYWORDS`。加词前想清楚该词在**非自动驾驶语境**下有多常见——例如 `端到端` 就因为在大模型报道里泛滥而被刻意移除。
+
 ---
 
 ## Token 消耗与运行成本
@@ -248,12 +277,42 @@ git -C "D:\Desktop\robotaxi-news" pull origin main
 - [ ] 微信公众号源接入(技术难度高,待研究)
 - [ ] X / Twitter 实时监控(需要 API,目前不可行)
 - [ ] 接入专业新闻 API(NewsAPI / GDELT 等,需要预算)
+- [ ] **汽车垂直媒体接入**(汽车之家 / 第一电动 / 盖世汽车 / 懂车帝 / 车东西。RSSHub 无对应路由,需自己写解析器或找第三方镜像。这是当前最大的覆盖盲区)
+- [ ] **发布前链接体检**(写入 `docs/data/daily.json` 前对每条 `source_url` 做一次探活,把静默失效变成显式告警)
+- [x] ~~Track A/B 链接失效~~(2026-09-01:还原真实链接的路子已全部排除,改为构造可复现的搜索链接 + 新增 Track C 真实链接源,详见 `workflows/daily-fetch.md` 「链接策略」)
 
 如果有新的需求或发现 bug,直接编辑这个 SKILL.md 文件记录下来。
 
 ---
 
 ## 重要教训与避坑指南
+
+### ⚠️ 误判：RSSHub 返回 503 不代表服务挂了（2026-09-01）
+
+**问题描述**：
+排查时用三个**自己编的路由名**（`/36kr/search/article/robotaxi`、`/gasgoo/news`、`/d1ev/news`）去探活 RSSHub 实例，三个全返回 `503`，据此得出"RSSHub 实例已宕机、20+ 个 Twitter 源全部静默失效"的结论并上报。**结论是错的**，白白让用户去排查一个不存在的故障。
+
+**根本原因**：
+RSSHub 对**不存在或加载失败的路由**返回的是 `503 + 欢迎页 HTML`，而不是 `404`。仅凭若干路由 503 无法区分"服务挂了"和"这几个路由不存在"。
+
+**正确的探活方法**（按顺序）：
+```bash
+# 1. 先探服务本身，不要用业务路由
+curl -s -o /dev/null -w "%{http_code}\n" https://<实例>/healthz     # 期望 200 "ok"
+curl -s -o /dev/null -w "%{http_code}\n" https://<实例>/             # 期望 200
+
+# 2. 再探一个已知在用的路由
+curl -s https://<实例>/twitter/user/waymo | head -c 200              # 期望真实 RSS XML
+
+# 3. 想知道有哪些路由可用，直接问实例自己（不要猜路由名）
+curl -s https://<实例>/api/namespace | python -c "import sys,json;print(len(json.load(sys.stdin).get('data',{})))"
+```
+
+**结论**：`/healthz` 和 `/api/namespace` 是判断 RSSHub 状态的权威依据。**业务路由 503 只说明那条路由不可用。**
+
+**附带结论**（已验证）：该实例共 1584 个 namespace，**汽车垂直媒体一个都没有**（无 autohome / d1ev / gasgoo / dongchedi），但 36kr / caixin / yicai / tmtpost / jiemian / cls / qbitai / ifeng / sina / sohu 都在。
+
+---
 
 ### ⚠️ 关键错误：覆盖 daily.json 导致历史数据丢失（2026-04-23）
 

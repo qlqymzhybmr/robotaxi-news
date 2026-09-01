@@ -202,6 +202,46 @@
 
 ---
 
+## 行业媒体 RSS（大盘源，需关键词过滤）
+
+> **与上面「直接订阅 RSS」的区别**：上面是公司新闻室，条条相关，不过滤；
+> 这里是综合财经/科技媒体，**绝大多数内容与自动驾驶无关**，脚本会用
+> `MEDIA_TOPIC_KEYWORDS`（见 `scripts/python_rss_fetch.py`）做主题过滤，
+> 只有命中自动驾驶关键词的条目才进入管线。
+>
+> **作用**：这些源返回的是**发布方真实永久链接**，不经过 Google News 包装，
+> 因此不存在链接过期/搜不到的问题。凡是能被这些源覆盖到的新闻，链接质量最高。
+>
+> 国内源经自部署 RSSHub 转换。注意 RSSHub **没有**汽车垂直媒体路由
+> （汽车之家 / 第一电动 / 盖世汽车 / 懂车帝 / 车东西均不存在），
+> 这部分仍只能靠 Google News 搜索召回。
+>
+> 格式：`媒体名 | 地区 | 是否重点 | RSS URL`
+> 最后验证：2026-09-01（括号内为当次抓取条目数）
+
+### 国外
+
+- Electrek | overseas | ⭐ | https://electrek.co/feed/
+- CnEVPost | overseas | ⭐ | https://cnevpost.com/feed/
+- The Verge Transportation | overseas | | https://www.theverge.com/rss/transportation/index.xml
+- Tech Times | overseas | | https://www.techtimes.com/rss/archives/archives.xml
+- Denver Gazette | overseas | | https://www.denvergazette.com/feed/
+
+### 国内（via 自部署 RSSHub）
+
+- 36氪 快讯 | china | ⭐ | https://rsshub-production-8ec4.up.railway.app/36kr/newsflashes
+- 雷峰网 AI | china | ⭐ | https://rsshub-production-8ec4.up.railway.app/leiphone/category/ai
+- 财新 最新 | china | ⭐ | https://rsshub-production-8ec4.up.railway.app/caixin/latest
+- 第一财经 头条 | china | | https://rsshub-production-8ec4.up.railway.app/yicai/headline
+- 钛媒体 最新 | china | | https://rsshub-production-8ec4.up.railway.app/tmtpost/new
+- 澎湃 头条 | china | | https://rsshub-production-8ec4.up.railway.app/thepaper/featured
+- 华尔街见闻 | china | | https://rsshub-production-8ec4.up.railway.app/wallstreetcn/news/global
+- 虎嗅 24小时 | china | | https://rsshub-production-8ec4.up.railway.app/huxiu/moment
+- 界面 VIP | china | | https://rsshub-production-8ec4.up.railway.app/jiemian/pro/lists/12
+- IT之家 | china | | https://rsshub-production-8ec4.up.railway.app/ithome/it
+
+---
+
 ## X（Twitter）RSS 订阅（via 自部署 RSSHub）
 
 > RSSHub 实例：https://rsshub-production-8ec4.up.railway.app
@@ -283,4 +323,5 @@
 - 总计：约 89 家公司
 - ⭐ 重点公司：23 家（每语种最多抓取 10 条）
 - 普通公司：约 66 家（每语种最多抓取 5 条）
-- 最后更新：2026-08-19
+- 直接订阅 feed：45 条 = 公司新闻室/X/Reddit 30 条（不过滤）+ 行业媒体 15 条（过主题关键词）
+- 最后更新：2026-09-01（新增「行业媒体 RSS」大盘源，全部已验证可出条目）
