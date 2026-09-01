@@ -327,16 +327,53 @@ def pick_query_name(company_name: str, lang: str) -> str:
 
 
 
-def _make_search_url(title: str, lang: str = "en", site: str = "") -> str:
+def _domain_of(url: str) -> str:
+    """Extract a bare domain from a URL ('https://www.foo.com/x' -> 'foo.com')."""
+    if not url:
+        return ""
+    netloc = urllib.parse.urlparse(url).netloc
+    return netloc[4:] if netloc.startswith("www.") else netloc
+
+
+def _clean_title(title: str, source_name: str = "") -> str:
+    """Strip the ' - Publisher' suffix Google News appends to every headline.
+
+    Left in place it becomes free-text noise in the search query (e.g. the
+    literal words 'San Francisco Chronicle'), which pushes the real article
+    down or off the results page. Prefer an exact strip using the known
+    source name; fall back to a conservative pattern.
+    """
+    t = title.strip()
+    if source_name:
+        suffix = f" - {source_name}"
+        if t.endswith(suffix):
+            return t[: -len(suffix)].strip()
+    return re.sub(r"\s+-\s+[^-]{2,40}$", "", t).strip()
+
+
+def _make_search_url(
+    title: str, lang: str = "en", site: str = "", source_name: str = ""
+) -> str:
     """
     Build a permanent, findable search URL for an article.
+
+    Google News RSS article links (CBMi…/AU_yqL…) are opaque wrappers that
+    expire within days and cannot be decoded back to the publisher URL, so we
+    store a search that will keep resolving. Three things make that search
+    actually land on the article:
+      1. drop the ' - Publisher' suffix (noise),
+      2. quote the headline so it matches as an exact phrase,
+      3. scope to the publisher's domain when we know it.
 
     - Chinese articles (lang="zh"): use Baidu — far better coverage of
       Chinese outlets (汽车之家, 新浪汽车, 盖世汽车, 搜狐 etc.) than Google News.
     - English articles (lang="en"): use Google News search.
-    - `site` (optional): scope results to a specific domain (Track A local-media).
+    - `site` (optional): scope results to a specific domain.
     """
-    query = title[:100]
+    headline = _clean_title(title, source_name)
+    if len(headline) > 100:  # trim on a word boundary, never mid-word
+        headline = headline[:100].rsplit(" ", 1)[0]
+    query = f'"{headline}"'
     if site:
         query = f"{query} site:{site}"
     q = urllib.parse.quote(query)
@@ -442,9 +479,15 @@ def fetch_company_news(
 
                 raw_link = normalize_url(getattr(entry, "link", ""), source_href=source_href)
                 # Google News RSS article URLs (CBMi…) expire within days.
-                # Replace with a permanent Google News search URL for the title.
+                # Replace with a permanent, publisher-scoped search URL.
                 if "news.google.com" in raw_link:
-                    link = _make_search_url(title, lang=lang)
+                    # Baidu indexes Chinese UGC subdomains (k.sina.com.cn,
+                    # chejiahao.autohome.com.cn) unevenly, so a site: filter there
+                    # can yield zero results. Only scope the English/Google query.
+                    scope = _domain_of(source_href) if lang == "en" else ""
+                    link = _make_search_url(
+                        title, lang=lang, site=scope, source_name=source
+                    )
                 else:
                     link = raw_link
                 local_key = (title, link)
@@ -573,7 +616,9 @@ def fetch_local_media_news(
             raw_link = normalize_url(getattr(entry, "link", ""))
             # Replace expiring Google News RSS URLs with a permanent site-scoped search URL.
             if "news.google.com" in raw_link:
-                link = _make_search_url(title, lang="en", site=site)
+                link = _make_search_url(
+                    title, lang="en", site=site, source_name=site_name
+                )
             else:
                 link = raw_link
             items.append({
