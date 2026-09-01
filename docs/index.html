@@ -64,7 +64,7 @@
         </div>
         <div class="w-px self-stretch bg-gray-200 mx-1"></div>
         <button id="weekly-edit-btn" onclick="toggleWeeklyEditMode()" class="px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">编辑周报</button>
-        <button id="weekly-onenote-btn" onclick="copyToOneNote()" class="px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">复制到OneNote</button>
+        <button id="weekly-onenote-btn" onclick="copyToOneNote()" class="px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors">复制到 OneNote</button>
       </div>
       <div id="weekly-format-bar" class="hidden items-center gap-1 pt-2 border-t border-gray-100 mt-2">
         <span class="text-xs text-gray-400 mr-1">格式</span>
@@ -823,12 +823,15 @@ function exitWeeklyEditMode() {
 function updateWeeklyEditBtn() {
   const btn = document.getElementById('weekly-edit-btn');
   if (!btn) return;
+  // 尺寸必须和 HTML 里的初始 class 以及旁边的「复制到 OneNote」「原版/已编辑」
+  // 保持一致（px-2 py-1 text-xs）。这里曾经写成 px-3 py-1.5 text-sm，导致按钮
+  // 一渲染就比邻居大一圈。只有颜色随编辑状态变，尺寸不变。
   if (weeklyEditMode) {
     btn.textContent = '取消编辑';
-    btn.className = 'px-3 py-1.5 text-sm border border-red-200 rounded-lg bg-white text-red-500 hover:bg-red-50 transition-colors';
+    btn.className = 'px-2 py-1 text-xs border border-red-200 rounded-lg bg-white text-red-500 hover:bg-red-50 transition-colors';
   } else {
     btn.textContent = '编辑周报';
-    btn.className = 'px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors';
+    btn.className = 'px-2 py-1 text-xs border border-gray-200 rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition-colors';
   }
 }
 

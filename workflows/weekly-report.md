@@ -40,7 +40,10 @@ git -c http.proxy="" pull origin main
 - 用户触发"生成本周周报"时默认就是这个范围。如果用户明确说"生成上周周报",则覆盖**上上周二 ~ 上周一**
 - 文件名格式:`data/reports/YYYY-Wxx.html`，其中 Wxx 是 ISO 周数（按周一所在的周），xx 为两位数字（如 W17 不写成 W017）
 - **如果同一周已有文件，直接覆盖，不新建**
-- 标题格式:`无人驾驶行业MMDD-MMDD重要新闻`,MMDD 是上周二到本周一的日期(例:`0407-0413`)
+- 标题格式:`（Wxx）无人驾驶行业MMDD-MMDD重要新闻`
+  - `Wxx` 是周次,取自 `week_id`(`2026-W36` → `W36`;`2026-W31-WIP` → `W31`),**用中文全角括号**
+  - MMDD 是上周二到本周一的日期(例:`0407-0413`)
+  - 完整示例:`（W36）无人驾驶行业0825-0831重要新闻`
 
 ### 步骤 2:从 selections.json 收集选中条目
 
@@ -138,11 +141,11 @@ git -c http.proxy="" pull origin main
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>无人驾驶行业MMDD-MMDD重要新闻</title>
+<title>（Wxx）无人驾驶行业MMDD-MMDD重要新闻</title>
 </head>
 <body style="font-family: 'Microsoft YaHei', '微软雅黑', sans-serif; font-size: 15px; line-height: 1.7; color: #222; max-width: 760px; margin: 24px auto; padding: 0 20px;">
 
-<h1 style="font-size: 20px; color: #1a73e8; border-bottom: 1px solid #1a73e8; padding-bottom: 6px;">无人驾驶行业MMDD-MMDD重要新闻</h1>
+<h1 style="font-size: 20px; color: #1a73e8; border-bottom: 1px solid #1a73e8; padding-bottom: 6px;">（Wxx）无人驾驶行业MMDD-MMDD重要新闻</h1>
 
 <h2 style="font-size: 17px; color: #000; margin-top: 28px;">国内</h2>
 
@@ -201,7 +204,7 @@ git -c http.proxy="" pull origin main
 {
   "week_id": "YYYY-Wxx",
   "date_range": "MMDD-MMDD",
-  "title": "无人驾驶行业MMDD-MMDD重要新闻",
+  "title": "（Wxx）无人驾驶行业MMDD-MMDD重要新闻",
   "generated_at": "YYYY-MM-DDTHH:mm:ss+08:00",
   "sections": [
     {
@@ -243,7 +246,7 @@ git -c http.proxy="" pull origin main
 
 生成后按 style-guide.md 的"校验清单"逐条过一遍:
 
-- [ ] 标题格式是否为 `无人驾驶行业MMDD-MMDD重要新闻`?
+- [ ] 标题格式是否为 `（Wxx）无人驾驶行业MMDD-MMDD重要新闻`?**周次前缀不能漏**
 - [ ] 国内排在国外前面?
 - [ ] 每条都以日期开头?
 - [ ] 公司名后是中文全角冒号?
