@@ -203,24 +203,58 @@ python -c "import feedparser;f=feedparser.parse('https://example.com/feed');prin
 
 ## Token 消耗与运行成本
 
-| 操作 | 工具调用次数 | 预估 input tokens | 预估时长 |
-|------|------|------|------|
-| daily-fetch(默认两阶段 + 自动发布)| 取决于公司覆盖与新闻量 | 25万-55万 | 15-25 分钟 |
-| daily-fetch(仅一组,单独跑)| 取决于公司覆盖与新闻量 | 12万-30 万 | 8-15 分钟 |
-| weekly-report(含 JSON 副产物 + 自动发布)| ~8 | 5-10 万 | 3-5 分钟 |
-| daily-publish(手动单独跑)| ~2 | <1 万 | <1 分钟 |
-| weekly-publish(手动单独跑)| ~2 | <1 万 | <1 分钟 |
+> 当前套餐:**Max**。配额已不是约束,下面的数字用于**判断哪一步不正常**,不再用于省着跑。
+> 实测基准:2026-09-01 那次运行(国外 37 家 + 国内 52 家,产出 11 条)。
 
-**关于 Pro 套餐限制**:
-- Claude Code **和 claude.ai 共享同一个 5h 配额池**(2026 年 4 月当前情况)
-- daily-fetch 默认两阶段模式会消耗较大配额,建议**跑的时候不要同时在 claude.ai 上做别的事**
-- 如果某次 daily-fetch 触发了 5h 限制,等 5 小时后说"只跑国内组"补跑 Phase 2 即可
-- **周一负载错峰建议**:
-  - 上午跑 daily-fetch(当天的)+ 勾周一 daily
-  - 补勾上周六、上周日 daily
-  - **吃完午饭再说"生成本周周报"**(让 5h 配额休息一会)
-  - 周一下午:粘到 OneNote、发老板
-- 如果觉得 Pro 配额经常不够用,考虑升级到 Max 5x ($100/月) 或 Max 20x ($200/月)
+### 各步骤实测量级
+
+| 操作 | 主要 input 来源 | 实测 input tokens | 预估时长 |
+|------|------|------|------|
+| daily-fetch Phase 1(国外)| `raw_news_overseas.json` 53KB | **约 1.4 万** | 8-12 分钟 |
+| daily-fetch Phase 2(国内)| `raw_news_china.json` 90KB | **约 2.4 万** | 8-12 分钟 |
+| daily-fetch Phase 3(发布)| ⚠️ 见下方 `daily.json` 说明 | **1 万 ~ 54 万**(取决于做法) | <2 分钟 |
+| weekly-report(含发布)| 7 份 daily md,每份约 4 千 | 约 5-10 万 | 3-5 分钟 |
+| daily-publish / weekly-publish(单独跑)| 同上 | <1 万 | <1 分钟 |
+
+抓取本身(Python 跑 RSS)**不消耗 Claude token**,真正花 token 的是 Claude 读 JSON + 写总结。所以公司数量增加对 token 的影响远小于对**时长**的影响。
+
+### ⚠️ 真正的大头是 `docs/data/daily.json`,而且每天在涨
+
+| 指标 | 当前值(2026-09-01) |
+|------|------|
+| 文件大小 | **1.87 MB** |
+| 覆盖 | 141 天 / 1692 条新闻(2026-04-14 起) |
+| 增长 | 每天约 **14 KB** |
+| 全量读入的代价 | **约 53 万 token** |
+| 一年后预计 | 约 4.8 MB(全量读将超过 130 万 token) |
+
+**关键区分**:贵的是把它 **`Read` 进 Claude 上下文**(约 53 万 token);用 **Python 在进程内读它是 0 token**。
+
+所以 Phase 3 的规则是:
+
+| 动作 | 允许? | 代价 |
+|------|------|------|
+| `Read` 整份 `daily.json` | ❌ **禁止** | 约 53 万 token,且每天在涨 |
+| `Read` 前 10 行确认最新日期 | ✅ | 可忽略 |
+| Python `json.load` → 插入 → `json.dump` 写回 | ✅ **唯一正确做法** | 0 token |
+| 用 Edit / Write 手拼 JSON 字符串 | ❌ **禁止** | 见下 |
+
+**必须用 `workflows/daily-publish.md` 步骤 6 的 Python 写法**,原因有两个,缺一不可:
+1. **省 token**:文件由 Python 读,不进 Claude 上下文
+2. **保证转义正确**:`json.dump` 自动处理引号。手拼字符串做不到——2026-09-01 就是因为用 Edit 手写 JSON,`summary_html` 里的中文引号未转义,**整份 JSON 失效、网页一条都显示不出来**,只能事后写脚本批量修
+
+**校验用 Python,不要用 `node -e "require(...)"`**(后者对语法错误的报错位置不精确):
+
+```bash
+python -c "import json;d=json.load(open('docs/data/daily.json',encoding='utf-8'));print(len(d),d[0]['date'],len(d[0]['items']))"
+```
+
+### 关于配额
+
+- Max 套餐下,daily-fetch 两阶段连着跑、周一 daily + 周报连着做,都不需要错峰
+- 不再需要"跑的时候别用 claude.ai"这类规避动作
+- 真要看当前用量,在交互式 `claude` 终端里跑 `/usage`(本会话是非交互环境,看不了)
+- 如果某次仍然中断(网络/超时,而非配额),照旧说"只跑国内组"补跑 Phase 2 即可,两阶段写同一份文件不会冲突
 
 ---
 
@@ -323,31 +357,26 @@ curl -s https://<实例>/api/namespace | python -c "import sys,json;print(len(js
 1. **未遵循 daily-publish.md 的规则**：应该先读取现有 JSON，然后插入或替换今日数据，而不是直接覆盖整个文件
 2. **Write 工具使用不当**：对于需要追加/更新的 JSON 文件，应该先 Read → 修改 → Write，而不是直接 Write
 
-**正确做法**（参考 `workflows/daily-publish.md` 步骤 4-5）：
-```javascript
-// 1. 读取现有 daily.json
-const existingData = require('./docs/data/daily.json');
+**正确做法**（完整版见 `workflows/daily-publish.md` 步骤 6）：
+```python
+import json
 
-// 2. 构建今日 entry
-const newEntry = { date: "YYYY-MM-DD", items: [...] };
+entry = {"date": "YYYY-MM-DD", "items": [...]}   # Python dict，引号直接写
 
-// 3. 插入或替换
-// - 如果数组里已有 date == 今天的 entry，替换它
-// - 否则，插入到数组开头（保持日期倒序）
-const existingIndex = existingData.findIndex(e => e.date === newEntry.date);
-if (existingIndex >= 0) {
-  existingData[existingIndex] = newEntry; // 替换
-} else {
-  existingData.unshift(newEntry); // 插入到开头
-}
+with open("docs/data/daily.json", encoding="utf-8") as f:
+    data = json.load(f)                          # 进程内读，不进 Claude 上下文，0 token
 
-// 4. 写回文件
-fs.writeFileSync('docs/data/daily.json', JSON.stringify(existingData, null, 2));
+data = [e for e in data if e["date"] != entry["date"]]   # 重跑则替换
+data.insert(0, entry)                                     # 日期倒序，新的在最前
+
+with open("docs/data/daily.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)      # 自动转义，不会出语法错误
 ```
 
 **防范措施**：
-- ✅ **Phase 3 开始前**：必须先 `Read` 现有的 `docs/data/daily.json`
-- ✅ **写入前验证**：用 `node -e "require('./docs/data/daily.json')"` 验证 JSON 格式
+- ✅ **禁止 `Read` 整份 `daily.json`**：现已 1.87MB / 约 53 万 token，且每天涨 14KB。只允许 `Read` 前 10 行确认最新日期，其余交给 Python
+- ✅ **禁止用 Edit / Write 手拼 JSON 字符串**：见下方 2026-09-01 的转义事故
+- ✅ **写入前后都用 Python 验证**：`python -c "import json;json.load(open('docs/data/daily.json',encoding='utf-8'))"`（不要用 `node -e "require(...)"`，它对语法错误的报错位置不精确）
 - ✅ **提交前检查**：确认 git diff 显示的是"新增今日数据"而不是"删除所有历史数据"
 - ✅ **备份意识**：重要的数据文件操作前，可以先用 `git show HEAD:path/to/file` 备份
 
@@ -356,18 +385,38 @@ fs.writeFileSync('docs/data/daily.json', JSON.stringify(existingData, null, 2));
 # 1. 从上次提交恢复历史数据
 git show HEAD~1:docs/data/daily.json > docs/data/daily_backup.json
 
-# 2. 用 Node.js 合并新旧数据
-node -e "
-const old = require('./docs/data/daily_backup.json');
-const newEntry = { /* 今日数据 */ };
-const merged = [newEntry, ...old];
-require('fs').writeFileSync('docs/data/daily.json', JSON.stringify(merged, null, 2));
+# 2. 用 Python 合并新旧数据
+python -c "
+import json
+old = json.load(open('docs/data/daily_backup.json', encoding='utf-8'))
+entry = {'date': 'YYYY-MM-DD', 'items': []}   # 今日数据
+json.dump([entry] + old, open('docs/data/daily.json','w',encoding='utf-8'), ensure_ascii=False, indent=2)
 "
 
 # 3. 验证并提交
-node -e "require('./docs/data/daily.json'); console.log('✅ JSON 格式正确')"
+python -c "import json;d=json.load(open('docs/data/daily.json',encoding='utf-8'));print('OK',len(d),'天')"
 git add docs/data/daily.json && git commit -m "fix: 恢复历史数据" && git push
 ```
+
+---
+
+### ⚠️ 关键错误：用 Edit 手拼 JSON 导致引号未转义、网页全白（2026-09-01）
+
+**问题描述**：
+Phase 3 发布时没有走 `daily-publish.md` 步骤 6 的 Python 写法，而是用 `Edit` 工具直接把 JSON 文本拼进 `daily.json`。`summary_html` 里含中文引号的内容（如 `解读为"暗批 Tesla 三隐患"`）原样写入，**引号未转义 → 整份 JSON 语法失效 → 网页一条新闻都显示不出来**。
+
+当时表现具有迷惑性：git push 成功、GitHub 上文件也在，但页面就是空的。连续推了两次（含一次空提交触发重新部署）都没用，因为问题不在部署而在数据。
+
+**根本原因**：
+`daily-publish.md` 步骤 6 早就写明「**强制使用 Python 写入，禁止用 Edit 工具直接拼 JSON 字符串**」，原因正是转义。没遵守。
+
+**排查方法**（页面空白但 push 成功时，第一件事就做这个）：
+```bash
+python -c "import json;json.load(open('docs/data/daily.json',encoding='utf-8'))"
+# JSONDecodeError 会直接给出行列号，定位到具体哪条 summary_html
+```
+
+**教训**：`json.dump` 存在的意义就是处理转义。只要是往 JSON 里写**模型生成的中文文本**，就必须让序列化库来写，人工/Edit 拼字符串迟早出事。
 
 **影响范围**：
 - 网页无法显示任何新闻（JSON 解析失败）
