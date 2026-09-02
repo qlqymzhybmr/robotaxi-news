@@ -1,178 +1,925 @@
 {
   "_comment": "公司→本地媒体映射表。新城市宣布运营时在对应公司下追加条目。site 字段必须是可用于 Google News site: 搜索的域名（不含 https://）。",
   "Waymo": [
-    {"city": "San Francisco CA",  "site": "sfchronicle.com",       "name": "SF Chronicle"},
-    {"city": "San Francisco CA",  "site": "kqed.org",              "name": "KQED"},
-    {"city": "San Francisco CA",  "site": "missionlocal.org",      "name": "Mission Local"},
-    {"city": "San Francisco CA",  "site": "mercurynews.com",       "name": "Mercury News"},
-    {"city": "San Francisco CA",  "site": "kpix.com",              "name": "KPIX CBS5"},
-    {"city": "San Francisco CA",  "site": "nbcbayarea.com",        "name": "NBC Bay Area"},
-    {"city": "Phoenix AZ",        "site": "azcentral.com",         "name": "Arizona Republic"},
-    {"city": "Phoenix AZ",        "site": "abc15.com",             "name": "ABC15 Arizona"},
-    {"city": "Phoenix AZ",        "site": "azfamily.com",          "name": "AZFamily 12News"},
-    {"city": "Phoenix AZ",        "site": "ktar.com",              "name": "KTAR News"},
-    {"city": "Phoenix AZ",        "site": "phoenixnewtimes.com",   "name": "Phoenix New Times"},
-    {"city": "Los Angeles CA",    "site": "latimes.com",           "name": "LA Times"},
-    {"city": "Los Angeles CA",    "site": "nbclosangeles.com",     "name": "KNBC4"},
-    {"city": "Los Angeles CA",    "site": "abc7.com",              "name": "KABC7"},
-    {"city": "Los Angeles CA",    "site": "ktla.com",              "name": "KTLA5"},
-    {"city": "Los Angeles CA",    "site": "laist.com",             "name": "LAist"},
-    {"city": "Austin TX",         "site": "statesman.com",         "name": "Austin American-Statesman"},
-    {"city": "Austin TX",         "site": "kxan.com",              "name": "KXAN NBC Austin"},
-    {"city": "Austin TX",         "site": "kvue.com",              "name": "KVUE ABC Austin"},
-    {"city": "Austin TX",         "site": "austinmonitor.com",     "name": "Austin Monitor"},
-    {"city": "San Antonio TX",    "site": "expressnews.com",       "name": "SA Express-News"},
-    {"city": "San Antonio TX",    "site": "ksat.com",              "name": "KSAT"},
-    {"city": "San Antonio TX",    "site": "kens5.com",             "name": "KENS5"},
-    {"city": "Atlanta GA",        "site": "ajc.com",               "name": "Atlanta Journal-Constitution"},
-    {"city": "Atlanta GA",        "site": "wsbtv.com",             "name": "WSB-TV ABC Atlanta"},
-    {"city": "Atlanta GA",        "site": "fox5atlanta.com",       "name": "Fox 5 Atlanta"},
-    {"city": "Atlanta GA",        "site": "11alive.com",           "name": "11Alive WXIA NBC"},
-    {"city": "Atlanta GA",        "site": "atlantabusiness.com",   "name": "Atlanta Business Chronicle"},
-    {"city": "Chicago IL",        "site": "chicagotribune.com",    "name": "Chicago Tribune"},
-    {"city": "Chicago IL",        "site": "suntimes.com",          "name": "Chicago Sun-Times"},
-    {"city": "Chicago IL",        "site": "nbcchicago.com",        "name": "NBC5 Chicago"},
-    {"city": "Chicago IL",        "site": "wgntv.com",             "name": "WGN-TV"},
-    {"city": "Chicago IL",        "site": "cbschicago.com",        "name": "CBS2 Chicago"},
-    {"city": "Chicago IL",        "site": "blockclubchicago.org",  "name": "Block Club Chicago"},
-    {"city": "Dallas TX",         "site": "dallasnews.com",        "name": "Dallas Morning News"},
-    {"city": "Dallas TX",         "site": "nbcdfw.com",            "name": "NBC DFW"},
-    {"city": "Dallas TX",         "site": "wfaa.com",              "name": "WFAA ABC8"},
-    {"city": "Dallas TX",         "site": "fox4news.com",          "name": "Fox4 Dallas"},
-    {"city": "Dallas TX",         "site": "star-telegram.com",     "name": "Fort Worth Star-Telegram"},
-    {"city": "Nashville TN",      "site": "tennessean.com",        "name": "The Tennessean"},
-    {"city": "Nashville TN",      "site": "newschannel5.com",      "name": "NewsChannel5 WTVF"},
-    {"city": "Nashville TN",      "site": "wkrn.com",              "name": "WKRN ABC2"},
-    {"city": "Miami FL",          "site": "miamiherald.com",       "name": "Miami Herald"},
-    {"city": "Miami FL",          "site": "local10.com",           "name": "WPLG Local10"},
-    {"city": "Miami FL",          "site": "cbsnews.com",           "name": "CBS Miami"},
-    {"city": "Miami FL",          "site": "nbcmiami.com",          "name": "NBC6 Miami"},
-    {"city": "Miami FL",          "site": "sun-sentinel.com",      "name": "Sun Sentinel"},
-    {"city": "Washington DC",     "site": "washingtonpost.com",    "name": "Washington Post"},
-    {"city": "Washington DC",     "site": "wusa9.com",             "name": "WUSA9"},
-    {"city": "Washington DC",     "site": "wtop.com",              "name": "WTOP News"},
-    {"city": "Houston TX",        "site": "houstonchronicle.com",  "name": "Houston Chronicle"},
-    {"city": "Houston TX",        "site": "khou.com",              "name": "KHOU CBS11"},
-    {"city": "Houston TX",        "site": "ktrk.com",              "name": "KTRK ABC13"},
-    {"city": "Houston TX",        "site": "kprc.com",              "name": "KPRC NBC2"},
-    {"city": "Detroit MI",        "site": "freep.com",             "name": "Detroit Free Press"},
-    {"city": "Detroit MI",        "site": "detroitnews.com",       "name": "Detroit News"},
-    {"city": "Detroit MI",        "site": "wxyz.com",              "name": "WXYZ ABC7 Detroit"},
-    {"city": "Detroit MI",        "site": "mlive.com",             "name": "MLive Michigan"},
-    {"city": "Pittsburgh PA",     "site": "post-gazette.com",      "name": "Pittsburgh Post-Gazette"},
-    {"city": "Pittsburgh PA",     "site": "triblive.com",          "name": "TribLive"},
-    {"city": "Pittsburgh PA",     "site": "wpxi.com",              "name": "WPXI NBC11"},
-    {"city": "Denver CO",         "site": "denverpost.com",        "name": "Denver Post"},
-    {"city": "Denver CO",         "site": "9news.com",             "name": "9News KUSA"},
-    {"city": "Denver CO",         "site": "kdvr.com",              "name": "KDVR Fox31"},
-    {"city": "Las Vegas NV",      "site": "reviewjournal.com",     "name": "Las Vegas Review-Journal"},
-    {"city": "Las Vegas NV",      "site": "lasvegassun.com",       "name": "Las Vegas Sun"},
-    {"city": "Las Vegas NV",      "site": "8newsnow.com",          "name": "KLAS 8NewsNow"},
-    {"city": "Las Vegas NV",      "site": "ktnv.com",              "name": "KTNV ABC13 LV"},
-    {"city": "Las Vegas NV",      "site": "news3lv.com",           "name": "KSNV News3LV NBC"},
-    {"city": "Las Vegas NV",      "site": "fox5vegas.com",         "name": "KVVU Fox5 Las Vegas"},
-    {"city": "Seattle WA",        "site": "seattletimes.com",      "name": "Seattle Times"},
-    {"city": "Seattle WA",        "site": "king5.com",             "name": "KING5 NBC Seattle"},
-    {"city": "Seattle WA",        "site": "komonews.com",          "name": "KOMO ABC4 Seattle"},
-    {"city": "Seattle WA",        "site": "kiro7.com",             "name": "KIRO7 CBS Seattle"},
-    {"city": "Seattle WA",        "site": "mynorthwest.com",       "name": "MyNorthwest KIRO"},
-    {"city": "San Diego CA",      "site": "sandiegouniontribune.com", "name": "San Diego Union-Tribune"},
-    {"city": "San Diego CA",      "site": "fox5sandiego.com",      "name": "Fox 5 San Diego"},
-    {"city": "San Diego CA",      "site": "nbcsandiego.com",       "name": "NBC 7 San Diego"},
-    {"city": "San Diego CA",      "site": "10news.com",            "name": "KGTV ABC10 San Diego"},
-    {"city": "Sacramento CA",     "site": "sacbee.com",            "name": "Sacramento Bee"},
-    {"city": "Sacramento CA",     "site": "kcra.com",              "name": "KCRA NBC3 Sacramento"},
-    {"city": "Sacramento CA",     "site": "abc10.com",             "name": "KXTV ABC10 Sacramento"},
-    {"city": "Sacramento CA",     "site": "fox40.com",             "name": "KTXL Fox40 Sacramento"},
-    {"city": "Tampa FL",          "site": "tampabay.com",          "name": "Tampa Bay Times"},
-    {"city": "Tampa FL",          "site": "wfla.com",              "name": "WFLA NBC8 Tampa"},
-    {"city": "Tampa FL",          "site": "fox13news.com",         "name": "Fox13 WTVT Tampa"},
-    {"city": "Tampa FL",          "site": "abcactionnews.com",     "name": "WFTS ABC Action Tampa"},
-    {"city": "New Orleans LA",    "site": "nola.com",              "name": "Times-Picayune / nola.com"},
-    {"city": "New Orleans LA",    "site": "fox8live.com",          "name": "WWL-TV Fox8 New Orleans"},
-    {"city": "New Orleans LA",    "site": "wdsu.com",              "name": "WDSU NBC6 New Orleans"},
-    {"city": "New Orleans LA",    "site": "wgno.com",              "name": "WGNO ABC26 New Orleans"}
+    {
+      "city": "San Francisco CA",
+      "site": "sfchronicle.com",
+      "name": "SF Chronicle"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "kqed.org",
+      "name": "KQED"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "missionlocal.org",
+      "name": "Mission Local"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "mercurynews.com",
+      "name": "Mercury News"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "kpix.com",
+      "name": "KPIX CBS5"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "nbcbayarea.com",
+      "name": "NBC Bay Area"
+    },
+    {
+      "city": "Phoenix AZ",
+      "site": "azcentral.com",
+      "name": "Arizona Republic"
+    },
+    {
+      "city": "Phoenix AZ",
+      "site": "abc15.com",
+      "name": "ABC15 Arizona"
+    },
+    {
+      "city": "Phoenix AZ",
+      "site": "azfamily.com",
+      "name": "AZFamily 12News"
+    },
+    {
+      "city": "Phoenix AZ",
+      "site": "ktar.com",
+      "name": "KTAR News"
+    },
+    {
+      "city": "Phoenix AZ",
+      "site": "phoenixnewtimes.com",
+      "name": "Phoenix New Times"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "latimes.com",
+      "name": "LA Times"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "nbclosangeles.com",
+      "name": "KNBC4"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "abc7.com",
+      "name": "KABC7"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "ktla.com",
+      "name": "KTLA5"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "laist.com",
+      "name": "LAist"
+    },
+    {
+      "city": "Austin TX",
+      "site": "statesman.com",
+      "name": "Austin American-Statesman"
+    },
+    {
+      "city": "Austin TX",
+      "site": "kxan.com",
+      "name": "KXAN NBC Austin"
+    },
+    {
+      "city": "Austin TX",
+      "site": "kvue.com",
+      "name": "KVUE ABC Austin"
+    },
+    {
+      "city": "Austin TX",
+      "site": "austinmonitor.com",
+      "name": "Austin Monitor"
+    },
+    {
+      "city": "San Antonio TX",
+      "site": "expressnews.com",
+      "name": "SA Express-News"
+    },
+    {
+      "city": "San Antonio TX",
+      "site": "ksat.com",
+      "name": "KSAT"
+    },
+    {
+      "city": "San Antonio TX",
+      "site": "kens5.com",
+      "name": "KENS5"
+    },
+    {
+      "city": "Atlanta GA",
+      "site": "ajc.com",
+      "name": "Atlanta Journal-Constitution"
+    },
+    {
+      "city": "Atlanta GA",
+      "site": "wsbtv.com",
+      "name": "WSB-TV ABC Atlanta"
+    },
+    {
+      "city": "Atlanta GA",
+      "site": "fox5atlanta.com",
+      "name": "Fox 5 Atlanta"
+    },
+    {
+      "city": "Atlanta GA",
+      "site": "11alive.com",
+      "name": "11Alive WXIA NBC"
+    },
+    {
+      "city": "Atlanta GA",
+      "site": "atlantabusiness.com",
+      "name": "Atlanta Business Chronicle"
+    },
+    {
+      "city": "Chicago IL",
+      "site": "chicagotribune.com",
+      "name": "Chicago Tribune"
+    },
+    {
+      "city": "Chicago IL",
+      "site": "suntimes.com",
+      "name": "Chicago Sun-Times"
+    },
+    {
+      "city": "Chicago IL",
+      "site": "nbcchicago.com",
+      "name": "NBC5 Chicago"
+    },
+    {
+      "city": "Chicago IL",
+      "site": "wgntv.com",
+      "name": "WGN-TV"
+    },
+    {
+      "city": "Chicago IL",
+      "site": "cbschicago.com",
+      "name": "CBS2 Chicago"
+    },
+    {
+      "city": "Chicago IL",
+      "site": "blockclubchicago.org",
+      "name": "Block Club Chicago"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "dallasnews.com",
+      "name": "Dallas Morning News"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "nbcdfw.com",
+      "name": "NBC DFW"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "wfaa.com",
+      "name": "WFAA ABC8"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "fox4news.com",
+      "name": "Fox4 Dallas"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "star-telegram.com",
+      "name": "Fort Worth Star-Telegram"
+    },
+    {
+      "city": "Nashville TN",
+      "site": "tennessean.com",
+      "name": "The Tennessean"
+    },
+    {
+      "city": "Nashville TN",
+      "site": "newschannel5.com",
+      "name": "NewsChannel5 WTVF"
+    },
+    {
+      "city": "Nashville TN",
+      "site": "wkrn.com",
+      "name": "WKRN ABC2"
+    },
+    {
+      "city": "Miami FL",
+      "site": "miamiherald.com",
+      "name": "Miami Herald"
+    },
+    {
+      "city": "Miami FL",
+      "site": "local10.com",
+      "name": "WPLG Local10"
+    },
+    {
+      "city": "Miami FL",
+      "site": "cbsnews.com",
+      "name": "CBS Miami"
+    },
+    {
+      "city": "Miami FL",
+      "site": "nbcmiami.com",
+      "name": "NBC6 Miami"
+    },
+    {
+      "city": "Miami FL",
+      "site": "sun-sentinel.com",
+      "name": "Sun Sentinel"
+    },
+    {
+      "city": "Washington DC",
+      "site": "washingtonpost.com",
+      "name": "Washington Post"
+    },
+    {
+      "city": "Washington DC",
+      "site": "wusa9.com",
+      "name": "WUSA9"
+    },
+    {
+      "city": "Washington DC",
+      "site": "wtop.com",
+      "name": "WTOP News"
+    },
+    {
+      "city": "Houston TX",
+      "site": "houstonchronicle.com",
+      "name": "Houston Chronicle"
+    },
+    {
+      "city": "Houston TX",
+      "site": "khou.com",
+      "name": "KHOU CBS11"
+    },
+    {
+      "city": "Houston TX",
+      "site": "ktrk.com",
+      "name": "KTRK ABC13"
+    },
+    {
+      "city": "Houston TX",
+      "site": "kprc.com",
+      "name": "KPRC NBC2"
+    },
+    {
+      "city": "Detroit MI",
+      "site": "freep.com",
+      "name": "Detroit Free Press"
+    },
+    {
+      "city": "Detroit MI",
+      "site": "detroitnews.com",
+      "name": "Detroit News"
+    },
+    {
+      "city": "Detroit MI",
+      "site": "wxyz.com",
+      "name": "WXYZ ABC7 Detroit"
+    },
+    {
+      "city": "Detroit MI",
+      "site": "mlive.com",
+      "name": "MLive Michigan"
+    },
+    {
+      "city": "Pittsburgh PA",
+      "site": "post-gazette.com",
+      "name": "Pittsburgh Post-Gazette"
+    },
+    {
+      "city": "Pittsburgh PA",
+      "site": "triblive.com",
+      "name": "TribLive"
+    },
+    {
+      "city": "Pittsburgh PA",
+      "site": "wpxi.com",
+      "name": "WPXI NBC11"
+    },
+    {
+      "city": "Denver CO",
+      "site": "denverpost.com",
+      "name": "Denver Post"
+    },
+    {
+      "city": "Denver CO",
+      "site": "9news.com",
+      "name": "9News KUSA"
+    },
+    {
+      "city": "Denver CO",
+      "site": "kdvr.com",
+      "name": "KDVR Fox31"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "reviewjournal.com",
+      "name": "Las Vegas Review-Journal"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "lasvegassun.com",
+      "name": "Las Vegas Sun"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "8newsnow.com",
+      "name": "KLAS 8NewsNow"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "ktnv.com",
+      "name": "KTNV ABC13 LV"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "news3lv.com",
+      "name": "KSNV News3LV NBC"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "fox5vegas.com",
+      "name": "KVVU Fox5 Las Vegas"
+    },
+    {
+      "city": "Seattle WA",
+      "site": "seattletimes.com",
+      "name": "Seattle Times"
+    },
+    {
+      "city": "Seattle WA",
+      "site": "king5.com",
+      "name": "KING5 NBC Seattle"
+    },
+    {
+      "city": "Seattle WA",
+      "site": "komonews.com",
+      "name": "KOMO ABC4 Seattle"
+    },
+    {
+      "city": "Seattle WA",
+      "site": "kiro7.com",
+      "name": "KIRO7 CBS Seattle"
+    },
+    {
+      "city": "Seattle WA",
+      "site": "mynorthwest.com",
+      "name": "MyNorthwest KIRO"
+    },
+    {
+      "city": "San Diego CA",
+      "site": "sandiegouniontribune.com",
+      "name": "San Diego Union-Tribune"
+    },
+    {
+      "city": "San Diego CA",
+      "site": "fox5sandiego.com",
+      "name": "Fox 5 San Diego"
+    },
+    {
+      "city": "San Diego CA",
+      "site": "nbcsandiego.com",
+      "name": "NBC 7 San Diego"
+    },
+    {
+      "city": "San Diego CA",
+      "site": "10news.com",
+      "name": "KGTV ABC10 San Diego"
+    },
+    {
+      "city": "Sacramento CA",
+      "site": "sacbee.com",
+      "name": "Sacramento Bee"
+    },
+    {
+      "city": "Sacramento CA",
+      "site": "kcra.com",
+      "name": "KCRA NBC3 Sacramento"
+    },
+    {
+      "city": "Sacramento CA",
+      "site": "abc10.com",
+      "name": "KXTV ABC10 Sacramento"
+    },
+    {
+      "city": "Sacramento CA",
+      "site": "fox40.com",
+      "name": "KTXL Fox40 Sacramento"
+    },
+    {
+      "city": "Tampa FL",
+      "site": "tampabay.com",
+      "name": "Tampa Bay Times"
+    },
+    {
+      "city": "Tampa FL",
+      "site": "wfla.com",
+      "name": "WFLA NBC8 Tampa"
+    },
+    {
+      "city": "Tampa FL",
+      "site": "fox13news.com",
+      "name": "Fox13 WTVT Tampa"
+    },
+    {
+      "city": "Tampa FL",
+      "site": "abcactionnews.com",
+      "name": "WFTS ABC Action Tampa"
+    },
+    {
+      "city": "New Orleans LA",
+      "site": "nola.com",
+      "name": "Times-Picayune / nola.com"
+    },
+    {
+      "city": "New Orleans LA",
+      "site": "fox8live.com",
+      "name": "WWL-TV Fox8 New Orleans"
+    },
+    {
+      "city": "New Orleans LA",
+      "site": "wdsu.com",
+      "name": "WDSU NBC6 New Orleans"
+    },
+    {
+      "city": "New Orleans LA",
+      "site": "wgno.com",
+      "name": "WGNO ABC26 New Orleans"
+    },
+    {
+      "city": "Cincinnati OH",
+      "site": "cincinnati.com",
+      "name": "Cincinnati Enquirer"
+    },
+    {
+      "city": "Cincinnati OH",
+      "site": "wcpo.com",
+      "name": "WCPO ABC9"
+    },
+    {
+      "city": "Cincinnati OH",
+      "site": "wlwt.com",
+      "name": "WLWT NBC5"
+    },
+    {
+      "city": "Cincinnati OH",
+      "site": "fox19.com",
+      "name": "FOX19 NOW"
+    },
+    {
+      "city": "Cincinnati OH",
+      "site": "local12.com",
+      "name": "Local 12 WKRC"
+    }
   ],
   "Tesla": [
-    {"city": "Austin TX",         "site": "statesman.com",         "name": "Austin American-Statesman"},
-    {"city": "Austin TX",         "site": "kxan.com",              "name": "KXAN NBC Austin"},
-    {"city": "Austin TX",         "site": "kvue.com",              "name": "KVUE ABC Austin"},
-    {"city": "San Francisco CA",  "site": "sfchronicle.com",       "name": "SF Chronicle"},
-    {"city": "San Francisco CA",  "site": "mercurynews.com",       "name": "Mercury News"},
-    {"city": "San Francisco CA",  "site": "nbcbayarea.com",        "name": "NBC Bay Area"},
-    {"city": "Los Angeles CA",    "site": "latimes.com",           "name": "LA Times"},
-    {"city": "Los Angeles CA",    "site": "nbclosangeles.com",     "name": "KNBC4"},
-    {"city": "Chicago IL",        "site": "chicagotribune.com",    "name": "Chicago Tribune"},
-    {"city": "Chicago IL",        "site": "nbcchicago.com",        "name": "NBC5 Chicago"},
-    {"city": "Chicago IL",        "site": "wgntv.com",             "name": "WGN-TV"},
-    {"city": "Houston TX",        "site": "houstonchronicle.com",  "name": "Houston Chronicle"},
-    {"city": "Houston TX",        "site": "khou.com",              "name": "KHOU CBS11"},
-    {"city": "Houston TX",        "site": "ktrk.com",              "name": "KTRK ABC13"},
-    {"city": "Miami FL",          "site": "miamiherald.com",       "name": "Miami Herald"},
-    {"city": "Miami FL",          "site": "local10.com",           "name": "WPLG Local10"},
-    {"city": "Las Vegas NV",      "site": "reviewjournal.com",     "name": "Las Vegas Review-Journal"},
-    {"city": "Las Vegas NV",      "site": "8newsnow.com",          "name": "KLAS 8NewsNow"},
-    {"city": "Las Vegas NV",      "site": "news3lv.com",           "name": "KSNV News3LV NBC"},
-    {"city": "Las Vegas NV",      "site": "ktnv.com",              "name": "KTNV ABC13 LV"},
-    {"city": "Las Vegas NV",      "site": "fox5vegas.com",         "name": "KVVU Fox5 Las Vegas"},
-    {"city": "Las Vegas NV",      "site": "lasvegassun.com",       "name": "Las Vegas Sun"},
-    {"city": "Pittsburgh PA",     "site": "post-gazette.com",      "name": "Pittsburgh Post-Gazette"},
-    {"city": "Pittsburgh PA",     "site": "wpxi.com",              "name": "WPXI NBC11 Pittsburgh"},
-    {"city": "Pittsburgh PA",     "site": "triblive.com",          "name": "TribLive Pittsburgh"},
-    {"city": "Nashville TN",      "site": "tennessean.com",        "name": "The Tennessean"},
-    {"city": "Nashville TN",      "site": "wkrn.com",              "name": "WKRN ABC2"},
-    {"city": "New Orleans LA",    "site": "nola.com",              "name": "Times-Picayune / nola.com"},
-    {"city": "New Orleans LA",    "site": "fox8live.com",          "name": "WWL-TV Fox8 New Orleans"},
-    {"city": "New Orleans LA",    "site": "wdsu.com",              "name": "WDSU NBC6 New Orleans"}
+    {
+      "city": "Austin TX",
+      "site": "statesman.com",
+      "name": "Austin American-Statesman"
+    },
+    {
+      "city": "Austin TX",
+      "site": "kxan.com",
+      "name": "KXAN NBC Austin"
+    },
+    {
+      "city": "Austin TX",
+      "site": "kvue.com",
+      "name": "KVUE ABC Austin"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "sfchronicle.com",
+      "name": "SF Chronicle"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "mercurynews.com",
+      "name": "Mercury News"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "nbcbayarea.com",
+      "name": "NBC Bay Area"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "latimes.com",
+      "name": "LA Times"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "nbclosangeles.com",
+      "name": "KNBC4"
+    },
+    {
+      "city": "Chicago IL",
+      "site": "chicagotribune.com",
+      "name": "Chicago Tribune"
+    },
+    {
+      "city": "Chicago IL",
+      "site": "nbcchicago.com",
+      "name": "NBC5 Chicago"
+    },
+    {
+      "city": "Chicago IL",
+      "site": "wgntv.com",
+      "name": "WGN-TV"
+    },
+    {
+      "city": "Houston TX",
+      "site": "houstonchronicle.com",
+      "name": "Houston Chronicle"
+    },
+    {
+      "city": "Houston TX",
+      "site": "khou.com",
+      "name": "KHOU CBS11"
+    },
+    {
+      "city": "Houston TX",
+      "site": "ktrk.com",
+      "name": "KTRK ABC13"
+    },
+    {
+      "city": "Miami FL",
+      "site": "miamiherald.com",
+      "name": "Miami Herald"
+    },
+    {
+      "city": "Miami FL",
+      "site": "local10.com",
+      "name": "WPLG Local10"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "reviewjournal.com",
+      "name": "Las Vegas Review-Journal"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "8newsnow.com",
+      "name": "KLAS 8NewsNow"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "news3lv.com",
+      "name": "KSNV News3LV NBC"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "ktnv.com",
+      "name": "KTNV ABC13 LV"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "fox5vegas.com",
+      "name": "KVVU Fox5 Las Vegas"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "lasvegassun.com",
+      "name": "Las Vegas Sun"
+    },
+    {
+      "city": "Pittsburgh PA",
+      "site": "post-gazette.com",
+      "name": "Pittsburgh Post-Gazette"
+    },
+    {
+      "city": "Pittsburgh PA",
+      "site": "wpxi.com",
+      "name": "WPXI NBC11 Pittsburgh"
+    },
+    {
+      "city": "Pittsburgh PA",
+      "site": "triblive.com",
+      "name": "TribLive Pittsburgh"
+    },
+    {
+      "city": "Nashville TN",
+      "site": "tennessean.com",
+      "name": "The Tennessean"
+    },
+    {
+      "city": "Nashville TN",
+      "site": "wkrn.com",
+      "name": "WKRN ABC2"
+    },
+    {
+      "city": "New Orleans LA",
+      "site": "nola.com",
+      "name": "Times-Picayune / nola.com"
+    },
+    {
+      "city": "New Orleans LA",
+      "site": "fox8live.com",
+      "name": "WWL-TV Fox8 New Orleans"
+    },
+    {
+      "city": "New Orleans LA",
+      "site": "wdsu.com",
+      "name": "WDSU NBC6 New Orleans"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "dallasnews.com",
+      "name": "Dallas Morning News"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "nbcdfw.com",
+      "name": "NBC DFW"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "wfaa.com",
+      "name": "WFAA ABC8"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "fox4news.com",
+      "name": "Fox4 Dallas"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "star-telegram.com",
+      "name": "Fort Worth Star-Telegram"
+    }
   ],
   "Aurora Innovation": [
-    {"city": "Dallas TX",         "site": "dallasnews.com",        "name": "Dallas Morning News"},
-    {"city": "Dallas TX",         "site": "nbcdfw.com",            "name": "NBC DFW"},
-    {"city": "Dallas TX",         "site": "wfaa.com",              "name": "WFAA ABC8"},
-    {"city": "Dallas TX",         "site": "star-telegram.com",     "name": "Fort Worth Star-Telegram"},
-    {"city": "Houston TX",        "site": "houstonchronicle.com",  "name": "Houston Chronicle"},
-    {"city": "Houston TX",        "site": "khou.com",              "name": "KHOU CBS11"},
-    {"city": "El Paso TX",        "site": "elpasotimes.com",       "name": "El Paso Times"},
-    {"city": "El Paso TX",        "site": "kvia.com",              "name": "KVIA ABC7 EP"},
-    {"city": "Oklahoma City OK",  "site": "oklahoman.com",         "name": "The Oklahoman"},
-    {"city": "Oklahoma City OK",  "site": "kfor.com",              "name": "KFOR NBC Oklahoma"},
-    {"city": "Chicago IL",        "site": "chicagotribune.com",    "name": "Chicago Tribune"},
-    {"city": "Pittsburgh PA",     "site": "post-gazette.com",      "name": "Pittsburgh Post-Gazette"},
-    {"city": "Pittsburgh PA",     "site": "triblive.com",          "name": "TribLive"}
+    {
+      "city": "Dallas TX",
+      "site": "dallasnews.com",
+      "name": "Dallas Morning News"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "nbcdfw.com",
+      "name": "NBC DFW"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "wfaa.com",
+      "name": "WFAA ABC8"
+    },
+    {
+      "city": "Dallas TX",
+      "site": "star-telegram.com",
+      "name": "Fort Worth Star-Telegram"
+    },
+    {
+      "city": "Houston TX",
+      "site": "houstonchronicle.com",
+      "name": "Houston Chronicle"
+    },
+    {
+      "city": "Houston TX",
+      "site": "khou.com",
+      "name": "KHOU CBS11"
+    },
+    {
+      "city": "El Paso TX",
+      "site": "elpasotimes.com",
+      "name": "El Paso Times"
+    },
+    {
+      "city": "El Paso TX",
+      "site": "kvia.com",
+      "name": "KVIA ABC7 EP"
+    },
+    {
+      "city": "Oklahoma City OK",
+      "site": "oklahoman.com",
+      "name": "The Oklahoman"
+    },
+    {
+      "city": "Oklahoma City OK",
+      "site": "kfor.com",
+      "name": "KFOR NBC Oklahoma"
+    },
+    {
+      "city": "Chicago IL",
+      "site": "chicagotribune.com",
+      "name": "Chicago Tribune"
+    },
+    {
+      "city": "Pittsburgh PA",
+      "site": "post-gazette.com",
+      "name": "Pittsburgh Post-Gazette"
+    },
+    {
+      "city": "Pittsburgh PA",
+      "site": "triblive.com",
+      "name": "TribLive"
+    }
   ],
   "Zoox": [
-    {"city": "Las Vegas NV",      "site": "reviewjournal.com",     "name": "Las Vegas Review-Journal"},
-    {"city": "Las Vegas NV",      "site": "8newsnow.com",          "name": "KLAS 8NewsNow"},
-    {"city": "Las Vegas NV",      "site": "ktnv.com",              "name": "KTNV ABC13 LV"},
-    {"city": "Las Vegas NV",      "site": "news3lv.com",           "name": "KSNV News3LV NBC"},
-    {"city": "Las Vegas NV",      "site": "fox5vegas.com",         "name": "KVVU Fox5 Las Vegas"},
-    {"city": "Las Vegas NV",      "site": "lasvegassun.com",       "name": "Las Vegas Sun"},
-    {"city": "San Francisco CA",  "site": "sfchronicle.com",       "name": "SF Chronicle"},
-    {"city": "San Francisco CA",  "site": "mercurynews.com",       "name": "Mercury News"},
-    {"city": "San Francisco CA",  "site": "nbcbayarea.com",        "name": "NBC Bay Area"},
-    {"city": "San Francisco CA",  "site": "kpix.com",              "name": "KPIX CBS5"},
-    {"city": "Miami FL",          "site": "miamiherald.com",       "name": "Miami Herald"},
-    {"city": "Miami FL",          "site": "local10.com",           "name": "WPLG Local10"}
+    {
+      "city": "Las Vegas NV",
+      "site": "reviewjournal.com",
+      "name": "Las Vegas Review-Journal"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "8newsnow.com",
+      "name": "KLAS 8NewsNow"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "ktnv.com",
+      "name": "KTNV ABC13 LV"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "news3lv.com",
+      "name": "KSNV News3LV NBC"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "fox5vegas.com",
+      "name": "KVVU Fox5 Las Vegas"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "lasvegassun.com",
+      "name": "Las Vegas Sun"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "sfchronicle.com",
+      "name": "SF Chronicle"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "mercurynews.com",
+      "name": "Mercury News"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "nbcbayarea.com",
+      "name": "NBC Bay Area"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "kpix.com",
+      "name": "KPIX CBS5"
+    },
+    {
+      "city": "Miami FL",
+      "site": "miamiherald.com",
+      "name": "Miami Herald"
+    },
+    {
+      "city": "Miami FL",
+      "site": "local10.com",
+      "name": "WPLG Local10"
+    },
+    {
+      "city": "Houston TX",
+      "site": "houstonchronicle.com",
+      "name": "Houston Chronicle"
+    },
+    {
+      "city": "Houston TX",
+      "site": "khou.com",
+      "name": "KHOU CBS11"
+    },
+    {
+      "city": "Houston TX",
+      "site": "ktrk.com",
+      "name": "KTRK ABC13"
+    },
+    {
+      "city": "Houston TX",
+      "site": "kprc.com",
+      "name": "KPRC NBC2"
+    },
+    {
+      "city": "Houston TX",
+      "site": "houston.culturemap.com",
+      "name": "CultureMap Houston"
+    },
+    {
+      "city": "San Diego CA",
+      "site": "sandiegouniontribune.com",
+      "name": "San Diego Union-Tribune"
+    },
+    {
+      "city": "San Diego CA",
+      "site": "fox5sandiego.com",
+      "name": "Fox 5 San Diego"
+    },
+    {
+      "city": "San Diego CA",
+      "site": "nbcsandiego.com",
+      "name": "NBC 7 San Diego"
+    },
+    {
+      "city": "San Diego CA",
+      "site": "10news.com",
+      "name": "KGTV ABC10 San Diego"
+    }
   ],
   "Motional": [
-    {"city": "Las Vegas NV",      "site": "reviewjournal.com",     "name": "Las Vegas Review-Journal"},
-    {"city": "Las Vegas NV",      "site": "8newsnow.com",          "name": "KLAS 8NewsNow"},
-    {"city": "Las Vegas NV",      "site": "ktnv.com",              "name": "KTNV ABC13 LV"},
-    {"city": "Las Vegas NV",      "site": "lasvegassun.com",       "name": "Las Vegas Sun"},
-    {"city": "Las Vegas NV",      "site": "news3lv.com",           "name": "KSNV News3LV NBC"},
-    {"city": "Las Vegas NV",      "site": "fox5vegas.com",         "name": "KVVU Fox5 Las Vegas"},
-    {"city": "Boston MA",         "site": "bostonglobe.com",       "name": "Boston Globe"},
-    {"city": "Boston MA",         "site": "wbur.org",              "name": "WBUR NPR Boston"},
-    {"city": "Boston MA",         "site": "wcvb.com",              "name": "WCVB ABC Boston"},
-    {"city": "Los Angeles CA",    "site": "latimes.com",           "name": "LA Times"},
-    {"city": "Los Angeles CA",    "site": "nbclosangeles.com",     "name": "KNBC4"}
+    {
+      "city": "Las Vegas NV",
+      "site": "reviewjournal.com",
+      "name": "Las Vegas Review-Journal"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "8newsnow.com",
+      "name": "KLAS 8NewsNow"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "ktnv.com",
+      "name": "KTNV ABC13 LV"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "lasvegassun.com",
+      "name": "Las Vegas Sun"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "news3lv.com",
+      "name": "KSNV News3LV NBC"
+    },
+    {
+      "city": "Las Vegas NV",
+      "site": "fox5vegas.com",
+      "name": "KVVU Fox5 Las Vegas"
+    },
+    {
+      "city": "Boston MA",
+      "site": "bostonglobe.com",
+      "name": "Boston Globe"
+    },
+    {
+      "city": "Boston MA",
+      "site": "wbur.org",
+      "name": "WBUR NPR Boston"
+    },
+    {
+      "city": "Boston MA",
+      "site": "wcvb.com",
+      "name": "WCVB ABC Boston"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "latimes.com",
+      "name": "LA Times"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "nbclosangeles.com",
+      "name": "KNBC4"
+    }
   ],
   "May Mobility": [
-    {"city": "Ann Arbor MI",      "site": "mlive.com",             "name": "MLive Michigan"},
-    {"city": "Ann Arbor MI",      "site": "freep.com",             "name": "Detroit Free Press"},
-    {"city": "Columbus OH",       "site": "dispatch.com",          "name": "Columbus Dispatch"},
-    {"city": "Columbus OH",       "site": "wbns10tv.com",          "name": "10TV WBNS Columbus"},
-    {"city": "Minneapolis MN",    "site": "startribune.com",       "name": "Star Tribune"},
-    {"city": "Minneapolis MN",    "site": "kare11.com",            "name": "KARE11 NBC Minneapolis"}
+    {
+      "city": "Ann Arbor MI",
+      "site": "mlive.com",
+      "name": "MLive Michigan"
+    },
+    {
+      "city": "Ann Arbor MI",
+      "site": "freep.com",
+      "name": "Detroit Free Press"
+    },
+    {
+      "city": "Columbus OH",
+      "site": "dispatch.com",
+      "name": "Columbus Dispatch"
+    },
+    {
+      "city": "Columbus OH",
+      "site": "wbns10tv.com",
+      "name": "10TV WBNS Columbus"
+    },
+    {
+      "city": "Minneapolis MN",
+      "site": "startribune.com",
+      "name": "Star Tribune"
+    },
+    {
+      "city": "Minneapolis MN",
+      "site": "kare11.com",
+      "name": "KARE11 NBC Minneapolis"
+    }
   ]
 }

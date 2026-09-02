@@ -71,10 +71,54 @@
 - **Track A 仅覆盖国外组**（local_media.json 当前全部是英文媒体）
 
 **`data/local_media.json` 维护规范**:
-- 新城市宣布运营 → 立即在对应公司下追加该城市的主报 + 主要 TV 台（至少 2 条）
 - site 字段填纯域名，不含 `https://`，例如 `ksat.com`
 - 每季度核查一次：各公司是否有新城市；旧条目是否仍有效
-- 当前覆盖：Waymo（68 个站点）、Tesla（18）、Aurora（13）、Zoox（7）、Motional（9）、May Mobility（6）
+
+---
+
+### 🔁 强制触发：抓到「地域动作」就必须当场刷新 local_media.json
+
+**这是 Phase 1 / Phase 2 写入 daily 时的必做检查，不是可选项。**
+
+只要当天新闻里出现下列任一情形，**立刻**去核对 `data/local_media.json` 里该公司在该城市/地区是否已有条目：
+
+| 触发情形 | 例子 |
+|---|---|
+| **新开城 / 开服** | Waymo 在丹佛、圣迭戈、坦帕向公众开放 |
+| **扩区**（已有城市扩大服务范围） | Tesla 达拉斯 Robotaxi 服务区扩大 50% |
+| **进入商业运营**（从测试转收费） | 某公司在某市开始付费载客 |
+| **开始路测 / 车队进驻** | Zoox 测试车队进驻休斯顿、圣迭戈 |
+| **宣布筹备 / 开始测绘** | Waymo 开始测绘辛辛那提及北肯塔基 |
+
+**为什么必须当场做**：Track A 是靠这份清单发起 `site:` 查询的。清单没有的城市，**后续该地所有本地报道都会被结构性漏掉**——地方 TV 台和地方报的事故、投诉、社区反弹这类新闻，Track B 的 Google News 权重根本压不出来，而这些恰恰是最有价值的一手信号。
+
+**操作步骤**：
+
+1. 确认该公司在 `data/local_media.json` 下是否已有该城市条目
+2. 没有就补：**优先复用同一城市在其他公司下已验证过的站点**（同城媒体是通用的，直接抄），再补当天实际报出这条新闻的本地源
+3. 每个城市至少 **主报 1 家 + 主要 TV 台 2 家**
+4. 补完**当场验证**能抓到东西，否则等于白加：
+
+```bash
+python -c "
+import sys; sys.path.insert(0,'scripts')
+from pathlib import Path
+from datetime import datetime,timedelta
+from python_rss_fetch import CN_TZ, load_local_media, fetch_local_media_news
+end=datetime.now(CN_TZ); start=end-timedelta(hours=48)
+lm=load_local_media(Path('data/local_media.json'))
+sites=[s for s in lm['<公司名>'] if s['city']=='<City ST>']
+items,errs=fetch_local_media_news('<公司名>',sites,start,end)
+print(f'命中 {len(items)} 条, 错误 {len(errs)}')
+for i in items: print(' ', i['source'][:24], i['title'][:60])
+"
+```
+
+5. 在当天给用户的汇报里**说明补了哪些城市**
+
+**实例（2026-09-02）**：Waymo 开三城时，丹佛/圣迭戈/坦帕清单里已有，所以三地本地媒体全部命中；但 **Zoox 宣布进驻休斯顿和圣迭戈时清单里没有**，当天 Zoox 的消息只能靠 Track B 捡回来。事后补了 9 个站点（Zoox 12 → 21）。**这就是漏配的实际代价。**
+
+**当前覆盖**（2026-09-02）：Waymo（91 站点 / 21 城市）、Tesla（30 / 10）、Aurora（13 / 6）、**Zoox（21 / 5）**、Motional（11 / 3）、May Mobility（6 / 3）
 
 ---
 
