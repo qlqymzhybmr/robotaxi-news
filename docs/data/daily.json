@@ -10,7 +10,7 @@
         "group": "国外",
         "sub_group": "国外 L4",
         "title": "同日在丹佛、圣迭戈、坦帕三城向公众开放付费运营，服务城市增至 14 座",
-        "summary_html": "<p><b>9月1日</b>，Waymo <b>同一天在丹佛、圣迭戈、坦帕三座城市同时向公众开放</b> Robotaxi 付费载客，为其迄今<b>单日开城数量最多</b>的一次，服务城市总数达到 <b>14 座</b>。三地本地媒体全部同步落地报道：丹佛有 The Denver Post、9News 与 KDVR 车内实拍，坦帕有 WFLA、WUSF、Tampa Bay Times，圣迭戈有 Fox 5、ABC10、NBC 7 与 San Diego Union-Tribune。不过 Westword 标题给出保留——“向公众开放……算是吧”，暗示初期仍有服务区或候补名单限制。CNBC 与 Reuters 均将其定性为 Robotaxi 竞赛升温的标志性事件。另据社区消息，Waymo 已着手<b>辛辛那提及北肯塔基</b>的路网测绘。</p>",
+        "summary_html": "<p><b>9月1日</b>，Waymo <b>同一天在丹佛、圣迭戈、坦帕三座城市同时向公众开放</b> Robotaxi 付费载客，为其迄今<b>单日开城数量最多</b>的一次，服务城市总数达到 <b>14 座</b>。三地本地媒体全部同步落地报道：丹佛有 The Denver Post、9News 与 KDVR 车内实拍，坦帕有 WFLA、WUSF、Tampa Bay Times，圣迭戈有 Fox 5、ABC10、NBC 7 与 San Diego Union-Tribune。不过 Westword 标题给出保留——“向公众开放……算是吧”，暗示初期仍有服务区或候补名单限制。CNBC 与 Reuters 均将其定性为 Robotaxi 竞赛升温的标志性事件。下一批城市的动作见辛辛那提条目。</p>",
         "source_name": "CNBC / Reuters / The Denver Post",
         "source_url": "https://www.google.com/search?q=%22Waymo+and+Zoox+expand+into+more+U.S.+markets+as+robotaxi+race+heats+up%22+site%3Acnbc.com&hl=en",
         "published_at": "2026-09-01",
@@ -210,6 +210,21 @@
         "source_url": "https://www.baidu.com/s?wd=%22%E4%BC%A0%E7%89%B9%E6%96%AF%E6%8B%89%E5%B0%86%E5%9C%A8%E5%9B%BD%E5%86%85%E5%BC%80%E5%90%AFFSD%20v14%E6%B5%8B%E8%AF%95%22",
         "published_at": "2026-09-01",
         "rating": 1,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-09-02-015",
+        "date": "2026-09-02",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "将进入辛辛那提：启动路网测绘，本地媒体称将开始 Robotaxi 测试",
+        "summary_html": "<p><b>9月1日</b>，<b>Cincinnati Enquirer</b> 报道 Waymo <b>将开始测绘辛辛那提及北肯塔基（Cincinnati / NKY）</b>路网。次日凌晨 <b>Local 12 WKRC</b> 的表述更进一步——“<b>Waymo 将在辛辛那提开始测试 Robotaxi</b>”。测绘是 Waymo 进入新城市的<b>第一道固定工序</b>，通常领先商业开服 6–12 个月。在同日丹佛/圣迭戈/坦帕三城开服的背景下，这条属于<b>下一批城市的前置信号</b>，价值在于提前量而非当下体量。辛辛那提横跨俄亥俄与肯塔基两州，涉及跨州法规协调，值得后续跟踪其准入路径。</p>",
+        "source_name": "Cincinnati Enquirer / Local 12 WKRC",
+        "source_url": "https://www.google.com/search?q=%22Self-driving+taxi+service+Waymo+to+start+mapping+Cincinnati+and+NKY%22+site%3Acincinnati.com&hl=en",
+        "published_at": "2026-09-01",
+        "rating": 2,
         "lang": "zh"
       }
     ]
