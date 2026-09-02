@@ -9,8 +9,8 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 
 这个 skill 帮 Long(DiDi 智驾产品/分析师)每天追踪全球 Robotaxi 竞品动态,并在每周一生成一份给老板看的简报。核心流程是统一主流程下的 Daily + Weekly:
 
-1. **每日抓取(daily-fetch)**:实习生每天上午手动触发一次(包括周末),覆盖过去 24 小时新闻,Claude 自动发布所有 ⭐⭐+ 到网页
-2. **周报生成(weekly-report)**:每周一,把**上周二到本周一**你勾选 `[x]` 的新闻汇总为 OneNote 可粘贴 HTML,并同步发布到网页
+1. **每日抓取(daily-fetch)**:实习生每天上午手动触发一次(包括周末),覆盖过去 24 小时新闻,Claude 自动把**全部条目**发布到网页
+2. **周报生成(weekly-report)**:每周一,把**上周二到本周一**你在网页选稿 UI 中选定的条目汇总为 OneNote 可粘贴 HTML,并同步发布到网页
 
 **关键时间逻辑**:周报的覆盖范围是**上周二 ~ 本周一**(共 7 天),以周一作为周报的结尾。所以周一的 daily 跑完后,立刻就可以生成本周周报,不需要等到周二。
 
@@ -23,11 +23,11 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 | "跑今日 robotaxi 新闻" / "daily fetch" / "跑今天的新闻" | `workflows/daily-fetch.md`(默认:自动分两阶段) | 每天上午,实习生手动触发 |
 | "只跑国外组" / "daily fetch overseas" | `workflows/daily-fetch.md`(仅 Phase 1) | 单独补跑某一组时 |
 | "只跑国内组" / "daily fetch china" | `workflows/daily-fetch.md`(仅 Phase 2) | 单独补跑某一组时 |
-| "生成本周周报" / "weekly report" / "做这周的简报" | `workflows/weekly-report.md` | 每周一,勾完三天 daily 之后 |
+| "生成本周周报" / "weekly report" / "做这周的简报" | `workflows/weekly-report.md` | 每周一,网页选稿完成之后 |
 | "发布今日精选" / "publish daily" | `workflows/daily-publish.md` | 一般不用手动触发,daily-fetch 自动串接 |
 | "发布本周周报到网页" / "publish weekly" | `workflows/weekly-publish.md` | 一般不用手动触发,weekly-report 自动串接 |
 | "更新竞品 list" / "加一家公司到 list" | 直接编辑 `competitors.md`（Robotaxi Competitor & Keywords） | 任意时间 |
-| "学习这次的判断" / "把这条加进 examples" | 直接编辑 `important-examples.md` | 每次划完重点后 |
+| "把这条加进 examples" | 直接编辑 `important-examples.md`（仅在发现评级明显偏差时手动补充） | 按需 |
 
 **默认执行策略(重要)**:
 - 说"跑今日新闻"时,skill **默认自动跑完 5 个 Phase**:
@@ -36,13 +36,12 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 |------|------|------|
 | 1 | 国外组抓取 | `data/daily/YYYY-MM-DD.md` 国外 section |
 | 2 | 国内组抓取 | 同一文件的国内 section |
-| 3 | 自动发布 ⭐⭐+ | `docs/data/daily.json` |
+| 3 | 自动发布**全部条目**（不按 rating 过滤） | `docs/data/daily.json` |
 | 4 | **Uber CEO 访谈查询** | **不写文件,单独提醒用户**(见下) |
 | 5 | **抓取源健康告警** | **不写文件,单独提醒用户**(见下) |
 
-- Phase 1、2 的产物**合并写入同一份文件**,实习生体感是一次跑完、一份文件
-- Phase 4、5 **刻意不写进 daily 文件**:它们不是当日新闻,不参与勾选,也不进周报,混进去只会干扰勾选流程
-- 两阶段的产物**合并写入同一份文件** `data/daily/YYYY-MM-DD.md`(包含 "## 国外 L4" 和 "## 国内 L4" 等 section),实习生体感是一次跑完、一份文件
+- Phase 1、2 的产物**合并写入同一份文件** `data/daily/YYYY-MM-DD.md`（包含 "## 国外 L4" 和 "## 国内 L4" 等 section）,体感是一次跑完、一份文件
+- Phase 4、5 **刻意不写进 daily 文件**:它们不是当日新闻,也不进周报,混进去只会干扰阅读
 - 分阶段的好处:避免单次 tool 调用过多导致上下文或 5 小时额度问题
 - 如果 Phase 1 跑完后中断(网络/额度),隔一段时间说"只跑国内组"即可补跑 Phase 2,不会覆盖已有的国外组内容
 
@@ -148,7 +147,7 @@ robotaxi-news/
 ├── DEPLOY.md                    # GitHub Pages 首次部署指南
 ├── competitors.md               # 竞品 + 关键词维护入口
 ├── style-guide.md               # 写作风格规则(学自 Long 的历史周报)
-├── important-examples.md        # 重要性判断规则(每次划完重点后追加)
+├── important-examples.md        # 重要性判断参考例(供 ⭐ 评级参考，按需手动维护)
 ├── workflows/
 │   ├── daily-fetch.md           # 每日抓取的执行步骤(含 Phase 3 自动发布)
 │   ├── weekly-report.md         # 周报生成的执行步骤(含步骤 8.5 + 11)
@@ -185,18 +184,19 @@ robotaxi-news/
 **包括周六和周日**。周末不跑的话,周一补三天工作量会很大,所以养成每天跑一次的习惯。
 
 1. 打开 Claude Code,说:"跑今日 robotaxi 新闻"
-2. Claude 会自动分两阶段跑 daily-fetch(Phase 1 国外 + Phase 2 国内),耗时约 20-30 分钟
-3. 跑完后,用 VS Code / Cursor 打开 `data/daily/YYYY-MM-DD.md`(今天日期)
-4. **逐条看,把认为重要的条目前面的 `[ ]` 改成 `[x]`**
-5. 可以**直接修改文字**——比如觉得某条措辞不准、或者想补充事实
-6. 保存文件
-7. (可选)说:"学习这次的判断",让 Claude 把你的勾选规律追加到 `important-examples.md`
+2. Claude 会自动跑完 5 个 Phase,耗时约 20-30 分钟。**跑完就结束了,不需要你做任何事**
+3. (可选)看一眼 `data/daily/YYYY-MM-DD.md`,觉得哪条措辞不准或想补事实,可以**直接改文字**
+4. (可选)网页上打开「周报选稿」tab,为本周周报挑条目——这一步也可以攒到周一再做
+
+**⚠️ 逐条勾选 `[ ]` → `[x]` 的流程已于 2026-09-02 取消。** 重要性判断改由 Claude 在写入时用 ⭐ 评级完成(标准见 `workflows/daily-fetch.md` 的「⭐ 评级标准」)。
+
+取消的原因:重要性规则已经积累够多,继续按人工勾选训练会让筛选越来越紧,**导致抓到的内容被过度丢弃**。现在的原则是**宁可多留**——⭐ 条目同样写进 daily、同样发布到网页,评级只影响阅读优先级,真正的筛选留到周报选稿阶段做。
 
 **提示**:如果某天 Claude Code 跑到一半卡住(网络/额度问题),等一会儿说"只跑国内组"或"只跑国外组"补跑缺失的那一半即可。两阶段都写入同一份 daily 文件,不会冲突。
 
 ### 周一上班后(额外 15-20 分钟)
 
-周一是**特殊日子**:既要跑当天的 daily,又要补勾周末两天没勾的 daily,还要生成周报。
+周一是**特殊日子**:既要跑当天的 daily,又要在网页选稿 UI 里完成本周选稿,还要生成周报。
 
 **先理清时间逻辑**:
 - **周报覆盖范围是"上周二 ~ 本周一"**(共 7 天),以周一作为周报的结尾
@@ -204,18 +204,17 @@ robotaxi-news/
 - 周一 daily 跑完后,立刻就可以生成本周周报
 
 **周一流程**(在常规的"每天跑 daily"之后追加这些步骤):
-1. **先按"每天上班后"的常规流程跑一次周一的 daily 并勾选重点**(上面那 7 步)
-2. 然后打开 `data/daily/` 目录,找到**上周六**和**上周日**两份 daily
-3. **补勾这两天的重点**(这两天没人上班,还没来得及勾)
-4. 检查上周二 ~ 上周五 四份 daily 是否都已经勾过
-5. 全部勾完后,说:"生成本周周报"
-6. Claude 读取上周二 ~ 本周一共 7 份 daily,生成周报到 `data/reports/YYYY-Wxx.html`
+1. **先跑一次周一的 daily**(上面那几步)
+2. 打开网页的「**周报选稿**」tab,选择本周区间(上周二 ~ 本周一)
+3. **逐条勾选要进周报的条目并保存**——保存会写入 `docs/data/selections.json`
+4. 说:"生成本周周报"
+5. Claude 会先 `git pull` 拉取你刚保存的选稿,再据此生成周报到 `data/reports/YYYY-Wxx.html`
 7. 浏览器双击打开 HTML 文件
 8. **Ctrl+A 全选 → Ctrl+C → 在 OneNote 新建一页 → Ctrl+V 粘贴**
 9. 在 OneNote 里手动**微调文字、替换/补充图片**
 10. OneNote 整页截图,发老板
 
-**周一总工作量估算**:跑 daily(20-30 分钟) + 勾周一 daily(5 分钟) + 补勾周六周日 daily(10 分钟) + 生成周报(3-5 分钟) + OneNote 粘贴微调(10 分钟) = **约 50-65 分钟**。
+**周一总工作量估算**:跑 daily(20-30 分钟) + 网页选稿(10-15 分钟) + 生成周报(3-5 分钟) + OneNote 粘贴微调(10 分钟) = **约 45-55 分钟**。
 
 ---
 
@@ -229,8 +228,9 @@ robotaxi-news/
 
 ### 想调整重要性判断
 有两种方式:
-1. **被动学习**:每天划完重点后说"学习这次的判断",Claude 会把你的勾选追加到 `important-examples.md`
-2. **主动编辑**:直接打开 `important-examples.md` 添加规则,比如"涉及融资金额超过 5 亿美元的一律重要"
+直接打开 `important-examples.md` 添加规则,比如"涉及融资金额超过 5 亿美元的一律重要"。
+
+⭐ 评级标准本身定义在 `workflows/daily-fetch.md`。**注意别把规则写得越来越严**——取消人工勾选的初衷就是避免过度筛选。
 
 ### 想加新的信息源
 当前主流程优先维护 `competitors.md` 的公司与关键词。`archive/legacy-fetch/sources.md` 仅在应急补漏时启用。
@@ -323,9 +323,9 @@ https://qlqymzhybmr.github.io/robotaxi-news/
 ### 工作方式（自动串接）
 
 1. 实习生说"跑今日新闻",Claude 跑完 daily-fetch 后自动串接 daily-publish
-2. daily-publish 从今日 daily 文件里提取所有 ⭐⭐+ 条目,写入 `docs/data/daily.json`
+2. daily-publish 从今日 daily 文件里提取**全部条目**（不按 rating 过滤）,写入 `docs/data/daily.json`
 3. 实习生运行 `git add -A && git commit -m "daily YYYY-MM-DD" && git push`,约 1-2 分钟后网页更新
-4. 每周一周报生成后,weekly-report 自动串接 weekly-publish,把 `[x]` 汇总结果写入 `docs/data/weekly.json`,同样 push 后自动更新
+4. 每周一周报生成后,weekly-report 自动串接 weekly-publish,把选稿汇总结果写入 `docs/data/weekly.json`,同样 push 后自动更新
 
 ### ⚠️ Claude Code 工作目录与本地主目录不同步问题
 

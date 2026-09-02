@@ -193,6 +193,10 @@ def fetch_direct_feed(
     any window filtering. That is what separates "this source published nothing
     today" from "this source is broken" — both look like zero items otherwise,
     and a silently broken feed can go unnoticed for weeks.
+
+    Keyed by URL, not company: several companies have both a newsroom feed and
+    an X account (NVIDIA, Aurora, Tesla…), so keying by name silently collapsed
+    them and could let a dead feed hide behind a healthy namesake.
     """
     errors: List[str] = []
     items: List[dict] = []
@@ -230,7 +234,7 @@ def fetch_direct_feed(
         return items, errors
 
     if raw_counts is not None:
-        raw_counts[feed.company] = len(getattr(parsed, "entries", []))
+        raw_counts[feed.url] = len(getattr(parsed, "entries", []))
 
     # Reddit 403 detection: report explicitly rather than silently returning 0 items
     if is_reddit:
@@ -756,14 +760,23 @@ ALERT_RULES = [
 
 
 def build_health_report(errors: List[str], raw_counts: Dict[str, int],
-                        expected_feeds: List[str]) -> dict:
+                        feeds: List[DirectFeed]) -> dict:
     """把零散的错误串归类成分级告警，供 daily-fetch 的 Phase 5 直接播报。
 
     分三类：
       alerts       —— 需要用户动手修的（凭证过期、被封禁）
       silent_feeds —— 请求成功但一条都没返回的源，多半是上游改版或路由失效
       missing      —— 压根没跑到的源
+
+    raw_counts 按 URL 索引（同名公司可能有多个源），播报时再翻译回公司名。
     """
+    label = {f.url: f.company for f in feeds}
+
+    def name_of(url: str) -> str:
+        # 同名源并存时带上路由尾巴，否则两条告警看起来一模一样
+        base = label.get(url, url)
+        same = [u for u in label if label[u] == base]
+        return base if len(same) < 2 else f"{base}({url.rstrip('/').rsplit('/', 1)[-1]})"
     alerts = []
     for marker, level, what, action in ALERT_RULES:
         hits = [e for e in errors if marker in e]
@@ -787,8 +800,8 @@ def build_health_report(errors: List[str], raw_counts: Dict[str, int],
             "sources": other[:8],
         })
 
-    silent = sorted(name for name, n in raw_counts.items() if n == 0)
-    missing = sorted(set(expected_feeds) - set(raw_counts))
+    silent = sorted(name_of(url) for url, n in raw_counts.items() if n == 0)
+    missing = sorted(name_of(u) for u in set(label) - set(raw_counts))
     return {
         "ok": not alerts and not silent and not missing,
         "alerts": alerts,
@@ -851,8 +864,7 @@ def main() -> None:
             local_media_items_total += len(items)
 
     deduped = dedupe_news(all_items)
-    health = build_health_report(
-        all_errors, raw_counts, [f.company for f in direct_feeds])
+    health = build_health_report(all_errors, raw_counts, direct_feeds)
 
     result = {
         "health": health,

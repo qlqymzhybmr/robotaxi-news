@@ -47,5 +47,5 @@
 ## 注意事项
 
 - weekly-publish 直接使用 weekly-report 生成的 JSON 副产物(步骤 8.5),不需要重新处理数据
-- 该 JSON 已按“仅 `[x]` 勾选条目”生成，发布时不得再按 rating 二次筛选
+- 该 JSON 已按网页选稿 UI（`docs/data/selections.json`）的选择生成，发布时不得再按 rating 二次筛选
 - 如果用户重跑了 weekly-report,重跑 weekly-publish 会替换掉旧数据(正常行为)

@@ -196,6 +196,21 @@
         "published_at": "2026-09-01",
         "rating": 2,
         "lang": "zh"
+      },
+      {
+        "id": "2026-09-02-014",
+        "date": "2026-09-02",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "传闻：特斯拉将在国内开启 FSD v14 测试（待证实）",
+        "summary_html": "<p><b>9月1日</b>，第一电动网/盖世快讯在一则综合快讯中提到“<b>传特斯拉将在国内开启 FSD v14 测试</b>”。⚠️ <b>该消息为转述传闻，无官方确认</b>，且与同日韩媒关于“Tesla 否认放弃中国 FSD 推进计划”的报道方向一致但相互独立。建议作为线索跟踪，待官方或权威源确认后再提级。</p>",
+        "source_name": "第一电动网 / 盖世快讯",
+        "source_url": "https://www.baidu.com/s?wd=%22%E4%BC%A0%E7%89%B9%E6%96%AF%E6%8B%89%E5%B0%86%E5%9C%A8%E5%9B%BD%E5%86%85%E5%BC%80%E5%90%AFFSD%20v14%E6%B5%8B%E8%AF%95%22",
+        "published_at": "2026-09-01",
+        "rating": 1,
+        "lang": "zh"
       }
     ]
   },
