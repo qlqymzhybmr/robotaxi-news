@@ -480,6 +480,16 @@
       "city": "Cincinnati OH",
       "site": "local12.com",
       "name": "Local 12 WKRC"
+    },
+    {
+      "city": "Denver CO",
+      "site": "denvergazette.com",
+      "name": "Denver Gazette"
+    },
+    {
+      "city": "Denver CO",
+      "site": "westword.com",
+      "name": "Westword"
     }
   ],
   "Tesla": [
@@ -920,6 +930,65 @@
       "city": "Minneapolis MN",
       "site": "kare11.com",
       "name": "KARE11 NBC Minneapolis"
+    }
+  ],
+  "Uber": [
+    {
+      "city": "London UK",
+      "site": "cityam.com",
+      "name": "City A.M."
+    },
+    {
+      "city": "London UK",
+      "site": "bbc.co.uk",
+      "name": "BBC"
+    },
+    {
+      "city": "London UK",
+      "site": "standard.co.uk",
+      "name": "Evening Standard"
+    },
+    {
+      "city": "London UK",
+      "site": "mylondon.news",
+      "name": "MyLondon"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "thenationalnews.com",
+      "name": "The National"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "gulfnews.com",
+      "name": "Gulf News"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "khaleejtimes.com",
+      "name": "Khaleej Times"
+    }
+  ],
+  "Wayve": [
+    {
+      "city": "London UK",
+      "site": "cityam.com",
+      "name": "City A.M."
+    },
+    {
+      "city": "London UK",
+      "site": "bbc.co.uk",
+      "name": "BBC"
+    },
+    {
+      "city": "London UK",
+      "site": "standard.co.uk",
+      "name": "Evening Standard"
+    },
+    {
+      "city": "London UK",
+      "site": "mylondon.news",
+      "name": "MyLondon"
     }
   ]
 }
