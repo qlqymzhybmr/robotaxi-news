@@ -227,7 +227,7 @@
 - Tech Times | overseas | | https://www.techtimes.com/rss/archives/archives.xml
 <!-- Denver Gazette 于 2026-09-03 被 Phase 5 健康告警发现返回 0 条：其 RSS 全部路径
      （/feed/、/news/feed/、search?f=rss、gazette.com）均 403，站点已整体封禁我们。
-     已改挂到 data/local_media.json 的 Waymo/Denver 下——Track A 走 Google News
+     已改挂到 data/local_media.json 的 Waymo/Denver 下——Track B 走 Google News
      的 site: 查询，不直接访问对方服务器，可绕开封禁，实测仍能命中。 -->
 
 ### X 个人博主（Tesla 追踪，via 自部署 RSSHub）

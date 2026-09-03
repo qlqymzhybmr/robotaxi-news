@@ -635,7 +635,7 @@ def dedupe_news(items: List[dict]) -> List[dict]:
     return out
 
 
-# ── Track A: local-media site-specific queries ─────────────────────────────────
+# ── Track B: local-media site-specific queries ─────────────────────────────────
 
 def load_local_media(path: Path) -> dict:
     """Load company→sites mapping from data/local_media.json."""
@@ -675,7 +675,7 @@ def fetch_local_media_news(
     window_start: datetime,
     window_end: datetime,
 ) -> tuple[List[dict], List[str]]:
-    """Track A: query each local outlet via Google News site: operator.
+    """Track B: query each local outlet via Google News site: operator.
 
     Query format: "<CompanyName>" site:outlet.com
     No AV keywords added—the site: scope already narrows to a trusted source,
@@ -819,7 +819,7 @@ def main() -> None:
     parser.add_argument("--window-start-hour", type=int, default=9)
     parser.add_argument("--output", default="data/tmp/raw_news.json")
     parser.add_argument("--local-media", default="data/local_media.json",
-                        help="Path to local_media.json config (Track A)")
+                        help="Path to local_media.json config (Track B)")
     args = parser.parse_args()
 
     run_date = datetime.strptime(args.date, "%Y-%m-%d").replace(tzinfo=CN_TZ)
@@ -839,7 +839,7 @@ def main() -> None:
     all_items: List[dict] = []
     all_errors: List[str] = []
 
-    # ── Track B: Google News general RSS (existing logic) ──────────────────────
+    # ── Track A: Google News general RSS (existing logic) ──────────────────────
     for company in companies:
         items, errors = fetch_company_news(company, keywords, window_start, window_end)
         all_items.extend(items)
@@ -851,7 +851,7 @@ def main() -> None:
         all_items.extend(items)
         all_errors.extend(errors)
 
-    # ── Track A: local-media site-specific queries (overseas only) ─────────────
+    # ── Track B: local-media site-specific queries (overseas only) ─────────────
     local_media_items_total = 0
     if args.group in ("all", "overseas"):
         local_media = load_local_media(Path(args.local_media))

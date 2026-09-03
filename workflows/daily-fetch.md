@@ -27,19 +27,19 @@
 **数据来源（五类，全部并存，一次运行同时跑完）**:
 | 来源类型 | 说明 | 链接质量 | 配置位置 |
 |------|------|------|------|
-| Track B：Google News RSS | 按公司名 + 关键词搜索，覆盖全量媒体报道，但受 Google 权重压制，地方小报容易被淹没 | ⚠️ 搜索链接（见下方「链接策略」） | `competitors.md` 国外/国内公司列表 |
-| Track A：本地媒体 site: 查询 | 对每家公司在其运营城市的指定本地媒体发起 `site:xxx.com` 专项查询，绕过 Google 权重，补漏地方 TV 台 / 地方报 | ⚠️ 搜索链接 | `data/local_media.json` |
+| Track A：Google News RSS | 按公司名 + 关键词搜索，覆盖全量媒体报道，但受 Google 权重压制，地方小报容易被淹没 | ⚠️ 搜索链接（见下方「链接策略」） | `competitors.md` 国外/国内公司列表 |
+| Track B：本地媒体 site: 查询 | 对每家公司在其运营城市的指定本地媒体发起 `site:xxx.com` 专项查询，绕过 Google 权重，补漏地方 TV 台 / 地方报 | ⚠️ 搜索链接 | `data/local_media.json` |
 | Track C：行业媒体 RSS | 综合财经/科技/汽车媒体大盘源（Electrek、CnEVPost、36氪、财新、华尔街见闻…），**必过主题关键词** | ✅ 发布方真实永久链接 | `competitors.md` → `## 行业媒体 RSS` |
 | 直接订阅 RSS | 公司官方博客/新闻室 + X(Twitter) via RSSHub | ✅ 发布方真实永久链接 | `competitors.md` → `## 直接订阅 RSS` / `## X（Twitter）RSS 订阅` |
 | Reddit 社区热帖 | r/SelfDrivingCars、r/Waymo、r/teslamotors；免认证，按 AV 关键词过滤 | ✅ Reddit 帖真实链接 | `competitors.md` → `## 社区 / 媒体 RSS（Reddit 热帖）` |
 
 **Track C 工作原理（2026-09-01 新增）**:
 - 与「直接订阅 RSS」的关键差别：公司新闻室条条相关，**不过滤**；Track C 是综合大盘源，绝大多数内容与自动驾驶无关，**每条必须命中 `MEDIA_TOPIC_KEYWORDS`**（定义在 `scripts/python_rss_fetch.py`）才进入管线。约 350 条原始条目 → 过滤后约 15 条。
-- 解析靠 section 标题区分：`FILTERED_FEED_SECTIONS` 里的 section 打 `filtered=True`，其余走原逻辑。**两种模式完全并存，Track A / Track B 行为未做任何改动。**
-- Track C 的独特价值有两点，都不是 Track B 能替代的：
+- 解析靠 section 标题区分：`FILTERED_FEED_SECTIONS` 里的 section 打 `filtered=True`，其余走原逻辑。**两种模式完全并存，Track B / Track A 行为未做任何改动。**
+- Track C 的独特价值有两点，都不是 Track A 能替代的：
   1. **链接质量**：返回发布方真实永久 URL，不经 Google News 包装，不存在过期/搜不到问题
-  2. **补公司无关的新闻**：Track B 是按公司名检索的，**监管/政策类新闻往往不含任何公司名，会被结构性漏掉**。实测 2026-08-31「商务部等三部门发布车联网及自动驾驶数据合规指引」就是只有 Track C 抓到（36氪 + 华尔街见闻 + 界面 三源命中），Track B 全部漏掉。
-- ⚠️ RSSHub **没有汽车垂直媒体路由**（汽车之家 / 第一电动 / 盖世汽车 / 懂车帝 / 车东西均不存在），这部分仍只能靠 Track B 搜索召回。
+  2. **补公司无关的新闻**：Track A 是按公司名检索的，**监管/政策类新闻往往不含任何公司名，会被结构性漏掉**。实测 2026-08-31「商务部等三部门发布车联网及自动驾驶数据合规指引」就是只有 Track C 抓到（36氪 + 华尔街见闻 + 界面 三源命中），Track A 全部漏掉。
+- ⚠️ RSSHub **没有汽车垂直媒体路由**（汽车之家 / 第一电动 / 盖世汽车 / 懂车帝 / 车东西均不存在），这部分仍只能靠 Track A 搜索召回。
 
 ---
 
@@ -50,7 +50,7 @@
 **① 真实永久链接**（Track C / 直接订阅 / Reddit）
 形如 `https://electrek.co/2026/08/31/tesla-driver-assist-stopped-freeway-mesa/`。直接用，最优。
 
-**② 搜索链接**（Track A / Track B）
+**② 搜索链接**（Track B / Track A）
 形如 `https://www.google.com/search?q="标题" site:electrek.co`。
 
 **为什么不能给真实链接**：Google News RSS 返回的是 `CBMi…/AU_yqL…` 包装 URL，几天后失效。已实测排除全部还原方案——base64 解码（新格式解不出）、Google `batchexecute` 私有接口（4.9 秒/条且返回值已无 URL）、302 跳转（只跳到另一个包装）、Bing News RSS（已废弃）、DuckDuckGo（限流且有假阳性）。**这条路是死的，不要再试。**
@@ -62,13 +62,13 @@
 4. **用 `www.google.com` 网页搜索，不用 `news.google.com`** —— 新闻索引有时效衰减，几个月后旧文会掉出索引，这正是归档链接慢慢失效的原因；网页索引会长期保留
 5. 中文走百度且**不加 `site:`** —— 国内转载极多、百度对 UGC 子域收录不稳，加了经常零结果；不限定反而稳定能找到同一篇的某个副本
 
-**优先级**：同一事件如果 Track C 和 Track B 都抓到，**优先采用 Track C 的真实链接**作为权威源，Track B 的搜索链接降为辅助源。
+**优先级**：同一事件如果 Track C 和 Track A 都抓到，**优先采用 Track C 的真实链接**作为权威源，Track A 的搜索链接降为辅助源。
 
-**Track A 工作原理**:
+**Track B 工作原理**:
 - 脚本读取 `data/local_media.json`，对每个 `(公司, 站点)` 组合构建 `"CompanyName" site:outlet.com` 查询
-- 相关性判断比 Track B 更宽松：只要公司名出现在标题中即视为相关（不强制要求 AV 技术关键词），因为本地 TV 台标题常用"Waymo vehicle"这类非技术表述
-- Track A 和 Track B 结果合并后走统一 URL 去重，同一篇文章只保留一条
-- **Track A 仅覆盖国外组**（local_media.json 当前全部是英文媒体）
+- 相关性判断比 Track A 更宽松：只要公司名出现在标题中即视为相关（不强制要求 AV 技术关键词），因为本地 TV 台标题常用"Waymo vehicle"这类非技术表述
+- Track B 和 Track A 结果合并后走统一 URL 去重，同一篇文章只保留一条
+- **Track B 仅覆盖国外组**（local_media.json 当前全部是英文媒体）
 
 **`data/local_media.json` 维护规范**:
 - site 字段填纯域名，不含 `https://`，例如 `ksat.com`
@@ -90,7 +90,7 @@
 | **开始路测 / 车队进驻** | Zoox 测试车队进驻休斯顿、圣迭戈 |
 | **宣布筹备 / 开始测绘** | Waymo 开始测绘辛辛那提及北肯塔基 |
 
-**为什么必须当场做**：Track A 是靠这份清单发起 `site:` 查询的。清单没有的城市，**后续该地所有本地报道都会被结构性漏掉**——地方 TV 台和地方报的事故、投诉、社区反弹这类新闻，Track B 的 Google News 权重根本压不出来，而这些恰恰是最有价值的一手信号。
+**为什么必须当场做**：Track B 是靠这份清单发起 `site:` 查询的。清单没有的城市，**后续该地所有本地报道都会被结构性漏掉**——地方 TV 台和地方报的事故、投诉、社区反弹这类新闻，Track A 的 Google News 权重根本压不出来，而这些恰恰是最有价值的一手信号。
 
 **操作步骤**：
 
@@ -116,7 +116,7 @@ for i in items: print(' ', i['source'][:24], i['title'][:60])
 
 5. 在当天给用户的汇报里**说明补了哪些城市**
 
-**实例（2026-09-02）**：Waymo 开三城时，丹佛/圣迭戈/坦帕清单里已有，所以三地本地媒体全部命中；但 **Zoox 宣布进驻休斯顿和圣迭戈时清单里没有**，当天 Zoox 的消息只能靠 Track B 捡回来。事后补了 9 个站点（Zoox 12 → 21）。**这就是漏配的实际代价。**
+**实例（2026-09-02）**：Waymo 开三城时，丹佛/圣迭戈/坦帕清单里已有，所以三地本地媒体全部命中；但 **Zoox 宣布进驻休斯顿和圣迭戈时清单里没有**，当天 Zoox 的消息只能靠 Track A 捡回来。事后补了 9 个站点（Zoox 12 → 21）。**这就是漏配的实际代价。**
 
 **当前覆盖**（2026-09-02）：Waymo（91 站点 / 21 城市）、Tesla（30 / 10）、Aurora（13 / 6）、**Zoox（21 / 5）**、Motional（11 / 3）、May Mobility（6 / 3）
 
@@ -148,8 +148,8 @@ for i in items: print(' ', i['source'][:24], i['title'][:60])
 
 - 执行命令:
   - `! python scripts/python_rss_fetch.py --group overseas --date YYYY-MM-DD --output data/tmp/raw_news_overseas.json`
-- 脚本**同时运行 Track B（全局搜索）和 Track A（本地媒体 site: 查询）**，输出合并去重后的同一份 JSON
-- 脚本会读取 `competitors.md` 的国外公司清单与 `## 搜索关键词`（Track B），以及 `data/local_media.json`（Track A）
+- 脚本**同时运行 Track A（全局搜索）和 Track B（本地媒体 site: 查询）**，输出合并去重后的同一份 JSON
+- 脚本会读取 `competitors.md` 的国外公司清单与 `## 搜索关键词`（Track A），以及 `data/local_media.json`（Track B）
 - 抓取规则(基于 Google News RSS):
   - 重点公司(⭐):中英双语各抓,每语种最多 10 条
   - 普通公司:默认英文抓取,每语种最多 5 条(必要时补中文)
@@ -530,9 +530,74 @@ json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 ---
 
-## Phase 5：抓取源健康告警（自动执行）
+## Phase 5：德州 DMV 车队登记追踪（自动执行）
 
-Phase 4 完成后执行。目的：**抓取源静默失效是最危险的故障** —— 凭证过期、路由下线、被封 IP，这些都不会报错，只会让某个源"今天恰好没新闻"，可能几周没人发现。
+Phase 4 完成后执行一条命令即可：
+
+```bash
+python scripts/track_tx_av_registrations.py
+```
+
+### 这是什么
+
+德州要求自动驾驶运营方在 TxMCCS 系统**逐辆登记**车辆（含 VIN）。这是目前**唯一公开、逐车、官方**的各家车队规模数据源——媒体几乎不报道车队数量变化，但它是判断扩张节奏最直接的指标，而且**可以横向对比各家**。
+
+数据源（页面是 JS 渲染的，脚本直接打底层 API，无需认证）：
+- 车辆：`https://txmccs.txdmv.gov/api/TruckStop/companies/<id>/automated-motor-vehicles`
+- 找新公司：`https://txmccs.txdmv.gov/api/TruckStop/companies?searchValue=<名字>&searchType=company_name`，取 `businessEntityId` 填进脚本的 `COMPANIES`
+- ⚠️ 非 AV 公司该端点返回**空数组而不是 404**，所以判据是「车辆数 > 0」
+
+**基线（2026-09-03，共 12 家 / 2,111 辆）**：
+
+| 公司 | 总数 | 车型分布 |
+|---|---:|---|
+| Waymo | 988 | I-PACE 767 / **RT 221** |
+| Tesla Robotaxi | 420 | Model Y 375 / **Cybercab 45** |
+| Avride | 344 | Ioniq 5 344 |
+| Aurora | 91 | 579 41 / LT62F 29 / VNL 21 |
+| Gatik AI | 64 | FTR 45 / FVR 19 |
+| Nuro | 47 | Gravity 26 / Prius 21 |
+| Zoox | 44 | Highlander 39 / **Zoox 5** |
+| Kodiak Robotics | 33 | T680 24 / 567 9 |
+| Torc Robotics | 32 | RA Cascadia 28 / Cascadia 4 |
+| May Mobility | 22 | Sienna 22 |
+| Waabi Logistics | 13 | 579 10 / VNL 3 |
+| Bot Auto TX | 13 | Cascadia 13 |
+
+注意 Waymo 的 **RT**、Zoox 的 **Zoox**、Tesla 的 **Cybercab** 都是各自的**专用车型**，与改装量产车（I-PACE / Highlander / Model Y）分开计数——**专用车型占比的变化是路线成熟度的直接信号**。
+
+脚本末尾会打印一张按规模排序的汇总表（含当日净变化），直接照它播报即可。
+
+### 播报规则
+
+| 情况 | 怎么做 |
+|---|---|
+| 有增减 | **写进 daily 文件**，作为独立条目（与 Phase 4/6 不同，这是**真实新闻**）。评级按变化幅度：单日 +50 辆以上或**新车型首次出现** → ⭐⭐⭐；一般增减 → ⭐⭐ |
+| 无变化 | 不写 daily，结束动作里一行带过 |
+| 抓取失败 | 脚本会显式报错并**拒绝写入那一家**（抓取失败 ≠ 车队清零），其余公司照常继续。在结束动作里提示，不要当成 0 辆 |
+
+**为什么这条要写进 daily 而 Phase 4/6 不写**：车队数量变化是当日发生的、可核实的行业事实，属于新闻；而访谈提醒和源健康告警是流程元信息。
+
+### 注意
+
+- 脚本**幂等**：同一天重复跑不会重复计数，但会在 history 里追加一条
+- 只保留最新一份完整 VIN 集合用于比对，历史里只记数量与当日增减 VIN，文件不会随天数线性膨胀
+- 脚本**幂等**，同一天重复跑不会重复计数
+- 单家抓取失败**不影响其余公司**，失败的会在末尾单独列出
+- **每季度跑一次普查**发现新运营方（新公司拿到 AV 授权不会有任何通知）：
+
+```bash
+python scripts/track_tx_av_registrations.py --discover
+```
+
+  它会扫约 30 个检索词、上百家公司，只报**尚未在 `COMPANIES` 里、且确实有车辆登记**的，
+  并直接打印可粘贴的配置行。2026-09-03 首次普查扫了 175 家，确认当前 12 家已覆盖完整。
+
+---
+
+## Phase 6：抓取源健康告警（自动执行）
+
+Phase 5 完成后执行（本流程最后一步）。目的：**抓取源静默失效是最危险的故障** —— 凭证过期、路由下线、被封 IP，这些都不会报错，只会让某个源"今天恰好没新闻"，可能几周没人发现。
 
 ### 数据来源
 
@@ -585,79 +650,14 @@ Phase 4 完成后执行。目的：**抓取源静默失效是最危险的故障*
 
 ---
 
-## Phase 6：德州 DMV 车队登记追踪（自动执行）
-
-Phase 5 完成后执行一条命令即可：
-
-```bash
-python scripts/track_tx_av_registrations.py
-```
-
-### 这是什么
-
-德州要求自动驾驶运营方在 TxMCCS 系统**逐辆登记**车辆（含 VIN）。这是目前**唯一公开、逐车、官方**的各家车队规模数据源——媒体几乎不报道车队数量变化，但它是判断扩张节奏最直接的指标，而且**可以横向对比各家**。
-
-数据源（页面是 JS 渲染的，脚本直接打底层 API，无需认证）：
-- 车辆：`https://txmccs.txdmv.gov/api/TruckStop/companies/<id>/automated-motor-vehicles`
-- 找新公司：`https://txmccs.txdmv.gov/api/TruckStop/companies?searchValue=<名字>&searchType=company_name`，取 `businessEntityId` 填进脚本的 `COMPANIES`
-- ⚠️ 非 AV 公司该端点返回**空数组而不是 404**，所以判据是「车辆数 > 0」
-
-**基线（2026-09-03，共 12 家 / 2,111 辆）**：
-
-| 公司 | 总数 | 车型分布 |
-|---|---:|---|
-| Waymo | 988 | I-PACE 767 / **RT 221** |
-| Tesla Robotaxi | 420 | Model Y 375 / **Cybercab 45** |
-| Avride | 344 | Ioniq 5 344 |
-| Aurora | 91 | 579 41 / LT62F 29 / VNL 21 |
-| Gatik AI | 64 | FTR 45 / FVR 19 |
-| Nuro | 47 | Gravity 26 / Prius 21 |
-| Zoox | 44 | Highlander 39 / **Zoox 5** |
-| Kodiak Robotics | 33 | T680 24 / 567 9 |
-| Torc Robotics | 32 | RA Cascadia 28 / Cascadia 4 |
-| May Mobility | 22 | Sienna 22 |
-| Waabi Logistics | 13 | 579 10 / VNL 3 |
-| Bot Auto TX | 13 | Cascadia 13 |
-
-注意 Waymo 的 **RT**、Zoox 的 **Zoox**、Tesla 的 **Cybercab** 都是各自的**专用车型**，与改装量产车（I-PACE / Highlander / Model Y）分开计数——**专用车型占比的变化是路线成熟度的直接信号**。
-
-脚本末尾会打印一张按规模排序的汇总表（含当日净变化），直接照它播报即可。
-
-### 播报规则
-
-| 情况 | 怎么做 |
-|---|---|
-| 有增减 | **写进 daily 文件**，作为独立条目（与 Phase 4/5 不同，这是**真实新闻**）。评级按变化幅度：单日 +50 辆以上或**新车型首次出现** → ⭐⭐⭐；一般增减 → ⭐⭐ |
-| 无变化 | 不写 daily，结束动作里一行带过 |
-| 抓取失败 | 脚本会显式报错并**拒绝写入那一家**（抓取失败 ≠ 车队清零），其余公司照常继续。在结束动作里提示，不要当成 0 辆 |
-
-**为什么这条要写进 daily 而 Phase 4/5 不写**：车队数量变化是当日发生的、可核实的行业事实，属于新闻；而访谈提醒和源健康告警是流程元信息。
-
-### 注意
-
-- 脚本**幂等**：同一天重复跑不会重复计数，但会在 history 里追加一条
-- 只保留最新一份完整 VIN 集合用于比对，历史里只记数量与当日增减 VIN，文件不会随天数线性膨胀
-- 脚本**幂等**，同一天重复跑不会重复计数
-- 单家抓取失败**不影响其余公司**，失败的会在末尾单独列出
-- **每季度跑一次普查**发现新运营方（新公司拿到 AV 授权不会有任何通知）：
-
-```bash
-python scripts/track_tx_av_registrations.py --discover
-```
-
-  它会扫约 30 个检索词、上百家公司，只报**尚未在 `COMPANIES` 里、且确实有车辆登记**的，
-  并直接打印可粘贴的配置行。2026-09-03 首次普查扫了 175 家，确认当前 12 家已覆盖完整。
-
----
-
 ## 结束动作
 
-Phase 1 ~ Phase 5 全部完成后,统一告诉用户。
+Phase 1 ~ Phase 6 全部完成后,统一告诉用户。
 
 **顺序很重要**：如果有 `critical` 健康告警，它排在**最前面**，因为那是唯一需要用户动手的事；其余按下面的模板。
 
 ```
-🚨 （仅当有 critical 告警时，按 Phase 5 的格式放在最顶部）
+🚨 （仅当有 critical 告警时，按 Phase 6 的格式放在最顶部）
 
 今日 daily 抓取完成:
 - 共 X 条新闻(⭐⭐⭐ x 条 / ⭐⭐ x 条 / ⭐ x 条),写入 data/daily/YYYY-MM-DD.md
@@ -684,6 +684,6 @@ Phase 1 ~ Phase 5 全部完成后,统一告诉用户。
 | **滚动 daily 归档** | 约每月，或 daily.json 超过 100 天时 | `python scripts/roll_daily_archive.py --apply`（默认保留近 90 天，脚本对条目数做守恒校验，不一致会拒绝写入） |
 | **压缩周报图片** | 每次周报贴过新图之后 | `python scripts/compress_weekly_images.py --apply`（幂等，已是 WebP 的会跳过） |
 | **核查 local_media.json** | 每季度 | 各公司是否有新运营城市；旧站点是否还有效 |
-| **复查静默源** | 当 Phase 5 连续 2 天报同一个源 | 手动打开该 feed URL 确认是上游改版还是路由下线 |
+| **复查静默源** | 当 Phase 6 连续 2 天报同一个源 | 手动打开该 feed URL 确认是上游改版还是路由下线 |
 
 **为什么图片压缩要定期做**：网页的粘贴路径仍然是 `FileReader.readAsDataURL`，贴进去的新图还是未压缩 PNG。2026-09-01 时两张图就把 `weekly_overrides.json` 撑到 1.56MB、实际传输 1181KB，占了全站首屏的 61%。

@@ -38,11 +38,11 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 | 2 | 国内组抓取 | 同一文件的国内 section |
 | 3 | 自动发布**全部条目**（不按 rating 过滤） | `docs/data/daily.json` |
 | 4 | **Uber CEO 访谈查询** | **不写文件,单独提醒用户**(见下) |
-| 5 | **抓取源健康告警** | **不写文件,单独提醒用户**(见下) |
-| 6 | **德州 DMV 车队登记** | 有增减则**写进 daily**（它是真新闻） |
+| 5 | **德州 DMV 车队登记** | 有增减则**写进 daily**（它是真新闻） |
+| 6 | **抓取源健康告警**（流程最后一步） | **不写文件,单独提醒用户**(见下) |
 
 - Phase 1、2 的产物**合并写入同一份文件** `data/daily/YYYY-MM-DD.md`（包含 "## 国外 L4" 和 "## 国内 L4" 等 section）,体感是一次跑完、一份文件
-- Phase 4、5 **刻意不写进 daily 文件**:它们不是当日新闻,也不进周报,混进去只会干扰阅读
+- Phase 4、6 **刻意不写进 daily 文件**:它们不是当日新闻,也不进周报,混进去只会干扰阅读
 - 分阶段的好处:避免单次 tool 调用过多导致上下文或 5 小时额度问题
 - 如果 Phase 1 跑完后中断(网络/额度),隔一段时间说"只跑国内组"即可补跑 Phase 2,不会覆盖已有的国外组内容
 
@@ -60,8 +60,8 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 
 | 来源 | 抓什么 | 链接质量 |
 |------|------|------|
-| Track B：Google News RSS | 按公司名 + 关键词全网搜索（主力召回） | ⚠️ 搜索链接 |
-| Track A：本地媒体 site: 查询 | 各公司运营城市的地方报 / TV 台（`data/local_media.json`） | ⚠️ 搜索链接 |
+| Track A：Google News RSS | 按公司名 + 关键词全网搜索（主力召回） | ⚠️ 搜索链接 |
+| Track B：本地媒体 site: 查询 | 各公司运营城市的地方报 / TV 台（`data/local_media.json`） | ⚠️ 搜索链接 |
 | Track C：行业媒体 RSS | 综合财经科技媒体大盘源，必过主题关键词 | ✅ 真实永久链接 |
 | 直接订阅 RSS | 公司官方新闻室 + X(Twitter) via 自部署 RSSHub | ✅ 真实永久链接 |
 | Reddit 社区热帖 | r/SelfDrivingCars、r/Waymo、r/teslamotors | ✅ 真实链接 |
@@ -71,7 +71,7 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
   - 重点公司(⭐):中英双语各抓,每语种最多 10 条
   - 普通公司:单语抓取为主(国内中文/国外英文),每语种最多 5 条
 
-**Track C 为什么单独存在**(2026-09-01 新增):Track B 是**按公司名检索**的,所以**不含公司名的监管/政策类新闻会被结构性漏掉**。实测 2026-08-31「商务部等三部门发布车联网及自动驾驶数据合规指引」只有 Track C 抓到,Track B 全漏。同时 Track C 返回发布方真实永久链接,不受下面的链接失效问题影响。
+**Track C 为什么单独存在**(2026-09-01 新增):Track A 是**按公司名检索**的,所以**不含公司名的监管/政策类新闻会被结构性漏掉**。实测 2026-08-31「商务部等三部门发布车联网及自动驾驶数据合规指引」只有 Track C 抓到,Track A 全漏。同时 Track C 返回发布方真实永久链接,不受下面的链接失效问题影响。
 
 **关于链接（重要,别再重复踩坑）**:Google News RSS 给的是几天后就失效的包装 URL,**还原成真实链接的路子已全部实测排除**——base64 解码、Google `batchexecute` 私有接口、302 跳转、Bing News RSS、DuckDuckGo 全部不可行(细节见 `workflows/daily-fetch.md` 的「链接策略」)。因此 Track A/B 的条目存的是**精心构造的搜索链接**(去发布方后缀 + 精确短语引号 + `site:` 限定 + 走网页索引而非新闻索引),目标是"每次点开都能稳定找到同一篇"。**同一事件若 Track C 也抓到,优先用 Track C 的真实链接。**
 
@@ -87,7 +87,7 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 - 旧的 Tier URL fetch 流程已下线,不再作为主流程执行
 - `archive/legacy-fetch/sources.md` 仅作历史归档与应急兜底参考,默认不批量抓取
 
-### 每天自动盯着的两件事(Phase 4 / Phase 5)
+### 每天自动盯着的两件事(Phase 4 / Phase 6)
 
 这两件都是**每天 daily 跑完自动执行、有情况才提醒**,不需要单独触发,也不写进 daily 文件。
 
@@ -97,7 +97,7 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 - 只报**距今 ≤ 14 天**的新访谈
 - 去重台账 `data/uber_ceo_interviews.json`:报过的不再报,避免同一期天天弹。不想再被某条打扰,手动加进 `seen` 即可
 
-**Phase 5:抓取源健康告警**
+**Phase 6:抓取源健康告警**（流程最后一步）
 - 抓取脚本在输出 JSON 的顶层 `health` 字段里做好分级,命令行也会打印
 - **critical**(凭证过期、IP 被封)→ 提到最终回复**最顶部**,因为只有用户能修
 - **warning**(限速、瞬时错误)→ 结束动作里列一行
@@ -112,7 +112,7 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
      取值:DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value
 ```
 
-### 每天自动跟的第三件事：德州 DMV 车队登记（Phase 6）
+### 每天自动跟的第三件事：德州 DMV 车队登记（Phase 5）
 
 德州要求自动驾驶运营方在 TxMCCS **逐辆登记**车辆。这是目前**唯一公开、逐车、官方**的各家车队规模数据源——媒体几乎不报道车队数量变化，但它是判断扩张节奏最直接的指标，而且**可以横向对比各家**。
 
@@ -120,17 +120,17 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 python scripts/track_tx_av_registrations.py
 ```
 
-**基线（2026-09-03）**：共 **12 家运营方 / 2,111 辆**。前三名 **Waymo 988**（I-PACE 767 + RT 221）、**Tesla 420**（Model Y 375 + Cybercab 45）、**Avride 344**（Ioniq 5）。完整表见 `workflows/daily-fetch.md` 的 Phase 6。
+**基线（2026-09-03）**：共 **12 家运营方 / 2,111 辆**。前三名 **Waymo 988**（I-PACE 767 + RT 221）、**Tesla 420**（Model Y 375 + Cybercab 45）、**Avride 344**（Ioniq 5）。完整表见 `workflows/daily-fetch.md` 的 Phase 5。
 
-与 Phase 4/5 不同，**有增减就写进 daily 文件**（它是当日发生、可核实的行业事实，属于新闻）；新车型首次出现或单日 +50 辆以上评 ⭐⭐⭐。抓取失败时脚本会**拒绝写入**（失败 ≠ 车队清零）。
+与 Phase 4/6 不同，**有增减就写进 daily 文件**（它是当日发生、可核实的行业事实，属于新闻）；新车型首次出现或单日 +50 辆以上评 ⭐⭐⭐。抓取失败时脚本会**拒绝写入**（失败 ≠ 车队清零）。
 
 ### 🔁 抓到「地域动作」必须当场刷新本地媒体清单
 
 **这是每日流程里的强制检查。** 只要新闻里出现**新开城 / 扩区 / 转入商业运营 / 开始路测 / 开始测绘**,就要立刻核对 `data/local_media.json` 里该公司在该城市是否已有条目,没有就补上并**当场验证能抓到东西**。
 
-**为什么必须当场做**:Track A 靠这份清单发起 `site:` 查询。清单里没有的城市,**该地所有本地报道都会被结构性漏掉**——地方 TV 台和地方报的事故、投诉、社区反弹这类一手信号,Google News 的权重根本压不出来。
+**为什么必须当场做**:Track B 靠这份清单发起 `site:` 查询。清单里没有的城市,**该地所有本地报道都会被结构性漏掉**——地方 TV 台和地方报的事故、投诉、社区反弹这类一手信号,Google News 的权重根本压不出来。
 
-**实际代价（2026-09-02 实例）**:Waymo 开三城时清单里已有丹佛/圣迭戈/坦帕,三地本地媒体全部命中;但 **Zoox 宣布进驻休斯顿和圣迭戈时清单里没有**,那天 Zoox 的消息只能靠 Track B 捡回来。事后补了 9 个站点。
+**实际代价（2026-09-02 实例）**:Waymo 开三城时清单里已有丹佛/圣迭戈/坦帕,三地本地媒体全部命中;但 **Zoox 宣布进驻休斯顿和圣迭戈时清单里没有**,那天 Zoox 的消息只能靠 Track A 捡回来。事后补了 9 个站点。
 
 补充时**优先复用同城已在其他公司下验证过的站点**（同城媒体通用，直接抄）。完整操作步骤见 `workflows/daily-fetch.md` 的「强制触发」章节。
 
@@ -141,7 +141,7 @@ python scripts/track_tx_av_registrations.py
 | 滚动 daily 归档 | 约每月 | `python scripts/roll_daily_archive.py --apply` |
 | 压缩周报图片 | 贴过新图之后 | `python scripts/compress_weekly_images.py --apply` |
 | 核查 local_media.json | 每季度**兜底**（日常靠上面的强制触发，这里只查旧站点是否失效） | 手动 |
-| 复查静默源 | Phase 5 连续 2 天报同一个源 | 手动打开该 feed URL 确认 |
+| 复查静默源 | Phase 6 连续 2 天报同一个源 | 手动打开该 feed URL 确认 |
 | **普查新增 AV 运营方** | 每季度 | `python scripts/track_tx_av_registrations.py --discover` |
 
 两个脚本都**默认只预览、加 `--apply` 才写入**,且都是幂等的,重复跑安全。
@@ -158,7 +158,7 @@ python scripts/track_tx_av_registrations.py
 
 **降低漏查的措施**:
 - **CnEVPost、36氪 已在 2026-09-01 接入 Track C 自动抓取**,不再需要手动扫。仍建议偶尔人工抽查一两个垂直媒体作为 backup
-- ⚠️ **汽车垂直媒体仍是盲区**:RSSHub 没有汽车之家 / 第一电动 / 盖世汽车 / 懂车帝 / 车东西 的路由,这几家目前只能靠 Track B 搜索召回,是已知最薄弱的一环
+- ⚠️ **汽车垂直媒体仍是盲区**:RSSHub 没有汽车之家 / 第一电动 / 盖世汽车 / 懂车帝 / 车东西 的路由,这几家目前只能靠 Track A 搜索召回,是已知最薄弱的一环
 - 如果发现某次明显漏查,告诉 Claude 调整 competitors.md 或启用 `archive/legacy-fetch/sources.md` 做应急补漏
 
 ---
@@ -181,7 +181,7 @@ robotaxi-news/
 │   ├── python_rss_fetch.py      # 主流程 Python 召回脚本(读取 competitors.md 产出结构化 JSON + health 健康分级)
 │   ├── roll_daily_archive.py    # 定期:把 daily.json 的旧日期滚动进归档(带条目守恒校验)
 │   ├── compress_weekly_images.py # 定期:压缩周报内联图片(PNG→WebP,幂等)
-│   └── track_tx_av_registrations.py # Phase 6:德州 DMV 车队登记追踪
+│   └── track_tx_av_registrations.py # Phase 5:德州 DMV 车队登记追踪
 ├── archive/
 │   ├── claude_structured_summary.py # 已归档:旧的 API 调用总结脚本(已由 Claude 直接总结替代)
 │   └── legacy-fetch/            # 已下线的旧抓取方案归档
@@ -190,7 +190,7 @@ robotaxi-news/
 ├── data/
 │   ├── daily/                   # 每日抓取产物,文件名 YYYY-MM-DD.md
 │   ├── uber_ceo_interviews.json # Phase 4 去重台账(报过的访谈,避免重复提醒)
-│   ├── tx_av_registrations.json # Phase 6 德州车队登记历史快照
+│   ├── tx_av_registrations.json # Phase 5 德州车队登记历史快照
 │   └── reports/                 # 周报 HTML(YYYY-Wxx.html)+ JSON 副产物(YYYY-Wxx.json)
 └── docs/                        # GitHub Pages 网站根目录(固定用 /docs,GitHub 原生支持)
     ├── index.html               # 单文件网页(Tailwind CDN + 原生 JS)
