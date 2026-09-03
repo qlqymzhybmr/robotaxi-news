@@ -12,8 +12,9 @@
 VIN，避免文件随天数线性膨胀。
 
 用法：
-    python scripts/track_tx_av_registrations.py            # 抓取、比对、写入
+    python scripts/track_tx_av_registrations.py            # 每日：抓取、比对、写入
     python scripts/track_tx_av_registrations.py --no-save  # 只看，不写
+    python scripts/track_tx_av_registrations.py --discover # 每季度：普查有无新运营方
 """
 import argparse
 import json
@@ -54,6 +55,18 @@ COMPANIES = {
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 
+SEARCH = "https://txmccs.txdmv.gov/api/TruckStop/companies"
+
+# --discover 用的检索词。新公司拿到 AV 授权不会有任何通知，只能靠定期普查发现。
+# 覆盖已知玩家 + 通用词（robotics / autonomous / driverless 等）以捞出没听过的。
+DISCOVERY_TERMS = [
+    "waymo", "zoox", "avride", "nuro", "aurora", "motional", "cruise",
+    "may mobility", "kodiak", "gatik", "torc", "waabi", "einride", "plus",
+    "tesla", "uber", "lyft", "pony", "weride", "apollo", "bot auto",
+    "stack av", "applied intuition", "wayve", "pronto", "outrider",
+    "robotics", "autonomous", "driverless", "self-driving", "robotaxi",
+]
+
 
 def fetch(company_id: str) -> list[dict]:
     req = urllib.request.Request(
@@ -63,6 +76,67 @@ def fetch(company_id: str) -> list[dict]:
     with urllib.request.urlopen(req, timeout=30,
                                 context=ssl.create_default_context()) as r:
         return json.loads(r.read().decode("utf-8")).get("vehicles", [])
+
+
+def discover() -> int:
+    """普查德州所有登记了自动驾驶车辆的运营方，报出 COMPANIES 里还没有的。
+
+    两个接口上的坑（踩过，别再踩）：
+      1. 搜索**必须同时带 searchType**，只给 searchValue 会一律返回 0 条，
+         连确实存在的公司也查不到，看起来像「德州没有这家」。
+      2. 车辆端点对非 AV 公司返回**空数组而不是 404**，所以判据只能是
+         「车辆数 > 0」，不能靠 HTTP 状态码。
+    """
+    import time
+    import urllib.parse
+
+    known_ids = set(COMPANIES.values())
+    seen: set[str] = set()
+    new_hits: list[tuple[str, str, int, dict]] = []
+
+    print(f"普查 {len(DISCOVERY_TERMS)} 个检索词…\n")
+    for term in DISCOVERY_TERMS:
+        url = (f"{SEARCH}?searchValue={urllib.parse.quote(term)}"
+               f"&searchType=company_name")
+        try:
+            req = urllib.request.Request(
+                url, headers={"User-Agent": UA, "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=25,
+                                        context=ssl.create_default_context()) as r:
+                results = json.loads(r.read().decode("utf-8")).get("results", [])
+        except Exception as exc:
+            print(f"  ! 检索「{term}」失败：{type(exc).__name__}")
+            continue
+
+        for c in results:
+            bid, nm = c.get("businessEntityId"), c.get("companyName", "")
+            if not bid or bid in seen:
+                continue
+            seen.add(bid)
+            try:
+                vs = fetch(bid)
+            except Exception:
+                continue
+            if vs and bid not in known_ids:
+                by = dict(Counter(v.get("model", "?") for v in vs))
+                new_hits.append((nm, bid, len(vs), by))
+                print(f"  🆕 {nm[:50]:52} {len(vs):>5} 辆  {by}")
+            time.sleep(0.1)
+        time.sleep(0.15)
+
+    print()
+    print("=" * 66)
+    print(f"扫描 {len(seen)} 家公司；已在追踪 {len(COMPANIES)} 家；"
+          f"**新发现 {len(new_hits)} 家**")
+    print("=" * 66)
+    if not new_hits:
+        print("  没有新运营方，COMPANIES 无需改动。")
+        return 0
+    print("\n把下面几行加进脚本顶部的 COMPANIES 即可开始追踪：\n")
+    for nm, bid, n, _ in sorted(new_hits, key=lambda x: -x[2]):
+        short = nm.split(",")[0].strip()[:18]
+        print(f'    "{short}":{" " * max(1, 18 - len(short))}"{bid}",   # {n} 辆')
+    return 0
 
 
 def load_store() -> dict:
@@ -79,8 +153,13 @@ def load_store() -> dict:
 def main() -> int:
     ap = argparse.ArgumentParser(description="追踪德州 DMV 自动驾驶车辆登记数")
     ap.add_argument("--no-save", action="store_true", help="只显示，不写入")
+    ap.add_argument("--discover", action="store_true",
+                    help="普查有无新的 AV 运营方（约每季度跑一次）")
     ap.add_argument("--date", default=datetime.now(CN_TZ).strftime("%Y-%m-%d"))
     args = ap.parse_args()
+
+    if args.discover:
+        return discover()
 
     store = load_store()
     summary = []      # (公司, 总数, 净变化 or None) 供末尾汇总

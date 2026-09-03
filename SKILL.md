@@ -142,6 +142,7 @@ python scripts/track_tx_av_registrations.py
 | 压缩周报图片 | 贴过新图之后 | `python scripts/compress_weekly_images.py --apply` |
 | 核查 local_media.json | 每季度**兜底**（日常靠上面的强制触发，这里只查旧站点是否失效） | 手动 |
 | 复查静默源 | Phase 5 连续 2 天报同一个源 | 手动打开该 feed URL 确认 |
+| **普查新增 AV 运营方** | 每季度 | `python scripts/track_tx_av_registrations.py --discover` |
 
 两个脚本都**默认只预览、加 `--apply` 才写入**,且都是幂等的,重复跑安全。
 
