@@ -260,16 +260,16 @@
       {
         "id": "2026-09-03-018",
         "date": "2026-09-03",
-        "company": "Tesla",
-        "company_slug": "tesla",
+        "company": "行业",
+        "company_slug": "industry",
         "group": "国外",
         "sub_group": "国外 L4",
-        "title": "德州 DMV 登记数据：Robotaxi 车队达 420 辆，其中 Cybercab 45 辆",
-        "summary_html": "<p>据德州 TxMCCS 自动驾驶车辆登记系统（<b>Tesla Robotaxi, LLC</b>，授权号 AV8313426653583，授权日期 <b>2026-05-15</b>），截至今日登记在册车辆共 <b>420 辆</b>：<b>Model Y 375 辆</b>、<b>Cybercab 45 辆</b>，全部为 2026 款。德州要求自动驾驶运营方<b>逐辆登记</b>（含 VIN），因此这是目前<b>唯一公开、逐车、官方</b>的 Tesla Robotaxi 车队规模数据——媒体极少报道车队数量变化。<b>Cybercab 已有 45 辆在册</b>，与本周四奥斯汀发布活动的时点吻合。本条为首次建立基线，自明日起每日追踪增减。参考：@SawyerMerritt 9月2日称 Tesla「刚新增 106 辆 Model Y 到 Robotaxi 车队」，可与本数据源交叉验证。</p>",
+        "title": "德州 DMV 全量普查：12 家自动驾驶运营方登记在册 2,111 辆，Waymo 以 988 辆居首",
+        "summary_html": "<p>德州要求自动驾驶运营方在 TxMCCS 系统<b>逐辆登记</b>车辆（含 VIN），这是目前<b>唯一公开、逐车、官方</b>的各家车队规模数据，且<b>可横向对比</b>。今日全量普查：<b>Waymo 988</b>（I-PACE 767 / RT 221）、<b>Tesla Robotaxi 420</b>（Model Y 375 / Cybercab 45）、<b>Avride 344</b>（Ioniq 5）、Aurora 91、Gatik AI 64、Nuro 47、<b>Zoox 44</b>（Highlander 39 / Zoox 5）、Kodiak 33、Torc 32、May Mobility 22、Waabi 13、Bot Auto 13，<b>合计 2,111 辆</b>。<b>三点值得注意</b>：其一，Waymo 车队是 Tesla 的 <b>2.35 倍</b>，且其中 <b>221 辆是极氪 RT</b>——与昨日 Axios「极氪撞上对华管制」形成直接呼应，<b>管制影响的是已成规模的存量</b>。其二，<b>专用车型占比是路线成熟度的直接读数</b>：Waymo RT 占 22%、Tesla Cybercab 占 11%、Zoox 自研车占 11%，其余均为改装量产车；<b>Cybercab 45 辆已在册</b>，与本周四奥斯汀发布活动时点吻合。其三，<b>Avride 以 344 辆排名第三</b>，规模是 Zoox 的近 8 倍但媒体关注度极低——这正是本数据源的价值：<b>登记数据不受媒体报道偏好影响</b>。货运赛道六家合计 246 辆，车型全为重卡，与载客赛道完全分离。本条为首次建立基线，自明日起每日追踪增减。</p>",
         "source_name": "Texas DMV (TxMCCS)",
-        "source_url": "https://txmccs.txdmv.gov/truckstop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles",
+        "source_url": "https://txmccs.txdmv.gov/truckstop",
         "published_at": "2026-09-03",
-        "rating": 2,
+        "rating": 3,
         "lang": "zh"
       }
     ]

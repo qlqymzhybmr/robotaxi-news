@@ -595,13 +595,33 @@ python scripts/track_tx_av_registrations.py
 
 ### 这是什么
 
-德州要求自动驾驶运营方在 TxMCCS 系统**逐辆登记**车辆。这是目前**唯一公开、逐车、官方**的 Tesla Robotaxi 车队规模数据源——媒体几乎不报道车队数量变化，但它是判断扩张节奏最直接的指标。
+德州要求自动驾驶运营方在 TxMCCS 系统**逐辆登记**车辆（含 VIN）。这是目前**唯一公开、逐车、官方**的各家车队规模数据源——媒体几乎不报道车队数量变化，但它是判断扩张节奏最直接的指标，而且**可以横向对比各家**。
 
 数据源（页面是 JS 渲染的，脚本直接打底层 API，无需认证）：
-- 页面：`https://txmccs.txdmv.gov/truckstop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles`
-- API：`https://txmccs.txdmv.gov/api/TruckStop/companies/<id>/automated-motor-vehicles`
+- 车辆：`https://txmccs.txdmv.gov/api/TruckStop/companies/<id>/automated-motor-vehicles`
+- 找新公司：`https://txmccs.txdmv.gov/api/TruckStop/companies?searchValue=<名字>&searchType=company_name`，取 `businessEntityId` 填进脚本的 `COMPANIES`
+- ⚠️ 非 AV 公司该端点返回**空数组而不是 404**，所以判据是「车辆数 > 0」
 
-**基线（2026-09-03）**：Tesla Robotaxi, LLC 共 **420 辆** = Model Y **375** + Cybercab **45**，授权号 AV8313426653583，授权日期 2026-05-15。
+**基线（2026-09-03，共 12 家 / 2,111 辆）**：
+
+| 公司 | 总数 | 车型分布 |
+|---|---:|---|
+| Waymo | 988 | I-PACE 767 / **RT 221** |
+| Tesla Robotaxi | 420 | Model Y 375 / **Cybercab 45** |
+| Avride | 344 | Ioniq 5 344 |
+| Aurora | 91 | 579 41 / LT62F 29 / VNL 21 |
+| Gatik AI | 64 | FTR 45 / FVR 19 |
+| Nuro | 47 | Gravity 26 / Prius 21 |
+| Zoox | 44 | Highlander 39 / **Zoox 5** |
+| Kodiak Robotics | 33 | T680 24 / 567 9 |
+| Torc Robotics | 32 | RA Cascadia 28 / Cascadia 4 |
+| May Mobility | 22 | Sienna 22 |
+| Waabi Logistics | 13 | 579 10 / VNL 3 |
+| Bot Auto TX | 13 | Cascadia 13 |
+
+注意 Waymo 的 **RT**、Zoox 的 **Zoox**、Tesla 的 **Cybercab** 都是各自的**专用车型**，与改装量产车（I-PACE / Highlander / Model Y）分开计数——**专用车型占比的变化是路线成熟度的直接信号**。
+
+脚本末尾会打印一张按规模排序的汇总表（含当日净变化），直接照它播报即可。
 
 ### 播报规则
 
@@ -609,7 +629,7 @@ python scripts/track_tx_av_registrations.py
 |---|---|
 | 有增减 | **写进 daily 文件**，作为独立条目（与 Phase 4/5 不同，这是**真实新闻**）。评级按变化幅度：单日 +50 辆以上或**新车型首次出现** → ⭐⭐⭐；一般增减 → ⭐⭐ |
 | 无变化 | 不写 daily，结束动作里一行带过 |
-| 抓取失败 | 脚本会显式报错并**拒绝写入**（抓取失败 ≠ 车队清零）。在结束动作里提示，不要当成 0 辆 |
+| 抓取失败 | 脚本会显式报错并**拒绝写入那一家**（抓取失败 ≠ 车队清零），其余公司照常继续。在结束动作里提示，不要当成 0 辆 |
 
 **为什么这条要写进 daily 而 Phase 4/5 不写**：车队数量变化是当日发生的、可核实的行业事实，属于新闻；而访谈提醒和源健康告警是流程元信息。
 
@@ -617,7 +637,8 @@ python scripts/track_tx_av_registrations.py
 
 - 脚本**幂等**：同一天重复跑不会重复计数，但会在 history 里追加一条
 - 只保留最新一份完整 VIN 集合用于比对，历史里只记数量与当日增减 VIN，文件不会随天数线性膨胀
-- 德州若出现其他 AV 运营方（Waymo、Zoox 等），在脚本的 `COMPANIES` 字典里按同样格式追加公司 UUID 即可
+- 出现新 AV 运营方时，用上面的 search 接口拿 `businessEntityId` 追加进 `COMPANIES` 即可
+- **建议每季度重跑一次全量普查**，因为新公司拿到 AV 授权不会有任何通知
 
 ---
 

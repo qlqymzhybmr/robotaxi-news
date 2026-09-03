@@ -1,9 +1,9 @@
-"""追踪德州 DMV 登记的自动驾驶车队规模（默认 Tesla Robotaxi, LLC）。
+"""追踪德州 DMV 登记的自动驾驶车队规模（12 家运营方）。
 
 德州要求自动驾驶运营方在 TxMCCS 逐辆登记车辆，页面会列出每辆车的 VIN / 年份 /
-车型。这是**唯一公开、逐车、官方**的 Tesla Robotaxi 车队规模数据源——媒体极少
-报道车队数量变化，但它是判断扩张节奏最直接的指标（比如 Cybercab 首次出现、
-或某天一次性新增几十辆）。
+车型。这是**唯一公开、逐车、官方**的各家车队规模数据源——媒体极少报道车队数量
+变化，但它是判断扩张节奏最直接的指标（比如某车型首次出现、或某天一次性新增几十辆），
+而且**可以横向对比各家**。
 
 页面是 JS 渲染的，但底层 API 无需认证且一次返回全部车辆，所以直接打 API：
     https://txmccs.txdmv.gov/api/TruckStop/companies/<id>/automated-motor-vehicles
@@ -29,9 +29,26 @@ CN_TZ = timezone(timedelta(hours=8))
 STORE = Path("data/tx_av_registrations.json")
 API = "https://txmccs.txdmv.gov/api/TruckStop/companies/{cid}/automated-motor-vehicles"
 
-# 目前只追踪 Tesla；德州还有其他 AV 运营方时按同样格式追加即可
+# 2026-09-03 全量普查结果：用 searchType=company_name 搜遍已知 AV 玩家，
+# 再逐个打 automated-motor-vehicles 端点，筛出真正有车辆登记的实体。
+# 非 AV 公司该端点返回空数组（不是 404），所以判据是「车辆数 > 0」。
+#
+# 想加新公司：
+#   curl 'https://txmccs.txdmv.gov/api/TruckStop/companies?searchValue=<名字>&searchType=company_name'
+# 取 businessEntityId 填进来即可。
 COMPANIES = {
-    "Tesla Robotaxi, LLC": "81edcff1-8a6e-4ed0-be1f-60668515e223",
+    "Waymo":            "07ebbc43-ae5b-42ca-a712-d9d5ce5b3516",
+    "Tesla Robotaxi":   "81edcff1-8a6e-4ed0-be1f-60668515e223",
+    "Avride":           "fd52bbf8-a94f-409e-a821-28dacd4d8bdd",
+    "Aurora":           "e2ec8d3a-51c0-47fd-8172-49b1ca545ad3",
+    "Gatik AI":         "c7252bd3-9b9a-4dfe-98e2-db205010f93c",
+    "Nuro":             "a073be41-e321-4074-9515-01279a9f36d7",
+    "Zoox":             "b5672c35-0996-4364-8ac7-080ea0333d2c",
+    "Kodiak Robotics":  "51e635a0-1649-419d-86b4-76a3107e3240",
+    "Torc Robotics":    "fcf5ffd0-e90d-4aa6-9afa-6c002c2cf511",
+    "May Mobility":     "2fb8d9e8-5add-4c1e-b746-58494b3661d8",
+    "Waabi Logistics":  "43448d49-5ea9-4769-afcb-ffc5ca3f3cbb",
+    "Bot Auto TX":      "a984e056-d778-416b-af45-03188239089c",
 }
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -66,16 +83,19 @@ def main() -> int:
     args = ap.parse_args()
 
     store = load_store()
-    changed_any = False
+    summary = []      # (公司, 总数, 净变化 or None) 供末尾汇总
+    failures = []
 
     for name, cid in COMPANIES.items():
         try:
             vehicles = fetch(cid)
         except Exception as exc:
-            # 抓不到要显式报错，不能静默当成 0 辆——那会被误读成车队清零
+            # 抓不到要显式报错，不能静默当成 0 辆——那会被误读成车队清零。
+            # 单家失败不应中断其余 11 家，所以记下来继续。
             print(f"❌ {name}: 抓取失败 {type(exc).__name__}: {exc}")
-            print("   （不写入任何数据。抓取失败 ≠ 车队为空）")
-            return 1
+            print("   （该公司本次不写入。抓取失败 ≠ 车队为空）\n")
+            failures.append(name)
+            continue
 
         by_model = dict(Counter(v.get("model", "?") for v in vehicles))
         vins = sorted(v["vin"] for v in vehicles if v.get("vin"))
@@ -117,8 +137,9 @@ def main() -> int:
                     if m not in (prev.get("by_model") or {}):
                         print(f"    ⭐ 新车型首次出现：{m}")
 
-        if added_vins or removed_vins or prev is None:
-            changed_any = True
+        summary.append((name, len(vehicles),
+                        None if prev is None else len(vehicles) - prev["total"],
+                        by_model))
 
         if not args.no_save:
             rec["history"].append({
@@ -129,6 +150,27 @@ def main() -> int:
             rec["latest"] = {"date": args.date, "total": len(vehicles),
                              "by_model": by_model, "vins": vins}
 
+    # 汇总表：按车队规模排序，一眼看清各家体量与当日变化
+    print("=" * 66)
+    print(f"汇总  {args.date}")
+    print("=" * 66)
+    print(f"  {'公司':<18}{'总数':>7}  {'较昨日':>8}   车型分布")
+    changed = []
+    for name, total, delta, by_model in sorted(summary, key=lambda x: -x[1]):
+        d = "基线" if delta is None else (f"{delta:+d}" if delta else "—")
+        if delta:
+            changed.append((name, delta))
+        models = " / ".join(f"{m} {n}" for m, n in
+                            sorted(by_model.items(), key=lambda kv: -kv[1]))
+        print(f"  {name:<18}{total:>7}  {d:>8}   {models}")
+    print(f"  {'合计':<18}{sum(s[1] for s in summary):>7}")
+
+    if changed:
+        print("\n  ⚠️ 今日有变化：" +
+              "，".join(f"{n} {d:+d}" for n, d in changed))
+    if failures:
+        print(f"\n  ❌ 抓取失败（未写入）：{', '.join(failures)}")
+
     if not args.no_save:
         STORE.parent.mkdir(parents=True, exist_ok=True)
         STORE.write_text(json.dumps(store, ensure_ascii=False, indent=2) + "\n",
@@ -136,7 +178,7 @@ def main() -> int:
         print(f"\n已写入 {STORE}")
     else:
         print("\n（--no-save，未写入）")
-    return 0
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":
