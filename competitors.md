@@ -230,6 +230,19 @@
      已改挂到 data/local_media.json 的 Waymo/Denver 下——Track A 走 Google News
      的 site: 查询，不直接访问对方服务器，可绕开封禁，实测仍能命中。 -->
 
+### X 个人博主（Tesla 追踪，via 自部署 RSSHub）
+
+> **为什么放在过滤区而不是上面的「X（Twitter）RSS 订阅」**：那一区是公司官方账号，条条相关、不过滤；
+> 个人博主会混发生日祝福、SpaceX、车主俱乐部活动等无关内容，必须过主题关键词。
+> 实测（2026-09-03）：@XanderSky 15 条留 8、@SawyerMerritt 13 条留 8，
+> 车队数量、Cybercab 目击、Robotaxi 实测这类硬信号全部保留，噪音正确丢弃。
+>
+> **价值**：这两位常常比媒体更早发出一手信息。例如 @SawyerMerritt 的
+> 「Tesla 刚给 Robotaxi 车队新增 106 辆 Model Y」——**车队数量变化是媒体很少报道但对判断扩张节奏最直接的指标**。
+
+- X/@XanderSky | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/XanderSky
+- X/@SawyerMerritt | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/SawyerMerritt
+
 ### 国内（via 自部署 RSSHub）
 
 - 36氪 快讯 | china | ⭐ | https://rsshub-production-8ec4.up.railway.app/36kr/newsflashes

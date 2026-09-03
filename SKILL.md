@@ -30,7 +30,7 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 | "把这条加进 examples" | 直接编辑 `important-examples.md`（仅在发现评级明显偏差时手动补充） | 按需 |
 
 **默认执行策略(重要)**:
-- 说"跑今日新闻"时,skill **默认自动跑完 5 个 Phase**:
+- 说"跑今日新闻"时,skill **默认自动跑完 6 个 Phase**:
 
 | Phase | 做什么 | 产出去哪 |
 |------|------|------|
@@ -39,6 +39,7 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 | 3 | 自动发布**全部条目**（不按 rating 过滤） | `docs/data/daily.json` |
 | 4 | **Uber CEO 访谈查询** | **不写文件,单独提醒用户**(见下) |
 | 5 | **抓取源健康告警** | **不写文件,单独提醒用户**(见下) |
+| 6 | **德州 DMV 车队登记** | 有增减则**写进 daily**（它是真新闻） |
 
 - Phase 1、2 的产物**合并写入同一份文件** `data/daily/YYYY-MM-DD.md`（包含 "## 国外 L4" 和 "## 国内 L4" 等 section）,体感是一次跑完、一份文件
 - Phase 4、5 **刻意不写进 daily 文件**:它们不是当日新闻,也不进周报,混进去只会干扰阅读
@@ -111,6 +112,18 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
      取值:DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value
 ```
 
+### 每天自动跟的第三件事：德州 DMV 车队登记（Phase 6）
+
+德州要求自动驾驶运营方在 TxMCCS **逐辆登记**车辆。这是目前**唯一公开、逐车、官方**的 Tesla Robotaxi 车队规模数据源——媒体几乎不报道车队数量变化，但它是判断扩张节奏最直接的指标。
+
+```bash
+python scripts/track_tx_av_registrations.py
+```
+
+**基线（2026-09-03）**：Tesla Robotaxi, LLC 共 **420 辆** = Model Y **375** + Cybercab **45**。
+
+与 Phase 4/5 不同，**有增减就写进 daily 文件**（它是当日发生、可核实的行业事实，属于新闻）；新车型首次出现或单日 +50 辆以上评 ⭐⭐⭐。抓取失败时脚本会**拒绝写入**（失败 ≠ 车队清零）。
+
 ### 🔁 抓到「地域动作」必须当场刷新本地媒体清单
 
 **这是每日流程里的强制检查。** 只要新闻里出现**新开城 / 扩区 / 转入商业运营 / 开始路测 / 开始测绘**,就要立刻核对 `data/local_media.json` 里该公司在该城市是否已有条目,没有就补上并**当场验证能抓到东西**。
@@ -166,7 +179,8 @@ robotaxi-news/
 ├── scripts/
 │   ├── python_rss_fetch.py      # 主流程 Python 召回脚本(读取 competitors.md 产出结构化 JSON + health 健康分级)
 │   ├── roll_daily_archive.py    # 定期:把 daily.json 的旧日期滚动进归档(带条目守恒校验)
-│   └── compress_weekly_images.py # 定期:压缩周报内联图片(PNG→WebP,幂等)
+│   ├── compress_weekly_images.py # 定期:压缩周报内联图片(PNG→WebP,幂等)
+│   └── track_tx_av_registrations.py # Phase 6:德州 DMV 车队登记追踪
 ├── archive/
 │   ├── claude_structured_summary.py # 已归档:旧的 API 调用总结脚本(已由 Claude 直接总结替代)
 │   └── legacy-fetch/            # 已下线的旧抓取方案归档
@@ -175,6 +189,7 @@ robotaxi-news/
 ├── data/
 │   ├── daily/                   # 每日抓取产物,文件名 YYYY-MM-DD.md
 │   ├── uber_ceo_interviews.json # Phase 4 去重台账(报过的访谈,避免重复提醒)
+│   ├── tx_av_registrations.json # Phase 6 德州车队登记历史快照
 │   └── reports/                 # 周报 HTML(YYYY-Wxx.html)+ JSON 副产物(YYYY-Wxx.json)
 └── docs/                        # GitHub Pages 网站根目录(固定用 /docs,GitHub 原生支持)
     ├── index.html               # 单文件网页(Tailwind CDN + 原生 JS)
@@ -194,7 +209,7 @@ robotaxi-news/
 **包括周六和周日**。周末不跑的话,周一补三天工作量会很大,所以养成每天跑一次的习惯。
 
 1. 打开 Claude Code,说:"跑今日 robotaxi 新闻"
-2. Claude 会自动跑完 5 个 Phase,耗时约 20-30 分钟。**跑完就结束了,不需要你做任何事**
+2. Claude 会自动跑完 6 个 Phase,耗时约 20-30 分钟。**跑完就结束了,不需要你做任何事**
 3. (可选)看一眼 `data/daily/YYYY-MM-DD.md`,觉得哪条措辞不准或想补事实,可以**直接改文字**
 4. (可选)网页上打开「周报选稿」tab,为本周周报挑条目——这一步也可以攒到周一再做
 

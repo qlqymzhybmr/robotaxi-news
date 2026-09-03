@@ -585,6 +585,42 @@ Phase 4 完成后执行。目的：**抓取源静默失效是最危险的故障*
 
 ---
 
+## Phase 6：德州 DMV 车队登记追踪（自动执行）
+
+Phase 5 完成后执行一条命令即可：
+
+```bash
+python scripts/track_tx_av_registrations.py
+```
+
+### 这是什么
+
+德州要求自动驾驶运营方在 TxMCCS 系统**逐辆登记**车辆。这是目前**唯一公开、逐车、官方**的 Tesla Robotaxi 车队规模数据源——媒体几乎不报道车队数量变化，但它是判断扩张节奏最直接的指标。
+
+数据源（页面是 JS 渲染的，脚本直接打底层 API，无需认证）：
+- 页面：`https://txmccs.txdmv.gov/truckstop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles`
+- API：`https://txmccs.txdmv.gov/api/TruckStop/companies/<id>/automated-motor-vehicles`
+
+**基线（2026-09-03）**：Tesla Robotaxi, LLC 共 **420 辆** = Model Y **375** + Cybercab **45**，授权号 AV8313426653583，授权日期 2026-05-15。
+
+### 播报规则
+
+| 情况 | 怎么做 |
+|---|---|
+| 有增减 | **写进 daily 文件**，作为独立条目（与 Phase 4/5 不同，这是**真实新闻**）。评级按变化幅度：单日 +50 辆以上或**新车型首次出现** → ⭐⭐⭐；一般增减 → ⭐⭐ |
+| 无变化 | 不写 daily，结束动作里一行带过 |
+| 抓取失败 | 脚本会显式报错并**拒绝写入**（抓取失败 ≠ 车队清零）。在结束动作里提示，不要当成 0 辆 |
+
+**为什么这条要写进 daily 而 Phase 4/5 不写**：车队数量变化是当日发生的、可核实的行业事实，属于新闻；而访谈提醒和源健康告警是流程元信息。
+
+### 注意
+
+- 脚本**幂等**：同一天重复跑不会重复计数，但会在 history 里追加一条
+- 只保留最新一份完整 VIN 集合用于比对，历史里只记数量与当日增减 VIN，文件不会随天数线性膨胀
+- 德州若出现其他 AV 运营方（Waymo、Zoox 等），在脚本的 `COMPANIES` 字典里按同样格式追加公司 UUID 即可
+
+---
+
 ## 结束动作
 
 Phase 1 ~ Phase 5 全部完成后,统一告诉用户。
@@ -598,6 +634,7 @@ Phase 1 ~ Phase 5 全部完成后,统一告诉用户。
 - 共 X 条新闻(⭐⭐⭐ x 条 / ⭐⭐ x 条 / ⭐ x 条),写入 data/daily/YYYY-MM-DD.md
 - 自动发布:X 条已写入 docs/data/daily.json
 - 抓取源健康:正常（N 个源）/ N 个警告,详见上方
+- 德州车队登记:共 N 辆（Model Y x / Cybercab y），较昨日 +z / 无变化
 - Uber CEO 访谈:无新内容 / 见下方单独区块
 
 发布网页请运行:git add -A && git commit -m "daily YYYY-MM-DD" && git push
