@@ -68,14 +68,44 @@ DISCOVERY_TERMS = [
 ]
 
 
-def fetch(company_id: str) -> list[dict]:
+PAGE = 100          # API 硬上限：limit 必须在 1..100
+
+
+def _get(url: str) -> dict:
     req = urllib.request.Request(
-        API.format(cid=company_id),
-        headers={"User-Agent": UA, "Accept": "application/json"},
-    )
+        url, headers={"User-Agent": UA, "Accept": "application/json"})
     with urllib.request.urlopen(req, timeout=30,
                                 context=ssl.create_default_context()) as r:
-        return json.loads(r.read().decode("utf-8")).get("vehicles", [])
+        return json.loads(r.read().decode("utf-8"))
+
+
+def fetch(company_id: str) -> list[dict]:
+    """翻页取全某家公司的车辆列表。
+
+    ⚠️ 2026-09-04 该 API 加了分页：不带参数时**只返回 20 条**，但 `total` 字段
+    仍是真实总数。当天脚本因此把每家都读成 20 辆，报出 "Waymo -968" 这种荒谬的
+    单日暴跌。分页参数是 `?limit=<=100&offset=N`（skip / page / pageNumber
+    都无效，会静默返回第一页）。
+
+    因为这种截断**不会报错**，函数最后拿 `total` 做校验：取到的条数对不上就抛，
+    宁可当天不写，也不能把截断当成车队缩减写进历史。
+    """
+    base = API.format(cid=company_id)
+    first = _get(f"{base}?limit={PAGE}&offset=0")
+    total = first.get("total")
+    out = list(first.get("vehicles", []))
+
+    if isinstance(total, int):
+        while len(out) < total:
+            page = _get(f"{base}?limit={PAGE}&offset={len(out)}")
+            got = page.get("vehicles", [])
+            if not got:                     # 防御：偏移越界时别死循环
+                break
+            out.extend(got)
+        if len(out) != total:
+            raise RuntimeError(
+                f"分页取数不完整：API 报 total={total}，实际只取到 {len(out)} 条")
+    return out
 
 
 def discover() -> int:
