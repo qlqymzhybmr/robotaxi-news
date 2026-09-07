@@ -31,11 +31,11 @@
               },
               {
                 "label": "d",
-                "content_html": "<b>车队数量</b>：截止目前，Tesla在 Texas 自动驾驶车辆<b>注册数量达到约420辆</b>，其中 <b>Cybercab 45辆</b>。9月5日，群众在迈阿密国际机场附近观察到 35 辆 Cybercab，曼哈顿亦有目击，但暂未体现在任何州的运营登记中。"
+                "content_html": "<b>车队数量</b>：截止目前，Tesla在 Texas 自动驾驶车辆<b>注册数量达到约420辆</b>，其中 <b>Cybercab 45辆</b>。9月5日，有目击者在迈阿密国际机场附近观察到 35 辆 Cybercab，曼哈顿亦有目击，但暂未体现在任何州的运营登记中。"
               },
               {
                 "label": "e",
-                "content_html": "<div><b>监管风险</b>：Tesla目前依据已取得的Texas州级商业自动驾驶运营授权与<b>供应商自行认证 Cybercab 符合联邦机动车安全标准</b>进行运营，未如Zoox一样向联邦政府NHTSA申请机动车安全标准豁免（无刹车、油门踏板、无后视镜豁免）；9月4日，NHTSA 正式开启 Audit Query AQ26002，调查 Tesla 自我认证所提供的技术数据与流程，监管风险短期可能成为 Cybercab商业运营扩张的主要约束。</div>",
+                "content_html": "<div><b>监管风险</b>：Tesla目前依据已取得的Texas州级商业自动驾驶运营授权与<b>自行认证 Cybercab 符合联邦机动车安全标准</b>进行运营，未如Zoox一样向联邦政府NHTSA申请机动车安全标准豁免（无刹车、制动踏板及无后视镜豁免）；9月4日，NHTSA 正式开启 Audit Query AQ26002，调查 Tesla 自我认证所提供的技术数据与流程，监管风险短期可能成为 Cybercab商业运营扩张的主要约束。</div>",
                 "daily_ids": [
                   "2026-09-04-012",
                   "2026-09-05-001",
@@ -44,14 +44,14 @@
               },
               {
                 "label": "f",
-                "content_html": "<b>未来进展</b>：发布会前 Tesla 上线 Robotaxi Network 合作意向征集页面，允许<b>企业登记购买单辆或车队规模 Cybercab 用于商业运营</b>，核心商业条款尚未披露（如车辆售价、平台抽成比例等）；<b>9月4日</b>，Tesla 宣布 Cybercab 将于 9 月中旬起在北京、上海等多个城市陆续展出。"
+                "content_html": "<b>未来进展</b>：发布会前 Tesla 上线 Robotaxi Network 合作意向征集页面，面向企业征集<b>购买 Cybercab 车队</b>及建设 Mobility Hub/基础设施的合作意向，核心商业条款尚未披露（如车辆售价、平台抽成比例等）；<b>9月4日</b>，Tesla 宣布 Cybercab 将于 9 月中旬起在北京、上海等多个城市陆续展出。"
               }
             ]
           },
           {
             "company": "Tesla",
             "company_slug": "tesla",
-            "headline_html": "<b>Tesla：Cybercab 奥斯汀发布并载客，上线当天遭 NHTSA 调查；</b>FSD v14.3.9 新增自动碰撞规避安全功能；法国交通部启动对于Tesla FSD的技术评估",
+            "headline_html": "<b>Tesla：Cybercab 奥斯汀发布并载客运营，上线当天遭 NHTSA 调查；</b>FSD v14.3.9 新增自动碰撞规避安全功能；法国交通部启动对于Tesla FSD的技术评估",
             "sub_items": [
               {
                 "label": "a",
@@ -63,7 +63,7 @@
               },
               {
                 "label": "b",
-                "content_html": "<b>9月3日</b>，Reuters 报道法国交通部表示已开始对于两辆 Tesla 汽车<b>进行 FSD&nbsp;自动驾驶技术评估</b>，并与特斯拉进行相关技术调整磋商",
+                "content_html": "<b>9月3日</b>，Reuters 报道法国交通部表示已启动对于<b>Tesla</b>&nbsp;<b>FSD&nbsp;自动驾驶技术的评估</b>，并与特斯拉进行相关技术调整磋商。",
                 "daily_ids": [
                   "2026-09-04-003"
                 ]
@@ -73,7 +73,7 @@
           {
             "company": "Waymo",
             "company_slug": "waymo",
-            "headline_html": "<b>Waymo：</b>丹佛、圣地亚哥、坦帕同日开城；辛辛那提启动路网测绘；幼儿人行横道摔倒险遭撞击；参议院提案禁止进口中国生产汽车与配套软硬件；旧金山累计 8,300+ 张停车罚单",
+            "headline_html": "<b>Waymo：汽车创新联盟提案禁止进口中国生产汽车与配套软硬件；旧金山累计 8,300+ 张停车罚单；</b>丹佛、圣地亚哥、坦帕开始商业运营服务；辛辛那提启动路网测绘；幼儿人行横道摔倒险遭撞击",
             "sub_items": [
               {
                 "label": "a",
@@ -100,7 +100,7 @@
               },
               {
                 "label": "e",
-                "content_html": "<b>9月1日</b>，旧金山媒体报道一名幼儿在某人行横道摔倒，此时一辆 Waymo 向孩子方向行驶，其父亲狂奔向前将婴儿车挡在车头前，Waymo在举例幼儿 ~4米处停下。行人反馈 <b>Waymo 未检测到倒地幼儿</b>，Waymo则坚称车辆传感器<b>已识别到行人</b>，<b>为车辆主动制动</b>而并非婴儿车阻拦导致制动，事件结果尚未完全披露。"
+                "content_html": "<b>9月1日</b>，旧金山媒体报道旧金山一名幼儿在人行横道摔倒时，一辆 Waymo 正向其方向行驶；其父亲上前护住幼儿，并将婴儿车挡在车头前，车辆最终未发生碰撞。事后该父亲反馈 <b>Waymo 未检测到倒地幼儿</b>，Waymo则坚称车辆传感器<b>已识别到行人</b>，<b>为车辆主动制动</b>而并非婴儿车阻拦导致制动，事件结果尚未完全披露。"
               }
             ]
           },
@@ -137,7 +137,7 @@
           {
             "company": "Zoox",
             "company_slug": "zoox",
-            "headline_html": "<b>Zoox：失误驶入进行路段；</b><span style=\"font-size: 0.875rem;\">拉斯维加斯机场开启Robotaxi商业运营服务；宣布测试扩张将至休斯顿与圣地亚哥</span>",
+            "headline_html": "<b>Zoox：误驶入禁行路段；</b><span style=\"font-size: 0.875rem;\">拉斯维加斯机场开启Robotaxi商业运营服务；宣布测试扩张将至休斯顿与圣地亚哥</span>",
             "sub_items": [
               {
                 "label": "a",
@@ -172,7 +172,7 @@
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>9月5日</b>，媒体报道 Nuro 获得加州公共委员会（CPUC）颁发的<b>带安全员载客试点运营许可（Drivered Pilot Permit）</b>，先前其已拥有加州车辆管理局（DMV）颁发的无安全员测试许可。Nuro目前运营车辆<b>~100辆</b>，将计划优先于旧金山湾区部署无人驾驶服务<b>。</b>",
+                "content_html": "<b>9月5日</b>，媒体报道 Nuro 获得加州公共委员会（CPUC）颁发的<b>带安全员载客试点运营许可（Drivered Pilot Permit）</b>，先前其已拥有加州车辆管理局（DMV）颁发的无安全员测试许可。Nuro目前运营车辆<b>~100辆</b>，计划优先于旧金山湾区部署无人驾驶服务<b>。</b>",
                 "daily_ids": [
                   "2026-09-06-007"
                 ]
@@ -186,7 +186,7 @@
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>9月3日</b>，<b>May Mobility宣布26年将在日本首次于公共道路上进行自动驾驶 e-Palette 的道路测试与载客试运营服务</b>，e-Palette 为丰田纯电车型。此前May Mobility已在日本9个城市的封闭园区或限定路线进行测试与演示运营。",
+                "content_html": "<b>9月3日</b>，<b>May Mobility宣布26年将在日本首次于公共道路上进行自动驾驶 e-Palette 的道路测试与载客示范服务</b>，e-Palette 为丰田纯电车型。此前May Mobility已在日本9个城市的封闭园区或限定路线进行测试与演示运营。",
                 "daily_ids": [
                   "2026-09-04-008"
                 ]
@@ -215,7 +215,7 @@
         ]
       }
     ],
-    "edited_at": "2026-09-07T07:38:13.282Z"
+    "edited_at": "2026-09-07T07:50:57.515Z"
   },
   {
     "week_id": "2026-W36",
