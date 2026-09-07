@@ -201,11 +201,11 @@
           {
             "company": "May Mobility",
             "company_slug": "maymobility",
-            "headline_html": "<b>May Mobility：</b>联手 NTT，在日本首次于公共道路开放自动驾驶 e-Palette 载客",
+            "headline_html": "<b>May Mobility：26年计划</b>在日本进行自动驾驶车辆的公开道路测试与试运营",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>9月3日</b>，<b>May Mobility 与 NTT Mobility 宣布将在日本首次于公共道路上开放自动驾驶 e-Palette 的公众载客服务</b>。e-Palette 是丰田的纯电专用接驳平台车型。这是 May Mobility 首次在美国本土之外落地公共道路载客，此前日本多为封闭园区或限定路线试运营。",
+                "content_html": "<b>9月3日</b>，<b>May Mobility宣布26年将在日本首次于公共道路上进行自动驾驶 e-Palette 的道路测试与载客试运营服务</b>，e-Palette 为丰田纯电车型。此前May Mobility已在日本9个城市的封闭园区或限定路线进行测试与演示运营。",
                 "daily_ids": [
                   "2026-09-04-008"
                 ]
@@ -234,7 +234,7 @@
         ]
       }
     ],
-    "edited_at": "2026-09-07T05:16:27.307Z"
+    "edited_at": "2026-09-07T05:58:11.554Z"
   },
   {
     "week_id": "2026-W36",
