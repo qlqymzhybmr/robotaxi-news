@@ -1,5 +1,249 @@
 [
   {
+    "week_id": "2026-W37",
+    "date_range": "0901-0907",
+    "title": "（W36）无人驾驶行业0901-0907重要新闻",
+    "generated_at": "2026-09-07T21:30:00+08:00",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>Cybercab 奥斯汀发布并载客，累计无监督载客里程突破 100 万英里；上线当天遭 NHTSA 立案调查；票价约为 Model Y Robotaxi 的一半；9 月中旬起在北京、上海展出",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月3日</b>，Tesla 在<b>得州奥斯汀</b>举行 <b>Cybercab</b> 发布活动，宣布已突破 <b>100 万英里 Unsupervised（无监督）Robotaxi 载客里程</b>。车辆技术细节：<b>首款采用线控制动（brake-by-wire）、无制动液</b>的 Tesla 车型，搭载<b>下一代 Supermanifold V3 热管理系统</b>，驱动单元采用简化扁线绕组定子，生产端用<b>反应注射成型（RIM）工艺把喷漆周期从数小时压缩到数分钟</b>。发布会约 <b>400 人</b>，其中约一半是 Tesla 员工。Tesla 同步更新 Robotaxi App 支持 Cybercab 叫车，并开放<b>车队采购意向表单</b>，<b>现有 FSD 车主被排除在外</b>。此前 <b>9月1日</b>，首批 Cybercab 已加入现有 Robotaxi 车队，<b>德克萨斯完成首批注册</b>，<b>达拉斯服务区扩大 50%</b>，奥斯汀服务区同步扩展。",
+                "daily_ids": [
+                  "2026-09-04-001",
+                  "2026-09-01-005"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>9月4日</b>，<b>Cybercab 正式加入 Robotaxi 车队并采用更低票价</b>。实测一段 <b>15 分钟</b>行程<b>比同等 Uber 行程便宜 50% 以上</b>；社区实测显示其票价<b>约为 Model Y Robotaxi 的一半</b>。Tesla 同步把 Cybercab 加入其 <b>3D 超充站点地图</b>，并称 <b>Robotaxi 即将在达拉斯上路</b>。<b>9月5日</b>披露一项产品限制——<b>Cybercab 不支持 AC（交流）充电</b>，无法使用家用充电桩，只能依赖直流快充网络。⚠️ 当前低价是否包含补贴、能否覆盖单车成本，官方未披露。",
+                "daily_ids": [
+                  "2026-09-05-002",
+                  "2026-09-06-002"
+                ]
+              },
+              {
+                "label": "c",
+                "content_html": "<b>9月4日</b>，在 Cybercab 于奥斯汀正式载客的<b>同一天</b>，<b>NHTSA 对其展开正式调查</b>，距前一日 NHTSA“正在评估 Cybercab 推出情况”的表态仅隔一天。调查焦点已被本地媒体点明：Cybercab <b>没有刹车踏板、没有油门踏板、没有后视镜</b>，三项均为 <b>FMVSS</b> 明文要求，无法沿用常规合规路径，只能走豁免程序，而豁免需 NHTSA 批准。Reuters 标题为“<b>Musk 正在用 Cybercab 试探监管边界</b>”。<b>9月6日</b>，安全审计启动，KEYE、KVUE、cbs19 等跟进；社区分析指出<b>调查本身不构成停运令</b>，在豁免未获批也未被禁止的空档，服务可以继续。",
+                "daily_ids": [
+                  "2026-09-04-012",
+                  "2026-09-05-001",
+                  "2026-09-07-002"
+                ]
+              },
+              {
+                "label": "d",
+                "content_html": "<b>9月5日</b>，<b>特斯拉股价重挫近 6%，市值一夜蒸发近 6000 亿元人民币</b>，36氪同日刊出《<b>美监管机构调查特斯拉“赛博出租车”安全认证</b>》，调查针对的是 Cybercab 能否合法上路的<b>安全认证</b>资格，而非事后的事故调查。车辆分布方面，<b>9月5日</b>在<b>迈阿密国际机场附近观察到 35 辆 Cybercab</b>（9 月 3 日同一地点为 20+ 辆），<b>曼哈顿</b>亦有目击；但<b>德州 DMV 登记的 Cybercab 仍为 45 辆未变</b>，迈阿密与曼哈顿的车辆属跨州调运或展示用车，尚未体现在任何州的运营登记中。",
+                "daily_ids": [
+                  "2026-09-05-013",
+                  "2026-09-06-003"
+                ]
+              },
+              {
+                "label": "e",
+                "content_html": "<b>9月4日</b>，Tesla 宣布 <b>Cybercab 将于 9 月中旬起在北京、上海等多个城市陆续展出</b>，为这款<b>无方向盘、无踏板</b>车型的<b>中国首次亮相</b>；发布会同时披露<b>每公里成本 0.84 元人民币</b>。⚠️ 该数字口径（是否含折旧、保险、远程监控人力）官方未说明。<b>9月6日</b>，36氪报道 <b>Tesla Robotaxi 下月或实现全天候运营</b>（特斯拉官方未确认时间表）；Tesla 另称 Cybercab 已累计完成超 <b>16,000 个“人类生命周期当量”</b>的驾驶训练（⚠️ 该表述为营销口径，无标准定义）。",
+                "daily_ids": [
+                  "2026-09-04-011",
+                  "2026-09-06-011"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：</b>本周三起致死事故经自有数据确认辅助驾驶处于激活状态；FSD 新增自动碰撞规避，可在手动驾驶时接管；法国启动 FSD 测试",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月1日</b>，Electrek 披露一名 Tesla 驾驶员在高速公路上使用 <b>FSD/Autopilot</b> 时，车辆在行车道上停止后驾驶员身亡（<b>Mesa</b> 地区），<b>Tesla 确认事故发生时辅助驾驶系统处于激活状态</b>，为同一形态的<b>第二起</b>。<b>9月3日</b>，Electrek 再报<b>一辆 Tesla 在 Autopilot/FSD 激活状态下撞死一名摩托车手</b>，结论同样由 <b>Tesla 自有数据</b>证实。连同伊利诺伊一起，本周共 <b>3 起</b>致死事故由 Tesla 自有数据坐实辅助驾驶处于激活状态，第三起的报道时点与 <b>Cybercab 发布会同日</b>。",
+                "daily_ids": [
+                  "2026-09-01-004",
+                  "2026-09-04-002"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>9月4日</b>，Tesla FSD 新增 <b>Automatic Collision Evasion（自动碰撞规避）</b>，随 <b>FSD 14.3.9</b> 推送，可<b>在人类手动驾驶时主动接管以规避碰撞</b>——此前 FSD 只在驾驶员开启后接管驾驶。<b>9月5日</b>，Teslarati 跟进；同日 <b>德州交通运输部（TxDOT）执行主任在出席 Cybercab 发布会后公开表态</b>，为州级交通主管部门对 Cybercab 的首次公开反应（⚠️ 表态具体内容需以官方渠道为准）。",
+                "daily_ids": [
+                  "2026-09-05-003",
+                  "2026-09-06-004"
+                ]
+              },
+              {
+                "label": "c",
+                "content_html": "<b>9月3日</b>，Reuters 报道<b>法国已开始测试 Tesla 的自动驾驶技术</b>，法方表态该技术<b>有可能被调整以适配欧盟规范</b>。同日 Musk 确认 <b>FSD 新增坑洼避让功能</b>已上线，距其首次承诺已过 <b>7 年</b>。",
+                "daily_ids": [
+                  "2026-09-04-003"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：</b>丹佛、圣迭戈、坦帕同日开城，服务城市增至 14 座；辛辛那提启动路网测绘；参议院提案瞄准极氪供应链；旧金山累计 8,300+ 张停车罚单",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月1日</b>，Waymo <b>同一天在丹佛、圣迭戈、坦帕三座城市</b>向公众开放 Robotaxi 付费载客，为其迄今<b>单日开城数量最多</b>的一次，服务城市总数达到 <b>14 座</b>。三地本地媒体全部同步落地报道：丹佛有 The Denver Post、9News 与 KDVR，坦帕有 WFLA、WUSF、Tampa Bay Times，圣迭戈有 Fox 5、ABC10、NBC 7 与 San Diego Union-Tribune。Westword 标题给出保留——“向公众开放……算是吧”，初期仍有服务区或候补名单限制。",
+                "daily_ids": [
+                  "2026-09-02-001"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>9月1日</b>，Cincinnati Enquirer 报道 Waymo <b>将开始测绘辛辛那提及北肯塔基（Cincinnati / NKY）路网</b>，Local 12 WKRC 次日凌晨称“<b>Waymo 将在辛辛那提开始测试 Robotaxi</b>”；测绘是 Waymo 进入新城市的第一道固定工序，通常领先商业开服 <b>6–12 个月</b>，辛辛那提横跨俄亥俄与肯塔基两州。<b>9月2日</b>，<b>加州公用事业委员会（CPUC）为 Waymo 进入 Marin County 扫清监管障碍</b>；同日 WUSA9 报道 Waymo <b>在华盛顿特区仍未拿到许可</b>。",
+                "daily_ids": [
+                  "2026-09-02-015",
+                  "2026-09-03-006"
+                ]
+              },
+              {
+                "label": "c",
+                "content_html": "<b>9月1日</b>，<b>数百辆未安装传感器的 Waymo 极氪新车（Ojai 型号）</b>抵达洛杉矶港，将运往 <b>Mesa</b> 工厂进行传感器安装和调试，Waymo 在 Mesa 已囤积 <b>684 辆 Ojai</b>。同日美国<b>参议院提案</b>正式瞄准极氪，拟通过立法限制 Waymo 采购极氪底盘。",
+                "daily_ids": [
+                  "2026-09-01-002"
+                ]
+              },
+              {
+                "label": "d",
+                "content_html": "<b>9月2日</b>，Electrek 披露 Waymo 在<b>旧金山</b>已累计收到 <b>8,300 余张停车罚单</b>，罚款总额<b>接近 100 万美元</b>；<b>9月3日</b>报道，在洛杉矶针对 Robotaxi 的<b>新执法制度实施首月</b>，<b>Waymo 收到 LAPD 开出的罚单数为零</b>。同日 Denver Gazette 刊出《与 Waymo 发生碰撞该怎么办》。<b>9月1日</b>，旧金山纪事报报道一名<b>幼儿在旧金山某人行横道摔倒</b>，其父亲发现一辆 Waymo 正向孩子方向行驶而来，事件结果尚未完全披露。",
+                "daily_ids": [
+                  "2026-09-03-003",
+                  "2026-09-04-005",
+                  "2026-09-01-003"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Uber",
+            "company_slug": "uber",
+            "headline_html": "<b>Uber：</b>联合 Wayve 在伦敦上线首个面向公众的 Robotaxi，抢在 Waymo 之前落地英国；裁员 3,300 人、退出尼日利亚与乌干达；参与首尔平台竞标；卡兰尼克带 Atoms 重返赛道",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月2日</b>，<b>Uber 与英国 AI 公司 Wayve 在伦敦推出首个面向公众的 Robotaxi 服务</b>，The Verge 标题为“<b>Uber beats Waymo as first to launch robotaxis in London</b>”，City A.M. 的表述是“伦敦人现在可以叫到无人驾驶 Uber 了”。<b>车队与技术来自 Wayve，Uber 提供需求入口</b>；Wayve 是英国本土公司，走端到端学习路线，不依赖高精地图。<b>9月3日</b>，Zag Daily、A News 明确该服务<b>配备安全监督员（supervised）</b>，并非完全无人；The Times 前一日报道监督员“<b>看得见但不能出声</b>”。<b>9月4日</b>，Bloomberg、The Register 等国际媒体密集跟进，<b>NVIDIA 官方账号公开祝贺</b>并点明 <b>Wayve 的前沿 AI 模型是在 NVIDIA 基础设施上训练的</b>。",
+                "daily_ids": [
+                  "2026-09-03-002",
+                  "2026-09-04-007",
+                  "2026-09-05-009"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>9月2日</b>，Uber 宣布<b>裁减约 3,300 个岗位</b>（管理层重组，约占员工总数 <b>10%</b>），并<b>立即停止在尼日利亚与乌干达的运营</b>；ABC7 报道 Uber 同时确认了对 Robotaxi 合作伙伴关系的 <b>100 亿美元承诺</b>。国内媒体标题为“业绩最好时裁最狠的人！Uber 裁员 3300 人，省下的钱全砸 Robotaxi”。",
+                "daily_ids": [
+                  "2026-09-03-001"
+                ]
+              },
+              {
+                "label": "c",
+                "content_html": "<b>9月1日</b>，<b>Uber 正式加入首尔 Robotaxi 平台运营商竞标</b>，成为<b>首家参与该竞标的外国出行平台</b>。首尔平台运营权将决定哪家公司有权在韩国首都调度自动驾驶出租车网络。",
+                "daily_ids": [
+                  "2026-09-01-007"
+                ]
+              },
+              {
+                "label": "d",
+                "content_html": "<b>9月6日</b>，SiliconANGLE 报道 <b>Uber 前 CEO、联合创始人 Travis Kalanick 正在回归 Robotaxi 竞赛</b>，其表述是“<b>未竟之业（Unfinished business）</b>”；国内媒体补充其在<b>新创办的商业项目 Atoms</b> 中推进自动驾驶出租车相关技术的研发。⚠️ Atoms 的技术路线、资金规模与落地时间表均未披露。",
+                "daily_ids": [
+                  "2026-09-07-001"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Zoox",
+            "company_slug": "zoox",
+            "headline_html": "<b>Zoox：</b>拉斯维加斯 Harry Reid 机场 Robotaxi 服务开跑并转入常态运营，为首个机场 Robotaxi 服务；测试扩张至休斯顿与圣迭戈",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月4日</b>，<b>Zoox 在拉斯维加斯哈里·里德国际机场（Harry Reid）的付费 Robotaxi 服务正式开始运营</b>，KSNV 称其为“<b>首个机场 Robotaxi 服务</b>”。KTNV 说明服务范围——<b>从机场可直达 Strip 沿线多家度假酒店</b>；Northeast Times 的表述是“<b>无人驾驶 Zoox 抢在 Uber 和 Lyft 之前到达行李提取处</b>”。<b>9月5日</b>，KTNV 更新称该服务<b>已常态化接送旅客</b>。此前 KLAS 报道当地网约车司机公开担忧收入受冲击。",
+                "daily_ids": [
+                  "2026-09-03-007",
+                  "2026-09-05-005",
+                  "2026-09-06-008"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>9月1日</b>，Zoox 宣布测试车队将于今年晚些时候进驻<b>休斯顿与圣迭戈</b>，官宣与 Waymo 三城开城<b>同日</b>；<b>圣迭戈</b>成为直接交锋点——Waymo 当天已在该市开放付费运营，Zoox 才刚进入测试阶段。<b>9月6日</b>，CleanTechnica 确认 <b>Zoox 已正式开始休斯顿的 Robotaxi 测试</b>，距宣布进驻用时 <b>4 天</b>。",
+                "daily_ids": [
+                  "2026-09-02-003",
+                  "2026-09-07-006"
+                ]
+              },
+              {
+                "label": "c",
+                "content_html": "<b>9月6日</b>，Casino.org 以《GAD ZOOX！Robotaxi 在拉斯维加斯出岔子》为题报道机场服务上线首周的运营失误；同日 FOX 4 News Dallas 将该服务称为“首个机场 Robotaxi 服务，一个重要里程碑”。⚠️ 失误的具体情节需以原文为准。",
+                "daily_ids": [
+                  "2026-09-07-006"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Nuro / Lucid",
+            "company_slug": "nuro",
+            "headline_html": "<b>Nuro / Lucid：</b>Nuro 拿下加州关键许可，Gravity Robotaxi 与 Uber 的三方合作提速",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月5日</b>，Stocktwits 报道 <b>Nuro 获得加州关键许可</b>用于其 <b>Gravity Robotaxi</b>，并使 <b>Lucid（LCID）与 Uber 的合作提速</b>，形成 <b>Lucid 提供整车、Nuro 提供自动驾驶系统、Uber 提供平台分发</b>的三方结构，与 Uber–Wayve 的伦敦模式属同一范式。德州 DMV 数据显示 Nuro 当前在册 <b>47 辆</b>（Gravity <b>26</b> 辆 / Prius <b>21</b> 辆）。",
+                "daily_ids": [
+                  "2026-09-06-007"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "May Mobility",
+            "company_slug": "maymobility",
+            "headline_html": "<b>May Mobility：</b>联手 NTT，在日本首次于公共道路开放自动驾驶 e-Palette 载客",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月3日</b>，<b>May Mobility 与 NTT Mobility 宣布将在日本首次于公共道路上开放自动驾驶 e-Palette 的公众载客服务</b>。e-Palette 是丰田的纯电专用接驳平台车型。这是 May Mobility 首次在美国本土之外落地公共道路载客，此前日本多为封闭园区或限定路线试运营。",
+                "daily_ids": [
+                  "2026-09-04-008"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "文远知行",
+            "company_slug": "weride",
+            "headline_html": "<b>文远知行：</b>计划到 2030 年在沙特投放 1 万辆 Robotaxi",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月3日</b>，中东媒体 AGBI 报道<b>文远知行计划到 2030 年在沙特阿拉伯投放 10,000 辆 Robotaxi</b>，为目前中国 Robotaxi 企业公布的<b>单一海外市场最大投放目标</b>——作为对比，小马智行在韩国的首批计划是 <b>200 辆</b>。沙特此前刚在全国范围合法化无人驾驶卡车，本土 AI 公司 <b>HUMAIN</b> 已部署 L4 车队。⚠️ 该目标为 <b>2030 年</b>长期规划，与已落地的运营规模是两回事，跟踪时应关注其分年度交付节奏。",
+                "daily_ids": [
+                  "2026-09-04-013"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W36",
     "date_range": "0825-0831",
     "title": "（W35）无人驾驶行业0825-0831重要新闻",
