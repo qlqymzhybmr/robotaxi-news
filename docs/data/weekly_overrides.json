@@ -11,7 +11,7 @@
           {
             "company": "Tesla",
             "company_slug": "tesla",
-            "headline_html": "<b>Tesla：</b>Cybercab 奥斯汀发布并载客，上线当天遭 NHTSA 立案调查；",
+            "headline_html": "<b>Tesla：</b>Cybercab 奥斯汀发布并载客，上线当天遭 NHTSA 调查；",
             "sub_items": [
               {
                 "label": "a",
@@ -51,27 +51,19 @@
           {
             "company": "Tesla",
             "company_slug": "tesla",
-            "headline_html": "<b>Tesla：</b>本周三起致死事故经自有数据确认辅助驾驶处于激活状态；FSD 新增自动碰撞规避，可在手动驾驶时接管；法国启动 FSD 测试",
+            "headline_html": "<b>Tesla：</b>FSD v14.3.9 新增自动碰撞规避安全功能；法国交通部启动对于Tesla FSD的技术评估",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>9月1日</b>，Electrek 披露一名 Tesla 驾驶员在高速公路上使用 <b>FSD/Autopilot</b> 时，车辆在行车道上停止后驾驶员身亡（<b>Mesa</b> 地区），<b>Tesla 确认事故发生时辅助驾驶系统处于激活状态</b>，为同一形态的<b>第二起</b>。<b>9月3日</b>，Electrek 再报<b>一辆 Tesla 在 Autopilot/FSD 激活状态下撞死一名摩托车手</b>，结论同样由 <b>Tesla 自有数据</b>证实。连同伊利诺伊一起，本周共 <b>3 起</b>致死事故由 Tesla 自有数据坐实辅助驾驶处于激活状态，第三起的报道时点与 <b>Cybercab 发布会同日</b>。",
-                "daily_ids": [
-                  "2026-09-01-004",
-                  "2026-09-04-002"
-                ]
-              },
-              {
-                "label": "b",
-                "content_html": "<b>9月4日</b>，Tesla FSD 新增 <b>Automatic Collision Evasion（自动碰撞规避）</b>，随 <b>FSD 14.3.9</b> 推送，可<b>在人类手动驾驶时主动接管以规避碰撞</b>——此前 FSD 只在驾驶员开启后接管驾驶。<b>9月5日</b>，Teslarati 跟进；同日 <b>德州交通运输部（TxDOT）执行主任在出席 Cybercab 发布会后公开表态</b>，为州级交通主管部门对 Cybercab 的首次公开反应（⚠️ 表态具体内容需以官方渠道为准）。",
+                "content_html": "<b>9月4日</b>，Tesla 新增 <b>Automatic Collision Evasion（自动碰撞规避）主动安全功能</b>，随 <b>FSD 14.3.9</b> 推送，主要触发场景为：1）系统检测到即将发生碰撞且自动紧急制动（AEB）无法避免碰撞时，FSD可自动激活进行转向、制动、加速等避险操作；2）驾驶员严重分心或意外退出 FSD时，系统也可能自动介入。",
                 "daily_ids": [
                   "2026-09-05-003",
                   "2026-09-06-004"
                 ]
               },
               {
-                "label": "c",
-                "content_html": "<b>9月3日</b>，Reuters 报道<b>法国已开始测试 Tesla 的自动驾驶技术</b>，法方表态该技术<b>有可能被调整以适配欧盟规范</b>。同日 Musk 确认 <b>FSD 新增坑洼避让功能</b>已上线，距其首次承诺已过 <b>7 年</b>。",
+                "label": "b",
+                "content_html": "<b>9月3日</b>，Reuters 报道法国交通部表示已开始对于两辆 Tesla 汽车<b>进行 FSD&nbsp;自动驾驶技术评估</b>，并与特斯拉进行相关技术调整磋商",
                 "daily_ids": [
                   "2026-09-04-003"
                 ]
@@ -81,18 +73,18 @@
           {
             "company": "Waymo",
             "company_slug": "waymo",
-            "headline_html": "<b>Waymo：</b>丹佛、圣迭戈、坦帕同日开城，服务城市增至 14 座；辛辛那提启动路网测绘；参议院提案瞄准极氪供应链；旧金山累计 8,300+ 张停车罚单",
+            "headline_html": "<b>Waymo：</b>丹佛、圣地亚哥、坦帕同日开城；辛辛那提启动路网测绘；幼儿人行横道摔倒险遭撞击；参议院提案禁止进口中国生产汽车与配套软硬件；旧金山累计 8,300+ 张停车罚单",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>9月1日</b>，Waymo <b>同一天在丹佛、圣迭戈、坦帕三座城市</b>向公众开放 Robotaxi 付费载客，为其迄今<b>单日开城数量最多</b>的一次，服务城市总数达到 <b>14 座</b>。三地本地媒体全部同步落地报道：丹佛有 The Denver Post、9News 与 KDVR，坦帕有 WFLA、WUSF、Tampa Bay Times，圣迭戈有 Fox 5、ABC10、NBC 7 与 San Diego Union-Tribune。Westword 标题给出保留——“向公众开放……算是吧”，初期仍有服务区或候补名单限制。",
+                "content_html": "<b>9月1日</b>，Waymo <b>在丹佛、圣地亚哥、坦帕三座城市</b>推出&nbsp;Robotaxi 付费载客服务，目前已在美国~14城开展商业运营活动。",
                 "daily_ids": [
                   "2026-09-02-001"
                 ]
               },
               {
                 "label": "b",
-                "content_html": "<b>9月1日</b>，Cincinnati Enquirer 报道 Waymo <b>将开始测绘辛辛那提及北肯塔基（Cincinnati / NKY）路网</b>，Local 12 WKRC 次日凌晨称“<b>Waymo 将在辛辛那提开始测试 Robotaxi</b>”；测绘是 Waymo 进入新城市的第一道固定工序，通常领先商业开服 <b>6–12 个月</b>，辛辛那提横跨俄亥俄与肯塔基两州。<b>9月2日</b>，<b>加州公用事业委员会（CPUC）为 Waymo 进入 Marin County 扫清监管障碍</b>；同日 WUSA9 报道 Waymo <b>在华盛顿特区仍未拿到许可</b>。",
+                "content_html": "<b>9月1日</b>，媒体报道 Waymo 正式对<b>辛辛那提（Cincinnati）</b>市中心及周边地区（如北肯塔基）进行<b>地图测绘</b>。",
                 "daily_ids": [
                   "2026-09-02-015",
                   "2026-09-03-006"
@@ -100,18 +92,17 @@
               },
               {
                 "label": "c",
-                "content_html": "<b>9月1日</b>，<b>数百辆未安装传感器的 Waymo 极氪新车（Ojai 型号）</b>抵达洛杉矶港，将运往 <b>Mesa</b> 工厂进行传感器安装和调试，Waymo 在 Mesa 已囤积 <b>684 辆 Ojai</b>。同日美国<b>参议院提案</b>正式瞄准极氪，拟通过立法限制 Waymo 采购极氪底盘。",
-                "daily_ids": [
-                  "2026-09-01-002"
-                ]
+                "content_html": "<b>9月1日</b>，旧金山媒体报道一名幼儿在某人行横道摔倒，此时一辆 Waymo 向孩子方向行驶，其父亲狂奔向前将婴儿车挡在车头前，Waymo在举例幼儿 ~4米处停下。行人反馈 <b>Waymo 未检测到倒地幼儿</b>，Waymo侧则坚称车辆传感器<b>已识别到行人</b>，<b>为车辆主动制动</b>而并非婴儿车阻拦，事件结果尚未完全披露。"
               },
               {
                 "label": "d",
-                "content_html": "<b>9月2日</b>，Electrek 披露 Waymo 在<b>旧金山</b>已累计收到 <b>8,300 余张停车罚单</b>，罚款总额<b>接近 100 万美元</b>；<b>9月3日</b>报道，在洛杉矶针对 Robotaxi 的<b>新执法制度实施首月</b>，<b>Waymo 收到 LAPD 开出的罚单数为零</b>。同日 Denver Gazette 刊出《与 Waymo 发生碰撞该怎么办》。<b>9月1日</b>，旧金山纪事报报道一名<b>幼儿在旧金山某人行横道摔倒</b>，其父亲发现一辆 Waymo 正向孩子方向行驶而来，事件结果尚未完全披露。",
+                "content_html": "<b>9月2日</b>，媒体披露 Waymo 自25年初至今已在<b>旧金山</b>累计收到 <b>8,300 余张停车罚单</b>，罚款总额 <b>~100 万美元</b>，最常见的违规行为为占用停车位/车道、在禁停区域停车等。"
+              },
+              {
+                "label": "e",
+                "content_html": "<b>9月3日</b>，美国汽车创新联盟致信美国国会，敦促国会通过立法，对于<b>中国生产的网联汽车、相关软硬件</b>实施<b>销售与进口禁令</b>。该提案若通过将限制 Waymo 采购与进口 Ojai 车型。",
                 "daily_ids": [
-                  "2026-09-03-003",
-                  "2026-09-04-005",
-                  "2026-09-01-003"
+                  "2026-09-01-002"
                 ]
               }
             ]
@@ -169,7 +160,7 @@
               },
               {
                 "label": "b",
-                "content_html": "<b>9月1日</b>，Zoox 宣布测试车队将于今年晚些时候进驻<b>休斯顿与圣迭戈</b>，官宣与 Waymo 三城开城<b>同日</b>；<b>圣迭戈</b>成为直接交锋点——Waymo 当天已在该市开放付费运营，Zoox 才刚进入测试阶段。<b>9月6日</b>，CleanTechnica 确认 <b>Zoox 已正式开始休斯顿的 Robotaxi 测试</b>，距宣布进驻用时 <b>4 天</b>。",
+                "content_html": "<b>9月1日</b>，Zoox 宣布测试车队将于今年晚些时候进驻<b>休斯顿</b>与<b>圣地亚哥</b>；<b>圣迭戈</b>成为直接交锋点——Waymo 当天已在该市开放付费运营，Zoox 才刚进入测试阶段。<b>9月6日</b>，CleanTechnica 确认 <b>Zoox 已正式开始休斯顿的 Robotaxi 测试</b>，距宣布进驻用时 <b>4 天</b>。",
                 "daily_ids": [
                   "2026-09-02-003",
                   "2026-09-07-006"
@@ -187,11 +178,11 @@
           {
             "company": "Nuro / Lucid",
             "company_slug": "nuro",
-            "headline_html": "<b>Nuro / Lucid：</b>Nuro 拿下加州关键许可，Gravity Robotaxi 与 Uber 的三方合作提速",
+            "headline_html": "<b>Nuro / Lucid：</b>拿下加州带安全员载客试运营许可",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>9月5日</b>，Stocktwits 报道 <b>Nuro 获得加州关键许可</b>用于其 <b>Gravity Robotaxi</b>，并使 <b>Lucid（LCID）与 Uber 的合作提速</b>，形成 <b>Lucid 提供整车、Nuro 提供自动驾驶系统、Uber 提供平台分发</b>的三方结构，与 Uber–Wayve 的伦敦模式属同一范式。德州 DMV 数据显示 Nuro 当前在册 <b>47 辆</b>（Gravity <b>26</b> 辆 / Prius <b>21</b> 辆）。",
+                "content_html": "<b>9月5日</b>，媒体报道 Nuro 获得加州公共委员会（CPUC）颁发的<b>带安全员载客试点运营许可（Drivered Pilot Permit）</b>，先前其已拥有加州车辆管理局（DMV）颁发的无安全员测试许可。Nuro目前运营车辆<b>~100辆</b>，将计划优先于旧金山湾区部署无人驾驶服务<b>。</b>",
                 "daily_ids": [
                   "2026-09-06-007"
                 ]
@@ -201,7 +192,7 @@
           {
             "company": "May Mobility",
             "company_slug": "maymobility",
-            "headline_html": "<b>May Mobility：26年计划</b>在日本进行自动驾驶车辆的公开道路测试与试运营",
+            "headline_html": "<b>May Mobility：计划26年</b>在日本进行自动驾驶车辆的公开道路测试与试运营",
             "sub_items": [
               {
                 "label": "a",
@@ -234,7 +225,7 @@
         ]
       }
     ],
-    "edited_at": "2026-09-07T05:58:11.554Z"
+    "edited_at": "2026-09-07T06:55:42.118Z"
   },
   {
     "week_id": "2026-W36",
