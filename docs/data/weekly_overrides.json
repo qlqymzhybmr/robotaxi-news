@@ -19,7 +19,7 @@
               },
               {
                 "label": "b",
-                "content_html": "<b>运营现状：</b>Cybercab 发布活动为“定向邀请制”，首批体验者主要为受邀投资者、Tesla 社区活跃用户和社媒创作者。9月4日起，通过 Tesla Robotaxi App 在 <b>Austin 部分区域向公众提供付费载客服务</b>，系统自动派车且车内<b>不配备安全员</b>。9月5日披露 Cybercab 不支持使用家用充电桩，只能依赖直流快充网络。",
+                "content_html": "<b>运营现状：</b>Cybercab 发布活动为“定向邀请制”，受邀者为投资者、Tesla 活跃用户和社媒创作者。9月4日起，通过 Tesla Robotaxi App 在 <b>Austin 部分区域向公众提供付费载客服务</b>，系统自动派车且<b>不配备安全员</b>。9月5日披露 Cybercab 不支持使用家用充电桩，只能依赖直流快充网络。",
                 "daily_ids": [
                   "2026-09-04-001",
                   "2026-09-01-005"
@@ -35,7 +35,7 @@
               },
               {
                 "label": "e",
-                "content_html": "<div><b>监管风险</b>：Tesla目前依据已取得的Texas州级商业自动驾驶运营授权与<b>自行认证 Cybercab 符合联邦机动车安全标准</b>进行运营，未如Zoox一样向联邦政府NHTSA申请机动车安全标准豁免（无刹车、制动踏板及无后视镜豁免）；9月4日，NHTSA 正式开启 Audit Query AQ26002，调查 Tesla 自我认证所提供的技术数据与流程。</div>",
+                "content_html": "<div><b>监管风险</b>：Tesla目前依据已取得的Texas州级商业自动驾驶运营授权与<b>自行认证 Cybercab 符合联邦机动车安全标准</b>进行运营，未如Zoox一样向NHTSA申请机动车安全标准豁免（无刹车、制动踏板及无后视镜）；9月4日，NHTSA 正式开启 Audit Query AQ26002，调查 Tesla 自我认证时提供的技术数据与流程。</div>",
                 "daily_ids": [
                   "2026-09-04-012",
                   "2026-09-05-001",
@@ -44,7 +44,7 @@
               },
               {
                 "label": "f",
-                "content_html": "<b>未来进展</b>：发布会前 Tesla 上线 Robotaxi Network 合作意向征集页面，面向企业征集<b>购买 Cybercab 车队</b>及建设 Mobility Hub/基础设施的合作意向，核心商业条款尚未披露；<b>9月4日</b>，Tesla 宣布 Cybercab 将于 9 月中旬起在北京、上海等多个城市陆续展出。"
+                "content_html": "<b>未来进展</b>：面向企业征集<b>购买 Cybercab 车队</b>及建设 Mobility Hub/基础设施的合作意向，核心商业条款尚未披露；<b>9月4日</b>，Tesla 宣布 Cybercab 将于 9 月中旬起在北京、上海等多个城市陆续展出。"
               }
             ]
           },
@@ -207,7 +207,7 @@
         ]
       }
     ],
-    "edited_at": "2026-09-07T07:58:33.284Z"
+    "edited_at": "2026-09-07T08:00:20.238Z"
   },
   {
     "week_id": "2026-W36",
