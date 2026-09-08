@@ -490,6 +490,66 @@
       "city": "Denver CO",
       "site": "westword.com",
       "name": "Westword"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreaherald.com",
+      "name": "The Korea Herald"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreajoongangdaily.joins.com",
+      "name": "Korea JoongAng Daily"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "en.sedaily.com",
+      "name": "Seoul Economic Daily"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "kedglobal.com",
+      "name": "KED Global"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreatimes.co.kr",
+      "name": "The Korea Times"
+    },
+    {
+      "city": "Tokyo JP",
+      "site": "japantimes.co.jp",
+      "name": "The Japan Times"
+    },
+    {
+      "city": "Tokyo JP",
+      "site": "asia.nikkei.com",
+      "name": "Nikkei Asia"
+    },
+    {
+      "city": "Tokyo JP",
+      "site": "japannews.yomiuri.co.jp",
+      "name": "The Japan News"
+    },
+    {
+      "city": "London UK",
+      "site": "cityam.com",
+      "name": "City A.M."
+    },
+    {
+      "city": "London UK",
+      "site": "bbc.co.uk",
+      "name": "BBC"
+    },
+    {
+      "city": "London UK",
+      "site": "standard.co.uk",
+      "name": "Evening Standard"
+    },
+    {
+      "city": "London UK",
+      "site": "mylondon.news",
+      "name": "MyLondon"
     }
   ],
   "Tesla": [
@@ -967,6 +1027,31 @@
       "city": "Dubai UAE",
       "site": "khaleejtimes.com",
       "name": "Khaleej Times"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreaherald.com",
+      "name": "The Korea Herald"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreajoongangdaily.joins.com",
+      "name": "Korea JoongAng Daily"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "en.sedaily.com",
+      "name": "Seoul Economic Daily"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "kedglobal.com",
+      "name": "KED Global"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreatimes.co.kr",
+      "name": "The Korea Times"
     }
   ],
   "Wayve": [
