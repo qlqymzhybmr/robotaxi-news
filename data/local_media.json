@@ -1,5 +1,5 @@
 {
-  "_comment": "公司→本地媒体映射表。新城市宣布运营时在对应公司下追加条目。site 字段必须是可用于 Google News site: 搜索的域名（不含 https://）。",
+  "_comment": "公司→本地媒体映射表。新城市宣布运营时在对应公司下追加条目。site 字段必须是可用于 Google News site: 搜索的域名（不含 https://）。注意：Track B 遍历本文件全部 key，但只在 --group overseas 时运行，因此国内出海玩家（萝卜快跑/文远知行/小马智行）的海外本地媒体结果会落在 raw_news_overseas.json，而非 raw_news_china.json。key 的括号内容会被拆成标题匹配别名，故萝卜快跑用 Apollo Go / Baidu（英文），不用 百度。",
   "Waymo": [
     {
       "city": "San Francisco CA",
@@ -1119,6 +1119,312 @@
       "city": "London UK",
       "site": "mylondon.news",
       "name": "MyLondon"
+    }
+  ],
+  "萝卜快跑 (Apollo Go / Baidu)": [
+    {
+      "city": "Hong Kong HK",
+      "site": "scmp.com",
+      "name": "South China Morning Post"
+    },
+    {
+      "city": "Hong Kong HK",
+      "site": "hk01.com",
+      "name": "香港01"
+    },
+    {
+      "city": "Hong Kong HK",
+      "site": "thestandard.com.hk",
+      "name": "The Standard"
+    },
+    {
+      "city": "Hong Kong HK",
+      "site": "hongkongfp.com",
+      "name": "Hong Kong Free Press"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "gulfnews.com",
+      "name": "Gulf News"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "khaleejtimes.com",
+      "name": "Khaleej Times"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "thenationalnews.com",
+      "name": "The National"
+    },
+    {
+      "city": "Abu Dhabi UAE",
+      "site": "thenationalnews.com",
+      "name": "The National"
+    },
+    {
+      "city": "Abu Dhabi UAE",
+      "site": "aletihad.ae",
+      "name": "Aletihad"
+    },
+    {
+      "city": "Abu Dhabi UAE",
+      "site": "wam.ae",
+      "name": "Emirates News Agency (WAM)"
+    },
+    {
+      "city": "London UK",
+      "site": "cityam.com",
+      "name": "City A.M."
+    },
+    {
+      "city": "London UK",
+      "site": "bbc.co.uk",
+      "name": "BBC"
+    },
+    {
+      "city": "London UK",
+      "site": "standard.co.uk",
+      "name": "Evening Standard"
+    },
+    {
+      "city": "London UK",
+      "site": "mylondon.news",
+      "name": "MyLondon"
+    },
+    {
+      "city": "St. Gallen CH",
+      "site": "tagblatt.ch",
+      "name": "St. Galler Tagblatt"
+    },
+    {
+      "city": "St. Gallen CH",
+      "site": "swissinfo.ch",
+      "name": "SWI swissinfo.ch"
+    },
+    {
+      "city": "St. Gallen CH",
+      "site": "nzz.ch",
+      "name": "Neue Zürcher Zeitung"
+    },
+    {
+      "city": "St. Gallen CH",
+      "site": "thelocal.ch",
+      "name": "The Local Switzerland"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreaherald.com",
+      "name": "The Korea Herald"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreajoongangdaily.joins.com",
+      "name": "Korea JoongAng Daily"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "en.sedaily.com",
+      "name": "Seoul Economic Daily"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "kedglobal.com",
+      "name": "KED Global"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreatimes.co.kr",
+      "name": "The Korea Times"
+    }
+  ],
+  "文远知行 (WeRide)": [
+    {
+      "city": "Abu Dhabi UAE",
+      "site": "thenationalnews.com",
+      "name": "The National"
+    },
+    {
+      "city": "Abu Dhabi UAE",
+      "site": "aletihad.ae",
+      "name": "Aletihad"
+    },
+    {
+      "city": "Abu Dhabi UAE",
+      "site": "wam.ae",
+      "name": "Emirates News Agency (WAM)"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "gulfnews.com",
+      "name": "Gulf News"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "khaleejtimes.com",
+      "name": "Khaleej Times"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "thenationalnews.com",
+      "name": "The National"
+    },
+    {
+      "city": "Riyadh SA",
+      "site": "arabnews.com",
+      "name": "Arab News"
+    },
+    {
+      "city": "Riyadh SA",
+      "site": "saudigazette.com.sa",
+      "name": "Saudi Gazette"
+    },
+    {
+      "city": "Riyadh SA",
+      "site": "argaam.com",
+      "name": "Argaam"
+    },
+    {
+      "city": "Singapore SG",
+      "site": "straitstimes.com",
+      "name": "The Straits Times"
+    },
+    {
+      "city": "Singapore SG",
+      "site": "channelnewsasia.com",
+      "name": "CNA"
+    },
+    {
+      "city": "Singapore SG",
+      "site": "businesstimes.com.sg",
+      "name": "The Business Times"
+    },
+    {
+      "city": "Zurich CH",
+      "site": "swissinfo.ch",
+      "name": "SWI swissinfo.ch"
+    },
+    {
+      "city": "Zurich CH",
+      "site": "nzz.ch",
+      "name": "Neue Zürcher Zeitung"
+    },
+    {
+      "city": "Zurich CH",
+      "site": "thelocal.ch",
+      "name": "The Local Switzerland"
+    },
+    {
+      "city": "Zurich CH",
+      "site": "20min.ch",
+      "name": "20 Minuten"
+    },
+    {
+      "city": "Madrid ES",
+      "site": "elpais.com",
+      "name": "El País"
+    },
+    {
+      "city": "Madrid ES",
+      "site": "elmundo.es",
+      "name": "El Mundo"
+    },
+    {
+      "city": "Madrid ES",
+      "site": "thelocal.es",
+      "name": "The Local Spain"
+    }
+  ],
+  "小马智行 (Pony.ai)": [
+    {
+      "city": "Doha QA",
+      "site": "gulf-times.com",
+      "name": "Gulf Times"
+    },
+    {
+      "city": "Doha QA",
+      "site": "thepeninsulaqatar.com",
+      "name": "The Peninsula"
+    },
+    {
+      "city": "Doha QA",
+      "site": "qatar-tribune.com",
+      "name": "Qatar Tribune"
+    },
+    {
+      "city": "Doha QA",
+      "site": "dohanews.co",
+      "name": "Doha News"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "gulfnews.com",
+      "name": "Gulf News"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "khaleejtimes.com",
+      "name": "Khaleej Times"
+    },
+    {
+      "city": "Dubai UAE",
+      "site": "thenationalnews.com",
+      "name": "The National"
+    },
+    {
+      "city": "Singapore SG",
+      "site": "straitstimes.com",
+      "name": "The Straits Times"
+    },
+    {
+      "city": "Singapore SG",
+      "site": "channelnewsasia.com",
+      "name": "CNA"
+    },
+    {
+      "city": "Singapore SG",
+      "site": "businesstimes.com.sg",
+      "name": "The Business Times"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreaherald.com",
+      "name": "The Korea Herald"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreajoongangdaily.joins.com",
+      "name": "Korea JoongAng Daily"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "en.sedaily.com",
+      "name": "Seoul Economic Daily"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "kedglobal.com",
+      "name": "KED Global"
+    },
+    {
+      "city": "Seoul KR",
+      "site": "koreatimes.co.kr",
+      "name": "The Korea Times"
+    },
+    {
+      "city": "Zagreb HR",
+      "site": "total-croatia-news.com",
+      "name": "Total Croatia News"
+    },
+    {
+      "city": "Zagreb HR",
+      "site": "croatiaweek.com",
+      "name": "Croatia Week"
+    },
+    {
+      "city": "Zagreb HR",
+      "site": "index.hr",
+      "name": "Index.hr"
     }
   ]
 }

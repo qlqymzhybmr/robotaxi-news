@@ -647,11 +647,30 @@ def load_local_media(path: Path) -> dict:
 
 
 def is_relevant_local_media(company_name: str, title: str) -> bool:
-    """Lighter relevance check for local-media articles.
+    """Relevance check for local-media (Track B) articles.
 
-    For a targeted site: query the company name in the title is sufficient signal;
-    we don't require an AV keyword because local TV headlines often use plain
-    language ("Waymo car floods road") that lacks technical jargon.
+    Two accept paths:
+
+    1. The company name or an alias appears in the headline. This is the common
+       case for US outlets, where the vendor is the story ("Waymo car floods
+       road"). No AV keyword is required — local TV headlines often use plain
+       language that lacks technical jargon.
+
+    2. The headline is clearly about AV but does not name the vendor. The
+       `"Company" site:outlet.com` query already guarantees the company appears
+       in the body, so such a headline is not off-topic — it simply names the
+       service, the operator or the city instead of the technology supplier.
+       This is the norm outside the US: Gulf, Asian and European outlets write
+       "Driverless robotaxis now available in Abu Dhabi" or "RoboTaxi test ride
+       at Autonomous e-Mobility Forum 2026", naming Karwa or the emirate rather
+       than WeRide or Pony.ai. Requiring the vendor name in the headline dropped
+       essentially all overseas coverage of the Chinese operators, and also lost
+       US regulation stories headlined by the city ("Minneapolis may require
+       driverless vehicles to have someone in the driver's seat").
+
+    Path 2 still rejects the section and tag pages that a site: query returns
+    ("Business - Qatar", "tag - Gulf Times") and unrelated same-site articles,
+    because those carry no AV keyword.
     """
     base = clean_company_name(company_name)
     paren = extract_parenthetical(company_name)
@@ -666,7 +685,8 @@ def is_relevant_local_media(company_name: str, title: str) -> bool:
         else:
             if alias in title:
                 return True
-    return False
+    # Path 2: vendor absent from the headline, but the headline is about AV.
+    return is_media_topic_relevant(title, "")
 
 
 def fetch_local_media_news(

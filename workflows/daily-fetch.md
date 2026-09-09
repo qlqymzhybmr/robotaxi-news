@@ -66,9 +66,18 @@
 
 **Track B 工作原理**:
 - 脚本读取 `data/local_media.json`，对每个 `(公司, 站点)` 组合构建 `"CompanyName" site:outlet.com` 查询
-- 相关性判断比 Track A 更宽松：只要公司名出现在标题中即视为相关（不强制要求 AV 技术关键词），因为本地 TV 台标题常用"Waymo vehicle"这类非技术表述
 - Track B 和 Track A 结果合并后走统一 URL 去重，同一篇文章只保留一条
-- **Track B 仅覆盖国外组**（local_media.json 当前全部是英文媒体）
+
+**Track B 的相关性判定有两条通路**（`is_relevant_local_media()`，2026-09-09 起）:
+
+1. **标题含公司名或别名** —— 美国本地媒体的常态，公司名本身就是新闻主体（"Waymo car floods road"）。不要求 AV 关键词，因为本地 TV 台标题常用非技术表述
+2. **标题不含公司名，但明确是 AV 主题**（命中 `MEDIA_TOPIC_KEYWORDS`）—— 因为 `"公司名" site:域名` 这个查询**已经保证正文含公司名**，标题再过滤一次属于过度过滤
+
+**为什么必须有第 2 条**：海湾、亚洲、欧洲媒体写的是运营方或城市，不是技术供应商——"Driverless robotaxis now available in Abu Dhabi"（不提 WeRide）、"RoboTaxi test ride at Autonomous e-Mobility Forum 2026"（不提 Pony.ai）。只认第 1 条时，**国内出海玩家的海外报道几乎全军覆没**（实测 7 天窗口 60 个站点命中 0 条，修好后命中 3 条）。同类误杀也发生在美国的监管新闻上——"Minneapolis may require driverless vehicles to have someone in the driver's seat" 标题里没有 Waymo。
+
+第 2 条仍能挡住 `site:` 查询附带返回的栏目页与无关文章（"Business - Qatar"、"tag - Gulf Times"、"PM Lee starts week-long China visit"），因为它们不含 AV 关键词。
+
+**⚠️ 运行组的归属**：脚本的 Track B 遍历 `local_media.json` 的**全部 key**，但只在 `--group overseas`（或 `all`）时运行。因此**国内出海玩家（萝卜快跑 / 文远知行 / 小马智行）的海外本地媒体结果会落在 `raw_news_overseas.json`，不在 `raw_news_china.json`**。写 daily 时按公司归入国内 section，但取数要去国外那份 JSON 里找。
 
 **`data/local_media.json` 维护规范**:
 - site 字段填纯域名，不含 `https://`，例如 `ksat.com`
@@ -118,7 +127,9 @@ for i in items: print(' ', i['source'][:24], i['title'][:60])
 
 **实例（2026-09-02）**：Waymo 开三城时，丹佛/圣迭戈/坦帕清单里已有，所以三地本地媒体全部命中；但 **Zoox 宣布进驻休斯顿和圣迭戈时清单里没有**，当天 Zoox 的消息只能靠 Track A 捡回来。事后补了 9 个站点（Zoox 12 → 21）。**这就是漏配的实际代价。**
 
-**当前覆盖**（2026-09-02）：Waymo（91 站点 / 21 城市）、Tesla（30 / 10）、Aurora（13 / 6）、**Zoox（21 / 5）**、Motional（11 / 3）、May Mobility（6 / 3）
+**当前覆盖**（2026-09-09，共 281 个查询组合）：Waymo（119 站点 / 27 城市）、Tesla（35 站点 / 11 城市）、萝卜快跑 (Apollo Go / Baidu)（23 站点 / 6 城市）、Zoox（21 站点 / 5 城市）、文远知行 (WeRide)（19 站点 / 6 城市）、小马智行 (Pony.ai)（18 站点 / 5 城市）、Aurora Innovation（13 站点 / 6 城市）、Uber（12 站点 / 3 城市）、Motional（11 站点 / 3 城市）、May Mobility（6 站点 / 3 城市）、Wayve（4 站点 / 1 城市）
+
+国内出海三家于 2026-09-09 纳入：**萝卜快跑**（香港 / 迪拜 / 阿布扎比 / 伦敦 / 圣加仑 / 首尔）、**文远知行**（阿布扎比 / 迪拜 / 利雅得 / 新加坡 / 苏黎世 / 马德里）、**小马智行**（多哈 / 迪拜 / 新加坡 / 首尔 / 萨格勒布）。
 
 ---
 
