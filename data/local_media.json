@@ -550,6 +550,51 @@
       "city": "London UK",
       "site": "mylondon.news",
       "name": "MyLondon"
+    },
+    {
+      "city": "Oakland CA",
+      "site": "oaklandside.com",
+      "name": "The Oaklandside"
+    },
+    {
+      "city": "Oakland CA",
+      "site": "eastbaytimes.com",
+      "name": "East Bay Times"
+    },
+    {
+      "city": "Oakland CA",
+      "site": "ktvu.com",
+      "name": "KTVU FOX 2"
+    },
+    {
+      "city": "Oakland CA",
+      "site": "sfchronicle.com",
+      "name": "SF Chronicle"
+    },
+    {
+      "city": "Minneapolis MN",
+      "site": "startribune.com",
+      "name": "Star Tribune"
+    },
+    {
+      "city": "Minneapolis MN",
+      "site": "kare11.com",
+      "name": "KARE 11"
+    },
+    {
+      "city": "Minneapolis MN",
+      "site": "minnpost.com",
+      "name": "MinnPost"
+    },
+    {
+      "city": "Minneapolis MN",
+      "site": "mprnews.org",
+      "name": "MPR News"
+    },
+    {
+      "city": "Minneapolis MN",
+      "site": "kstp.com",
+      "name": "KSTP 5"
     }
   ],
   "Tesla": [
