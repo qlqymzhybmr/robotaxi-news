@@ -41,7 +41,7 @@
               },
               {
                 "label": "d",
-                "content_html": "<b>9月10日</b>，伊利诺伊州众议员就媒体披露的数十段<b>驾驶员开启 FSD 后睡着的视频</b>致信交通部，质疑特斯拉对于 FSD 状态下驾驶员人工监督的审查失效。<div><table class=\"img-grid-block\" style=\"width: 100%; border-collapse: collapse; margin: 12px 0px; table-layout: fixed;\"><tbody><tr><td style=\"width:100%;padding:6px;text-align:center;vertical-align:top;border:none\"><figure style=\"margin:0;text-align:center\"><img src=\"https://electrek.co/wp-content/uploads/sites/3/2025/11/Tesla-Robotaxi-driver-asleep.png?w=1600\" title=\"点击调整大小\" style=\"width: 50%; height: auto; display: block; border-radius: 4px; cursor: pointer; margin: 8px auto;\"></figure></td></tr></tbody></table><br></div>"
+                "content_html": "<b>9月10日</b>，伊利诺伊州众议员就媒体披露的数十段<b>驾驶员开启 FSD 后睡着的视频</b>致信交通部，质疑特斯拉对于开启 FSD 状态下驾驶员的人工监督失效。<div><table class=\"img-grid-block\" style=\"width: 100%; border-collapse: collapse; margin: 12px 0px; table-layout: fixed;\"><tbody><tr><td style=\"width:100%;padding:6px;text-align:center;vertical-align:top;border:none\"><figure style=\"margin:0;text-align:center\"><img src=\"https://electrek.co/wp-content/uploads/sites/3/2025/11/Tesla-Robotaxi-driver-asleep.png?w=1600\" title=\"点击调整大小\" style=\"width: 50%; height: auto; display: block; border-radius: 4px; cursor: pointer; margin: 8px auto;\"></figure></td></tr></tbody></table><br></div>"
               },
               {
                 "label": "e",
@@ -131,7 +131,7 @@
         ]
       }
     ],
-    "edited_at": "2026-09-11T09:37:54.500Z"
+    "edited_at": "2026-09-11T09:38:49.846Z"
   },
   {
     "week_id": "2026-W37",
