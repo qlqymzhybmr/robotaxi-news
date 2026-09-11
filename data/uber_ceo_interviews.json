@@ -7,5 +7,14 @@
     "published_at": "YYYY-MM-DD，必须是已核实的真实发布日期",
     "first_seen": "YYYY-MM-DD，第一次提醒用户的日期"
   },
-  "seen": []
+  "seen": [
+    {
+      "url": "https://seekingalpha.com/article/4945218-uber-technologies-inc-uber-presents-at-goldman-sachs-communacopia-technology-conference-2026",
+      "title": "Uber Technologies (UBER) Presents at Goldman Sachs Communacopia + Technology Conference 2026",
+      "platform": "现场炉边对话 / Transcript (Seeking Alpha)",
+      "published_at": "2026-09-10",
+      "first_seen": "2026-09-11",
+      "note": "Uber IR 公告确认 2026-09-10 10:10am PT 举行；transcript 页 403 无法读取，内容未核实"
+    }
+  ]
 }
