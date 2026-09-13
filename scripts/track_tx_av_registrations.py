@@ -181,6 +181,12 @@ def load_store() -> dict:
 
 
 def main() -> int:
+    # Windows 中文控制台默认 GBK，打印 ❌ 这类字符会抛 UnicodeEncodeError。
+    # 该异常若发生在下方逐家抓取的 except 块里，会绕过 failures 记账直接崩溃整个脚本，
+    # 导致 12 家一家都不写入——2026-09-10 至 09-13 连续四天因此静默失败。
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser(description="追踪德州 DMV 自动驾驶车辆登记数")
     ap.add_argument("--no-save", action="store_true", help="只显示，不写入")
     ap.add_argument("--discover", action="store_true",
