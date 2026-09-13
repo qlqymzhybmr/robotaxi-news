@@ -1,6 +1,7 @@
 import argparse
 import json
 import re
+import sys
 import time
 import urllib.parse
 from dataclasses import dataclass
@@ -832,6 +833,11 @@ def build_health_report(errors: List[str], raw_counts: Dict[str, int],
 
 
 def main() -> None:
+    # Windows GBK 控制台打印 ⚠/❌ 会抛 UnicodeEncodeError 并以退出码 1 结束，
+    # 2026-09-13 两次国外组抓取都在打印健康告警时崩溃（JSON 已写入但任务显示失败）。
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(description="Robotaxi Python RSS fetcher")
     parser.add_argument("--competitors", default="competitors.md")
     parser.add_argument("--group", choices=["all", "overseas", "china"], default="all")
