@@ -10,10 +10,28 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 from urllib.request import Request, urlopen
 
+import calendar
+
 import feedparser
 
 
 CN_TZ = timezone(timedelta(hours=8))
+
+
+def _utc_timestamp(struct) -> float:
+    """feedparser's *_parsed fields are UTC struct_time.
+
+    time.mktime() reads them as local time, which on a UTC+8 machine shifts
+    every entry 8 hours early and moves the 09:00→09:00 window. Garbage dates
+    (year 1 / 9999) also raise; return 0 so the entry falls outside any window
+    instead of aborting the whole run.
+    """
+    try:
+        ts = calendar.timegm(struct)
+        datetime.fromtimestamp(ts, tz=timezone.utc)
+        return ts
+    except (OverflowError, OSError, ValueError, TypeError):
+        return 0.0
 
 
 @dataclass
@@ -269,7 +287,7 @@ def fetch_direct_feed(
         if not getattr(entry, "published_parsed", None):
             continue
         published = datetime.fromtimestamp(
-            time.mktime(entry.published_parsed), tz=timezone.utc
+            _utc_timestamp(entry.published_parsed), tz=timezone.utc
         ).astimezone(CN_TZ)
         if not (window_start <= published <= window_end):
             continue
@@ -564,7 +582,7 @@ def fetch_company_news(
                 if not getattr(entry, "published_parsed", None):
                     continue
 
-                published = datetime.fromtimestamp(time.mktime(entry.published_parsed), tz=timezone.utc).astimezone(CN_TZ)
+                published = datetime.fromtimestamp(_utc_timestamp(entry.published_parsed), tz=timezone.utc).astimezone(CN_TZ)
                 if not (window_start <= published <= window_end):
                     continue
 
@@ -726,7 +744,7 @@ def fetch_local_media_news(
             if not getattr(entry, "published_parsed", None):
                 continue
             published = datetime.fromtimestamp(
-                time.mktime(entry.published_parsed), tz=timezone.utc
+                _utc_timestamp(entry.published_parsed), tz=timezone.utc
             ).astimezone(CN_TZ)
             if not (window_start <= published <= window_end):
                 continue
