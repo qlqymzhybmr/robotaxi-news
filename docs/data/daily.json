@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-09-20",
+    "items": [
+      {
+        "id": "2026-09-20-001",
+        "date": "2026-09-20",
+        "company": "长安",
+        "company_slug": "changan",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "张晓宇：2027 年 L3 量产、2028 年 L4 开始商业化运营；天枢领航累计投入超 600 亿元、研发团队 7,500 人",
+        "summary_html": "<p><b>9月19日</b>，在<b>2026 中国汽车产业发展（泰达）国际论坛</b>上，<b>中国长安汽车集团首席科学家、重庆长安执行副总裁张晓宇</b>给出时间表：<b>2027 年 L3 级自动驾驶实现量产，2028 年 L4 级开始商业化运营</b>。他同时援引数据称 <b>2025 年 L2 级辅助驾驶渗透率已达 66.1%</b>。</p><p>长安副总裁<b>贺刚</b>补充，<b>天枢领航</b>智驾技术<b>累计投入超 600 亿元</b>，其中产品研发投入占一半以上，<b>研发团队 7,500 人</b>。</p><p>这是继 9 月 4 日发布天枢领航、9 月 12 日朱华荣「核心技术必须掌握在自己手中」之后，长安对自研智驾给出的<b>首个明确 L3/L4 时间表</b>。</p>",
+        "source_name": "长安汽车张晓宇：2027 年 L3 级自动驾驶将实现量产，2028 年 L4 级开始商业化运营",
+        "source_url": "https://www.ithome.com/1/004/472.htm",
+        "published_at": "2026-09-19",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-09-20-002",
+        "date": "2026-09-20",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "为燃油车做专项算法：感知与预测可复用，执行层须按动力特性单独适配",
+        "summary_html": "<p><b>9月20日</b>，行业媒体解读 Momenta 的<b>燃油车专项算法</b>——该方案随 <b>9 月 16 日国产奔驰长轴距 GLE 上市</b>首次落地。</p><p>技术口径：<b>感知、预测与部分决策能力在油车与电车之间可以复用</b>，但<b>动力形式不同</b>——电车由电机直接输出扭矩、可精确调节，燃油车的发动机与变速箱响应特性不同，<b>执行环节必须做针对性适配</b>，否则纵向控制的平顺性与响应速度都会受影响。</p><p>意义在于供给侧：智驾方案商此前主要绑定纯电平台，<b>燃油车专项算法是向合资燃油车存量市场渗透的前置条件</b>。</p>",
+        "source_name": "燃油车智驾能否照搬纯电动车方案？Momenta为何要做燃油车专项算法？",
+        "source_url": "https://news.qq.com/rain/a/20260920A043K100",
+        "published_at": "2026-09-20",
+        "rating": 1,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-09-20-003",
+        "date": "2026-09-20",
+        "company": "现代",
+        "company_slug": "hyundai",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "CEO 穆诺兹：将在佐治亚工厂为 Waymo 生产「数万辆」IONIQ 5 Robotaxi；称 Robotaxi 代工业务已盈利，是电动车业务「最大的机会」",
+        "summary_html": "<p><b>9月19日</b>，<b>现代汽车 CEO José Muñoz</b> 向媒体表示，现代将在<b>佐治亚州 Metaplant（HMGMA）</b>为 <b>Waymo</b> 生产<b>「数万辆」IONIQ 5 Robotaxi</b>，<b>四季度开始交付</b>首批非测试用途车辆，车辆搭载 <b>Waymo 第六代自动驾驶硬件</b>。</p><p>三点新口径：其一，<b>Robotaxi 代工业务目前已经盈利</b>；其二，在美国电动车需求放缓的背景下，<b>Robotaxi 是现代电动车业务「最大的机会」</b>；其三，他暗示<b>客户不止 Waymo</b>，看到「显著的规模化机会」。</p><p>9 月 19 日简报已收录「最早 10 月启动量产」，本条为数量级、盈利状态与战略定位。</p>",
+        "source_name": "Hyundai's CEO's Answer For The EV Slowdown: Building Thousands Of Robotaxis",
+        "source_url": "https://insideevs.com/news/808830/hyundais-answer-for-ev-slowdown-building-robotaxis/",
+        "published_at": "2026-09-19",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-20-004",
+        "date": "2026-09-20",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "NHTSA 与 SAE 正式签署 A2SCEND 合作协议：3 年、500 万美元，数据用于支撑首个联邦自动驾驶系统性能标准",
+        "summary_html": "<p><b>9月18日前后</b>，<b>NHTSA 局长 Jonathan Morrison</b> 在匹兹堡 <b>AI Horizons 峰会</b>上披露，NHTSA 与 <b>SAE International</b> 的合作协议<b>已正式签署</b>，启动 <b>A2SCEND 联盟</b>——<b>为期 3 年、投入 500 万美元</b>，其数据将用于制定<b>美国首个针对自动驾驶系统（ADS）性能的联邦标准</b>。该合作于 <b>7 月 30 日</b>在圣迭戈 SAE 自动驾驶交通研讨会上首次宣布，本次为正式执行。</p><p>背景：现行 FMVSS 多数条款按「车上有人驾驶」设计，这正是 NHTSA 目前以 Special Order 追问 Tesla Cybercab 合规依据的根源（Tesla 须在 <b>9 月 30 日前</b>宣誓答复）。在新标准出台前，NHTSA 的口径是<b>规则未改写即仍然有效</b>。</p><p>⚠️ <b>口径补充</b>：9 月 19 日简报曾将「NHTSA 正在制定自动驾驶性能联邦标准」列为未核实条目排除（当时仅有社交媒体转述）。本条为可核实的官方版本。</p>",
+        "source_name": "SAE ITC and NHTSA Launch A2SCEND Consortium",
+        "source_url": "https://www.sae.org/articles/press-releases/2026/09/sae-itc-nhtsa-a2scend",
+        "published_at": "2026-09-19",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-20-005",
+        "date": "2026-09-20",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "加州车主开辅助驾驶在 I-80 上睡着被查：车辆法规无对应条款，只能按「不安全车速」开罚单",
+        "summary_html": "<p><b>9月19日</b>，<b>NBC Bay Area</b> 与 <b>Mercury News</b> 报道：<b>9 月 2 日</b>，加州公路巡警（CHP）在 <b>I-80 索拉诺县路段</b>发现一辆 Tesla 以 <b>60 英里/小时</b>行驶，<b>驾驶员戴着墨镜、瘫坐在座位上疑似睡着</b>，车辆处于自动辅助驾驶状态。</p><p>执法层面的问题是：<b>加州车辆法规中没有针对「开启自动驾驶时睡觉」的条款</b>，警方最终以<b>「不安全车速」</b>开出罚单。CHP 索拉诺分局警官 Scott Heitman 的说法是：「睡着时的安全车速是多少？零。」</p><p>这与 9 月 10 日众议员就 43 段「驾驶员睡觉」视频质询交通部是同一问题的两端：<b>联邦层面在查厂商的提示设计，州层面则发现现行罚则无法对应这种行为</b>。</p>",
+        "source_name": "CHP Solano catches driver sleeping inside Tesla going 60 mph",
+        "source_url": "https://www.nbcbayarea.com/news/local/chp-solano-driver-sleeping/4145395/",
+        "published_at": "2026-09-19",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-20-006",
+        "date": "2026-09-20",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "12 家全部零变化，合计 2,139 辆；Cybercab 维持 58 辆，昨日 +9 未延续",
+        "summary_html": "<p>截至 <b>2026-09-20</b> 快照（已核对每家 history 末条日期均为当日、无重复记录、12 家全部抓取成功），德州 TxMCCS 登记的 12 家运营方合计 <b>2,139 辆</b>，与 9 月 19 日持平；<b>Tesla 448 辆（Model Y 390 / Cybercab 58）</b>。</p><p>Cybercab 登记数近期时间线：9 月 3 日基线 <b>45</b> → 9 月 13 日 <b>49</b>（+4）→ 9 月 14–18 日连续 5 天 <b>49</b> → 9 月 19 日 <b>58</b>（+9）→ 9 月 20 日 <b>58</b>（持平）。</p>",
+        "source_name": "Texas DMV TxMCCS 自动驾驶车辆登记",
+        "source_url": "https://txmccs.txdmv.gov/truckstop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles",
+        "published_at": "2026-09-20",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-09-19",
     "items": [
       {
