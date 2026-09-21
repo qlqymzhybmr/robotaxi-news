@@ -1,5 +1,200 @@
 [
   {
+    "week_id": "2026-W39",
+    "date_range": "0915-0921",
+    "title": "（W38）无人驾驶行业0915-0921重要新闻",
+    "generated_at": "2026-09-21T20:00:00+08:00",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：宣布 2028 年进入新加坡；停运 5 个月后恢复圣安东尼奥服务；纳什维尔经 Lyft 叫车实测未匹配到 Waymo；官宣 2027 年上线东京；拉斯维加斯开放付费服务，成为美国第 15 个运营城市</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月17日</b>，Waymo 宣布与新加坡交通部、陆路交通管理局合作，<b>2028 年推出全无人网约车服务</b>。首批 I-PACE 年内运抵，2027 年人工驾驶测绘全岛后申请审批，将成为继 ComfortDelGro、Grab 之后新加坡第三家自动驾驶运营商。",
+                "daily_ids": [
+                  "2026-09-19-005"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>9月17日</b>，Waymo <b>恢复圣安东尼奥服务</b>，覆盖市中心与机场 ~60 平方英里；此前 4 月一辆空车驶入积水被冲走，当地服务停运 5 个月。同月凤凰城仍有车辆在积水街道反复进退，卡住 10 余分钟。",
+                "daily_ids": [
+                  "2026-09-18-007"
+                ]
+              },
+              {
+                "label": "c",
+                "content_html": "<b>9月16日</b>，测评人在纳什维尔通过 Lyft 连续下单 14 次，<b>全部匹配到人类司机</b>，频繁取消后账号被永久封禁；乘客在 Lyft 上无法主动选择 Waymo。",
+                "daily_ids": [
+                  "2026-09-17-013"
+                ]
+              },
+              {
+                "label": "d",
+                "content_html": "<b>9月14日</b>，Waymo 与日本交通、GO 官宣 <b>2027 年在东京上线 Robotaxi</b>，车队逐步扩至 ~100 辆，GO 与 Waymo 双 App 叫车；同日柏林市政府称 Waymo 正筹备当地试运营，Waymo 未确认。",
+                "daily_ids": [
+                  "2026-09-15-004",
+                  "2026-09-15-005"
+                ]
+              },
+              {
+                "label": "e",
+                "content_html": "<b>9月14日</b>，Waymo 在<b>拉斯维加斯开放付费服务</b>，为其美国第 15 个运营城市，服务区 ~24 平方英里覆盖 Strip，机场尚需单独授权。",
+                "daily_ids": [
+                  "2026-09-15-003"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：Cybercab 被困奥斯汀酒店停车场；NHTSA 升级为 Special Order，要求 9 月 30 日前宣誓答复 Cybercab 合规依据；Robotaxi 因不能上高速致 10 分钟行程绕行 70 分钟</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月18日</b>，奥斯汀一辆 Cybercab 因酒店停车场出口被施工围挡部分遮挡，<b>未识别出留出的通行车道</b>，绕行 4 圈后停回原上车点并提示已到达。",
+                "daily_ids": [
+                  "2026-09-19-007"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>9月15日</b>，媒体披露 NHTSA 已于 9 月 10 日签发 <b>Special Order</b>，要求 Tesla 在 9 月 30 日前宣誓答复 21 项质询，说明无方向盘、踏板、后视镜的 Cybercab 如何符合 FMVSS、未申请豁免如何合规；不如实答复最高罚 ~1.39 亿美元。",
+                "daily_ids": [
+                  "2026-09-16-005"
+                ]
+              },
+              {
+                "label": "c",
+                "content_html": "<b>9月14日</b>，奥斯汀乘客 ~10 分钟的行程被 Cybercab <b>绕行 70 分钟</b>，原因是 Tesla Robotaxi 仍不能上高速；Model Y Robotaxi 使用同一套软件，存在同样问题。",
+                "daily_ids": [
+                  "2026-09-15-006"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Lucid / Bolt",
+            "company_slug": "lucid",
+            "headline_html": "<b>Lucid / Bolt：结盟在欧洲部署至少 2.5 万辆 L4 Robotaxi</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月17日</b>，Lucid 与 Bolt 宣布合作，基于 Lucid 中型车平台与英伟达 Hyperion 打造 L4 车型，<b>Bolt 计划在欧洲部署至少 25,000 辆</b>，服务其 2035 年平台接入 10 万辆自动驾驶车的目标。",
+                "daily_ids": [
+                  "2026-09-18-005"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "May Mobility",
+            "company_slug": "maymobility",
+            "headline_html": "<b>May Mobility：拟通过 SPAC 合并登陆纳斯达克，企业价值 14 亿美元</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月16日</b>，May Mobility 宣布与 ACP Holdings Acquisition Corp. 合并上市，<b>企业价值 14 亿美元、最多募资 3.37 亿美元</b>，股票代码 MAY，将成为美国首家纯自动驾驶网约车上市公司。",
+                "daily_ids": [
+                  "2026-09-17-006"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "现代",
+            "company_slug": "hyundai",
+            "headline_html": "<b>现代：将在佐治亚工厂为 Waymo 量产数万辆 IONIQ 5，称 Robotaxi 代工业务已盈利；Motional 车辆实现整车下线直发</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月19日</b>，现代 CEO 称将在佐治亚工厂为 Waymo 生产<b>数万辆</b> IONIQ 5 Robotaxi，<b>最早 10 月量产、四季度开始交付</b>，并表示 Robotaxi 代工业务已经盈利。",
+                "daily_ids": [
+                  "2026-09-19-006",
+                  "2026-09-20-003"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>9月15日</b>，Motional 的 IONIQ 5 Robotaxi 由现代新加坡工厂<b>整车下线直发拉斯维加斯</b>，传感器在产线内完成集成，到场无需改装。",
+                "daily_ids": [
+                  "2026-09-16-010"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "大众",
+            "company_slug": "volkswagen",
+            "headline_html": "<b>大众：MOIA 首轮引入外部投资失败，Uber 与 Lyft 退出入股谈判</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月16日</b>，媒体报道 <b>Uber 与 Lyft 均已退出入股 MOIA 的谈判</b>，分歧在于大众要求新股东分摊其已投入的 ~20 亿欧元；MOIA 在洛杉矶原定 2026 年底的商业化时间表因此存疑。",
+                "daily_ids": [
+                  "2026-09-17-007"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Grab",
+            "company_slug": "grab",
+            "headline_html": "<b>Grab：新加坡自动驾驶车队半年内从 10 辆扩至 50 辆，四季度起向公众收费</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月14日</b>，Grab 宣布未来 6 个月将新加坡自动驾驶车队由 10 辆扩至 50 辆，<b>榜鹅点对点服务四季度起向公众开放并收费</b>，后续拟扩出榜鹅；自动驾驶技术由文远知行提供。",
+                "daily_ids": [
+                  "2026-09-15-010"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "萝卜快跑",
+            "company_slug": "apollo",
+            "headline_html": "<b>萝卜快跑：计划向港府提交商业化运营申请，在港测试里程超 27 万公里</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月16日</b>，香港发布首份五年规划与施政报告，提出加快自动驾驶商业化，李彦宏随即表示百度<b>计划提交自动驾驶项目商业化运作申请</b>。截至 26年7月底，萝卜快跑在港测试里程超 27 万公里，范围从机场岛扩至北大屿山、九龙东与港岛南区。",
+                "daily_ids": [
+                  "2026-09-18-001"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "哈啰",
+            "company_slug": "hellobike",
+            "headline_html": "<b>哈啰：Robotaxi 业务完成 ~1 亿美元融资，投后估值近 30 亿美元</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>9月16日</b>，哈啰 Robotaxi（造父智能）完成 ~1 亿美元新一轮融资，上海国投先导基金领投，<b>投后估值近 30 亿美元</b>。该业务由哈啰、蚂蚁、宁德时代于 25年6月发起，首款量产 L4 车型 HR1 于 26年7月下线、已超百台，计划 26–27 年集中投放 10 余城。",
+                "daily_ids": [
+                  "2026-09-17-001"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "week_id": "2026-W38-WIP",
     "date_range": "0908-0914",
     "title": "（W37）无人驾驶行业0908-0914重要新闻",
