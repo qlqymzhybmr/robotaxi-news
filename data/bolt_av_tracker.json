@@ -1,0 +1,220 @@
+{
+  "_comment": "Bolt 自动驾驶进展台账。daily-fetch 的 Phase 4b 每天查一次。两个用途：(1) seen 去重——报过的新闻不再提醒；(2) partnerships 记录每个合作里「L4 技术到底是谁提供的」，有新合作或口径变化时更新。l4_tech_provider 只按原文写明的填，原文没写就填「未披露」，不做推断。",
+  "_schema": {
+    "partnerships[].l4_provider_type": "bolt_inhouse（Bolt 自研） / oem（整车厂提供） / l4_player（第三方 L4 技术公司，如小马智行） / unknown（未披露）",
+    "partnerships[].l4_basis": "判定依据：引用原文里说明谁提供自动驾驶技术的那句话（转述即可），没有就写「原文未说明」",
+    "seen[].url": "新闻链接（唯一键，按 url 去重）",
+    "seen[].published_at": "YYYY-MM-DD，必须是打开原文核实过的发布日期",
+    "seen[].first_seen": "YYYY-MM-DD，第一次提醒用户的日期"
+  },
+  "unit": {
+    "name": "Bolt Autonomous Driving Solutions（官网简称 Bolt AD Solutions）",
+    "positioning": "Bolt 专门的自动驾驶部门，与整车厂、自动驾驶技术公司合作，为欧洲共同设计、集成并商业化自动驾驶出行；主张在别国道路训练的模型不能直接搬到欧洲，需在欧洲本地积累数据、基础设施与合作关系",
+    "services": [
+      "产品共同设计（从研发阶段参与定义车辆、软件、安全与乘客体验要求）",
+      "车队管理与部署",
+      "欧洲驾驶数据"
+    ],
+    "testing_model": "Living Lab：把车辆、乘客、城市、监管放在一起在真实路况测试，首个在卢森堡",
+    "people": [
+      {
+        "name": "Jevgeni Kabanov",
+        "title": "Bolt 总裁、自动驾驶负责人"
+      },
+      {
+        "name": "Charlotte Eisner",
+        "title": "自动驾驶业务商业化与企业合作负责人"
+      }
+    ],
+    "platform_scale": "50+ 国家、850+ 城市、2 亿+ 用户（官网口径）",
+    "long_term_target": "2035 年平台接入 10 万辆自动驾驶车",
+    "founded": "未查到",
+    "source": "https://bolt.eu/en/company/autonomous-solutions/",
+    "last_verified": "2026-09-21",
+    "other_notes": "Bolt 已加入 PAVE Europe（自动驾驶公众教育组织，加入日期待核实）"
+  },
+  "partnerships": [
+    {
+      "id": "pony-2025-11",
+      "announced": "2025-11-25",
+      "partners": [
+        "小马智行 (Pony.ai)"
+      ],
+      "vehicle_provider": "未披露",
+      "l4_tech_provider": "小马智行",
+      "l4_provider_type": "l4_player",
+      "l4_basis": "报道写明将小马智行的 L4 自动驾驶技术接入 Bolt 网络；这是 Bolt 的第一个自动驾驶合作",
+      "bolt_role": "网约车平台",
+      "scale": "原计划 2026 年首批在欧洲部署，其后一年内全面上线",
+      "cities": [],
+      "status": "已签约；2026 年 6 月起以卢森堡测试形式推进（见 pony-stellantis-luxembourg-2026-06）",
+      "sources": [
+        "https://bolt.eu/en/blog/bolt-ponyai-autonomous-driving-europe/",
+        "https://www.euronews.com/next/2025/11/25/bolt-partners-with-chinas-ponyai-as-robotaxi-push-accelerates-in-europe"
+      ]
+    },
+    {
+      "id": "stellantis-2025-12",
+      "announced": "2025-12-09",
+      "partners": [
+        "Stellantis"
+      ],
+      "vehicle_provider": "Stellantis",
+      "l4_tech_provider": "未披露",
+      "l4_provider_type": "unknown",
+      "l4_basis": "建档时未逐页核实原文；Stellantis 本身不做 L4 驾驶软件，另于 2025 年 10 月与小马智行在欧洲合作，但不能据此推断本合作的技术方；另：Bolt 此前一个月（2025-11）已与小马智行合作，2026-06 三方在卢森堡联合测试，但 2025-12 这份 Stellantis 合作本身是否指定小马智行为技术方，原文未说明",
+      "bolt_role": "网约车平台（待核实）",
+      "scale": "据报道经较长试点期后 2029 年起为 Bolt 量产 Robotaxi（出处待核实）",
+      "cities": [],
+      "status": "已签约，细节待核实",
+      "sources": [
+        "https://www.electrive.com/2025/12/09/bolt-partners-with-stellantis-for-autonomous-driving/"
+      ]
+    },
+    {
+      "id": "nvidia-gtc-2026",
+      "announced": "2026 年 GTC 大会（具体日期待核实）",
+      "partners": [
+        "NVIDIA"
+      ],
+      "vehicle_provider": "不涉及整车（平台与模型合作）",
+      "l4_tech_provider": "Bolt 自建，底座为 NVIDIA：DRIVE Hyperion（双 DRIVE AGX Thor + 激光雷达/毫米波雷达/摄像头）、Cosmos 数据整理、Omniverse NuRec 仿真、Alpamayo 基础模型",
+      "l4_provider_type": "bolt_inhouse",
+      "l4_basis": "报道写明 Bolt 将用 NVIDIA Alpamayo 基础模型加速驾驶策略学习、让车辆行为适应欧洲各城市路况；Kabanov 称要打造欧洲主导、掌控自身数据与技术的自动驾驶方案。即驾驶策略由 Bolt 在 NVIDIA 模型上训练，NVIDIA 提供平台与基础模型",
+      "bolt_role": "自建自动驾驶技术栈 + 平台运营",
+      "scale": "未公布",
+      "cities": [],
+      "status": "已宣布，未公布时间表",
+      "sources": [
+        "https://www.siliconrepublic.com/business/bolt-teams-up-with-nvidia-to-scale-european-robotaxis-uber-autonomous-vehicles",
+        "https://zagdaily.com/connected/bolt-and-nvidia-to-build-ai-backbone-for-european-robotaxis/"
+      ]
+    },
+    {
+      "id": "pony-stellantis-luxembourg-2026-06",
+      "announced": "2026-06-09",
+      "partners": [
+        "小马智行 (Pony.ai)",
+        "Stellantis"
+      ],
+      "vehicle_provider": "Stellantis（L4 就绪平台的中型厢式车）；测试车为小马智行第七代 Robotaxi",
+      "l4_tech_provider": "小马智行",
+      "l4_provider_type": "l4_player",
+      "l4_basis": "报道明确三方分工：小马智行提供自动驾驶技术与运营经验，Stellantis 提供车辆平台，Bolt 提供网约车平台与市场",
+      "bolt_role": "网约车平台与运营、市场触达",
+      "scale": "测试",
+      "cities": [
+        "Luxembourg"
+      ],
+      "status": "测试（Living Lab）",
+      "sources": [
+        "https://www.just-auto.com/news/bolt-pony-ai-stellantis-av-pilot-luxembourg/"
+      ]
+    },
+    {
+      "id": "lucid-2026-09",
+      "announced": "2026-09-17",
+      "partners": [
+        "Lucid",
+        "NVIDIA（参考架构）"
+      ],
+      "vehicle_provider": "Lucid（即将推出的中型车平台）",
+      "l4_tech_provider": "未明确：Lucid 新闻稿称 Lucid Technologies 整合其 AI、辅助驾驶与自动驾驶能力；但 Bolt 同时在用同一套 NVIDIA Hyperion 自建技术栈，量产车上的驾驶软件归 Lucid 还是 Bolt 未说明",
+      "l4_provider_type": "unknown",
+      "l4_basis": "2026-09-21 由 oem 改为 unknown。Lucid 新闻稿写明 Lucid Technologies 整合 Lucid 的 AI、ADAS 与自动驾驶能力，且车辆采用 NVIDIA Hyperion；另据 GTC 2026 的 Bolt×NVIDIA 合作，Bolt 正基于 Hyperion 与 Alpamayo 自建驾驶策略。两份原文都没说明 Lucid 车上的驾驶软件由谁提供，出现明确披露后再改",
+      "bolt_role": "Bolt AD Solutions 牵头：定义车辆、软件、安全与乘客体验要求，拥有并运营车队，建设充电等基础设施与城市合作",
+      "scale": "欧洲至少 25,000 辆",
+      "cities": [],
+      "status": "已签约，车型开发中",
+      "sources": [
+        "https://ir.lucidmotors.com/news-releases/news-release-details/lucid-and-bolt-partner-develop-and-deploy-autonomous-mobility/"
+      ]
+    }
+  ],
+  "seen": [
+    {
+      "url": "https://ir.lucidmotors.com/news-releases/news-release-details/lucid-and-bolt-partner-develop-and-deploy-autonomous-mobility/",
+      "title": "Lucid and Bolt Partner to Develop and Deploy Autonomous Mobility at Scale Across Europe",
+      "published_at": "2026-09-17",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知，已收录于 9/18 daily"
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/lucid-and-bolt-partner-to-develop-and-deploy-autonomous-mobility-at-scale-across-europe-302881323.html",
+      "title": "Lucid and Bolt Partner to Develop and Deploy Autonomous Mobility at Scale Across Europe (PR Newswire)",
+      "published_at": "2026-09-17",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知"
+    },
+    {
+      "url": "https://electrek.co/2026/09/17/lucid-bolt-25000-autonomous-evs-europe/",
+      "title": "Lucid and Bolt to deploy 25,000 autonomous EVs across Europe",
+      "published_at": "2026-09-17",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知"
+    },
+    {
+      "url": "https://www.just-auto.com/news/bolt-pony-ai-stellantis-av-pilot-luxembourg/",
+      "title": "Bolt, Pony.ai and Stellantis launch AV pilot in Luxembourg",
+      "published_at": "2026-06-09",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知"
+    },
+    {
+      "url": "https://www.electrive.com/2025/12/09/bolt-partners-with-stellantis-for-autonomous-driving/",
+      "title": "Bolt partners with Stellantis for autonomous driving",
+      "published_at": "2025-12-09",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知"
+    },
+    {
+      "url": "https://bolt.eu/en/company/autonomous-solutions/",
+      "title": "Bolt Autonomous Solutions（官网部门页）",
+      "published_at": "未标注",
+      "first_seen": "2026-09-21",
+      "note": "部门介绍页，非新闻"
+    },
+    {
+      "url": "https://bolt.eu/en/blog/bolt-ponyai-autonomous-driving-europe/",
+      "title": "Bolt and Pony.ai bring self-driving to Europe（Bolt 官方博客）",
+      "published_at": "2025-11-25",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知"
+    },
+    {
+      "url": "https://www.euronews.com/next/2025/11/25/bolt-partners-with-chinas-ponyai-as-robotaxi-push-accelerates-in-europe",
+      "title": "Bolt partners with China's Pony.ai as robotaxi push accelerates in Europe",
+      "published_at": "2025-11-25",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知"
+    },
+    {
+      "url": "https://www.siliconrepublic.com/business/bolt-teams-up-with-nvidia-to-scale-european-robotaxis-uber-autonomous-vehicles",
+      "title": "Bolt teams up with Nvidia to scale European robotaxis",
+      "published_at": "GTC 2026，日期待核实",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知"
+    },
+    {
+      "url": "https://zagdaily.com/connected/bolt-and-nvidia-to-build-ai-backbone-for-european-robotaxis/",
+      "title": "Bolt and Nvidia to build AI backbone for European robotaxis",
+      "published_at": "GTC 2026，日期待核实",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知"
+    },
+    {
+      "url": "https://www.electrive.com/2026/09/19/lucid-and-bolt-plot-electric-robotaxi-service-for-europe/",
+      "title": "Lucid and Bolt plot electric Robotaxi service for Europe",
+      "published_at": "2026-09-19",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知"
+    },
+    {
+      "url": "https://zagdaily.com/connected/bolt-joins-pave-europe-in-av-push/",
+      "title": "Bolt joins PAVE Europe in AV push",
+      "published_at": "日期待核实",
+      "first_seen": "2026-09-21",
+      "note": "建档时已知"
+    }
+  ]
+}

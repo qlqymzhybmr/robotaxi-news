@@ -541,9 +541,88 @@ json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 ---
 
+## Phase 4b：Bolt 自动驾驶进展（自动执行）
+
+Phase 4 完成后**立即执行**，无需用户手动触发。与 Phase 4 并列：同样查台账去重、同样**不单独写进 daily 文件**，在最终回复里单独成块。
+
+### 目标
+
+每天看一次 Bolt（欧洲网约车平台）的自动驾驶进展，**重点是 Bolt Autonomous Driving Solutions（官网简称 Bolt AD Solutions）这个部门的动作**：新合作、新城市测试或运营、牌照、人事、车队规模、融资与投入。
+
+**每条都要回答同一个核心问题：这个合作里，L4 技术到底是谁提供的？** 分四类：
+
+| 类型 | 含义 | 例子 |
+|---|---|---|
+| `bolt_inhouse` | Bolt 自研（可以建在第三方平台之上） | NVIDIA 合作（GTC 2026）：Bolt 基于 Hyperion 与 Alpamayo 基础模型自训驾驶策略 |
+| `oem` | 整车厂提供 | 目前没有明确案例 |
+| `l4_player` | 第三方 L4 技术公司提供 | 小马智行（2025-11 签约，2026-06 起卢森堡测试） |
+| `unknown` | 原文未说明 | Stellantis（2025-12）；Lucid（2026-09，Lucid 与 Bolt 都可能是驾驶软件方，原文未说明） |
+
+**判定只按原文写明的来**。原文没写清谁提供驾驶软件，就标 `unknown`，不能因为「某车企和某 L4 公司另有合作」就推断。**NVIDIA Hyperion 这类参考架构只是算力与传感器，不等于提供驾驶软件**，要分开写。
+
+### 为什么单独跟
+
+Bolt 不在 `competitors.md` 的公司清单里，Phase 1 抓不到它。而它同时在押两条路线：第三方 L4 公司（小马智行），和基于 NVIDIA 平台自建技术栈（Hyperion + Alpamayo）；Lucid 合作的驾驶软件归属尚未明确。哪条路线占上风，决定了欧洲 Robotaxi 的技术供应格局，也关系到国内 L4 公司的出海空间。
+
+### 搜索关键词（轮流尝试，至少用前四组）
+
+1. `Bolt autonomous OR robotaxi OR driverless`（限近 7 天）
+2. `"Bolt AD Solutions" OR "Bolt Autonomous Driving Solutions"`
+3. `"Jevgeni Kabanov" autonomous`（Bolt 总裁、自动驾驶负责人）
+4. `Bolt robotaxi Pony.ai OR Stellantis OR Lucid`
+5. `Bolt 自动驾驶` / `Bolt Robotaxi`（中文报道，常带小马智行角度）
+6. Bolt 官网部门页 https://bolt.eu/en/company/autonomous-solutions/ （看是否新增合作方、城市、负责人）
+
+注意同名干扰：**Bolt 也是电动滑板车、支付公司（Bolt Financial）和雪佛兰车型（Chevy Bolt）的名字**，标题只有「Bolt」而正文与出行平台无关的要排除。
+
+### 去重：查台账，只提醒没提醒过的
+
+读 `data/bolt_av_tracker.json`：
+
+- `seen` 里**已有相同 `url`** → 跳过
+- 不在里面 → 打开原文核实发布日期，**只报距今 ≤ 7 天**的；确认后提醒用户并追加进 `seen`
+- 同一事件多家媒体报道，只追加一条主来源，其余写进该条的 `note`
+
+**`partnerships` 也要维护**（这是这个 Phase 的核心产物）：
+
+- 出现**新合作** → 新增一条，填 `vehicle_provider`、`l4_tech_provider`、`l4_provider_type`、`l4_basis`、`bolt_role`、`scale`、`cities`、`status`、`sources`
+- 已有合作**口径变化**（例如 Lucid 合作后来披露引入了第三方 L4 软件公司、某合作从测试进入收费运营、新增城市）→ 更新对应字段，并在 `l4_basis` 里写清是哪天、哪篇原文披露的
+- `unit` 里的负责人、服务、城市有变化 → 更新并改 `last_verified`
+
+写入一律用 Python `json.load` / `json.dump`（同 daily.json 的理由，避免手拼 JSON 出转义错）。
+
+### ⚠️ 强制日期核实
+
+同 Phase 4：搜索摘要里出现「2026」不算数，必须打开原文确认发布日期；确认不了就不报。转载稿以最早原始发布日期为准。
+
+### 有新进展时
+
+在最终回复里**单独成一块**：
+
+```markdown
+## 🟢 Bolt 自动驾驶进展（1 条新内容）
+
+- **日期**：2026-09-17（已核实：Lucid 投资者关系页新闻稿标注日期）
+- **事件**：Bolt 与 Lucid 合作，在欧洲部署至少 25,000 辆 L4 车
+- **L4 技术提供方**：未明确——Lucid 新闻稿称 Lucid Technologies 整合其自动驾驶能力，但 Bolt 同时在用同一套 NVIDIA Hyperion 自建技术栈，量产车上的驾驶软件归属原文未说明
+- **车辆提供方**：Lucid（中型车平台）
+- **Bolt 的角色**：Bolt AD Solutions 定义需求、拥有并运营车队、建设基础设施与城市合作
+- **链接**：[标题](url)
+```
+
+**当 `partnerships` 有新增或变化时**，在区块末尾附一张当前合作格局表（合作方 / 车辆 / L4 技术 / 类型 / 状态），让用户一眼看到技术供应格局有没有变。
+
+**与 daily 的关系**：Phase 4b 本身不写 daily 文件。但如果当天是**可核实的重大事件**（新合作、新城市测试或运营、牌照），它同时也是新闻，应在 daily 的「国外出行平台」section 正常收录一条（评级按常规标准），并在 Phase 4b 区块里注明「已收录进 daily」，避免两边说法不一致。
+
+### 无新进展时
+
+不提示，不写任何文件。结束动作里用一行带过。
+
+---
+
 ## Phase 5：德州 DMV 车队登记追踪（自动执行）
 
-Phase 4 完成后执行一条命令即可：
+Phase 4b 完成后执行一条命令即可：
 
 ```bash
 python scripts/track_tx_av_registrations.py
@@ -601,7 +680,7 @@ python scripts/track_tx_av_registrations.py
 当时的崩溃原因：`except` 块里打印 `❌` 在 Windows GBK 控制台抛 `UnicodeEncodeError`，该异常发生在异常处理内部，绕过了 `failures` 记账直接终止脚本。已在 `main()` 开头把 stdout/stderr 重设为 utf-8 修复。
 
 
-**为什么这条要写进 daily 而 Phase 4/6 不写**：车队数量变化是当日发生的、可核实的行业事实，属于新闻；而访谈提醒和源健康告警是流程元信息。
+**为什么这条要写进 daily 而 Phase 4/4b/6 不写**：车队数量变化是当日发生的、可核实的行业事实，属于新闻；而访谈提醒和源健康告警是流程元信息。
 
 ### 注意
 
@@ -690,10 +769,13 @@ Phase 1 ~ Phase 6 全部完成后,统一告诉用户。
 - 抓取源健康:正常（N 个源）/ N 个警告,详见上方
 - 德州车队登记:共 N 辆（Model Y x / Cybercab y），较昨日 +z / 无变化
 - Uber CEO 访谈:无新内容 / 见下方单独区块
+- Bolt 自动驾驶:无新进展 / 见下方单独区块
 
 发布网页请运行:git add -A && git commit -m "daily YYYY-MM-DD" && git push
 
 ## 🎙️ Uber CEO 访谈提醒（仅当有新内容时，按 Phase 4 的格式单独成块）
+
+## 🟢 Bolt 自动驾驶进展（仅当有新内容时，按 Phase 4b 的格式单独成块）
 ```
 
 如果有 fetch 失败,补充提示:"注意:X 个 URL fetch 失败,请检查文件末尾的 ⚠️ 列表"

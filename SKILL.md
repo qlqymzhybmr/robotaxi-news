@@ -30,7 +30,7 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 | "把这条加进 examples" | 直接编辑 `important-examples.md`（仅在发现评级明显偏差时手动补充） | 按需 |
 
 **默认执行策略(重要)**:
-- 说"跑今日新闻"时,skill **默认自动跑完 6 个 Phase**:
+- 说"跑今日新闻"时,skill **默认自动跑完 Phase 1–6（含 4b，共 7 步）**:
 
 | Phase | 做什么 | 产出去哪 |
 |------|------|------|
@@ -38,11 +38,12 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 | 2 | 国内组抓取 | 同一文件的国内 section |
 | 3 | 自动发布**全部条目**（不按 rating 过滤） | `docs/data/daily.json` |
 | 4 | **Uber CEO 访谈查询** | **不写文件,单独提醒用户**(见下) |
+| 4b | **Bolt 自动驾驶进展**（重点 Bolt AD Solutions；判定每个合作的 L4 技术由谁提供） | **不写文件,单独提醒用户**；维护 `data/bolt_av_tracker.json`(见下) |
 | 5 | **德州 DMV 车队登记** | 有增减则**写进 daily**（它是真新闻） |
 | 6 | **抓取源健康告警**（流程最后一步） | **不写文件,单独提醒用户**(见下) |
 
 - Phase 1、2 的产物**合并写入同一份文件** `data/daily/YYYY-MM-DD.md`（包含 "## 国外 L4" 和 "## 国内 L4" 等 section）,体感是一次跑完、一份文件
-- Phase 4、6 **刻意不写进 daily 文件**:它们不是当日新闻,也不进周报,混进去只会干扰阅读
+- Phase 4、4b、6 **刻意不写进 daily 文件**:它们不是当日新闻,也不进周报,混进去只会干扰阅读
 - 分阶段的好处:避免单次 tool 调用过多导致上下文或 5 小时额度问题
 - 如果 Phase 1 跑完后中断(网络/额度),隔一段时间说"只跑国内组"即可补跑 Phase 2,不会覆盖已有的国外组内容
 
@@ -87,15 +88,22 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 - 旧的 Tier URL fetch 流程已下线,不再作为主流程执行
 - `archive/legacy-fetch/sources.md` 仅作历史归档与应急兜底参考,默认不批量抓取
 
-### 每天自动盯着的两件事(Phase 4 / Phase 6)
+### 每天自动盯着的三件事(Phase 4 / Phase 4b / Phase 6)
 
-这两件都是**每天 daily 跑完自动执行、有情况才提醒**,不需要单独触发,也不写进 daily 文件。
+这三件都是**每天 daily 跑完自动执行、有情况才提醒**,不需要单独触发,也不写进 daily 文件。
 
 **Phase 4:Uber CEO Dara Khosrowshahi 访谈**
 - 覆盖 YouTube、Spotify、Apple Podcasts、媒体专访、现场活动 —— 不只是 YouTube
 - **强制核实发布日期**:搜索摘要里出现"2026"不算数,必须打开页面确认真实上传/发布日期,确认不了就不报
 - 只报**距今 ≤ 14 天**的新访谈
 - 去重台账 `data/uber_ceo_interviews.json`:报过的不再报,避免同一期天天弹。不想再被某条打扰,手动加进 `seen` 即可
+
+**Phase 4b:Bolt 自动驾驶进展**
+- 重点看 **Bolt Autonomous Driving Solutions**（Bolt AD Solutions）的动作：新合作、新城市、牌照、人事、车队规模
+- **每条都回答：L4 技术是谁提供的**——Bolt 自研（如基于 NVIDIA Hyperion + Alpamayo 自建） / 整车厂 / 第三方 L4 公司（如小马智行） / 未披露。只按原文写明的判，NVIDIA Hyperion 这类参考架构不等于提供驾驶软件
+- 台账 `data/bolt_av_tracker.json`：`seen` 去重；`partnerships` 记录每个合作的车辆方、L4 技术方与判定依据，有新合作或口径变化就更新
+- 只报距今 ≤ 7 天、打开原文核实过日期的；Bolt 不在 `competitors.md` 里，Phase 1 抓不到，这里是唯一渠道
+- 当天若是可核实的重大事件（新合作、新城市、牌照），同时在 daily「国外出行平台」收录一条
 
 **Phase 6:抓取源健康告警**（流程最后一步）
 - 抓取脚本在输出 JSON 的顶层 `health` 字段里做好分级,命令行也会打印
@@ -190,6 +198,7 @@ robotaxi-news/
 ├── data/
 │   ├── daily/                   # 每日抓取产物,文件名 YYYY-MM-DD.md
 │   ├── uber_ceo_interviews.json # Phase 4 去重台账(报过的访谈,避免重复提醒)
+│   ├── bolt_av_tracker.json     # Phase 4b 台账(Bolt 自动驾驶合作与 L4 技术来源,去重)
 │   ├── tx_av_registrations.json # Phase 5 德州车队登记历史快照
 │   └── reports/                 # 周报 HTML(YYYY-Wxx.html)+ JSON 副产物(YYYY-Wxx.json)
 └── docs/                        # GitHub Pages 网站根目录(固定用 /docs,GitHub 原生支持)
