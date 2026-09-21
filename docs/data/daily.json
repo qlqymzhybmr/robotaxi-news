@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-09-21",
+    "items": [
+      {
+        "id": "2026-09-21-001",
+        "date": "2026-09-21",
+        "company": "鸿蒙智行",
+        "company_slug": "harmonyos-auto",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "华为引望发布声明：将持续向赛力斯销售乾崑智驾、鸿蒙座舱等全栈方案，坚持「电子螺丝钉」定位",
+        "summary_html": "<p><b>9月20日</b>，<b>华为引望（深圳引望智能技术有限公司）</b>就问界合作调整发布正式声明：<b>赛力斯是引望的战略合作伙伴和股东</b>，引望将<b>持续向赛力斯销售乾崑智驾、鸿蒙座舱、智能车控、智能车载光、智能车云等解决方案</b>并提供技术支持服务，<b>持续迭代升级问界的智能化能力</b>，保障问界用户服务体验；并重申「<b>电子螺丝钉</b>」的战略定位。</p><p>这是 9 月 15 日合作模式调整后，<b>技术供应方首次正式表态</b>，与 9 月 18 日赛力斯「华为乾崑智驾与鸿蒙座舱 OTA 不受影响」的回应互相印证：<b>变的是品牌运营主导权，智驾供应关系不变</b>。</p>",
+        "source_name": "引望智能技术有限公司发布公告回应问界合作事项",
+        "source_url": "https://auto.ifeng.com/c/8wZv3vp7U4Z",
+        "published_at": "2026-09-20",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-09-21-002",
+        "date": "2026-09-21",
+        "company": "一汽-大众",
+        "company_slug": "faw-vw",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "ID. AURA T6 正式上市 12.99 万元起，搭载地平线征程 6H 与 192 线激光雷达；承诺智能泊车事故全责、首年智驾事故担责",
+        "summary_html": "<p><b>9月20日</b>，<b>一汽-大众 ID. AURA T6</b> 在广州正式上市，<b>4 款配置、售价 12.99–16.69 万元</b>（8 月 28 日预售价 13.59–16.99 万元），主销激光雷达版 <b>14.99 万元</b>。智驾侧搭载<b>地平线征程 6H（420 TOPS）</b>与 <b>192 线激光雷达</b>，全车 25 个传感器，为大众首款 L2++ 级辅助驾驶车型。</p><p>值得单独记的是<b>责任承诺</b>：首任车主享<b>智能泊车事故全责</b>与<b>首年智驾事故担责</b>。在理想 i8、小鹏 X9 事故「L2 责任全在驾驶人」的讨论之后，这是<b>合资品牌以厂商兜底方式对辅助驾驶事故承担责任</b>的做法（具体条款以官方细则为准）。</p><p>⚠️ 本简报 9 月 16 日曾误写该车「9 月 15 日上市、13.59 万元起」，已于今日更正。</p>",
+        "source_name": "大众史上最强车机上车！一汽-大众ID.AURA T6正式上市：12.99万起",
+        "source_url": "https://finance.sina.com.cn/tech/roll/2026-09-20/doc-inisnnkw9283246.shtml",
+        "published_at": "2026-09-20",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-09-21-003",
+        "date": "2026-09-21",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "纽约出现推动引入 Waymo 的非营利组织，起因是反 Robotaxi 研究撤回主要结论：更正后 Waymo 受伤事故率比纽约出租车与网约车低 ~62%",
+        "summary_html": "<p><b>9月20日</b>，<b>纽约邮报</b>报道，新成立的非营利组织 <b>A Better Road Forward</b> 正推动在纽约州引入 Waymo 等无人出租车，将<b>投放面向选民的电视广告并在全州举办说明会</b>，<b>前纽约市议会议长 Christine Quinn</b> 参与其中。</p><p>起因是一份<b>反 Robotaxi 团体的研究被迫撤回主要结论</b>：该研究把纽约市口径较窄的「危重伤」（critical injury）与 Waymo 口径较宽的「重伤」（serious injury）放在一起比较，得出 Waymo 更危险的结论。<b>更正后，Waymo 全美受伤事故率为每百万英里 0.712 起，纽约出租车与网约车为 1.871 起，低 ~62%</b>。</p><p>背景：纽约州长霍楚尔 <b>2 月已撤回在纽约市以外推行无人网约车的提案</b>；9 月 10 日 Cybercab 在纽约街头被拍到时为有人驾驶的测试车，Tesla 尚未申请纽约州测试许可。</p>",
+        "source_name": "Group pushes to bring driverless Waymos to NY after anti-robotaxi study falls flat",
+        "source_url": "https://www.google.com/search?q=%22Group%20pushes%20to%20bring%20driverless%20Waymos%20to%20NY%20after%20anti-robotaxi%20study%20falls%20flat%22&hl=en",
+        "published_at": "2026-09-20",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-21-004",
+        "date": "2026-09-21",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "丹佛一辆 Waymo 无人车缓慢驶过周日农贸市场",
+        "summary_html": "<p><b>9月20日</b>，<b>Denver Post</b> 报道一辆 <b>Waymo 无人车缓慢驶过丹佛一处周日农贸市场</b>，网友同时发布了现场视频。Waymo 9 月 1 日在丹佛开城，9 月 12 日曾被拍到绕过道路封闭标志行驶。</p><p>⚠️ 该路段当时是否为封闭步行区、车辆是否违规，未能从公开摘要核实。</p>",
+        "source_name": "Driverless Waymo cruises through Denver farmers market",
+        "source_url": "https://www.google.com/search?q=%22Driverless%20Waymo%20cruises%20through%20Denver%20farmers%20market%22%20site%3Adenverpost.com&hl=en",
+        "published_at": "2026-09-20",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-21-005",
+        "date": "2026-09-21",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "休斯顿停车场出现大批 Cybercab 集结，或预示当地即将开跑",
+        "summary_html": "<p><b>9月20日</b>，<b>Tesla Oracle</b> 与 <b>Sawyer Merritt</b> 先后发布<b>休斯顿一处停车场停放大批 Cybercab</b> 的照片，外界解读为 Cybercab 在休斯顿即将投入载客。Tesla 的 Model Y Robotaxi 已在休斯顿运营；Cybercab 目前仅在奥斯汀载客，9 月 16 日另被报道进驻圣安东尼奥机场附近停车场。</p><p>德州 DMV 登记的 Cybercab 为 <b>58 辆</b>（见文末），尚未随集结出现新增。</p>",
+        "source_name": "Large number of Tesla Cybercab robotaxis spotted in Houston, hinting at a launch soon",
+        "source_url": "https://www.google.com/search?q=%22Large%20number%20of%20Tesla%20Cybercab%20robotaxis%20spotted%20in%20Houston%2C%20hinting%20at%20a%20launch%20soon%22&hl=en",
+        "published_at": "2026-09-20",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-21-006",
+        "date": "2026-09-21",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "12 家全部零变化，合计 2,139 辆；Cybercab 连续第 3 天保持 58 辆",
+        "summary_html": "<p>截至 <b>2026-09-21</b> 快照（已核对每家 history 末条日期均为当日、每家当日仅一条记录），德州 TxMCCS 登记的 12 家运营方合计 <b>2,139 辆</b>，与 9 月 20 日持平；<b>Tesla 448 辆（Model Y 390 / Cybercab 58）</b>。</p><p>首次抓取时 <b>Bot Auto TX 失败</b>（`URLError: [Errno 2] No such file or directory`，疑似本机网络环境瞬时问题），已核对未提交改动仅含 9 月 21 日后恢复文件并整体重跑，12 家全部成功。</p>",
+        "source_name": "Texas DMV TxMCCS 自动驾驶车辆登记",
+        "source_url": "https://txmccs.txdmv.gov/truckstop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles",
+        "published_at": "2026-09-21",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-09-20",
     "items": [
       {
@@ -599,8 +694,8 @@
         "company_slug": "horizon",
         "group": "国内",
         "sub_group": "国内 L4",
-        "title": "第 1500 万颗征程芯片落在一汽-大众 ID. AURA T6，该车 9 月 15 日上市 13.59 万元起；HSD V2.1 即将推出，新增全场景倒车",
-        "summary_html": "<p><b>9月15日</b>，<b>地平线</b>宣布<b>第 1500 万颗征程芯片搭载一汽-大众 ID. AURA T6</b>，该车<b>首发征程 6H</b>（算力 <b>420 TOPS</b>、系统响应时延低于 <b>160 毫秒</b>）并采用 <b>HSD 基座模型</b>，感知侧配 <b>192 线激光雷达</b>，同日<b>正式上市，售价 13.59 万元起</b>（8 月 28 日已开启预售）。</p><p>同时披露 <b>HSD V2.1 即将推出</b>，新增<b>全场景倒车</b>能力，针对窄路会车、倒车脱困、复杂停车场通行等高频难点场景，<b>计划年内在一家头部新势力品牌量产</b>。</p><p>「征程系列累计量产突破 1500 万套」本身已于 <b>9 月 3 日</b>报道，本次的新增信息是<b>第 1500 万颗的落地车型与 HSD V2.1 的能力节点</b>——合资品牌用国产芯片 + 国产端到端方案做主力纯电车型，是这条的实际含义。</p>",
+        "title": "第 1500 万颗征程芯片落在一汽-大众 ID. AURA T6，该车 8 月 28 日开启预售（13.59 万元起）、9 月 20 日正式上市（12.99 万元起）；HSD V2.1 即将推出，新增全场景倒车",
+        "summary_html": "<p><b>9月15日</b>，<b>地平线</b>宣布<b>第 1500 万颗征程芯片搭载一汽-大众 ID. AURA T6</b>，该车<b>首发征程 6H</b>（算力 <b>420 TOPS</b>、系统响应时延低于 <b>160 毫秒</b>）并采用 <b>HSD 基座模型</b>，感知侧配 <b>192 线激光雷达</b>，该车 <b>8 月 28 日开启预售、预售价 13.59 万元起</b>。⚠️ <b>更正（9 月 21 日）</b>：本条原文误写为「9 月 15 日正式上市、售价 13.59 万元起」，13.59 万元实为预售价；该车实际于 <b>9 月 20 日正式上市，售价 12.99–16.69 万元</b>。</p><p>同时披露 <b>HSD V2.1 即将推出</b>，新增<b>全场景倒车</b>能力，针对窄路会车、倒车脱困、复杂停车场通行等高频难点场景，<b>计划年内在一家头部新势力品牌量产</b>。</p><p>「征程系列累计量产突破 1500 万套」本身已于 <b>9 月 3 日</b>报道，本次的新增信息是<b>第 1500 万颗的落地车型与 HSD V2.1 的能力节点</b>——合资品牌用国产芯片 + 国产端到端方案做主力纯电车型，是这条的实际含义。</p>",
         "source_name": "地平线第1500万颗征程芯片搭载大众 ID. AURA T6，HSD V2.1 即将推出",
         "source_url": "https://www.qbitai.com/2026/09/489698.html",
         "published_at": "2026-09-15",
