@@ -69,24 +69,17 @@
                 "daily_ids": [
                   "2026-09-16-005"
                 ]
-              },
-              {
-                "label": "c",
-                "content_html": "<b>9月14日</b>，奥斯汀乘客反馈原本 ~10 分钟的行程，Cybercab 绕行 70 分钟，主因是 <b>Tesla Robotaxi 无法上高速需绕行</b>。<div><table class=\"img-grid-block\" style=\"width: 100%; border-collapse: collapse; margin: 12px 0px; table-layout: fixed;\"><tbody><tr><td style=\"width:100%;padding:6px;text-align:center;vertical-align:top;border:none\"><figure style=\"margin:0;text-align:center\"><img src=\"https://electrek.co/wp-content/uploads/sites/3/2026/09/Tesla-Cybercab-robotaxi-hostage.jpeg?quality=82&amp;amp;strip=all&amp;amp;w=1600\" title=\"点击调整大小\" style=\"width: 50%; height: auto; display: block; border-radius: 4px; cursor: pointer; margin: 8px auto;\"><figcaption style=\"font-size:12px;color:#6b7280;margin-top:6px;text-align:center\"><i>乘客截图</i></figcaption></figure></td></tr></tbody></table><br></div>",
-                "daily_ids": [
-                  "2026-09-15-006"
-                ]
               }
             ]
           },
           {
             "company": "Lucid / Bolt",
             "company_slug": "lucid",
-            "headline_html": "<b>Lucid / Bolt：达成合作并计划在欧洲部署至少 2.5 万辆 L4 Robotaxi</b>",
+            "headline_html": "Bolt / Lucid：达成合作并计划在欧洲部署至少 2.5 万辆 L4 Robotaxi",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>9月17日</b>，Lucid 与 Bolt 宣布合作，基于 Lucid 车辆平台与英伟达 Hyperion 架构打造 L4 Robotaxi，<b>Bolt&nbsp;计划在欧洲部署至少 25,000 辆车</b>，作为其 2035 年累计接入 10 万辆自动驾驶车辆目标的重要一步。",
+                "content_html": "<div><b>9月17日</b>，Bolt 与 Lucid 宣布合作，将基于 Lucid 车辆平台与英伟达 Hyperion 架构打造 L4 Robotaxi，合作将由Bolt的自动驾驶部门（Autonomous Driving Solution）主导，其将参与软件开发、产品需求定义、系统集成等在内环节，但具体的L4技术提供方尚未确定，待后续关注。<b>Bolt 计划在欧洲部署至少 25,000 辆</b>车，作为其 2035 年累计接入 10 万辆自动驾驶车辆目标的重要一步。</div>",
                 "daily_ids": [
                   "2026-09-18-005"
                 ]
@@ -143,7 +136,7 @@
         ]
       }
     ],
-    "edited_at": "2026-09-21T07:54:35.422Z"
+    "edited_at": "2026-09-22T01:50:47.482Z"
   },
   {
     "week_id": "2026-W38-WIP",
