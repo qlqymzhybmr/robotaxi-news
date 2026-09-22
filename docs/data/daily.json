@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-09-22",
+    "items": [
+      {
+        "id": "2026-09-22-001",
+        "date": "2026-09-22",
+        "company": "驭势科技",
+        "company_slug": "uisee",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "驭势科技与汉莎航空达成战略合作，将在慕尼黑机场落地首个海外机场 L4 无人驾驶项目",
+        "summary_html": "<p><b>驭势科技</b>与<b>汉莎航空</b>在葡萄牙里斯本 <b>GSE Expo Europe 2026</b>（欧洲机场地面服务博览会，9 月 15–17 日）期间宣布战略合作，将在<b>德国慕尼黑机场</b>落地双方首个<b>机场 L4 级无人驾驶</b>合作项目，覆盖机坪地面作业、民航数字化与绿色航空场景：<b>驭势提供自动驾驶产品与运营体系，汉莎提供航空运营标准和场景</b>。</p><p>驭势此前的机场 L4 业务集中在国内（计划覆盖国内 12 大机场），这是其<b>进入欧洲头部航司体系</b>的第一个项目。公开报道<b>未披露车型、车辆数量和上线时间</b>。</p>",
+        "source_name": "驭势科技与汉莎航空达成战略合作，AI司机即将落地德国慕尼黑机场",
+        "source_url": "https://m.stnn.cc/detail/6aafa2ea158f681db405d2db.html",
+        "published_at": "2026-09-20",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-09-22-002",
+        "date": "2026-09-22",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "捷克有条件批准 Tesla FSD（Supervised），成为第 7 个批准的欧盟国家",
+        "summary_html": "<p><b>9月21日</b>，<b>捷克交通部</b>有条件批准 Tesla <b>FSD（Supervised）</b>，扭转了此前在限速遵守、驾驶员监督等问题上的保留态度。捷克方面称决定依据是荷兰车辆管理局（RDW）<b>4 月签发的临时批准</b>、其他国家的使用经验与更多欧洲数据，并配套了监测措施。Tesla 将在近期向捷克用户推送。</p><p>捷克是继荷兰（4 月）、立陶宛与爱沙尼亚（5 月）、丹麦与比利时（6 月）、斯洛文尼亚（9 月初）之后<b>第 7 个批准的欧盟国家</b>，占欧盟 27 个成员国的 ~26%；据报道，FSD（Supervised）在全球可用的国家增至 <b>15 个</b>。FSD（Supervised）仍为 <b>L2 级</b>辅助驾驶，驾驶员须全程监督。</p>",
+        "source_name": "Czech Republic approves Tesla's FSD after earlier safety concerns",
+        "source_url": "https://www.google.com/search?q=%22Czech%20Republic%20approves%20Tesla%27s%20FSD%20after%20earlier%20safety%20concerns%22%20site%3Areuters.com&hl=en",
+        "published_at": "2026-09-21",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-22-003",
+        "date": "2026-09-22",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "更正昨日：丹佛 Waymo 绕过路障和标志驶入正在布置的农贸市场，未停车通过停车标志；为近几周第二次误入农贸市场",
+        "summary_html": "<p><b>9月20日（周日）上午 8:40 左右</b>，一辆 <b>Waymo 无人车驶入丹佛 South Pearl Street 农贸市场</b>，当时摊主仍在布置、倒车入位。据市场副经理 Shari Wilkins，现场<b>已设路障和标志，但车辆均绕过</b>，转弯较快，并<b>在停车标志前未停车</b>；由于车内无人，工作人员只能临时清路并引导车辆驶离。</p><p><b>Waymo 回应</b>称车辆当时正前往 Pearl Street 上的目的地，识别情况后已驶离该区域。这是<b>近几周第二次</b>有 Waymo 误入丹佛农贸市场：<b>8 月</b>另一辆 Waymo 曾卡在 City Park 农贸市场。Waymo 9 月 1 日在丹佛开城，9 月 12 日也曾被拍到绕过道路封闭标志。</p><p>⚠️ 昨日简报写作「缓慢驶过农贸市场」、并注明是否封闭未核实；现可确认该路段<b>已设路障封闭</b>，特此更正。</p>",
+        "source_name": "Waymo passes barricades, enters Denver farmers market",
+        "source_url": "https://www.9news.com/article/news/local/waymo-denver-farmers-market/73-832b1326-4f44-463a-9875-d50853dd7bb5",
+        "published_at": "2026-09-21",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-22-004",
+        "date": "2026-09-22",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "洛杉矶一辆载客 Waymo 遭肇事逃逸撞击",
+        "summary_html": "<p><b>9月21日（周一）凌晨 2:30 左右</b>，洛杉矶 <b>Pico-Union</b> 街区 West Pico Boulevard 与 South Union Avenue 路口，一辆<b>车内有乘客</b>的 Waymo 被另一辆车撞击<b>左侧</b>，两扇车门及底部受损；肇事司机逃逸，肇事车辆被弃置在附近。报道未说明乘客是否受伤。</p>",
+        "source_name": "Waymo damaged in apparent hit-and-run in Los Angeles",
+        "source_url": "https://ktla.com/news/local-news/waymo-damaged-in-apparent-hit-and-run-in-los-angeles/",
+        "published_at": "2026-09-21",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-22-005",
+        "date": "2026-09-22",
+        "company": "Einride",
+        "company_slug": "einride",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Einride 与英伟达合作，将 DRIVE Hyperion 平台改造用于重卡自动驾驶",
+        "summary_html": "<p><b>9月21日</b>，瑞典自动驾驶货运公司 <b>Einride（纳斯达克：ENRD）</b>宣布与<b>英伟达</b>战略合作，将 <b>NVIDIA DRIVE Hyperion</b>（L4 级算力与传感器参考架构）的算力、传感器、软件与安全架构<b>扩展到重型卡车</b>，并接入 <b>Halos</b> 安全系统，用 <b>Cosmos</b> 检索长尾场景、生成合成数据。</p><p>Einride 目前在美国、欧洲、中东为货主运营<b>数百辆电动卡车</b>，部分自动驾驶卡车已进入合同客户部署；预计 <b>2028 年车队扩至 1,500–2,000 辆</b>，其中 ~80% 的需求中期适合自动化。继 Lucid / Bolt 之后，这是<b>本周第二个基于 Hyperion 的 L4 合作</b>。</p>",
+        "source_name": "Einride Enters Strategic Collaboration with NVIDIA to Advance its Autonomous Trucking on NVIDIA Hyperion",
+        "source_url": "https://www.globenewswire.com/news-release/2026/09/21/3365322/0/en/einride-enters-strategic-collaboration-with-nvidia-to-advance-its-autonomous-trucking-on-nvidia-hyperion.html",
+        "published_at": "2026-09-21",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-22-006",
+        "date": "2026-09-22",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla Robotaxi 新增 19 辆 Model Y，合计 2,158 辆；Cybercab 保持 58 辆",
+        "summary_html": "<p>截至 <b>2026-09-22</b> 快照（已核对每家 history 末条日期均为当日、每家当日仅一条记录），德州 TxMCCS 登记的 12 家运营方合计 <b>2,158 辆</b>，较 9 月 21 日 <b>+19</b>，全部来自 <b>Tesla Robotaxi 新增 19 辆 Model Y</b>（448 → 467）；Cybercab 连续第 4 天为 <b>58 辆</b>，其余 11 家零变化。</p><p>首次抓取时 <b>Tesla Robotaxi 失败</b>（`URLError: _ssl.c:980: The handshake operation timed out`），已核对未提交改动仅含 9 月 22 日后恢复文件并整体重跑，12 家全部成功。</p>",
+        "source_name": "Texas DMV TxMCCS 自动驾驶车辆登记",
+        "source_url": "https://txmccs.txdmv.gov/truckstop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles",
+        "published_at": "2026-09-22",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-09-21",
     "items": [
       {
