@@ -9,7 +9,7 @@
       "entries": [
         {
           "company": "百度/萝卜快跑",
-          "company_slug": "apollogo",
+          "company_slug": "apollo",
           "headline_html": "<b>百度/萝卜快跑：</b>首获西欧 L4 商业许可；AmiGo 联手 PostBus 正式在瑞士启动；上路测试同步展开",
           "sub_items": [
             {
@@ -113,7 +113,7 @@
         },
         {
           "company": "小马智行",
-          "company_slug": "pony-ai",
+          "company_slug": "xiaoma",
           "headline_html": "<b>小马智行：</b>联手 Stellantis + Bolt 在卢森堡正式落地，中国 AV 欧洲版图再扩",
           "sub_items": [
             {

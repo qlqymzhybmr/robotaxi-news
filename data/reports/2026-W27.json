@@ -127,7 +127,7 @@
         },
         {
           "company": "曹操出行",
-          "company_slug": "caocao-chuxing",
+          "company_slug": "caocao",
           "headline_html": "<b>曹操出行：</b>中东 + 香港 + 欧洲三路并进，RoboX 战略定锚 2030 年 10 万辆",
           "sub_items": [
             {
@@ -157,7 +157,7 @@
         },
         {
           "company": "理想 / 小鹏",
-          "company_slug": "li-auto",
+          "company_slug": "liauto",
           "headline_html": "<b>理想 + 小鹏：</b>自研芯片与 VLA 架构双双亮相，中国智驾顶级玩家全栈自研节奏同步提速",
           "sub_items": [
             {

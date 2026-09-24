@@ -654,7 +654,7 @@
         "entries": [
           {
             "company": "鸿蒙智行",
-            "company_slug": "hongmeng",
+            "company_slug": "harmonyos-auto",
             "headline_html": "<b>华为：</b>尊界 V800/V680 获批合肥市 L3 级自动驾驶测试牌照",
             "sub_items": [
               {
@@ -840,7 +840,7 @@
         "entries": [
           {
             "company": "百度/萝卜快跑",
-            "company_slug": "baidu",
+            "company_slug": "apollo",
             "headline_html": "&nbsp;萝卜快跑：于英国伦敦开启Robotaxi车辆路测",
             "sub_items": [
               {
@@ -1384,7 +1384,7 @@
           },
           {
             "company": "曹操出行",
-            "company_slug": "caocao-chuxing",
+            "company_slug": "caocao",
             "headline_html": "<b>曹操出行：</b>中东 + 香港 + 欧洲三路并进，RoboX 战略定锚 2030 年 10 万辆",
             "sub_items": [
               {
@@ -1414,7 +1414,7 @@
           },
           {
             "company": "理想 / 小鹏",
-            "company_slug": "li-auto",
+            "company_slug": "liauto",
             "headline_html": "<b>理想 + 小鹏：</b>自研芯片与 VLA 架构双双亮相，中国智驾顶级玩家全栈自研节奏同步提速",
             "sub_items": [
               {

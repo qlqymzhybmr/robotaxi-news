@@ -30,15 +30,15 @@
 | 42dot | 42dot |
 | MOIA | moia |
 | Aurora Innovation | aurora |
-| May Mobility | may-mobility |
+| May Mobility | maymobility |
 | SWM | swm |
 | Sonnet.ai | sonnetai |
 | Nuro | nuro |
 | Waabi | waabi |
 | Tensor | tensor |
 | 小马智行 | xiaoma |
-| 文远知行 | wenyuan |
-| 萝卜快跑 | luobo |
+| 文远知行 | weride |
+| 萝卜快跑 | apollo |
 | 曹操出行 | caocao |
 | 哈啰出行 | hello |
 | 高德地图 | amap |
@@ -68,14 +68,16 @@
 | 毫末智行 | haomo |
 | 大卓智能 | dazuo |
 | 卓驭科技 | zhuoyu |
-| 鸿蒙智行 | hongmeng |
+| 鸿蒙智行 | harmonyos-auto |
 | 引望智能 | yinwang |
 | 商汤绝影 | sensetime |
 | Reddit/SelfDrivingCars | reddit-selfdriving |
 | Reddit/Waymo | reddit-waymo |
 | Reddit/teslamotors | reddit-tesla |
 
-> 如果公司名不在表中,用公司名拼音小写并去掉空格作为 slug,如 "XX科技" → "xxkeji"。
+> **这张表的权威版本是 `scripts/publish_daily.py` 的 `COMPANY` 映射**，发布时以脚本为准；
+> 公司名不在映射里脚本会直接中止，此时把新公司补进脚本（同时更新本表），不要临时编一个 slug。
+> 历史数据里的 slug 变体已由 `scripts/normalize_company_slugs.py` 于 2026-09-24 归一。
 
 ---
 
