@@ -121,13 +121,14 @@
       "vehicle_provider": "Lucid（即将推出的中型车平台）",
       "l4_tech_provider": "未明确：Lucid 新闻稿称 Lucid Technologies 整合其 AI、辅助驾驶与自动驾驶能力；但 Bolt 同时在用同一套 NVIDIA Hyperion 自建技术栈，量产车上的驾驶软件归 Lucid 还是 Bolt 未说明",
       "l4_provider_type": "unknown",
-      "l4_basis": "2026-09-21 由 oem 改为 unknown。Lucid 新闻稿写明 Lucid Technologies 整合 Lucid 的 AI、ADAS 与自动驾驶能力，且车辆采用 NVIDIA Hyperion；另据 GTC 2026 的 Bolt×NVIDIA 合作，Bolt 正基于 Hyperion 与 Alpamayo 自建驾驶策略。两份原文都没说明 Lucid 车上的驾驶软件由谁提供，出现明确披露后再改",
+      "l4_basis": "2026-09-21 由 oem 改为 unknown。Lucid 新闻稿写明 Lucid Technologies 整合 Lucid 的 AI、ADAS 与自动驾驶能力，且车辆采用 NVIDIA Hyperion；另据 GTC 2026 的 Bolt×NVIDIA 合作，Bolt 正基于 Hyperion 与 Alpamayo 自建驾驶策略。两份原文都没说明 Lucid 车上的驾驶软件由谁提供，出现明确披露后再改。2026-09-23 Lucid 技术总裁 Kay Stepper 对 Torque News 表示：该 25,000 辆为 Midsize 零售需求之外的增量，协议为非约束性，依赖 2027 年才投产的中型车平台；Lucid 已公开承诺的自动驾驶车辆合计至少 60,000 辆（Bolt 25,000 + Uber 至少 35,000，后者由 Nuro 提供自动驾驶软件），而 Lucid 2025 全年产量为 18,378 辆",
       "bolt_role": "Bolt AD Solutions 牵头：定义车辆、软件、安全与乘客体验要求，拥有并运营车队，建设充电等基础设施与城市合作",
       "scale": "欧洲至少 25,000 辆",
       "cities": [],
-      "status": "已签约，车型开发中",
+      "status": "框架性协议（non-binding），车型平台开发中；Lucid 中型车平台已推迟至 2027 年",
       "sources": [
-        "https://ir.lucidmotors.com/news-releases/news-release-details/lucid-and-bolt-partner-develop-and-deploy-autonomous-mobility/"
+        "https://ir.lucidmotors.com/news-releases/news-release-details/lucid-and-bolt-partner-develop-and-deploy-autonomous-mobility/",
+        "https://www.torquenews.com/1/lucid-tells-torque-news-bolt-s-25000-robotaxis-sit-top-midsize-retail-it-depends-nonbinding-deal"
       ]
     }
   ],
@@ -215,6 +216,12 @@
       "published_at": "日期待核实",
       "first_seen": "2026-09-21",
       "note": "建档时已知"
+    },
+    {
+      "url": "https://www.torquenews.com/1/lucid-tells-torque-news-bolt-s-25000-robotaxis-sit-top-midsize-retail-it-depends-nonbinding-deal",
+      "date": "2026-09-23",
+      "title": "Lucid Tech President Says Bolt's 25,000 Robotaxis Sit On Top of Midsize Retail, But It Depends On a Nonbinding Deal and a 2027 Plant",
+      "note": "Lucid 技术总裁 Kay Stepper 受访：协议非约束性、依赖 2027 年中型车平台；未澄清 L4 软件提供方"
     }
   ]
 }
