@@ -81,6 +81,19 @@
 
 ## 执行步骤
 
+> **实现已固化为 `scripts/publish_daily.py`**，正常情况下直接运行即可，不要临时另写脚本：
+>
+> ```bash
+> python scripts/publish_daily.py YYYY-MM-DD          # 写入
+> python scripts/publish_daily.py YYYY-MM-DD --dry-run # 只看解析结果，不落盘
+> ```
+>
+> 脚本已实现下面的步骤 1–7：全量发布、±2 天硬过滤、markdown→summary_html、公司 slug 映射、
+> 写盘后立即 json.load 验证，以及字段集合断言（字段名写错会直接报错而不是发出空白正文）。
+> 公司小标题不在 `COMPANY` 映射里会**直接中止**，此时把新公司补进脚本的映射表，别绕过。
+> 下面的文字说明保留为口径依据；改动脚本行为时同步改这里。
+
+
 ### 步骤 1:读取今日 daily 文件
 
 读取 `data/daily/YYYY-MM-DD.md`(今天日期)。如果文件不存在,报错停止。

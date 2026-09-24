@@ -187,6 +187,7 @@ robotaxi-news/
 │   └── weekly-publish.md        # 周报自动发布到网页
 ├── scripts/
 │   ├── python_rss_fetch.py      # 主流程 Python 召回脚本(读取 competitors.md 产出结构化 JSON + health 健康分级)
+│   ├── publish_daily.py         # Phase 3:把 data/daily/*.md 发布进 docs/data/daily.json(带字段断言与 ±2 天过滤)
 │   ├── roll_daily_archive.py    # 定期:把 daily.json 的旧日期滚动进归档(带条目守恒校验)
 │   ├── compress_weekly_images.py # 定期:压缩周报内联图片(PNG→WebP,幂等)
 │   └── track_tx_av_registrations.py # Phase 5:德州 DMV 车队登记追踪
