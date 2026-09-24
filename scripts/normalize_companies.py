@@ -1,22 +1,26 @@
 # -*- coding: utf-8 -*-
-"""One-off migration: collapse the company_slug variants that accumulated in the data.
+"""Migration: collapse the company name and company_slug variants in the stored JSON.
 
 Usage:
-    python scripts/normalize_company_slugs.py            # dry run, prints what would change
-    python scripts/normalize_company_slugs.py --apply    # rewrite the JSON files
+    python scripts/normalize_companies.py            # dry run, prints what would change
+    python scripts/normalize_companies.py --apply    # rewrite the JSON files
 
-Background: before scripts/publish_daily.py was committed, each run re-invented the
-slug for a company, so 理想 ended up as liauto / lixiang / li-auto / li_auto and 小马智行
-as xiaoma / pony / pony-ai / ponyai / pony_ai. The website filters on `company`, not on
-`company_slug`, so this migration changes no rendering - it only makes the field usable.
+Background: before scripts/publish_daily.py was committed, each run re-invented both
+fields, so 理想 appeared as 理想 / 理想汽车 / 理想 (Li Auto) with slugs liauto / lixiang /
+li-auto / li_auto, and headlines sometimes landed in the company field
+("Tesla Cybercab 路线规划翻车"). The website builds its company filter from `company`,
+so those variants each took their own row in the dropdown.
 
-Only `company_slug` values are rewritten; every other field is left byte-identical, and
-the script asserts that before writing.
+`company` is rewritten through docs/data/company_aliases.json; `company_slug` is then
+re-derived from the canonical name where that name is known, and otherwise put through
+the slug alias table below. No other field is touched - the script asserts that.
 """
 import glob
 import json
 import sys
 from collections import Counter, defaultdict
+
+ALIASES = "docs/data/company_aliases.json"
 
 FILES = ["docs/data/daily.json", "docs/data/daily-archive.json",
          "docs/data/weekly.json", "docs/data/weekly_overrides.json"] + sorted(glob.glob("data/reports/*.json"))
@@ -87,7 +91,19 @@ SLUG_ALIAS = {
 }
 
 
+_alias_doc = json.load(open(ALIASES, encoding="utf-8"))
+NAME_ALIAS = _alias_doc["alias"]
+NAME_TO_SLUG = _alias_doc["name_to_slug"]
+
+
+def canonical_name(name):
+    return NAME_ALIAS.get(name, name)
+
+
 def canonical(name, slug):
+    """Slug for an item, given its ALREADY canonical company name."""
+    if name in NAME_TO_SLUG:          # the name the publisher knows -> its slug
+        return NAME_TO_SLUG[name]
     if name in NAME_EXACT:
         return NAME_EXACT[name]
     for needle, target in NAME_CONTAINS:
@@ -100,11 +116,15 @@ def walk(node, changes):
     """Rewrite company_slug in place, recording (name, old, new) for the report."""
     if isinstance(node, dict):
         if "company_slug" in node:
-            name, old = node.get("company", ""), node["company_slug"]
+            raw_name, old = node.get("company", ""), node["company_slug"]
+            name = canonical_name(raw_name)
+            if name != raw_name:
+                node["company"] = name
+                changes.append(("name", raw_name, name))
             new = canonical(name, old)
             if new != old:
                 node["company_slug"] = new
-                changes.append((name, old, new))
+                changes.append(("slug", old, new))
         for v in node.values():
             walk(v, changes)
     elif isinstance(node, list):
@@ -132,7 +152,7 @@ def families(data):
     def rec(node):
         if isinstance(node, dict):
             if "company_slug" in node:
-                fam[strip_parens(node.get("company", ""))][node["company_slug"]] += 1
+                fam[node.get("company", "")][node["company_slug"]] += 1
             for v in node.values():
                 rec(v)
         elif isinstance(node, list):
@@ -162,16 +182,14 @@ def main():
         for fam, counts in families(data).items():
             after_all[fam].update(counts)
 
-        # nothing but company_slug values may differ
+        # only company / company_slug values may differ
         skeleton_after = json.dumps(data, ensure_ascii=False, sort_keys=True).replace('"company_slug"', '"__s__"')
         assert len(skeleton_before) - len(skeleton_after) == sum(
-            len(o) - len(n) for _, o, n in changes), ("除 slug 外还有字段被改动：%s" % path)
+            len(o) - len(n) for _, o, n in changes), ("除公司字段外还有内容被改动：%s" % path)
 
         if changes:
-            summary = Counter((o, n) for _, o, n in changes)
-            print("%s：%d 处" % (path, len(changes)))
-            for (o, n), c in sorted(summary.items(), key=lambda kv: -kv[1]):
-                print("    %-22s -> %-18s x%d" % (o, n, c))
+            n_name = sum(1 for kind, _, _ in changes if kind == "name")
+            print("%s：公司名 %d 处 / slug %d 处" % (path, n_name, len(changes) - n_name))
         if apply and changes:
             with open(path, "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)

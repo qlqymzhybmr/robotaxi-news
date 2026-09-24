@@ -138,7 +138,7 @@
           ]
         },
         {
-          "company": "Uber/Motional",
+          "company": "Uber",
           "company_slug": "uber",
           "headline_html": "<b>Uber/Motional：</b>联邦机构调查16起碰撞事故；Motional正式上线Uber；Lucid×Nuro联合方案推进",
           "sub_items": [
@@ -157,8 +157,8 @@
           ]
         },
         {
-          "company": "立法/监管",
-          "company_slug": "regulation",
+          "company": "行业",
+          "company_slug": "industry",
           "headline_html": "<b>立法/监管：</b>美国各州AV立法加速，D.C.提出高额许可费方案",
           "sub_items": [
             {

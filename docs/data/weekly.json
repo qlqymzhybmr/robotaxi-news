@@ -80,7 +80,7 @@
             ]
           },
           {
-            "company": "Lucid / Bolt",
+            "company": "Lucid",
             "company_slug": "lucid",
             "headline_html": "<b>Lucid / Bolt：结盟在欧洲部署至少 2.5 万辆 L4 Robotaxi</b>",
             "sub_items": [
@@ -361,7 +361,7 @@
             ]
           },
           {
-            "company": "监管",
+            "company": "行业",
             "company_slug": "industry",
             "headline_html": "<b>监管：新泽西网约车司机集会反对全无人驾驶试点法案</b>",
             "sub_items": [
@@ -612,7 +612,7 @@
             ]
           },
           {
-            "company": "Nuro / Lucid",
+            "company": "Nuro",
             "company_slug": "nuro",
             "headline_html": "<b>Nuro / Lucid：</b>Nuro 拿下加州关键许可，Gravity Robotaxi 与 Uber 的三方合作提速",
             "sub_items": [
@@ -756,7 +756,7 @@
             ]
           },
           {
-            "company": "大众 / Wayve",
+            "company": "大众",
             "company_slug": "volkswagen",
             "headline_html": "<b>大众 / Wayve：</b>ID.Buzz Robotaxi 进入洛杉矶运营；Wayve+Uber 伦敦牌照已到手但上线推迟",
             "sub_items": [
@@ -875,7 +875,7 @@
             ]
           },
           {
-            "company": "Uber + 小马智行 / 百度",
+            "company": "Uber",
             "company_slug": "uber",
             "headline_html": "<b>Uber + 小马智行 / 百度：</b>萨格勒布启动欧洲首个商业自动驾驶乘车；百度 Apollo Go 迪拜全无人上线",
             "sub_items": [
@@ -972,7 +972,7 @@
             ]
           },
           {
-            "company": "Wayve / Uber",
+            "company": "Wayve",
             "company_slug": "wayve",
             "headline_html": "Wayve：获伦敦TfL首批自动驾驶商业许可证，联手Uber推进Mach-E落地；Uber与东京日之丸交通达成Robotaxi试点合作，2026年底前上线",
             "sub_items": [
@@ -1112,8 +1112,8 @@
         "name": "国内",
         "entries": [
           {
-            "company": "百度/萝卜快跑",
-            "company_slug": "apollo",
+            "company": "百度",
+            "company_slug": "baidu",
             "headline_html": "<b>百度/萝卜快跑：</b>伦敦 Robotaxi 测试启动，中国 L4 领跑全球右舵市场",
             "sub_items": [
               {
@@ -1158,7 +1158,7 @@
             ]
           },
           {
-            "company": "Uber + Rivian",
+            "company": "Uber",
             "company_slug": "uber",
             "headline_html": "<b>Uber + Rivian：</b>12 亿美元协议重建自营车队，Lucid-Nuro 联盟同步浮现",
             "sub_items": [
@@ -1264,7 +1264,7 @@
             ]
           },
           {
-            "company": "Waymo / Uber",
+            "company": "Waymo",
             "company_slug": "waymo",
             "headline_html": "<b>Waymo / Uber：</b>FT独家披露Waymo 2028年拟终止Uber独家协议、自建消费者App，Uber股价单日跌5%——L4渠道生态面临结构性重组",
             "sub_items": [
@@ -1286,7 +1286,7 @@
             ]
           },
           {
-            "company": "Volkswagen",
+            "company": "大众",
             "company_slug": "volkswagen",
             "headline_html": "<b>大众：</b>ID. Buzz Robotaxi驶上洛杉矶街头——传统OEM+Mobileye技术路线正式入场美国市场",
             "sub_items": [
@@ -1324,8 +1324,8 @@
             ]
           },
           {
-            "company": "L3政策",
-            "company_slug": "policy",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>L3政策：</b>准入名单大批扩容，12款车获资质含合资豪华品牌——L3从自主实验赛道正式进入主流消费市场",
             "sub_items": [
               {
@@ -1465,8 +1465,8 @@
             ]
           },
           {
-            "company": "华为系 / L3 监管",
-            "company_slug": "huawei",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>华为系 + L3 政策：</b>享界 G9 本周获北京 L3 测试与上路双重认定，极氪同期拿下杭州 L3——L3 量产准入进入加速通道",
             "sub_items": [
               {
@@ -1557,7 +1557,7 @@
             ]
           },
           {
-            "company": "Uber / Lyft",
+            "company": "Uber",
             "company_slug": "uber",
             "headline_html": "<b>出行平台选边：</b>Uber 联合 Nuro + Lucid 造车年底上线，Lyft 明确不造车押注合作",
             "sub_items": [
@@ -1572,7 +1572,7 @@
             ]
           },
           {
-            "company": "Zoox / Mobileye",
+            "company": "Zoox",
             "company_slug": "zoox",
             "headline_html": "<b>Zoox 追近 + Mobileye 入局：</b>美国 Robotaxi 赛道第二梯队开始加速",
             "sub_items": [
@@ -1692,8 +1692,8 @@
             ]
           },
           {
-            "company": "Uber / WeRide",
-            "company_slug": "uber-weride",
+            "company": "Uber",
+            "company_slug": "uber",
             "headline_html": "<b>Uber 新布局 + WeRide 苏黎世：</b>出行平台 × AV 国际化组合本周双线推进",
             "sub_items": [
               {
@@ -1723,8 +1723,8 @@
         "name": "国内",
         "entries": [
           {
-            "company": "监管突破",
-            "company_slug": "regulation",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>中国 L3 首批准入落地：</b>长安深蓝、北汽极狐获批，驾驶员可合法「脱眼」时代开启",
             "sub_items": [
               {
@@ -1734,7 +1734,7 @@
             ]
           },
           {
-            "company": "小鹏 / 理想",
+            "company": "小鹏",
             "company_slug": "xpeng",
             "headline_html": "<b>小鹏 + 理想：</b>组织架构加速重塑，两家公司均把「机器人」列为下阶段核心战略",
             "sub_items": [
@@ -1749,7 +1749,7 @@
             ]
           },
           {
-            "company": "比亚迪 / 萝卜快跑",
+            "company": "比亚迪",
             "company_slug": "byd",
             "headline_html": "<b>比亚迪智驾「兜底」落地 + 萝卜快跑花旗背书：</b>国内智驾商业化信心指标走高",
             "sub_items": [
@@ -1830,7 +1830,7 @@
             ]
           },
           {
-            "company": "Wayve / Mobileye",
+            "company": "Wayve",
             "company_slug": "wayve",
             "headline_html": "<b>Wayve 伦敦启动 + Mobileye 独立 Robotaxi：</b>L4 生态「入场者」本周两度扩容",
             "sub_items": [
@@ -1845,7 +1845,7 @@
             ]
           },
           {
-            "company": "GM / Volkswagen",
+            "company": "GM",
             "company_slug": "gm",
             "headline_html": "<b>GM + 大众：</b>同日宣布收缩 L4，传统车企第一波 AV 浪潮走向系统性退潮",
             "sub_items": [
@@ -1860,8 +1860,8 @@
             ]
           },
           {
-            "company": "监管与生态",
-            "company_slug": "others",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>监管与生态：</b>NHTSA 取消强制刹车踏板 + UNECE 全球 GTR + Nuro 5 亿融资，政策与资本双重加速",
             "sub_items": [
               {
@@ -1910,7 +1910,7 @@
             ]
           },
           {
-            "company": "比亚迪 (BYD)",
+            "company": "比亚迪",
             "company_slug": "byd",
             "headline_html": "<b>比亚迪：</b>全系智驾 1.2 万元标配 + 自研芯片 2027 量产，智能化全栈布局全面加速",
             "sub_items": [
@@ -1925,7 +1925,7 @@
             ]
           },
           {
-            "company": "理想 / 小鹏",
+            "company": "理想",
             "company_slug": "liauto",
             "headline_html": "<b>理想 + 小鹏：</b>自研芯片与 VLA 架构双双亮相，中国智驾顶级玩家全栈自研节奏同步提速",
             "sub_items": [
@@ -1940,8 +1940,8 @@
             ]
           },
           {
-            "company": "国内多线",
-            "company_slug": "others",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>国内多线：</b>华为里程破百亿 + 百度全球登顶 + 小马/零跑安全事件凸显法律灰区",
             "sub_items": [
               {
@@ -2025,7 +2025,7 @@
             ]
           },
           {
-            "company": "Uber / Avride",
+            "company": "Uber",
             "company_slug": "uber",
             "headline_html": "<b>Uber + Nvidia：</b>休斯顿 2027 落地 + Nvidia 20 亿押注 Avride，Robotaxi 平台生态加速聚合",
             "sub_items": [
@@ -2040,8 +2040,8 @@
             ]
           },
           {
-            "company": "欧洲/其他",
-            "company_slug": "others",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>欧洲战场升温：</b>大众 ID. Buzz 登陆洛杉矶 + Go Inc 日本 IPO 暴涨，非传统玩家加速卡位",
             "sub_items": [
               {
@@ -2079,8 +2079,8 @@
             ]
           },
           {
-            "company": "中国出海",
-            "company_slug": "weride",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>中国自动驾驶双线欧洲：</b>文远知行苏黎世商业落地 + 萝卜快跑瑞士路测，瑞士成中国出海新据点",
             "sub_items": [
               {
@@ -2107,8 +2107,8 @@
         "name": "国内",
         "entries": [
           {
-            "company": "百度/萝卜快跑",
-            "company_slug": "apollo",
+            "company": "百度",
+            "company_slug": "baidu",
             "headline_html": "<b>百度/萝卜快跑：</b>首获西欧 L4 商业许可；AmiGo 联手 PostBus 正式在瑞士启动；上路测试同步展开",
             "sub_items": [
               {
@@ -2185,8 +2185,8 @@
             ]
           },
           {
-            "company": "Uber / Wayve",
-            "company_slug": "uber-wayve",
+            "company": "Uber",
+            "company_slug": "uber",
             "headline_html": "<b>Uber：</b>与 Wayve 开放伦敦候车名单；联手文远知行布局马德里，欧洲双城 Robotaxi 攻势成型",
             "sub_items": [
               {
@@ -2200,7 +2200,7 @@
             ]
           },
           {
-            "company": "Lyft / 百度 Apollo",
+            "company": "Lyft",
             "company_slug": "lyft",
             "headline_html": "<b>Lyft / 百度 Apollo：</b>首次进军英国，伦敦 AV 三方竞争格局成形",
             "sub_items": [
@@ -2303,8 +2303,8 @@
             ]
           },
           {
-            "company": "第二梯队",
-            "company_slug": "others",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>GM/Cruise 回归 + 大众 LA 上路 + NVIDIA 物理 AI 加速：</b>第二梯队本周多点突破",
             "sub_items": [
               {
@@ -2327,8 +2327,8 @@
         "name": "国内",
         "entries": [
           {
-            "company": "中国市场",
-            "company_slug": "china",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>中国市场：</b>小马智行撞车逃逸全责认定引爆法律争议，L3 梯队持续扩容，Momenta 布局长三角",
             "sub_items": [
               {
@@ -2409,8 +2409,8 @@
             ]
           },
           {
-            "company": "第二梯队",
-            "company_slug": "others",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>Uber+Motional / Zoox / Nuro+Lucid / WeRide：</b>第二梯队本周全面提速",
             "sub_items": [
               {
@@ -2437,7 +2437,7 @@
         "name": "国内",
         "entries": [
           {
-            "company": "Apollo Go / 萝卜快跑",
+            "company": "萝卜快跑",
             "company_slug": "apollo",
             "headline_html": "<b>中国 Robotaxi 监管冷却期：</b>Apollo Go 3月停运后的系统性整顿影响深远",
             "sub_items": [
@@ -2584,7 +2584,7 @@
             ]
           },
           {
-            "company": "文远知行 (WeRide)",
+            "company": "文远知行",
             "company_slug": "weride",
             "headline_html": "<b>文远知行：</b>+ Grab 新加坡开放公众商业化——东南亚首个无人驾驶出行服务",
             "sub_items": [
@@ -2738,7 +2738,7 @@
             ]
           },
           {
-            "company": "Uber/Motional",
+            "company": "Uber",
             "company_slug": "uber",
             "headline_html": "<b>Uber/Motional：</b>联邦机构调查16起碰撞事故；Motional正式上线Uber；Lucid×Nuro联合方案推进",
             "sub_items": [
@@ -2757,8 +2757,8 @@
             ]
           },
           {
-            "company": "立法/监管",
-            "company_slug": "regulation",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>立法/监管：</b>美国各州AV立法加速，D.C.提出高额许可费方案",
             "sub_items": [
               {
@@ -3047,8 +3047,8 @@
             ]
           },
           {
-            "company": "中国 L3 准入",
-            "company_slug": "china-l3",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>中国 L3 准入：</b>首批名单公布，赛力斯与长安入选",
             "sub_items": [
               {
@@ -3243,8 +3243,8 @@
             ]
           },
           {
-            "company": "元戎启行、地平线",
-            "company_slug": "deeproute-horizon",
+            "company": "元戎启行",
+            "company_slug": "deeproute",
             "headline_html": "<b>元戎启行、地平线：</b>技术进展与量产数据",
             "sub_items": [
               {

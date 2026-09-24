@@ -8,8 +8,8 @@
       "name": "国内",
       "entries": [
         {
-          "company": "百度/萝卜快跑",
-          "company_slug": "apollo",
+          "company": "百度",
+          "company_slug": "baidu",
           "headline_html": "<b>百度/萝卜快跑：</b>首获西欧 L4 商业许可；AmiGo 联手 PostBus 正式在瑞士启动；上路测试同步展开",
           "sub_items": [
             {
@@ -86,8 +86,8 @@
           ]
         },
         {
-          "company": "Uber / Wayve",
-          "company_slug": "uber-wayve",
+          "company": "Uber",
+          "company_slug": "uber",
           "headline_html": "<b>Uber：</b>与 Wayve 开放伦敦候车名单；联手文远知行布局马德里，欧洲双城 Robotaxi 攻势成型",
           "sub_items": [
             {
@@ -101,7 +101,7 @@
           ]
         },
         {
-          "company": "Lyft / 百度 Apollo",
+          "company": "Lyft",
           "company_slug": "lyft",
           "headline_html": "<b>Lyft / 百度 Apollo：</b>首次进军英国，伦敦 AV 三方竞争格局成形",
           "sub_items": [

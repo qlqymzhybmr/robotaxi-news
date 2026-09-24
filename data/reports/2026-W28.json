@@ -69,8 +69,8 @@
           ]
         },
         {
-          "company": "Uber / WeRide",
-          "company_slug": "uber-weride",
+          "company": "Uber",
+          "company_slug": "uber",
           "headline_html": "<b>Uber 新布局 + WeRide 苏黎世：</b>出行平台 × AV 国际化组合本周双线推进",
           "sub_items": [
             {
@@ -100,8 +100,8 @@
       "name": "国内",
       "entries": [
         {
-          "company": "监管突破",
-          "company_slug": "regulation",
+          "company": "行业",
+          "company_slug": "industry",
           "headline_html": "<b>中国 L3 首批准入落地：</b>长安深蓝、北汽极狐获批，驾驶员可合法「脱眼」时代开启",
           "sub_items": [
             {
@@ -111,7 +111,7 @@
           ]
         },
         {
-          "company": "小鹏 / 理想",
+          "company": "小鹏",
           "company_slug": "xpeng",
           "headline_html": "<b>小鹏 + 理想：</b>组织架构加速重塑，两家公司均把「机器人」列为下阶段核心战略",
           "sub_items": [
@@ -126,7 +126,7 @@
           ]
         },
         {
-          "company": "比亚迪 / 萝卜快跑",
+          "company": "比亚迪",
           "company_slug": "byd",
           "headline_html": "<b>比亚迪智驾「兜底」落地 + 萝卜快跑花旗背书：</b>国内智驾商业化信心指标走高",
           "sub_items": [

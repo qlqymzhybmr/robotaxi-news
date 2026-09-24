@@ -58,8 +58,8 @@
           ]
         },
         {
-          "company": "第二梯队",
-          "company_slug": "others",
+          "company": "行业",
+          "company_slug": "industry",
           "headline_html": "<b>Uber+Motional / Zoox / Nuro+Lucid / WeRide：</b>第二梯队本周全面提速",
           "sub_items": [
             {
@@ -86,7 +86,7 @@
       "name": "国内",
       "entries": [
         {
-          "company": "Apollo Go / 萝卜快跑",
+          "company": "萝卜快跑",
           "company_slug": "apollo",
           "headline_html": "<b>中国 Robotaxi 监管冷却期：</b>Apollo Go 3月停运后的系统性整顿影响深远",
           "sub_items": [

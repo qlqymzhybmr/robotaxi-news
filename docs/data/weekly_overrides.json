@@ -73,7 +73,7 @@
             ]
           },
           {
-            "company": "Lucid / Bolt",
+            "company": "Lucid",
             "company_slug": "lucid",
             "headline_html": "Bolt / Lucid：达成合作并计划在欧洲部署至少 2.5 万辆 L4 Robotaxi",
             "sub_items": [
@@ -385,7 +385,7 @@
             ]
           },
           {
-            "company": "Nuro / Lucid",
+            "company": "Nuro",
             "company_slug": "nuro",
             "headline_html": "<b>Nuro / Lucid：</b>拿下加州带安全员载客试运营许可",
             "sub_items": [
@@ -613,7 +613,7 @@
             ]
           },
           {
-            "company": "Uber + 小马智行 / 百度",
+            "company": "Uber",
             "company_slug": "uber",
             "headline_html": "<b>Uber：与小马智行在克罗地亚</b>萨格勒布正式推出Robotaxi商业化运营服务；与萝卜快跑在迪拜推出Robotaxi商业化运营服务",
             "sub_items": [
@@ -712,7 +712,7 @@
             ]
           },
           {
-            "company": "Wayve / Uber",
+            "company": "Wayve",
             "company_slug": "wayve",
             "headline_html": "Wayve/Uber：东京日之丸交通达成Robotaxi试点合作",
             "sub_items": [
@@ -839,8 +839,8 @@
         "name": "国内",
         "entries": [
           {
-            "company": "百度/萝卜快跑",
-            "company_slug": "apollo",
+            "company": "百度",
+            "company_slug": "baidu",
             "headline_html": "&nbsp;萝卜快跑：于英国伦敦开启Robotaxi车辆路测",
             "sub_items": [
               {
@@ -898,7 +898,7 @@
             ]
           },
           {
-            "company": "Uber + Rivian",
+            "company": "Uber",
             "company_slug": "uber",
             "headline_html": "Tesla：华盛顿州伊萨夸发生相撞事故",
             "sub_items": [
@@ -979,7 +979,7 @@
             ]
           },
           {
-            "company": "Waymo / Uber",
+            "company": "Waymo",
             "company_slug": "waymo",
             "headline_html": "<b>Waymo：预计</b>2028年5月拟终止Uber独家协议，并推出自有App；洛杉矶市中心发生相撞事故",
             "sub_items": [
@@ -1105,8 +1105,8 @@
             ]
           },
           {
-            "company": "华为系 / L3 监管",
-            "company_slug": "huawei",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>华为</b><b style=\"font-size: 0.875rem;\">：</b><span style=\"font-size: 0.875rem;\">享界 G9 获北京首张120km时速 L3 路测牌照</span>",
             "sub_items": [
               {
@@ -1318,7 +1318,7 @@
             ]
           },
           {
-            "company": "Wayve / Mobileye",
+            "company": "Wayve",
             "company_slug": "wayve",
             "headline_html": "<b>Wayve 伦敦启动 + Mobileye 独立 Robotaxi：</b>L4 生态「入场者」本周两度扩容",
             "sub_items": [
@@ -1333,7 +1333,7 @@
             ]
           },
           {
-            "company": "GM / Volkswagen",
+            "company": "GM",
             "company_slug": "gm",
             "headline_html": "<b>GM + 大众：</b>同日宣布收缩 L4，传统车企第一波 AV 浪潮走向系统性退潮",
             "sub_items": [
@@ -1348,8 +1348,8 @@
             ]
           },
           {
-            "company": "监管与生态",
-            "company_slug": "others",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>监管与生态：</b>NHTSA 取消强制刹车踏板 + UNECE 全球 GTR + Nuro 5 亿融资，政策与资本双重加速",
             "sub_items": [
               {
@@ -1398,7 +1398,7 @@
             ]
           },
           {
-            "company": "比亚迪 (BYD)",
+            "company": "比亚迪",
             "company_slug": "byd",
             "headline_html": "<b>比亚迪：</b>全系智驾 1.2 万元标配 + 自研芯片 2027 量产，智能化全栈布局全面加速",
             "sub_items": [
@@ -1413,7 +1413,7 @@
             ]
           },
           {
-            "company": "理想 / 小鹏",
+            "company": "理想",
             "company_slug": "liauto",
             "headline_html": "<b>理想 + 小鹏：</b>自研芯片与 VLA 架构双双亮相，中国智驾顶级玩家全栈自研节奏同步提速",
             "sub_items": [
@@ -1428,8 +1428,8 @@
             ]
           },
           {
-            "company": "国内多线",
-            "company_slug": "others",
+            "company": "行业",
+            "company_slug": "industry",
             "headline_html": "<b>国内多线：</b>华为里程破百亿 + 百度全球登顶 + 小马/零跑安全事件凸显法律灰区",
             "sub_items": [
               {

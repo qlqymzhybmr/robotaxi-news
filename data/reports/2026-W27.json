@@ -61,7 +61,7 @@
           ]
         },
         {
-          "company": "Wayve / Mobileye",
+          "company": "Wayve",
           "company_slug": "wayve",
           "headline_html": "<b>Wayve 伦敦启动 + Mobileye 独立 Robotaxi：</b>L4 生态「入场者」本周两度扩容",
           "sub_items": [
@@ -76,7 +76,7 @@
           ]
         },
         {
-          "company": "GM / Volkswagen",
+          "company": "GM",
           "company_slug": "gm",
           "headline_html": "<b>GM + 大众：</b>同日宣布收缩 L4，传统车企第一波 AV 浪潮走向系统性退潮",
           "sub_items": [
@@ -91,8 +91,8 @@
           ]
         },
         {
-          "company": "监管与生态",
-          "company_slug": "others",
+          "company": "行业",
+          "company_slug": "industry",
           "headline_html": "<b>监管与生态：</b>NHTSA 取消强制刹车踏板 + UNECE 全球 GTR + Nuro 5 亿融资，政策与资本双重加速",
           "sub_items": [
             {
@@ -141,7 +141,7 @@
           ]
         },
         {
-          "company": "比亚迪 (BYD)",
+          "company": "比亚迪",
           "company_slug": "byd",
           "headline_html": "<b>比亚迪：</b>全系智驾 1.2 万元标配 + 自研芯片 2027 量产，智能化全栈布局全面加速",
           "sub_items": [
@@ -156,7 +156,7 @@
           ]
         },
         {
-          "company": "理想 / 小鹏",
+          "company": "理想",
           "company_slug": "liauto",
           "headline_html": "<b>理想 + 小鹏：</b>自研芯片与 VLA 架构双双亮相，中国智驾顶级玩家全栈自研节奏同步提速",
           "sub_items": [
@@ -171,8 +171,8 @@
           ]
         },
         {
-          "company": "国内多线",
-          "company_slug": "others",
+          "company": "行业",
+          "company_slug": "industry",
           "headline_html": "<b>国内多线：</b>华为里程破百亿 + 百度全球登顶 + 小马/零跑安全事件凸显法律灰区",
           "sub_items": [
             {

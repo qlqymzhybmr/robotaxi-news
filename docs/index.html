@@ -154,6 +154,7 @@ const SELECTIONS_PATH = 'docs/data/selections.json';
 const WEEKLY_OVERRIDES_PATH = 'docs/data/weekly_overrides.json';
 
 let weeklyOverridesData = {};  // { week_id: week_object }
+let companyAliases = {};       // { 数据里出现过的写法: 正规公司名 }
 let weeklyDisplayVersion = 'edited'; // 'edited' | 'original'
 let editWeekData = null;
 let weeklyEditMode = false;
@@ -167,7 +168,8 @@ let selectedEditImg = null;
 async function init() {
   if (location.hash.startsWith('#weekly')) currentTab = 'weekly';
   else if (location.hash.startsWith('#selections')) currentTab = 'selections';
-  const [d, w, s, wo] = await Promise.all([fetchJSON('data/daily.json'), fetchJSON('data/weekly.json'), fetchJSON('data/selections.json'), fetchJSON('data/weekly_overrides.json')]);
+  const [d, w, s, wo, aliases] = await Promise.all([fetchJSON('data/daily.json'), fetchJSON('data/weekly.json'), fetchJSON('data/selections.json'), fetchJSON('data/weekly_overrides.json'), fetchJSON('data/company_aliases.json')]);
+  companyAliases = (aliases && aliases.alias && typeof aliases.alias === 'object') ? aliases.alias : {};
   dailyData = Array.isArray(d) ? d : [];
   weeklyData = Array.isArray(w) ? w : [];
   selectionsData = (s && typeof s === 'object' && !Array.isArray(s)) ? s : {};
@@ -655,9 +657,13 @@ function scrollToWeeklySection(id) {
   });
 }
 
+// 公司名归一：先查 data/company_aliases.json 的别名表（标题误写成公司名、子品牌、
+// 组合条目等都在表里），查不到再退回「去掉括号后缀」的老规则。
 function normalizeCompanyName(name) {
   if (!name) return '';
-  return name.replace(/[(][^)]*[)]/g, '').replace(/\s+/g, ' ').trim();
+  if (companyAliases[name]) return companyAliases[name];
+  const stripped = name.replace(/[(（][^)）]*[)）]/g, '').replace(/\s+/g, ' ').trim();
+  return companyAliases[stripped] || stripped;
 }
 
 function formatDate(dateStr) {

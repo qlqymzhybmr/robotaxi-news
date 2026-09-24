@@ -61,7 +61,7 @@
           ]
         },
         {
-          "company": "Uber / Avride",
+          "company": "Uber",
           "company_slug": "uber",
           "headline_html": "<b>Uber + Nvidia：</b>休斯顿 2027 落地 + Nvidia 20 亿押注 Avride，Robotaxi 平台生态加速聚合",
           "sub_items": [
@@ -76,8 +76,8 @@
           ]
         },
         {
-          "company": "欧洲/其他",
-          "company_slug": "others",
+          "company": "行业",
+          "company_slug": "industry",
           "headline_html": "<b>欧洲战场升温：</b>大众 ID. Buzz 登陆洛杉矶 + Go Inc 日本 IPO 暴涨，非传统玩家加速卡位",
           "sub_items": [
             {
@@ -115,8 +115,8 @@
           ]
         },
         {
-          "company": "中国出海",
-          "company_slug": "weride",
+          "company": "行业",
+          "company_slug": "industry",
           "headline_html": "<b>中国自动驾驶双线欧洲：</b>文远知行苏黎世商业落地 + 萝卜快跑瑞士路测，瑞士成中国出海新据点",
           "sub_items": [
             {

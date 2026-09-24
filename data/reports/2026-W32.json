@@ -8,8 +8,8 @@
       "name": "国内",
       "entries": [
         {
-          "company": "百度/萝卜快跑",
-          "company_slug": "apollo",
+          "company": "百度",
+          "company_slug": "baidu",
           "headline_html": "<b>百度/萝卜快跑：</b>伦敦 Robotaxi 测试启动，中国 L4 领跑全球右舵市场",
           "sub_items": [
             {
@@ -54,7 +54,7 @@
           ]
         },
         {
-          "company": "Uber + Rivian",
+          "company": "Uber",
           "company_slug": "uber",
           "headline_html": "<b>Uber + Rivian：</b>12 亿美元协议重建自营车队，Lucid-Nuro 联盟同步浮现",
           "sub_items": [

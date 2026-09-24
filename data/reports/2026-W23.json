@@ -65,8 +65,8 @@
           ]
         },
         {
-          "company": "第二梯队",
-          "company_slug": "others",
+          "company": "行业",
+          "company_slug": "industry",
           "headline_html": "<b>GM/Cruise 回归 + 大众 LA 上路 + NVIDIA 物理 AI 加速：</b>第二梯队本周多点突破",
           "sub_items": [
             {
@@ -89,8 +89,8 @@
       "name": "国内",
       "entries": [
         {
-          "company": "中国市场",
-          "company_slug": "china",
+          "company": "行业",
+          "company_slug": "industry",
           "headline_html": "<b>中国市场：</b>小马智行撞车逃逸全责认定引爆法律争议，L3 梯队持续扩容，Momenta 布局长三角",
           "sub_items": [
             {
