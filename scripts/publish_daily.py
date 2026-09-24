@@ -24,6 +24,7 @@ if hasattr(sys.stdout, "reconfigure"):  # Windows console defaults to GBK
     sys.stdout.reconfigure(encoding="utf-8")
 
 OUT = "docs/data/daily.json"
+ALIASES = "docs/data/company_aliases.json"
 MAX_DAY_GAP = 2
 
 # `## ` headings -> (group, sub_group)
@@ -126,6 +127,11 @@ COMPANY = {
     "宁德时代": ("宁德时代", "catl"),
 }
 
+# 公司名归一表：网页与本脚本共用，保证筛选列表不再被同一家公司拆成多格
+_alias_doc = json.load(open(ALIASES, encoding="utf-8"))
+NAME_ALIAS = _alias_doc["alias"]
+NAME_TO_SLUG = _alias_doc["name_to_slug"]
+
 ITEM_KEYS = {"id", "date", "company", "company_slug", "group", "sub_group", "title",
              "summary_html", "source_name", "source_url", "published_at", "rating", "lang"}
 
@@ -161,10 +167,14 @@ def parse(md_path):
             continue
         if ln.startswith("### "):
             flush()
-            head = ln[4:].strip()
-            if head not in COMPANY:
-                raise SystemExit("未知公司小标题：%s（请在 scripts/publish_daily.py 的 COMPANY 里补充）" % head)
-            company, slug = COMPANY[head]
+            head = NAME_ALIAS.get(ln[4:].strip(), ln[4:].strip())
+            if head in COMPANY:
+                company, slug = COMPANY[head]
+            elif head in NAME_TO_SLUG:
+                company, slug = head, NAME_TO_SLUG[head]
+            else:
+                raise SystemExit("未知公司小标题：%s（补进 scripts/publish_daily.py 的 COMPANY，"
+                                 "或 docs/data/company_aliases.json 的 name_to_slug）" % head)
             continue
 
         m = ITEM_RE.match(ln)
