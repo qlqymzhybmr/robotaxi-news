@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-09-29",
+    "items": [
+      {
+        "id": "2026-09-29-001",
+        "date": "2026-09-29",
+        "company": "Momenta",
+        "company_slug": "momenta",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "Momenta 与神龙科技达成全球战略合作，R7 世界模型将上车标致、Jeep 全新量产车型，2027 年起投放中国与欧洲",
+        "summary_html": "<p><b>9月28日</b>，<b>Momenta</b> 发布公告披露：已于 <b>9 月 24 日</b>与<b>神龙汽车科技（武汉）</b>达成<b>全球战略合作</b>。双方基于 <b>Momenta R7 世界模型</b>联合开发高阶智能辅助驾驶系统，搭载于<b>标致、Jeep 的全新量产车型</b>，面向<b>中国、欧洲及其他市场</b>，新产品自 <b>2027 年起</b>陆续投放，涵盖纯电与插混。</p><p>神龙科技由<b>东风汽车与 Stellantis 集团</b>等共同组建。合作模式不是单纯供货：<b>Momenta 参与标致、Jeep 的产品定义与整车开发全流程</b>，针对标致的操控属性与 Jeep 的硬派越野定位做底盘调校与智驾场景适配。</p><p>这条的意义在于<b>方向</b>：中国智驾方案不只是进入外资品牌的在华车型，而是进入其<b>面向全球市场的车型开发</b>。同期另一条同向消息是本田重申与 Momenta 的合作、明年上车。</p>",
+        "source_name": "Momenta与神龙科技达成战略合作：将联合开发高阶智能辅助驾驶系统，搭载于标致、Jeep全新量产车型",
+        "source_url": "https://finance.sina.com.cn/roll/2026-09-28/doc-initiwip3903189.shtml",
+        "published_at": "2026-09-28",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-09-29-002",
+        "date": "2026-09-29",
+        "company": "曹操出行",
+        "company_slug": "caocao",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "吉利安聪慧：曹操出行全面转向换电，在研的原生 Robotaxi 也采用换电方案；同期蔚来与吉利签充换电全面战略合作",
+        "summary_html": "<p><b>9月28日</b>，<b>吉利控股集团安聪慧</b>在采访中表示：<b>曹操出行将全面采用换电模式</b>，<b>正在开发的原生 Robotaxi 车型同样采用换电方案</b>，该产品「很快将会落地」。</p><p>背景：曹操深度参与产品定义的<b>原生 Robotaxi「Eva Cab」</b>于今年 4 月亮相，计划 <b>2027 年量产</b>。同期<b>蔚来与吉利控股签署充换电领域全面战略合作</b>——双方在技术、运营、资本三个维度达成共识，将<b>互相投资对方的充换电业务主体、共享技术标准、共建服务网络</b>，并采取<b>分网运营</b>；蔚来计划到 2030 年累计建成 1 万座换电站。</p><p><b>为什么值得记</b>：Robotaxi 的成本结构里，补能时长直接影响单车日活跃小时数。选换电而非快充，意味着车队运营方把<b>补能确定性</b>放在了首位，这与车辆需要 7×24 小时高强度运转的目标一致。</p>",
+        "source_name": "吉利安聪慧：曹操出行将全面采用换电，原生 Robotaxi 将采用换电方案",
+        "source_url": "https://www.ithome.com/1/007/792.htm",
+        "published_at": "2026-09-28",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-09-29-003",
+        "date": "2026-09-29",
+        "company": "鸿蒙智行",
+        "company_slug": "harmonyos-auto",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "鸿蒙智行三车齐发：智界 RX 上市 25.98 万元起，L3 架构版 31.98 万元起；享界 V8 预售 32.98 万元",
+        "summary_html": "<p><b>9月28日</b>，鸿蒙智行新品发布会：<b>智界 RX 正式上市</b>，售价 <b>25.98–38.98 万元</b>，其中<b>搭载 L3 级自动驾驶架构的版本 31.98 万元起</b>，被称为 30 万级唯一搭载该架构的车型；<b>享界 V8</b> 开启预售 <b>32.98 万元</b>，同样采用面向 L3 的架构设计并标配华为乾崑智驾 ADS 5；<b>智界 R7 焕新款</b> 23.98–31.98 万元。</p><p>官方同时披露：截至 <b>9 月 16 日</b>，鸿蒙智行全系累计交付超 <b>155 万辆</b>，累计辅助驾驶里程超 <b>121.95 亿公里</b>。</p><p>⚠️ 「面向 L3 架构设计」指硬件与电子电气架构预留能力，<b>不等于已获 L3 准入或已开放 L3 功能</b>。</p>",
+        "source_name": "鸿蒙智行发布会三车齐发：智界RX上市、智界R7焕新、享界V8开启预售",
+        "source_url": "https://finance.sina.com.cn/roll/2026-09-28/doc-initktnv8463288.shtml",
+        "published_at": "2026-09-28",
+        "rating": 1,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-09-29-004",
+        "date": "2026-09-29",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo 首批 Jaguar I-PACE 抵达慕尼黑并开始测试，为其进入欧盟的第一步；目标 2027 年底商业运营",
+        "summary_html": "<p><b>9月28日</b>，多家媒体报道并有网友实拍：<b>Waymo 的首批 Jaguar I-PACE 已抵达慕尼黑</b>——至少 <b>10 辆</b>装有车顶传感器的白色 I-PACE 停放在慕尼黑东侧 <b>Heimstetten</b> 的一处办公楼场地，另有网友在<b>慕尼黑隧道</b>拍到路测车辆。</p><p>测试形态：<b>由受训验证驾驶员在驾驶位</b>，在慕尼黑多个城区<b>测绘道路</b>并针对当地交通与道路条件验证 Waymo Driver。Waymo 8 月 25 日宣布选择慕尼黑作为其<b>欧盟首城</b>，目标 <b>2027 年底</b>开放全无人载客。</p><p>监管路径已有依据：德国 <b>2021 年《自动驾驶法》</b>为 L4 车辆上路提供了法律框架；Waymo 称将与<b>德国联邦汽车运输管理局（KBA）</b>、巴伐利亚州与慕尼黑市方面合作获取商业运营许可。</p>",
+        "source_name": "Waymo Robotaxis Arrive in Munich as Testing With Jaguar I-PACEs Begins",
+        "source_url": "https://eletric-vehicles.com/waymo/waymo-robotaxis-arrive-in-munich-as-testing-with-jaguar-i-paces-begins/",
+        "published_at": "2026-09-28",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-29-005",
+        "date": "2026-09-29",
+        "company": "文远知行",
+        "company_slug": "weride",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "瑞士 iamo 项目今日开放公众预约：苏黎世州 Furttal 地区 3 辆日产 Ariya，起步价 4.70 瑞郎，车内配安全员",
+        "summary_html": "<p><b>9月28日起</b>，由<b>文远知行提供自动驾驶技术</b>的瑞士试点项目 <b>iamo（intelligent automated mobility）</b>在<b>苏黎世州 Furttal 地区</b>面向公众开放预约。</p><p>运营细节：通过 <b>iamo App</b> 叫车，<b>每天 13:00–17:00</b> 运行，可前往近 <b>100 个预设停靠点</b>（含 Boppelsen、Dänikon、Hüttikon、Otelfingen 等）；车队为 <b>3 辆日产 Ariya</b>，配备 <b>6 个激光雷达、11 个摄像头与 8 个其他传感器</b>；<b>每车驾驶位仍配一名安全员</b>，单次最多载 3 名乘客。</p><p><b>定价</b>：起步价 <b>4.70 瑞士法郎</b>，每公里加收 <b>0.38 瑞士法郎</b>。</p><p>这是文远在瑞士继 9 月初苏黎世开绿灯、9 月 9 日苏黎世机场无人 Robobus 之后的第三个节点（分别见 9/5、9/10 简报），也是<b>公共交通体系内按公里计价的自动驾驶接驳</b>这一形态的落地样本。</p>",
+        "source_name": "Autonomous driving: New project in Switzerland with ioki",
+        "source_url": "https://ioki.com/en/autonomous-driving-in-public-transport-ioki-provides-on-demand-software-for-pilot-project-in-switzerland/",
+        "published_at": "2026-09-28",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-29-006",
+        "date": "2026-09-29",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla 高调宣传 FSD 新增的自动避撞功能，Elluswamy 称其为「守护天使」，多起用户实拍流出",
+        "summary_html": "<p><b>9月28日</b>，Tesla AI 副总裁 <b>Ashok Elluswamy</b> 公开为 FSD 的<b>自动避撞（Automatic Collision Evasion）</b>功能背书，称其是「<b>一直在照看你的守护天使</b>」。多位用户发布实拍：系统在驾驶员未反应时<b>主动接管转向</b>避开碰撞，其中一例避开了侧向来车。</p><p>该功能的首段实拍视频于 9 月 26 日流出（见 9/27 简报），本日 Tesla 官方层面开始主动传播。</p><p>⚠️ 适用版本、触发条件与是否全量推送，官方仍未说明；上述案例均为用户自行拍摄，未经第三方复核。</p><p>值得并读的是同期争议：Tesla 今年 1 月已把<b>车道居中（Autosteer）从新车标配中移除</b>，该能力现被并入 <b>99 美元/月的 FSD 订阅</b>——一边宣传 FSD 的主动安全能力能救命，一边把基础的车道保持放进订阅，被 CleanTechnica 等媒体持续质疑。</p>",
+        "source_name": "Watch Tesla's \"guardian angel\" FSD feature take over for collision evasion",
+        "source_url": "https://www.teslarati.com/watch-tesla-guardian-angel-fsd-feature-collision-evasion/",
+        "published_at": "2026-09-28",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-09-29-007",
+        "date": "2026-09-29",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "12 家全部零变化，合计 2,382 辆；Cybercab 保持 126 辆",
+        "summary_html": "<p>截至 <b>2026-09-29</b> 快照（已核对每家 history 末条日期均为当日、每家当日仅一条记录），德州 TxMCCS 登记的 12 家运营方合计 <b>2,382 辆</b>，与 9 月 28 日持平。<b>Waymo 1,133 辆（I-PACE 783 / Ojai 350）</b>，<b>Tesla 546 辆（Model Y 420 / Cybercab 126）</b>。本次 12 家抓取全部成功。</p><p>上周的集中放量（9/24–28 四天 +211 辆）后，今日首次回到零变化。</p>",
+        "source_name": "Texas DMV TxMCCS 自动驾驶车辆登记",
+        "source_url": "https://txmccs.txdmv.gov/truckstop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles",
+        "published_at": "2026-09-29",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-09-28",
     "items": [
       {
