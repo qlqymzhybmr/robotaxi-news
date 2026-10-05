@@ -946,6 +946,31 @@
       "city": "San Diego CA",
       "site": "10news.com",
       "name": "KGTV ABC10 San Diego"
+    },
+    {
+      "city": "Denver CO",
+      "site": "denverpost.com",
+      "name": "Denver Post"
+    },
+    {
+      "city": "Denver CO",
+      "site": "9news.com",
+      "name": "9News KUSA"
+    },
+    {
+      "city": "Denver CO",
+      "site": "kdvr.com",
+      "name": "KDVR Fox31"
+    },
+    {
+      "city": "Denver CO",
+      "site": "denvergazette.com",
+      "name": "Denver Gazette"
+    },
+    {
+      "city": "Denver CO",
+      "site": "westword.com",
+      "name": "Westword"
     }
   ],
   "Motional": [
