@@ -396,6 +396,29 @@ def build_query(company: str, keywords: List[str], compact: bool = False) -> str
     return f'"{company}" ({joined})'
 
 
+def _http_failed(feed) -> bool:
+    """feedparser swallows HTTP errors: a 429/503 from Google comes back as an
+    empty feed, indistinguishable from "no news". Surface it as an error so the
+    health report counts it."""
+    status = getattr(feed, "status", None)
+    return status is not None and status >= 400
+
+
+def date_scope(window_start: datetime, window_end: datetime) -> str:
+    """Google News `after:/before:` suffix that brackets the fetch window.
+
+    Without it a query returns the ~100 most relevant hits spread over months,
+    so only a handful land in the 24h window (2026-10-05: "Zoox" 1 vs 4,
+    "文远知行" 0 vs 4), and backfilled windows a few days old are almost empty.
+    The operators take bare dates whose timezone Google does not document, so
+    pad a day on each side in UTC; the exact 09:00→09:00 Beijing filter still
+    runs on every entry.
+    """
+    after = (window_start.astimezone(timezone.utc) - timedelta(days=1)).date()
+    before = (window_end.astimezone(timezone.utc) + timedelta(days=1)).date()
+    return f" after:{after.isoformat()} before:{before.isoformat()}"
+
+
 def rss_url(query: str, lang: str) -> str:
     cfg = {
         "zh": {"hl": "zh-CN", "gl": "CN", "ceid": "CN:zh-Hans"},
@@ -552,14 +575,18 @@ def fetch_company_news(
     max_per_lang = 10 if company.is_focus else 5
 
     company_key = clean_company_name(company.name)
+    scope = date_scope(window_start, window_end)
 
     for lang in langs:
         query_name = pick_query_name(company.name, lang)
-        query_candidates = [
+        base_queries = [
             build_query(query_name, keywords[lang], compact=False),
             build_query(query_name, keywords[lang], compact=True),
             f'"{query_name}"',
         ]
+        # Date-scoped variants first so the per-language cap fills with
+        # in-window hits; unscoped ones only top up what they missed.
+        query_candidates = [q + scope for q in base_queries] + base_queries
 
         collected_this_lang = 0
         seen_local = set()
@@ -573,6 +600,9 @@ def fetch_company_news(
                 feed = feedparser.parse(url)
             except Exception as e:
                 errors.append(f"{company.name} [{lang}] parse_error: {e}")
+                continue
+            if _http_failed(feed):
+                errors.append(f"{company.name} [{lang}] http_{feed.status}")
                 continue
 
             for entry in getattr(feed, "entries", []):
@@ -611,6 +641,10 @@ def fetch_company_news(
                 else:
                     link = raw_link
                 local_key = (title, link)
+                # Candidate queries overlap; a repeat must not eat the cap.
+                if local_key in seen_local:
+                    continue
+                seen_local.add(local_key)
 
                 items.append(
                     {
@@ -725,6 +759,8 @@ def fetch_local_media_news(
     company_key = clean_company_name(company_name)
     # Use English query name (handles cases like 小马智行 (Pony.ai) → Pony.ai)
     query_name = pick_query_name(company_name, "en")
+    scope = date_scope(window_start, window_end)
+    seen_titles = set()
 
     for site_info in sites:
         site = site_info["site"]
@@ -732,15 +768,19 @@ def fetch_local_media_news(
         city = site_info.get("city", "")
 
         query = f'"{query_name}" site:{site}'
-        url = rss_url(query, "en")
+        entries = []
+        for q in (query + scope, query):
+            try:
+                feed = feedparser.parse(rss_url(q, "en"))
+            except Exception as exc:
+                errors.append(f"{company_name} [local:{site}] parse_error: {exc}")
+                continue
+            if _http_failed(feed):
+                errors.append(f"{company_name} [local:{site}] http_{feed.status}")
+                continue
+            entries.extend(getattr(feed, "entries", []))
 
-        try:
-            feed = feedparser.parse(url)
-        except Exception as exc:
-            errors.append(f"{company_name} [local:{site}] parse_error: {exc}")
-            continue
-
-        for entry in getattr(feed, "entries", []):
+        for entry in entries:
             if not getattr(entry, "published_parsed", None):
                 continue
             published = datetime.fromtimestamp(
@@ -750,6 +790,9 @@ def fetch_local_media_news(
                 continue
 
             title = getattr(entry, "title", "")
+            if (site, title) in seen_titles:
+                continue
+            seen_titles.add((site, title))
             if not is_relevant_local_media(company_name, title):
                 continue
 
