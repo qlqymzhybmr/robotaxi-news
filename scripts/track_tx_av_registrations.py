@@ -71,12 +71,29 @@ DISCOVERY_TERMS = [
 PAGE = 100          # API 硬上限：limit 必须在 1..100
 
 
-def _get(url: str) -> dict:
+def _get(url: str, attempts: int = 4) -> dict:
+    """GET with retry on network-level failures.
+
+    Through the local proxy the TLS handshake intermittently drops and
+    surfaces as `URLError: [Errno 2] No such file or directory` (2026-10-07:
+    3 of 8 bare requests failed). Large fleets need a dozen pages, so one
+    unretried drop was enough to skip Waymo/Tesla for the day. HTTP errors
+    (4xx/5xx) are real answers and are not retried.
+    """
+    import time
     req = urllib.request.Request(
         url, headers={"User-Agent": UA, "Accept": "application/json"})
-    with urllib.request.urlopen(req, timeout=30,
-                                context=ssl.create_default_context()) as r:
-        return json.loads(r.read().decode("utf-8"))
+    for i in range(attempts):
+        try:
+            with urllib.request.urlopen(req, timeout=30,
+                                        context=ssl.create_default_context()) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError:
+            raise
+        except (urllib.error.URLError, OSError):
+            if i == attempts - 1:
+                raise
+            time.sleep(2 ** i)
 
 
 def fetch(company_id: str) -> list[dict]:

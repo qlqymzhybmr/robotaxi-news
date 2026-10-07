@@ -3,6 +3,7 @@ import json
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -174,9 +175,11 @@ def check_twitter_auth(url: str) -> str | None:
     Returns an error string if auth is expired/invalid, None if OK.
     """
     try:
-        parsed = feedparser.parse(url)
+        parsed = _parse(url)
     except Exception:
         return None  # network error, not auth error
+    if _network_failed(parsed):
+        return None  # still a network error after retries, not auth
 
     # RSSHub returns a bozo feed or specific error title when auth fails
     feed_obj = parsed.get("feed") if hasattr(parsed, "get") else getattr(parsed, "feed", {})
@@ -239,7 +242,7 @@ def fetch_direct_feed(
         elif attempt:
             time.sleep(backoff)
         try:
-            parsed = feedparser.parse(feed.url, request_headers=req_headers)
+            parsed = _parse(feed.url, request_headers=req_headers)
         except Exception as e:
             if attempt == attempts - 1:
                 errors.append(f"{feed.company} [direct] parse_error: {e}")
@@ -250,6 +253,11 @@ def fetch_direct_feed(
             break
     if parsed is None:
         errors.append(f"{feed.company} [direct] parse_error: no response")
+        return items, errors
+    net_err = _network_failed(parsed)
+    if net_err:
+        # Not a silent feed and not an auth failure: we never reached it.
+        errors.append(f"{feed.company} [direct] network_error: {feed.url} → {net_err}")
         return items, errors
 
     if raw_counts is not None:
@@ -394,6 +402,36 @@ def build_query(company: str, keywords: List[str], compact: bool = False) -> str
     kw = keywords[:6] if compact else keywords[:10]
     joined = " OR ".join(kw)
     return f'"{company}" ({joined})'
+
+
+def _network_failed(parsed) -> str | None:
+    """Return the error text if feedparser never got an HTTP response.
+
+    feedparser does not raise on network failure: it returns an empty, bozo
+    result with the URLError attached. Through the local proxy the TLS
+    handshake drops intermittently and surfaces as `[Errno 2] No such file or
+    directory` (2026-10-07: 3 of 8 bare requests). Unhandled, that empty
+    result was read as "auth expired" for X feeds and as a silent feed or an
+    empty Google News query everywhere else.
+    """
+    exc = getattr(parsed, "bozo_exception", None)
+    if (getattr(parsed, "status", None) is None
+            and not getattr(parsed, "entries", [])
+            and isinstance(exc, (urllib.error.URLError, OSError))):
+        return str(exc)
+    return None
+
+
+def _parse(url: str, attempts: int = 3, **kwargs):
+    """feedparser.parse with retry on network-level failure only."""
+    parsed = None
+    for i in range(attempts):
+        parsed = feedparser.parse(url, **kwargs)
+        if not _network_failed(parsed):
+            return parsed
+        if i < attempts - 1:
+            time.sleep(3 * (i + 1))
+    return parsed
 
 
 def _http_failed(feed) -> bool:
@@ -597,12 +635,16 @@ def fetch_company_news(
 
             url = rss_url(query, lang)
             try:
-                feed = feedparser.parse(url)
+                feed = _parse(url)
             except Exception as e:
                 errors.append(f"{company.name} [{lang}] parse_error: {e}")
                 continue
             if _http_failed(feed):
                 errors.append(f"{company.name} [{lang}] http_{feed.status}")
+                continue
+            net_err = _network_failed(feed)
+            if net_err:
+                errors.append(f"{company.name} [{lang}] network_error: {net_err}")
                 continue
 
             for entry in getattr(feed, "entries", []):
@@ -771,12 +813,16 @@ def fetch_local_media_news(
         entries = []
         for q in (query + scope, query):
             try:
-                feed = feedparser.parse(rss_url(q, "en"))
+                feed = _parse(rss_url(q, "en"))
             except Exception as exc:
                 errors.append(f"{company_name} [local:{site}] parse_error: {exc}")
                 continue
             if _http_failed(feed):
                 errors.append(f"{company_name} [local:{site}] http_{feed.status}")
+                continue
+            net_err = _network_failed(feed)
+            if net_err:
+                errors.append(f"{company_name} [local:{site}] network_error: {net_err}")
                 continue
             entries.extend(getattr(feed, "entries", []))
 
@@ -835,6 +881,9 @@ ALERT_RULES = [
     ("REDDIT_403", "critical",
      "Reddit 拒绝了请求（UA 或 IP 被封），非限速问题，重试无用",
      "需要更换出口 IP，或改用其他 UA / 接入 Reddit 官方 API"),
+    ("network_error", "warning",
+     "网络层请求失败（如经本地代理的 TLS 握手中断），重试 3 次后仍未取到",
+     "多为瞬时问题；同一天大量出现时先检查本地代理（127.0.0.1:7890），不是凭证或源本身的问题"),
     ("REDDIT_429", "warning",
      "Reddit 限速，已按退避重试仍未取到",
      "通常次日自愈；若连续多天出现，考虑拉长重试间隔或减少订阅的 subreddit 数量"),
@@ -883,7 +932,9 @@ def build_health_report(errors: List[str], raw_counts: Dict[str, int],
         })
 
     silent = sorted(name_of(url) for url, n in raw_counts.items() if n == 0)
-    missing = sorted(name_of(u) for u in set(label) - set(raw_counts))
+    # Feeds that failed at the network layer are already reported as errors.
+    unreached = {u for u in label if any(u in e for e in errors)}
+    missing = sorted(name_of(u) for u in set(label) - set(raw_counts) - unreached)
     return {
         "ok": not alerts and not silent and not missing,
         "alerts": alerts,
