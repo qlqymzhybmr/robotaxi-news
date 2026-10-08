@@ -3,11 +3,11 @@
   "companies": {
     "Waymo": {
       "latest": {
-        "date": "2026-10-07",
-        "total": 1168,
+        "date": "2026-10-08",
+        "total": 1175,
         "by_model": {
-          "RT": 373,
-          "I-PACE": 795
+          "I-PACE": 802,
+          "RT": 373
         },
         "vins": [
           "L6TZB1G10SU006531",
@@ -477,6 +477,7 @@
           "SADHW2S11M1616779",
           "SADHW2S11M1617625",
           "SADHW2S11R1634528",
+          "SADHW2S11R1634917",
           "SADHW2S11R1635033",
           "SADHW2S11R1635243",
           "SADHW2S11R1635274",
@@ -552,6 +553,7 @@
           "SADHW2S12M1615947",
           "SADHW2S12M1616015",
           "SADHW2S12M1616712",
+          "SADHW2S12R1634392",
           "SADHW2S12R1634635",
           "SADHW2S12R1634943",
           "SADHW2S12R1634957",
@@ -717,6 +719,7 @@
           "SADHW2S14R1639576",
           "SADHW2S14R1639609",
           "SADHW2S14R1639657",
+          "SADHW2S14R1639755",
           "SADHW2S14R1640484",
           "SADHW2S14R1640680",
           "SADHW2S14R1640761",
@@ -759,6 +762,7 @@
           "SADHW2S15R1634421",
           "SADHW2S15R1635570",
           "SADHW2S15R1635598",
+          "SADHW2S15R1635729",
           "SADHW2S15R1635746",
           "SADHW2S15R1635875",
           "SADHW2S15R1636038",
@@ -830,6 +834,7 @@
           "SADHW2S16M1617278",
           "SADHW2S16M1617569",
           "SADHW2S16R1634055",
+          "SADHW2S16R1634816",
           "SADHW2S16R1635304",
           "SADHW2S16R1635352",
           "SADHW2S16R1635531",
@@ -972,6 +977,7 @@
           "SADHW2S18R1634140",
           "SADHW2S18R1634607",
           "SADHW2S18R1634705",
+          "SADHW2S18R1634767",
           "SADHW2S18R1635482",
           "SADHW2S18R1635885",
           "SADHW2S18R1636020",
@@ -1127,6 +1133,7 @@
           "SADHW2S1XM1617414",
           "SADHW2S1XR1634625",
           "SADHW2S1XR1634866",
+          "SADHW2S1XR1635743",
           "SADHW2S1XR1635841",
           "SADHW2S1XR1635872",
           "SADHW2S1XR1635905",
@@ -1706,12 +1713,36 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 1175,
+          "by_model": {
+            "I-PACE": 802,
+            "RT": 373
+          },
+          "added_vins": [
+            "SADHW2S11R1634917",
+            "SADHW2S12R1634392",
+            "SADHW2S14R1639755",
+            "SADHW2S15R1635729",
+            "SADHW2S16R1634816",
+            "SADHW2S18R1634767",
+            "SADHW2S1XR1635743"
+          ],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {
+              "I-PACE": 7
+            },
+            "removed_count": 0
+          }
         }
       ]
     },
     "Tesla Robotaxi": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 589,
         "by_model": {
           "Cybercab": 169,
@@ -2834,12 +2865,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 589,
+          "by_model": {
+            "Cybercab": 169,
+            "Model Y": 420
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Avride": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 344,
         "by_model": {
           "Ioniq 5": 344
@@ -3499,12 +3544,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 344,
+          "by_model": {
+            "Ioniq 5": 344
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Aurora": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 91,
         "by_model": {
           "579": 41,
@@ -3961,12 +4019,27 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 91,
+          "by_model": {
+            "579": 41,
+            "LT62F": 29,
+            "VNL (4)": 21
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Gatik AI": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 64,
         "by_model": {
           "FTR": 45,
@@ -4371,12 +4444,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 64,
+          "by_model": {
+            "FTR": 45,
+            "FVR": 19
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Nuro": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 47,
         "by_model": {
           "Prius": 21,
@@ -4764,12 +4851,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 47,
+          "by_model": {
+            "Prius": 21,
+            "Gravity": 26
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Zoox": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 63,
         "by_model": {
           "Zoox": 17,
@@ -5207,12 +5308,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 63,
+          "by_model": {
+            "Zoox": 17,
+            "Highlander": 46
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Kodiak Robotics": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 33,
         "by_model": {
           "567": 9,
@@ -5586,12 +5701,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 33,
+          "by_model": {
+            "567": 9,
+            "T680": 24
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Torc Robotics": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 32,
         "by_model": {
           "RA Cascadia": 28,
@@ -5964,12 +6093,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 32,
+          "by_model": {
+            "RA Cascadia": 28,
+            "Cascadia": 4
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "May Mobility": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 22,
         "by_model": {
           "Sienna": 22
@@ -6307,12 +6450,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 22,
+          "by_model": {
+            "Sienna": 22
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Waabi Logistics": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 13,
         "by_model": {
           "VNL": 1,
@@ -6691,12 +6847,27 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-08",
+          "total": 13,
+          "by_model": {
+            "VNL": 1,
+            "VNL (4)": 2,
+            "579": 10
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Bot Auto TX": {
       "latest": {
-        "date": "2026-10-07",
+        "date": "2026-10-08",
         "total": 13,
         "by_model": {
           "Cascadia": 13
@@ -7015,6 +7186,19 @@
         },
         {
           "date": "2026-10-07",
+          "total": 13,
+          "by_model": {
+            "Cascadia": 13
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
+        },
+        {
+          "date": "2026-10-08",
           "total": 13,
           "by_model": {
             "Cascadia": 13
