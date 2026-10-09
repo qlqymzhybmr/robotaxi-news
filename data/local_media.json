@@ -1450,6 +1450,26 @@
       "city": "Zagreb HR",
       "site": "index.hr",
       "name": "Index.hr"
+    },
+    {
+      "city": "London UK",
+      "site": "cityam.com",
+      "name": "City A.M."
+    },
+    {
+      "city": "London UK",
+      "site": "bbc.co.uk",
+      "name": "BBC"
+    },
+    {
+      "city": "London UK",
+      "site": "standard.co.uk",
+      "name": "Evening Standard"
+    },
+    {
+      "city": "London UK",
+      "site": "mylondon.news",
+      "name": "MyLondon"
     }
   ]
 }
