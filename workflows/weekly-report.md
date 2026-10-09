@@ -16,6 +16,8 @@
 3. 检查 `docs/data/daily.json` 是否包含对应日期的条目（用于根据 ID 查找完整内容）。
 4. 如果 selections.json 里目标日期范围内无任何选中 ID，提示用户："选稿区间内暂无选中条目，请先在网页选稿 UI 中完成选稿并保存。"
 
+**学习已有成品时：** 拉取后优先读取 `docs/data/weekly_overrides.json` 中目标 `week_id` 的用户编辑记录，再与 `docs/data/weekly.json` 和 `data/reports/` 的生成稿对照。成品删改不反向替代新一期的选稿清单；学习任务只沉淀规则，不覆盖用户成品。拉取前检查工作区，优先 fetch 后安全快进，保留已有修改；网络代理按当前环境配置，不机械清空可用代理。
+
 ---
 
 ## 执行步骤
@@ -83,15 +85,15 @@ git -c http.proxy="" pull origin main
 - 如果一家公司有 2+ 条事件:
   - 按事件类型分(区域扩张 / 技术发布 / 商业化 / 融资 / 事故)
   - 同类事件**合并成一个主条目**,headline 用分号串联,子条目用 `a./b./c.` 展开
-  - 不同类事件**保持分开**的主条目
+  - 不同类事件仍放在**同一个公司主条目**下，继续增加子条目；一家公司只出现一次
   - 参考 `style-guide.md` 里的"多事件公司"结构
 
 ### 步骤 5:排序
 
 **全局排序**:
-1. **分区**:国内 section 在前,国外 section 在后
+1. **分区**:国外 section 在前,国内 section 在后
 2. **分区内**:按重要性(⭐⭐⭐ > ⭐⭐ > ⭐),同级别按公司重点程度(参考 competitors.md 的 ⭐ 标记和 style-guide.md 里的公司顺序)
-3. 同公司同类事件内部:按日期正序(早的在前)
+3. 同公司事件默认按日期倒序；同类事故可归组用 i/ii/iii，连续审批可合并为时间线，具体写法参考 style-guide.md 最新编辑版学习
 
 ### 步骤 6:按 style-guide 生成中文文本
 
@@ -116,7 +118,7 @@ git -c http.proxy="" pull origin main
 - 对**区域扩张/开城**类事件:**默认尝试配 1 张图**(优先服务区地图 / 车辆在当地街景的图)
 - 对**重大技术发布/产品发布**类事件:**默认尝试配 1 张图**(优先产品/系统官方渲染图)
 - **其他类型**(融资、合作、监管、人事等):**默认不配图**,除非 daily 文件里有特别明显的好图候选
-- **事故/安全类事件**:**绝不配图**(避免画面过于敏感)
+- **事故/安全类事件**:可配直接解释事件、无血腥内容的截图；W39-W40编辑版保留Zoox碰撞及小马夹手截图，通常居中、宽50%、带中文图注
 
 **操作步骤**:
 - 对符合"默认配图"条件的主条目,从 daily 文件里读取对应新闻的 `候选图:` 行记录的 URL
@@ -147,7 +149,7 @@ git -c http.proxy="" pull origin main
 
 <h1 style="font-size: 20px; color: #1a73e8; border-bottom: 1px solid #1a73e8; padding-bottom: 6px;">（Wxx）无人驾驶行业MMDD-MMDD重要新闻</h1>
 
-<h2 style="font-size: 17px; color: #000; margin-top: 28px;">国内</h2>
+<h2 style="font-size: 17px; color: #000; margin-top: 28px;">国外</h2>
 
 <ol style="padding-left: 24px;">
   <li style="margin-bottom: 16px;">
@@ -174,7 +176,7 @@ git -c http.proxy="" pull origin main
   </li>
 </ol>
 
-<h2 style="font-size: 17px; color: #000; margin-top: 28px;">国外</h2>
+<h2 style="font-size: 17px; color: #000; margin-top: 28px;">国内</h2>
 
 <ol style="padding-left: 24px;">
   <li style="margin-bottom: 16px;">
@@ -208,12 +210,12 @@ git -c http.proxy="" pull origin main
   "generated_at": "YYYY-MM-DDTHH:mm:ss+08:00",
   "sections": [
     {
-      "name": "国内",
+      "name": "国外",
       "entries": [
         {
           "company": "公司名",
           "company_slug": "参考 daily-publish.md 的映射表",
-          "headline_html": "<b>公司名:</b>单事件标题或多事件串联 headline",
+          "headline_html": "<b>公司名：单事件标题或多事件串联 headline</b>",
           "sub_items": [
             {
               "label": "a",
@@ -224,7 +226,7 @@ git -c http.proxy="" pull origin main
       ]
     },
     {
-      "name": "国外",
+      "name": "国内",
       "entries": [ ... ]
     }
   ]
@@ -232,7 +234,7 @@ git -c http.proxy="" pull origin main
 ```
 
 **格式要点**:
-- sections 固定两个:"国内" 在前,"国外" 在后
+- sections 固定两个:"国外" 在前,"国内" 在后
 - headline_html 和 content_html 中的加粗用 `<b>` 标签
 - 单事件公司也用 sub_items,只放一条,label 为 "a"
 - generated_at 用 ISO 8601 格式,北京时间(+08:00)
