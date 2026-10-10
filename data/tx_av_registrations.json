@@ -3,7 +3,7 @@
   "companies": {
     "Waymo": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 1185,
         "by_model": {
           "I-PACE": 812,
@@ -1196,7 +1196,7 @@
           "SADHW2S1XR1642563",
           "SADHW2S1XR1642675"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:26.178041+08:00"
       },
       "history": [
         {
@@ -1776,12 +1776,28 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 1185,
+          "by_model": {
+            "I-PACE": 812,
+            "RT": 373
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:26.178041+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "Tesla Robotaxi": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 739,
         "by_model": {
           "Cybercab": 319,
@@ -2528,7 +2544,7 @@
           "7SAYGDEEXTF597273",
           "7SAYGDEEXTF598312"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:22.426191+08:00"
       },
       "history": [
         {
@@ -3237,12 +3253,28 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 739,
+          "by_model": {
+            "Cybercab": 319,
+            "Model Y": 420
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:22.426191+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "Avride": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 344,
         "by_model": {
           "Ioniq 5": 344
@@ -3593,7 +3625,7 @@
           "KM8KN4AEXPU155035",
           "KM8KN4AEXPU186222"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:18.869653+08:00"
       },
       "history": [
         {
@@ -3930,12 +3962,27 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 344,
+          "by_model": {
+            "Ioniq 5": 344
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:18.869653+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "Aurora": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 91,
         "by_model": {
           "579": 41,
@@ -4035,7 +4082,7 @@
           "4V4BC9EGXSN663712",
           "4V4BC9EGXSN663726"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:19.844771+08:00"
       },
       "history": [
         {
@@ -4424,12 +4471,29 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 91,
+          "by_model": {
+            "579": 41,
+            "LT62F": 29,
+            "VNL (4)": 21
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:19.844771+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "Gatik AI": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 64,
         "by_model": {
           "FTR": 45,
@@ -4501,7 +4565,7 @@
           "54DM6S1F9RSB02699",
           "54DM6S1F9TSB00765"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:20.771375+08:00"
       },
       "history": [
         {
@@ -4864,12 +4928,28 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 64,
+          "by_model": {
+            "FTR": 45,
+            "FVR": 19
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:20.771375+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "Nuro": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 47,
         "by_model": {
           "Prius": 21,
@@ -4924,7 +5004,7 @@
           "JTDKAMFUXN3170945",
           "JTDKAMFUXN3171562"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:21.634064+08:00"
       },
       "history": [
         {
@@ -5287,12 +5367,28 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 47,
+          "by_model": {
+            "Prius": 21,
+            "Gravity": 26
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:21.634064+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "Zoox": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 63,
         "by_model": {
           "Zoox": 17,
@@ -5363,7 +5459,7 @@
           "7Z00XVHX8VC000005",
           "7Z00XVHX9VC000076"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:22.520749+08:00"
       },
       "history": [
         {
@@ -5760,12 +5856,28 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 63,
+          "by_model": {
+            "Zoox": 17,
+            "Highlander": 46
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:22.520749+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "Kodiak Robotics": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 33,
         "by_model": {
           "567": 9,
@@ -5806,7 +5918,7 @@
           "1XPCD40X6TD789952",
           "1XPCD40XXVD829083"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:23.406730+08:00"
       },
       "history": [
         {
@@ -6169,12 +6281,28 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 33,
+          "by_model": {
+            "567": 9,
+            "T680": 24
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:23.406730+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "Torc Robotics": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 32,
         "by_model": {
           "RA Cascadia": 28,
@@ -6214,7 +6342,7 @@
           "3AKJH8DVXSSZZ6195",
           "3AKJH8DVXSSZZ6200"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:23.517267+08:00"
       },
       "history": [
         {
@@ -6577,12 +6705,28 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 32,
+          "by_model": {
+            "RA Cascadia": 28,
+            "Cascadia": 4
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:23.517267+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "May Mobility": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 22,
         "by_model": {
           "Sienna": 22
@@ -6611,7 +6755,7 @@
           "5TDYRKECXPS139907",
           "5TDYRKECXPS139910"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:24.287816+08:00"
       },
       "history": [
         {
@@ -6948,12 +7092,27 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 22,
+          "by_model": {
+            "Sienna": 22
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:24.287816+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "Waabi Logistics": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 13,
         "by_model": {
           "VNL": 1,
@@ -6975,7 +7134,7 @@
           "4V4BC9EG0SN663704",
           "4V4BC9EG1SN663730"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:24.479086+08:00"
       },
       "history": [
         {
@@ -7364,12 +7523,29 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 13,
+          "by_model": {
+            "VNL": 1,
+            "VNL (4)": 2,
+            "579": 10
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:24.479086+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     },
     "Bot Auto TX": {
       "latest": {
-        "date": "2026-10-09",
+        "date": "2026-10-10",
         "total": 13,
         "by_model": {
           "Cascadia": 13
@@ -7389,7 +7565,7 @@
           "3AKJHHFGXSSWF1520",
           "3akjhhdr3vsxh6965"
         ],
-        "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        "observed_at": "2026-10-10T10:32:25.253291+08:00"
       },
       "history": [
         {
@@ -7726,6 +7902,21 @@
             "removed_count": 0
           },
           "observed_at": "2026-10-09T10:34:57.587446+08:00"
+        },
+        {
+          "date": "2026-10-10",
+          "total": 13,
+          "by_model": {
+            "Cascadia": 13
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          },
+          "observed_at": "2026-10-10T10:32:25.253291+08:00",
+          "baseline_date": "2026-10-09"
         }
       ]
     }

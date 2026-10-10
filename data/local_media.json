@@ -1144,6 +1144,26 @@
       "city": "London UK",
       "site": "mylondon.news",
       "name": "MyLondon"
+    },
+    {
+      "city": "Turin IT",
+      "site": "lastampa.it",
+      "name": "La Stampa"
+    },
+    {
+      "city": "Turin IT",
+      "site": "torinotoday.it",
+      "name": "TorinoToday"
+    },
+    {
+      "city": "Turin IT",
+      "site": "rainews.it",
+      "name": "RAI News / TGR Piemonte"
+    },
+    {
+      "city": "Turin IT",
+      "site": "it.euronews.com",
+      "name": "Euronews Italiano"
     }
   ],
   "萝卜快跑 (Apollo Go / Baidu)": [
