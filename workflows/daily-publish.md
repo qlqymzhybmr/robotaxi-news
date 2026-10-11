@@ -77,7 +77,7 @@
 
 > **这张表的权威版本是 `scripts/publish_daily.py` 的 `COMPANY` 映射**，发布时以脚本为准；
 > 公司名不在映射里脚本会直接中止，此时把新公司补进脚本（同时更新本表），不要临时编一个 slug。
-> 历史数据里的 slug 变体已由 `scripts/normalize_company_slugs.py` 于 2026-09-24 归一。
+> 历史数据里的 slug 变体已由 `scripts/normalize_companies.py` 于 2026-09-24 归一。
 
 ---
 

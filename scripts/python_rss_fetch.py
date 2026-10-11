@@ -676,9 +676,12 @@ def fetch_company_news(
                     # Baidu indexes Chinese UGC subdomains (k.sina.com.cn,
                     # chejiahao.autohome.com.cn) unevenly, so a site: filter there
                     # can yield zero results. Only scope the English/Google query.
-                    scope = _domain_of(source_href) if lang == "en" else ""
+                    # Separate name: reusing `scope` here overwrote the date
+                    # scope, so a focus company's en pass lost after:/before:
+                    # whenever its zh pass had a hit.
+                    site = _domain_of(source_href) if lang == "en" else ""
                     link = _make_search_url(
-                        title, lang=lang, site=scope, source_name=source
+                        title, lang=lang, site=site, source_name=source
                     )
                 else:
                     link = raw_link
@@ -892,7 +895,7 @@ ALERT_RULES = [
 
 def build_health_report(errors: List[str], raw_counts: Dict[str, int],
                         feeds: List[DirectFeed]) -> dict:
-    """把零散的错误串归类成分级告警，供 daily-fetch 的 Phase 5 直接播报。
+    """把零散的错误串归类成分级告警，供 daily-fetch 的 Phase 6 直接播报。
 
     分三类：
       alerts       —— 需要用户动手修的（凭证过期、被封禁）
@@ -1028,8 +1031,8 @@ def main() -> None:
 
     print(
         f"done group={args.group} companies={len(companies)} "
-        f"track_b_raw={len(all_items) - local_media_items_total} "
-        f"track_a_raw={local_media_items_total} "
+        f"track_a_and_feeds_raw={len(all_items) - local_media_items_total} "
+        f"track_b_raw={local_media_items_total} "
         f"deduped={len(deduped)} errors={len(all_errors)} output={output_path}"
     )
 

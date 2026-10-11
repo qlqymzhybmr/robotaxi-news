@@ -42,6 +42,9 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 | 5 | **德州 DMV 车队登记** | **每天写进 daily**，包括无变化；全部已追踪玩家合成一条 |
 | 6 | **抓取源健康告警**（流程最后一步） | **不写文件,单独提醒用户**(见下) |
 
+- **全程自动，不等人工选稿**:Claude 自己完成相关性筛选、去重、日期与事实核查、⭐ 评级，核查通过的条目全部写入 daily 并发布。**不出编号候选清单，不等用户挑选。**
+  - 2026-10-08 ~ 10-11 曾临时使用「冻结编号候选 → 用户选编号 → 核查 → 只发布选中项」的流程（Codex 临时接替期间单独设置），**已于 2026-10-11 废止**。`important-examples.md` 里那几天的记录只保留内容判断与核查口径作参考，其中关于等待用户选择的步骤不再执行
+  - 核查严格度沿用那段时间的标准：首发时间统一换算北京时间再比对窗口；事件日期、首发、转载分开记；核不实的不发布，并在 daily 末尾「📊 本次运行统计」里写明暂缓原因
 - Phase 1、2 的产物**合并写入同一份文件** `data/daily/YYYY-MM-DD.md`（包含 "## 国外 L4" 和 "## 国内 L4" 等 section）,体感是一次跑完、一份文件
 - Phase 4、4b、6 **刻意不写进 daily 文件**:它们不是当日新闻,也不进周报,混进去只会干扰阅读
 - 分阶段的好处:避免单次 tool 调用过多导致上下文或 5 小时额度问题
@@ -194,7 +197,10 @@ robotaxi-news/
 │   ├── publish_daily.py         # Phase 3:把 data/daily/*.md 发布进 docs/data/daily.json(带字段断言与 ±2 天过滤)
 │   ├── roll_daily_archive.py    # 定期:把 daily.json 的旧日期滚动进归档(带条目守恒校验)
 │   ├── compress_weekly_images.py # 定期:压缩周报内联图片(PNG→WebP,幂等)
-│   └── track_tx_av_registrations.py # Phase 5:德州 DMV 车队登记追踪
+│   ├── track_tx_av_registrations.py # Phase 5:德州 DMV 车队登记追踪
+│   ├── normalize_companies.py   # 一次性迁移:按 company_aliases.json 归一公司名/slug(默认 dry-run)
+│   ├── validate_local_media.py  # 手动:抽查几组 local_media site: 查询能否出条目
+│   └── archive/                 # 已用完的一次性脚本(旧周报生成、旧 Phase 3 等),不在主流程
 ├── archive/
 │   ├── claude_structured_summary.py # 已归档:旧的 API 调用总结脚本(已由 Claude 直接总结替代)
 │   └── legacy-fetch/            # 已下线的旧抓取方案归档
@@ -205,6 +211,8 @@ robotaxi-news/
 │   ├── uber_ceo_interviews.json # Phase 4 去重台账(报过的访谈,避免重复提醒)
 │   ├── bolt_av_tracker.json     # Phase 4b 台账(Bolt 自动驾驶合作与 L4 技术来源,去重)
 │   ├── tx_av_registrations.json # Phase 5 德州车队登记历史快照
+│   ├── local_media.json         # Track B 本地媒体清单(公司 → 城市 → 站点)
+│   ├── tmp/                     # 抓取原始 JSON(raw_news_*.json),gitignore,不提交
 │   └── reports/                 # 周报 HTML(YYYY-Wxx.html)+ JSON 副产物(YYYY-Wxx.json)
 └── docs/                        # GitHub Pages 网站根目录(固定用 /docs,GitHub 原生支持)
     ├── index.html               # 单文件网页(Tailwind CDN + 原生 JS)
@@ -212,7 +220,9 @@ robotaxi-news/
         ├── daily.json           # 每日精选,近 90 天(Phase 3 只写这个)
         ├── daily-archive.json   # 每日精选,更早的历史(只由 roll_daily_archive.py 维护)
         ├── weekly.json          # 周报数据(Claude 自动写入)
-        └── weekly_overrides.json # 周报人工修订 + 内联图片(定期跑压缩脚本)
+        ├── weekly_overrides.json # 周报人工修订 + 内联图片(网页编辑直接写 GitHub;定期跑压缩脚本)
+        ├── selections.json      # 周报选稿(网页选稿 UI 直接写 GitHub,生成周报前必须 pull)
+        └── company_aliases.json # 公司名归一表(网页筛选与 publish_daily.py 共用)
 ```
 
 ---
@@ -367,26 +377,14 @@ https://qlqymzhybmr.github.io/robotaxi-news/
 3. 实习生运行 `git add -A && git commit -m "daily YYYY-MM-DD" && git push`,约 1-2 分钟后网页更新
 4. 每周一周报生成后,weekly-report 自动串接 weekly-publish,把选稿汇总结果写入 `docs/data/weekly.json`,同样 push 后自动更新
 
-### ⚠️ Claude Code 工作目录与本地主目录不同步问题
+### 工作目录（2026-10-11 起）
 
-**原因**：Claude Code 每次任务都在 `.claude/worktrees/<分支名>/` 下创建独立 worktree，所有文件编辑和 git push 均在 worktree 内完成。主目录 `D:\Desktop\robotaxi-news` 不会自动感知这些变更（Cursor 直接在主目录工作，所以没有这个问题）。
+项目已迁到 Linux 环境：**`/workspace/robotaxi-news`**，直接在 `main` 分支上工作，不再使用 `.claude/worktrees/`，也不需要 push 后再同步 Windows 主目录（旧的 `D:\Desktop\robotaxi-news` 同步规则已废止）。
 
-**规则：每次 git push 完成后，Claude 必须紧接着执行以下命令同步本地主目录：**
-
-```bash
-git -C "D:\Desktop\robotaxi-news" pull origin main
-```
-
-如果出现本地冲突（`Your local changes would be overwritten`），说明本地有过时的修改，先丢弃再拉取：
-
-```bash
-git -C "D:\Desktop\robotaxi-news" restore docs/data/daily.json   # 或冲突的具体文件
-git -C "D:\Desktop\robotaxi-news" pull origin main
-```
-
-**checklist（每次 push 后必做）**：
-- [ ] `git push origin <worktree-branch>:main` ✅ 推送成功
-- [ ] `git -C "D:\Desktop\robotaxi-news" pull origin main` ✅ 本地主目录已同步
+- Python：`python` 已指向 `python3`（3.13），依赖 `feedparser`、`Pillow` 已安装；文档里的 `python ...` 命令可原样运行
+- 每天开工前先 `git pull --ff-only origin main`：网页选稿 UI 和周报编辑会直接往 GitHub 写 `selections.json` / `weekly_overrides.json`，本地不拉就会落后
+- push 前确认 `git status` 干净、diff 是「新增当日数据」而不是删历史；push 冲突时先 pull 再推，**不要 force push**（会冲掉网页端刚保存的选稿）
+- 文档中 Windows 专属内容（GBK 控制台、本地代理 `127.0.0.1:7890`）在本环境不适用，但保留在脚本里不影响运行
 
 ### 网页功能
 
@@ -537,4 +535,4 @@ python -c "import json;json.load(open('docs/data/daily.json',encoding='utf-8'))"
 - 需要额外的修复提交和推送
 
 **总结**：
-对于 `docs/data/daily.json` 和 `docs/data/weekly.json` 这类**累积型数据文件**，永远不要直接 `Write` 覆盖，必须先 `Read` → 修改 → `Write`。这是 daily-publish 和 weekly-publish 流程的核心规则。
+对于 `docs/data/daily.json` 和 `docs/data/weekly.json` 这类**累积型数据文件**，永远不要用 `Write` / `Edit` 工具改，也不要把整份 `Read` 进上下文；一律用 Python 在进程内 `json.load` → 插入/替换 → `json.dump` 写回（daily 直接用 `scripts/publish_daily.py`）。这是 daily-publish 和 weekly-publish 流程的核心规则。
