@@ -1,6 +1,7 @@
 import argparse
 import json
 import re
+import socket
 import sys
 import time
 import urllib.error
@@ -948,6 +949,11 @@ def build_health_report(errors: List[str], raw_counts: Dict[str, int],
 
 
 def main() -> None:
+    # feedparser opens URLs with no timeout, so one connection the proxy drops
+    # without a reply blocks the run forever (2026-10-11: both groups sat on
+    # their first request for 40 min). A stalled read now raises, and _parse
+    # retries it like any other network failure.
+    socket.setdefaulttimeout(30)
     # Windows GBK 控制台打印 ⚠/❌ 会抛 UnicodeEncodeError 并以退出码 1 结束，
     # 2026-09-13 两次国外组抓取都在打印健康告警时崩溃（JSON 已写入但任务显示失败）。
     for stream in (sys.stdout, sys.stderr):

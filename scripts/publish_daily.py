@@ -173,13 +173,18 @@ def parse(md_path):
             elif head in NAME_TO_SLUG:
                 company, slug = head, NAME_TO_SLUG[head]
             else:
-                raise SystemExit("未知公司小标题：%s（补进 scripts/publish_daily.py 的 COMPANY，"
-                                 "或 docs/data/company_aliases.json 的 name_to_slug）" % head)
+                # Merged "no news" headings (### Zoox / Cruise / Wayve) carry no
+                # items, so they are skipped; only an item under an unknown
+                # heading is an error.
+                company, slug = None, head
             continue
 
         m = ITEM_RE.match(ln)
         if m:
             flush()
+            if company is None:
+                raise SystemExit("未知公司小标题：%s（补进 scripts/publish_daily.py 的 COMPANY，"
+                                 "或 docs/data/company_aliases.json 的 name_to_slug）" % slug)
             cur = {"rating": len(m.group(1)), "title": m.group(2), "group": group,
                    "sub_group": sub_group, "company": company, "company_slug": slug,
                    "paras": [], "sources": [], "published_at": None}
