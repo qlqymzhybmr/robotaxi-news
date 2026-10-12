@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-10-12",
+    "items": [
+      {
+        "id": "2026-10-12-001",
+        "date": "2026-10-12",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：Sawyer称奥斯汀街头跑单的Cybercab看起来比Waymo还多",
+        "summary_html": "<p><b>10月11日美国当地时间</b>，Sawyer Merritt发帖称，\"感觉此刻在 <b>奥斯汀</b> 载客的Cybercab比Waymo还多\"，并附上数段在几分钟内拍到的车辆片段。帖子发布于北京时间 <b>10月12日05:05</b>，在本期窗口内。</p><p>这是博主的 <b>现场主观观察</b>，没有车辆计数或统计方法，不能据此比较两家在奥斯汀的实际运营规模。作为参考，德州DMV登记中Tesla为739辆（Cybercab 319辆）、Waymo为1185辆，但这是全州登记数，不等于奥斯汀当时在路上运营的车辆。本条仅记录Cybercab上线一个月后的街头可见度反馈。</p>",
+        "source_name": "奥斯汀Cybercab与Waymo街头可见度观察",
+        "source_url": "https://x.com/SawyerMerritt/status/2109389991071858861",
+        "published_at": "2026-10-12",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-12-002",
+        "date": "2026-10-12",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：博主达成25,000英里FSD无接管连续里程，批评者称\"连胜\"机制鼓励延迟接管",
+        "summary_html": "<p><b>10月10日美国当地时间</b>，InsideEVs报道，直播驾驶的YouTuber <b>David Moss</b> 成为首位公开展示 <b>25,000英里FSD连续无接管（streak）</b> 的用户，期间曾遭追尾。按Tesla规则，连胜从开启FSD导航到某地开始，人工退出即中断。报道于北京时间 <b>10月11日12:40</b> 发布，在本期窗口内。</p><p>FSD测试者 <b>Chuck Cook</b> 等批评者认为，该机制奖励监督驾驶员\"不接管\"，可能让人在FSD出错时推迟介入；报道同时提到Moss的视频中车辆压过大坑并驶过\"禁止进入\"标志后泊车。连胜显示是近期软件更新加入的功能（2026.38.5也写入了无接管里程显示）。这是媒体与用户的争议报道，<b>未见监管机构就此采取行动</b>，属于私家车监督版FSD，与Robotaxi无人运营无直接关系。</p><p>(过去24h无经核实的新事件。召回中的丹佛开服、Ojai搭载Gemini、50亿美元贷款、坦帕逆行等均为此前已发生或已报道事件，见文末统计。)</p>",
+        "source_name": "Critics Slam Tesla's Gamification Of FSD As Driver Hits 25,000-Mile Streak",
+        "source_url": "https://insideevs.com/news/804844/tesla-fsd-streak-25k-miles/",
+        "published_at": "2026-10-11",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-12-003",
+        "date": "2026-10-12",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Waymo：凤凰城视障乘客称过去一年坦佩候车由2—4分钟拉长至17—20分钟，路线绕行明显",
+        "summary_html": "<p><b>10月11日美国当地时间</b>，r/waymo用户发帖称，自己因视力障碍无法开车，Waymo在 <b>凤凰城</b> 上线时曾\"改变生活\"，但过去12个月变得难以使用：在 <b>Tempe</b> 的平均候车时间由过去的 <b>2—4分钟</b>（高峰5—7分钟）变为 <b>17—20分钟</b>；一段直线1.1英里的常用行程，车辆会先反向行驶约4英里再掉头，单程约14分钟。帖子发布于北京时间 <b>10月12日01:50</b>。</p><p>候车时长、路线和使用感受均为 <b>单个乘客自述</b>，没有样本统计或Waymo回应，不能外推为凤凰城整体服务水平下降。本条作为长期乘客的运营体验反馈收录，与此前多条关于路线绕行的乘客反馈可对照观察。</p>",
+        "source_name": "[PHX] Waymo got so BAD over the last 12 months",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1x3elqx/phx_waymo_got_so_bad_over_the_last_12_months/",
+        "published_at": "2026-10-12",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-12-004",
+        "date": "2026-10-12",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Waymo：网友称旧金山舰队周期间多辆Waymo停在行车道上，造成拥堵与隐患",
+        "summary_html": "<p><b>10月11日美国当地时间</b>，r/waymo用户发帖称，舰队周期间离开 <b>旧金山</b> 时遇到多辆Waymo <b>实际停在行车道中间</b>，\"成为路上的隐患\"，频率高于普通人类司机；作者表示原本对Waymo持期待态度，现在认为大型活动期间不应允许其在城内运营。帖子发布于北京时间 <b>10月12日08:48</b>。</p><p>背景是SFMTA在 <b>10月9—11日</b> 对Marina、Embarcadero等区域实施自动驾驶车辆临时上下客限制（已收录于10月10日日报）。帖中车辆数量、停车原因与时长均为 <b>网友自述</b>，未见照片核实、执法记录或Waymo回应，不能认定为系统性故障。</p>",
+        "source_name": "Anyone else get burned by stuck Waymo’s during fleet week?",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1x3oanp/anyone_else_get_burned_by_stuck_waymos_during/",
+        "published_at": "2026-10-12",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-12-005",
+        "date": "2026-10-12",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "小鹏：刘先明称智驾两周可适配一个欧洲国家，仍计划2027年在欧洲推出NGP",
+        "summary_html": "<p><b>10月11日</b>，据彭博社报道，小鹏通用智能中心负责人 <b>刘先明</b> 表示，公司把辅助驾驶系统从一个欧洲市场迁移到下一个市场 <b>约需两周</b>，所需数据可能仅为训练基础模型数据量的 <b>万分之一</b>。小鹏正与监管机构沟通，仍按计划于 <b>2027年</b> 在欧洲推出NGP（导航辅助驾驶），并争取把完整功能带到当地。转引报道最早于北京时间 <b>10月12日04:05</b> 发布，在本期窗口内。</p><p>刘先明同时表示，欧洲法规、道路设计和混合交通参与者构成挑战，小鹏仍需向监管证明系统在本地道路可用。NGP基于 <b>VLA 2.0</b>，属于 <b>L2辅助驾驶</b>，驾驶员须全程监控并承担责任，与小鹏Robotaxi业务不同；\"两周\"\"万分之一\"均为公司口径，未经独立验证。</p>",
+        "source_name": "XPeng says its driver assist can be tailored for Europe fast",
+        "source_url": "https://www.briefs.co/news/xpeng-says-its-driver-assist-can-be-tailored-for-europe-fast/",
+        "published_at": "2026-10-12",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-10-12-006",
+        "date": "2026-10-12",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "小鹏：巴黎NGP公众试乘正式开放，车展期间10月12—18日在6号馆接待",
+        "summary_html": "<p><b>10月11日</b>，小鹏官方账号宣布 <b>巴黎NGP公众试乘正式开放</b>，首批由 <b>小鹏L03</b> 在巴黎街头运行，并邀请观众于 <b>巴黎车展10月12—18日</b> 到6号馆小鹏展台参与。帖子发布于北京时间 <b>21:02</b>；同日官方还转发了RTL记者等媒体的道路体验反馈。</p><p>10月10日官方曾称公众试乘已开放报名，本期为 <b>实际上路开放</b> 的新进展；注意前一日引述BFM Tech的车展试乘日期为10月13—22日，与本次官方给出的10月12—18日不一致，以官方最新口径为准。NGP为 <b>L2辅助驾驶</b> 体验，不是Robotaxi无人载客；原文未说明每日名额与路线。</p>",
+        "source_name": "XPENG NGP public ride-alongs are now live in Paris",
+        "source_url": "https://x.com/XPENG_Global/status/2109268277939540377",
+        "published_at": "2026-10-11",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-10-12-007",
+        "date": "2026-10-12",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家追踪运营方登记共2646辆，数量与VIN集合均无变化",
+        "summary_html": "<p><b>10月12日10:00:25北京时间</b>，逐页获取德州TxMCCS官方登记快照，12家请求全部成功。对比 <b>10月11日完整成功快照</b>，合计 <b>2646辆，净变化0</b>，各家公司VIN集合也一致，没有数量持平但车辆替换的情况。</p><p>各家登记为：<b>Waymo1185辆（I-PACE812、RT373），Tesla739辆（Model Y420、Cybercab319）</b>；Avride344、Aurora91、Gatik AI64、Zoox63（Highlander46、Zoox17）、Nuro47、Kodiak Robotics33、Torc Robotics32、May Mobility22、Waabi Logistics13、Bot Auto TX13，各家净变化均为0。这是12家已追踪玩家的合计，不代表全州企业普查。</p><p>本快照观测晚于09:00新闻截止，独立标注实际时间；<b>登记车辆不等于当时投入运营或载客的车辆</b>，数量与VIN无变化也不等于运营没有变化。按每日固定追踪要求，无变化仍合成一条推送，完整逐车证据保存在登记台账。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-10-12",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-10-11",
     "items": [
       {
