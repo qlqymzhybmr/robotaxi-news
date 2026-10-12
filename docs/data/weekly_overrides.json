@@ -11,25 +11,17 @@
           {
             "company": "Waymo",
             "company_slug": "waymo",
-            "headline_html": "<b>Waymo：舰队周旧金山运营受限；疑似在费城违规开展无驾驶员的地图测绘工作；完成首笔50亿美元贷款</b>",
+            "headline_html": "<b>Waymo：疑似在费城违规开展无驾驶员的地图测绘工作；完成首笔50亿美元贷款</b>",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>10月9日</b>，旧金山舰队周期间（10月9至11日，每日10:00-18:00），旧金山在 Marina 大片区域、Embarcadero 沿线及整个 Presidio <b>设置临时电子围栏，限制 Waymo 与 Zoox 运营</b>，有驾驶员的网约车不受影响。",
-                "daily_ids": [
-                  "2026-10-10-001",
-                  "2026-10-12-004"
-                ]
-              },
-              {
-                "label": "b",
-                "content_html": "<b>10月9日</b>，费城居民向宾州交通部门（PennDOT）反映，<b>疑似有 Waymo 车辆在驾驶位无人的情况下上路</b>。PennDOT 要求核查，若确认违规，可暂停其测试资格。Waymo 称，居民拍摄后24小时内，车辆约24次途经现场，车内均有受训人员。Waymo 自2025年7月起在费城开展地图测绘，按要求须配备随车驾驶员。<div><table class=\"img-grid-block\" style=\"width: 100%; border-collapse: collapse; margin: 12px 0px; table-layout: fixed;\"><tbody><tr><td style=\"width:100%;padding:6px;text-align:center;vertical-align:top;border:none\"><figure style=\"margin:0;text-align:center\"><img src=\"https://media.phillyvoice.com/media/images/10826_Waymo_Two.width-704.jpg\" title=\"点击调整大小\" style=\"width: 50%; height: auto; display: block; border-radius: 4px; cursor: pointer; margin: 8px auto;\"><figcaption style=\"font-size:12px;color:#6b7280;margin-top:6px;text-align:center\">费城居民拍摄图片</figcaption></figure></td></tr></tbody></table><br></div>",
+                "content_html": "<b>10月9日</b>，费城居民向宾州交通部门（PennDOT）反映，<b>疑似有 Waymo 车辆在驾驶位无人的情况下上路</b>。PennDOT 要求Waymo核查，若确认违规，可暂停其测试资格。Waymo 称，居民拍摄后24小时内，车辆约24次途经现场，车内均有受训人员。Waymo 自2025年7月起在费城开展地图测绘，按要求须配备随车驾驶员。<div><table class=\"img-grid-block\" style=\"width: 100%; border-collapse: collapse; margin: 12px 0px; table-layout: fixed;\"><tbody><tr><td style=\"width:100%;padding:6px;text-align:center;vertical-align:top;border:none\"><figure style=\"margin:0;text-align:center\"><img src=\"https://media.phillyvoice.com/media/images/10826_Waymo_Two.width-704.jpg\" title=\"点击调整大小\" style=\"width: 50%; height: auto; display: block; border-radius: 4px; cursor: pointer; margin: 8px auto;\"><figcaption style=\"font-size:12px;color:#6b7280;margin-top:6px;text-align:center\">费城居民拍摄图片</figcaption></figure></td></tr></tbody></table><br></div>",
                 "daily_ids": [
                   "2026-10-10-002"
                 ]
               },
               {
-                "label": "c",
+                "label": "b",
                 "content_html": "<b>10月8日</b>，Waymo 完成首笔 50 亿美元的定期贷款债务融资，大型资产管理机构为主要贷款方，资金用于美国及海外<b>无人网约车业务扩张</b>，未披露利率与期限。",
                 "daily_ids": [
                   "2026-10-09-001"
@@ -40,7 +32,7 @@
           {
             "company": "Tesla",
             "company_slug": "tesla",
-            "headline_html": "<b>Tesla：Cybercab下一站为达拉斯；Cybercab调查答复期限延至10月30日</b>",
+            "headline_html": "<b>Tesla：Cybercab下一站或为达拉斯；NHTSA对Cybercab的调查答复期限延至10月30日</b>",
             "sub_items": [
               {
                 "label": "a",
@@ -80,11 +72,11 @@
           {
             "company": "小马智行",
             "company_slug": "xiaoma",
-            "headline_html": "<b>小马智行：计划在伦敦开展路测，全球布局已覆盖10国</b>",
+            "headline_html": "<b>小马智行：计划在伦敦开展路测</b>",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>10月8日</b>，宣布联合 Uber <b>进入英国伦敦</b>，预计未来数周内开始道路测试。<b>10月10日</b>，官方表示全球业务布局<b>已覆盖10个国家</b>。",
+                "content_html": "<b>10月8日</b>，与 Uber 联合宣布&nbsp;<b>进入英国伦敦</b>，预计未来数周内开始道路测试。",
                 "daily_ids": [
                   "2026-10-11-006"
                 ]
@@ -98,7 +90,7 @@
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>10月11日</b>，小鹏通用智能中心负责人刘先明称，其驾驶辅助系统适配欧洲不同市场~2周，所需本地数据量仅为基础模型训练数据量的万分之一。计划于2027年在<b>欧洲推出导航辅助驾驶系统（NGP）</b>，通过技术合作和海外 Robotaxi 部署拓展收入来源。",
+                "content_html": "<b>10月11日</b>，小鹏通用智能中心负责人刘先明称，其驾驶辅助系统适配欧洲不同市场仅需~2周，所需本地数据量仅为基础模型训练数据量的万分之一。计划于2027年在<b>欧洲推出导航辅助驾驶系统（NGP）</b>，通过技术合作和海外 Robotaxi 部署拓展收入来源。",
                 "daily_ids": [
                   "2026-10-12-005"
                 ]
@@ -112,7 +104,7 @@
               },
               {
                 "label": "c",
-                "content_html": "<b>10月8日</b>，小鹏正式发布<b> Robotaxi 品牌 “XPENG YOYO”</b>，通过邀请码向中国公众开放线上体验报名，将逐步由员工内测扩展至外部用户，目前广州试点测试车辆规模~100。",
+                "content_html": "<b>10月8日</b>，小鹏正式发布<b> Robotaxi 品牌 “XPENG YOYO”</b>，通过邀请码向中国公众开放线上体验报名，将逐步由员工内测扩展至外部用户。",
                 "daily_ids": [
                   "2026-10-09-010"
                 ]
@@ -122,11 +114,11 @@
           {
             "company": "行业",
             "company_slug": "industry",
-            "headline_html": "<b>行业：香港运输署累计发放9项自动驾驶先导牌照</b>",
+            "headline_html": "<b>行业：香港运输署累计发放9张自动驾驶先导牌照</b>",
             "sub_items": [
               {
                 "label": "a",
-                "content_html": "<b>10月8日</b>，香港运输署表示已累计发放&nbsp;<b>9 项先导牌照</b>（用于获批范围内的测试及试点运营，不包括商业运营），部分项目将在<b>年内开展车内无安全员测试</b>。",
+                "content_html": "<b>10月8日</b>，香港运输署表示已累计发放&nbsp;<b>9 张先导牌照</b>（用于获批范围内的测试及试点运营，不包括商业运营），部分项目将在<b>年内开展车内无安全员测试</b>。",
                 "daily_ids": [
                   "2026-10-09-009"
                 ]
@@ -136,7 +128,7 @@
         ]
       }
     ],
-    "edited_at": "2026-10-12T07:30:48.672Z"
+    "edited_at": "2026-10-12T07:45:32.928Z"
   },
   {
     "week_id": "2026-W39-W40",
