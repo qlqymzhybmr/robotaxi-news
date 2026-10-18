@@ -595,6 +595,26 @@
       "city": "Minneapolis MN",
       "site": "kstp.com",
       "name": "KSTP 5"
+    },
+    {
+      "city": "Toronto ON",
+      "site": "thestar.com",
+      "name": "Toronto Star"
+    },
+    {
+      "city": "Toronto ON",
+      "site": "cp24.com",
+      "name": "CP24"
+    },
+    {
+      "city": "Toronto ON",
+      "site": "cbc.ca",
+      "name": "CBC Toronto"
+    },
+    {
+      "city": "Toronto ON",
+      "site": "toronto.citynews.ca",
+      "name": "CityNews Toronto"
     }
   ],
   "Tesla": [
