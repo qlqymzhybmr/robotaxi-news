@@ -125,6 +125,25 @@ def fetch(company_id: str) -> list[dict]:
     return out
 
 
+def normalize_models(vehicles: list, known: dict | None = None) -> None:
+    """就地把同一车型的大小写 / 首尾空格变体归并成一种写法。
+
+    2026-10-18 Tesla 新登记的 30 辆车型被录成小写 "cybercab"，与已有的
+    "Cybercab" 分开计数，还触发了「新车型首次出现」的误报。DMV 原始数据的
+    录入写法不受我们控制，所以在计数前归一：优先沿用上次快照 by_model 里
+    已有的写法（known，保证与 history 可比；若有多种变体取辆数最多的），
+    否则取当天出现次数最多的写法。
+    """
+    canon = {}
+    for m, _ in sorted((known or {}).items(), key=lambda kv: -kv[1]):
+        canon.setdefault(m.strip().casefold(), m)
+    spellings = Counter((v.get("model") or "?").strip() for v in vehicles)
+    for m, _ in spellings.most_common():
+        canon.setdefault(m.casefold(), m)
+    for v in vehicles:
+        v["model"] = canon[(v.get("model") or "?").strip().casefold()]
+
+
 def discover() -> int:
     """普查德州所有登记了自动驾驶车辆的运营方，报出 COMPANIES 里还没有的。
 
@@ -165,6 +184,7 @@ def discover() -> int:
             except Exception:
                 continue
             if vs and bid not in known_ids:
+                normalize_models(vs)
                 by = dict(Counter(v.get("model", "?") for v in vs))
                 new_hits.append((nm, bid, len(vs), by))
                 print(f"  🆕 {nm[:50]:52} {len(vs):>5} 辆  {by}")
@@ -229,10 +249,11 @@ def main() -> int:
             failures.append(name)
             continue
 
-        by_model = dict(Counter(v.get("model", "?") for v in vehicles))
-        vins = sorted(v["vin"] for v in vehicles if v.get("vin"))
         rec = store["companies"].setdefault(name, {"latest": None, "history": []})
         prev = rec["latest"]
+        normalize_models(vehicles, (prev or {}).get("by_model"))
+        by_model = dict(Counter(v.get("model", "?") for v in vehicles))
+        vins = sorted(v["vin"] for v in vehicles if v.get("vin"))
 
         print("=" * 66)
         print(f"{name}   {args.date}")

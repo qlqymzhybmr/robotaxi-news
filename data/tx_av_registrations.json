@@ -1872,8 +1872,7 @@
         "total": 803,
         "by_model": {
           "Model Y": 454,
-          "cybercab": 30,
-          "Cybercab": 319
+          "Cybercab": 349
         },
         "vins": [
           "5YJAJEEU0TA001291",
@@ -3468,8 +3467,7 @@
           "total": 803,
           "by_model": {
             "Model Y": 454,
-            "cybercab": 30,
-            "Cybercab": 319
+            "Cybercab": 349
           },
           "added_vins": [
             "5YJAJEEU0TA003865",
@@ -3540,7 +3538,7 @@
           "removed_vins": [],
           "delta": {
             "added_by_model": {
-              "cybercab": 30,
+              "Cybercab": 30,
               "Model Y": 34
             },
             "removed_count": 0
