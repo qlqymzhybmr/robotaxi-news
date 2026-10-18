@@ -377,11 +377,11 @@ https://qlqymzhybmr.github.io/robotaxi-news/
 3. 实习生运行 `git add -A && git commit -m "daily YYYY-MM-DD" && git push`,约 1-2 分钟后网页更新
 4. 每周一周报生成后,weekly-report 自动串接 weekly-publish,把选稿汇总结果写入 `docs/data/weekly.json`,同样 push 后自动更新
 
-### 工作目录（2026-10-11 起）
+### 工作目录（2026-10-18 起）
 
-项目已迁到 Linux 环境：**`/workspace/robotaxi-news`**，直接在 `main` 分支上工作，不再使用 `.claude/worktrees/`，也不需要 push 后再同步 Windows 主目录（旧的 `D:\Desktop\robotaxi-news` 同步规则已废止）。
+项目在 Linux 环境：**`/root/work/robotaxi-news`**（2026-10-11 ~ 10-17 曾在 `/workspace/robotaxi-news`），直接在 `main` 分支上工作，不再使用 `.claude/worktrees/`，也不需要 push 后再同步 Windows 主目录（旧的 `D:\Desktop\robotaxi-news` 同步规则已废止）。
 
-- Python：`python` 已指向 `python3`（3.13），依赖 `feedparser`、`Pillow` 已安装；文档里的 `python ...` 命令可原样运行
+- Python：`python` 已指向 `python3`（3.12，apt `python-is-python3`），依赖 `feedparser`、`Pillow` 用 apt 安装（`python3-feedparser`、`python3-pil`；系统 Python 是 externally-managed 且未装 pip）；文档里的 `python ...` 命令可原样运行
 - 每天开工前先 `git pull --ff-only origin main`：网页选稿 UI 和周报编辑会直接往 GitHub 写 `selections.json` / `weekly_overrides.json`，本地不拉就会落后
 - push 前确认 `git status` 干净、diff 是「新增当日数据」而不是删历史；push 冲突时先 pull 再推，**不要 force push**（会冲掉网页端刚保存的选稿）
 - 文档中 Windows 专属内容（GBK 控制台、本地代理 `127.0.0.1:7890`）在本环境不适用，但保留在脚本里不影响运行

@@ -250,7 +250,6 @@
 - 财新 最新 | china | ⭐ | https://rsshub-production-8ec4.up.railway.app/caixin/latest
 - 第一财经 头条 | china | | https://rsshub-production-8ec4.up.railway.app/yicai/headline
 - 钛媒体 最新 | china | | https://rsshub-production-8ec4.up.railway.app/tmtpost/new
-- 澎湃 头条 | china | | https://rsshub-production-8ec4.up.railway.app/thepaper/featured
 - 华尔街见闻 | china | | https://rsshub-production-8ec4.up.railway.app/wallstreetcn/news/global
 - 虎嗅 24小时 | china | | https://rsshub-production-8ec4.up.railway.app/huxiu/moment
 - 界面 VIP | china | | https://rsshub-production-8ec4.up.railway.app/jiemian/pro/lists/12
