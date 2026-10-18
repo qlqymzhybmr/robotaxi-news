@@ -1122,6 +1122,26 @@
       "city": "Seoul KR",
       "site": "koreatimes.co.kr",
       "name": "The Korea Times"
+    },
+    {
+      "city": "Manchester UK",
+      "site": "manchestereveningnews.co.uk",
+      "name": "Manchester Evening News"
+    },
+    {
+      "city": "Manchester UK",
+      "site": "bbc.co.uk",
+      "name": "BBC"
+    },
+    {
+      "city": "Manchester UK",
+      "site": "itv.com",
+      "name": "ITV Granada"
+    },
+    {
+      "city": "Manchester UK",
+      "site": "secretmanchester.com",
+      "name": "Secret Manchester"
     }
   ],
   "Wayve": [
@@ -1490,6 +1510,26 @@
       "city": "London UK",
       "site": "mylondon.news",
       "name": "MyLondon"
+    },
+    {
+      "city": "Manchester UK",
+      "site": "manchestereveningnews.co.uk",
+      "name": "Manchester Evening News"
+    },
+    {
+      "city": "Manchester UK",
+      "site": "bbc.co.uk",
+      "name": "BBC"
+    },
+    {
+      "city": "Manchester UK",
+      "site": "itv.com",
+      "name": "ITV Granada"
+    },
+    {
+      "city": "Manchester UK",
+      "site": "secretmanchester.com",
+      "name": "Secret Manchester"
     }
   ]
 }
