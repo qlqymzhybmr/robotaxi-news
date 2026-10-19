@@ -386,6 +386,15 @@ https://qlqymzhybmr.github.io/robotaxi-news/
 - push 前确认 `git status` 干净、diff 是「新增当日数据」而不是删历史；push 冲突时先 pull 再推，**不要 force push**（会冲掉网页端刚保存的选稿）
 - 文档中 Windows 专属内容（GBK 控制台、本地代理 `127.0.0.1:7890`）在本环境不适用，但保留在脚本里不影响运行
 
+### 每日定时任务（2026-10-19 起）
+
+root crontab 每天 **JST 10:30**（= 北京时间 09:30，窗口 09:00 截止后 30 分钟）运行 `scripts/cron_daily_fetch.sh`：以无人值守的 `claude -p` 跑完 Phase 1–6，日报日期按北京时间取当天，结束时 commit 并 push（不 force）。
+
+- 日志：`data/tmp/cron/YYYY-MM-DD.log`（含最终汇报，critical 告警也在里面）
+- 防重入（flock），单次最长 3 小时
+- 只在机器开机时触发；机器当时关着就不会补跑，开机后手动说"跑今日新闻"即可
+- 查看 / 停用：`crontab -l` / `crontab -e` 删掉那一行
+
 ### 网页功能
 
 - **每日精选 tab**(默认):按日期倒序展示,支持按日期/公司/国内外筛选

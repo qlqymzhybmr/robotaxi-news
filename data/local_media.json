@@ -615,6 +615,71 @@
       "city": "Toronto ON",
       "site": "toronto.citynews.ca",
       "name": "CityNews Toronto"
+    },
+    {
+      "city": "Munich DE",
+      "site": "sueddeutsche.de",
+      "name": "Süddeutsche Zeitung"
+    },
+    {
+      "city": "Orlando FL",
+      "site": "orlandosentinel.com",
+      "name": "Orlando Sentinel"
+    },
+    {
+      "city": "Orlando FL",
+      "site": "clickorlando.com",
+      "name": "News 6 WKMG"
+    },
+    {
+      "city": "Orlando FL",
+      "site": "wftv.com",
+      "name": "WFTV 9"
+    },
+    {
+      "city": "Orlando FL",
+      "site": "wesh.com",
+      "name": "WESH 2"
+    },
+    {
+      "city": "Singapore SG",
+      "site": "straitstimes.com",
+      "name": "The Straits Times"
+    },
+    {
+      "city": "Singapore SG",
+      "site": "channelnewsasia.com",
+      "name": "CNA"
+    },
+    {
+      "city": "Singapore SG",
+      "site": "businesstimes.com.sg",
+      "name": "The Business Times"
+    },
+    {
+      "city": "Portland OR",
+      "site": "oregonlive.com",
+      "name": "The Oregonian"
+    },
+    {
+      "city": "Portland OR",
+      "site": "katu.com",
+      "name": "KATU"
+    },
+    {
+      "city": "Portland OR",
+      "site": "koin.com",
+      "name": "KOIN 6"
+    },
+    {
+      "city": "Portland OR",
+      "site": "kgw.com",
+      "name": "KGW8"
+    },
+    {
+      "city": "Orange County CA",
+      "site": "ocregister.com",
+      "name": "OC Register"
     }
   ],
   "Tesla": [
@@ -792,6 +857,36 @@
       "city": "Dallas TX",
       "site": "star-telegram.com",
       "name": "Fort Worth Star-Telegram"
+    },
+    {
+      "city": "San Antonio TX",
+      "site": "expressnews.com",
+      "name": "San Antonio Express-News"
+    },
+    {
+      "city": "San Antonio TX",
+      "site": "ksat.com",
+      "name": "KSAT 12"
+    },
+    {
+      "city": "San Antonio TX",
+      "site": "kens5.com",
+      "name": "KENS 5"
+    },
+    {
+      "city": "Minneapolis MN",
+      "site": "startribune.com",
+      "name": "Star Tribune"
+    },
+    {
+      "city": "Minneapolis MN",
+      "site": "kare11.com",
+      "name": "KARE 11"
+    },
+    {
+      "city": "Minneapolis MN",
+      "site": "kstp.com",
+      "name": "KSTP"
     }
   ],
   "Aurora Innovation": [
@@ -991,6 +1086,11 @@
       "city": "Denver CO",
       "site": "westword.com",
       "name": "Westword"
+    },
+    {
+      "city": "Atlanta GA",
+      "site": "ajc.com",
+      "name": "Atlanta Journal-Constitution"
     }
   ],
   "Motional": [
@@ -1550,6 +1650,33 @@
       "city": "Manchester UK",
       "site": "secretmanchester.com",
       "name": "Secret Manchester"
+    },
+    {
+      "city": "Luxembourg LU",
+      "site": "luxtimes.lu",
+      "name": "Luxembourg Times"
+    },
+    {
+      "city": "Luxembourg LU",
+      "site": "rtl.lu",
+      "name": "RTL Today"
+    }
+  ],
+  "Nuro": [
+    {
+      "city": "San Francisco CA",
+      "site": "sfchronicle.com",
+      "name": "SF Chronicle"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "mercurynews.com",
+      "name": "Mercury News"
+    },
+    {
+      "city": "San Francisco CA",
+      "site": "nbcbayarea.com",
+      "name": "NBC Bay Area"
     }
   ]
 }
