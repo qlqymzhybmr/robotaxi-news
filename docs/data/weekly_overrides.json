@@ -57,7 +57,7 @@
               },
               {
                 "label": "b",
-                "content_html": "<b>10月16日</b>，加州公路巡警（CHP）公布的事故视频显示，一辆 Tesla 在80号州际公路<b>闯入事故处置封闭区域，追尾巡逻车，致两名警员重伤</b>。22岁司机自称事发时已睡着，并开启了 FSD 辅助驾驶，事故仍在调查中。",
+                "content_html": "<b>10月16日</b>，加州公路巡警（CHP）公布的事故视频显示，一辆 Tesla 在80号州际公路<b>闯入事故处置封闭区域，连环追尾巡逻车，致两名警员重伤</b>。22岁司机自称事发时已睡着，并开启了 FSD 辅助驾驶，事故仍在调查中。<div><img src=\"https://hips.hearstapps.com/hmg-prod/images/1363fe76-bdbb-4c7d-a24e-801085470dec.jpg?crop=1xw:0.755xh;0xw,0.089xh&amp;amp;resize=640:*\" title=\"点击调整大小\" style=\"max-width: 100%; height: auto; display: block; margin: 8px auto; border-radius: 4px; cursor: pointer; outline: rgb(59, 130, 246) solid 2px; width: 50%;\"><div style=\"text-align: center;\"><span style=\"font-size: 0.875rem;\"><i>事故现场照片</i></span></div></div>",
                 "daily_ids": [
                   "2026-10-17-004",
                   "2026-10-16-006"
@@ -136,7 +136,7 @@
         ]
       }
     ],
-    "edited_at": "2026-10-19T08:52:24.354Z"
+    "edited_at": "2026-10-19T08:59:59.794Z"
   },
   {
     "week_id": "2026-W41",
