@@ -11,7 +11,7 @@
           {
             "company": "Waymo",
             "company_slug": "waymo",
-            "headline_html": "<b>Waymo：旧金山出现Ioniq 5版车辆；在加拿大多伦多开启有人路测；圣安东尼奥、圣迭戈、坦帕向所有人开放；纳什维尔机场开通服务</b>",
+            "headline_html": "<b>Waymo：旧金山出现现代Ioniq 5版车辆；在加拿大多伦多开启有人路测；圣安东尼奥、圣迭戈、坦帕向所有人开放；纳什维尔机场开通服务</b>",
             "sub_items": [
               {
                 "label": "a",
@@ -136,7 +136,7 @@
         ]
       }
     ],
-    "edited_at": "2026-10-19T08:47:26.494Z"
+    "edited_at": "2026-10-19T08:50:55.323Z"
   },
   {
     "week_id": "2026-W41",
