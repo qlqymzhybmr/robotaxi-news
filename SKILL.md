@@ -67,7 +67,7 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 | Track A：Google News RSS | 按公司名 + 关键词全网搜索（主力召回） | ⚠️ 搜索链接 |
 | Track B：本地媒体 site: 查询 | 各公司运营城市的地方报 / TV 台（`data/local_media.json`） | ⚠️ 搜索链接 |
 | Track C：行业媒体 RSS | 综合财经科技媒体大盘源，必过主题关键词 | ✅ 真实永久链接 |
-| 直接订阅 RSS | 公司官方新闻室 + X(Twitter) via 自部署 RSSHub | ✅ 真实永久链接 |
+| 直接订阅 RSS | 公司官方新闻室 + X(Twitter) via **本机 RSSHub**（见「本地 RSSHub」） | ✅ 真实永久链接 |
 | Reddit 社区热帖 | r/SelfDrivingCars、r/Waymo、r/teslamotors | ✅ 真实链接 |
 
 - 严格过滤到 24 小时窗口
@@ -200,6 +200,9 @@ robotaxi-news/
 │   ├── track_tx_av_registrations.py # Phase 5:德州 DMV 车队登记追踪
 │   ├── normalize_companies.py   # 一次性迁移:按 company_aliases.json 归一公司名/slug(默认 dry-run)
 │   ├── validate_local_media.py  # 手动:抽查几组 local_media site: 查询能否出条目
+│   ├── cron_daily_fetch.sh      # 定时:每天 JST 10:30 无人值守跑 Phase 1–6 并 push
+│   ├── set_twitter_token.sh     # 手动:设置/更新本地 RSSHub 的 X token(输入不回显)并验证
+│   ├── setup_local_env.sh       # 迁移:新机器一键装依赖+RSSHub+定时任务,--check 只体检
 │   └── archive/                 # 已用完的一次性脚本(旧周报生成、旧 Phase 3 等),不在主流程
 ├── archive/
 │   ├── claude_structured_summary.py # 已归档:旧的 API 调用总结脚本(已由 Claude 直接总结替代)
@@ -395,6 +398,31 @@ root crontab 每天 **JST 10:30**（= 北京时间 09:30，窗口 09:00 截止�
 - 只在机器开机时触发；机器当时关着就不会补跑，开机后手动说"跑今日新闻"即可
 - 查看 / 停用：`crontab -l` / `crontab -e` 删掉那一行
 
+### 本地 RSSHub（2026-10-19 起替代 Railway）
+
+**原理**：RSSHub 是开源的「网站 → RSS」转换程序。X 路由用登录后的 `auth_token` cookie 以网页端身份调用 X 接口，把推文转成 RSS；国内媒体路由直接抓对方网页 / 接口。抓取是**拉模式**——`python_rss_fetch.py` 运行时去请求 RSSHub，RSSHub 当场去源站取。唯一的调用方就在本机，所以 RSSHub 只需本机可达：跑在 Docker 容器 `rsshub` 里，只监听 `127.0.0.1:1200`，外网访问不到。原先的 Railway 只是「替我们一直开着的云主机」，跑的是同一个官方镜像，每月 $5。
+
+**为什么早先用云端**：skill 原在 Windows 桌面（`D:\Desktop`，经本地代理）上跑，常驻服务不方便（休眠、代理、Docker），而公共实例 rsshub.app 已封 X 路由，官方文档推荐的就是 Vercel / Railway 部署。迁到常开的 Linux 服务器后这个前提不在了。
+
+| 项 | 值 |
+|---|---|
+| 容器 | `rsshub`，镜像 `diygod/rsshub:latest`，`--restart unless-stopped`（随 Docker 开机自启） |
+| 地址 | `http://127.0.0.1:1200`（`competitors.md` 里 24 个 X 源 + 9 个国内媒体源；`python_rss_fetch.py` 的 `RSSHUB_BASE`） |
+| 凭证 | `/root/.config/rsshub/rsshub.env`（600 权限，**不进 git**），由 `scripts/set_twitter_token.sh` 写入 |
+| 资源 | ~250MB 内存；X 路由不需要 Chromium |
+| 自愈 | `cron_daily_fetch.sh` 抓取前探活 `/healthz`，不通就 `docker start rsshub` |
+
+**日常运维**：
+- token 过期（约 1–2 个月）→ 本机终端运行 `scripts/set_twitter_token.sh`，粘贴新 `auth_token`，看到「✅ 凭证可用」即可。**不要把 token 发到聊天里**
+- 升级 RSSHub → `docker pull diygod/rsshub:latest` 后重跑 `scripts/set_twitter_token.sh`（重建容器）；`--env-file` 只在创建容器时读取，`docker restart` 不会加载新 token
+- 排查 → `curl 127.0.0.1:1200/healthz`、`docker logs --tail 50 rsshub`；路由 503 的判读见下方「误判：RSSHub 返回 503」
+
+**⚠️ 失效时不会报错（2026-10-19 实测）**：token 缺失 / 失效时 RSSHub 仍返回 **HTTP 200**——约一半账号照常给新推文、另一半给**一年前的旧推文**、少数 503。窗口过滤会丢掉旧推文，所以日报不被污染，但 X 源会**静默变哑**。因此 `python_rss_fetch.py` 额外做两项汇总检测，都按 critical 放进 `health`：
+- `TWITTER_STALE`：≥ max(3, X 源数/4) 个账号的最新推文早于 30 天。正常基线有 3 个账号本来就久未发推（@teslarobotaxi 2025-07、@grabsg 2025-08、@BaiduApollo 2026-07），token 失效时实测 11 个以上
+- `RSSHUB_DOWN`：≥3 个指向本地 RSSHub 的源网络层失败（容器没起来）
+
+切换当天的对比验证：24 个 X 账号本地条数均 ≥ Railway、最新推文时间相同或更新；33 个本地源 24 小时窗口 health 全绿。
+
 ### 网页功能
 
 - **每日精选 tab**(默认):按日期倒序展示,支持按日期/公司/国内外筛选
@@ -420,6 +448,32 @@ root crontab 每天 **JST 10:30**（= 北京时间 09:30，窗口 09:00 截止�
 ### 首次部署
 
 参见 `DEPLOY.md`。部署只需做一次,之后每次 push 自动发布。
+
+---
+
+## 迁移这个 skill（换机器 / 换目录时必读）
+
+**只复制 git 仓库是跑不起来的。** 以下东西不在仓库里，或和机器绑定：
+
+| 项 | 在哪 | 漏掉的后果 | 怎么恢复 |
+|---|---|---|---|
+| Python 依赖 | 系统 apt（`python3-feedparser`、`python3-pil`、`python-is-python3`） | 抓取脚本 import 失败 | `setup_local_env.sh` 自动装 |
+| Docker + RSSHub 容器 | 本机 Docker | 33 个源全失败，health 报 `RSSHUB_DOWN` | `setup_local_env.sh` 自动装并启动 |
+| X token | `/root/.config/rsshub/rsshub.env` | X 源静默变哑，health 报 `TWITTER_STALE` | **手动**：`scripts/set_twitter_token.sh` |
+| 定时任务 | 用户 crontab | 不再自动跑 | `setup_local_env.sh` 自动装（按本机时区换算 JST 10:30） |
+| Claude Code 登录 | `$HOME/.claude` | 定时任务里 `claude -p` 失败 | **手动**：运行一次 `claude` 登录 |
+| GitHub 登录 | `gh`（`$HOME/.config/gh`）+ git 凭证助手 | 定时任务 commit 了推不上去 | **手动**：`gh auth login`，再重跑脚本（自动 `gh auth setup-git`） |
+| `$HOME` 环境变量 | shell 环境 | git / gh / claude 都找不到登录信息（2026-10-19 在无 HOME 的 shell 里 push 报 `could not read Username`） | `cron_daily_fetch.sh` 已 `export HOME`；手动排查时先 `echo $HOME` |
+
+**步骤（Ubuntu / Debian）**：
+1. `git clone https://github.com/qlqymzhybmr/robotaxi-news.git`（目录随意，脚本按自身位置推算路径）
+2. 登录：运行一次 `claude`；`gh auth login`
+3. `scripts/setup_local_env.sh`（需要 root 或 sudo）
+4. `scripts/set_twitter_token.sh`，粘贴 X 的 `auth_token`
+5. `scripts/setup_local_env.sh --check`，10 项全 ✅ 即完成；之后手动说一次「跑今日新闻」验证全流程
+6. 旧机器上 `crontab -e` 删掉定时行、`docker rm -f rsshub`，**避免两台机器同时跑、同时 push**
+
+**迁到 Windows / macOS**：脚本不适用。需要 Docker Desktop 跑同一个容器（`-p 127.0.0.1:1200:1200 --env-file …`），定时改用「任务计划程序」/ launchd，按 `cron_daily_fetch.sh` 的逻辑另写入口；注意机器休眠时定时任务不会触发。若新环境无法常驻 Docker，最省事的退路是把 `competitors.md` 里的 `http://127.0.0.1:1200` 批量换回一个云端 RSSHub 实例地址（如 Railway），并同步 `python_rss_fetch.py` 的 `RSSHUB_BASE`。
 
 ---
 

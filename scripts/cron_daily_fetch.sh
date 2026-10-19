@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# 每日定时抓取入口（由 root crontab 在 JST 10:30 调用）。
+# 每日定时抓取入口（由 crontab 在 JST 10:30 调用，安装见 scripts/setup_local_env.sh）。
 # 北京时间 09:00 窗口截止 = JST 10:00，10:30 启动留出 30 分钟余量。
 # 日志：data/tmp/cron/YYYY-MM-DD.log（data/tmp 已 gitignore）
 set -uo pipefail
 
-REPO=/root/work/robotaxi-news
-export HOME=/root
-export PATH=/root/.local/bin:/usr/local/bin:/usr/bin:/bin
+REPO=$(cd "$(dirname "$0")/.." && pwd)         # 按脚本位置推算，迁移目录后无需改
+export HOME=${HOME:-/root}                       # cron 会设 HOME；git/gh/claude 的登录都在 HOME 下
+export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin"
 
 cd "$REPO" || exit 1
 DATE=$(TZ=Asia/Shanghai date +%F)          # 日报日期按北京时间
