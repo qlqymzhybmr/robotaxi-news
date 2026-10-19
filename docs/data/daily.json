@@ -1,5 +1,70 @@
 [
   {
+    "date": "2026-10-19",
+    "items": [
+      {
+        "id": "2026-10-19-001",
+        "date": "2026-10-19",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "美国：The Verge梳理多地收紧Robotaxi监管，联邦立法停滞下城市与州各自立规，红州也在加码",
+        "summary_html": "<p><b>10月18日</b>，The Verge交通编辑Andrew J. Hawkins在周刊栏目The Stepback中梳理美国地方对Robotaxi的监管动向，文章发布于北京时间 <b>10月18日20:00</b>。文章称联邦层面的自动驾驶立法 <b>在国会停滞多年</b>，城市虽无权管车辆制造标准，但对 <b>道路运营</b> 有广泛管辖权，正借此各自立规，形成运营方最不愿看到的 <b>\"拼凑式\"监管</b>。</p><p>文中列举的例子包括：<b>明尼阿波利斯</b> 考虑要求车内配人类监督员，实际等于禁止无人驾驶；<b>圣迭戈市议会</b> 通过决议，寻求把 <b>Waymo挡在机场之外</b>，并让地方机构在紧急情况下直接控制无人车；<b>奥斯汀消防员</b> 担心 <b>Tesla Cybercab</b> 没有方向盘和踏板，要求建立快速拖车和人工联络机制。<b>加州</b> 有多项法案拟允许城市 <b>限制车队规模、运营时段</b>；<b>Culver City、Santa Monica</b> 则用建筑许可和噪音、交通条例限制车队场站与24小时充电站。</p><p>文章指出，收紧监管已不分党派，<b>肯塔基、俄克拉何马、南达科他、爱荷华</b> 等红州也在考虑加码；纽约市、芝加哥、华盛顿特区仍未允许无人驾驶。作者认为，Waymo、Zoox、Aurora等正优先进入有 <b>州级优先立法</b>（禁止城市单独禁止）的州，行业协会AVIA也在推动联邦优先权，同时各家加快出海（伦敦、东京、慕尼黑、曼彻斯特、马德里、迪拜）。</p>",
+        "source_name": "Cities want to put the boot on robotaxis",
+        "source_url": "https://www.theverge.com/transportation/1013220/robotaxi-self-driving-car-laws",
+        "published_at": "2026-10-18",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-19-002",
+        "date": "2026-10-19",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Tesla：Reddit网友转发视频称，一辆Cybercab载客途中被追尾，无人受伤，远程协助把车挪到安全位置",
+        "summary_html": "<p>r/teslamotors于北京时间 <b>10月18日20:01</b> 转发一段视频，标题称一位主播乘坐的 <b>Cybercab</b> 在行程中被后车 <b>追尾</b>，<b>无人受伤</b>，车门随后打开，Tesla <b>远程协助</b> 人员把车辆移到更安全的位置。</p><p>帖子只附视频，没有给出城市、事故时间或对方车辆情况，Tesla未见公开说明，以上细节均来自发帖标题，<b>尚待核实</b>。Cybercab目前在 <b>奥斯汀</b> 小规模商业运营，10月初曾有乘客被困停车场兜圈14分钟、需远程重启。若属实，这是公开可见的Cybercab载客途中被撞案例，可关注后续NHTSA事故报告。</p>",
+        "source_name": "r/teslamotors · Reddit",
+        "source_url": "https://www.reddit.com/r/teslamotors/comments/1x91i94/a_streamers_cybercab_got_rearended_midride_nobody/",
+        "published_at": "2026-10-18",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-19-003",
+        "date": "2026-10-19",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Waymo：网友在旧金山Embarcadero拍到现代Ioniq 5版Waymo车辆，称其可能已开始测试",
+        "summary_html": "<p>r/waymo用户于北京时间 <b>10月18日10:14</b> 发帖，贴出在 <b>旧金山Embarcadero</b> 一带拍到的 <b>现代Ioniq 5</b> 版Waymo车辆照片，称\"看起来他们开始测试这款车了\"。</p><p>这只是单次路边目击，Waymo没有官方表态。此前报道称 <b>现代将于Q4开始向Waymo交付Ioniq 5 Robotaxi</b>，佐治亚工厂最早10月量产，本帖可作为该车型进入路测阶段的旁证。</p>",
+        "source_name": "r/waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1x8rlld/hyundai_waymo_spotted_in_sf/",
+        "published_at": "2026-10-18",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-19-004",
+        "date": "2026-10-19",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记2706辆，较10月18日无变化",
+        "summary_html": "<p><b>10月19日09:45北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，history末条日期均为当日。与10月18日快照相比，<b>12家数量与VIN集合均无变化</b>，没有新增或注销的VIN。</p><p><b>Tesla 803辆（Model Y 454、Cybercab 349）</b>，Cybercab在上周归并大小写写法后计数稳定；<b>Waymo 1185辆（I-PACE 812、RT 373）</b>；Avride 344、Aurora 91、Gatik AI 64、Zoox 63（Highlander 46、Zoox 17）、Nuro 47、Torc Robotics 32、Kodiak Robotics 29、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于当时投入运营的车辆</b>。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-10-19",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-10-18",
     "items": [
       {
