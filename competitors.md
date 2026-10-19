@@ -240,8 +240,8 @@
 > **价值**：这两位常常比媒体更早发出一手信息。例如 @SawyerMerritt 的
 > 「Tesla 刚给 Robotaxi 车队新增 106 辆 Model Y」——**车队数量变化是媒体很少报道但对判断扩张节奏最直接的指标**。
 
-- X/@XanderSky | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/XanderSky
-- X/@SawyerMerritt | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/SawyerMerritt
+- X/@XanderSky | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/XanderSky
+- X/@SawyerMerritt | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/SawyerMerritt
 
 ### 国内（via 自部署 RSSHub）
 
@@ -259,34 +259,34 @@
 
 ## X（Twitter）RSS 订阅（via 自部署 RSSHub）
 
-> RSSHub 实例：**本机 Docker 容器 `rsshub`，地址 http://127.0.0.1:1200**（2026-10-19 起替代 Railway，省去每月 $5）。国内媒体源已切到本地；X 源在本地 token 验证通过后切换。
+> RSSHub 实例：**本机 Docker 容器 `rsshub`，地址 http://127.0.0.1:1200**（2026-10-19 起替代 Railway，省去每月 $5）。国内媒体源与全部 X 源均已切到本地（X 源 24 个账号于 2026-10-19 逐个与 Railway 对比验证）。
 > 认证变量：`TWITTER_AUTH_TOKEN`，存在 `/root/.config/rsshub/rsshub.env`（600 权限，不进 git）
 > Cookie 约每 1-2 个月失效，失效后在本机终端运行 `scripts/set_twitter_token.sh` 粘贴新值即可（会重建容器并验证）。
 > ⚠️ token 缺失或失效时本地 RSSHub **仍返回 200**：约一半账号给出一年前的旧推文，另一些返回 503。健康检查用「最新推文是否超过 30 天」识别（`TWITTER_STALE`）。
 > 格式：`公司名 | 地区 | 是否重点 | RSS URL`
 
-- Waymo | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/waymo
-- Tesla | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/Tesla
-- Tesla Robotaxi | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/teslarobotaxi
-- Zoox | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/zoox
-- Wayve | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/wayve_ai
-- Uber | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/uber
-- Lyft | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/lyft
-- Grab | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/grabsg
-- Aurora Innovation | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/aurora_inno
-- Nuro | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/nuro
-- Mobileye | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/Mobileye
-- NVIDIA | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/nvidia
-- Rivian | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/Rivian
-- Motional | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/MotionalDrive
-- May Mobility | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/May_Mobility
-- Waabi | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/waabi_ai
-- Aptiv | overseas | | https://rsshub-production-8ec4.up.railway.app/twitter/user/Aptiv
-- 小马智行 (Pony.ai) | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/ponyai_tech
-- 文远知行 (WeRide) | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/WeRide_ai
-- 萝卜快跑 (Apollo Go / 百度) | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/BaiduApollo
-- 蔚来 (NIO) | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/NIOGlobal
-- 小鹏 (XPeng) | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/XPENG_Global
+- Waymo | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/waymo
+- Tesla | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/Tesla
+- Tesla Robotaxi | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/teslarobotaxi
+- Zoox | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/zoox
+- Wayve | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/wayve_ai
+- Uber | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/uber
+- Lyft | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/lyft
+- Grab | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/grabsg
+- Aurora Innovation | overseas | | http://127.0.0.1:1200/twitter/user/aurora_inno
+- Nuro | overseas | | http://127.0.0.1:1200/twitter/user/nuro
+- Mobileye | overseas | | http://127.0.0.1:1200/twitter/user/Mobileye
+- NVIDIA | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/nvidia
+- Rivian | overseas | | http://127.0.0.1:1200/twitter/user/Rivian
+- Motional | overseas | | http://127.0.0.1:1200/twitter/user/MotionalDrive
+- May Mobility | overseas | | http://127.0.0.1:1200/twitter/user/May_Mobility
+- Waabi | overseas | | http://127.0.0.1:1200/twitter/user/waabi_ai
+- Aptiv | overseas | | http://127.0.0.1:1200/twitter/user/Aptiv
+- 小马智行 (Pony.ai) | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/ponyai_tech
+- 文远知行 (WeRide) | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/WeRide_ai
+- 萝卜快跑 (Apollo Go / 百度) | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/BaiduApollo
+- 蔚来 (NIO) | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/NIOGlobal
+- 小鹏 (XPeng) | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/XPENG_Global
 
 ---
 
