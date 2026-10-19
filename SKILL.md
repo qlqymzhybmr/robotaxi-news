@@ -119,7 +119,7 @@ description: 全球 Robotaxi、L2/L4 智能驾驶、政策法规的每日新闻�
 
 ```
 🚨 X(Twitter) 抓取凭证已失效,22 个 X 源当前抓不到任何内容。
-   → 到 Railway → rsshub 服务 → Variables 更新 TWITTER_AUTH_TOKEN
+   → 在本机终端运行 scripts/set_twitter_token.sh,粘贴新的 auth_token(不回显,自动重建本地 RSSHub 并验证)
      取值:DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value
 ```
 

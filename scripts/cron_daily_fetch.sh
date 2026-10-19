@@ -34,6 +34,13 @@ PROMPT="跑今日 robotaxi 新闻（定时任务，无人值守，日报日期 $
 
 {
   echo "===== $(date '+%F %T %Z') 开始 daily ${DATE} ====="
+  # 本地 RSSHub（X 源 + 国内媒体源）没起来就先拉起，最多等 60 秒
+  if ! curl -sf -m 5 http://127.0.0.1:1200/healthz >/dev/null; then
+    echo "RSSHub 未响应，尝试 docker start rsshub"
+    docker start rsshub >/dev/null 2>&1
+    for _ in $(seq 1 30); do curl -sf -m 3 http://127.0.0.1:1200/healthz >/dev/null && break; sleep 2; done
+  fi
+  curl -sf -m 5 http://127.0.0.1:1200/healthz >/dev/null && echo "RSSHub OK" || echo "RSSHub 仍不可用（抓取会报 RSSHUB_DOWN 告警）"
   timeout 3h claude -p "$PROMPT" \
     --permission-mode acceptEdits \
     --allowedTools "Bash" "Read" "Edit" "Write" "Glob" "Grep" "WebSearch" "WebFetch"

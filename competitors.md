@@ -245,23 +245,24 @@
 
 ### 国内（via 自部署 RSSHub）
 
-- 36氪 快讯 | china | ⭐ | https://rsshub-production-8ec4.up.railway.app/36kr/newsflashes
-- 雷峰网 AI | china | ⭐ | https://rsshub-production-8ec4.up.railway.app/leiphone/category/ai
-- 财新 最新 | china | ⭐ | https://rsshub-production-8ec4.up.railway.app/caixin/latest
-- 第一财经 头条 | china | | https://rsshub-production-8ec4.up.railway.app/yicai/headline
-- 钛媒体 最新 | china | | https://rsshub-production-8ec4.up.railway.app/tmtpost/new
-- 华尔街见闻 | china | | https://rsshub-production-8ec4.up.railway.app/wallstreetcn/news/global
-- 虎嗅 24小时 | china | | https://rsshub-production-8ec4.up.railway.app/huxiu/moment
-- 界面 VIP | china | | https://rsshub-production-8ec4.up.railway.app/jiemian/pro/lists/12
-- IT之家 | china | | https://rsshub-production-8ec4.up.railway.app/ithome/it
+- 36氪 快讯 | china | ⭐ | http://127.0.0.1:1200/36kr/newsflashes
+- 雷峰网 AI | china | ⭐ | http://127.0.0.1:1200/leiphone/category/ai
+- 财新 最新 | china | ⭐ | http://127.0.0.1:1200/caixin/latest
+- 第一财经 头条 | china | | http://127.0.0.1:1200/yicai/headline
+- 钛媒体 最新 | china | | http://127.0.0.1:1200/tmtpost/new
+- 华尔街见闻 | china | | http://127.0.0.1:1200/wallstreetcn/news/global?limit=50
+- 虎嗅 24小时 | china | | http://127.0.0.1:1200/huxiu/moment
+- 界面 VIP | china | | http://127.0.0.1:1200/jiemian/pro/lists/12
+- IT之家 | china | | http://127.0.0.1:1200/ithome/it
 
 ---
 
 ## X（Twitter）RSS 订阅（via 自部署 RSSHub）
 
-> RSSHub 实例：https://rsshub-production-8ec4.up.railway.app
-> 认证变量：`TWITTER_AUTH_TOKEN`（Railway Variables 已配置）
-> Cookie 约每 1-2 个月失效，失效后到 Railway Variables 更新 `TWITTER_AUTH_TOKEN` 值即可。
+> RSSHub 实例：**本机 Docker 容器 `rsshub`，地址 http://127.0.0.1:1200**（2026-10-19 起替代 Railway，省去每月 $5）。国内媒体源已切到本地；X 源在本地 token 验证通过后切换。
+> 认证变量：`TWITTER_AUTH_TOKEN`，存在 `/root/.config/rsshub/rsshub.env`（600 权限，不进 git）
+> Cookie 约每 1-2 个月失效，失效后在本机终端运行 `scripts/set_twitter_token.sh` 粘贴新值即可（会重建容器并验证）。
+> ⚠️ token 缺失或失效时本地 RSSHub **仍返回 200**：约一半账号给出一年前的旧推文，另一些返回 503。健康检查用「最新推文是否超过 30 天」识别（`TWITTER_STALE`）。
 > 格式：`公司名 | 地区 | 是否重点 | RSS URL`
 
 - Waymo | overseas | ⭐ | https://rsshub-production-8ec4.up.railway.app/twitter/user/waymo

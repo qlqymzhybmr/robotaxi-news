@@ -170,6 +170,13 @@ def is_twitter_rsshub_feed(url: str) -> bool:
     return "/twitter/user/" in url
 
 
+# X 源最新一条推文的时间（feed URL → UTC datetime），供健康检查判断"只返回旧推文"
+X_FEED_NEWEST: Dict[str, datetime] = {}
+X_STALE_DAYS = 30
+# 自部署 RSSHub（2026-10-19 起从 Railway 迁到本机 Docker）
+RSSHUB_BASE = "http://127.0.0.1:1200"
+
+
 def check_twitter_auth(url: str) -> str | None:
     """
     Check if a RSSHub Twitter feed returns an auth error.
@@ -285,9 +292,16 @@ def fetch_direct_feed(
         if auth_err:
             errors.append(
                 f"⚠️ [TWITTER_AUTH_EXPIRED] {feed.company}: RSSHub 返回异常，"
-                f"请到 Railway Variables 更新 TWITTER_AUTH_TOKEN。详情: {auth_err}"
+                f"请更新本地 RSSHub 的 TWITTER_AUTH_TOKEN。详情: {auth_err}"
             )
             return items, errors
+        # 本地 RSSHub 在无/失效 token 时仍返回 200 + 一年前的旧推文（2026-10-19 实测），
+        # 标题检测抓不到，只能看最新一条的时间。是否告警由 build_health_report 按比例判断。
+        stamps = [_utc_timestamp(e.published_parsed)
+                  for e in getattr(parsed, "entries", [])
+                  if getattr(e, "published_parsed", None)]
+        if stamps:
+            X_FEED_NEWEST[feed.url] = datetime.fromtimestamp(max(stamps), tz=timezone.utc)
     # Safe accessor for feed metadata (handles both FeedParserDict and legacy _Feed objects)
     _feed_meta = parsed.get("feed", {}) if hasattr(parsed, "get") else getattr(parsed, "feed", {}) or {}
     _feed_title = _feed_meta.get("title", feed.company) if hasattr(_feed_meta, "get") else getattr(_feed_meta, "title", feed.company)
@@ -880,8 +894,15 @@ def fetch_local_media_news(
 ALERT_RULES = [
     ("TWITTER_AUTH_EXPIRED", "critical",
      "X(Twitter) 抓取凭证已失效，所有 X 源当前抓不到任何内容",
-     "到 Railway → rsshub 服务 → Variables 更新 TWITTER_AUTH_TOKEN。"
+     "在本机终端运行 scripts/set_twitter_token.sh，粘贴新的 auth_token（输入不回显，会自动重启 RSSHub）。"
      "取值：浏览器 DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value"),
+    ("TWITTER_STALE", "critical",
+     "多数 X 源只返回 30 天前的旧推文，本地 RSSHub 的 X 凭证大概率已失效或未配置（RSSHub 此时仍返回 200，不会报错）",
+     "在本机终端运行 scripts/set_twitter_token.sh，粘贴新的 auth_token（输入不回显，会自动重启 RSSHub）。"
+     "取值：浏览器 DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value"),
+    ("RSSHUB_DOWN", "critical",
+     "本地 RSSHub（127.0.0.1:1200）连不上，所有 X 源和国内媒体源都没抓到",
+     "运行 docker start rsshub；仍不行看 docker logs rsshub"),
     ("REDDIT_403", "critical",
      "Reddit 拒绝了请求（UA 或 IP 被封），非限速问题，重试无用",
      "需要更换出口 IP，或改用其他 UA / 接入 Reddit 官方 API"),
@@ -906,6 +927,17 @@ def build_health_report(errors: List[str], raw_counts: Dict[str, int],
     raw_counts 按 URL 索引（同名公司可能有多个源），播报时再翻译回公司名。
     """
     label = {f.url: f.company for f in feeds}
+    errors = list(errors)
+
+    # 合成两类只有汇总后才看得出的故障：X 源整体只给旧推文；本地 RSSHub 整体连不上
+    cutoff = datetime.now(timezone.utc) - timedelta(days=X_STALE_DAYS)
+    stale = [u for u, t in X_FEED_NEWEST.items() if t < cutoff]
+    if stale and len(stale) >= max(3, len(X_FEED_NEWEST) // 4):
+        errors += [f"⚠️ [TWITTER_STALE] {label.get(u, u)}: 最新推文 {X_FEED_NEWEST[u]:%Y-%m-%d}"
+                   for u in stale]
+    down = [e for e in errors if "network_error" in e and RSSHUB_BASE in e]
+    if len(down) >= 3:
+        errors.append(f"⚠️ [RSSHUB_DOWN] {RSSHUB_BASE}: {len(down)} 个源网络层失败")
 
     def name_of(url: str) -> str:
         # 同名源并存时带上路由尾巴，否则两条告警看起来一模一样

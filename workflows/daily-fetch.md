@@ -426,7 +426,7 @@ JSON 中 `company` 以 `Reddit/` 开头的条目属于 Reddit 来源，写入方
 - **有**：在 daily 文件末尾 ⚠️ 区域用醒目格式提示：
   ```
   ⚠️ **[紧急] Twitter Auth Token 已失效！**
-  请立即到 Railway → rsshub 服务 → Variables → 更新 `TWITTER_AUTH_TOKEN` 的值。
+  请在本机终端运行 `scripts/set_twitter_token.sh` 更新 `TWITTER_AUTH_TOKEN`（本地 RSSHub，2026-10-19 起替代 Railway）。
   步骤：DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value。
   ```
 - **无**：正常继续，无需提示
@@ -728,7 +728,7 @@ Phase 5 完成后执行（本流程最后一步）。目的：**抓取源静默�
     "ok": false,
     "alerts": [
       { "level": "critical", "type": "TWITTER_AUTH_EXPIRED", "count": 22,
-        "what": "X(Twitter) 抓取凭证已失效…", "action": "到 Railway → …", "sources": ["…"] }
+        "what": "X(Twitter) 抓取凭证已失效…", "action": "运行 scripts/set_twitter_token.sh …", "sources": ["…"] }
     ],
     "silent_feeds": ["IT之家"],
     "missing_feeds": [],
@@ -757,7 +757,7 @@ Phase 5 完成后执行（本流程最后一步）。目的：**抓取源静默�
 🚨 **抓取源故障：需要你处理**
 
 **X(Twitter) 抓取凭证已失效**，22 个 X 源当前抓不到任何内容。
-→ 到 Railway → rsshub 服务 → Variables 更新 `TWITTER_AUTH_TOKEN`。
+→ 在本机终端运行 `scripts/set_twitter_token.sh`，粘贴新的 `TWITTER_AUTH_TOKEN`（不回显，自动重建本地 RSSHub 并验证）。
    取值：浏览器 DevTools → Application → Cookies → x.com → 复制 auth_token 的 Value
 ```
 
