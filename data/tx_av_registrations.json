@@ -3,11 +3,11 @@
   "companies": {
     "Waymo": {
       "latest": {
-        "date": "2026-10-19",
-        "total": 1185,
+        "date": "2026-10-20",
+        "total": 1207,
         "by_model": {
-          "I-PACE": 812,
-          "RT": 373
+          "RT": 395,
+          "I-PACE": 812
         },
         "vins": [
           "L6TZB1G10SU006531",
@@ -93,6 +93,8 @@
           "L6TZB1G11TU023257",
           "L6TZB1G11TU023808",
           "L6TZB1G11TU024196",
+          "L6TZB1G11TU026711",
+          "L6TZB1G11TU027051",
           "L6TZB1G12SU026893",
           "L6TZB1G12TU005298",
           "L6TZB1G12TU006774",
@@ -115,6 +117,7 @@
           "L6TZB1G12TU018438",
           "L6TZB1G12TU018746",
           "L6TZB1G12TU018973",
+          "L6TZB1G12TU019072",
           "L6TZB1G12TU019606",
           "L6TZB1G12TU019797",
           "L6TZB1G12TU020206",
@@ -129,7 +132,10 @@
           "L6TZB1G12TU023669",
           "L6TZB1G12TU023929",
           "L6TZB1G12TU024661",
+          "L6TZB1G12TU025924",
           "L6TZB1G12TU026586",
+          "L6TZB1G12TU027169",
+          "L6TZB1G12TU033179",
           "L6TZB1G13SU028636",
           "L6TZB1G13SU029821",
           "L6TZB1G13SU030743",
@@ -148,6 +154,7 @@
           "L6TZB1G13TU017184",
           "L6TZB1G13TU017976",
           "L6TZB1G13TU018867",
+          "L6TZB1G13TU018934",
           "L6TZB1G13TU019114",
           "L6TZB1G13TU019243",
           "L6TZB1G13TU019906",
@@ -159,6 +166,7 @@
           "L6TZB1G13TU023132",
           "L6TZB1G13TU024040",
           "L6TZB1G13TU024524",
+          "L6TZB1G13TU027682",
           "L6TZB1G14SU030220",
           "L6TZB1G14SU030475",
           "L6TZB1G14SU030749",
@@ -183,6 +191,7 @@
           "L6TZB1G14TU016965",
           "L6TZB1G14TU017324",
           "L6TZB1G14TU018148",
+          "L6TZB1G14TU018778",
           "L6TZB1G14TU019073",
           "L6TZB1G14TU020207",
           "L6TZB1G14TU020255",
@@ -194,6 +203,7 @@
           "L6TZB1G14TU021812",
           "L6TZB1G14TU022409",
           "L6TZB1G14TU026802",
+          "L6TZB1G14TU034477",
           "L6TZB1G15SU026578",
           "L6TZB1G15SU028279",
           "L6TZB1G15SU029819",
@@ -232,6 +242,7 @@
           "L6TZB1G15TU024377",
           "L6TZB1G15TU024511",
           "L6TZB1G15TU024864",
+          "L6TZB1G15TU034357",
           "L6TZB1G16SU009160",
           "L6TZB1G16SU026590",
           "L6TZB1G16SU029814",
@@ -251,10 +262,14 @@
           "L6TZB1G16TU019639",
           "L6TZB1G16TU020869",
           "L6TZB1G16TU021312",
+          "L6TZB1G16TU021780",
           "L6TZB1G16TU022265",
           "L6TZB1G16TU022413",
           "L6TZB1G16TU022878",
           "L6TZB1G16TU024274",
+          "L6TZB1G16TU026252",
+          "L6TZB1G16TU026588",
+          "L6TZB1G16TU035808",
           "L6TZB1G17SU025979",
           "L6TZB1G17SU026582",
           "L6TZB1G17SU029336",
@@ -287,6 +302,7 @@
           "L6TZB1G17TU020833",
           "L6TZB1G17TU020993",
           "L6TZB1G17TU022128",
+          "L6TZB1G17TU026468",
           "L6TZB1G18SU026591",
           "L6TZB1G18SU028289",
           "L6TZB1G18TU005208",
@@ -330,6 +346,8 @@
           "L6TZB1G18TU023854",
           "L6TZB1G18TU023885",
           "L6TZB1G18TU024325",
+          "L6TZB1G18TU025961",
+          "L6TZB1G18TU026138",
           "L6TZB1G18TU026530",
           "L6TZB1G19SU028284",
           "L6TZB1G19SU030729",
@@ -358,6 +376,8 @@
           "L6TZB1G19TU022650",
           "L6TZB1G19TU022874",
           "L6TZB1G19TU024270",
+          "L6TZB1G19TU025998",
+          "L6TZB1G19TU026021",
           "L6TZB1G1XSU025989",
           "L6TZB1G1XSU026883",
           "L6TZB1G1XSU030206",
@@ -381,8 +401,10 @@
           "L6TZB1G1XTU021670",
           "L6TZB1G1XTU022205",
           "L6TZB1G1XTU022852",
+          "L6TZB1G1XTU026500",
           "L6TZB1G1XTU026528",
           "L6TZB1G1XTU026674",
+          "L6TZB1G1XTU036105",
           "SADHW2S10M1614232",
           "SADHW2S10M1614506",
           "SADHW2S10M1615154",
@@ -1877,12 +1899,51 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 1207,
+          "by_model": {
+            "RT": 395,
+            "I-PACE": 812
+          },
+          "added_vins": [
+            "L6TZB1G11TU026711",
+            "L6TZB1G11TU027051",
+            "L6TZB1G12TU019072",
+            "L6TZB1G12TU025924",
+            "L6TZB1G12TU027169",
+            "L6TZB1G12TU033179",
+            "L6TZB1G13TU018934",
+            "L6TZB1G13TU027682",
+            "L6TZB1G14TU018778",
+            "L6TZB1G14TU034477",
+            "L6TZB1G15TU034357",
+            "L6TZB1G16TU021780",
+            "L6TZB1G16TU026252",
+            "L6TZB1G16TU026588",
+            "L6TZB1G16TU035808",
+            "L6TZB1G17TU026468",
+            "L6TZB1G18TU025961",
+            "L6TZB1G18TU026138",
+            "L6TZB1G19TU025998",
+            "L6TZB1G19TU026021",
+            "L6TZB1G1XTU026500",
+            "L6TZB1G1XTU036105"
+          ],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {
+              "RT": 22
+            },
+            "removed_count": 0
+          }
         }
       ]
     },
     "Tesla Robotaxi": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 803,
         "by_model": {
           "Model Y": 454,
@@ -3571,12 +3632,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 803,
+          "by_model": {
+            "Model Y": 454,
+            "Cybercab": 349
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Avride": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 344,
         "by_model": {
           "Ioniq 5": 344
@@ -4358,12 +4433,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 344,
+          "by_model": {
+            "Ioniq 5": 344
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Aurora": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 91,
         "by_model": {
           "579": 41,
@@ -4960,12 +5048,27 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 91,
+          "by_model": {
+            "579": 41,
+            "LT62F": 29,
+            "VNL (4)": 21
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Gatik AI": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 64,
         "by_model": {
           "FTR": 45,
@@ -5501,12 +5604,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 64,
+          "by_model": {
+            "FTR": 45,
+            "FVR": 19
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Nuro": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 47,
         "by_model": {
           "Prius": 21,
@@ -6025,12 +6142,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 47,
+          "by_model": {
+            "Prius": 21,
+            "Gravity": 26
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Zoox": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 63,
         "by_model": {
           "Zoox": 17,
@@ -6599,12 +6730,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 63,
+          "by_model": {
+            "Zoox": 17,
+            "Highlander": 46
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Kodiak Robotics": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 29,
         "by_model": {
           "567": 5,
@@ -7110,12 +7255,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 29,
+          "by_model": {
+            "567": 5,
+            "T680": 24
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Torc Robotics": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 32,
         "by_model": {
           "RA Cascadia": 28,
@@ -7619,12 +7778,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 32,
+          "by_model": {
+            "RA Cascadia": 28,
+            "Cascadia": 4
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "May Mobility": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 22,
         "by_model": {
           "Sienna": 22
@@ -8084,12 +8257,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 22,
+          "by_model": {
+            "Sienna": 22
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Waabi Logistics": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 13,
         "by_model": {
           "VNL": 1,
@@ -8608,12 +8794,27 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-10-20",
+          "total": 13,
+          "by_model": {
+            "VNL": 1,
+            "VNL (4)": 2,
+            "579": 10
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Bot Auto TX": {
       "latest": {
-        "date": "2026-10-19",
+        "date": "2026-10-20",
         "total": 13,
         "by_model": {
           "Cascadia": 13
@@ -9054,6 +9255,19 @@
         },
         {
           "date": "2026-10-19",
+          "total": 13,
+          "by_model": {
+            "Cascadia": 13
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
+        },
+        {
+          "date": "2026-10-20",
           "total": 13,
           "by_model": {
             "Cascadia": 13

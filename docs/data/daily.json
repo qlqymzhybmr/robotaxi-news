@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-10-20",
+    "items": [
+      {
+        "id": "2026-10-20-001",
+        "date": "2026-10-20",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：Semafor称Waymo计划年底把车队从约4,000辆扩至8,000辆，2027年底达到20,000辆，资金来自新借的50亿美元",
+        "summary_html": "<p><b>10月19日</b>，Semafor独家报道（北京时间 <b>10月20日06:37</b> 发布），Waymo计划用近期借入的 <b>50亿美元</b> 大规模扩充车队：现有车队约 <b>4,000辆</b>，目标 <b>2026年底8,000辆</b>、<b>2027年底20,000辆</b>，即约为现在的 <b>5倍</b>。车队目标来自知情人士，<b>Waymo拒绝置评</b>，官网此前只表示融资用于 <b>美国和国际扩张</b>。</p><p>这笔50亿美元是Waymo <b>首笔债务融资</b>（10月8日官宣，见10/09日报），由私募信贷机构出借、<b>无Alphabet担保</b>，条款允许Waymo以后通过 <b>车队租约证券化</b> 继续借款。报道提到Waymo目前在 <b>美国15个城市</b> 运营，并已宣布 <b>伦敦、东京、新加坡、多伦多</b> 计划；近期还与Lyft在 <b>纳什维尔</b> 启用车队充电、清洁和维护场站。</p><p>对照德州DMV，Waymo在德州登记车辆本期为 <b>1,207辆</b>，当天新增 <b>22辆RT</b>（见本期DMV条目）。</p>",
+        "source_name": "Exclusive / Waymo plans to quintuple its fleet",
+        "source_url": "https://www.semafor.com/article/10/19/2026/waymo-plans-to-quintuple-its-fleet",
+        "published_at": "2026-10-19",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-20-002",
+        "date": "2026-10-20",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：纽约邮报称Waymo年底前将进口约5,100辆中国造Ojai，国会两院法案拟堵住\"进口后加装软件\"的豁免路径",
+        "summary_html": "<p><b>10月19日</b>，纽约邮报（Yahoo转载时间为北京时间 <b>10月19日18:30</b>）报道，按 <b>MoffettNathanson</b> 的追踪数据，Waymo到 <b>2026年底</b> 预计进口约 <b>5,100辆</b> 中国制造的车辆，主要是基于 <b>极氪（Zeekr）</b> 车型改制的 <b>Ojai</b>，规模将超过其现有以 <b>捷豹I-PACE</b> 为主的车队。Ojai已在 <b>洛杉矶、旧金山、凤凰城</b> 运营，<b>丹佛、拉斯维加斯、圣迭戈</b> 计划今秋投入。</p><p>美国商务部的网联汽车规定从 <b>2027车型年</b> 起禁止中国产网联车软件、<b>2030车型年</b> 起禁止硬件，Ojai因Waymo在 <b>亚利桑那工厂</b> 加装自研传感器与软件而不在禁令范围内。参议员 <b>Bernie Moreno、Elissa Slotkin</b> 的两党法案和众议院中国特别委员会主席 <b>John Moolenaar</b> 的配套法案拟禁止进口任何中国制造车辆（含加装美国软件者），设 <b>3年过渡期</b>、2030年前合规。</p><p>Waymo回应称只向极氪采购车体，不向车企共享乘客、遥测或自动驾驶数据，也不授权软件或源代码，这一采购关系始于 <b>2019年</b>，公司 <b>\"strongly supports\"</b> 商务部规定及相关立法。</p>",
+        "source_name": "Waymo has ordered thousands of Chinese-made cars to expand its US robotaxi fleet",
+        "source_url": "https://www.yahoo.com/news/politics/articles/waymo-ordered-thousands-chinese-made-103000162.html",
+        "published_at": "2026-10-19",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-20-003",
+        "date": "2026-10-20",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：华盛顿邮报调查华府反Robotaxi团体，13名\"创始成员\"中4方否认相关表述，网站域名4月底才注册",
+        "summary_html": "<p><b>10月19日</b>，华盛顿邮报报道，在华盛顿特区游说阻止Robotaxi合法化的 <b>People First Transportation Alliance（PFTA）</b> 来历不明：其网站列出 <b>13个</b> 个人和组织为\"创始成员\"，其中 <b>4方</b> 称网站上关于他们的表述 <b>不准确</b>；网站域名 <b>2026年4月底</b> 才注册，社交账号5月开通，无发帖、无关注者。报道未查明资金方和实际负责人。</p><p>Reason同日补充，PFTA今年2月曾牵头反对纽约州州长 <b>Hochul</b> 允许上州小城市商业Robotaxi的提案，后者撤回；PFTA表示将推动纽约立法要求 <b>每辆车都有人类司机</b>，并把 <b>纽约、费城</b> 列为重点。华府方面，议员 <b>Charles Allen</b> 的法案拟设 <b>200辆</b> 车队上限、按里程收费、<b>2028年</b> 前不开放商业服务，SEIU等工会也在投放广告反对。</p>",
+        "source_name": "The mysterious group campaigning to block robotaxis in D.C.",
+        "source_url": "https://www.washingtonpost.com/dc-md-va/2026/10/19/mysterious-group-is-campaigning-block-robotaxis-dc/",
+        "published_at": "2026-10-19",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-20-004",
+        "date": "2026-10-20",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：丹佛一辆Waymo在学校接送时段逆行驶入接送小巷，家长拍下视频",
+        "summary_html": "<p><b>10月19日（周一）早上</b>，丹佛市中心 <b>Downtown Denver Expeditionary School</b>（Lincoln St.）送学时段，一辆Waymo <b>逆行</b> 驶入学校用于接送孩子的小巷，影响家长送完孩子进出。9News发布视频报道，Google News收录时间为北京时间 <b>10月20日07:48</b>。</p><p>9News原文未能打开，本条细节来自当地电台Krystal 93的转载摘要；是否有人受伤、校方和Waymo的回应尚未读到。丹佛Waymo本月已有误入 <b>South Pearl Street农贸市场</b>、施工区需远程协助脱困、车辆被扔鸡蛋等事件，当地警方目前 <b>无法对无人车开具交通罚单</b>。</p>",
+        "source_name": "Waymo drives wrong way down alley used for downtown Denver school drop-off, video shows",
+        "source_url": "https://www.google.com/search?q=%22Waymo%20drives%20wrong%20way%20down%20alley%20used%20for%20downtown%20Denver%20school%20drop-off%2C%20video%20shows%22%20site%3A9news.com&hl=en",
+        "published_at": "2026-10-19",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-20-005",
+        "date": "2026-10-20",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Zoox：圣莫尼卡市议会6比0授权继续谈判，拟让Zoox在市属主图书馆停车场停放最多150辆Robotaxi",
+        "summary_html": "<p><b>10月19日</b>，Santa Monica Daily Press报道（北京时间 <b>10月19日18:00</b>），圣莫尼卡市议会于 <b>上周二</b> 以 <b>6比0</b> 通过，授权市府继续与 <b>Zoox</b> 谈判，谈妥后可直接签 <b>许可协议</b>，让Zoox在市属停车设施 <b>调度和停放最多150辆</b> Robotaxi，试点期 <b>最长1年</b>。</p><p>选址重点是 <b>主图书馆停车楼地下一层</b> 和部分地面停车场，<b>Downtown Expo站</b> 附近的Kiss-and-Ride停车场可作临时场地；市府预计每年按车位收费 <b>50万美元以上</b>，Zoox须为涉及其车辆的事故 <b>向市政府提供赔偿保障</b>。Zoox只在这些场地停车，充电站另建；技术要求仍在确认，协议尚未签署。议员 <b>Dan Hall</b> 因持有亚马逊股票回避表决。</p><p>同一报道提到，圣莫尼卡与 <b>Waymo</b> 因Broadway两处充电场站夜间作业的诉讼仍在进行，禁令在上诉期间被暂缓，Waymo可继续运营。</p>",
+        "source_name": "Santa Monica Moves Forward with Zoox Robotaxi Parking Agreement",
+        "source_url": "https://www.smdp.com/santa-monica-moves-toward-deal-to-park-zoox-robotaxis-at-main-library/",
+        "published_at": "2026-10-19",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-20-006",
+        "date": "2026-10-20",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记2,728辆，较10月19日净增22辆，全部为Waymo RT",
+        "summary_html": "<p><b>10月20日09:30北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，history末条日期均为当日。与10月19日快照相比，<b>Waymo新增22个VIN、全部为RT车型、无注销</b>，总数 <b>1,185→1,207辆（I-PACE 812、RT 395）</b>；其余11家数量与VIN集合均无变化。</p><p><b>Tesla 803辆（Model Y 454、Cybercab 349）</b>、Avride 344、Aurora 91、Gatik AI 64、Zoox 63（Highlander 46、Zoox 17）、Nuro 47、Torc Robotics 32、Kodiak Robotics 29、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。对比9月3日基线（2,111辆），Waymo RT已从 <b>221辆增至395辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于当时投入运营的车辆</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻。</p>",
+        "source_name": "Automated Motor Vehicles：Waymo登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/07ebbc43-ae5b-42ca-a712-d9d5ce5b3516/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-10-20",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-10-19",
     "items": [
       {

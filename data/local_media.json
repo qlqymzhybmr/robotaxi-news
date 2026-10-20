@@ -1091,6 +1091,36 @@
       "city": "Atlanta GA",
       "site": "ajc.com",
       "name": "Atlanta Journal-Constitution"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "latimes.com",
+      "name": "Los Angeles Times"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "nbclosangeles.com",
+      "name": "NBC Los Angeles"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "abc7.com",
+      "name": "ABC7 Los Angeles"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "ktla.com",
+      "name": "KTLA"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "laist.com",
+      "name": "LAist"
+    },
+    {
+      "city": "Los Angeles CA",
+      "site": "smdp.com",
+      "name": "Santa Monica Daily Press"
     }
   ],
   "Motional": [
