@@ -18,6 +18,7 @@
 | Tesla | tesla |
 | Zoox | zoox |
 | Wayve | wayve |
+| Niulinx | niulinx |
 | Cruise | cruise |
 | Uber | uber |
 | Lyft | lyft |
@@ -39,6 +40,7 @@
 | 小马智行 | xiaoma |
 | 文远知行 | weride |
 | 萝卜快跑 | apollo |
+| 新石器 | neolix |
 | 曹操出行 | caocao |
 | 哈啰出行 | hello |
 | 高德地图 | amap |

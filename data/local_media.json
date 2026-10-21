@@ -680,6 +680,31 @@
       "city": "Orange County CA",
       "site": "ocregister.com",
       "name": "OC Register"
+    },
+    {
+      "city": "Madrid ES",
+      "site": "elpais.com",
+      "name": "El País"
+    },
+    {
+      "city": "Madrid ES",
+      "site": "elmundo.es",
+      "name": "El Mundo"
+    },
+    {
+      "city": "Madrid ES",
+      "site": "thelocal.es",
+      "name": "The Local Spain"
+    },
+    {
+      "city": "Madrid ES",
+      "site": "rtve.es",
+      "name": "RTVE"
+    },
+    {
+      "city": "Madrid ES",
+      "site": "telemadrid.es",
+      "name": "Telemadrid"
     }
   ],
   "Tesla": [
