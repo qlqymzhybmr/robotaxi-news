@@ -912,6 +912,46 @@
       "city": "Minneapolis MN",
       "site": "kstp.com",
       "name": "KSTP"
+    },
+    {
+      "city": "Phoenix AZ",
+      "site": "azcentral.com",
+      "name": "Arizona Republic"
+    },
+    {
+      "city": "Phoenix AZ",
+      "site": "abc15.com",
+      "name": "ABC15 Arizona"
+    },
+    {
+      "city": "Phoenix AZ",
+      "site": "azfamily.com",
+      "name": "AZFamily 12News"
+    },
+    {
+      "city": "Phoenix AZ",
+      "site": "ktar.com",
+      "name": "KTAR News"
+    },
+    {
+      "city": "Jacksonville FL",
+      "site": "jacksonville.com",
+      "name": "Florida Times-Union"
+    },
+    {
+      "city": "Jacksonville FL",
+      "site": "news4jax.com",
+      "name": "News4JAX (WJXT)"
+    },
+    {
+      "city": "Jacksonville FL",
+      "site": "firstcoastnews.com",
+      "name": "First Coast News (WTLV)"
+    },
+    {
+      "city": "Jacksonville FL",
+      "site": "actionnewsjax.com",
+      "name": "Action News Jax"
     }
   ],
   "Aurora Innovation": [

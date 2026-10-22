@@ -25,6 +25,7 @@
 | Grab | grab |
 | Rivian | rivian |
 | Lucid | lucid |
+| GM | gm |
 | NVIDIA | nvidia |
 | Woven Planet | woven-planet |
 | Motional | motional |

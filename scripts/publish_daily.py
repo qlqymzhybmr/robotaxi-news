@@ -78,6 +78,7 @@ COMPANY = {
     "NVIDIA": ("NVIDIA", "nvidia"),
     "Applied Intuition": ("Applied Intuition", "applied-intuition"),
     "Stellantis": ("Stellantis", "stellantis"),
+    "GM": ("GM", "gm"),
     "大众": ("大众", "volkswagen"),
     "MOIA": ("MOIA", "moia"),
     "现代": ("现代", "hyundai"),

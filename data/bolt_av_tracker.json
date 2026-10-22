@@ -31,7 +31,7 @@
     "founded": "未查到",
     "source": "https://bolt.eu/en/company/autonomous-solutions/",
     "last_verified": "2026-09-21",
-    "other_notes": "Bolt 已加入 PAVE Europe（自动驾驶公众教育组织，加入日期待核实）"
+    "other_notes": "Bolt 已加入 PAVE Europe（自动驾驶公众教育组织，加入日期待核实）；2026-10-21 选定 NVIDIA Alpamayo Stack 作为欧洲 Robotaxi 项目驾驶软件（见 lucid-2026-09）"
   },
   "partnerships": [
     {
@@ -116,19 +116,23 @@
       "announced": "2026-09-17",
       "partners": [
         "Lucid",
-        "NVIDIA（参考架构）"
+        "NVIDIA（Alpamayo Stack 驾驶软件 + Hyperion）"
       ],
       "vehicle_provider": "Lucid（即将推出的中型车平台）",
-      "l4_tech_provider": "未明确：Lucid 新闻稿称 Lucid Technologies 整合其 AI、辅助驾驶与自动驾驶能力；但 Bolt 同时在用同一套 NVIDIA Hyperion 自建技术栈，量产车上的驾驶软件归 Lucid 还是 Bolt 未说明",
-      "l4_provider_type": "unknown",
-      "l4_basis": "2026-09-21 由 oem 改为 unknown。Lucid 新闻稿写明 Lucid Technologies 整合 Lucid 的 AI、ADAS 与自动驾驶能力，且车辆采用 NVIDIA Hyperion；另据 GTC 2026 的 Bolt×NVIDIA 合作，Bolt 正基于 Hyperion 与 Alpamayo 自建驾驶策略。两份原文都没说明 Lucid 车上的驾驶软件由谁提供，出现明确披露后再改。2026-09-23 Lucid 技术总裁 Kay Stepper 对 Torque News 表示：该 25,000 辆为 Midsize 零售需求之外的增量，协议为非约束性，依赖 2027 年才投产的中型车平台；Lucid 已公开承诺的自动驾驶车辆合计至少 60,000 辆（Bolt 25,000 + Uber 至少 35,000，后者由 Nuro 提供自动驾驶软件），而 Lucid 2025 全年产量为 18,378 辆",
+      "l4_tech_provider": "NVIDIA Alpamayo Stack（NVIDIA 提供驾驶软件，Bolt 与 NVIDIA 共同针对欧洲道路适配并集成进多家车企车辆）",
+      "l4_provider_type": "l4_player",
+      "l4_basis": "2026-10-22 由 unknown 改为 l4_player（第三方软件方为 NVIDIA）。依据 2026-10-21 NVIDIA GTC Berlin 新闻稿：「Bolt has selected NVIDIA Alpamayo Stack for its European robotaxi program, beginning with future Lucid vehicles built on Hyperion」；「Bolt and NVIDIA will adapt the software for European roads and integrate it into vehicles from multiple manufacturers」，NVIDIA 提供驾驶与安全技术，Bolt 提供车队管理、运营与本地市场经验。Electrek 同日称 Lucid 只是 Bolt 计划搭载该软件的首家车企。原文未说 Lucid Technologies 是否参与驾驶软件。此前口径：2026-09-21 由 oem 改为 unknown；2026-09-23 Kay Stepper 对 Torque News 称协议非约束性、依赖 2027 年投产的中型车平台；Lucid 已公开承诺的自动驾驶车辆合计至少 60,000 辆（Bolt 25,000 + Uber 至少 35,000，后者由 Nuro 提供软件），Lucid 2025 全年产量 18,378 辆",
       "bolt_role": "Bolt AD Solutions 牵头：定义车辆、软件、安全与乘客体验要求，拥有并运营车队，建设充电等基础设施与城市合作",
       "scale": "欧洲至少 25,000 辆",
-      "cities": [],
-      "status": "框架性协议（non-binding），车型平台开发中；Lucid 中型车平台已推迟至 2027 年",
+      "cities": [
+        "Madrid（2027 年数据采集，需监管批准）"
+      ],
+      "status": "框架性协议（non-binding）；2026-10-21 选定 NVIDIA Alpamayo Stack；计划 2027 年在马德里开始真实路况数据采集（需监管批准、初期不载客），德国为后续优先市场（Electrek 另称德国、法国）；Lucid 中型车平台已推迟至 2027 年",
       "sources": [
         "https://ir.lucidmotors.com/news-releases/news-release-details/lucid-and-bolt-partner-develop-and-deploy-autonomous-mobility/",
-        "https://www.torquenews.com/1/lucid-tells-torque-news-bolt-s-25000-robotaxis-sit-top-midsize-retail-it-depends-nonbinding-deal"
+        "https://www.torquenews.com/1/lucid-tells-torque-news-bolt-s-25000-robotaxis-sit-top-midsize-retail-it-depends-nonbinding-deal",
+        "https://nvidianews.nvidia.com/news/european-mobility-leaders-build-safe-vehicles-and-robotaxi-fleets-on-nvidia-hyperion",
+        "https://electrek.co/2026/10/21/lucid-bolt-robotaxi-nvidia-alpamayo-madrid-2027/"
       ]
     }
   ],
@@ -222,6 +226,14 @@
       "date": "2026-09-23",
       "title": "Lucid Tech President Says Bolt's 25,000 Robotaxis Sit On Top of Midsize Retail, But It Depends On a Nonbinding Deal and a 2027 Plant",
       "note": "Lucid 技术总裁 Kay Stepper 受访：协议非约束性、依赖 2027 年中型车平台；未澄清 L4 软件提供方"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/european-mobility-leaders-build-safe-vehicles-and-robotaxi-fleets-on-nvidia-hyperion",
+      "date": "2026-10-21",
+      "published_at": "2026-10-21",
+      "first_seen": "2026-10-22",
+      "title": "European Mobility Leaders Build Safe Vehicles and Robotaxi Fleets on NVIDIA Hyperion",
+      "note": "GTC Berlin：Bolt 为欧洲 Robotaxi 项目选定 NVIDIA Alpamayo Stack，首批为 Hyperion 平台的未来 Lucid 车型（至少 25,000 辆 L4-capable），2027 年马德里数据采集（需监管批准）。辅助源 Electrek 2026-10-21 10:00 PT（Kabanov 引语）、bolt.eu/en/blog/alpamayo/"
     }
   ]
 }
