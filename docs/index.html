@@ -412,6 +412,8 @@ function renderDaily(dateFilter, groupFilter) {
     if (selectedCompanies.size > 0) items = items.filter((i) => selectedCompanies.has(normalizeCompanyName(i.company)));
     if (items.length === 0) return '';
     items.sort((a, b) => {
+      // 德州 DMV 每日汇总固定排在当天最后，不按星级混进新闻中间
+      if (isDmvItem(a) !== isDmvItem(b)) return isDmvItem(a) ? 1 : -1;
       if ((b.rating || 0) !== (a.rating || 0)) return (b.rating || 0) - (a.rating || 0);
       const ga = a.group === '国内' ? 0 : 1;
       const gb = b.group === '国内' ? 0 : 1;
@@ -425,6 +427,11 @@ function renderDaily(dateFilter, groupFilter) {
     return;
   }
   container.innerHTML = `<section class="mb-6 bg-white border border-gray-100 rounded-xl p-4"><div class="flex items-center justify-between gap-3"><div class="text-sm text-gray-500">Results</div><div class="text-sm text-gray-700">Total <span class="font-semibold text-gray-900">${totalShown}</span></div></div></section>${sectionsHtml}`;
+}
+
+// 德州 DMV 车队登记汇总（publish_daily.py 写成 company=行业、标题以「德州 DMV」开头）
+function isDmvItem(item) {
+  return (item.company || '') === '行业' && /德州\s*DMV/.test(item.title || '');
 }
 
 function renderCard(item) {
@@ -1510,7 +1517,7 @@ function renderSelections() {
   const totalSel = items.filter((i) => isItemSelected(i.id)).length;
 
   const sectionsHtml = Object.keys(byDate).sort((a,b) => b.localeCompare(a)).map((date) => {
-    const dayItems = byDate[date].slice().sort((a, b) => (b.rating||0) - (a.rating||0));
+    const dayItems = byDate[date].slice().sort((a, b) => (isDmvItem(a) - isDmvItem(b)) || ((b.rating||0) - (a.rating||0)));
     const rows = dayItems.map((item) => {
       const checked = isItemSelected(item.id) ? 'checked' : '';
       const stars = '★'.repeat(Math.max(0, Number(item.rating||0))) + '☆'.repeat(Math.max(0, 3-Number(item.rating||0)));

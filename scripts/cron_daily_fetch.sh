@@ -30,6 +30,7 @@ PROMPT="跑今日 robotaxi 新闻（定时任务，无人值守，日报日期 $
 - 写作风格遵守 style-guide.md，评级参考 important-examples.md
 - 全程自动，不要等待或询问用户；无法核实的条目按规则暂缓并写进运行统计
 - 结束前确认 JSON 校验通过、git diff 只是新增当日数据，然后 git add -A && git commit -m \"daily ${DATE}\" && git push（push 冲突先 pull 再推，禁止 force push）
+- 德州 DMV 汇总在日报文件和汇报里都放在全部新闻之后，不要混在新闻中间
 - 最后按「结束动作」模板输出汇报（critical 告警放最顶部）"
 
 {
