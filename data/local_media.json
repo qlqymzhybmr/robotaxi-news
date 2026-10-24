@@ -1755,6 +1755,26 @@
       "city": "Luxembourg LU",
       "site": "rtl.lu",
       "name": "RTL Today"
+    },
+    {
+      "city": "Astana KZ",
+      "site": "astanatimes.com",
+      "name": "The Astana Times"
+    },
+    {
+      "city": "Astana KZ",
+      "site": "inform.kz",
+      "name": "Kazinform"
+    },
+    {
+      "city": "Astana KZ",
+      "site": "24.kz",
+      "name": "Khabar 24"
+    },
+    {
+      "city": "Astana KZ",
+      "site": "tengrinews.kz",
+      "name": "Tengrinews"
     }
   ],
   "Nuro": [

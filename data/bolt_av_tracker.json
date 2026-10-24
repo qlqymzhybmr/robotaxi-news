@@ -134,6 +134,28 @@
         "https://nvidianews.nvidia.com/news/european-mobility-leaders-build-safe-vehicles-and-robotaxi-fleets-on-nvidia-hyperion",
         "https://electrek.co/2026/10/21/lucid-bolt-robotaxi-nvidia-alpamayo-madrid-2027/"
       ]
+    },
+    {
+      "id": "stellantis-grand-paris-2026-10",
+      "announced": "2026-10-23",
+      "partners": [
+        "Stellantis",
+        "Métropole du Grand Paris（大巴黎都市圈）"
+      ],
+      "vehicle_provider": "Stellantis（可在限定区域无人驾驶的车辆）",
+      "l4_tech_provider": "未明确（Reuters 称小马智行为潜在技术供应方，未确认）",
+      "l4_provider_type": "unknown",
+      "l4_basis": "2026-10-23 Reuters：Chinese firm Pony.ai is a potential provider of the autonomous driving technology；Stellantis 新闻稿与法媒仅写 Stellantis 提供车辆、Bolt（Bolt Autonomous Driving Solutions）运营服务、都市圈统筹。原文未确认驾驶软件方，不因卢森堡三方测试推断",
+      "bolt_role": "通过 Bolt Autonomous Driving Solutions 运营服务",
+      "scale": "未公布车队规模与投资；2028 年起试验，首批西北部最多 5 个市镇，2030 年目标约 30 个市镇商业运营（需获批）",
+      "cities": [
+        "Grand Paris"
+      ],
+      "status": "已宣布计划（据界面/36氪，项目提交欧盟 ADACities 倡议）",
+      "sources": [
+        "https://live.euronext.com/en/financial-news/bolt-stellantis-plan-autonomous-driving-experiment-greater-paris-2028",
+        "https://www.36kr.com/newsflashes/4038417540371337"
+      ]
     }
   ],
   "seen": [
@@ -234,6 +256,14 @@
       "first_seen": "2026-10-22",
       "title": "European Mobility Leaders Build Safe Vehicles and Robotaxi Fleets on NVIDIA Hyperion",
       "note": "GTC Berlin：Bolt 为欧洲 Robotaxi 项目选定 NVIDIA Alpamayo Stack，首批为 Hyperion 平台的未来 Lucid 车型（至少 25,000 辆 L4-capable），2027 年马德里数据采集（需监管批准）。辅助源 Electrek 2026-10-21 10:00 PT（Kabanov 引语）、bolt.eu/en/blog/alpamayo/"
+    },
+    {
+      "url": "https://live.euronext.com/en/financial-news/bolt-stellantis-plan-autonomous-driving-experiment-greater-paris-2028",
+      "date": "2026-10-23",
+      "published_at": "2026-10-23",
+      "first_seen": "2026-10-24",
+      "title": "Bolt, Stellantis plan autonomous driving experiment in Greater Paris from 2028",
+      "note": "Reuters（Euronext 页面标注 10-23 12:31，时区未注明；无论按 UTC 或巴黎时间均在窗口内）；大巴黎都市圈（Métropole du Grand Paris）、Bolt、Stellantis 联合宣布 2028 年起试验、2030 年前覆盖约 30 个市镇（需获批），首批为西北部最多 5 个市镇；Stellantis 提供车辆，Pony.ai 仅被称为潜在技术供应方；Bolt 另计划 2027 年在马德里测试。辅助源：Stellantis Media 新闻稿（北京时间 10-23 18:31）、36氪快讯 20:28（转界面，称项目提交欧盟委员会 ADACities 倡议）、Clubic、Journal Auto。已收录进 2026-10-24 daily"
     }
   ]
 }
