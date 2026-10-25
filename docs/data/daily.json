@@ -1,5 +1,70 @@
 [
   {
+    "date": "2026-10-25",
+    "items": [
+      {
+        "id": "2026-10-25-001",
+        "date": "2026-10-25",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：10月24日，Cybercab乘客可在行程中调出后视摄像头画面，另有新\"安静模式\"可关闭整块屏幕",
+        "summary_html": "<p><b>10月24日</b>，Sawyer Merritt 在X上发帖称，Tesla <b>Cybercab</b> 乘客现在可以在行程中调出 <b>后视摄像头（rearview camera）画面</b>；他还称似乎新增了 <b>安静模式（quiet mode）</b>，可让Cybercab整块屏幕变暗，供乘客休息、睡觉或夜间不想开大屏时使用。帖子转引了网友 Ethan McKanna 在 <b>奥斯汀</b> 拍摄的Cybercab照片。</p><p>本期未找到Tesla官方发布说明或软件版本号，\"安静模式\"一项Sawyer原文为\"Sounds like\"，属转述，功能细节与推送范围未确认。</p>",
+        "source_name": "Sawyer Merritt on X",
+        "source_url": "https://x.com/SawyerMerritt/status/2113998275099361643",
+        "published_at": "2026-10-24",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-25-002",
+        "date": "2026-10-25",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Waymo：10月25日，网友称Waymo在旧金山Castro与Market路口停在路口中间",
+        "summary_html": "<p><b>10月25日</b>，r/Waymo 网友发帖称一辆 Waymo 车辆停在 <b>旧金山 Castro + Market</b> 路口中间（\"Stopped in the Intersection\"）。帖子只有简短描述和图片，车辆是否载客、停留时长及原因均未说明，Waymo 未见回应。</p>",
+        "source_name": "r/Waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1xeebu6/waymo_in_intersection/",
+        "published_at": "2026-10-25",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-25-003",
+        "date": "2026-10-25",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Waymo：10月25日，网友称平时8分钟的通勤行程被Waymo绕远，本次及下一程获免单",
+        "summary_html": "<p><b>10月25日</b>，r/Waymo 网友发帖称，平时早上 <b>~8分钟</b> 的通勤路程，这次Waymo行驶过程中一度比出发点离公司更远；作者称 <b>本次及下一次行程均被免单（comped）</b>。帖子未说明城市、绕行原因与实际耗时，属用户自述。</p>",
+        "source_name": "r/Waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1xemrx0/i_love_waymo_most_the_time_but/",
+        "published_at": "2026-10-25",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-25-004",
+        "date": "2026-10-25",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记2,863辆，Tesla较10月24日新增11辆、全部为Cybercab（420→431），其余11家无变化",
+        "summary_html": "<p><b>10月25日09:29北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，history末条日期均为当日。与10月24日快照相比，<b>Tesla Robotaxi</b> 新增 <b>11个VIN</b>，<b>全部为Cybercab</b>，无注销，总数 <b>927 → 938</b>，Cybercab <b>420 → 431</b>，Model Y仍为 <b>507辆</b>。其余11家 <b>数量与VIN集合均无变化</b>。Sawyer Merritt 于北京时间 <b>10-25 05:12</b> 发帖称Tesla新登记11辆Cybercab、累计 <b>433辆</b>，与本快照的431辆相差2辆，口径差异未核实；变化在该时刻前已可见，具体登记时间无法推定。</p><p><b>Waymo 1,207辆（I-PACE 812、RT 395）</b>、<b>Tesla 938辆（Model Y 507、Cybercab 431）</b>、Avride 344、Aurora 91、Gatik AI 64、Zoox 63（Highlander 46、Zoox 17）、Nuro 47、Torc Robotics 32、Kodiak Robotics 29、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。对比9月3日基线（2,111辆）净增 <b>752辆</b>，其中Cybercab由 <b>45辆</b> 增至 <b>431辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla Robotaxi登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-10-25",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-10-24",
     "items": [
       {
