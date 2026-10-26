@@ -74,7 +74,7 @@
           {
             "company": "Bolt",
             "company_slug": "bolt",
-            "headline_html": "<b>Bolt：与Stellantis合作计划2028年起在大巴黎都市圈开展自动驾驶出行试验</b>",
+            "headline_html": "<b>Bolt：与Stellantis合作计划2028年起在大巴黎都市圈开展自动驾驶出行试验；选用NVIDIA全栈自动驾驶方案，计划2027年在马德里开展道路验证</b>",
             "sub_items": [
               {
                 "label": "a",
@@ -85,7 +85,7 @@
               },
               {
                 "label": "b",
-                "content_html": "<i>10月21日，西班牙xxx</i>"
+                "content_html": "<b>10月21日</b>，Bolt确定采用<b>NVIDIA提供的全栈自动驾驶方案</b>，首先搭载于Lucid车型，计划2027年在<b>马德里启动道路数据采集与技术验证</b>。此前9月17日，Bolt/Lucid 达成合作计划在欧洲部署 2.5 万辆 Robotaxi。"
               }
             ]
           }
@@ -125,7 +125,7 @@
         ]
       }
     ],
-    "edited_at": "2026-10-26T04:24:21.977Z"
+    "edited_at": "2026-10-26T05:15:02.304Z"
   },
   {
     "week_id": "2026-W42",
