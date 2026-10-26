@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-10-26",
+    "items": [
+      {
+        "id": "2026-10-26-001",
+        "date": "2026-10-26",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：10月25日，奥斯汀F1比赛日网友统计超50辆Cybercab在赛场周边送客，傍晚起在赛场接客",
+        "summary_html": "<p><b>10月25日</b>（美国中部时间，F1美国大奖赛比赛日），Sawyer Merritt 在X上发帖称，当天截至发帖时已看到 <b>超过50辆Cybercab</b> 在 <b>奥斯汀</b> F1赛场 <b>Circuit of the Americas（COTA）</b> 周边 <b>送客下车</b>，并附视频；他称赛事预计吸引 <b>超12万名观众</b>。约5小时后他再发帖称 <b>Cybercab正在F1赛场接客</b>，另转发网友 Ben Steindl 称\"Robotaxi在奥斯汀F1期间很忙\"的照片帖。r/teslamotors 同日转发了这条\"超50辆\"的帖子。</p><p>\"超50辆\"为Sawyer个人目击统计，帖子未说明车内是否配安全员、单车接单量、等待时长及票价，本期也未找到Tesla官方说明。服务区扩至COTA周边、运营延长至凌晨1点为 <b>10月23日</b> 的变化，已在10/24日报收录；同日德州DMV登记中Tesla Cybercab增至 <b>463辆</b>（见文末DMV汇总），登记数不等于当天实际在跑车辆。</p>",
+        "source_name": "Sawyer Merritt on X",
+        "source_url": "https://x.com/SawyerMerritt/status/2114413089340756417",
+        "published_at": "2026-10-25",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-10-26-002",
+        "date": "2026-10-26",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记2,895辆，Tesla较10月25日新增32辆、全部为Cybercab（431→463），其余11家无变化",
+        "summary_html": "<p><b>10月26日09:31北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，history末条日期均为当日。与10月25日快照相比，<b>Tesla Robotaxi</b> 新增 <b>32个VIN</b>，<b>全部为Cybercab</b>，无注销，总数 <b>938 → 970</b>，Cybercab <b>431 → 463</b>，Model Y仍为 <b>507辆</b>。其余11家 <b>数量与VIN集合均无变化</b>。Sawyer Merritt 于北京时间 <b>10-25 12:56</b> 发帖称Tesla又登记32辆Cybercab、累计 <b>465辆</b>，与本快照的463辆相差2辆（10/25 日报也有同样的2辆差），口径差异未核实；变化在该时刻前已可见，具体登记时间无法推定。</p><p><b>Waymo 1,207辆（I-PACE 812、RT 395）</b>、<b>Tesla 970辆（Model Y 507、Cybercab 463）</b>、Avride 344、Aurora 91、Gatik AI 64、Zoox 63（Highlander 46、Zoox 17）、Nuro 47、Torc Robotics 32、Kodiak Robotics 29、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。对比9月3日基线（2,111辆）净增 <b>784辆</b>，其中Cybercab由 <b>45辆</b> 增至 <b>463辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla Robotaxi登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-10-26",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-10-25",
     "items": [
       {
