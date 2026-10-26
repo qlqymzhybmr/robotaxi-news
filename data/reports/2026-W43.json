@@ -1,0 +1,179 @@
+{
+  "week_id": "2026-W43",
+  "date_range": "1020-1026",
+  "title": "（W43）无人驾驶行业1020-1026重要新闻",
+  "generated_at": "2026-10-26T10:31:36+08:00",
+  "sections": [
+    {
+      "name": "国外",
+      "entries": [
+        {
+          "company": "Waymo",
+          "company_slug": "waymo",
+          "headline_html": "<b>Waymo：拉斯维加斯机场接送上线；计划2027年在西班牙马德里提供服务；计划2027年底车队扩至20,000辆；年底前预计进口~5,100辆中国产Ojai；丹佛车辆逆行驶入学校接送小巷</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>10月21日</b>，<b>拉斯维加斯哈里·里德国际机场接送上线</b>，先向现有乘客开放，未来几周逐步扩大到全部公众，为全无人运营。",
+              "daily_ids": [
+                "2026-10-22-004"
+              ]
+            },
+            {
+              "label": "b",
+              "content_html": "<b>10月20日</b>，<b>宣布进入西班牙，首站马德里大区</b>，是继慕尼黑后在欧盟的第二个区域。目前先人工驾驶，再由安全员坐在驾驶位做技术验证，<b>计划2027年向公众开放载客服务</b>。",
+              "daily_ids": [
+                "2026-10-21-001"
+              ]
+            },
+            {
+              "label": "c",
+              "content_html": "<b>10月19日</b>，媒体报道Waymo计划用10月借入的50亿美元扩充车队，<b>目标2026年底达8,000辆、2027年底达20,000辆</b>（现有~4,000辆）；Waymo拒绝置评。",
+              "daily_ids": [
+                "2026-10-20-001"
+              ]
+            },
+            {
+              "label": "d",
+              "content_html": "<b>10月19日</b>，媒体报道Waymo预计于<b>2026年底前进口~5,100辆基于极氪车型改制的中国产Ojai</b>。Ojai因在美国加装传感器与软件，目前不受商务部网联汽车禁令限制；参众两院均有两党法案拟禁止进口所有中国制造车辆。",
+              "daily_ids": [
+                "2026-10-20-002"
+              ]
+            },
+            {
+              "label": "e",
+              "content_html": "<b>10月19日</b>，丹佛一辆Waymo在学校送学时段<b>逆行驶入学校接送小巷</b>，被家长拍下视频。",
+              "daily_ids": [
+                "2026-10-20-004"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Tesla",
+          "company_slug": "tesla",
+          "headline_html": "<b>Tesla：计划11月在达拉斯开放无监督Cybercab载客；上线Robotaxi安全报告并列出4个即将开通城市</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>10月21日</b>，Q3财报电话会称<b>将于下月在达拉斯开放无监督Cybercab公众载客</b>；客户车辆预计<b>2027年Q2</b>起可在Robotaxi已运营区域无监督行驶，并可加入Robotaxi车队。",
+              "daily_ids": [
+                "2026-10-22-001"
+              ]
+            },
+            {
+              "label": "b",
+              "content_html": "<b>10月21日</b>，上线<b>Robotaxi安全报告页</b>，称1月22日至10月18日累计~310万英里<b>零受伤、零气囊弹出</b>，其中奥斯汀~212万英里，湾区不在统计内；同时将<b>拉斯维加斯、杰克逊维尔、凤凰城、圣安东尼奥</b>列为“即将开通”城市，未给出时间。",
+              "daily_ids": [
+                "2026-10-22-002"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Wayve",
+          "company_slug": "wayve",
+          "headline_html": "<b>Wayve：与Stellantis、NVIDIA及法国政府合作推进法国自动驾驶部署</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>10月23日</b>，与Stellantis、NVIDIA在巴黎宣布<b>与法国政府合作推进自动驾驶部署</b>，方案为Stellantis L4-Ready平台搭载Wayve AI Driver，运行在NVIDIA Hyperion架构上，L4技术由Wayve提供；未公布上线时间、城市与车队规模。",
+              "daily_ids": [
+                "2026-10-24-004"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Bolt",
+          "company_slug": "bolt",
+          "headline_html": "<b>Bolt：与Stellantis、大巴黎都市圈计划2028年起开展自动驾驶出行试验</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>10月23日</b>，与Stellantis、大巴黎都市圈宣布<b>计划2028年起在大巴黎最多5个市镇开展自动驾驶出行试验</b>，2030年前扩展至~30个市镇。Stellantis提供车辆，Bolt自动驾驶部门（Autonomous Driving Solutions）负责运营；<b>具体L4技术提供方尚未确定</b>，媒体称小马智行为潜在供应方。",
+              "daily_ids": [
+                "2026-10-24-006"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "NHTSA",
+          "company_slug": "nhtsa",
+          "headline_html": "<b>NHTSA：提议修订车灯标准，允许无人驾驶车由系统控制灯光并选装青色ADS标识灯</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>10月23日</b>，公布<b>联邦机动车安全标准（FMVSS）No. 108修订提案</b>：无手动驾驶控制装置的车辆，转向灯、危险警示灯与远近光可由自动驾驶系统控制，并允许<b>选装青色（cyan）ADS标识灯</b>，表明车辆处于自动驾驶状态。提案10月26日刊登联邦公报后征求意见30天，尚非最终规则。",
+              "daily_ids": [
+                "2026-10-24-003"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "国内",
+      "entries": [
+        {
+          "company": "曹操出行",
+          "company_slug": "caocao",
+          "headline_html": "<b>曹操出行：与吉利联合打造的原生Robotaxi首台工程样车下线，定制版计划2027年量产</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>10月20日</b>，与吉利等合作伙伴联合打造的<b>原生开发Robotaxi首台工程样车EvaCab下线</b>，进入量产级方案实车验证阶段，<b>曹操出行定制版计划2027年量产</b>。L4自动驾驶系统提供方、落地城市与牌照安排尚未披露。",
+              "daily_ids": [
+                "2026-10-21-005"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "小马智行",
+          "company_slug": "xiaoma",
+          "headline_html": "<b>小马智行：与inDrive、NVIDIA签署MOU，计划在哈萨克斯坦阿斯塔纳投放第七代Robotaxi</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>10月23日</b>，与网约车平台inDrive、NVIDIA签署<b>合作备忘录（MOU）</b>，以<b>哈萨克斯坦</b>为首个试点市场，在与当地政府达成协议后<b>首先在首都阿斯塔纳投放第七代Robotaxi</b>，媒体称测试目标为2027年。小马智行提供车辆与L4技术，inDrive负责平台运营。",
+              "daily_ids": [
+                "2026-10-24-008"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "萝卜快跑",
+          "company_slug": "apollo",
+          "headline_html": "<b>萝卜快跑：与Freenow在伦敦展示RT6，计划2027年推出无人驾驶服务</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>10月23日</b>，与Lyft旗下出行平台Freenow在伦敦<b>展示RT6无人车</b>，<b>计划2027年在伦敦推出无人驾驶Robotaxi服务</b>，未来一两年投放“tens of vehicles”。双方自26年7月起在Brent区开展<b>带安全员</b>的道路测试。",
+              "daily_ids": [
+                "2026-10-24-009"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "奇瑞",
+          "company_slug": "chery",
+          "headline_html": "<b>奇瑞：发布原生前装Robotaxi，仍处于道路测试阶段</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>10月20日</b>，在芜湖全球创新大会发布面向全球市场的<b>原生前装Robotaxi</b>，<b>车辆仍处于道路测试阶段，尚未面向公众开放</b>，L4系统提供方未披露。",
+              "daily_ids": [
+                "2026-10-21-006"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
