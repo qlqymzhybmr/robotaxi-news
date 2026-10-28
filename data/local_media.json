@@ -705,6 +705,21 @@
       "city": "Madrid ES",
       "site": "telemadrid.es",
       "name": "Telemadrid"
+    },
+    {
+      "city": "Arlington VA",
+      "site": "arlnow.com",
+      "name": "ARLnow"
+    },
+    {
+      "city": "Arlington VA",
+      "site": "wusa9.com",
+      "name": "WUSA9"
+    },
+    {
+      "city": "Arlington VA",
+      "site": "fox5dc.com",
+      "name": "FOX 5 DC"
     }
   ],
   "Tesla": [
