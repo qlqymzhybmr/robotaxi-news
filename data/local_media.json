@@ -720,6 +720,26 @@
       "city": "Arlington VA",
       "site": "fox5dc.com",
       "name": "FOX 5 DC"
+    },
+    {
+      "city": "Charlotte NC",
+      "site": "charlotteobserver.com",
+      "name": "Charlotte Observer"
+    },
+    {
+      "city": "Charlotte NC",
+      "site": "wbtv.com",
+      "name": "WBTV"
+    },
+    {
+      "city": "Charlotte NC",
+      "site": "wsoctv.com",
+      "name": "WSOC-TV"
+    },
+    {
+      "city": "Charlotte NC",
+      "site": "wcnc.com",
+      "name": "WCNC"
     }
   ],
   "Tesla": [
