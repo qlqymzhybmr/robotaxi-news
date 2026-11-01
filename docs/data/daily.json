@@ -1,5 +1,85 @@
 [
   {
+    "date": "2026-11-01",
+    "items": [
+      {
+        "id": "2026-11-01-001",
+        "date": "2026-11-01",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Waymo：10月31日，网友发帖称在波士顿Lower Allston看到Waymo测试车",
+        "summary_html": "<p><b>10月31日</b>（美东时间），r/Waymo 网友发帖 \"Waymo in Boston\"，配图并称 \"Waymo Testing in <b>Lower Allston</b>\"。Waymo 今年 <b>2月</b> 宣布重返 <b>波士顿</b>，马萨诸塞州要求自动驾驶上路前取得 <b>MassDOT</b> 批准。</p><p>帖子只有一句描述和图片，车辆是人工驾驶还是自动驾驶、是否在测绘均未说明，拍摄日期未知，Waymo 未见回应。</p>",
+        "source_name": "r/Waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1xkobnp/waymo_in_boston/",
+        "published_at": "2026-10-31",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-01-002",
+        "date": "2026-11-01",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Waymo：10月31日，网友转发TikTok视频，疑似Ojai车型出现在马德里",
+        "summary_html": "<p><b>10月31日</b>，r/Waymo 网友转发一段 <b>TikTok</b> 视频，询问 Waymo 是否已带着 <b>Ojai</b> 车型来到 <b>马德里</b>（\"Looks like Waymo might have arrived in Madrid, Spain, with the Ojai vehicle?\"）。Waymo <b>10月20日</b> 宣布进入马德里大区时称首批上路的是 <b>捷豹I-PACE</b>，先人工驾驶，2027年迎来首批乘客。</p><p>发帖人本人也在求证（\"Does anyone know more about this?\"），视频的拍摄地点、日期及车辆是否属于 Waymo 均未核实。</p>",
+        "source_name": "r/Waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1xkb20x/looks_like_waymo_might_have_arrived_in_madrid/",
+        "published_at": "2026-10-31",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-01-003",
+        "date": "2026-11-01",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Waymo：10月30日，网友发帖称在芝加哥看到Waymo的中国产车辆",
+        "summary_html": "<p><b>10月30日</b>（美中部时间），r/Waymo 网友发帖 \"Waymo Chinese cars in Chicago\"，只附图片、无文字说明。帖子所指应为基于 <b>极氪</b> 平台的 <b>Ojai</b>；<b>芝加哥</b> 目前不在 Waymo 已宣布的运营或测试城市之列。</p><p>图片地点、拍摄日期与车辆用途（运输、展示或测绘）均未说明，Waymo 未见回应。</p>",
+        "source_name": "r/Waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1xjye8k/waymo_chinese_cars_in_chicago/",
+        "published_at": "2026-10-30",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-01-004",
+        "date": "2026-11-01",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Tesla：10月30日，网友在洛杉矶伯班克附近拍到Cybercab",
+        "summary_html": "<p><b>10月30日</b>（太平洋时间），r/teslamotors 网友发帖 \"Cybercab in LA\"，配图称位于 <b>加州伯班克（Burbank）</b> 附近。Tesla 尚未在加州开通无人驾驶 Robotaxi 收费服务。</p><p>帖子未说明车辆是否在路上行驶、车内是否有人或是否为运输途中，拍摄日期未知。</p>",
+        "source_name": "r/teslamotors · Reddit",
+        "source_url": "https://www.reddit.com/r/teslamotors/comments/1xk2e9i/cybercab_in_la/",
+        "published_at": "2026-10-30",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-01-005",
+        "date": "2026-11-01",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,188辆，Tesla Robotaxi新增124辆Model Y至1,204辆，其余11家无变化",
+        "summary_html": "<p><b>11月1日09:41北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，history末条日期均为当日。与10月31日快照相比，<b>Tesla Robotaxi</b> 新增 <b>124个VIN</b>、移除0个，全部为 <b>Model Y</b>（<b>507 → 631辆</b>），Cybercab维持 <b>573辆</b>，总数由 <b>1,080辆</b> 增至 <b>1,204辆</b>，与 Waymo（<b>1,259辆</b>）差距缩小到 <b>55辆</b>。其余11家数量与VIN集合均无变化。r/teslamotors 北京时间 <b>11-01 07:08</b> 的帖子已列出同一组数字（631 Model Y、573 Cybercab）。</p><p><b>Waymo 1,259辆（I-PACE 863、RT 396）</b>、<b>Tesla Robotaxi 1,204辆（Model Y 631、Cybercab 573）</b>、Avride 344、Aurora 91、Gatik AI 64、Zoox 63（Highlander 46、Zoox 17）、Nuro 47、Kodiak Robotics 36（T680 24、567 10、49X Chassis 2）、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,188辆</b>，对比9月3日基线（2,111辆）净增 <b>1,077辆</b>；Tesla 由基线 <b>420辆</b> 增至 <b>1,204辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla Robotaxi登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-01",
+        "rating": 3,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-10-31",
     "items": [
       {
