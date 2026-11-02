@@ -198,7 +198,6 @@
 - Aurora Innovation | overseas | | https://aurora.tech/rss.xml
 - Not A Tesla App | overseas | ⭐ | https://www.notateslaapp.com/rss
 - The Driverless Digest | overseas | ⭐ | https://thedriverlessdigest.com/feed
-- Robonomics | overseas | | https://robonomics.substack.com/feed
 
 ---
 
@@ -230,7 +229,7 @@
      已改挂到 data/local_media.json 的 Waymo/Denver 下——Track B 走 Google News
      的 site: 查询，不直接访问对方服务器，可绕开封禁，实测仍能命中。 -->
 
-### X 个人博主（Tesla 追踪，via 自部署 RSSHub）
+### 个人博主（X via 自部署 RSSHub + 个人博客）
 
 > **为什么放在过滤区而不是上面的「X（Twitter）RSS 订阅」**：那一区是公司官方账号，条条相关、不过滤；
 > 个人博主会混发生日祝福、SpaceX、车主俱乐部活动等无关内容，必须过主题关键词。
@@ -239,9 +238,15 @@
 >
 > **价值**：这两位常常比媒体更早发出一手信息。例如 @SawyerMerritt 的
 > 「Tesla 刚给 Robotaxi 车队新增 106 辆 Model Y」——**车队数量变化是媒体很少报道但对判断扩张节奏最直接的指标**。
+>
+> **2026-11-02 新增 Freda Duan（用户指定）**：投资分析师，X 账号 @FredaDuan 与其 Substack 博客 Robonomics（robonomics.substack.com，作者署名 FD，
+> 即 substack.com/@robonomics）。内容横跨 Robotaxi、AI 基础设施、AI 制药、短剧等，必须过主题关键词；Robonomics 原在「直接订阅 RSS」不过滤区，
+> 因非自动驾驶文章占多数，移到这里。价值在于 Tesla / Waymo 的运营数据测算与行业判断（如 3Q26「Fact Check on Self Driving」）。
 
 - X/@XanderSky | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/XanderSky
 - X/@SawyerMerritt | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/SawyerMerritt
+- X/@FredaDuan | overseas | ⭐ | http://127.0.0.1:1200/twitter/user/FredaDuan
+- Robonomics | overseas | ⭐ | https://robonomics.substack.com/feed
 
 ### 国内（via 自部署 RSSHub）
 
