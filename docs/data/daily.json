@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-11-02",
+    "items": [
+      {
+        "id": "2026-11-02-001",
+        "date": "2026-11-02",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Waymo：10月31日，网友称两辆Waymo驶入万圣节封闭街道被困，一辆被拖走",
+        "summary_html": "<p><b>10月31日</b>（万圣节当晚），r/Waymo 网友发帖称，<b>两辆Waymo</b> 驶入其所在城市为 <b>trick-or-treat</b> 活动封闭的街道，被 <b>数百名</b> 讨糖儿童围住无法脱身；其中 <b>一辆被拖车拖走</b>，另一辆由 <b>人工司机</b> 到场开走（\"One got towed out and the other had to come be picked up by a driver\"）。</p><p>帖子未写明城市，车内是否有乘客、是否发生碰撞均未说明，Waymo 未见回应。</p>",
+        "source_name": "r/Waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1xktfaa/waymos_confused_by_halloweeeen/",
+        "published_at": "2026-10-31",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-02-002",
+        "date": "2026-11-02",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,228辆，Tesla Robotaxi新增40辆Model Y至1,244辆，其余11家无变化",
+        "summary_html": "<p><b>11月2日09:32北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，history末条日期均为当日。与11月1日快照相比，<b>Tesla Robotaxi</b> 新增 <b>40个VIN</b>、移除0个，总数由 <b>1,204辆</b> 增至 <b>1,244辆</b>。这40辆在登记数据中车型字段写作 <b>\"Modey Y\"</b>，VIN前缀均为 <b>7SAYGDEE</b>，与已登记的631辆Model Y相同，按 <b>Model Y</b> 计（Model Y合计 <b>671辆</b>），不是新车型；Cybercab维持 <b>573辆</b>。Tesla与Waymo（<b>1,259辆</b>）的差距缩小到 <b>15辆</b>。其余11家数量与VIN集合均无变化。</p><p><b>Waymo 1,259辆（I-PACE 863、RT 396）</b>、<b>Tesla Robotaxi 1,244辆（Model Y 671、Cybercab 573）</b>、Avride 344、Aurora 91、Gatik AI 64、Zoox 63（Highlander 46、Zoox 17）、Nuro 47、Kodiak Robotics 36（T680 24、567 10、49X Chassis 2）、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,228辆</b>，对比9月3日基线（2,111辆）净增 <b>1,117辆</b>；Tesla 由基线 <b>420辆</b> 增至 <b>1,244辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla Robotaxi登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-02",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-01",
     "items": [
       {

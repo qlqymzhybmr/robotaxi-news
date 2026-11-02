@@ -3,7 +3,7 @@
   "companies": {
     "Waymo": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 1259,
         "by_model": {
           "I-PACE": 863,
@@ -2214,14 +2214,29 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 1259,
+          "by_model": {
+            "I-PACE": 863,
+            "RT": 396
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Tesla Robotaxi": {
       "latest": {
-        "date": "2026-11-01",
-        "total": 1204,
+        "date": "2026-11-02",
+        "total": 1244,
         "by_model": {
+          "Modey Y": 40,
           "Model Y": 631,
           "Cybercab": 573
         },
@@ -2816,6 +2831,7 @@
           "7SAYGDEE0TF554366",
           "7SAYGDEE0TF554383",
           "7SAYGDEE0TF554416",
+          "7SAYGDEE0TF559969",
           "7SAYGDEE0TF559972",
           "7SAYGDEE0TF559986",
           "7SAYGDEE0TF560006",
@@ -2834,6 +2850,7 @@
           "7SAYGDEE0TF563178",
           "7SAYGDEE0TF563181",
           "7SAYGDEE0TF563195",
+          "7SAYGDEE0TF563200",
           "7SAYGDEE0TF563214",
           "7SAYGDEE0TF563228",
           "7SAYGDEE0TF563245",
@@ -2886,6 +2903,7 @@
           "7SAYGDEE1TF563190",
           "7SAYGDEE1TF563206",
           "7SAYGDEE1TF563237",
+          "7SAYGDEE1TF563268",
           "7SAYGDEE1TF563271",
           "7SAYGDEE1TF563285",
           "7SAYGDEE1TF563299",
@@ -2915,9 +2933,11 @@
           "7SAYGDEE2TF547208",
           "7SAYGDEE2TF547211",
           "7SAYGDEE2TF547225",
+          "7SAYGDEE2TF547239",
           "7SAYGDEE2TF550982",
           "7SAYGDEE2TF550996",
           "7SAYGDEE2TF554353",
+          "7SAYGDEE2TF554367",
           "7SAYGDEE2TF554370",
           "7SAYGDEE2TF554384",
           "7SAYGDEE2TF554403",
@@ -2954,6 +2974,7 @@
           "7SAYGDEE2TF576031",
           "7SAYGDEE2TF580595",
           "7SAYGDEE2TF580726",
+          "7SAYGDEE2TF582783",
           "7SAYGDEE2TF582802",
           "7SAYGDEE2TF584890",
           "7SAYGDEE2TF587126",
@@ -2999,7 +3020,10 @@
           "7SAYGDEE3TF561084",
           "7SAYGDEE3TF563174",
           "7SAYGDEE3TF563188",
+          "7SAYGDEE3TF563224",
           "7SAYGDEE3TF563238",
+          "7SAYGDEE3TF563269",
+          "7SAYGDEE3TF563286",
           "7SAYGDEE3TF563336",
           "7SAYGDEE3TF563370",
           "7SAYGDEE3TF581349",
@@ -3035,7 +3059,9 @@
           "7SAYGDEE3TF607433",
           "7SAYGDEE3TF607447",
           "7SAYGDEE3TF607450",
+          "7SAYGDEE4TF541331",
           "7SAYGDEE4TF547209",
+          "7SAYGDEE4TF547212",
           "7SAYGDEE4TF550983",
           "7SAYGDEE4TF551003",
           "7SAYGDEE4TF554368",
@@ -3054,6 +3080,7 @@
           "7SAYGDEE4TF561045",
           "7SAYGDEE4TF561062",
           "7SAYGDEE4TF561076",
+          "7SAYGDEE4TF563166",
           "7SAYGDEE4TF563197",
           "7SAYGDEE4TF563202",
           "7SAYGDEE4TF563278",
@@ -3066,6 +3093,7 @@
           "7SAYGDEE4TF582025",
           "7SAYGDEE4TF583823",
           "7SAYGDEE4TF586155",
+          "7SAYGDEE4TF587323",
           "7SAYGDEE4TF587760",
           "7SAYGDEE4TF597270",
           "7SAYGDEE4TF597463",
@@ -3076,6 +3104,7 @@
           "7SAYGDEE4TF599889",
           "7SAYGDEE4TF600040",
           "7SAYGDEE4TF600992",
+          "7SAYGDEE4TF601494",
           "7SAYGDEE4TF601673",
           "7SAYGDEE4TF607280",
           "7SAYGDEE4TF607294",
@@ -3114,9 +3143,11 @@
           "7SAYGDEE5TF561037",
           "7SAYGDEE5TF561040",
           "7SAYGDEE5TF561054",
+          "7SAYGDEE5TF561068",
           "7SAYGDEE5TF561071",
           "7SAYGDEE5TF561085",
           "7SAYGDEE5TF563189",
+          "7SAYGDEE5TF563211",
           "7SAYGDEE5TF563239",
           "7SAYGDEE5TF563242",
           "7SAYGDEE5TF563256",
@@ -3182,10 +3213,12 @@
           "7SAYGDEE6TF560995",
           "7SAYGDEE6TF561032",
           "7SAYGDEE6TF561063",
+          "7SAYGDEE6TF561077",
           "7SAYGDEE6TF561080",
           "7SAYGDEE6TF563170",
           "7SAYGDEE6TF563203",
           "7SAYGDEE6TF563217",
+          "7SAYGDEE6TF563234",
           "7SAYGDEE6TF563248",
           "7SAYGDEE6TF563251",
           "7SAYGDEE6TF563279",
@@ -3217,6 +3250,7 @@
           "7SAYGDEE6TF608835",
           "7SAYGDEE6TF608916",
           "7SAYGDEE6TF609354",
+          "7SAYGDEE7TF541274",
           "7SAYGDEE7TF547219",
           "7SAYGDEE7TF547236",
           "7SAYGDEE7TF550976",
@@ -3232,15 +3266,19 @@
           "7SAYGDEE7TF559998",
           "7SAYGDEE7TF560018",
           "7SAYGDEE7TF560021",
+          "7SAYGDEE7TF560973",
           "7SAYGDEE7TF560987",
           "7SAYGDEE7TF560990",
+          "7SAYGDEE7TF561007",
           "7SAYGDEE7TF561010",
           "7SAYGDEE7TF561024",
+          "7SAYGDEE7TF561038",
           "7SAYGDEE7TF561041",
           "7SAYGDEE7TF561069",
           "7SAYGDEE7TF563193",
           "7SAYGDEE7TF563209",
           "7SAYGDEE7TF563212",
+          "7SAYGDEE7TF563257",
           "7SAYGDEE7TF563260",
           "7SAYGDEE7TF563274",
           "7SAYGDEE7TF563288",
@@ -3273,6 +3311,7 @@
           "7SAYGDEE7TF608701",
           "7SAYGDEE7TF608925",
           "7SAYGDEE7TF609055",
+          "7SAYGDEE7TF609217",
           "7SAYGDEE7TF609220",
           "7SAYGDEE7TF609363",
           "7SAYGDEE7TF609508",
@@ -3287,27 +3326,36 @@
           "7SAYGDEE8TF550999",
           "7SAYGDEE8TF551005",
           "7SAYGDEE8TF554356",
+          "7SAYGDEE8TF554373",
           "7SAYGDEE8TF554387",
           "7SAYGDEE8TF559962",
           "7SAYGDEE8TF559976",
           "7SAYGDEE8TF560013",
           "7SAYGDEE8TF560030",
           "7SAYGDEE8TF560982",
+          "7SAYGDEE8TF560996",
           "7SAYGDEE8TF561002",
           "7SAYGDEE8TF561016",
           "7SAYGDEE8TF561033",
+          "7SAYGDEE8TF561050",
           "7SAYGDEE8TF561064",
+          "7SAYGDEE8TF561078",
           "7SAYGDEE8TF561081",
+          "7SAYGDEE8TF563168",
           "7SAYGDEE8TF563171",
           "7SAYGDEE8TF563199",
           "7SAYGDEE8TF563218",
+          "7SAYGDEE8TF563235",
           "7SAYGDEE8TF563266",
+          "7SAYGDEE8TF563297",
           "7SAYGDEE8TF563302",
           "7SAYGDEE8TF563316",
           "7SAYGDEE8TF563347",
+          "7SAYGDEE8TF563364",
           "7SAYGDEE8TF575983",
           "7SAYGDEE8TF576034",
           "7SAYGDEE8TF580987",
+          "7SAYGDEE8TF581573",
           "7SAYGDEE8TF582769",
           "7SAYGDEE8TF596574",
           "7SAYGDEE8TF596820",
@@ -3325,6 +3373,7 @@
           "7SAYGDEE8TF608836",
           "7SAYGDEE8TF609498",
           "7SAYGDEE9TF541275",
+          "7SAYGDEE9TF541289",
           "7SAYGDEE9TF541342",
           "7SAYGDEE9TF547206",
           "7SAYGDEE9TF547223",
@@ -3332,18 +3381,22 @@
           "7SAYGDEE9TF550977",
           "7SAYGDEE9TF550994",
           "7SAYGDEE9TF551000",
+          "7SAYGDEE9TF554348",
           "7SAYGDEE9TF554365",
           "7SAYGDEE9TF554379",
           "7SAYGDEE9TF554382",
           "7SAYGDEE9TF554396",
           "7SAYGDEE9TF554401",
+          "7SAYGDEE9TF554415",
           "7SAYGDEE9TF559999",
+          "7SAYGDEE9TF560005",
           "7SAYGDEE9TF560019",
           "7SAYGDEE9TF560022",
           "7SAYGDEE9TF560988",
           "7SAYGDEE9TF560991",
           "7SAYGDEE9TF561008",
           "7SAYGDEE9TF561042",
+          "7SAYGDEE9TF561056",
           "7SAYGDEE9TF561073",
           "7SAYGDEE9TF561087",
           "7SAYGDEE9TF561090",
@@ -3387,6 +3440,7 @@
           "7SAYGDEEXTF547215",
           "7SAYGDEEXTF547229",
           "7SAYGDEEXTF550972",
+          "7SAYGDEEXTF550986",
           "7SAYGDEEXTF551006",
           "7SAYGDEEXTF554343",
           "7SAYGDEEXTF554357",
@@ -3405,6 +3459,7 @@
           "7SAYGDEEXTF561048",
           "7SAYGDEEXTF561051",
           "7SAYGDEEXTF561065",
+          "7SAYGDEEXTF563169",
           "7SAYGDEEXTF563172",
           "7SAYGDEEXTF563205",
           "7SAYGDEEXTF563219",
@@ -4917,12 +4972,70 @@
             },
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 1244,
+          "by_model": {
+            "Modey Y": 40,
+            "Model Y": 631,
+            "Cybercab": 573
+          },
+          "added_vins": [
+            "7SAYGDEE0TF559969",
+            "7SAYGDEE0TF563200",
+            "7SAYGDEE1TF563268",
+            "7SAYGDEE2TF547239",
+            "7SAYGDEE2TF554367",
+            "7SAYGDEE2TF582783",
+            "7SAYGDEE3TF563224",
+            "7SAYGDEE3TF563269",
+            "7SAYGDEE3TF563286",
+            "7SAYGDEE4TF541331",
+            "7SAYGDEE4TF547212",
+            "7SAYGDEE4TF563166",
+            "7SAYGDEE4TF587323",
+            "7SAYGDEE4TF601494",
+            "7SAYGDEE5TF561068",
+            "7SAYGDEE5TF563211",
+            "7SAYGDEE6TF561077",
+            "7SAYGDEE6TF563234",
+            "7SAYGDEE7TF541274",
+            "7SAYGDEE7TF560973",
+            "7SAYGDEE7TF561007",
+            "7SAYGDEE7TF561038",
+            "7SAYGDEE7TF563257",
+            "7SAYGDEE7TF609217",
+            "7SAYGDEE8TF554373",
+            "7SAYGDEE8TF560996",
+            "7SAYGDEE8TF561050",
+            "7SAYGDEE8TF561078",
+            "7SAYGDEE8TF563168",
+            "7SAYGDEE8TF563235",
+            "7SAYGDEE8TF563297",
+            "7SAYGDEE8TF563364",
+            "7SAYGDEE8TF581573",
+            "7SAYGDEE9TF541289",
+            "7SAYGDEE9TF554348",
+            "7SAYGDEE9TF554415",
+            "7SAYGDEE9TF560005",
+            "7SAYGDEE9TF561056",
+            "7SAYGDEEXTF550986",
+            "7SAYGDEEXTF563169"
+          ],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {
+              "Modey Y": 40
+            },
+            "removed_count": 0
+          }
         }
       ]
     },
     "Avride": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 344,
         "by_model": {
           "Ioniq 5": 344
@@ -5873,12 +5986,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 344,
+          "by_model": {
+            "Ioniq 5": 344
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Aurora": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 91,
         "by_model": {
           "579": 41,
@@ -6670,12 +6796,27 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 91,
+          "by_model": {
+            "579": 41,
+            "LT62F": 29,
+            "VNL (4)": 21
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Gatik AI": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 64,
         "by_model": {
           "FTR": 45,
@@ -7393,12 +7534,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 64,
+          "by_model": {
+            "FTR": 45,
+            "FVR": 19
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Nuro": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 47,
         "by_model": {
           "Prius": 21,
@@ -8099,12 +8254,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 47,
+          "by_model": {
+            "Prius": 21,
+            "Gravity": 26
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Zoox": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 63,
         "by_model": {
           "Zoox": 17,
@@ -8855,12 +9024,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 63,
+          "by_model": {
+            "Zoox": 17,
+            "Highlander": 46
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Kodiak Robotics": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 36,
         "by_model": {
           "49X Chassis": 2,
@@ -9574,12 +9757,27 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 36,
+          "by_model": {
+            "49X Chassis": 2,
+            "567": 10,
+            "T680": 24
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Torc Robotics": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 32,
         "by_model": {
           "RA Cascadia": 28,
@@ -10265,12 +10463,26 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 32,
+          "by_model": {
+            "RA Cascadia": 28,
+            "Cascadia": 4
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "May Mobility": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 22,
         "by_model": {
           "Sienna": 22
@@ -10899,12 +11111,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 22,
+          "by_model": {
+            "Sienna": 22
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Waabi Logistics": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 13,
         "by_model": {
           "VNL": 1,
@@ -11618,12 +11843,27 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-02",
+          "total": 13,
+          "by_model": {
+            "VNL": 1,
+            "VNL (4)": 2,
+            "579": 10
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Bot Auto TX": {
       "latest": {
-        "date": "2026-11-01",
+        "date": "2026-11-02",
         "total": 13,
         "by_model": {
           "Cascadia": 13
@@ -12233,6 +12473,19 @@
         },
         {
           "date": "2026-11-01",
+          "total": 13,
+          "by_model": {
+            "Cascadia": 13
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
+        },
+        {
+          "date": "2026-11-02",
           "total": 13,
           "by_model": {
             "Cascadia": 13
