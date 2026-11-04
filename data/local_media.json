@@ -987,6 +987,31 @@
       "city": "Jacksonville FL",
       "site": "actionnewsjax.com",
       "name": "Action News Jax"
+    },
+    {
+      "city": "Detroit MI",
+      "site": "freep.com",
+      "name": "Detroit Free Press"
+    },
+    {
+      "city": "Detroit MI",
+      "site": "detroitnews.com",
+      "name": "Detroit News"
+    },
+    {
+      "city": "Detroit MI",
+      "site": "wxyz.com",
+      "name": "WXYZ ABC7 Detroit"
+    },
+    {
+      "city": "Detroit MI",
+      "site": "clickondetroit.com",
+      "name": "WDIV Local 4 Detroit"
+    },
+    {
+      "city": "Detroit MI",
+      "site": "fox2detroit.com",
+      "name": "FOX 2 Detroit"
     }
   ],
   "Aurora Innovation": [
