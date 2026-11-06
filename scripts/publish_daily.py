@@ -82,6 +82,7 @@ COMPANY = {
     "大众": ("大众", "volkswagen"),
     "MOIA": ("MOIA", "moia"),
     "现代": ("现代", "hyundai"),
+    "奔驰": ("奔驰", "benz"),
     "42dot": ("42dot", "42dot"),
     # 国内 L4 / 出行平台
     "小马智行": ("小马智行", "xiaoma"),

@@ -26,6 +26,7 @@
 | Rivian | rivian |
 | Lucid | lucid |
 | GM | gm |
+| 奔驰 | benz |
 | NVIDIA | nvidia |
 | Woven Planet | woven-planet |
 | Motional | motional |
