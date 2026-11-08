@@ -61,6 +61,8 @@ EOF
   ( crontab -l 2>/dev/null | grep -v "$CRON_LINE_TAG" | grep -v '^# robotaxi daily fetch'
     echo "# robotaxi daily fetch — 每天 JST 10:30（本机时区 $(timedatectl show -p Timezone --value 2>/dev/null || date +%Z) 下为 ${CRON_H}:$(printf %02d "$CRON_M")）"
     echo "$CRON_M $CRON_H * * * $REPO/scripts/cron_daily_fetch.sh"
+    echo "# robotaxi daily fetch retry — 每小时检查一次，补跑因 Claude 用量上限失败的日期（无待办则立即退出）"
+    echo "5 * * * * $REPO/scripts/cron_daily_fetch.sh --retry"
   ) | crontab -
   if [ "$(date +%z)" != "+0900" ]; then
     echo "⚠️ 本机时区不是 JST，已换算为本地 ${CRON_H}:$(printf %02d "$CRON_M")；若本机时区有夏令时，切换后需重跑本脚本"
@@ -85,6 +87,7 @@ ts = [e.published_parsed for e in f.entries if getattr(e, 'published_parsed', No
 sys.exit(0 if ts and time.time() - calendar.timegm(max(ts)) < 7 * 86400 else 1)
 EOF" "token 失效或未填：运行 scripts/set_twitter_token.sh"
 chk "定时任务已安装"              "crontab -l | grep -q $CRON_LINE_TAG"   "重跑本脚本（不带 --check）"
+chk "额度失败自动重跑已安装"        "crontab -l | grep -q -- '--retry'"     "重跑本脚本（不带 --check）"
 chk "cron 服务运行中"             "systemctl is-active cron"              "systemctl enable --now cron"
 chk "claude CLI 可用"             "command -v claude"                     "安装 Claude Code 并运行一次 claude 登录"
 chk "GitHub 登录（gh）"           "gh auth status"                        "gh auth login，然后重跑本脚本"
