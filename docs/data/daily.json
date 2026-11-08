@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-11-08",
+    "items": [
+      {
+        "id": "2026-11-08-001",
+        "date": "2026-11-08",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月7日，马斯克称Cybertruck订单积压超过停产前产能，将加开一个班次，产线约2027年6-7月拆除用于扩产Cybercab",
+        "summary_html": "<p><b>11月8日</b>（北京时间 02:15），马斯克在 X 发文：\"The Tesla Cybertruck order backlog is currently far more than we can make before dismantling the line for <b>Cybercab expansion around June/July next year</b>. We will add an <b>extra shift</b> to try to get all orders done in time.\" 此前（北京时间 <b>11-07 15:04</b>）他回复称 \"We are still building Cybertruck for another <b>8 or 9 months</b> btw, but then Tesla needs to focus on scaling Cybercab.\"</p><p>北京时间 <b>11-08 04:49</b>，马斯克解释停产原因：维持一条复杂产线、供应链和工程投入，就无法把这些人员、厂房和设备用于 <b>扩产 Cybercab</b>；同时称即将有效率改进，可让 Cybercab 用 <b>40kWh</b> 电池包，并会推出 <b>liquid silver（液态银）</b> 配色。<b>Giga Texas</b> Cybertruck 产线将在 <b>2027年年中</b> 前后停产、为 Cybercab 腾出产能，这一决定为 <b>11月6日</b> 马斯克在 X 首次宣布（早于本期窗口）。原文未给出 Cybercab 目标产量。</p>",
+        "source_name": "X @SawyerMerritt 2026-11-07",
+        "source_url": "https://x.com/SawyerMerritt/status/2119131739432063065",
+        "published_at": "2026-11-07",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-08-002",
+        "date": "2026-11-08",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月7日，Robotaxi App 26.11.0版本在同一页面并列显示Cybercab与Model Y的预计到达时间、等待时长与票价",
+        "summary_html": "<p><b>11月7日</b>，Teslarati 根据 X 用户 <b>@gheeunit</b> 当天发布的视频报道，Tesla Robotaxi App <b>26.11.0</b> 版本在一个页面上同时列出 <b>Cybercab（2座）</b> 与 <b>Model Y（4座）</b> 两个选项各自的 <b>预计到达时间、预计等待时长、当前可用性和票价</b>；此前 <b>26.8.2</b> 版加入了座位数提示。Tesla 未发布该版本的官方更新说明。</p><p>报道称这一比较目前主要在 <b>奥斯汀</b> 可用，<b>达拉斯、休斯顿、沃斯堡</b> 和佛州各城仍只派 Model Y；Tesla 在 Q3 财报会上称 <b>达拉斯</b> Cybercab 载客将于 <b>11月</b> 上线。Cybercab <b>9月3日</b> 起在奥斯汀载客，报道援引德州 DMV 数据称 10 月底登记 <b>573辆 Cybercab、631辆 Model Y</b>（登记数不等于运营车队）。</p>",
+        "source_name": "Teslarati 2026-11-07",
+        "source_url": "https://www.teslarati.com/tesla-robotaxi-app-cybercab-vs-model-y/",
+        "published_at": "2026-11-07",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-08-003",
+        "date": "2026-11-08",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Reddit/Waymo：11月7日，网友发帖称Waymo撞倒交通信号灯",
+        "summary_html": "<p>网友在 r/Waymo 发帖，标题为 \"Waymo knocks out traffic light\"，附一张图片，正文无文字说明。</p><p>帖子页面与评论区无法访问，城市、发生时间、车辆是否载客及是否无人驾驶状态均未核实，Waymo 未公开回应。</p>",
+        "source_name": "r/Waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1xqckre/waymo_knocks_out_traffic_light/",
+        "published_at": "2026-11-07",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-08-004",
+        "date": "2026-11-08",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Reddit/Waymo：11月6日，网友称在丹佛目击Waymo撞到松鼠后未减速、未避让",
+        "summary_html": "<p>网友发帖称当天在 <b>丹佛</b> 看到一辆 Waymo 撞到松鼠，\"It didn't slow down / didn't swerve / kept going\"，并质疑车辆对宠物或儿童的球等小目标的反应能力。</p><p>帖子为个人自述，无图片或视频，车辆是否载客未说明。</p>",
+        "source_name": "r/Waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1xq01gs/saw_a_waymo_hit_a_squirrel_today_in_denver/",
+        "published_at": "2026-11-06",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-08-005",
+        "date": "2026-11-08",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Reddit/Waymo：11月6日，网友发现Waymo已于11月3日在威斯康星州登记游说",
+        "summary_html": "<p>网友发帖称，<b>威斯康星州</b> 游说登记系统显示 Waymo 的登记日期为 <b>2026年11月3日</b>，并附官方记录链接（lobbying.wi.gov）。</p><p>帖子未说明游说议题；威斯康星州目前没有 Waymo 运营或测试的公开信息。</p>",
+        "source_name": "r/Waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1xpx10t/waymo_lobbying_in_wisconsin/",
+        "published_at": "2026-11-06",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-08-006",
+        "date": "2026-11-08",
+        "company": "文远知行",
+        "company_slug": "weride",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "文远知行：11月7日，接待丹麦商业与竞争力部长Lidegaard试乘Robotaxi，称正与GreenMobility筹备2027年在丹麦推出公众自动驾驶服务",
+        "summary_html": "<p><b>11月7日</b>，文远知行官方 X 账号发文称，接待 <b>丹麦商业与竞争力部长 Martin Lidegaard</b> 与 <b>丹麦驻华大使 Michael Starbæk Christensen</b> 试乘 Robotaxi 并会谈，\"With <b>GreenMobility</b>, we are preparing for the launch of public AV services in <b>2027</b>!\"</p><p>帖子未写试乘城市与车型。文远知行与丹麦共享出行平台 GreenMobility 的合作于 <b>26年8月</b> 公布，计划 <b>2027年</b> 在 <b>哥本哈根</b> 推出丹麦首个 Robotaxi 服务；本期没有新的牌照、车队或时间表信息。</p>",
+        "source_name": "X @WeRide_ai 2026-11-07",
+        "source_url": "https://x.com/WeRide_ai/status/2118886078493114680",
+        "published_at": "2026-11-07",
+        "rating": 1,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-08-007",
+        "date": "2026-11-08",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,254辆，较11月6日快照数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月8日09:31北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，history末条日期均为当日。由于 11 月 7 日未运行，对比基线为 <b>11月6日</b> 快照；两天累计 <b>12家数量与 VIN 集合均无变化</b>（新增 0、移除 0）。官方接口仍不返回车型字段，当日 `by_model` 记为 \"?\"。</p><p><b>Waymo 1,285辆</b>（11月6日按 VIN 推断为 I-PACE 874、RT 411）、<b>Tesla Robotaxi 1,244辆</b>（11月4日最后一次有车型字段时为 Model Y 671、Cybercab 573）、Avride 344、Aurora 91、Gatik AI 64、Zoox 63、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,254辆</b>，对比9月3日基线（2,111辆）净增 <b>1,143辆</b>；Waymo 领先 Tesla <b>41辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻。</p>",
+        "source_name": "Automated Motor Vehicles：Waymo登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/07ebbc43-ae5b-42ca-a712-d9d5ce5b3516/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-08",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-06",
     "items": [
       {
