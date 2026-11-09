@@ -1,5 +1,70 @@
 [
   {
+    "date": "2026-11-09",
+    "items": [
+      {
+        "id": "2026-11-09-001",
+        "date": "2026-11-09",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月8日，Robotaxi运营时间提前至早上5点，每天5am-次日2am共21小时",
+        "summary_html": "<p><b>11月8日</b>（北京时间 16:07），@SawyerMerritt 在 X 发文：\"Tesla's Robotaxi service now runs <b>21 hours a day from 5 AM to 2 AM</b> (from 6 AM to 2 AM before). Getting very close to 24-hour operation.\" Crypto Briefing、BASENOR 等跟进报道称新时段在 <b>奥斯汀</b> 生效，<b>2am-5am</b> 用于充电与维护。</p><p>此前 <b>10月底</b> Tesla 官方发帖称运营时间改为 <b>6am-2am</b>，但未说明适用于哪些城市；Tesla 此前称目标是 <b>2026年底前</b> 实现 24 小时运营。本期未找到 Tesla 官方关于 5am 开始的说明，适用城市依据第三方报道。</p>",
+        "source_name": "X @SawyerMerritt 2026-11-08",
+        "source_url": "https://x.com/SawyerMerritt/status/2119341121809592484",
+        "published_at": "2026-11-08",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-09-002",
+        "date": "2026-11-09",
+        "company": "NVIDIA",
+        "company_slug": "nvidia",
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1",
+        "title": "NVIDIA：11月9日，与韩国Kakao Mobility签署L4自动驾驶合作MOU，技术首先用于起亚PBV",
+        "summary_html": "<p><b>11月9日</b>，<b>Kakao Mobility</b> 在首尔江南 <b>Westin Seoul Parnas</b> 与 NVIDIA 签署自动驾驶技术合作 <b>MOU</b>：Kakao Mobility 自研的 <b>端到端自动驾驶 AI</b> 将结合 NVIDIA 的计算与优化技术，车载计算单元采用 <b>两颗 NVIDIA DRIVE AGX Thor</b>，并使用 <b>Hyperion</b> 传感器与计算参考架构、<b>Halos</b> 安全体系进行开发验证。</p><p>相关技术将首先装在 <b>起亚 PBV（专用车）</b> 上，Kakao Mobility 与起亚于 <b>26年7月</b> 签署自动驾驶 PBV 合作。Kakao Mobility 称正为 <b>韩国国内商业化</b> 做准备，中长期考虑海外市场；本期未披露上路时间与车队规模。MOU 为非约束性协议，驾驶软件由 Kakao Mobility 自研，NVIDIA 提供计算平台与参考架构。</p>",
+        "source_name": "Seoul Economic Daily 2026-11-09",
+        "source_url": "https://en.sedaily.com/technology/2026/11/09/kakao-mobility-teams-with-nvidia-to-advance-level-4-self",
+        "published_at": "2026-11-09",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-09-003",
+        "date": "2026-11-09",
+        "company": "NVIDIA",
+        "company_slug": "nvidia",
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1",
+        "title": "NVIDIA：11月8日，媒体报道其向韩国国土交通部推介Hyperion平台，争取参与韩国Robotaxi试点",
+        "summary_html": "<p><b>11月8日</b>，韩国媒体报道 NVIDIA 已接触韩国自动驾驶企业，并向 <b>国土交通部（MOLIT）</b> 推介在其 Robotaxi 试点中采用 <b>Hyperion</b> 平台和 <b>Halos</b> 安全框架。若在首个试点地区 <b>全南-光州</b> 采用，基于 <b>现代 Ioniq 5</b> 的车辆可使用该平台，<b>RideFlux</b>、<b>Autonomous A2Z</b> 可能将自有软件与之结合。</p><p>据报道，国土交通部计划 <b>2027年</b> 新增 <b>4-5个</b> 试点城市、试点车辆由 <b>200辆</b> 增至 <b>3,000辆</b>，<b>2028年起</b> 提供 L4 无人 Robotaxi 服务。一家企业表示 \"we have not reached a conclusion on what exactly we would gain\"；NVIDIA 方面原定 11 月 9 日与 Kakao Mobility CEO 柳肯善的会面由 NVIDIA 推迟。NVIDIA 与国土交通部均未公开确认。</p>",
+        "source_name": "Seoul Economic Daily 2026-11-08",
+        "source_url": "https://en.sedaily.com/technology/2026/11/08/nvidia-eyes-koreas-robotaxi-pilot-to-spread-self-driving",
+        "published_at": "2026-11-08",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-09-004",
+        "date": "2026-11-09",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,292辆，Tesla Robotaxi单日+38辆（按VIN推断均为Model Y），其余11家数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月9日09:42北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月8日</b> 快照：<b>Tesla Robotaxi 1,244→1,282辆（+38）</b>，新增 38 个 VIN 均为 `7SAYGDEE` 开头（与此前 Model Y 相同前缀），移除 0；据此推断为 <b>Model Y 671→709</b>、<b>Cybercab 573</b> 不变（官方接口不返回车型字段，车型为按 VIN 前缀推断）。其余 11 家数量与 VIN 集合均无变化。</p><p><b>Waymo 1,285辆</b>（I-PACE 874、RT 411，按 VIN 推断）、<b>Tesla Robotaxi 1,282辆</b>、Avride 344、Aurora 91、Gatik AI 64、Zoox 63、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,292辆</b>，对比9月3日基线（2,111辆）净增 <b>1,181辆</b>；Waymo 领先 Tesla 缩小至 <b>3辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla Robotaxi登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-09",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-08",
     "items": [
       {
