@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-11-11",
+    "items": [
+      {
+        "id": "2026-11-11-001",
+        "date": "2026-11-11",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：11月10日，Arizona's Family调查凤凰城警方记录：88起涉Waymo碰撞中43起为对方肇事逃逸，按里程计为当地驾驶人的2.4倍",
+        "summary_html": "<p><b>11月10日</b>，凤凰城本地台 <b>Arizona's Family</b> 发布调查：其用 <b>10个月</b> 收集 Waymo 凤凰城服务区五市（<b>Phoenix、Scottsdale、Chandler、Mesa、Tempe</b>）的警方碰撞报告与执法记录仪画面，<b>2020年9月1日至2024年12月31日</b> 共有 <b>88起</b> 警方记录的涉 Waymo 碰撞，其中 <b>43起（49%）</b> 为 Waymo 留在现场、对方驾驶人离开的 <b>肇事逃逸（hit-and-run）</b>，多数损伤轻微。与交通安全研究人员按每百万英里计算后，Waymo 涉及警方记录肇事逃逸的比率为 <b>马里科帕县（Maricopa County）驾驶人的2.4倍</b>。</p><p>执法记录仪显示，Waymo 路边救援人员曾对 Chandler 警员称 \"People rear-end these things all the time... Most of the time, they just leave\"。Waymo 审阅了方法论，称其研究人员 \"appreciated the rigor and thought\"，但认为无法判断是 Waymo 车辆实际遭遇更多肇事逃逸，还是 Waymo 比普通公众更一贯地向警方报案。数据截至 2024 年底，不含 2025 年以后的记录。</p>",
+        "source_name": "Arizona's Family 2026-11-10",
+        "source_url": "https://www.azfamily.com/2026/11/10/arizona-drivers-keep-hitting-waymos-taking-off-police-records-show/",
+        "published_at": "2026-11-10",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-11-002",
+        "date": "2026-11-11",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：11月10日，为伦敦上线成立Waymo Accessibility Network UK，RNIB等10家无障碍组织为首批成员",
+        "summary_html": "<p><b>11月10日</b>，Waymo 官方博客宣布成立 <b>Waymo Accessibility Network UK</b>，首批 <b>10家</b> 成员为 <b>RNIB（英国皇家盲人协会）</b>、Re-Engage、<b>Age UK</b>、Transport for All、Thomas Pocklington Trust、<b>Guide Dogs UK</b>、Sense、Motability Foundation、National Centre for Accessible Transport 与 <b>Scope</b>。成员将参与用户研究与产品测试，反馈用于改进寻车声音提示、车辆查找工具等无障碍功能。</p><p>Waymo 产品管理总监 <b>Chris Ludwick</b> 称该网络 \"is a vital step in ensuring our rollout of autonomous technology in London is inclusive, equitable, and aligned with local needs\"。博客原文为 \"As we work towards welcoming our first passengers in <b>London</b>\"，未给出伦敦载客上线日期。</p>",
+        "source_name": "Waymo Blog 2026-11-10",
+        "source_url": "https://waymo.com/blog/2026/11/uk-accessibility-network",
+        "published_at": "2026-11-10",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-11-003",
+        "date": "2026-11-11",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "监管：11月10日，华盛顿特区议员Charles Allen发布修订版Robotaxi法案，每家上限200辆、全市800辆，最早2027年10月商业运营；交通委员会5人中至少2人表态反对",
+        "summary_html": "<p><b>11月10日</b>（周二），华盛顿特区议会交通委员会主席 <b>Charles Allen</b> 发布修订后的自动驾驶网约车法案：每家公司上限 <b>200辆</b>、全市不超过 <b>800辆</b>；按 <b>行驶里程征税</b>，收入用于被替代司机的培训与补助；赋予 Uber、Lyft 司机及 <b>AV 维护场站员工</b> 组织工会与集体谈判的权利；要求车队分布至全市各区、按时间表加入 <b>轮椅无障碍车辆</b>，并与急救部门制定响应预案，监管方可因安全问题立即暂停或吊销牌照。</p><p>进度安排：法案生效后 <b>DDOT</b> 有 <b>90天</b> 开放无人测试许可申请，企业须在至少 <b>90天</b> 内完成 <b>75,000英里</b> 无驾驶员、无乘客测试；Allen 称最早 <b>2027年10月</b> 可商业运营，<b>2028年初</b> 更现实。法案须先通过 <b>5人交通委员会</b>，议员 <b>Zachary Parker</b>、<b>Elissa Silverman</b> 已表态反对当前版本，候任市长 <b>Janeese Lewis George</b> 也是委员之一，此前主张暂缓；Allen 希望本周在委员会表决，称 \"I think it'll be a tight vote\"。Waymo 发表声明支持该法案。本条为尚未表决的法案。</p>",
+        "source_name": "WUSA9 (Yahoo) 2026-11-10",
+        "source_url": "https://www.yahoo.com/news/politics/articles/charles-allen-unveils-bill-bring-170020338.html",
+        "published_at": "2026-11-10",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-11-004",
+        "date": "2026-11-11",
+        "company": "NVIDIA",
+        "company_slug": "nvidia",
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1",
+        "title": "NVIDIA：11月10日，开放车载推理模型Alpamayo 2 Edge权重，2B参数，面向DRIVE AGX Thor实时运行",
+        "summary_html": "<p><b>11月10日</b>，NVIDIA 技术博客发布 <b>Alpamayo 2 Edge</b>：<b>2B参数</b> 的自适应推理 <b>VLA（视觉-语言-动作）</b> 模型，基于 <b>Cosmos 3 Edge</b> 的 Nemotron 推理骨干，配 <b>扩散动作专家</b> 输出轨迹，输入为环视摄像头、历史自车运动与导航信息，仅在需要时生成 <b>Chain-of-Causation</b> 推理文本。权重已上架 <b>Hugging Face</b>（nvidia/Alpamayo2-Edge），许可为 <b>OpenMDW-1.1</b>。</p><p>NVIDIA 称在 <b>AlpaGym</b> 闭环强化学习后驾驶表现较未做闭环 RL 的最佳版本提升 <b>48.9%</b>；使用 TensorRT 与 DFlash2 优化后在 <b>DRIVE AGX Thor</b> 上实现 <b>160-190 ms</b> 像素到轨迹延迟。早期使用方 <b>PORT</b> CTO 称在其 <b>伦敦</b> 道路重建场景中车道保持成功次数为 Alpamayo 1.5 的两倍以上。此前 <b>8月4日</b> NVIDIA 已开放云端教师模型 <b>Alpamayo 2 Super</b>。以上性能数字均为 NVIDIA 及合作方自报。</p>",
+        "source_name": "NVIDIA Technical Blog 2026-11-10",
+        "source_url": "https://developer.nvidia.com/blog/running-av-reasoning-models-within-onboard-compute-and-latency-limits/",
+        "published_at": "2026-11-10",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-11-005",
+        "date": "2026-11-11",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "小马智行：11月9日，新加坡榜鹅CDG无人接驳车停在路口黄格区内，CDG称正调整软件",
+        "summary_html": "<p><b>11月9日</b>，新加坡 Facebook 专页 <b>SGRV ADMIN</b> 发布行车记录仪视频：<b>ComfortDelGro（CDG）</b> 在 <b>榜鹅（Punggol）Northshore Drive</b> 运营的无人接驳车准备左转时，在一辆摩托车后方减速并 <b>停在黄格区（yellow box）内</b>，绿灯后驶离。车辆前排乘客座位上可见一人。</p><p><b>Zig by CDG</b> 新加坡点对点出行业务负责人 <b>Michael Huang</b> 回复 Stomp 称，车上 <b>安全员</b> 已及时上报，公司正 <b>调整车辆软件</b> 以按交通规则处理此类路口。CDG 自 <b>26年6月22日</b> 起在榜鹅提供免费接驳，车辆为 <b>小马智行</b> 制造的五座 AV，<b>驾驶位配安全员</b>；此前 <b>11月5日</b> 该车队在榜鹅一路口发生 U 型掉头险情后，已被要求暂停该路口的掉头测试。</p>",
+        "source_name": "Stomp 2026-11-10",
+        "source_url": "https://stomp.straitstimes.com/trending-now/cdg-autonomous-vehicle-stops-yellow-box-punggol-company-adjusting-software-after-incident",
+        "published_at": "2026-11-10",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-11-006",
+        "date": "2026-11-11",
+        "company": "Hesai",
+        "company_slug": "hesai",
+        "group": "国内",
+        "sub_group": "国内智驾方案商",
+        "title": "禾赛：11月10日，Q3交付激光雷达72.97万台、同比+65.3%，营收10.68亿元低于指引",
+        "summary_html": "<p><b>11月10日</b>，禾赛科技发布 <b>2026年Q3</b> 财报：交付激光雷达 <b>72.97万台</b>，同比 <b>+65.3%</b>，其中辅助驾驶激光雷达 <b>63.81万台</b>、同比 <b>+67.6%</b>；营收 <b>10.68亿元</b>，同比 <b>+34.3%</b>，低于此前 <b>11亿-11.5亿元</b> 指引；净利润 <b>8,079万元</b>，同比 <b>-68.5%</b>（上年同期含 ~1.85亿元一次性收益，剔除后同比 +13.7%）；毛利率由 <b>42.1%</b> 降至 <b>41.0%</b>。</p><p>新增定点：<b>五菱</b> 车型主激光雷达，及 <b>凯迪拉克、吉利、长城</b> 高端主雷达项目；<b>零跑</b> 与一家欧洲车企选用其补盲雷达。机器人执行模组出货 <b>2.34万件</b>、环比 +96.8%。公司预计 <b>Q4</b> 营收 <b>11亿-11.5亿元</b>。同期速腾聚创 Q3 激光雷达销量 <b>59.56万台</b>。</p>",
+        "source_name": "华尔街见闻 2026-11-10",
+        "source_url": "https://wallstreetcn.com/articles/3785553",
+        "published_at": "2026-11-10",
+        "rating": 1,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-11-007",
+        "date": "2026-11-11",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,324辆，Tesla单日+20辆（均为Model Y）至1,302辆，首次超过Waymo（1,297辆）；其余11家数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月11日09:30北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月10日</b> 快照：<b>Tesla Robotaxi 1,282→1,302辆（+20）</b>，新增 20 个 VIN 均为 `7SAYGDEE` 开头（与已登记 Model Y 前缀相同），移除 0；据此推断为 <b>Model Y 709→729</b>、<b>Cybercab 573</b> 不变（官方接口不返回车型字段，车型为按 VIN 前缀推断）。其余 11 家数量与 VIN 集合均无变化。</p><p><b>Tesla Robotaxi 1,302辆</b>（Model Y 729、Cybercab 573，按 VIN 推断）、<b>Waymo 1,297辆</b>（I-PACE 874、RT 423）、Avride 344、Aurora 91、Gatik AI 64、Zoox 63、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,324辆</b>，对比9月3日基线（2,111辆）净增 <b>1,213辆</b>；Tesla 领先 Waymo <b>5辆</b>，为追踪以来首次。Sawyer Merritt 北京时间 <b>11-11 07:17</b> 在 X 发帖称 Tesla 登记数首次超过 Waymo，说明变更在 07:17 前已可见。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-11",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-10",
     "items": [
       {
