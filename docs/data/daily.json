@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-11-12",
+    "items": [
+      {
+        "id": "2026-11-12-001",
+        "date": "2026-11-12",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月11日，芬兰Traficom承认荷兰批准，Tesla Assisted Driving（原FSD监督版）获批，为第11个批准的欧盟国家",
+        "summary_html": "<p><b>11月11日</b>，芬兰交通与通信局 <b>Traficom</b> 宣布承认荷兰 <b>RDW</b> 对 Tesla 驾驶辅助系统的批准，Tesla 可立即向芬兰用户提供该系统。该系统在欧洲已由 \"Full Self-Driving\" 更名为 <b>Tesla Assisted Driving（TAD）</b>，并收紧速度控制：可设 <b>速度偏移上限由+50%降至+10%</b>，每次启动车辆重置为 0%。芬兰为第 <b>11个</b> 批准的欧盟国家，全球累计 <b>19个</b> 国家。</p><p>Traficom 称提前行动的依据是厂商对系统的修改，以及 \"recognizing the approval nationally at an earlier stage will give Finnish Tesla users an opportunity to familiarize themselves with the system before the most challenging winter\"。Traficom 高级专家 <b>Jukka Juhola</b> 称 \"The name change helps users and the market understand the true nature of the system\"，并表示本次承认不代表其在欧盟层面会投赞成票；欧盟整体表决预计在 <b>12月</b>。Tesla Europe 称 \"Rollout begins soon\"，面向 <b>HW4</b> 车主。</p>",
+        "source_name": "Not a Tesla App 2026-11-11",
+        "source_url": "https://www.notateslaapp.com/news/4986/tesla-fsd-approved-in-finland-rolling-out-soon",
+        "published_at": "2026-11-11",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-12-002",
+        "date": "2026-11-12",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月11日，马斯克称Cybertruck生产将延长至2027年夏末以消化积压订单，此前计划27年6-7月拆线扩产Cybercab",
+        "summary_html": "<p><b>11月11日</b>（美国当地周三），马斯克在 X 发文称 <b>Cybertruck</b> 生产将延长至 <b>2027年夏季末</b>，以消化更多积压订单。<b>11月6日</b> 马斯克曾宣布 2027 年年中前后在 <b>Giga Texas</b> 停产 Cybertruck、腾出产能扩产 <b>Cybercab</b>；<b>11月7日</b> 又称加开一个班次、产线约 <b>2027年6-7月</b> 拆除。马斯克称 \"This is not the smartest move from a profit-maximizing standpoint btw\"。</p><p>此前 Tesla 已停售两个版本，目前只剩 <b>Cyberbeast</b>，<b>11月10日</b> 起售价 <b>$109,990</b>。本次延期未承诺所有订单都能交付，也未量化对 Cybercab 扩产时间的影响。</p>",
+        "source_name": "Not a Tesla App 2026-11-11",
+        "source_url": "https://www.notateslaapp.com/news/4987/tesla-is-extending-cybertruck-production-after-backlash-and-strong-demand",
+        "published_at": "2026-11-11",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-12-003",
+        "date": "2026-11-12",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月11日，Not a Tesla App援引知情人士称，马斯克亲自决定取消新车基础Autopilot以推动FSD订阅",
+        "summary_html": "<p><b>11月11日</b>，Not a Tesla App 发布独家报道，援引 \"a source with knowledge of the decision\" 称，<b>2026年1月</b> 美国和加拿大新车不再标配 <b>基础 Autopilot</b>（TACC 与 Autosteer），是马斯克亲自决定，目的是把用户推向 <b>FSD</b>；FSD 是其薪酬方案考核项之一，要求 <b>1,000万</b> 个活跃 FSD 订阅（或购买）。此后一个月 FSD 买断选项取消，北美目前只能按月订阅。</p><p>据 Tesla <b>Q3 财报</b>，FSD 订阅用户达 <b>174万</b>，北美 <b>75%</b> 新车订单包含 FSD。本条为单一匿名信源，Tesla 与马斯克未回应。</p>",
+        "source_name": "Not a Tesla App 2026-11-11",
+        "source_url": "https://www.notateslaapp.com/news/4988/exclusive-musk-cut-basic-autopilot-from-new-vehicles-to-boost-fsd-subscriptions",
+        "published_at": "2026-11-11",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-12-004",
+        "date": "2026-11-12",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：11月10日，旧金山I-280上Waymo车辆试图越过CHP警车的车流管制（traffic break），CHP与Waymo均未回应",
+        "summary_html": "<p><b>11月10日</b>（美国当地周二），ABC7 在社交媒体发布行车记录仪视频：<b>加州公路巡警（CHP）</b> 在旧金山 <b>I-280 州际公路 Ocean Avenue 附近</b>（旧金山城市学院旁）实施 <b>车流管制（traffic break）</b> 时，一辆 Waymo 车辆紧跟巡逻车，CHP 车辆加速挡到其前方后，Waymo 再次尝试绕过并 <b>打了转向灯</b>。SFist 称 CHP 未置评，暂无更多细节；视频未显示车内是否有乘客，Waymo 未对此事发表声明。</p><p>同一天上午 <b>9点左右</b>，另一辆 Waymo 车辆在 <b>Steiner Street 与 Golden Gate Avenue</b> 被拍到挡风玻璃上夹着 <b>SFMTA 停车罚单</b>。Waymo 发言人 <b>Chris Bonelli</b> 此前就停车罚单向 Gazetteer SF 表示，公司通过 SFMTA 车队项目缴纳罚款，\"working to improve its parking behavior\"；Gazetteer 统计 Waymo 2025 年在旧金山收到 <b>4,178张</b> 停车罚单，2026 年截至 7 月 19 日 <b>4,131张</b>。X 上有回复称高速视频为数月前旧片、已 3 倍加速，未经核实。</p>",
+        "source_name": "SFist 2026-11-11",
+        "source_url": "https://sfist.com/2026/11/11/waymo-tailgates-tries-to-pass-chp-blockade-in-sf-while-another-drives-around-with-ticket/",
+        "published_at": "2026-11-10",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-12-005",
+        "date": "2026-11-12",
+        "company": "Wayve",
+        "company_slug": "wayve",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Wayve：11月11日，东京都知事小池百合子到访Wayve伦敦总部并在伦敦道路试乘AI Driver",
+        "summary_html": "<p><b>11月11日</b>，Wayve 在 X 发文感谢 <b>东京都知事小池百合子</b> 及东京都政府到访其 <b>伦敦总部</b>，并在伦敦街道试乘其 <b>AI Driver</b>。东京都政府转发称 \"Governor KOIKE took a test ride in Wayve's autonomous vehicle in London\"。帖子未披露新的东京测试、牌照或上线时间。</p>",
+        "source_name": "X @wayve_ai 2026-11-11",
+        "source_url": "https://x.com/wayve_ai/status/2120540206516576340",
+        "published_at": "2026-11-11",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-12-006",
+        "date": "2026-11-12",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,333辆，Waymo +8辆（均为RT）至1,305辆，重新反超Tesla（1,303辆，+1辆Model Y）；其余10家数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月12日09:31北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月11日</b> 快照：<b>Waymo 1,297→1,305辆（+8）</b>，新增 8 个 VIN 均为 `L6TZB1G1` 开头（与此前 RT 相同的 `L6T` 前缀），移除 0，据此推断为 <b>RT 423→431</b>、<b>I-PACE 874</b> 不变；<b>Tesla Robotaxi 1,302→1,303辆（+1）</b>，新增 VIN 为 `7SAYGDEE` 开头，移除 0，据此推断为 <b>Model Y 729→730</b>、<b>Cybercab 573</b> 不变（官方接口不返回车型字段，车型为按 VIN 前缀推断）。其余 10 家数量与 VIN 集合均无变化。</p><p><b>Waymo 1,305辆</b>（I-PACE 874、RT 431）、<b>Tesla Robotaxi 1,303辆</b>（Model Y 730、Cybercab 573，按 VIN 推断）、Avride 344、Aurora 91、Gatik AI 64、Zoox 63、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,333辆</b>，对比9月3日基线（2,111辆）净增 <b>1,222辆</b>；Waymo 领先 Tesla <b>2辆</b>，11月11日 Tesla 曾领先 5 辆。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻。</p>",
+        "source_name": "Automated Motor Vehicles：Waymo登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/07ebbc43-ae5b-42ca-a712-d9d5ce5b3516/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-12",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-11",
     "items": [
       {
