@@ -1246,6 +1246,26 @@
       "city": "Los Angeles CA",
       "site": "smdp.com",
       "name": "Santa Monica Daily Press"
+    },
+    {
+      "city": "Atlanta GA",
+      "site": "wsbtv.com",
+      "name": "WSB-TV ABC Atlanta"
+    },
+    {
+      "city": "Atlanta GA",
+      "site": "fox5atlanta.com",
+      "name": "Fox 5 Atlanta"
+    },
+    {
+      "city": "Atlanta GA",
+      "site": "11alive.com",
+      "name": "11Alive WXIA NBC"
+    },
+    {
+      "city": "Atlanta GA",
+      "site": "atlantanewsfirst.com",
+      "name": "Atlanta News First WANF"
     }
   ],
   "Motional": [

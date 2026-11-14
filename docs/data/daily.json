@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-11-14",
+    "items": [
+      {
+        "id": "2026-11-14-001",
+        "date": "2026-11-14",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月13日，向部分用户开放个人购买Cybercab，售价$29,990，需另付$299/月Autonomy Subscription，预计2026年12月交付",
+        "summary_html": "<p><b>11月13日</b>（美国当地晚间），Tesla 官方 <b>@robotaxi</b> 账号在 X 发帖 \"Select customers are now being invited to purchase Cybercab for personal use\"。订单页显示售价 <b>$29,990</b>（税前）、<b>$1,000</b> 不退还订单定金，必须订阅 <b>$299/月</b> 的 <b>Autonomy Subscription</b>（购车含 <b>1个月</b>），<b>预计交付 2026年12月</b>；订单页称 \"operation is restricted to supported service areas\"，并要求定期保养才能运行。Sawyer Merritt 称首批受邀用户在 <b>奥斯汀</b>，Tesla 原帖未写明城市。</p><p>Tesla AI 负责人 <b>Ashok Elluswamy</b> 称个人版 Cybercab \"will work unsupervised inside all the same geo locations as @robotaxi, just serving the owners' needs\"。据 Sawyer Merritt 转述的订阅协议：车辆 <b>仅限个人使用</b>、暂不可用于商业运营；累计 <b>3次</b> 安全警告（safety strikeouts）停用 <b>一周</b>；车内仅有触屏手动控制，最高 <b>2 mph</b>，用于短距离挪车而非公路驾驶；车辆可空车自动驶往服务中心保养后返回；订阅包含轮胎、挡风玻璃、空调滤芯、摄像头清洁及道路救援等，保险、上牌、停车、充电由车主承担。Tesla 未披露首批开放名额。</p>",
+        "source_name": "Not a Tesla App 2026-11-14",
+        "source_url": "https://www.notateslaapp.com/news/5012/tesla-opens-orders-for-the-cybercab-for-personal-use-costs-29990-and-requires-a-299-monthly-subscription",
+        "published_at": "2026-11-13",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-14-002",
+        "date": "2026-11-14",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Zoox：11月13日，专用Robotaxi在亚特兰大西北部上路，先向员工及亲友开放乘坐，公众Waitlist数月内开放",
+        "summary_html": "<p><b>11月13日</b>，Zoox 在 X 宣布 \"the Zoox robotaxi is here\"，已在 <b>亚特兰大西北部（Northwest ATL）</b> 行驶，覆盖 <b>Atlantic Station、Woodward、Home Park</b> 一带；乘坐 \"limited to Zoox employees, family, and friends for now\"，\"Waitlist coming soon\"，并称 <b>今年晚些时候</b> 扩大 geofence。上路车辆为无方向盘、无驾驶座的 <b>Zoox 专用 Robotaxi</b>，媒体报道最多乘坐 <b>4人</b>。</p><p>Zoox 自 <b>2025年春</b> 起在亚特兰大运营测试车队；当地媒体称公众 Waitlist 和 <b>Zoox Explorers</b> 早期乘客计划将在 <b>未来数月</b> 开放，服务区将在 <b>未来一年</b> 扩展到市内其他区域。Zoox 未披露亚特兰大车队规模，报道也未说明车内是否配备安全员。此前 <b>9月</b>，Zoox 曾因员工报告车内异味停飞亚特兰大测试车队。</p>",
+        "source_name": "X @Zoox 2026-11-13",
+        "source_url": "https://x.com/zoox/status/2121242216140275753",
+        "published_at": "2026-11-13",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-14-003",
+        "date": "2026-11-14",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "监管：11月13日，新奥尔良与杰斐逊堂区联合起草Robotaxi规则，赶在Waymo无人化运营之前",
+        "summary_html": "<p><b>11月13日</b>，媒体报道 <b>新奥尔良市</b> 与相邻的 <b>杰斐逊堂区（Jefferson Parish）</b> 组成联合工作组（市议会工作人员、市长办公室与堂区人员），为 Robotaxi 制定统一规则。新奥尔良市议会主席 <b>J.P. Morrell</b> 此前提出该市首份 Robotaxi 条例草案，拟将自动驾驶网约车按出租车公司管理，并把\"驾驶员\"定义扩展到车辆所有方或运营方；杰斐逊堂区发言人称堂区尚未起草自己的条例。</p><p>Waymo 目前在新奥尔良有 <b>~12辆</b> 车进行有人驾驶测试与测绘，计划 <b>2027年</b> 上线。Morrell 称时间表 \"not something that is on an expedited basis\"，条例尚未表决。</p>",
+        "source_name": "NOLA.com",
+        "source_url": "https://www.google.com/search?q=%22New%20Orleans%2C%20Jefferson%20Parish%20collaborate%20to%20write%20robotaxi%20rules%20before%20Waymo%20goes%20driverless%22%20site%3Anola.com&hl=en",
+        "published_at": "2026-11-13",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-14-004",
+        "date": "2026-11-14",
+        "company": "现代",
+        "company_slug": "hyundai",
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1",
+        "title": "现代：11月13日，与SOCAR、Apex Mobility签MOU，合作采集韩国道路数据并开发自动驾驶网约车专用车平台",
+        "summary_html": "<p><b>11月13日</b>，<b>现代汽车</b> 与韩国汽车共享公司 <b>SOCAR</b> 及其自动驾驶合资公司 <b>Apex Mobility</b> 签署 <b>MOU</b>。现代将向两家提供 <b>DevKit</b>（连接车辆与自动驾驶系统的装置），装在其在韩国运营的车队上；SOCAR 与 Apex Mobility 按现代的标准，用 <b>~25,000辆</b> 共享汽车采集道路数据，并研究在共享车上测试现代的自动驾驶软件。</p><p>三方还将共同开发 <b>自动驾驶网约车专用车平台</b>，现代将把车队运营经验纳入平台开发。Apex Mobility 由 SOCAR 与 <b>Krafton</b> 于 <b>2026年5月</b> 设立，资本金 <b>1,500亿韩元（~$1.02亿）</b>，这是其首个与车企的战略协议。MOU 未披露运营城市与时间表。</p>",
+        "source_name": "Seoul Economic Daily 2026-11-13",
+        "source_url": "https://en.sedaily.com/business/2026/11/13/hyundai-motor-teams-up-with-socar-on-self-driving-data",
+        "published_at": "2026-11-13",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-14-005",
+        "date": "2026-11-14",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "社区热帖",
+        "title": "Reddit/Waymo：11月13日，洛杉矶用户称Waymo扩区后同一行程价格由$20-23涨至$40-43",
+        "summary_html": "<p>r/waymo 用户发帖称，洛杉矶服务区扩大后，此前 <b>$20-23</b> 的常用行程现在报价 <b>$40-43</b>，询问其他用户是否遇到同样情况。以上为单个用户自述，未附截图，Waymo 未公开回应定价变化。</p>",
+        "source_name": "r/waymo · Reddit",
+        "source_url": "https://www.reddit.com/r/waymo/comments/1xvjqj3/los_angeles_expansion_la_expanded_its_map_and/",
+        "published_at": "2026-11-13",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-14-006",
+        "date": "2026-11-14",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,349辆，全部玩家数量与VIN集合均无变化；Waymo 1,321辆领先Tesla 1,303辆18辆",
+        "summary_html": "<p><b>11月14日09:31北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月13日</b> 快照，12家新增、移除 VIN 均为 0，数量与 VIN 集合完全一致。</p><p><b>Waymo 1,321辆</b>（I-PACE 874、RT 447，按 VIN 前缀推断）、<b>Tesla Robotaxi 1,303辆</b>（Model Y 730、Cybercab 573，按 VIN 前缀推断）、Avride 344、Aurora 91、Gatik AI 64、Zoox 63、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,349辆</b>，对比9月3日基线（2,111辆）净增 <b>1,238辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻；官方接口不返回车型字段。</p>",
+        "source_name": "Automated Motor Vehicles：Waymo登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/07ebbc43-ae5b-42ca-a712-d9d5ce5b3516/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-14",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-13",
     "items": [
       {
