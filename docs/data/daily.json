@@ -1,5 +1,55 @@
 [
   {
+    "date": "2026-11-15",
+    "items": [
+      {
+        "id": "2026-11-15-001",
+        "date": "2026-11-15",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月14日，Musk称个人版Cybercab将随监管批准逐步全美销售，$299/月订阅\"too high\"、应降至~$115/月；Tesla公布Autonomy Subscription协议条款",
+        "summary_html": "<p><b>11月14日</b>，Elon Musk 在 X 上回复 <b>MKBHD</b> 时称个人版 Cybercab \"will be available nationwide, as we receive regulatory approval\"，并称 \"the monthly fee is too high. Should match the cost of Tesla FSD and connectivity for other models, which is more like <b>~$115/month</b>\"。Tesla 目前未调整 <b>$299/月</b> 的订阅价格，现行 FSD (Supervised) 订阅为 <b>$99/月</b>。MKBHD 已下单一辆 <b>$29,990</b> 的 Cybercab，预计 <b>12月</b> 交付。</p><p>Tesla 同日公开的 <b>Autonomy Subscription</b> 协议显示：车辆仅限 <b>德州 Robotaxi 服务区（geofence）</b> 内运行，\"Operation outside the operating area is prohibited and may be technologically prevented\"；仅限个人非商业用途，不得接入 Tesla Robotaxi 网络、<b>Uber</b>、<b>DoorDash</b> 或租车平台；订阅价格可调整，需提前 <b>1个月</b> 通知，取消不按比例退款；未经 Tesla 授权不得贴膜、贴窗膜或换轮毂；<b>3次</b> 违规停用自动驾驶 <b>一周</b>；Tesla 可定位、限制或接管车辆；最多乘坐 <b>2人</b>，过路费与罚单由车主承担。</p>",
+        "source_name": "Not a Tesla App 2026-11-14",
+        "source_url": "https://www.notateslaapp.com/news/5014/musk-cybercab-sales-are-going-nationwide-299-subscription-too-high",
+        "published_at": "2026-11-14",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-15-002",
+        "date": "2026-11-15",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月14日，X上网友称达拉斯已有50辆以上挂牌Cybercab，部分车辆疑似集成Starlink硬件（来自X上网友目击）",
+        "summary_html": "<p><b>11月14日</b>（美国当地），X 用户 <b>Spencer</b> 发帖称 \"Over <b>50</b> badged Tesla Cybercabs now in <b>Dallas</b>\"，并称部分车辆 \"appear to have integrated <b>Starlink</b> hardware\"；Sawyer Merritt 转发称达拉斯首批公众 Cybercab 乘坐 \"imminent\"。</p><p>Tesla 未就达拉斯 Cybercab 上线时间发布公告。Tesla 达拉斯 Robotaxi 服务（Model Y）自 <b>4月</b> 起运营，公众 Cybercab 载客目前只在 <b>奥斯汀</b>（<b>9月</b> 起）。上述车辆数量为网友目击，未经 Tesla 确认。</p>",
+        "source_name": "X @SawyerMerritt",
+        "source_url": "https://x.com/SawyerMerritt/status/2121694173052936334",
+        "published_at": "2026-11-14",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-15-003",
+        "date": "2026-11-15",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,352辆，Tesla Robotaxi +3辆（Model Y）至1,306辆，其余11家数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月15日09:30北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月14日</b> 快照，<b>Tesla Robotaxi</b> 新增 <b>3个VIN</b>、移除 0（新增 VIN 均为 <b>7SAYGD</b> 前缀，按 VIN 前缀推断为 <b>Model Y</b>），其余 11 家新增、移除均为 0。</p><p><b>Waymo 1,321辆</b>（I-PACE 874、RT 447，按 VIN 前缀推断）、<b>Tesla Robotaxi 1,306辆</b>（Model Y 733、Cybercab 573，按 VIN 前缀推断）、Avride 344、Aurora 91、Gatik AI 64、Zoox 63、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,352辆</b>，对比9月3日基线（2,111辆）净增 <b>1,241辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻；官方接口不返回车型字段。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-15",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-14",
     "items": [
       {
