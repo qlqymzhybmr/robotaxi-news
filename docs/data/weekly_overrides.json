@@ -1,5 +1,180 @@
 [
   {
+    "week_id": "2026-W46",
+    "date_range": "1110-1116",
+    "title": "（W46）无人驾驶行业1110-1116重要新闻",
+    "generated_at": "2026-11-16T10:03:46+08:00",
+    "sections": [
+      {
+        "name": "国外",
+        "entries": [
+          {
+            "company": "Tesla",
+            "company_slug": "tesla",
+            "headline_html": "<b>Tesla：向部分用户开放个人购买Cybercab的渠道；Robotaxi改为24小时全天运营；芬兰批准Tesla Assisted Driving；圣安东尼奥开通Robotaxi服务，奥斯汀服务区扩至~443平方英里</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>11月13日</b>，<b>向部分用户开放个人购买Cybercab</b>，售价$29,990，须另支付$299/月的订阅费（后降至~$115/月），预计2026年12月交付，目前车辆能在Tesla Robotaxi服务区内进行无监督行驶，仅限个人非商业用途。",
+                "daily_ids": [
+                  "2026-11-14-001",
+                  "2026-11-15-001"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>11月12日</b>，<b>Robotaxi在全部8个无监督运营城市改为24小时运营</b>（11月初为5am-次日2am，10月底为6am-次日2am，9月初为6am-10pm）。",
+                "daily_ids": [
+                  "2026-11-13-004"
+                ]
+              },
+              {
+                "label": "c",
+                "content_html": "<b>11月11日</b>，<b>芬兰批准Tesla Assisted Driving（原FSD监督版）</b>，此前已获批的国家为荷兰、立陶宛、爱沙尼亚、丹麦、比利时、斯洛文尼亚、捷克、克罗地亚、斯洛伐克、拉脱维亚，目前获批欧盟国家共11个。",
+                "daily_ids": [
+                  "2026-11-12-001"
+                ]
+              },
+              {
+                "label": "d",
+                "content_html": "<b>11月9日</b>，<b>Robotaxi在得州圣安东尼奥开通服务</b>，服务区~274平方英里；<b>奥斯汀服务区由272扩至~443平方英里</b>。",
+                "daily_ids": [
+                  "2026-11-10-001"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Waymo",
+            "company_slug": "waymo",
+            "headline_html": "<b>Waymo：旧金山一辆Waymo试图越过高速警车车流管制；NHTSA对2,895辆Waymo开启召回质询</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>11月10日</b>，旧金山<b>一辆Waymo试图越过加州公路巡警（CHP）的车流管制</b>，被巡逻车挡在前方后再次尝试绕行。",
+                "daily_ids": [
+                  "2026-11-12-004"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>11月9日</b>，NHTSA对Waymo此前2,895辆车的<b>软件召回整改效果启动调查</b>， Waymo于2025年12月提交召回报告，称已通过软件更新修复车辆违规超越停靠校车的问题，但奥斯汀学区在更新后仍报告类似违规。",
+                "daily_ids": [
+                  "2026-11-10-003"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Zoox",
+            "company_slug": "zoox",
+            "headline_html": "<b>Zoox：拉斯维加斯服务区扩展；专用Robotaxi在亚特兰大上路</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>11月13日</b>，<b>在亚特兰大西北部开展试运营</b>，目前仅面向员工及其亲友开放，计划未来数月开放公众Waitlist。",
+                "daily_ids": [
+                  "2026-11-14-002"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>11月12日</b>，<b>拉斯维加斯服务区从Strip扩至Downtown与Arts District</b>，运营时间改为6am-次日3am（此前为6am - 1am）。",
+                "daily_ids": [
+                  "2026-11-13-001"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "ComfortDelGro/小马智行",
+            "company_slug": "xiaoma",
+            "headline_html": "<b>ComfortDelGro/小马智行：新加坡榜鹅无人接驳车停在路口禁停区内</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>11月9日</b>，网友发布的视频显示，ComfortDelGro在新加坡榜鹅运营的无人接驳车左转时<b>停在路口黄格禁停区内</b>，绿灯后驶离，车辆技术方为小马智行。<div><table class=\"img-grid-block\" style=\"width: 100%; border-collapse: collapse; margin: 12px 0px; table-layout: fixed;\"><tbody><tr><td style=\"width:100%;padding:6px;text-align:center;vertical-align:top;border:none\"><figure style=\"margin:0;text-align:center\"><img src=\"https://cassette.sphdigital.com.sg/image/stomp/ebe6de85bc1a1e319e42c0ff38e3d43b51c8c90e0750ac03ce52ce6f7d65396a?w=960&amp;amp;f=webp\" title=\"点击调整大小\" style=\"width: 50%; height: auto; display: block; border-radius: 4px; cursor: pointer; margin: 8px auto;\"><figcaption style=\"font-size:12px;color:#6b7280;margin-top:6px;text-align:center\">网友行车记录仪发送图片</figcaption></figure></td></tr></tbody></table><br></div>",
+                "daily_ids": [
+                  "2026-11-11-005"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "Uber",
+            "company_slug": "uber",
+            "headline_html": "<b>Uber：上线停车预订，称车位未来可作Robotaxi待命点；自动驾驶工程副总裁离职</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>11月9日</b>，<b>在15个美国城市上线App内停车预订</b>，称这些车位未来可作为合作自动驾驶车辆的待命与等候点。",
+                "daily_ids": [
+                  "2026-11-10-008"
+                ]
+              },
+              {
+                "label": "b",
+                "content_html": "<b>11月9日</b>，负责自动驾驶业务工程与科学的<b>副总裁Danny Guo将离职</b>。此前全球自动驾驶负责人Sarfraz Maredia已宣布11月离职。",
+                "daily_ids": [
+                  "2026-11-10-007"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "监管",
+            "company_slug": "regulation",
+            "headline_html": "<b>监管：华盛顿特区议会交通委员会否决Robotaxi法案</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>11月12日</b>，华盛顿特区议会交通委员会以3票反对、2票赞成<b>否决Robotaxi法案</b>。该法案修订稿11月10日发布，拟设每家200辆、全市800辆车队上限，最早2027年10月商业运营。Waymo称推迟将延后其在当地的投资与就业；Waymo在当地带安全员测试已超两年。",
+                "daily_ids": [
+                  "2026-11-11-003",
+                  "2026-11-13-002"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "国内",
+        "entries": [
+          {
+            "company": "萝卜快跑",
+            "company_slug": "apollo",
+            "headline_html": "<b>萝卜快跑：与神州租车推出无人车“自驾游”服务</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>11月12日</b>，百度世界大会上宣布<b>与神州租车合作推出无人车“自驾游”服务</b>，用户无需驾照即可包车出行，称已在海南运营满一年；具体路线、车型、价格及是否配安全员未披露。",
+                "daily_ids": [
+                  "2026-11-13-008"
+                ]
+              }
+            ]
+          },
+          {
+            "company": "小鹏",
+            "company_slug": "xpeng",
+            "headline_html": "<b>小鹏：何小鹏称争取2027年成为欧洲首个上线智驾的中国品牌</b>",
+            "sub_items": [
+              {
+                "label": "a",
+                "content_html": "<b>11月9日</b>，何小鹏称<b>小鹏希望2027年成为欧洲首个上线智能辅助驾驶的中国品牌</b>，争取2027年上半年获得监管许可。此为L2辅助驾驶出海。",
+                "daily_ids": [
+                  "2026-11-10-010"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "edited_at": "2026-11-16T04:01:47.155Z"
+  },
+  {
     "week_id": "2026-W45",
     "date_range": "1103-1109",
     "title": "（W45）无人驾驶行业1103-1109重要新闻",
