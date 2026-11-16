@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-11-16",
+    "items": [
+      {
+        "id": "2026-11-16-001",
+        "date": "2026-11-16",
+        "company": "小马智行",
+        "company_slug": "xiaoma",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "小马智行：11月15日，CFO Leo Wang称算力需求远超供给，公司更多转向国产芯片，中国自动驾驶公司\"几年来都在练Plan B\"",
+        "summary_html": "<p><b>11月15日</b>，TechCrunch 交通编辑 <b>Kirsten Korosec</b> 在 <b>TechCrunch Mobility</b> 周报中披露了本周对小马智行 <b>CFO Leo Wang</b> 的采访。Leo Wang称小马的算力 \"<b>Demand is already far greater than supply</b>\"；公司要求工程师尽可能高效地部署训练模型，可能 \"using <b>midtier compute</b> resources instead of high-end ones\"，并 \"turning more to <b>domestically produced chips</b>\"。</p><p>谈及出口管制收紧，Leo Wang称 \"Everyone, I would say, is also practicing kind of like a <b>Plan B</b> for a few years\"，国产芯片 \"gives us some flexibility\"，但 \"cost-effectiveness-wise, probably it's <b>not the best choice yet</b>\"，属于 \"an alternative way that already exists and which is more mature than a few years ago\"。采访未点名具体国产芯片厂商，也未给出算力或芯片数量。</p>",
+        "source_name": "TechCrunch 2026-11-15",
+        "source_url": "https://techcrunch.com/2026/11/15/techcrunch-mobility-the-nvidia-backup-plan-for-chinas-self-driving-industry/",
+        "published_at": "2026-11-15",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-16-002",
+        "date": "2026-11-16",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,352辆，全部玩家数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月16日09:31北京时间</b>，逐家抓取德州TxMCCS官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月15日</b> 快照，12 家新增 VIN、移除 VIN 均为 0。</p><p><b>Waymo 1,321辆</b>（I-PACE 874、RT 447，按 VIN 前缀推断）、<b>Tesla Robotaxi 1,306辆</b>（Model Y 733、Cybercab 573，按 VIN 前缀推断）、Avride 344、Aurora 91、Gatik AI 64、Zoox 63、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,352辆</b>，对比9月3日基线（2,111辆）净增 <b>1,241辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻；官方接口不返回车型字段。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-16",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-15",
     "items": [
       {
