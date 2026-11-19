@@ -1437,6 +1437,26 @@
       "city": "Manchester UK",
       "site": "secretmanchester.com",
       "name": "Secret Manchester"
+    },
+    {
+      "city": "Munich DE",
+      "site": "sueddeutsche.de",
+      "name": "Süddeutsche Zeitung"
+    },
+    {
+      "city": "Munich DE",
+      "site": "merkur.de",
+      "name": "Münchner Merkur"
+    },
+    {
+      "city": "Munich DE",
+      "site": "abendzeitung-muenchen.de",
+      "name": "Abendzeitung München"
+    },
+    {
+      "city": "Munich DE",
+      "site": "br.de",
+      "name": "Bayerischer Rundfunk"
     }
   ],
   "Wayve": [
