@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-11-21",
+    "items": [
+      {
+        "id": "2026-11-21-001",
+        "date": "2026-11-21",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：11月20日，就无人车驶入封闭高速车道、人工指挥交通路口两类问题向NHTSA提交两项软件召回，合计涉及~3,871辆",
+        "summary_html": "<p><b>11月20日</b>（周五），Waymo 称已于 <b>11月19日</b> 向 <b>NHTSA</b> 提交 <b>两项安全召回</b>，分别针对自动驾驶系统处理 <b>封闭的高速公路车道（closed freeway lanes）</b> 和 <b>人工指挥交通的路口（manual traffic control）</b>。Waymo 称车辆可能驶入封闭的高速车道并继续行驶，该问题的召回补救措施 <b>仍在开发中</b>；高速封闭车道相关事件 <b>未报告碰撞或受伤</b>。人工指挥交通路口的软件更新 <b>已于11月6日完成</b>。</p><p>BigGo Finance 称两项召回合计覆盖 <b>3,871辆</b> Robotaxi，两项之间的车辆数拆分未见公布。加州 DMV <b>11月11日</b> 起禁止 Waymo 上 freeway，Waymo 本周随后暂停全美 freeway 运营（11/18 已报）；报道称 Waymo 在补救完成前继续暂停 freeway 运营。此前 I-280 旧金山段曾有 Waymo 试图穿过 <b>加州公路巡警（CHP）</b> 交通管制车队。</p>",
+        "source_name": "Reuters / Yahoo Finance 2026-11-20",
+        "source_url": "https://finance.yahoo.com/news/waymo-recalls-self-driving-cars-200919442.html",
+        "published_at": "2026-11-20",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-21-002",
+        "date": "2026-11-21",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月20日，意大利交通部临时批准FSD（监督版），为欧洲第12个、首个欧盟大市场，推送时间未定",
+        "summary_html": "<p><b>11月20日</b>，意大利基础设施与交通部（<b>MIT</b>）部长 <b>Matteo Salvini</b> 在 X 宣布，对 <b>Tesla Assisted Driving</b>（Tesla 在欧洲对 <b>FSD（监督版）</b> 的新名称）给予 <b>临时批准（provisional approval）</b>。意大利成为欧洲第 <b>12个</b> 批准该系统的国家，也是首个批准的欧盟大市场；Tesla 欧洲账号称 \"Now approved in Italy 🇮🇹 Rollout begins soon\"，Electrek 称 \"There's no firm rollout date yet\"。</p><p>系统仍为 <b>L2</b>，驾驶员须全程监督；获批版本监控更严格，车速 <b>&gt;130 km/h</b> 时要求手握方向盘。此前已批准的 11 国为 <b>荷兰、比利时、克罗地亚、捷克、丹麦、爱沙尼亚、芬兰、拉脱维亚、立陶宛、斯洛伐克、斯洛文尼亚</b>。负责欧盟整体认可的 <b>TCMV</b> 委员会最早 <b>12月</b> 表决，需至少 <b>15个成员国</b>、代表 <b>65%</b> 人口赞成。</p>",
+        "source_name": "Electrek 2026-11-20",
+        "source_url": "https://electrek.co/2026/11/20/tesla-fsd-italy-approval-assisted-driving/",
+        "published_at": "2026-11-20",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-21-003",
+        "date": "2026-11-21",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月20日，达拉斯Robotaxi服务区由81平方英里扩至82平方英里，新增北中央高速沿线一小片区域",
+        "summary_html": "<p><b>11月20日</b>，Tesla 扩大 <b>达拉斯</b> Robotaxi 服务区 <b>~1%</b>，由 <b>81平方英里</b> 增至 <b>82平方英里</b>。新增区域位于服务区东北角、<b>North Central Expressway</b> 沿线，纳入 <b>The Hill</b> 超充站。</p><p>达拉斯服务区 <b>8月底</b> 由 31 平方英里扩至 81 平方英里；<b>11月19日</b> Cybercab 在达拉斯向公众开放载客（11/20 已报）。报道未说明本次扩区是否同时适用于 Cybercab 与 Model Y Robotaxi。</p>",
+        "source_name": "Not a Tesla App 2026-11-20",
+        "source_url": "https://www.notateslaapp.com/news/5055/tesla-expands-dallas-robotaxi-area-by-a-whole-square-mile",
+        "published_at": "2026-11-20",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-21-004",
+        "date": "2026-11-21",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月20日，网友发现Tesla新增说明称Cybercab与Model Y Robotaxi可在限速85 mph以内的公共道路运行",
+        "summary_html": "<p><b>11月20日</b>，Sawyer Merritt 转引网友 Spencer 的发现称，Tesla 新增一行说明：\"Cybercab and Model Y Robotaxi are \"<b>designed to operate on public roadways with posted speed limits up to 85 MPH</b>.\"\" Sawyer 据此发问 \"Tesla robotaxi highway access coming soon?\"。</p><p>帖子未给出该说明所在的具体页面或文件。Tesla 未宣布 Robotaxi 上高速的时间表；目前 Tesla 无人 Robotaxi 服务未公开开放高速路段。</p>",
+        "source_name": "X @SawyerMerritt",
+        "source_url": "https://x.com/SawyerMerritt/status/2123872430905020864",
+        "published_at": "2026-11-20",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-21-005",
+        "date": "2026-11-21",
+        "company": "文远知行",
+        "company_slug": "weride",
+        "group": "国内",
+        "sub_group": "国内 L4",
+        "title": "文远知行：11月20日，Q3营收3.215亿元同比增88%，Robotaxi单季收入首破1亿元、同比增204%，广州Robotaxi运营单位经济效益转正",
+        "summary_html": "<p><b>11月20日</b>，文远知行公布 <b>2026年Q3</b> 未经审计财报：总营收 <b>人民币3.215亿元</b>（<b>US$48.0M</b>），同比增长 <b>88.0%</b>；毛利率 <b>43.0%</b>，同比提升 <b>10.1个百分点</b>；期内亏损 <b>3.1亿元</b>，经调整亏损 <b>3.365亿元</b>。海外收入 <b>1.469亿元</b>，同比增长 <b>171.5%</b>，占总营收 <b>45.7%</b>。Robotaxi 收入首次单季 <b>超过1亿元</b>，同比增长 <b>204.0%</b>，其中海外占比 <b>&gt;90%</b>。</p><p>国内方面，<b>广州</b> 运营 \"achieved <b>positive unit economics</b>\"，国内单车日均订单 <b>21单</b>、峰值 <b>33单</b>。截至 <b>10月31日</b>，全球 L4 车队 <b>~4,100辆</b>，其中 Robotaxi <b>&gt;2,300辆</b>，环比增长 <b>26%</b>；中东车队 <b>~600辆</b>（7月31日为 ~400辆）。</p><p>财报披露的海外进展：<b>9月</b> 获西班牙 <b>DGT</b> 首张 L4 乘用车全国运营许可（与 Uber、AVOMO，在马德里测试与测绘）；在 <b>苏黎世州</b> 与 SBB、STL 上线公众 Robotaxi 服务；<b>斯洛伐克</b> 首批 Robotaxi 开始路测；与 Grab 在 <b>新加坡</b> 截至 Q3 末完成 <b>&gt;2万次</b> L4 出行；目标年底前全面覆盖 <b>阿布扎比、迪拜</b> 核心城区。</p>",
+        "source_name": "WeRide IR 2026-11-20",
+        "source_url": "https://ir.weride.ai/news-releases/news-release-details/overseas-revenue-1715-yoy-contributing-nearly-half-total-revenue",
+        "published_at": "2026-11-20",
+        "rating": 3,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-21-006",
+        "date": "2026-11-21",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,618辆，Waymo新增19辆（全部为RT前缀），其余11家数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月21日09:31前后北京时间</b>，逐家抓取德州 TxMCCS 官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月20日</b> 快照，<b>Waymo 由1,345辆增至1,364辆（+19）</b>，新增 <b>19个VIN</b>、无移除，全部为 <b>L6TZB</b> 前缀（RT，按 VIN 前缀推断）；Waymo 当前为 <b>I-PACE 881辆</b>、<b>RT 483辆</b>。其余 11 家新增、移除 VIN 均为 0；Tesla 维持 <b>1,507辆</b>（Cybercab 773、Model Y 734，按 VIN 前缀推断）。</p><p><b>Tesla Robotaxi 1,507辆</b>、<b>Waymo 1,364辆</b>、Avride 344、Aurora 91、Zoox 85、Gatik AI 64、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,618辆</b>，对比9月3日基线（2,111辆）净增 <b>1,507辆</b>；Waymo 较基线（988辆）净增 376辆，Tesla 登记数领先 Waymo <b>143辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻；官方接口不返回车型字段。</p>",
+        "source_name": "Automated Motor Vehicles：Waymo登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/07ebbc43-ae5b-42ca-a712-d9d5ce5b3516/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-21",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-20",
     "items": [
       {
