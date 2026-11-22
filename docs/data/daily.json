@@ -1,5 +1,70 @@
 [
   {
+    "date": "2026-11-22",
+    "items": [
+      {
+        "id": "2026-11-22-001",
+        "date": "2026-11-22",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月21日，开始推送FSD v15，称安全关键场景处理能力提升25倍并新增Reality View实时可视化；马斯克称12月随假日更新大范围推送",
+        "summary_html": "<p><b>11月21日</b>（美国当地周六下午），Tesla 在 X 宣布 <b>FSD v15</b> \"now starting to roll out\"，称升级了端到端驾驶网络的每个部分。Tesla 称新的视觉编码器（FSD、Robotaxi 与 Optimus 共用）使 <b>安全关键场景的干预率改善25倍</b>（\"25x better handling of safety critical cases\"），未给出基准值。新增 <b>Tesla Reality View</b> 实时可视化，显示并允许驾驶员控制 FSD 的规划；行程起点与终点的导航改为从车队路线偏好中端到端学习，后续 v15 版本扩展至全程。</p><p>发布说明还包括：识别 <b>路标、小动物、路面杂物、坑洼与深积水</b>，<b>学区</b> 与恶劣天气下的速度处理，按个人停车历史在目的地给出 <b>多个停车位选项</b>，戴帽子与墨镜时仍可进行视觉注意力监测，以及在测速摄像头前减速。Tesla 未说明首批推送的车型与地区；Electrek 称车主仍需监督，Tesla 未公布脱离接管数据。</p><p><b>马斯克</b> 同日在 X 称 v15 \"goes to wide release <b>next month</b>\"，并回复确认随今年 <b>假日更新（Holiday Update）</b> 推送。Not a Tesla App 称 Tesla 此前表示 Robotaxi 车队先获得 v15，但未确认当前 Robotaxi 车队是否已运行 v15。</p>",
+        "source_name": "Electrek 2026-11-21",
+        "source_url": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/",
+        "published_at": "2026-11-21",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-22-002",
+        "date": "2026-11-22",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月21日，网友发现Robotaxi急救人员交互方案（11月20日版）删去\"全部车辆由Tesla拥有并运营\"表述，运营区域附录新增加州",
+        "summary_html": "<p>Not a Tesla App 报道，Tesla 更新 <b>Robotaxi First Responder Interaction Plan</b>：Cybercab 版由 <b>v1.2</b> 升至 <b>v1.3</b>，Model Y Robotaxi 版为 <b>v1.6</b>，均标注 <b>2026年11月20日</b>。新版删去 \"<b>All Robotaxi vehicles are owned and operated by Tesla at this time</b>\" 一句；运营区域附录名称由仅提 Arizona 改为 \"<b>Arizona or California Areas of Operation Appendix</b>\"。新增 \"designed to operate on public roadways with posted speed limits up to 85 MPH\" 一句（11/21 已报）。</p><p>方案还写明 <b>2026年11月</b> 起生产的 Cybercab 在后备箱盖内装有 <b>Starlink</b> 单元，并配有朝向后备箱内部的摄像头；同批车辆在 B 柱摄像头后增设第二个急救断电回路。文章据此推测车主车辆接入 Robotaxi 网络、加州扩展可能临近，属作者推断；加州目前尚未批准 Tesla 无安全员载客。</p>",
+        "source_name": "Not a Tesla App 2026-11-21",
+        "source_url": "https://www.notateslaapp.com/news/5061/teslas-updated-cybercab-manual-hints-at-owner-robotaxis-highway-access-more",
+        "published_at": "2026-11-21",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-22-003",
+        "date": "2026-11-22",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：11月21日，英国交通大臣Heidi Alexander访美期间会见Waymo，讨论伦敦与华盛顿特区的试点",
+        "summary_html": "<p>英国交通部（<b>DfT</b>）称，交通大臣 <b>Heidi Alexander</b> 本周访美期间会见 <b>Waymo</b>，讨论其在 <b>伦敦</b> 与 <b>华盛顿特区</b> 的试点并了解新技术，此次会见接续英国政府推出的 <b>自动驾驶车辆试点计划（self-driving vehicles pilot scheme）</b>。她同行程还会见美国交通部长 <b>Sean Duffy</b>，双方同意深化交通领域合作。</p><p>报道称 Waymo 伦敦车辆仍配 <b>人类安全员</b>；DfT 的表态未涉及加州 DMV 禁止 Waymo 上 freeway 一事（11/18 已报）。报道未写明会见地点与具体日期。</p>",
+        "source_name": "LBC 2026-11-21",
+        "source_url": "https://www.lbc.co.uk/article/waymo-london-california-ban-5HjdnML_2/",
+        "published_at": "2026-11-21",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-22-004",
+        "date": "2026-11-22",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,618辆，全部玩家数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月22日09:32前后北京时间</b>，逐家抓取德州 TxMCCS 官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月21日</b> 快照，12 家新增、移除 VIN 均为 <b>0</b>。Tesla 维持 <b>1,507辆</b>（Cybercab 773、Model Y 734，按 VIN 前缀推断），Waymo 维持 <b>1,364辆</b>（I-PACE 881、RT 483，按 VIN 前缀推断）。</p><p><b>Tesla Robotaxi 1,507辆</b>、<b>Waymo 1,364辆</b>、Avride 344、Aurora 91、Zoox 85、Gatik AI 64、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,618辆</b>，对比9月3日基线（2,111辆）净增 <b>1,507辆</b>；Tesla 登记数领先 Waymo <b>143辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻；官方接口不返回车型字段。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-22",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-21",
     "items": [
       {
