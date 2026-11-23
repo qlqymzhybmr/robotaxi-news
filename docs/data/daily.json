@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-11-23",
+    "items": [
+      {
+        "id": "2026-11-23-001",
+        "date": "2026-11-23",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：11月22日，迈阿密一辆Waymo与迈阿密警车相撞，车内1人送医",
+        "summary_html": "<p>据迈阿密警方，<b>11月22日</b>（周日）上午 <b>10:30</b> 前后，一辆 <b>迈阿密警察局</b> 巡逻车与一辆 <b>Waymo</b> 无人车在 <b>NW 17th Avenue 与 7th Street</b> 一带相撞。NBC6 称 <b>Waymo 车内 1 人</b> 被送往医院，伤情不明；现场视频显示警车 <b>车头严重受损</b>。</p><p>报道未说明 Waymo 车内是否为付费乘客、车内人数及事故责任方，警方未给出事故经过；NBC6 称已联系 Waymo，截至发稿 Waymo 未回应。这是一周内第二起见报的 Waymo 迈阿密碰撞，<b>11月15日</b> 一辆在路口漂移的车辆撞上载客 Waymo，3 名乘客未受伤（11/17 已报）。</p>",
+        "source_name": "NBC6 South Florida 2026-11-22",
+        "source_url": "https://www.nbcmiami.com/news/local/1-hospitalized-after-crash-involving-cruiser-and-waymo-in-miami-police-say/3891558/",
+        "published_at": "2026-11-22",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-23-002",
+        "date": "2026-11-23",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,618辆，全部玩家数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月23日09:31前后北京时间</b>，逐家抓取德州 TxMCCS 官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月22日</b> 快照，12 家新增、移除 VIN 均为 <b>0</b>（连续第 2 天无变化）。Tesla 维持 <b>1,507辆</b>（Cybercab 773、Model Y 734，按 VIN 前缀推断），Waymo 维持 <b>1,364辆</b>（I-PACE 881、RT 483，按 VIN 前缀推断）。</p><p><b>Tesla Robotaxi 1,507辆</b>、<b>Waymo 1,364辆</b>、Avride 344、Aurora 91、Zoox 85、Gatik AI 64、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,618辆</b>，对比9月3日基线（2,111辆）净增 <b>1,507辆</b>；Tesla 登记数领先 Waymo <b>143辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻；官方接口不返回车型字段。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-23",
+        "rating": 1,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-22",
     "items": [
       {
