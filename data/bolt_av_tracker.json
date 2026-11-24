@@ -156,6 +156,32 @@
         "https://live.euronext.com/en/financial-news/bolt-stellantis-plan-autonomous-driving-experiment-greater-paris-2028",
         "https://www.36kr.com/newsflashes/4038417540371337"
       ]
+    },
+    {
+      "id": "helsinki-region-2026-11",
+      "announced": "2026-11-19",
+      "partners": [
+        "HSL（赫尔辛基地区交通局）",
+        "Helsinki / Espoo / Vantaa 三市",
+        "Fintraffic"
+      ],
+      "vehicle_provider": "未披露",
+      "l4_tech_provider": "未披露",
+      "l4_provider_type": "unknown",
+      "l4_basis": "2026-11-20 Zag Daily：Bolt declined to provide details of which vehicle manufacturers or autonomous driving technology providers will supply the vehicles；Dealroom 11-23：Bolt has not disclosed a vehicle supplier。不因卢森堡小马智行/Stellantis 测试推断",
+      "bolt_role": "牵头方，与地方交通局、三市及 Fintraffic 签合作意向，计划运营 L4 试点",
+      "scale": "未公布车队规模、投资与具体时间表",
+      "cities": [
+        "Helsinki",
+        "Espoo",
+        "Vantaa"
+      ],
+      "status": "MOU / 意向书，计划 2027 年起试点；芬兰现行法规尚不允许全无人商业 Robotaxi，需与 Traficom 协调审批",
+      "sources": [
+        "https://x.com/villigm/status/2123461170665259020",
+        "https://zagdaily.com/connected/bolt-plans-driverless-vehicle-pilot-in-helsinki-region-for-2027/",
+        "https://dealroom.co/news/174915-bolt-targets-2027-driverless-pilot-across-helsinki-region/"
+      ]
     }
   ],
   "seen": [
@@ -264,6 +290,14 @@
       "first_seen": "2026-10-24",
       "title": "Bolt, Stellantis plan autonomous driving experiment in Greater Paris from 2028",
       "note": "Reuters（Euronext 页面标注 10-23 12:31，时区未注明；无论按 UTC 或巴黎时间均在窗口内）；大巴黎都市圈（Métropole du Grand Paris）、Bolt、Stellantis 联合宣布 2028 年起试验、2030 年前覆盖约 30 个市镇（需获批），首批为西北部最多 5 个市镇；Stellantis 提供车辆，Pony.ai 仅被称为潜在技术供应方；Bolt 另计划 2027 年在马德里测试。辅助源：Stellantis Media 新闻稿（北京时间 10-23 18:31）、36氪快讯 20:28（转界面，称项目提交欧盟委员会 ADACities 倡议）、Clubic、Journal Auto。已收录进 2026-10-24 daily"
+    },
+    {
+      "url": "https://x.com/villigm/status/2123461170665259020",
+      "date": "2026-11-19",
+      "published_at": "2026-11-20",
+      "first_seen": "2026-11-24",
+      "title": "Bolt is bringing autonomous driving to Finland: MOU with HSL, Fintraffic and the cities of Helsinki, Espoo and Vantaa for AV pilots in 2027",
+      "note": "Bolt CEO Markus Villig X 帖（推文 ID 解码 2026-11-19 16:59 UTC＝北京时间 11-20 00:59），Slush 大会宣布；Zag Daily 2026-11-20 报道（Bolt 拒绝透露车辆制造商、自动驾驶技术提供方及车队规模；需与 Traficom 协调审批）；Dealroom 2026-11-23 称为 letter of intent、范围含赫尔辛基市中心、机场走廊与连接 Espoo/Vantaa 的环路；Bolt 博客 bolt.eu/en/blog/autonomous-vehicles-helsinki-pilot/ 未读取。11-23 运行因未找到原始公告暂缓，本次以 CEO 原帖核实。首发早于 11-24 日报窗口，未收录进 daily"
     }
   ]
 }

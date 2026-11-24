@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-11-24",
+    "items": [
+      {
+        "id": "2026-11-24-001",
+        "date": "2026-11-24",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：11月22日，因感恩节周暴雨与天文大潮，宣布自11月23日凌晨起暂停湾区载客服务，为一周内第二次",
+        "summary_html": "<p>旧金山市长 <b>Daniel Lurie</b> 于 <b>11月22日</b>（周日）发布视频宣布，<b>Waymo</b> 同意自 <b>11月23日（周一）4am PT</b>（北京时间 11-23 20:00）起暂停服务；Lurie 称 \"We appreciate their decision\"，并提醒市民在周一完成采购与假日出行、不要把车停在易涝区。据 ABC News，Waymo 称是 <b>\"proactively\"</b> 作出暂停决定，原因是 <b>\"severe atmospheric river forecasts, historic King Tides, and public safety advisories\"</b>。<b>恢复时间未公布</b>。</p><p>ABC News、SF Chronicle 标题称暂停范围为 <b>湾区（Bay Area）</b>，部分报道只写旧金山，原文未列明半岛与南湾是否包含。旧金山交通局（SFMTA）同步暂停 <b>周一至周三</b> 的停车执法。上一次是 <b>11月18日</b> 暴雨中至少 <b>5辆</b> Waymo 在旧金山积水路段停住，Waymo 暂停湾区载客、<b>11月19日</b> 恢复（11/19、11/20 已报）；此前 <b>11月17日</b> 加州 DMV 已禁止 Waymo 在全部 freeway 运营。</p>",
+        "source_name": "ABC News 2026-11-23",
+        "source_url": "https://abcnews.com/US/waymo-pausing-service-san-francisco-bay-area-ahead/story?id=138373794",
+        "published_at": "2026-11-22",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-24-002",
+        "date": "2026-11-24",
+        "company": "Zoox",
+        "company_slug": "zoox",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Zoox：11月23日，官方称累计乘客突破100万人次",
+        "summary_html": "<p><b>Zoox</b> 官方 X 账号于 <b>11月23日</b>（北京时间 11-24 01:03）发文 <b>\"Over one million riders\"</b>，并称 \"Our robotaxi just touched down in new cities\"，未列出具体城市与统计口径（人次或独立乘客）。</p><p>此前 <b>26年8月</b> Axios 报道 Zoox 在拉斯维加斯、旧金山、奥斯汀、迈阿密累计载客 <b>接近100万</b>。近期动作：<b>11月16日</b> 起在拉斯维加斯接入 <b>Uber</b>（Strip、Downtown、Arts District）；<b>11月19日</b> 宣布在 <b>洛杉矶</b> 开展测试、暂不对公众开放（11/19 已报）。Zoox 于 7 月获联邦许可、8 月起在拉斯维加斯收费载客。</p>",
+        "source_name": "X @zoox 2026-11-23",
+        "source_url": "https://x.com/zoox/status/2124911719915135411",
+        "published_at": "2026-11-23",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-24-003",
+        "date": "2026-11-24",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月23日，网友发现Tesla App iOS更新显示Robotaxi即将支持预约叫车",
+        "summary_html": "<p><b>Sawyer Merritt</b> 于 <b>11月23日</b>（北京时间 11-24 08:11）在 X 发文称 \"Looks like you'll be able to schedule Tesla Robotaxi rides soon!\"，并附 Tesla App（iOS）更新内容的长文链接。<b>Tesla 官方未发布</b> 预约功能，上线时间与适用城市未知。</p><p>这是来自社区的应用更新发现，长文正文未打开（X 页面 HTTP 402），预约提前量、是否覆盖 Cybercab 与 Model Y 车队均未核实。</p>",
+        "source_name": "X @SawyerMerritt 2026-11-23",
+        "source_url": "https://x.com/SawyerMerritt/status/2125019368362770902",
+        "published_at": "2026-11-23",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-24-004",
+        "date": "2026-11-24",
+        "company": "Rivian",
+        "company_slug": "rivian",
+        "group": "国外",
+        "sub_group": "国外 OEM / Tier1",
+        "title": "Rivian：11月23日，R2 Performance 首发套装（Launch Package）将包含 Autonomy+",
+        "summary_html": "<p><b>Rivian</b> 官方 X 账号于 <b>11月23日</b>（北京时间 11-24 07:19）发文 <b>\"Get Autonomy+ included with R2 Performance with Launch Package.\"</b>，即购买 <b>R2 Performance</b> 首发套装的用户可获得 <b>Autonomy+</b> 辅助驾驶订阅包。</p><p>原帖未说明 Autonomy+ 的期限、单独售价与功能范围。Rivian 已宣布 <b>12月</b> 举办 Autonomy &amp; AI Day，并向早期测试车主发出 Autonomy+ 演示邀请（11/17 已报）。</p>",
+        "source_name": "X @Rivian 2026-11-23",
+        "source_url": "https://x.com/Rivian/status/2125006408756121666",
+        "published_at": "2026-11-23",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-24-005",
+        "date": "2026-11-24",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "小鹏：11月23日，宣布在巴黎门店开放NGP公众试乘，为首个在欧洲开放高阶智驾公众体验的中国品牌，计划2027年向欧洲用户推送",
+        "summary_html": "<p><b>小鹏汽车</b> 于 <b>11月23日</b> 宣布，在巴黎 17 区 <b>10 Boulevard Gouvion-Saint-Cyr</b> 门店开放 <b>NGP</b> 公众试乘，试乘自 <b>11月20日</b> 起至 <b>11月28日</b>，需电话预约，每场 <b>30分钟</b>、最多 <b>3名乘客</b>，<b>驾驶位配备安全员</b>。试乘车为量产 <b>L03 Performance Ultra</b>，搭载 <b>2颗图灵芯片</b>、运行 <b>VLA 2.0</b>。何小鹏称这是 \"the first Chinese brand to do so in Europe\"。</p><p>据 CarNewsChina，小鹏 <b>计划 2027 年向欧洲用户提供 NGP</b>，各市场时间取决于监管审批，原文未说明欧盟认证进度；目前 NGP 尚未向任何欧洲用户开放。此前 <b>10月12日至18日</b> 巴黎车展期间，小鹏与 Tesla 是展会 Autonomous Lab 中仅有的两家提供公众试乘的车企。</p>",
+        "source_name": "CarNewsChina 2026-11-23",
+        "source_url": "https://carnewschina.com/2026/11/23/xpeng-offers-public-self-driving-rides-in-paris-with-its-tesla-fsd-rival/",
+        "published_at": "2026-11-23",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-24-006",
+        "date": "2026-11-24",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,644辆，Waymo新增26辆（全部为RT前缀），其余11家数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月24日09:32前后北京时间</b>，逐家抓取德州 TxMCCS 官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月23日</b> 快照，<b>Waymo 由1,364辆增至1,390辆（+26）</b>，新增 <b>26个VIN</b>、无移除，全部为 <b>L6TZB</b> 前缀（RT，按 VIN 前缀推断）；Waymo 当前为 <b>I-PACE 881辆</b>、<b>RT 509辆</b>。其余 11 家新增、移除 VIN 均为 0；Tesla 维持 <b>1,507辆</b>（Cybercab 773、Model Y 734，按 VIN 前缀推断）。</p><p><b>Tesla Robotaxi 1,507辆</b>、<b>Waymo 1,390辆</b>、Avride 344、Aurora 91、Zoox 85、Gatik AI 64、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,644辆</b>，对比9月3日基线（2,111辆）净增 <b>1,533辆</b>；Waymo 较基线（988辆）净增 402辆，Tesla 登记数领先 Waymo <b>117辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻；官方接口不返回车型字段。</p>",
+        "source_name": "Automated Motor Vehicles：Waymo登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/07ebbc43-ae5b-42ca-a712-d9d5ce5b3516/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-24",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-23",
     "items": [
       {
