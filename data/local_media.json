@@ -1457,6 +1457,26 @@
       "city": "Munich DE",
       "site": "br.de",
       "name": "Bayerischer Rundfunk"
+    },
+    {
+      "city": "Peninsula / South Bay CA",
+      "site": "mercurynews.com",
+      "name": "Mercury News"
+    },
+    {
+      "city": "Peninsula / South Bay CA",
+      "site": "paloaltoonline.com",
+      "name": "Palo Alto Online"
+    },
+    {
+      "city": "Peninsula / South Bay CA",
+      "site": "nbcbayarea.com",
+      "name": "NBC Bay Area"
+    },
+    {
+      "city": "Peninsula / South Bay CA",
+      "site": "ktvu.com",
+      "name": "KTVU FOX 2"
     }
   ],
   "Wayve": [
@@ -1892,6 +1912,26 @@
       "city": "San Francisco CA",
       "site": "nbcbayarea.com",
       "name": "NBC Bay Area"
+    },
+    {
+      "city": "Peninsula / South Bay CA",
+      "site": "mercurynews.com",
+      "name": "Mercury News"
+    },
+    {
+      "city": "Peninsula / South Bay CA",
+      "site": "paloaltoonline.com",
+      "name": "Palo Alto Online"
+    },
+    {
+      "city": "Peninsula / South Bay CA",
+      "site": "nbcbayarea.com",
+      "name": "NBC Bay Area"
+    },
+    {
+      "city": "Peninsula / South Bay CA",
+      "site": "ktvu.com",
+      "name": "KTVU FOX 2"
     }
   ]
 }

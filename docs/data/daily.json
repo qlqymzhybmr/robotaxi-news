@@ -1,5 +1,100 @@
 [
   {
+    "date": "2026-11-25",
+    "items": [
+      {
+        "id": "2026-11-25-001",
+        "date": "2026-11-25",
+        "company": "Nuro",
+        "company_slug": "nuro",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Nuro / Uber / Lucid：11月24日，Lucid Gravity Robotaxi在湾区4座城市开始无安全员公开道路测试，Uber计划27Q1上线",
+        "summary_html": "<p><b>Nuro</b> 于 <b>11月24日</b>（北京时间 21:14）在 X 发文 <b>\"The driver is officially out.\"</b>，称由 Nuro 驾驶的 <b>Lucid Gravity</b> Robotaxi 已在 <b>旧金山湾区</b> 公开道路开展 <b>全无人测试（fully driverless）</b>，下一步是 <b>员工乘坐（Employee rides are next）</b>，并将于 <b>\"early 2027\"</b> 登陆 <b>Uber</b>。据 Electrek，无人测试覆盖半岛与南湾的 <b>Palo Alto、Mountain View、Los Altos、Sunnyvale</b> 四城，明年扩展至更多湾区城市；Lucid 为项目交付 <b>100辆以上</b> Gravity，原文为 \"nobody in the driver's seat\"，未说明是否有远程或跟车监控。</p><p>分工：<b>Lucid 提供整车</b>，<b>Nuro 提供 L4 自动驾驶系统（Nuro Driver）</b>，车辆 <b>只通过 Uber App</b> 提供服务。Electrek 称公众上线原定 <b>2026年</b>，现预计 <b>2027年Q1</b>；Uber 采购承诺已由 <b>2万辆</b> 增至 <b>至少3.5万辆</b> 搭载 Nuro Driver 的 Lucid 车辆。许可方面，加州 DMV 已于 <b>26年5月</b> 将 Nuro 无人测试许可扩展至 Gravity，CPUC 已发 <b>带安全员载客试点许可（drivered pilot permit）</b>，原文未提及无人载客（deployment）许可。此前 <b>25年7月</b> 三方宣布合作，<b>25年12月</b> 起在湾区与休斯顿带安全员测试，休斯顿为第二个市场、目标 <b>27年中</b>。</p>",
+        "source_name": "Electrek 2026-11-24",
+        "source_url": "https://electrek.co/2026/11/24/nuro-lucid-gravity-uber-robotaxi-driverless-testing-bay-area/",
+        "published_at": "2026-11-24",
+        "rating": 3,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-25-002",
+        "date": "2026-11-25",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：11月24日，NHTSA公布封闭高速车道召回文件，覆盖4,488辆，10月以来共11起驶入封闭车道事件",
+        "summary_html": "<p><b>NHTSA</b> 公布 Waymo <b>11月19日</b> 提交的召回报告 <b>26E086</b>：召回对象为 <b>第五代与第六代自动驾驶系统（ADS）</b>，涉及 <b>4,488辆</b>（全部具备无人驾驶能力的车辆，Waymo 自有）。缺陷描述为车辆可能因未能正确识别而 <b>驶入并持续行驶在封闭的高速车道（closed freeway lane）</b>。</p><p>报告时间线：<b>10月1日至11月6日</b> 共 <b>8辆</b> Waymo 驶入被锥桶、高速巡警车（traffic break）或施工车辆封闭的高速路段；<b>11月6日</b> 收缩运行范围后，<b>11月9日</b> 又有 <b>3辆</b> 驶入施工封闭车道；<b>所有事件均无碰撞或受伤</b>。<b>11月10-11日</b> 进一步限制，包括临时停止计划中的商业高速行程；<b>11月12日</b> 安全委员会决定自愿召回软件，<b>最终补救措施仍在开发中</b>，关联召回号 <b>26E035</b>。另一项人工指挥交通路口召回的车辆数未在本文件中列出。此前加州 DMV 已禁止 Waymo 在加州 freeway 运营（11/18 ~ 11/21 已报召回提交）。</p>",
+        "source_name": "NHTSA Part 573 Safety Recall Report 26E086",
+        "source_url": "https://static.nhtsa.gov/odi/rcl/2026/RCLRPT-26E086-1357.pdf",
+        "published_at": "2026-11-24",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-25-003",
+        "date": "2026-11-25",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：11月24日，丹佛警方报告称一名男子30余次用锥桶围困并向Waymo车辆扔鸡蛋，检方此前未予起诉",
+        "summary_html": "<p>据 <b>丹佛警方（Denver Police）</b> 报告，一名 <b>扎马尾、留胡子、约40多岁</b> 的男子多次用 <b>交通锥</b> 围住 Waymo 车辆后向其 <b>扔鸡蛋</b>，Waymo 调查人员统计同一嫌疑人相关事件 <b>约30起</b>，但仅获授权就其中 <b>7起</b> 寻求起诉。警方曾咨询 <b>丹佛地区检察官办公室</b>，当时被告知属 <b>民事事项</b>；检方发言人称 \"Because there was no damage, we don't believe that a crime was committed\"。Denverite 报道称检方随后表示将 <b>重新审视</b>。</p><p>Waymo 称每辆被扔鸡蛋的车辆需 <b>下线清洁</b>，目前损失估计 <b>~2,000美元</b>。报道未给出事件起止日期。</p>",
+        "source_name": "Denverite 2026-11-24",
+        "source_url": "https://denverite.com/2026/11/24/denver-waymo-egging-laws/",
+        "published_at": "2026-11-24",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-25-004",
+        "date": "2026-11-25",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月24日，Robotaxi App 26.11.5版上线延长等待时间功能，最长可等15分钟，预约叫车代码已出现",
+        "summary_html": "<p>据 Not a Tesla App，Tesla Robotaxi App <b>26.11.5</b> 新增 <b>\"Extend wait\"</b> 按钮，每次延长 <b>2分钟</b>、可多次点击；测试者 Ethan McKanna 实测等待时间可从 <b>7分钟</b> 延长到 <b>15分钟</b>，Tesla 目前 <b>不对等待收费</b>。Sawyer Merritt 于 <b>11月24日</b>（北京时间 21:20）在 X 转述该功能。</p><p>同版本反编译显示 <b>预约接送（scheduled pickups）</b> 即将上线，可在截止时间前调整预约时间；另有实时活动（Live Activity）与安全带提醒通知。以上来自测试者与 App 反编译，<b>非 Tesla 官方公告</b>，原文未说明适用城市（预约功能的 iOS 更新线索 11/24 已报）。</p>",
+        "source_name": "Not a Tesla App 2026-11-24",
+        "source_url": "https://www.notateslaapp.com/news/5071/tesla-updates-robotaxi-app-add-extra-wait-time-and-scheduled-pickups-coming-soon",
+        "published_at": "2026-11-24",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-25-005",
+        "date": "2026-11-25",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月24日，FSD V15开始推送至无前保险杠摄像头的HW4 Model Y",
+        "summary_html": "<p><b>Sawyer Merritt</b> 于 <b>11月24日</b>（北京时间 11-25 03:06）在 X 发文 \"Tesla FSD V15 is now starting to roll out to Model Ys with no front bumper camera.\"，并转发车主 \"Legacy HW4 Model Y getting v15 now!!!\" 的截图。</p><p>FSD V15 推送为 11/22 已报；本条为社区车主反馈，<b>Tesla 官方未公布</b> 推送范围与比例。</p>",
+        "source_name": "X @SawyerMerritt 2026-11-24",
+        "source_url": "https://x.com/SawyerMerritt/status/2125305004764672183",
+        "published_at": "2026-11-24",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-25-006",
+        "date": "2026-11-25",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,659辆，Waymo新增15辆（全部为RT前缀），其余11家数量与VIN集合均无变化",
+        "summary_html": "<p><b>11月25日09:30前后北京时间</b>，逐家抓取德州 TxMCCS 官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月24日</b> 快照，<b>Waymo 由1,390辆增至1,405辆（+15）</b>，新增 <b>15个VIN</b>、无移除，全部为 <b>L6TZB</b> 前缀（RT，按 VIN 前缀推断）；Waymo 当前为 <b>I-PACE 881辆</b>、<b>RT 524辆</b>。其余 11 家新增、移除 VIN 均为 0；Tesla 维持 <b>1,507辆</b>（Cybercab 773、Model Y 734，按 VIN 前缀推断）。</p><p><b>Tesla Robotaxi 1,507辆</b>、<b>Waymo 1,405辆</b>、Avride 344、Aurora 91、Zoox 85、Gatik AI 64、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,659辆</b>，对比9月3日基线（2,111辆）净增 <b>1,548辆</b>；Waymo 较基线（988辆）净增 417辆，Tesla 登记数领先 Waymo <b>102辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻；官方接口不返回车型字段。</p>",
+        "source_name": "Automated Motor Vehicles：Waymo登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/07ebbc43-ae5b-42ca-a712-d9d5ce5b3516/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-25",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-24",
     "items": [
       {
