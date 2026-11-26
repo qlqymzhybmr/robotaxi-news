@@ -3,10 +3,10 @@
   "companies": {
     "Waymo": {
       "latest": {
-        "date": "2026-11-25",
-        "total": 1405,
+        "date": "2026-11-26",
+        "total": 1409,
         "by_model": {
-          "?": 1405
+          "?": 1409
         },
         "vins": [
           "L6TZB1G10SU006531",
@@ -121,6 +121,7 @@
           "L6TZB1G12TU005253",
           "L6TZB1G12TU005298",
           "L6TZB1G12TU006144",
+          "L6TZB1G12TU006225",
           "L6TZB1G12TU006774",
           "L6TZB1G12TU007147",
           "L6TZB1G12TU010775",
@@ -345,6 +346,7 @@
           "L6TZB1G16TU041219",
           "L6TZB1G16TU043441",
           "L6TZB1G16TU047408",
+          "L6TZB1G16TU048283",
           "L6TZB1G16TU050003",
           "L6TZB1G16TU050874",
           "L6TZB1G17SU025979",
@@ -490,6 +492,8 @@
           "L6TZB1G1XSU025989",
           "L6TZB1G1XSU026883",
           "L6TZB1G1XSU030206",
+          "L6TZB1G1XTU005212",
+          "L6TZB1G1XTU006229",
           "L6TZB1G1XTU006280",
           "L6TZB1G1XTU006490",
           "L6TZB1G1XTU010362",
@@ -2834,15 +2838,35 @@
             },
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 1409,
+          "by_model": {
+            "?": 1409
+          },
+          "added_vins": [
+            "L6TZB1G12TU006225",
+            "L6TZB1G16TU048283",
+            "L6TZB1G1XTU005212",
+            "L6TZB1G1XTU006229"
+          ],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {
+              "?": 4
+            },
+            "removed_count": 0
+          }
         }
       ]
     },
     "Tesla Robotaxi": {
       "latest": {
-        "date": "2026-11-25",
-        "total": 1507,
+        "date": "2026-11-26",
+        "total": 1556,
         "by_model": {
-          "?": 1507
+          "?": 1556
         },
         "vins": [
           "5YJAJEEU0TA001291",
@@ -2917,6 +2941,7 @@
           "5YJAJEEU0VA004601",
           "5YJAJEEU0VA004615",
           "5YJAJEEU0VA004629",
+          "5YJAJEEU0VA004632",
           "5YJAJEEU0VA004680",
           "5YJAJEEU0VA004730",
           "5YJAJEEU0VA004744",
@@ -2987,6 +3012,11 @@
           "5YJAJEEU1VA004607",
           "5YJAJEEU1VA004610",
           "5YJAJEEU1VA004624",
+          "5YJAJEEU1VA004767",
+          "5YJAJEEU1VA004784",
+          "5YJAJEEU1VA004803",
+          "5YJAJEEU1VA004820",
+          "5YJAJEEU1VA004834",
           "5YJAJEEU2TA001468",
           "5YJAJEEU2TA001762",
           "5YJAJEEU2TA002331",
@@ -3060,6 +3090,7 @@
           "5YJAJEEU2VA004602",
           "5YJAJEEU2VA004616",
           "5YJAJEEU2VA004650",
+          "5YJAJEEU2VA004762",
           "5YJAJEEU3TA002449",
           "5YJAJEEU3TA003326",
           "5YJAJEEU3TA003343",
@@ -3131,6 +3162,11 @@
           "5YJAJEEU3VA004589",
           "5YJAJEEU3VA004592",
           "5YJAJEEU3VA004625",
+          "5YJAJEEU3VA004768",
+          "5YJAJEEU3VA004818",
+          "5YJAJEEU3VA004835",
+          "5YJAJEEU3VA004849",
+          "5YJAJEEU3VA004852",
           "5YJAJEEU4TA001682",
           "5YJAJEEU4TA001813",
           "5YJAJEEU4TA001844",
@@ -3199,6 +3235,10 @@
           "5YJAJEEU4VA004598",
           "5YJAJEEU4VA004603",
           "5YJAJEEU4VA004617",
+          "5YJAJEEU4VA004679",
+          "5YJAJEEU4VA004682",
+          "5YJAJEEU4VA004732",
+          "5YJAJEEU4VA004763",
           "5YJAJEEU5TA002405",
           "5YJAJEEU5TA002470",
           "5YJAJEEU5TA003327",
@@ -3266,6 +3306,14 @@
           "5YJAJEEU5VA004609",
           "5YJAJEEU5VA004612",
           "5YJAJEEU5VA004626",
+          "5YJAJEEU5VA004643",
+          "5YJAJEEU5VA004674",
+          "5YJAJEEU5VA004710",
+          "5YJAJEEU5VA004786",
+          "5YJAJEEU5VA004805",
+          "5YJAJEEU5VA004819",
+          "5YJAJEEU5VA004836",
+          "5YJAJEEU5VA004853",
           "5YJAJEEU6TA001442",
           "5YJAJEEU6TA001635",
           "5YJAJEEU6TA002218",
@@ -3337,6 +3385,11 @@
           "5YJAJEEU6VA004604",
           "5YJAJEEU6VA004618",
           "5YJAJEEU6VA004621",
+          "5YJAJEEU6VA004697",
+          "5YJAJEEU6VA004747",
+          "5YJAJEEU6VA004750",
+          "5YJAJEEU6VA004764",
+          "5YJAJEEU6VA004800",
           "5YJAJEEU7TA002406",
           "5YJAJEEU7TA002423",
           "5YJAJEEU7TA002471",
@@ -3399,6 +3452,13 @@
           "5YJAJEEU7VA004594",
           "5YJAJEEU7VA004613",
           "5YJAJEEU7VA004627",
+          "5YJAJEEU7VA004644",
+          "5YJAJEEU7VA004675",
+          "5YJAJEEU7VA004711",
+          "5YJAJEEU7VA004725",
+          "5YJAJEEU7VA004742",
+          "5YJAJEEU7VA004806",
+          "5YJAJEEU7VA004837",
           "5YJAJEEU8TA001670",
           "5YJAJEEU8TA001734",
           "5YJAJEEU8TA001863",
@@ -3477,6 +3537,7 @@
           "5YJAJEEU8VA004605",
           "5YJAJEEU8VA004619",
           "5YJAJEEU8VA004622",
+          "5YJAJEEU8VA004765",
           "5YJAJEEU9TA001385",
           "5YJAJEEU9TA001466",
           "5YJAJEEU9TA002357",
@@ -3545,6 +3606,14 @@
           "5YJAJEEU9VA004581",
           "5YJAJEEU9VA004600",
           "5YJAJEEU9VA004614",
+          "5YJAJEEU9VA004645",
+          "5YJAJEEU9VA004662",
+          "5YJAJEEU9VA004676",
+          "5YJAJEEU9VA004709",
+          "5YJAJEEU9VA004712",
+          "5YJAJEEU9VA004726",
+          "5YJAJEEU9VA004743",
+          "5YJAJEEU9VA004838",
           "5YJAJEEUXTA001878",
           "5YJAJEEUXTA002299",
           "5YJAJEEUXTA002383",
@@ -3618,6 +3687,10 @@
           "5YJAJEEUXVA004590",
           "5YJAJEEUXVA004606",
           "5YJAJEEUXVA004623",
+          "5YJAJEEUXVA004749",
+          "5YJAJEEUXVA004816",
+          "5YJAJEEUXVA004833",
+          "5YJAJEEUXVA004850",
           "7SAYGDEE0TF541293",
           "7SAYGDEE0TF541312",
           "7SAYGDEE0TF541343",
@@ -6464,12 +6537,77 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 1556,
+          "by_model": {
+            "?": 1556
+          },
+          "added_vins": [
+            "5YJAJEEU0VA004632",
+            "5YJAJEEU1VA004767",
+            "5YJAJEEU1VA004784",
+            "5YJAJEEU1VA004803",
+            "5YJAJEEU1VA004820",
+            "5YJAJEEU1VA004834",
+            "5YJAJEEU2VA004762",
+            "5YJAJEEU3VA004768",
+            "5YJAJEEU3VA004818",
+            "5YJAJEEU3VA004835",
+            "5YJAJEEU3VA004849",
+            "5YJAJEEU3VA004852",
+            "5YJAJEEU4VA004679",
+            "5YJAJEEU4VA004682",
+            "5YJAJEEU4VA004732",
+            "5YJAJEEU4VA004763",
+            "5YJAJEEU5VA004643",
+            "5YJAJEEU5VA004674",
+            "5YJAJEEU5VA004710",
+            "5YJAJEEU5VA004786",
+            "5YJAJEEU5VA004805",
+            "5YJAJEEU5VA004819",
+            "5YJAJEEU5VA004836",
+            "5YJAJEEU5VA004853",
+            "5YJAJEEU6VA004697",
+            "5YJAJEEU6VA004747",
+            "5YJAJEEU6VA004750",
+            "5YJAJEEU6VA004764",
+            "5YJAJEEU6VA004800",
+            "5YJAJEEU7VA004644",
+            "5YJAJEEU7VA004675",
+            "5YJAJEEU7VA004711",
+            "5YJAJEEU7VA004725",
+            "5YJAJEEU7VA004742",
+            "5YJAJEEU7VA004806",
+            "5YJAJEEU7VA004837",
+            "5YJAJEEU8VA004765",
+            "5YJAJEEU9VA004645",
+            "5YJAJEEU9VA004662",
+            "5YJAJEEU9VA004676",
+            "5YJAJEEU9VA004709",
+            "5YJAJEEU9VA004712",
+            "5YJAJEEU9VA004726",
+            "5YJAJEEU9VA004743",
+            "5YJAJEEU9VA004838",
+            "5YJAJEEUXVA004749",
+            "5YJAJEEUXVA004816",
+            "5YJAJEEUXVA004833",
+            "5YJAJEEUXVA004850"
+          ],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {
+              "?": 49
+            },
+            "removed_count": 0
+          }
         }
       ]
     },
     "Avride": {
       "latest": {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "total": 344,
         "by_model": {
           "?": 344
@@ -7719,12 +7857,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 344,
+          "by_model": {
+            "?": 344
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Aurora": {
       "latest": {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "total": 91,
         "by_model": {
           "?": 91
@@ -8819,12 +8970,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 91,
+          "by_model": {
+            "?": 91
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Gatik AI": {
       "latest": {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "total": 64,
         "by_model": {
           "?": 64
@@ -9843,12 +10007,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 64,
+          "by_model": {
+            "?": 64
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Nuro": {
       "latest": {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "total": 47,
         "by_model": {
           "?": 47
@@ -10850,12 +11027,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 47,
+          "by_model": {
+            "?": 47
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Zoox": {
       "latest": {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "total": 85,
         "by_model": {
           "?": 85
@@ -11954,12 +12144,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 85,
+          "by_model": {
+            "?": 85
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Kodiak Robotics": {
       "latest": {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "total": 36,
         "by_model": {
           "?": 36
@@ -12976,12 +13179,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 36,
+          "by_model": {
+            "?": 36
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Torc Robotics": {
       "latest": {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "total": 32,
         "by_model": {
           "?": 32
@@ -13968,12 +14184,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 32,
+          "by_model": {
+            "?": 32
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "May Mobility": {
       "latest": {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "total": 22,
         "by_model": {
           "?": 22
@@ -14901,12 +15130,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 22,
+          "by_model": {
+            "?": 22
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Waabi Logistics": {
       "latest": {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "total": 13,
         "by_model": {
           "?": 13
@@ -15923,12 +16165,25 @@
             "added_by_model": {},
             "removed_count": 0
           }
+        },
+        {
+          "date": "2026-11-26",
+          "total": 13,
+          "by_model": {
+            "?": 13
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
         }
       ]
     },
     "Bot Auto TX": {
       "latest": {
-        "date": "2026-11-25",
+        "date": "2026-11-26",
         "total": 13,
         "by_model": {
           "?": 13
@@ -16837,6 +17092,19 @@
         },
         {
           "date": "2026-11-25",
+          "total": 13,
+          "by_model": {
+            "?": 13
+          },
+          "added_vins": [],
+          "removed_vins": [],
+          "delta": {
+            "added_by_model": {},
+            "removed_count": 0
+          }
+        },
+        {
+          "date": "2026-11-26",
           "total": 13,
           "by_model": {
             "?": 13
