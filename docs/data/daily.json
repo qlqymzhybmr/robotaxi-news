@@ -1,5 +1,70 @@
 [
   {
+    "date": "2026-11-27",
+    "items": [
+      {
+        "id": "2026-11-27-001",
+        "date": "2026-11-27",
+        "company": "Waymo",
+        "company_slug": "waymo",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Waymo：11月25日，圣迭戈天文大潮期间临时避开易涝区域运营，La Jolla潮位创8.11英尺纪录",
+        "summary_html": "<p>据 FOX 5 San Diego，<b>圣迭戈市</b> 确认 Waymo 在 <b>感恩节周</b> 临时避开 <b>易涝区域（flood-prone areas）</b> 运营，当地预报高潮位与沿海洪水将持续到 <b>周五（11月27日）</b>，沿海地区处于 <b>Coastal Flood Warning</b>。<b>美国国家气象局（NWS）</b> 记录 <b>La Jolla</b> 周三潮位 <b>8.11英尺</b>，创纪录。</p><p>Waymo 发言人称公司正在监测路况，将随情况变化调整运营，<b>未说明避让区域的具体范围和结束时间</b>。此前 <b>11月22日</b> Waymo 因暴雨与天文大潮宣布自 <b>11月23日</b> 起暂停湾区载客服务（11/24 已报）；<b>10月底</b> 圣迭戈曾发生 Waymo 停在潮水中、由警员移车的事件。</p>",
+        "source_name": "FOX 5 San Diego 2026-11-25",
+        "source_url": "https://fox5sandiego.com/news/local-news/san-diego/waymo-avoids-san-diego-flooding/",
+        "published_at": "2026-11-25",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-27-002",
+        "date": "2026-11-27",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月26日，FSD（监督版）V15开始推送至无前保险杠摄像头的改款前HW4 Model Y，美国官网首页改为展示V15",
+        "summary_html": "<p>据 Not a Tesla App，<b>FSD（监督版）V15</b> 开始推送至 <b>改款前的 HW4 Model Y</b>（无前保险杠摄像头），早期车主反馈驾驶更平顺、泊车更好，但 <b>Reality View</b> 可视化存在显示问题。<b>Sawyer Merritt</b> 同日在 X 发文称 Tesla <b>美国官网首页</b> 已更新为展示 <b>FSD V15</b>。V15 首轮推送 11/22 已报；该功能为驾驶辅助，需驾驶员监督。</p>",
+        "source_name": "Not a Tesla App 2026-11-26",
+        "source_url": "https://www.notateslaapp.com/news/5092/tesla-fsd-v15-rolls-out-to-model-ys-without-front-bumper-cameras",
+        "published_at": "2026-11-26",
+        "rating": 1,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-27-003",
+        "date": "2026-11-27",
+        "company": "引望智能",
+        "company_slug": "yinwang",
+        "group": "国内",
+        "sub_group": "国内华为系 / 互联网大厂",
+        "title": "引望智能：11月26日，华为乾崑生态大会发布辅助驾驶新品牌「星驰」专注L2大众市场，乾崑智驾转向自动驾驶；首批合作深蓝、五菱、极狐、奕派、传祺",
+        "summary_html": "<p><b>11月26日</b>，<b>引望（华为车BU）CEO 靳玉志</b> 在 <b>广州</b> 举行的 <b>华为乾崑生态大会</b> 上发布辅助驾驶新品牌 <b>星驰</b>：星驰专注 <b>L2辅助驾驶</b>、面向主流大众市场，<b>乾崑智驾</b> 今后主要面向 <b>自动驾驶</b>。两者技术同源，星驰采用 <b>WEWA架构</b>，共享乾崑智驾的云端算力与数据、研发流程和车规级质量体系，功能体验有差异。</p><p>首批合作客户为 <b>深蓝、五菱、极狐、奕派、传祺</b>，预计 <b>明年</b> 有 <b>超过10款</b> 搭载星驰的新车上市；同场披露 <b>乾崑智驾车辆超200万台</b>、累计里程 <b>超183亿公里</b>，多家媒体同日以「华为智能汽车部件发货量破亿」为题报道。</p>",
+        "source_name": "CnEVPost 2026-11-26",
+        "source_url": "https://cnevpost.com/2026/11/26/huawei-unveils-xingchi-brand-l2-assisted-driving/",
+        "published_at": "2026-11-26",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-27-004",
+        "date": "2026-11-27",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,997辆，Tesla单日新增285辆（全部为Cybercab前缀）至1,841辆，Cybercab登记数首次超过1,000辆；其余11家无变化",
+        "summary_html": "<p><b>11月27日09:30前后北京时间</b>，逐家抓取德州 TxMCCS 官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月26日</b> 快照，<b>Tesla Robotaxi 由1,556辆增至1,841辆（+285）</b>，新增 <b>285个VIN</b>、无移除，全部为 <b>5YJAJ</b> 前缀（Cybercab，按 VIN 前缀推断），Tesla 当前为 <b>Cybercab 1,107辆</b>、<b>Model Y 734辆</b>，为追踪以来最大单日增量。<b>Waymo 1,409辆</b> 无变化（I-PACE 881 / RT 528，按 VIN 前缀推断）；其余 10 家新增、移除 VIN 均为 0。<b>Sawyer Merritt</b> 于北京时间 <b>11-27 03:38</b> 在 X 发文披露同一增量（285辆、累计1,107辆），Not a Tesla App 跟进，说明该批登记在新闻截止前已可见。</p><p><b>Tesla Robotaxi 1,841辆</b>、<b>Waymo 1,409辆</b>、Avride 344、Aurora 91、Zoox 85、Gatik AI 64、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,997辆</b>，对比9月3日基线（2,111辆）净增 <b>1,886辆</b>；Tesla 较基线（420辆）净增 1,421辆，登记数领先 Waymo <b>432辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>（Not a Tesla App 原文亦称 \"not how many are giving rides right now\"），快照晚于09:00新闻截止，不能推定登记变更的发生时刻；官方接口不返回车型字段。</p>",
+        "source_name": "Automated Motor Vehicles：Tesla登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/81edcff1-8a6e-4ed0-be1f-60668515e223/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-27",
+        "rating": 3,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-26",
     "items": [
       {
