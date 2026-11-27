@@ -1,0 +1,202 @@
+{
+  "week_id": "2026-W47",
+  "date_range": "1117-1123",
+  "title": "（W47）无人驾驶行业1117-1123重要新闻",
+  "generated_at": "2026-11-27T15:30:12+08:00",
+  "sections": [
+    {
+      "name": "国外",
+      "entries": [
+        {
+          "company": "Waymo",
+          "company_slug": "waymo",
+          "headline_html": "<b>Waymo：迈阿密与警车相撞致1人送医；就驶入封闭高速车道等问题发起两项软件召回；湾区因暴雨两度暂停载客；加州DMV禁止其在freeway运营，Waymo暂停全美freeway载客；现代称开始向Waymo交付Ioniq 5；圣迭戈一辆Waymo驶上电车轨道</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>11月22日</b>，迈阿密一辆Waymo<b>与迈阿密警车相撞，车内1人送医</b>，伤情与责任方未披露。这是一周内第二起见报的Waymo迈阿密碰撞。",
+              "daily_ids": [
+                "2026-11-23-001"
+              ]
+            },
+            {
+              "label": "b",
+              "content_html": "<b>11月20日</b>，Waymo称已向NHTSA提交<b>两项软件召回</b>，分别针对车辆驶入封闭的高速车道、以及处理人工指挥交通的路口；封闭高速车道问题的补救措施仍在开发中，相关事件未造成碰撞或受伤。NHTSA 11月24日公布的召回文件显示，高速车道召回涉及4,488辆，即全部无人车。",
+              "daily_ids": [
+                "2026-11-21-001"
+              ]
+            },
+            {
+              "label": "c",
+              "content_html": "<b>11月18日</b>，湾区暴雨导致多辆Waymo在旧金山积水路段停住，<b>Waymo暂停湾区全域载客服务</b>，次日恢复；旧金山市长称至少5辆Waymo在积水中停住。11月23日Waymo因暴雨与天文大潮再次暂停湾区服务，11月25日起逐步恢复。",
+              "daily_ids": [
+                "2026-11-19-001",
+                "2026-11-20-003"
+              ]
+            },
+            {
+              "label": "d",
+              "content_html": "<b>11月17日</b>，加州DMV披露已于11月11日以“imminent public safety hazard”为由<b>禁止Waymo在加州全部freeway运营</b>，直到Waymo证明已采取有效纠正措施；起因是车辆多次驶入施工封闭路段、试图越过高速警车的车流管制。<b>Waymo随即暂停全美freeway载客</b>，普通道路服务照常。这是Waymo今年第二次暂停freeway运营，上一次为5月暂停、7月恢复。",
+              "daily_ids": [
+                "2026-11-18-001"
+              ]
+            },
+            {
+              "label": "e",
+              "content_html": "<b>11月17日</b>，现代汽车CEO称<b>已开始或即将向Waymo交付Ioniq 5</b>，车辆在现代佐治亚工厂生产，由Waymo加装自动驾驶系统；不同报道对交付起始时间说法不一。",
+              "daily_ids": [
+                "2026-11-19-003"
+              ]
+            },
+            {
+              "label": "f",
+              "content_html": "<b>11月16日</b>，圣迭戈一辆载有2名乘客的Waymo<b>驶上电车轨道并穿过道口闸杆</b>，电车驶近时倒车冲过道口栏杆，无人受伤；圣迭戈市议员称市政府将追偿损失。",
+              "daily_ids": [
+                "2026-11-19-002"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Tesla",
+          "company_slug": "tesla",
+          "headline_html": "<b>Tesla：开始推送FSD v15；意大利临时批准Tesla Assisted Driving；Cybercab在达拉斯开放载客；荷兰RDW批准TAD新一轮调整；迈阿密服务区扩至~59平方英里；马斯克称最早12月试点个人车辆接入Robotaxi网络</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>11月21日</b>，<b>开始推送FSD v15</b>，升级端到端驾驶网络，新视觉编码器与Robotaxi、Optimus共用，并新增可视化与控制FSD规划的Reality View；马斯克称12月随假日更新大范围推送。",
+              "daily_ids": [
+                "2026-11-22-001"
+              ]
+            },
+            {
+              "label": "b",
+              "content_html": "<b>11月20日</b>，<b>意大利交通部临时批准Tesla Assisted Driving（原FSD监督版）</b>，意大利为欧洲第12个、首个批准的欧盟大市场，推送时间未定。欧盟整体表决最早12月进行，需至少15个成员国、代表65%人口赞成。",
+              "daily_ids": [
+                "2026-11-21-002"
+              ]
+            },
+            {
+              "label": "c",
+              "content_html": "<b>11月19日</b>，<b>Cybercab在达拉斯向公众开放载客</b>，是继奥斯汀后第二座Cybercab城市，投放的V1.5版车顶集成Starlink天线；次日达拉斯服务区由81小幅扩至82平方英里。",
+              "daily_ids": [
+                "2026-11-20-001",
+                "2026-11-21-003"
+              ]
+            },
+            {
+              "label": "d",
+              "content_html": "<b>11月17日</b>，荷兰RDW批准<b>Tesla Assisted Driving新一轮调整</b>：车速130 km/h以上须手握方向盘，系统执行机动时驾驶员分心直接计违规。此前RDW已将超速上限由+50%收紧至+10%。",
+              "daily_ids": [
+                "2026-11-18-003"
+              ]
+            },
+            {
+              "label": "e",
+              "content_html": "<b>11月16日</b>，<b>迈阿密Robotaxi服务区由~31扩至~59平方英里</b>，覆盖Downtown与Brickell，仍不含Miami Beach。",
+              "daily_ids": [
+                "2026-11-17-004"
+              ]
+            },
+            {
+              "label": "f",
+              "content_html": "<b>11月16日</b>，马斯克称<b>最早12月试点让车主将个人车辆接入Robotaxi网络</b>，Tesla此前在Q3财报会上给出的时间为2027年Q2；参与条件与分成未公布。",
+              "daily_ids": [
+                "2026-11-17-005"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Zoox",
+          "company_slug": "zoox",
+          "headline_html": "<b>Zoox：宣布在洛杉矶开展Robotaxi测试；拉斯维加斯一辆Zoox在路口停住~20分钟；专用Robotaxi接入Uber拉斯维加斯</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>11月19日</b>，宣布<b>在洛杉矶开展Robotaxi测试</b>，暂不对公众开放，Waitlist明年开放。",
+              "daily_ids": [
+                "2026-11-20-004"
+              ]
+            },
+            {
+              "label": "b",
+              "content_html": "<b>11月18日</b>，媒体报道拉斯维加斯一辆Zoox在F1施工路段附近的Strip路口，因左转红箭头一直不变<b>停住~20分钟</b>，远程支持介入后驶离。",
+              "daily_ids": [
+                "2026-11-20-005"
+              ]
+            },
+            {
+              "label": "c",
+              "content_html": "<b>11月16日</b>，<b>专用Robotaxi接入Uber拉斯维加斯</b>，是Zoox首次接入第三方叫车平台；乘客暂不能指定Zoox，呼叫UberX等车型时可能被派到。Uber、Zoox同时与MGM签署多年合作，规划旗下酒店上下车点。",
+              "daily_ids": [
+                "2026-11-17-008"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Uber",
+          "company_slug": "uber",
+          "headline_html": "<b>Uber：计划两年投入~5,000万美元扩大迪拜自动驾驶服务</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>11月18日</b>，宣布<b>两年内投入~1.84亿迪拉姆（~5,000万美元）扩大迪拜自动驾驶服务</b>，2027年底前覆盖Downtown Dubai、DIFC、Business Bay等区域；初期车内配专员，获批后推出全无人商业服务。L4技术提供方未披露，Uber迪拜现有全无人收费运营由文远知行提供。",
+              "daily_ids": [
+                "2026-11-19-007"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "国内",
+      "entries": [
+        {
+          "company": "小马智行",
+          "company_slug": "xiaoma",
+          "headline_html": "<b>小马智行：与丰田合作的第七代铂智4X Robotaxi加入广州全无人商业运营车队</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>11月16日</b>，与丰田宣布<b>第七代铂智4X Robotaxi加入小马智行广州全无人商业运营车队</b>，可24小时呼叫；双方计划在国内主要城市部署~1,000辆，未给出时间表。铂智4X首台量产车2026年2月下线；Waymo 10月宣布将于2027年在日本测试同款车型的海外版。",
+              "daily_ids": [
+                "2026-11-17-010"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Momenta",
+          "company_slug": "momenta",
+          "headline_html": "<b>Momenta：与Uber在德国慕尼黑启动带安全员的Robotaxi试运营</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>11月18日</b>，与Uber在<b>德国慕尼黑启动带安全员的Robotaxi免费试运营</b>，乘客需先加入Waitlist，服务区覆盖慕尼黑北部大部分区域；试点依据德国联邦机动车管理局（KBA）7月发给Momenta的L4测试许可。Momenta提供自动驾驶系统，Uber提供平台与运营。",
+              "daily_ids": [
+                "2026-11-19-009"
+              ]
+            }
+          ]
+        },
+        {
+          "company": "小鹏",
+          "company_slug": "xpeng",
+          "headline_html": "<b>小鹏：何小鹏称明年向全球合作伙伴输出Robotaxi整体解决方案</b>",
+          "sub_items": [
+            {
+              "label": "a",
+              "content_html": "<b>11月16日</b>，何小鹏在Q3财报会上称，小鹏悠游将在广州打磨可复制的产品和服务体系，<b>明年向全球合作伙伴输出Robotaxi整体解决方案</b>；合作伙伴与车队规模未披露。小鹏10月26日已获广州全域L4级示范运营资质。",
+              "daily_ids": [
+                "2026-11-17-012"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
