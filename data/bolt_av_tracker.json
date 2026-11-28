@@ -100,15 +100,17 @@
       "vehicle_provider": "Stellantis（L4 就绪平台的中型厢式车）；测试车为小马智行第七代 Robotaxi",
       "l4_tech_provider": "小马智行",
       "l4_provider_type": "l4_player",
-      "l4_basis": "报道明确三方分工：小马智行提供自动驾驶技术与运营经验，Stellantis 提供车辆平台，Bolt 提供网约车平台与市场",
+      "l4_basis": "报道明确三方分工：小马智行提供自动驾驶技术与运营经验，Stellantis 提供车辆平台，Bolt 提供网约车平台与市场；2026-11-26 各报道写明车辆使用小马智行第七代（Gen 7）自动驾驶系统",
       "bolt_role": "网约车平台与运营、市场触达",
       "scale": "测试",
       "cities": [
-        "Luxembourg"
+        "Luxembourg（Bissen、Niederanven）"
       ],
-      "status": "测试（Living Lab）",
+      "status": "公共道路测试：2026-11-26 宣布在 Bissen、Niederanven 开始运行，5 辆车配安全员，国家科学测试许可 11-01 生效，暂不载客",
       "sources": [
-        "https://www.just-auto.com/news/bolt-pony-ai-stellantis-av-pilot-luxembourg/"
+        "https://www.just-auto.com/news/bolt-pony-ai-stellantis-av-pilot-luxembourg/",
+        "https://futuretransport-news.com/bolt-begins-self-driving-operations-in-luxembourg/",
+        "https://zagdaily.com/connected/bolt-starts-self-driving-service-in-luxembourg-with-safety-operators/"
       ]
     },
     {
@@ -298,6 +300,14 @@
       "first_seen": "2026-11-24",
       "title": "Bolt is bringing autonomous driving to Finland: MOU with HSL, Fintraffic and the cities of Helsinki, Espoo and Vantaa for AV pilots in 2027",
       "note": "Bolt CEO Markus Villig X 帖（推文 ID 解码 2026-11-19 16:59 UTC＝北京时间 11-20 00:59），Slush 大会宣布；Zag Daily 2026-11-20 报道（Bolt 拒绝透露车辆制造商、自动驾驶技术提供方及车队规模；需与 Traficom 协调审批）；Dealroom 2026-11-23 称为 letter of intent、范围含赫尔辛基市中心、机场走廊与连接 Espoo/Vantaa 的环路；Bolt 博客 bolt.eu/en/blog/autonomous-vehicles-helsinki-pilot/ 未读取。11-23 运行因未找到原始公告暂缓，本次以 CEO 原帖核实。首发早于 11-24 日报窗口，未收录进 daily"
+    },
+    {
+      "url": "https://futuretransport-news.com/bolt-begins-self-driving-operations-in-luxembourg/",
+      "date": "2026-11-26",
+      "published_at": "2026-11-26",
+      "first_seen": "2026-11-28",
+      "title": "Bolt Begins Self-Driving Operations in Luxembourg",
+      "note": "Bolt 宣布在卢森堡 Bissen、Niederanven 两个市镇的公共道路开始 L4 自动驾驶运行：5 辆车、搭载小马智行第七代自动驾驶系统、每车配受训安全员，依据卢森堡交通与公共工程部国家科学测试许可（11 月 1 日生效）；暂不载客，公众乘车待与当局商定的后续阶段。Smart Cities World、Zag Daily、Shattered 同为 2026-11-26（无具体时刻）；Luxembourg Times 北京时间 11-27 17:15 跟进。首发早于 11-28 日报窗口（11-27 09:00 北京＝11-27 02:00 CET），未收录进 daily；11-27 期把 RTL Today 同题稿误判为 6 月旧项目"
     }
   ]
 }

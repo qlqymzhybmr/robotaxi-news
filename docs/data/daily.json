@@ -1,5 +1,115 @@
 [
   {
+    "date": "2026-11-28",
+    "items": [
+      {
+        "id": "2026-11-28-001",
+        "date": "2026-11-28",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月27日，欧盟TCMV公布12月15日会议议程，Tesla辅助驾驶全欧盟型式认证列为「可能表决」事项",
+        "summary_html": "<p>据 Not a Tesla App，欧盟 <b>机动车技术委员会（TCMV）</b> 在欧盟委员会 comitology 登记簿公布 <b>12月15日</b> 会议草案议程：「进一步审议（further examination）」允许 <b>荷兰</b> 为 <b>Tesla Assisted Driving（TAD）</b> 签发 <b>全欧盟型式认证</b> 的决定，标注 <b>\"with possible vote\"</b>，排在九项议程的第四项，时段 <b>10:40–11:10 CET</b>。该会议原定 <b>12月1日</b>，推迟至12月15日（11/26 已报）；<b>10月6日</b> TCMV 会议曾讨论 TAD 但未表决。</p><p>报道称 TAD 目前已在 <b>12个欧盟国家</b> 单独获批，最近一个为 <b>意大利</b>；全欧盟批准需至少 <b>15个成员国</b>、代表 <b>65%</b> 欧盟人口支持。表决「可能」进行但不确定，若12月15日未表决，决定将推迟到 <b>2027年</b>。此前 <b>4月</b> 荷兰 RDW 率先批准 FSD（监督版），该功能需驾驶员监督。</p>",
+        "source_name": "Not a Tesla App 2026-11-27",
+        "source_url": "https://www.notateslaapp.com/news/5098/eu-shares-agenda-for-tesla-fsd-meeting-with-possible-vote",
+        "published_at": "2026-11-27",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-28-002",
+        "date": "2026-11-28",
+        "company": "Tesla",
+        "company_slug": "tesla",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "Tesla：11月27日，申报在奥斯汀Pond Springs服务中心建16个Robotaxi专用V4超充桩，不对公众开放",
+        "summary_html": "<p>据 Not a Tesla App，超充追踪者 <b>@MarcoRPi1</b> 发现 Tesla 的许可申报文件：在奥斯汀西北 <b>Pond Springs 服务中心（12845 N US 183）</b> 建设 <b>16个 V4 超充桩</b>，项目文件夹标注 <b>\"Robotaxi\"</b>，由 2 台预装超充单元与 2 个 V4 机柜供电，分两排各 8 个，原文称 <b>\"won't be available to the general public\"</b>。工程师在 <b>10月下旬</b> 签署图纸，原文未说明是否已获批，也未给出造价与完工时间。</p><p>此前 Tesla 已在 <b>亚利桑那州 Chandler、Mesa（4月）</b> 与 <b>奥斯汀 Ridgepoint Drive（9月，24个桩）</b> 建设 Robotaxi 充电站，另有 <b>得州 Irving</b> 规划 <b>212个车位</b> 的车队枢纽；奥斯汀 Robotaxi 服务区约 <b>443平方英里</b>。</p>",
+        "source_name": "Not a Tesla App 2026-11-27",
+        "source_url": "https://www.notateslaapp.com/news/5101/tesla-files-plans-for-new-robotaxi-charging-station-in-texas",
+        "published_at": "2026-11-27",
+        "rating": 2,
+        "lang": "en"
+      },
+      {
+        "id": "2026-11-28-003",
+        "date": "2026-11-28",
+        "company": "曹操出行",
+        "company_slug": "caocao",
+        "group": "国内",
+        "sub_group": "国内出行平台",
+        "title": "曹操出行：11月25日，与阿联酋拉斯海马交通管理局（RAKTA）签署合作备忘录，将在当地开展Robotaxi与无人物流车测试试点",
+        "summary_html": "<p><b>11月25日</b>，曹操出行与 <b>阿联酋拉斯海马交通管理局（RAKTA）</b> 签署 <b>合作备忘录（MoU）</b>，探索在阿联酋开展自动驾驶车辆测试与试点运营。分工：曹操出行提供 <b>自动驾驶乘用车与物流车</b>、技术支持及车辆运维；RAKTA 协调指定测试区域、本地运营要求与场地安全审批；阿联酋 <b>K2集团</b> 旗下出行运营商 <b>LUMO</b> 参与。试点评估运营可行性、车辆性能、安全、效率与车队利用率。</p><p>双方 <b>未披露车辆数量、测试启动时间与是否配备安全员</b>，原文也未说明 L4 软件提供方。RAKTA 此前已在 <b>Al Marjan 岛（26年初）</b> 与 <b>Al Dhait South（10月30日宣布扩展）</b> 开展 RoboTaxi 测试，尚未公布商业运营时间。曹操出行此前与 <b>阿布扎比投资办公室（25年11月）</b> 签署 MoU，<b>26年6月</b> 与 K2集团签署战略合作。</p>",
+        "source_name": "Gasgoo 2026-11-27",
+        "source_url": "https://autonews.gasgoo.com/articles/icv/caocao-inc-partners-with-rakta-to-pilot-autonomous-mobility-services-in-the-uae-2126139962235691009",
+        "published_at": "2026-11-27",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-28-004",
+        "date": "2026-11-28",
+        "company": "如祺出行",
+        "company_slug": "ruqi",
+        "group": "国内",
+        "sub_group": "国内出行平台",
+        "title": "如祺出行：11月27日，称平台运营Robotaxi累计超600辆、较2025年底翻倍，广州自营车队月订单超1万单",
+        "summary_html": "<p>据上海证券报·中国证券网，截至 <b>2026年11月</b>，如祺出行平台运营的 Robotaxi 车队 <b>累计超600辆</b>、较 <b>2025年底</b> 翻倍，服务覆盖 <b>广州、深圳及横琴粤澳深度合作区</b>；其中 <b>广州自营 Robotaxi 车队每月订单量超过1万单</b>，首个 <b>三级运维网络</b> 已落地使用。</p><p>车队规模口径与 <b>26年3月</b> 公布的「约600辆」基本一致，本期新增的是广州自营车队月订单数据。公司重申未来5年 Robotaxi 服务覆盖 <b>100个核心城市</b>、与合作伙伴构建 <b>超万辆</b> 车队、建设 <b>1000个三级运维网络</b>；同期在 <b>第24届广州车展</b> 展示「如祺众源地图平台」等数据业务。</p>",
+        "source_name": "东方财富（上海证券报）2026-11-27",
+        "source_url": "https://finance.eastmoney.com/a/202611273942090022.html",
+        "published_at": "2026-11-27",
+        "rating": 1,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-28-005",
+        "date": "2026-11-28",
+        "company": "广汽",
+        "company_slug": "gac",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "广汽：11月27日，总经理阁先庆称与滴滴自动驾驶联合打造的L4级量产Robotaxi累计交付910台，在北京亦庄、广州黄埔开展示范运营",
+        "summary_html": "<p><b>广州车展</b> 期间，<b>广汽集团总经理阁先庆</b> 表示，广汽与 <b>滴滴自动驾驶</b> 联合打造的 <b>L4级量产 Robotaxi</b> 已 <b>累计交付910台</b>，陆续投放在 <b>北京亦庄</b>、<b>广州黄埔</b> 区域开展 <b>L4级示范运营</b>。原文未说明车型、交付起止时间及是否配备安全员。</p><p>前情：双方合资的新一代 Robotaxi <b>R2</b> 于 <b>26年1月23日</b> 在广汽埃安工厂完成首批交付；广汽另与 <b>小马智行</b> 合作埃安 Robotaxi、广汽丰田 <b>铂智4X</b> Robotaxi 于 <b>11月16日</b> 在广州投入示范运营（小马智行与丰田规划部署 ~1000辆），910台不含这两个项目。</p>",
+        "source_name": "新浪香港（新浪财经）2026-11-27",
+        "source_url": "https://portal.sina.com.hk/technology/sina/2026/11/27/1999063/%E5%BB%A3%E6%B1%BD%E7%B8%BD%E7%B6%93%E7%90%86%E9%96%A3%E5%85%88%E6%85%B6%E8%81%AF%E5%90%88%E6%89%93%E9%80%A0%E7%9A%84l4%E7%B4%9Arobotaxi%E7%B4%AF%E8%A8%88%E4%BA%A4%E4%BB%98910%E5%8F%B0%EF%BC%8C/",
+        "published_at": "2026-11-27",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-28-006",
+        "date": "2026-11-28",
+        "company": "小鹏",
+        "company_slug": "xpeng",
+        "group": "国内",
+        "sub_group": "国内新势力 / 传统 OEM",
+        "title": "小鹏：11月27日，广州车展公布2027年海外计划：Robotaxi目标2027年全球上线，五款新车出海，New P7 Q2登陆欧洲",
+        "summary_html": "<p><b>11月27日</b>，小鹏在 <b>2026广州车展</b> 发布会（由人形机器人 <b>IRON</b> 主持）公布海外计划：<b>2027年</b> 在国际市场推出 <b>五款新车型</b>，<b>New P7</b> 于 <b>2027年Q2</b> 在 <b>欧洲</b> 首发；辅助驾驶系统 <b>2027年上半年</b> 开始海外推送，<b>\"a global launch of its Robotaxi targeted for 2027\"</b>，并 \"explore international opportunities in Robotaxi services\"。新闻稿未给出 Robotaxi 海外城市、合作方与车队规模。</p><p>同稿称 <b>L05</b> 将于 <b>2026年12月</b> 在泰国、<b>2027年1月</b> 在欧洲上市；IRON 计划 <b>2027年Q1</b> 进入国内门店、<b>下半年</b> 出海。国内方面，小鹏 <b>11月25日</b> 在广州开启主驾无安全员载客体验、<b>10月26日</b> 获广州全域 L4 示范运营资格（均已报），科技日已提出 <b>明年</b> 向全球合作伙伴输出 Robotaxi 方案；本期首次给出 Robotaxi 2027 年全球上线目标。</p>",
+        "source_name": "EVXL（XPeng 新闻稿）2026-11-27",
+        "source_url": "https://evxl.co/2026/11/27/xpeng-five-new-overseas-models-robotaxi-2027/",
+        "published_at": "2026-11-27",
+        "rating": 2,
+        "lang": "zh"
+      },
+      {
+        "id": "2026-11-28-007",
+        "date": "2026-11-28",
+        "company": "行业",
+        "company_slug": "industry",
+        "group": "国外",
+        "sub_group": "国外 L4",
+        "title": "德州 DMV：12家共登记3,998辆，Waymo新增1辆（RT前缀）至1,410辆；Tesla 1,841辆无变化，其余10家无变化",
+        "summary_html": "<p><b>11月28日09:31前后北京时间</b>，逐家抓取德州 TxMCCS 官方登记快照，<b>12家请求全部成功</b>，快照日期均为当日。对比 <b>11月27日</b> 快照，<b>Waymo 由1,409辆增至1,410辆（+1）</b>，新增 1 个 <b>L6TZB</b> 前缀 VIN（RT，按 VIN 前缀推断）、无移除，当前 <b>I-PACE 881辆</b>、<b>RT 529辆</b>；<b>Tesla Robotaxi 1,841辆</b> 新增、移除 VIN 均为 0（<b>Cybercab 1,107辆</b> / <b>Model Y 734辆</b>，按 VIN 前缀推断）；其余 10 家新增、移除 VIN 均为 0。</p><p><b>Tesla Robotaxi 1,841辆</b>、<b>Waymo 1,410辆</b>、Avride 344、Aurora 91、Zoox 85、Gatik AI 64、Nuro 47、Kodiak Robotics 36、Torc Robotics 32、May Mobility 22、Waabi Logistics 13、Bot Auto TX 13。合计 <b>3,998辆</b>，对比9月3日基线（2,111辆）净增 <b>1,887辆</b>；Tesla 较基线（420辆）净增 1,421辆，登记数领先 Waymo <b>431辆</b>。这是12家已追踪玩家的合计，不是全州企业普查；<b>登记车辆不等于实际运营车队</b>，快照晚于09:00新闻截止，不能推定登记变更的发生时刻；官方接口不返回车型字段。</p>",
+        "source_name": "Automated Motor Vehicles：Waymo登记接口",
+        "source_url": "https://txmccs.txdmv.gov/api/TruckStop/companies/07ebbc43-ae5b-42ca-a712-d9d5ce5b3516/automated-motor-vehicles?limit=100&offset=0",
+        "published_at": "2026-11-28",
+        "rating": 2,
+        "lang": "en"
+      }
+    ]
+  },
+  {
     "date": "2026-11-27",
     "items": [
       {
